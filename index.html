@@ -570,16 +570,23 @@
           <!-- CASE 1: PETROBRAS -->
           <div class="case-cinematic-card group flex flex-col">
             <!-- Image Window -->
-            <div class="relative w-full aspect-[4/3] md:aspect-[16/10] bg-base-300 overflow-hidden border border-support-200/50 mb-8">
+            <div class="relative w-full aspect-[4/3] md:aspect-[16/10] bg-[#11161F] overflow-hidden border border-support-200/50 mb-8">
               <!-- Environmental Overlay & HUD -->
-              <div class="absolute inset-0 z-10 pointer-events-none mix-blend-overlay opacity-30 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.2)_0%,transparent_20%,transparent_80%,rgba(0,0,0,0.2)_100%)]"></div>
+              <div class="absolute inset-0 z-10 pointer-events-none mix-blend-overlay opacity-50 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.3)_0%,transparent_20%,transparent_80%,rgba(0,0,0,0.3)_100%)]"></div>
+              
+              <!-- Radar Pulse & Orbit Scanning -->
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] z-20 pointer-events-none border border-white/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                <div class="absolute inset-0 rounded-full border border-orange-500/10 scale-[1.2] opacity-0 group-hover:opacity-100 transition-all duration-[3s]" style="animation: ping-slow 6s cubic-bezier(0, 0, 0.2, 1) infinite;"></div>
+              </div>
+              <div class="absolute inset-0 w-full h-[1px] bg-orange-500/30 z-20 opacity-0 group-hover:opacity-100" style="animation: scan-line 6s linear infinite; box-shadow: 0 0 10px 1px rgba(249,115,22,0.2);"></div>
+
               <div class="absolute top-4 left-4 z-20 flex gap-2 items-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
                 <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
                 <span class="font-mono text-[8px] text-white tracking-[0.2em] uppercase">Rec REC.ON</span>
               </div>
               <div class="absolute bottom-4 right-4 z-20 font-mono text-[8px] text-white/70 tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-1000">COORD: 43.12.S 40.5W</div>
               
-              <img src="assets/img/cases/petrobras.png" alt="Petrobras Offshore System" class="w-full h-full object-cover object-center transform scale-[1.01] group-hover:scale-[1.05] transition-transform duration-[2s] ease-out origin-center" />
+              <img src="assets/img/cases/petrobras.png" alt="Petrobras Offshore System" class="w-full h-full object-cover object-center transform scale-[1.01] group-hover:scale-[1.05] transition-transform duration-[3s] ease-out origin-center opacity-90 group-hover:opacity-100" />
             </div>
             
             <!-- Metadata & Strategic Content -->
@@ -589,7 +596,8 @@
               </div>
               
               <h3 class="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight leading-[1.1] mb-6">PETROBRAS</h3>
-              <p class="font-body text-base md:text-lg text-text-secondary leading-relaxed mb-10 max-w-[45ch]">Coordenação offshore crítica para monitoramento ambiental e resposta operacional em tempo real.</p>
+              <p class="font-body text-base md:text-lg text-text-secondary leading-relaxed mb-4 max-w-[45ch]">Coordenação offshore crítica para monitoramento ambiental e resposta operacional em tempo real.</p>
+              <p class="font-body text-sm md:text-base text-support-500 leading-relaxed mb-10 max-w-[50ch]">Plataforma integrada de monitoramento ambiental offshore que consolida dados de múltiplas fontes, antecipa incidentes e apoia decisões críticas em campo.</p>
               
               <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 pt-8 border-t border-support-200/60 mt-auto">
                 <div>
@@ -727,6 +735,7 @@
         
         <style>
           @keyframes scan-line { 0% { top: 0; } 50% { top: 100%; opacity: 0.8; } 100% { top: 100%; opacity: 0; } }
+          @keyframes ping-slow { 0% { transform: scale(0.8); opacity: 0.8; } 100% { transform: scale(1.5); opacity: 0; } }
           .case-cinematic-card { will-change: transform, opacity; }
         </style>
         
