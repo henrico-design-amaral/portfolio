@@ -38,7 +38,10 @@
             'accent': {
               500: '#BE9C6E',
               600: '#9e825c',
+              700: '#7a6340',
             },
+            'system': '#63574A',
+            'page': '#EBE7E0',
             'text-primary': '#472211',
             'text-secondary': '#533E2B',
             'text-tertiary': '#7a6a5e',
@@ -136,7 +139,7 @@
     </div>
 
     <!-- HERO -->
-    <section id="hero" class="relative min-h-[100dvh] flex items-center pt-32 pb-16 px-6 overflow-hidden bg-[#EBE7E0]">
+    <section id="hero" class="relative min-h-[100dvh] flex items-center pt-32 pb-16 px-6 overflow-hidden bg-page">
 
       <!-- Subtle Technical Background -->
       <div id="technical-hero-bg" class="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"
@@ -161,7 +164,7 @@
 
         <!-- Ambient Blurs for depth -->
         <div class="absolute right-[0%] top-[0%] w-[40%] h-[50%] rounded-full bg-white/40 blur-[130px]"></div>
-        <div class="absolute left-[-10%] bottom-[-20%] w-[50%] h-[60%] rounded-full bg-[#DAD5CD]/70 blur-[130px]"></div>
+        <div class="absolute left-[-10%] bottom-[-20%] w-[50%] h-[60%] rounded-full bg-base-100/70 blur-[130px]"></div>
       </div>
 
       <!-- Hero Content (Left-Aligned Editorial Layout) -->
@@ -262,7 +265,7 @@
     </section>
 
     <!-- Section Divider: Hero → Process -->
-    <div class="section-divider" style="background: #DAD5CD;">
+    <div class="section-divider bg-base-100" aria-hidden="true">
     </div>
 
     <!-- ── PROCESS & TERRITORY ── -->
@@ -318,7 +321,7 @@
               class="font-display font-bold text-[3rem] md:text-[4.5rem] max-w-[1440px] w-full tracking-[-0.03em] leading-[1] mb-8 text-text-primary section-heading"
               data-t="s4.title">Engenharia de Interação</h2>
             <h3 class="font-body text-lg md:text-xl text-text-secondary leading-relaxed max-w-[75ch] mb-12"
-              data-t="s2.statement">
+              data-t="s4.statement">
               Antes da interface, organizo as estruturas invisíveis que sustentam coordenação, contexto e tomada de decisão.
             </h3>
 
@@ -484,11 +487,11 @@
     </section>
 
     <!-- Section Divider: Process → Cases -->
-    <div class="section-divider" style="background: #DAD5CD;">
+    <div class="section-divider" aria-hidden="true">
     </div>
 
         <!-- CASES -->
-    <section id="cases" class="py-24 md:py-32 px-6 relative overflow-hidden bg-[#EBE7E0] border-t border-support-200/50">
+    <section id="cases" class="py-32 md:py-48 px-6 relative overflow-hidden bg-page border-t border-support-200/50">
       <!-- Operational Background — soft grid, continuous across all sections -->
       <div class="absolute inset-0 w-full h-full z-0 pointer-events-none" aria-hidden="true">
         <div class="absolute inset-0 opacity-[0.1]" style="background-image: linear-gradient(to right, #63574A 1px, transparent 1px), linear-gradient(to bottom, #63574A 1px, transparent 1px); background-size: 64px 64px;"></div>
@@ -499,7 +502,7 @@
         <!-- Header Section -->
         <div class="flex flex-col xl:flex-row xl:justify-between xl:items-end mb-16 gap-10">
           <div class="max-w-[800px]">
-            <div class="font-mono text-[9px] tracking-[0.2em] uppercase text-support-400 mb-6 flex items-center gap-4">
+            <div class="font-mono text-[10px] tracking-[0.2em] uppercase text-support-400 mb-6 flex items-center gap-4">
               <span>10.90.54 S</span>
               <span class="text-accent-600 font-bold">CASES</span>
             </div>
@@ -935,7 +938,7 @@
 
     <!-- IMPACT -->
     <!-- Section Divider: Cases → Impact -->
-    <div class="section-divider" style="background: #DAD5CD;">
+    <div class="section-divider bg-base-100" aria-hidden="true">
     </div>
 
     <section id="impact" class="py-32 md:py-48 px-6 bg-base-100 relative overflow-hidden">
@@ -975,7 +978,7 @@
               class="font-mono text-[10px] tracking-[0.1em] uppercase text-support-400 font-semibold mb-12">PETROBRAS</span>
 
             <div
-              class="impact-num font-display font-bold text-[5rem] lg:text-[8rem] xl:text-[10rem] text-text-primary tracking-[-0.04em] leading-none mb-6 flex items-start">
+              class="font-display font-bold text-7xl lg:text-[8rem] text-text-primary tracking-tighter leading-none mb-6 flex items-start">
               <span class="ic text-accent-600" data-to="95">0</span><span
                 class="text-3xl lg:text-5xl ml-1 font-medium text-text-secondary">%</span>
             </div>
@@ -1062,10 +1065,10 @@
 
     <!-- ABOUT & FOOTER -->
     <!-- Section Divider: Impact → About -->
-    <div class="section-divider section-divider--dark" style="background: #080808;">
+    <div class="section-divider section-divider--dark" aria-hidden="true">
     </div>
 
-    <section id="about" class="py-32 md:py-48 px-6 bg-[#EBE7E0] text-[#3A332C] relative overflow-hidden">
+    <section id="about" class="py-32 md:py-48 px-6 bg-page text-[#3A332C] relative overflow-hidden">
       <!-- Logic Traces — soft grid + fading topology remnants -->
       <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-[0.12]" aria-hidden="true"
         data-parallax="0.04">
@@ -1095,7 +1098,7 @@
 
             <!-- Editorial statement -->
             <div class="mb-14 pl-6 border-l-2 border-accent-500/30">
-              <p class="font-display text-xl md:text-2xl text-[#63574A] leading-relaxed italic max-w-[45ch]">
+              <p class="font-display text-xl md:text-2xl text-system leading-relaxed italic max-w-[45ch]" data-t="ab.editorial">
                 Quando sistemas operam sob pressão, clareza deixa de ser estética. Ela se torna infraestrutura.
               </p>
             </div>
