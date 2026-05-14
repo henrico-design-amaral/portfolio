@@ -5,12 +5,12 @@ const COPY = {
     'nav.cases':    'Casos',
     'nav.impact':   'Impacto',
     'nav.about':    'Sobre',
-    'eyebrow':      'Arquitetura de Decisão & Sistemas Corporativos',
-    'h1.l1':        'Sistemas falham quando',
-    'h1.l2':        'informação e decisão param de se comunicar.',
-    'sub':          'A infraestrutura invisível por trás de operações críticas. Desenhando plataformas corporativas que reduzem a carga cognitiva e coordenam ecossistemas inteiros sob alta complexidade.',
-    'cta.primary':  'Analisar Cases',
-    'cta.secondary':'Ler o Manifesto',
+    'eyebrow':      'SISTEMAS OPERACIONAIS · PLATAFORMAS ENTERPRISE · ARQUITETURA DE DECISÃO',
+    'h1.l1':        'Arquitetura de decisão',
+    'h1.l2':        'para sistemas críticos.',
+    'sub':          'Estruturo plataformas, fluxos operacionais e ecossistemas digitais para ambientes onde clareza impacta coordenação, escala e tomada de decisão.',
+    'cta.primary':  'Ver caso SALA CAR',
+    'cta.secondary':'Método',
     'worked-with':  'Clientes',
     's2.tag':       '01 / Território',
     's2.title':     'Onde atuo',
@@ -77,12 +77,12 @@ const COPY = {
      'nav.cases':    'Cases',
      'nav.impact':   'Impact',
      'nav.about':    'About',
-     'eyebrow':      'Decision Architecture & Enterprise Systems',
-     'h1.l1':        'Systems fail when information',
-     'h1.l2':        'and decision stop communicating.',
-     'sub':          'The invisible infrastructure behind critical operations. Designing enterprise platforms that reduce cognitive load and coordinate entire ecosystems under high complexity.',
-     'cta.primary':  'Analyze Cases',
-     'cta.secondary':'Read the Manifesto',
+     'eyebrow':      'OPERATIONAL SYSTEMS · ENTERPRISE PLATFORMS · DECISION ARCHITECTURE',
+     'h1.l1':        'Decision architecture',
+     'h1.l2':        'for critical systems.',
+     'sub':          'Structuring platforms, operational flows, and digital ecosystems for environments where clarity impacts coordination, scale, and decision-making.',
+     'cta.primary':  'View SALA CAR case',
+     'cta.secondary':'Method',
      'worked-with':  'Clients',
      's2.tag':       '01 / Territory',
      's2.title':     'Where I operate',
@@ -234,6 +234,21 @@ if (!motionReduced) {
   reveal('.reveal-step', { stagger: 0.2, y: 50, scale: 0.95 });
   reveal('.case-row', { stagger: 0.15, y: 60 });
   reveal('.impact-cell', { stagger: 0.1, x: -30, y: 0 });
+
+  // Parallax elements
+  gsap.utils.toArray('[data-parallax]').forEach(el => {
+    const speed = parseFloat(el.getAttribute('data-parallax')) || 0.1;
+    gsap.to(el, {
+      y: () => -(ScrollTrigger.maxScroll(window) * speed),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: el.closest('section') || 'body',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 1
+      }
+    });
+  });
 
   ScrollTrigger.create({
     trigger: '#impact',

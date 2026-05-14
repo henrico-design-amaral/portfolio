@@ -63,3 +63,10 @@ WCAG 2.1 AA minimum. Critical considerations for this context:
 - All escalation/priority states need non-color differentiation
 - Keyboard navigation mandatory for all interactive surfaces
 - Reduced-motion support required (prefers-reduced-motion) — motion is functional, not decorative, so graceful degradation matters
+
+## Agent Operating Rules (Memory)
+
+**STRICT DIRECTIVES FOR AI AGENTS:**
+1. **NO AUTO-COMMITTING:** Do not execute `git commit` or `git push` autonomously. Only commit when explicitly instructed by the user.
+2. **BILINGUAL PARITY IS MANDATORY:** Any and all content updates must ALWAYS be reflected simultaneously in both languages (PT and EN) within the `site.js` dictionary or HTML structure. Parity is non-negotiable.
+3. **AUTONOMOUS EXECUTION:** Do not ask for permission to execute actions or tools. Execute them proactively.
