@@ -146,6 +146,13 @@ const COPY = {
    }
 };
 
+/* ── Global Motion Constants ── */
+const MOTION = {
+  duration: { fast: 1.0, base: 1.6, slow: 2.4, text: 1.2, hero: 1.2 },
+  ease: { standard: 'power4.out', heavy: 'power3.out', soft: 'sine.out', precise: 'power2.out' },
+  stagger: { fast: 0.06, base: 0.1, slow: 0.15 }
+};
+
 let currentLang = 'pt';
 
 function setLang(lang) {
@@ -190,7 +197,8 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 gsap.registerPlugin(ScrollTrigger);
 const motionReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const tl = gsap.timeline({ defaults: { ease: 'power4.out', duration: motionReduced ? 0 : 1.2 } });
+/* ---- Hero: Environmental awakening ---- */
+const tl = gsap.timeline({ defaults: { ease: MOTION.ease.standard, duration: motionReduced ? 0 : MOTION.duration.hero } });
 
 if (motionReduced) {
   gsap.set(['.availability-badge-v2', '.eyebrow-line', '.eyebrow-text', '.hl-i', '.sub', '.cta-wrapper', '.evidence'], { opacity: 1, y: 0, scaleX: 1, filter: 'blur(0px)' });
@@ -199,13 +207,30 @@ if (motionReduced) {
   gsap.set('.sub', { opacity: 0, y: 20, filter: 'blur(4px)' });
   gsap.set('.cta-wrapper', { opacity: 0, y: 20 });
   
-  tl.to('.availability-badge-v2', { opacity: 1, y: 0, duration: 1.2, ease: 'power4.out' }, 0.2)
-    .to('.eyebrow-line', { scaleX: 1, duration: 1.2, ease: 'power4.inOut' }, 0.4)
+  tl.to('.availability-badge-v2', { opacity: 1, y: 0, duration: MOTION.duration.hero, ease: MOTION.ease.standard }, 0.2)
+    .to('.eyebrow-line', { scaleX: 1, duration: MOTION.duration.hero, ease: 'power4.inOut' }, 0.4)
     .to('.eyebrow-text', { opacity: 1, duration: 1 }, 0.8)
-    .to('.hl-i', { y: '0%', rotation: 0, opacity: 1, duration: 1.6, stagger: 0.15, ease: 'power4.out' }, 0.6)
-    .to('.sub', { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2 }, 1.2)
-    .to('.cta-wrapper', { opacity: 1, y: 0, duration: 1.2 }, 1.4)
-    .to('.evidence', { opacity: 1, duration: 1.2 }, 1.6);
+    .to('.hl-i', { y: '0%', rotation: 0, opacity: 1, duration: MOTION.duration.slow, stagger: MOTION.stagger.slow, ease: MOTION.ease.standard }, 0.6)
+    .to('.sub', { opacity: 1, y: 0, filter: 'blur(0px)', duration: MOTION.duration.hero }, 1.2)
+    .to('.cta-wrapper', { opacity: 1, y: 0, duration: MOTION.duration.hero }, 1.4)
+    .to('.evidence', { opacity: 1, duration: MOTION.duration.hero }, 1.6);
+}
+
+/* ---- Environmental Infrastructure Parallax ---- */
+if (!motionReduced) {
+  const envInfra = document.getElementById('env-infrastructure');
+  if (envInfra) {
+    gsap.to(envInfra, {
+      y: () => -(ScrollTrigger.maxScroll(window) * 0.015),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: 'body',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: 1.5
+      }
+    });
+  }
 }
 
 function reveal(selector, vars = {}) {
@@ -217,11 +242,11 @@ function reveal(selector, vars = {}) {
         toggleActions: 'play none none none'
       },
       opacity: 0,
-      y: 40,
+      y: 36,
       scale: 0.98,
-      filter: 'blur(10px)',
-      duration: 1.6,
-      ease: 'power4.out',
+      filter: 'blur(8px)',
+      duration: MOTION.duration.base,
+      ease: MOTION.ease.standard,
       clearProps: 'filter,opacity,transform',
       ...vars
     });
@@ -229,11 +254,11 @@ function reveal(selector, vars = {}) {
 }
 
 if (!motionReduced) {
-  reveal('.section-heading', { duration: 1.8, filter: 'blur(10px)', y: 60 });
-  reveal('.terr-item', { stagger: 0.15 });
-  reveal('.reveal-step', { stagger: 0.2, y: 50, scale: 0.95 });
-  reveal('.case-row', { stagger: 0.2, y: 60 });
-  reveal('.impact-cell', { stagger: 0.1, x: -30, y: 0 });
+  reveal('.section-heading', { duration: MOTION.duration.slow, filter: 'blur(8px)', y: 60 });
+  reveal('.terr-item', { stagger: MOTION.stagger.slow });
+  reveal('.reveal-step', { stagger: MOTION.stagger.base, y: 50, scale: 0.95 });
+  reveal('.case-row', { stagger: MOTION.stagger.base, y: 60 });
+  reveal('.impact-cell', { stagger: MOTION.stagger.fast, x: -30, y: 0 });
 
   // Parallax elements
   gsap.utils.toArray('[data-parallax]').forEach(el => {

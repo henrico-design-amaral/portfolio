@@ -1,6 +1,13 @@
 body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antialiased; }
 ::selection { background: #BE9C6E; color: #DAD5CD; }
 
+/* ─── Global Environmental Infrastructure Animations ─── */
+@keyframes env-flow { to { stroke-dashoffset: -200; } }
+@keyframes env-flow-reverse { to { stroke-dashoffset: 200; } }
+.env-flow { animation: env-flow 30s linear infinite; }
+.env-flow-reverse { animation: env-flow-reverse 35s linear infinite; }
+.env-node { animation: pulse-node 6s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+
 .text-balance { 
   text-wrap: balance;
   overflow-wrap: break-word; /* Fallback for older browsers */

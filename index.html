@@ -99,6 +99,42 @@
   <main id="main-content">
     <div id="sr-announcer" role="status" aria-live="polite" class="sr-only"></div>
 
+    <!-- Continuous Operational Infrastructure Layer — persistent across all sections -->
+    <div class="fixed inset-0 w-full h-full z-0 pointer-events-none overflow-hidden" aria-hidden="true" id="env-infrastructure" data-parallax="0.015">
+      <svg class="w-full h-full" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.12">
+        <defs>
+          <linearGradient id="env-y-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#63574A" stop-opacity="0" />
+            <stop offset="15%" stop-color="#63574A" stop-opacity="1" />
+            <stop offset="85%" stop-color="#63574A" stop-opacity="1" />
+            <stop offset="100%" stop-color="#63574A" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <!-- Distributed topology spines -->
+        <g stroke="url(#env-y-fade)" opacity="0.6">
+          <line x1="200" y1="0" x2="200" y2="120" stroke-width="0.4" stroke-dasharray="3 8" class="env-flow" />
+          <line x1="600" y1="0" x2="600" y2="120" stroke-width="0.25" stroke-dasharray="1 6" class="env-flow-reverse" />
+          <line x1="1000" y1="0" x2="1000" y2="120" stroke-width="0.3" stroke-dasharray="2 5" class="env-flow" />
+          <line x1="1300" y1="0" x2="1300" y2="120" stroke-width="0.2" stroke-dasharray="1 8" class="env-flow-reverse" />
+        </g>
+        <!-- Cross-connect topology arcs -->
+        <g stroke="url(#env-y-fade)" opacity="0.25">
+          <path d="M 200,30 L 600,30 L 1000,50 L 1300,50" stroke-width="0.15" />
+          <path d="M 200,80 L 600,80 L 1000,70 L 1300,70" stroke-width="0.15" />
+          <path d="M 200,55 L 600,55 L 1000,45 L 1300,45" stroke-width="0.1" stroke-dasharray="1 4" />
+        </g>
+        <!-- Infrastructure nodes -->
+        <g opacity="0.4">
+          <circle cx="200" cy="30" r="2" fill="#63574A" class="env-node" />
+          <circle cx="600" cy="30" r="1.5" fill="#63574A" class="env-node" style="animation-delay:1s" />
+          <circle cx="1000" cy="50" r="2" fill="none" stroke="#63574A" stroke-width="0.5" class="env-node" style="animation-delay:2s" />
+          <circle cx="1300" cy="50" r="1.5" fill="#63574A" class="env-node" style="animation-delay:0.5s" />
+          <circle cx="600" cy="80" r="2" fill="none" stroke="#63574A" stroke-width="0.5" class="env-node" style="animation-delay:3s" />
+          <circle cx="1000" cy="70" r="1.5" fill="#63574A" class="env-node" style="animation-delay:1.5s" />
+        </g>
+      </svg>
+    </div>
+
     <!-- HERO -->
     <section id="hero" class="relative min-h-[100dvh] flex items-center pt-32 pb-16 px-6 overflow-hidden bg-[#EBE7E0]">
 
@@ -115,65 +151,12 @@
           style="background-image: linear-gradient(to right, #63574A 1px, transparent 1px), linear-gradient(to bottom, #63574A 1px, transparent 1px); background-size: 16px 16px;">
         </div>
 
-        <!-- SVG Topology Layer (Enterprise/Palantir aesthetic) -->
-        <svg class="absolute inset-0 w-full h-full opacity-[0.3]" xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="fade" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#63574A" stop-opacity="0" />
-              <stop offset="50%" stop-color="#63574A" stop-opacity="0.6" />
-              <stop offset="100%" stop-color="#63574A" stop-opacity="0" />
-            </linearGradient>
-            <linearGradient id="fade-reverse" x1="100%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#63574A" stop-opacity="0" />
-              <stop offset="50%" stop-color="#63574A" stop-opacity="0.5" />
-              <stop offset="100%" stop-color="#63574A" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-
-          <!-- Complex Enterprise Topology -->
-          <!-- Abstract routing lines -->
-          <path d="M 100,-100 L 100,400 L 500,400 L 500,900" fill="none" stroke="url(#fade)" stroke-width="0.5"
-            stroke-dasharray="2 4" />
-          <path d="M 900,1000 L 900,300 L 1300,300 L 1300,-100" fill="none" stroke="url(#fade-reverse)"
-            stroke-width="0.5" />
-          <path d="M -200,600 L 300,600 L 500,200 L 1400,200 L 1600,600 L 2200,600" fill="none" stroke="url(#fade)"
-            stroke-width="1" />
-          <path d="M -100,700 L 350,700 L 350,300 L 1200,300 L 1200,800 L 1900,800" fill="none"
-            stroke="url(#fade-reverse)" stroke-width="0.5" stroke-dasharray="1 3" />
-
-          <!-- Nodes / Entities -->
-          <!-- Node Cluster 1 -->
-          <circle cx="300" cy="600" r="3" fill="#63574A" opacity="0.6" />
-          <circle cx="300" cy="600" r="8" fill="none" stroke="#63574A" stroke-width="0.5" opacity="0.3" />
-          <text x="312" y="595" font-family="monospace" font-size="8" fill="#63574A" opacity="0.5"
-            letter-spacing="0.1em">INGRESS.01</text>
-
-          <!-- Node Cluster 2 -->
-          <circle cx="500" cy="200" r="4" fill="#63574A" opacity="0.7" />
-          <circle cx="500" cy="200" r="16" fill="none" stroke="#63574A" stroke-width="0.5" stroke-dasharray="2 2"
-            opacity="0.4" />
-          <text x="520" y="195" font-family="monospace" font-size="9" fill="#63574A" opacity="0.6"
-            letter-spacing="0.1em">DECISION_MATRIX</text>
-          <text x="520" y="208" font-family="monospace" font-size="7" fill="#63574A" opacity="0.4">STATUS: ACTIVE /
-            LATENCY: 8MS</text>
-
-          <!-- Node Cluster 3 -->
-          <circle cx="1400" cy="200" r="3" fill="#63574A" opacity="0.5" />
-          <circle cx="1400" cy="200" r="12" fill="none" stroke="#63574A" stroke-width="0.5" opacity="0.2" />
-          <text x="1415" y="195" font-family="monospace" font-size="8" fill="#63574A" opacity="0.4"
-            letter-spacing="0.1em">STATE.SYNC</text>
-
-          <!-- Node Cluster 4 -->
-          <circle cx="1200" cy="300" r="2" fill="#63574A" opacity="0.6" />
-          <text x="1210" y="295" font-family="monospace" font-size="8" fill="#63574A" opacity="0.4"
-            letter-spacing="0.1em">API.GATEWAY</text>
-
-          <!-- Technical Grid crosshairs -->
-          <path d="M 500,390 L 500,410 M 490,400 L 510,400" fill="none" stroke="#63574A" stroke-width="0.5"
-            opacity="0.4" />
-          <path d="M 900,290 L 900,310 M 890,300 L 910,300" fill="none" stroke="#63574A" stroke-width="0.5"
-            opacity="0.4" />
+        <!-- Environmental infrastructure remnants → integrated with global topology -->
+        <svg class="absolute inset-0 w-full h-full opacity-[0.08]" xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path d="M 0,50 L 200,50 M 1240,50 L 1440,50" fill="none" stroke="#63574A" stroke-width="0.3" opacity="0.4" />
+          <circle cx="200" cy="50" r="2" fill="none" stroke="#63574A" stroke-width="0.3" opacity="0.3" />
+          <circle cx="1240" cy="50" r="2" fill="none" stroke="#63574A" stroke-width="0.3" opacity="0.3" />
         </svg>
 
         <!-- Ambient Blurs for depth -->
@@ -284,44 +267,20 @@
 
     <!-- ── PROCESS & TERRITORY ── -->
     <section id="process" class="py-32 md:py-48 px-6 bg-base-200 relative overflow-hidden">
-      <!-- Advanced Structural Infrastructure Background -->
-      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-[0.25]" aria-hidden="true" data-parallax="0.03">
+      <!-- Structural Infrastructure Background — continuous with global topology -->
+      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-[0.2]" aria-hidden="true" data-parallax="0.03">
         <!-- Base Operational Grid -->
-        <div class="absolute inset-0 opacity-[0.25]" style="background-image: linear-gradient(to right, #533E2B 1px, transparent 1px), linear-gradient(to bottom, #533E2B 1px, transparent 1px); background-size: 80px 80px; mask-image: radial-gradient(ellipse at 50% 50%, black 10%, transparent 80%); -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 10%, transparent 80%);"></div>
+        <div class="absolute inset-0 opacity-[0.2]" style="background-image: linear-gradient(to right, #533E2B 1px, transparent 1px), linear-gradient(to bottom, #533E2B 1px, transparent 1px); background-size: 80px 80px; mask-image: radial-gradient(ellipse at 50% 50%, black 10%, transparent 80%); -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 10%, transparent 80%);"></div>
         
-        <!-- Animated Environmental Traces -->
-        <svg class="w-full h-full absolute inset-0" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="trace-fade" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#533E2B" stop-opacity="0" />
-              <stop offset="50%" stop-color="#533E2B" stop-opacity="0.8" />
-              <stop offset="100%" stop-color="#533E2B" stop-opacity="0" />
-            </linearGradient>
-            <linearGradient id="trace-fade-v" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#533E2B" stop-opacity="0" />
-              <stop offset="50%" stop-color="#533E2B" stop-opacity="0.8" />
-              <stop offset="100%" stop-color="#533E2B" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-          
-          <!-- Routing Lines with subtle flow animation -->
-          <g class="opacity-60">
-            <path d="M-100,240 L 320,240 L 320,560 L 720,560" fill="none" stroke="url(#trace-fade)" stroke-width="0.5" stroke-dasharray="4 8" style="animation: dash-flow 40s linear infinite;" />
-            <path d="M 500,-100 L 500,400 L 900,400 L 900,900" fill="none" stroke="url(#trace-fade-v)" stroke-width="0.5" stroke-dasharray="2 6" style="animation: dash-flow-reverse 50s linear infinite;" />
-            <path d="M 1000,160 L 1280,160 L 1280,640 L 1800,640" fill="none" stroke="url(#trace-fade)" stroke-width="0.5" style="animation: pulse-slow 10s ease-in-out infinite;" />
+        <!-- Topology routing remnants — connected to global infrastructure -->
+        <svg class="w-full h-full absolute inset-0" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g opacity="0.3">
+            <path d="M-100,240 L 320,240 L 320,560 L 720,560" fill="none" stroke="#533E2B" stroke-width="0.3" stroke-dasharray="4 8" style="animation: dash-flow 40s linear infinite;" />
+            <path d="M 500,-100 L 500,400 L 900,400 L 900,900" fill="none" stroke="#533E2B" stroke-width="0.3" stroke-dasharray="2 6" style="animation: dash-flow-reverse 50s linear infinite;" />
           </g>
-
-          <!-- Infrastructure Nodes & Coordinates -->
-          <g class="opacity-50">
-            <rect x="318" y="238" width="4" height="4" fill="none" stroke="#533E2B" stroke-width="0.5" style="animation: spin-slow 20s linear infinite; transform-origin: 320px 240px;" />
-            <text x="330" y="235" font-family="monospace" font-size="7" fill="#533E2B" letter-spacing="0.1em">TR-240.X</text>
-            
-            <circle cx="720" cy="560" r="2.5" fill="#533E2B" style="animation: pulse-node 4s ease-in-out infinite; transform-origin: 720px 560px;" />
-            <circle cx="720" cy="560" r="8" fill="none" stroke="#533E2B" stroke-width="0.25" stroke-dasharray="1 3" style="animation: spin-slow 25s linear infinite; transform-origin: 720px 560px;" />
-            <text x="735" y="565" font-family="monospace" font-size="7" fill="#533E2B" letter-spacing="0.1em">S-RELAY.02</text>
-
-            <rect x="1278" y="158" width="4" height="4" fill="none" stroke="#533E2B" stroke-width="0.5" transform="rotate(45 1280 160)" />
-            <text x="1290" y="155" font-family="monospace" font-size="7" fill="#533E2B" letter-spacing="0.1em">NODE-PRX</text>
+          <g opacity="0.2">
+            <circle cx="720" cy="560" r="2" fill="#533E2B" style="animation: pulse-node 6s ease-in-out infinite; transform-origin: 720px 560px;" />
+            <circle cx="720" cy="560" r="6" fill="none" stroke="#533E2B" stroke-width="0.2" stroke-dasharray="1 3" />
           </g>
         </svg>
       </div>
@@ -535,26 +494,17 @@
 
         <!-- CASES -->
     <section id="cases" class="py-24 md:py-32 px-6 relative overflow-hidden bg-[#EBE7E0] border-t border-support-200/50">
-      <!-- Operational Background Map / Atmosphere -->
+      <!-- Operational Background Map — continuous topology remnants -->
       <div class="absolute inset-0 w-full h-full z-0 pointer-events-none" aria-hidden="true">
-        <!-- Subconscious grid -->
-        <div class="absolute inset-0 opacity-[0.1]" style="background-image: linear-gradient(to right, #533E2B 1px, transparent 1px), linear-gradient(to bottom, #533E2B 1px, transparent 1px); background-size: 100px 100px;"></div>
+        <div class="absolute inset-0 opacity-[0.08]" style="background-image: linear-gradient(to right, #533E2B 1px, transparent 1px), linear-gradient(to bottom, #533E2B 1px, transparent 1px); background-size: 100px 100px;"></div>
         
-        <!-- Connecting lines and nodes -->
-        <svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <path d="M 100,0 L 100,1000 M 0,250 L 2000,250" stroke="#533E2B" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.3" />
-          <circle cx="100" cy="250" r="3" fill="none" stroke="#533E2B" opacity="0.5" />
-          
-          <path d="M 0,850 L 2000,850" stroke="#533E2B" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.3" />
+        <!-- Infrastructure routing continuity -->
+        <svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g opacity="0.2">
+            <line x1="100" y1="250" x2="100" y2="850" stroke="#533E2B" stroke-width="0.4" stroke-dasharray="2 6" />
+            <circle cx="100" cy="250" r="2" fill="none" stroke="#533E2B" stroke-width="0.4" />
+          </g>
         </svg>
-
-        <!-- Radar Target Top Right -->
-        <div class="absolute top-16 right-[10%] w-32 h-32 opacity-10">
-          <div class="absolute inset-0 rounded-full border border-support-400"></div>
-          <div class="absolute inset-4 rounded-full border border-support-400 border-dashed"></div>
-          <div class="absolute top-1/2 left-0 right-0 h-px bg-support-400"></div>
-          <div class="absolute left-1/2 top-0 bottom-0 w-px bg-support-400"></div>
-        </div>
       </div>
 
       <div class="max-w-[1600px] mx-auto relative z-10">
@@ -1001,14 +951,12 @@
     </div>
 
     <section id="impact" class="py-32 md:py-48 px-6 bg-base-100 relative overflow-hidden">
-      <!-- Institutional Parallax Background -->
-      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-[0.08]" aria-hidden="true"
+      <!-- Environmental Parallax — operational traces aligned with global topology -->
+      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-[0.06]" aria-hidden="true"
         data-parallax="-0.03">
-        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <path d="M 0,0 L 2000,1000" fill="none" stroke="#533E2B" stroke-width="1" />
-          <path d="M 0,1000 L 2000,0" fill="none" stroke="#533E2B" stroke-width="1" />
-          <circle cx="1000" cy="500" r="400" fill="none" stroke="#533E2B" stroke-width="0.5" stroke-dasharray="4 4" />
-          <circle cx="1000" cy="500" r="600" fill="none" stroke="#533E2B" stroke-width="0.5" />
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+          <circle cx="50%" cy="50%" r="400" fill="none" stroke="#533E2B" stroke-width="0.4" stroke-dasharray="4 8" />
+          <circle cx="50%" cy="50%" r="600" fill="none" stroke="#533E2B" stroke-width="0.3" />
         </svg>
       </div>
 
@@ -1129,14 +1077,16 @@
     </div>
 
     <section id="about" class="py-32 md:py-48 px-6 bg-[#EBE7E0] text-[#3A332C] relative overflow-hidden">
-      <!-- Logic Traces Background -->
-      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-[0.2]" aria-hidden="true"
+      <!-- Logic Traces — fading topology remnants connected to global infrastructure -->
+      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-[0.15]" aria-hidden="true"
         data-parallax="0.04">
-        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <path d="M 100,0 L 100,800 L 400,800" fill="none" stroke="#63574A" stroke-width="0.5" />
-          <path d="M 300,200 L 600,200 L 600,600" fill="none" stroke="#63574A" stroke-width="0.5" />
-          <circle cx="100" cy="800" r="3" fill="#63574A" />
-          <circle cx="600" cy="600" r="3" fill="#63574A" />
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 100,0 L 100,800 L 400,800" fill="none" stroke="#63574A" stroke-width="0.4" />
+          <path d="M 300,200 L 600,200 L 600,600" fill="none" stroke="#63574A" stroke-width="0.4" stroke-dasharray="2 4" />
+          <path d="M 600,800 L 900,800 L 900,400" fill="none" stroke="#63574A" stroke-width="0.25" stroke-dasharray="1 5" opacity="0.5" />
+          <circle cx="100" cy="800" r="3" fill="#63574A" opacity="0.6" />
+          <circle cx="600" cy="600" r="2" fill="#63574A" opacity="0.5" />
+          <circle cx="900" cy="400" r="2" fill="none" stroke="#63574A" stroke-width="0.4" opacity="0.4" />
         </svg>
       </div>
 
@@ -1304,6 +1254,9 @@
   </div>
 
   <footer class="py-16 px-6 bg-[#472211] text-[#f2efe9] relative overflow-hidden">
+    <!-- Environmental fade — systemic dissolution of the operational layer -->
+    <div class="absolute inset-0 z-[1] pointer-events-none" aria-hidden="true" style="background: linear-gradient(to bottom, rgba(71,34,17,0) 0%, rgba(71,34,17,0.4) 40%, #472211 100%);"></div>
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#BE9C6E]/15 to-transparent z-[2]"></div>
     <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
       <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
         <div class="w-12 h-12 rounded-full border border-[#BE9C6E]/30 flex items-center justify-center">
