@@ -535,163 +535,222 @@
 
     <!-- CASES -->
     <section id="cases" class="py-32 md:py-48 px-6 relative overflow-hidden bg-[#EBE7E0]">
-      <!-- Operational Background Map -->
-      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-[0.15]" aria-hidden="true"
-        data-parallax="0.08">
-        <div class="absolute inset-0 opacity-[0.2]"
-          style="background-image: linear-gradient(to right, #63574A 1px, transparent 1px), linear-gradient(to bottom, #63574A 1px, transparent 1px); background-size: 120px 120px;">
-        </div>
-        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <path d="M-100,500 C 400,500 600,200 1200,300 C 1600,400 1800,100 2000,100" fill="none" stroke="#533E2B"
-            stroke-width="0.5" stroke-dasharray="2 4" />
-          <!-- Coordinate Crosshairs -->
-          <path d="M 300,300 L 320,300 M 310,290 L 310,310" fill="none" stroke="#533E2B" stroke-width="0.5" />
-          <path d="M 1200,600 L 1220,600 M 1210,590 L 1210,610" fill="none" stroke="#533E2B" stroke-width="0.5" />
+      <!-- Operational Background Map / Atmosphere -->
+      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-[0.25]" aria-hidden="true" data-parallax="0.05">
+        <!-- Subconscious grid -->
+        <div class="absolute inset-0 opacity-[0.15]" style="background-image: linear-gradient(to right, #533E2B 1px, transparent 1px), linear-gradient(to bottom, #533E2B 1px, transparent 1px); background-size: 120px 120px; mask-image: linear-gradient(to bottom, black, transparent 80%); -webkit-mask-image: linear-gradient(to bottom, black, transparent 80%);"></div>
+        
+        <svg class="w-full h-full absolute inset-0" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <!-- Topology traces -->
+          <path d="M-100,500 C 400,500 600,200 1200,300 C 1600,400 1800,100 2400,200" fill="none" stroke="#533E2B" stroke-width="0.5" stroke-dasharray="2 6" class="opacity-50" style="animation: dash-flow 60s linear infinite;"/>
+          <path d="M-200,800 C 200,800 500,400 1000,500 C 1500,600 1800,300 2400,300" fill="none" stroke="#533E2B" stroke-width="0.5" stroke-dasharray="1 8" class="opacity-30" style="animation: dash-flow-reverse 80s linear infinite;"/>
+          
+          <!-- Crosshairs -->
+          <g class="opacity-40">
+            <path d="M 200,200 L 220,200 M 210,190 L 210,210" fill="none" stroke="#533E2B" stroke-width="0.5" />
+            <text x="225" y="195" font-family="monospace" font-size="7" fill="#533E2B" letter-spacing="0.1em">SYS.01</text>
+            
+            <path d="M 1200,600 L 1220,600 M 1210,590 L 1210,610" fill="none" stroke="#533E2B" stroke-width="0.5" />
+            <text x="1225" y="595" font-family="monospace" font-size="7" fill="#533E2B" letter-spacing="0.1em">SYS.02</text>
+          </g>
         </svg>
       </div>
 
       <div class="max-w-[1440px] mx-auto relative z-10">
-        <div class="mb-32 section-heading">
-          <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-accent-600 mb-6 block font-semibold"
-            data-t="s3.tag">03 / Casos</span>
-          <h2 class="font-display font-bold text-[6em] max-w-[1440px] w-full tracking-[-0.03em] leading-[0.95]"
-            data-t="s3.title">Trabalhos
-            selecionados</h2>
+        <!-- Section Heading -->
+        <div class="mb-32 lg:mb-48">
+          <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-accent-600 mb-8 block font-semibold">03 / Casos</span>
+          <h2 class="font-display font-bold text-[4rem] md:text-[6em] max-w-[1440px] w-full tracking-[-0.03em] leading-[0.95] text-text-primary">Sistemas reais.<br>Impacto operacional.</h2>
+          <p class="font-body text-xl md:text-2xl text-text-secondary leading-relaxed max-w-[800px] mt-8">Projetos desenvolvidos para operações críticas, onde design estrutura informações, reduz complexidade e gera impacto mensurável.</p>
         </div>
 
-        <div class="flex flex-col">
-
-          <!-- Case 1 -->
-          <a href="javascript:void(0)"
-            class="group grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center py-12 border-t border-base-200 relative case-row no-underline"
-            data-case-index="0">
-            <div
-              class="lg:col-span-1 font-mono text-[10px] text-support-300 tracking-[0.2em] group-hover:text-accent-500 transition-colors">
-              01</div>
-            <div class="lg:col-span-5">
-              <span
-                class="font-mono text-[9px] uppercase tracking-[0.14em] text-support-400 mb-1 block">Petrobras</span>
-              <h3
-                class="font-display font-bold text-4xl md:text-[4.5rem] tracking-tighter text-text-primary leading-[0.9] group-hover:text-accent-600 transition-colors py-4"
-                data-t="c1.client">SALA <em class="font-normal italic">CAR</em></h3>
-              <div class="flex flex-wrap gap-2 mt-4">
-                <span
-                  class="px-2 py-1 rounded border border-base-200 text-[8px] uppercase tracking-widest text-text-tertiary">Offshore</span>
-                <span
-                  class="px-2 py-1 rounded border border-base-200 text-[8px] uppercase tracking-widest text-text-tertiary">Monitoring</span>
+        <!-- Strict 2-Column Desktop Grid for Immersive Windows -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24" id="cases-grid">
+          
+          <!-- CASE 1: PETROBRAS -->
+          <div class="case-cinematic-card group flex flex-col">
+            <!-- Image Window -->
+            <div class="relative w-full aspect-[4/3] md:aspect-[16/10] bg-base-300 overflow-hidden border border-support-200/50 mb-8">
+              <!-- Environmental Overlay & HUD -->
+              <div class="absolute inset-0 z-10 pointer-events-none mix-blend-overlay opacity-30 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.2)_0%,transparent_20%,transparent_80%,rgba(0,0,0,0.2)_100%)]"></div>
+              <div class="absolute top-4 left-4 z-20 flex gap-2 items-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                <span class="font-mono text-[8px] text-white tracking-[0.2em] uppercase">Rec REC.ON</span>
+              </div>
+              <div class="absolute bottom-4 right-4 z-20 font-mono text-[8px] text-white/70 tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-1000">COORD: 43.12.S 40.5W</div>
+              
+              <img src="assets/img/cases/petrobras.png" alt="Petrobras Offshore System" class="w-full h-full object-cover object-center transform scale-[1.01] group-hover:scale-[1.05] transition-transform duration-[2s] ease-out origin-center" />
+            </div>
+            
+            <!-- Metadata & Strategic Content -->
+            <div class="flex flex-col flex-grow">
+              <div class="flex items-center gap-3 mb-6">
+                <span class="font-mono text-[10px] text-accent-600 tracking-[0.2em] uppercase font-bold">Energia · Operações Offshore</span>
+              </div>
+              
+              <h3 class="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight leading-[1.1] mb-6">PETROBRAS</h3>
+              <p class="font-body text-base md:text-lg text-text-secondary leading-relaxed mb-10 max-w-[45ch]">Coordenação offshore crítica para monitoramento ambiental e resposta operacional em tempo real.</p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 pt-8 border-t border-support-200/60 mt-auto">
+                <div>
+                  <span class="block font-mono text-[9px] uppercase tracking-[0.15em] text-support-400 mb-2">Sistema</span>
+                  <span class="block font-body text-sm text-text-primary font-medium">Monitoramento Ambiental Offshore</span>
+                </div>
+                <div>
+                  <span class="block font-mono text-[9px] uppercase tracking-[0.15em] text-support-400 mb-2">Escala</span>
+                  <span class="block font-body text-sm text-text-primary font-medium">Operação Nacional</span>
+                </div>
+                <div class="md:col-span-2">
+                  <span class="block font-mono text-[9px] uppercase tracking-[0.15em] text-support-400 mb-2">Impacto</span>
+                  <span class="block font-body text-sm text-text-primary font-medium">Redução de risco operacional</span>
+                </div>
               </div>
             </div>
-            <div class="lg:col-span-6 flex flex-col gap-4">
-              <p class="font-body text-sm md:text-base text-text-secondary leading-relaxed max-w-[48ch]"
-                data-t="c1.desc">Centralização de sinais operacionais offshore distribuídos em um ambiente unificado de
-                monitoramento para decisões críticas de gestão de plataformas.</p>
-              <span
-                class="font-mono text-[10px] uppercase tracking-widest text-accent-500 group-hover:translate-x-1 transition-all"
-                data-t="view-case">Ver detalhes →</span>
-            </div>
-            <div
-              class="absolute bottom-0 left-0 right-0 h-px bg-accent-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out">
-            </div>
-          </a>
+          </div>
 
-          <!-- Case 2 -->
-          <a href="javascript:void(0)"
-            class="group grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center py-12 border-t border-base-200 relative case-row no-underline"
-            data-case-index="1">
-            <div
-              class="lg:col-span-1 font-mono text-[10px] text-support-300 tracking-[0.2em] group-hover:text-accent-500 transition-colors">
-              02</div>
-            <div class="lg:col-span-5">
-              <span class="font-mono text-[9px] uppercase tracking-[0.14em] text-support-400 mb-1 block">Bayer</span>
-              <h3
-                class="font-display font-bold text-4xl md:text-[4.5rem] tracking-tighter text-text-primary leading-[0.9] group-hover:text-accent-600 transition-colors py-4"
-                data-t="c2.client">Arquitetura de <em class="font-normal italic">Precisão</em></h3>
-              <div class="flex flex-wrap gap-2 mt-4">
-                <span
-                  class="px-2 py-1 rounded border border-base-200 text-[8px] uppercase tracking-widest text-text-tertiary">Agri-tech</span>
-                <span
-                  class="px-2 py-1 rounded border border-base-200 text-[8px] uppercase tracking-widest text-text-tertiary">Data
-                  Scale</span>
+          <!-- CASE 2: AMBEV -->
+          <div class="case-cinematic-card group flex flex-col lg:mt-24">
+            <!-- Image Window -->
+            <div class="relative w-full aspect-[4/3] md:aspect-[16/10] bg-base-300 overflow-hidden border border-support-200/50 mb-8">
+              <!-- Environmental Overlay & HUD -->
+              <div class="absolute inset-0 z-10 pointer-events-none mix-blend-overlay opacity-30 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.2)_0%,transparent_20%,transparent_80%,rgba(0,0,0,0.2)_100%)]"></div>
+              <div class="absolute top-0 left-0 w-full h-[1px] bg-accent-500/50 z-20 opacity-0 group-hover:opacity-100" style="animation: scan-line 4s linear infinite;"></div>
+              
+              <img src="assets/img/cases/ambev.jpg" alt="Ambev Logistical Infrastructure" class="w-full h-full object-cover object-center transform scale-[1.01] group-hover:scale-[1.05] transition-transform duration-[2s] ease-out origin-center" />
+            </div>
+            
+            <!-- Metadata & Strategic Content -->
+            <div class="flex flex-col flex-grow">
+              <div class="flex items-center gap-3 mb-6">
+                <span class="font-mono text-[10px] text-accent-600 tracking-[0.2em] uppercase font-bold">Logística · Operações Distribuídas</span>
+              </div>
+              
+              <h3 class="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight leading-[1.1] mb-6">AMBEV</h3>
+              <p class="font-body text-base md:text-lg text-text-secondary leading-relaxed mb-10 max-w-[45ch]">Infraestrutura logística nacional para monitoramento distribuído e gestão de rupturas operacionais.</p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 pt-8 border-t border-support-200/60 mt-auto">
+                <div>
+                  <span class="block font-mono text-[9px] uppercase tracking-[0.15em] text-support-400 mb-2">Sistema</span>
+                  <span class="block font-body text-sm text-text-primary font-medium">Gestão Logística Distribuída</span>
+                </div>
+                <div>
+                  <span class="block font-mono text-[9px] uppercase tracking-[0.15em] text-support-400 mb-2">Escala</span>
+                  <span class="block font-body text-sm text-text-primary font-medium">Centros de Distribuição Nacionais</span>
+                </div>
+                <div class="md:col-span-2">
+                  <span class="block font-mono text-[9px] uppercase tracking-[0.15em] text-support-400 mb-2">Impacto</span>
+                  <span class="block font-body text-sm text-text-primary font-medium">Eficiência operacional e redução de rupturas</span>
+                </div>
               </div>
             </div>
-            <div class="lg:col-span-6 flex flex-col gap-4">
-              <p class="font-body text-sm md:text-base text-text-secondary leading-relaxed max-w-[48ch]"
-                data-t="c2.desc">Unificação de fluxos de dados agrícolas fragmentados — clima, solo e métricas de
-                produção — em uma arquitetura progressiva de interpretação nacional.</p>
-              <span
-                class="font-mono text-[10px] uppercase tracking-widest text-accent-500 group-hover:translate-x-1 transition-all"
-                data-t="view-case">Ver detalhes →</span>
-            </div>
-            <div
-              class="absolute bottom-0 left-0 right-0 h-px bg-accent-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out">
-            </div>
-          </a>
+          </div>
 
-          <!-- Case 3 -->
-          <a href="javascript:void(0)"
-            class="group grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center py-12 border-t border-base-200 relative case-row no-underline"
-            data-case-index="2">
-            <div
-              class="lg:col-span-1 font-mono text-[10px] text-support-300 tracking-[0.2em] group-hover:text-accent-500 transition-colors">
-              03</div>
-            <div class="lg:col-span-5">
-              <span class="font-mono text-[9px] uppercase tracking-[0.14em] text-support-400 mb-1 block">AmBev</span>
-              <h3
-                class="font-display font-bold text-4xl md:text-[4.5rem] tracking-tighter text-text-primary leading-[0.9] group-hover:text-accent-600 transition-colors py-4"
-                data-t="c3.client">Torre de <em class="font-normal italic">Controle</em></h3>
-              <div class="flex flex-wrap gap-2 mt-4">
-                <span
-                  class="px-2 py-1 rounded border border-base-200 text-[8px] uppercase tracking-widest text-text-tertiary">Supply
-                  Chain</span>
-                <span
-                  class="px-2 py-1 rounded border border-base-200 text-[8px] uppercase tracking-widest text-text-tertiary">Operations</span>
+          <!-- CASE 3: BAYER -->
+          <div class="case-cinematic-card group flex flex-col">
+            <!-- Image Window -->
+            <div class="relative w-full aspect-[4/3] md:aspect-[16/10] bg-base-300 overflow-hidden border border-support-200/50 mb-8">
+              <!-- Environmental Overlay & HUD -->
+              <div class="absolute inset-0 z-10 pointer-events-none mix-blend-overlay opacity-30 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.2)_0%,transparent_20%,transparent_80%,rgba(0,0,0,0.2)_100%)]"></div>
+              <svg class="absolute inset-0 w-full h-full z-20 pointer-events-none opacity-0 group-hover:opacity-30 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M 0,20 L 100,20 M 0,40 L 100,40 M 0,60 L 100,60 M 0,80 L 100,80" fill="none" stroke="#fff" stroke-width="0.2" stroke-dasharray="1 2"/>
+              </svg>
+              
+              <img src="assets/img/cases/bayer.jpg" alt="Bayer Agronomic Intelligence" class="w-full h-full object-cover object-center transform scale-[1.01] group-hover:scale-[1.05] transition-transform duration-[2s] ease-out origin-center" />
+            </div>
+            
+            <!-- Metadata & Strategic Content -->
+            <div class="flex flex-col flex-grow">
+              <div class="flex items-center gap-3 mb-6">
+                <span class="font-mono text-[10px] text-accent-600 tracking-[0.2em] uppercase font-bold">Agronegócio · Inteligência Territorial</span>
+              </div>
+              
+              <h3 class="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight leading-[1.1] mb-6">BAYER</h3>
+              <p class="font-body text-base md:text-lg text-text-secondary leading-relaxed mb-10 max-w-[45ch]">Sistema territorial de inteligência agronômica para análise ambiental e suporte à decisão agrícola.</p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 pt-8 border-t border-support-200/60 mt-auto">
+                <div>
+                  <span class="block font-mono text-[9px] uppercase tracking-[0.15em] text-support-400 mb-2">Sistema</span>
+                  <span class="block font-body text-sm text-text-primary font-medium">Inteligência Agronômica</span>
+                </div>
+                <div>
+                  <span class="block font-mono text-[9px] uppercase tracking-[0.15em] text-support-400 mb-2">Escala</span>
+                  <span class="block font-body text-sm text-text-primary font-medium">Monitoramento Territorial</span>
+                </div>
+                <div class="md:col-span-2">
+                  <span class="block font-mono text-[9px] uppercase tracking-[0.15em] text-support-400 mb-2">Impacto</span>
+                  <span class="block font-body text-sm text-text-primary font-medium">Apoio à tomada de decisão agronômica</span>
+                </div>
               </div>
             </div>
-            <div class="lg:col-span-6 flex flex-col gap-4">
-              <p class="font-body text-sm md:text-base text-text-secondary leading-relaxed max-w-[48ch]"
-                data-t="c3.desc">Estruturação da visibilidade de exceções logísticas em uma cadeia de suprimentos
-                distribuída para detecção de anomalias e resposta coordenada.</p>
-              <span
-                class="font-mono text-[10px] uppercase tracking-widest text-accent-500 group-hover:translate-x-1 transition-all"
-                data-t="view-case">Ver detalhes →</span>
-            </div>
-            <div
-              class="absolute bottom-0 left-0 right-0 h-px bg-accent-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out">
-            </div>
-          </a>
+          </div>
 
-          <!-- Case 4 -->
-          <a href="#"
-            class="group grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center py-12 border-t border-base-200 border-b relative case-row no-underline">
-            <div
-              class="lg:col-span-1 font-mono text-[10px] text-support-300 tracking-[0.2em] group-hover:text-accent-500 transition-colors">
-              04</div>
-            <div class="lg:col-span-5">
-              <span class="font-mono text-[9px] uppercase tracking-[0.14em] text-support-400 mb-1 block">BMG</span>
-              <h3
-                class="font-display font-bold text-4xl md:text-[4.5rem] tracking-tighter text-text-primary leading-[0.9] group-hover:text-accent-600 transition-colors py-4"
-                data-t="c4.client">Conta <em class="font-normal italic">PJ</em></h3>
-              <div class="flex flex-wrap gap-2 mt-4">
-                <span
-                  class="px-2 py-1 rounded border border-base-200 text-[8px] uppercase tracking-widest text-text-tertiary">Fintech</span>
-                <span
-                  class="px-2 py-1 rounded border border-base-200 text-[8px] uppercase tracking-widest text-text-tertiary">Compliance</span>
+          <!-- CASE 4: BMG -->
+          <div class="case-cinematic-card group flex flex-col lg:mt-24">
+            <!-- Image Window -->
+            <div class="relative w-full aspect-[4/3] md:aspect-[16/10] bg-base-300 overflow-hidden border border-support-200/50 mb-8">
+              <!-- Environmental Overlay & HUD -->
+              <div class="absolute inset-0 z-10 pointer-events-none mix-blend-overlay opacity-30 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.2)_0%,transparent_20%,transparent_80%,rgba(0,0,0,0.2)_100%)]"></div>
+              <div class="absolute right-4 bottom-4 w-8 h-8 border border-white/20 z-20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000 scale-[0.8] group-hover:scale-[1]">
+                <div class="w-6 h-6 border border-white/40 rounded-full animate-[spin_10s_linear_infinite]"></div>
+              </div>
+              
+              <img src="assets/img/cases/bmg.png" alt="BMG Corporate Platform" class="w-full h-full object-cover object-center transform scale-[1.01] group-hover:scale-[1.05] transition-transform duration-[2s] ease-out origin-center" />
+            </div>
+            
+            <!-- Metadata & Strategic Content -->
+            <div class="flex flex-col flex-grow">
+              <div class="flex items-center gap-3 mb-6">
+                <span class="font-mono text-[10px] text-accent-600 tracking-[0.2em] uppercase font-bold">Finanças · Plataforma Enterprise</span>
+              </div>
+              
+              <h3 class="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight leading-[1.1] mb-6">BMG</h3>
+              <p class="font-body text-base md:text-lg text-text-secondary leading-relaxed mb-10 max-w-[45ch]">Arquitetura financeira modular para operações PJ em ambientes regulados.</p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 pt-8 border-t border-support-200/60 mt-auto">
+                <div>
+                  <span class="block font-mono text-[9px] uppercase tracking-[0.15em] text-support-400 mb-2">Sistema</span>
+                  <span class="block font-body text-sm text-text-primary font-medium">Plataforma Financeira Corporativa</span>
+                </div>
+                <div>
+                  <span class="block font-mono text-[9px] uppercase tracking-[0.15em] text-support-400 mb-2">Escala</span>
+                  <span class="block font-body text-sm text-text-primary font-medium">Operação Bancária Nacional</span>
+                </div>
+                <div class="md:col-span-2">
+                  <span class="block font-mono text-[9px] uppercase tracking-[0.15em] text-support-400 mb-2">Impacto</span>
+                  <span class="block font-body text-sm text-text-primary font-medium">Eficiência operacional e coordenação financeira</span>
+                </div>
               </div>
             </div>
-            <div class="lg:col-span-6 flex flex-col gap-4">
-              <p class="font-body text-sm md:text-base text-text-secondary leading-relaxed max-w-[48ch]"
-                data-t="c4.desc">Design de lógica de permissões complexas e fluxos de estado de transação para uma
-                plataforma bancária corporativa com auditoria completa.</p>
-              <span
-                class="font-mono text-[10px] uppercase tracking-widest text-accent-500 group-hover:translate-x-1 transition-all"
-                data-t="view-case">Ver detalhes →</span>
-            </div>
-            <div
-              class="absolute bottom-0 left-0 right-0 h-px bg-accent-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out">
-            </div>
-          </a>
+          </div>
 
         </div>
+        
+        <style>
+          @keyframes scan-line { 0% { top: 0; } 50% { top: 100%; opacity: 0.8; } 100% { top: 100%; opacity: 0; } }
+          .case-cinematic-card { will-change: transform, opacity; }
+        </style>
+        
+        <script>
+          window.addEventListener('load', () => {
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+              gsap.fromTo('.case-cinematic-card', 
+                { y: 60, opacity: 0 },
+                {
+                  y: 0,
+                  opacity: 1,
+                  duration: 2,
+                  stagger: 0.15,
+                  ease: "power2.out",
+                  scrollTrigger: {
+                    trigger: "#cases-grid",
+                    start: "top 80%",
+                  }
+                }
+              );
+            }
+          });
+        </script>
+
       </div>
     </section>
 
