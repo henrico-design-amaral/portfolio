@@ -199,13 +199,13 @@ if (motionReduced) {
   gsap.set('.sub', { opacity: 0, y: 20, filter: 'blur(4px)' });
   gsap.set('.cta-wrapper', { opacity: 0, y: 20 });
   
-  tl.to('.availability-badge-v2', { opacity: 1, y: 0, duration: 0.8, ease: 'expo.out' }, 0.05)
-    .to('.eyebrow-line', { scaleX: 1, duration: 0.8, ease: 'expo.inOut' }, 0.1)
-    .to('.eyebrow-text', { opacity: 1, duration: 0.6 }, 0.5)
-    .to('.hl-i', { y: '0%', rotation: 0, opacity: 1, duration: 1.2, stagger: 0.15, ease: 'expo.out' }, 0.4)
-    .to('.sub', { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1 }, 0.8)
-    .to('.cta-wrapper', { opacity: 1, y: 0, duration: 1 }, 1.0)
-    .to('.evidence', { opacity: 1, duration: 1 }, 1.2);
+  tl.to('.availability-badge-v2', { opacity: 1, y: 0, duration: 1.2, ease: 'power4.out' }, 0.2)
+    .to('.eyebrow-line', { scaleX: 1, duration: 1.2, ease: 'power4.inOut' }, 0.4)
+    .to('.eyebrow-text', { opacity: 1, duration: 1 }, 0.8)
+    .to('.hl-i', { y: '0%', rotation: 0, opacity: 1, duration: 1.6, stagger: 0.15, ease: 'power4.out' }, 0.6)
+    .to('.sub', { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2 }, 1.2)
+    .to('.cta-wrapper', { opacity: 1, y: 0, duration: 1.2 }, 1.4)
+    .to('.evidence', { opacity: 1, duration: 1.2 }, 1.6);
 }
 
 function reveal(selector, vars = {}) {
@@ -220,8 +220,8 @@ function reveal(selector, vars = {}) {
       y: 40,
       scale: 0.98,
       filter: 'blur(10px)',
-      duration: 1.2,
-      ease: 'expo.out',
+      duration: 1.6,
+      ease: 'power4.out',
       clearProps: 'filter,opacity,transform',
       ...vars
     });
@@ -229,10 +229,10 @@ function reveal(selector, vars = {}) {
 }
 
 if (!motionReduced) {
-  reveal('.section-heading', { duration: 1.5, filter: 'blur(10px)', y: 60 });
-  reveal('.terr-item', { stagger: 0.1 });
+  reveal('.section-heading', { duration: 1.8, filter: 'blur(10px)', y: 60 });
+  reveal('.terr-item', { stagger: 0.15 });
   reveal('.reveal-step', { stagger: 0.2, y: 50, scale: 0.95 });
-  reveal('.case-row', { stagger: 0.15, y: 60 });
+  reveal('.case-row', { stagger: 0.2, y: 60 });
   reveal('.impact-cell', { stagger: 0.1, x: -30, y: 0 });
 
   // Parallax elements
