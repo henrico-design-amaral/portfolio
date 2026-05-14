@@ -22,7 +22,7 @@
       --color-base-200: #EFE9E1;
       --color-base-300: #E8DFD6;
       --color-base-400: #DFD5C9;
-      
+
       /* Support — 30% of UI (#B39D8E) */
       --color-support-50: #E8E1D8;
       --color-support-100: #D4C8B9;
@@ -32,7 +32,7 @@
       --color-support-500: #B39D8E;
       --color-support-600: #9D8873;
       --color-support-700: #86704D;
-      
+
       /* Accent — 10% of UI (#8B3C3A brick-red) */
       --color-accent-50: #F5EBEA;
       --color-accent-100: #E8D4D2;
@@ -56,7 +56,7 @@
       --surface-raised: #EFE9E1;
       --surface-accent-light: #F2EADF;
       --surface-accent-warm: #D9C9B8;
-      
+
       /* Borders */
       --border-subtle: 1px solid rgba(90, 84, 81, 0.08);
       --border-default: 1px solid rgba(90, 84, 81, 0.12);
@@ -117,7 +117,7 @@
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
     /* ACCESSIBILITY — SKIP LINK & FOCUS                       */
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    
+
     .ds-skip-link {
       position: absolute;
       top: -100px;
@@ -249,7 +249,8 @@
       box-shadow: 0 2px 4px rgba(26, 20, 16, 0.06);
       transition: all var(--duration-normal) var(--ease-out);
       cursor: pointer;
-      min-height: 44px; /* hit area */
+      min-height: 44px;
+      /* hit area */
       min-width: 44px;
     }
 
@@ -289,7 +290,9 @@
     /* TYPE SAMPLES                                          */
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
-    .ds-type-demo { opacity: 1 !important; visibility: visible !important; 
+    .ds-type-demo {
+      opacity: 1 !important;
+      visibility: visible !important;
       margin-bottom: var(--space-8);
       padding: var(--space-4);
       border: var(--border-subtle);
@@ -401,6 +404,7 @@
         opacity: 0;
         transform: translateY(24px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -588,7 +592,8 @@
       justify-content: center;
       gap: var(--space-2);
       padding: 0 24px;
-      height: 48px; /* a11y standard */
+      height: 48px;
+      /* a11y standard */
       min-width: 120px;
       font-family: var(--font-mono);
       font-size: 10px;
@@ -688,7 +693,8 @@
       <!-- HEADER -->
       <p class="ds-section-tag">01 — Editorial Sand / Warm Precision</p>
       <h1 class="ds-section-title">Editorial Sand: Clareza, calma e sofisticação</h1>
-      <p class="ds-section-desc">Paleta baseada em tons terrosos refinados (#F6F2EC) com acentos em Brick Red (#8B3C3A). Projetada para interfaces que exigem longevidade visual e clareza operacional absoluta.</p>
+      <p class="ds-section-desc">Paleta baseada em tons terrosos refinados (#F6F2EC) com acentos em Brick Red (#8B3C3A).
+        Projetada para interfaces que exigem longevidade visual e clareza operacional absoluta.</p>
 
       <!-- COLOR PALETTE -->
       <p class="ds-section-tag">Paleta de cores</p>
@@ -764,7 +770,8 @@
 
       <div class="ds-type-demo">
         <p class="ds-type-label">Body</p>
-        <div class="ds-type-body">Empresas usam interfaces para tomar decisões críticas. Cada detalhe visual comunica prioridade operacional, nunca decoração.</div>
+        <div class="ds-type-body">Empresas usam interfaces para tomar decisões críticas. Cada detalhe visual comunica
+          prioridade operacional, nunca decoração.</div>
       </div>
 
       <div class="ds-type-demo">
@@ -827,26 +834,37 @@
       <!-- RADIUS SYSTEM -->
       <p class="ds-section-tag">Border Radius</p>
       <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-bottom: var(--space-12);">
-        <div style="width: 32px; height: 32px; background: var(--surface-accent-warm); border: var(--border-default); border-radius: 2px;"></div>
+        <div
+          style="width: 32px; height: 32px; background: var(--surface-accent-warm); border: var(--border-default); border-radius: 2px;">
+        </div>
         <div style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary);">2px</div>
-        <div style="width: 32px; height: 32px; background: var(--surface-accent-warm); border: var(--border-default); border-radius: 4px;"></div>
+        <div
+          style="width: 32px; height: 32px; background: var(--surface-accent-warm); border: var(--border-default); border-radius: 4px;">
+        </div>
         <div style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary);">4px</div>
-        <div style="width: 32px; height: 32px; background: var(--surface-accent-warm); border: var(--border-default); border-radius: 8px;"></div>
+        <div
+          style="width: 32px; height: 32px; background: var(--surface-accent-warm); border: var(--border-default); border-radius: 8px;">
+        </div>
         <div style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary);">8px</div>
-        <div style="width: 32px; height: 32px; background: var(--surface-accent-warm); border: var(--border-default); border-radius: 12px;"></div>
+        <div
+          style="width: 32px; height: 32px; background: var(--surface-accent-warm); border: var(--border-default); border-radius: 12px;">
+        </div>
         <div style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary);">12px</div>
       </div>
 
       <!-- SHADOWS -->
       <p class="ds-section-tag">Elevation & Shadows</p>
       <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: var(--space-12);">
-        <div style="padding: 12px; background: var(--surface-card); border: var(--border-default); box-shadow: 0 1px 2px rgba(26, 20, 16, 0.04); border-radius: 4px;">
+        <div
+          style="padding: 12px; background: var(--surface-card); border: var(--border-default); box-shadow: 0 1px 2px rgba(26, 20, 16, 0.04); border-radius: 4px;">
           <div style="font-family: var(--font-mono); font-size: 8px; color: var(--color-text-tertiary);">SUBTLE</div>
         </div>
-        <div style="padding: 12px; background: var(--surface-card); border: var(--border-default); box-shadow: 0 4px 8px rgba(26, 20, 16, 0.08); border-radius: 4px;">
+        <div
+          style="padding: 12px; background: var(--surface-card); border: var(--border-default); box-shadow: 0 4px 8px rgba(26, 20, 16, 0.08); border-radius: 4px;">
           <div style="font-family: var(--font-mono); font-size: 8px; color: var(--color-text-tertiary);">MEDIUM</div>
         </div>
-        <div style="padding: 12px; background: var(--surface-card); border: var(--border-default); box-shadow: 0 12px 24px rgba(26, 20, 16, 0.15); border-radius: 4px;">
+        <div
+          style="padding: 12px; background: var(--surface-card); border: var(--border-default); box-shadow: 0 12px 24px rgba(26, 20, 16, 0.15); border-radius: 4px;">
           <div style="font-family: var(--font-mono); font-size: 8px; color: var(--color-text-tertiary);">PROMINENT</div>
         </div>
       </div>
@@ -854,21 +872,30 @@
       <!-- MOTION -->
       <p class="ds-section-tag">Motion & Easing</p>
       <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--space-12);">
-        <div style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary); padding: 8px; background: rgba(179, 157, 142, 0.05); border-radius: 3px;">Fast: 100ms</div>
-        <div style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary); padding: 8px; background: rgba(179, 157, 142, 0.05); border-radius: 3px;">Normal: 220ms</div>
-        <div style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary); padding: 8px; background: rgba(179, 157, 142, 0.05); border-radius: 3px;">Slow: 400ms</div>
-        <div style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary); padding: 8px; background: rgba(179, 157, 142, 0.05); border-radius: 3px;">Ease Out: cubic-bezier(0,0,0.2,1)</div>
+        <div
+          style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary); padding: 8px; background: rgba(179, 157, 142, 0.05); border-radius: 3px;">
+          Fast: 100ms</div>
+        <div
+          style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary); padding: 8px; background: rgba(179, 157, 142, 0.05); border-radius: 3px;">
+          Normal: 220ms</div>
+        <div
+          style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary); padding: 8px; background: rgba(179, 157, 142, 0.05); border-radius: 3px;">
+          Slow: 400ms</div>
+        <div
+          style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary); padding: 8px; background: rgba(179, 157, 142, 0.05); border-radius: 3px;">
+          Ease Out: cubic-bezier(0,0,0.2,1)</div>
       </div>
 
       <!-- ACCESSIBILITY -->
       <p class="ds-section-tag">Accessibility</p>
       <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--space-12);">
-        <div style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary); line-height: 1.5;">
-          ✓ WCAG AA compliant<br/>
-          ✓ Min 4.5:1 contrast ratio<br/>
-          ✓ Focus indicators visible<br/>
-          ✓ Keyboard navigation<br/>
-          ✓ Screen reader support<br/>
+        <div
+          style="font-family: var(--font-mono); font-size: 9px; color: var(--color-text-secondary); line-height: 1.5;">
+          ✓ WCAG AA compliant<br />
+          ✓ Min 4.5:1 contrast ratio<br />
+          ✓ Focus indicators visible<br />
+          ✓ Keyboard navigation<br />
+          ✓ Screen reader support<br />
           ✓ Reduced motion respected
         </div>
       </div>
@@ -894,17 +921,20 @@
       <header class="ds-preview-header">
         <p class="ds-eyebrow">Applied Preview</p>
         <h2 class="ds-preview-title">Henrico Amaral</h2>
-        <p class="ds-preview-desc">Designing operational clarity in complex systems. Enterprise platforms, decision-support interfaces and mission-critical workflows designed with restraint, rhythm and precision.</p>
+        <p class="ds-preview-desc">Designing operational clarity in complex systems. Enterprise platforms,
+          decision-support interfaces and mission-critical workflows designed with restraint, rhythm and precision.</p>
       </header>
 
       <!-- Featured Case -->
-      <button type="button" class="ds-featured-case ds-interactive" style="text-align:left; width:100%; border:none; background:none; font:inherit;">
+      <button type="button" class="ds-featured-case ds-interactive"
+        style="text-align:left; width:100%; border:none; background:none; font:inherit;">
         <div class="ds-featured-content">
           <div>
             <div class="ds-featured-tag">Featured Case</div>
             <h3 class="ds-featured-title">Petrobras — Environmental Incident Platform</h3>
           </div>
-          <p class="ds-featured-desc">Fragmented monitoring sources, operational risk and decision latency reorganized into a unified response workflow.</p>
+          <p class="ds-featured-desc">Fragmented monitoring sources, operational risk and decision latency reorganized
+            into a unified response workflow.</p>
           <div class="ds-featured-cta">
             <span>View case study</span>
             <span>→</span>
@@ -943,16 +973,20 @@
       <section style="margin-top: var(--space-24); padding-top: var(--space-24); border-top: var(--border-default);">
         <p class="ds-eyebrow">04 — Component Library</p>
         <h3 class="ds-preview-title">Reusable Patterns</h3>
-        <p class="ds-section-desc">Componentes fundamentais que estruturam toda a interface. Cada um oferece feedback visual claro e affordances óbvias.</p>
+        <p class="ds-section-desc">Componentes fundamentais que estruturam toda a interface. Cada um oferece feedback
+          visual claro e affordances óbvias.</p>
 
         <!-- BUTTONS -->
         <div style="margin-top: var(--space-16);">
           <div class="ds-section-tag" style="margin-top: 0;">Buttons</div>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-8); margin-top: var(--space-8);">
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-8); margin-top: var(--space-8);">
             <button class="ds-btn ds-btn-primary ds-interactive">Primary action</button>
             <button class="ds-btn ds-interactive">Secondary action</button>
-            <button class="ds-btn ds-interactive" disabled style="opacity: 0.5; cursor: not-allowed;">Disabled state</button>
-            <button class="ds-btn ds-interactive" style="background: var(--surface-raised); border: var(--border-strong);">Tertiary action</button>
+            <button class="ds-btn ds-interactive" disabled style="opacity: 0.5; cursor: not-allowed;">Disabled
+              state</button>
+            <button class="ds-btn ds-interactive"
+              style="background: var(--surface-raised); border: var(--border-strong);">Tertiary action</button>
           </div>
         </div>
 
@@ -961,25 +995,33 @@
           <p class="ds-section-tag">Form Elements</p>
           <div style="display: grid; gap: var(--space-8); margin-top: var(--space-8); max-width: 400px;">
             <div>
-              <label for="ds-input-demo" style="display: block; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: var(--space-3);">Input field</label>
-              <input type="text" id="ds-input-demo" placeholder="Type something..." style="width: 100%; padding: 11px 12px; font-family: var(--font-body); font-size: 14px; border: var(--border-default); border-radius: var(--radius-sm); background: var(--surface-card); color: var(--color-text-primary); transition: all var(--duration-normal) var(--ease-out);" />
+              <label for="ds-input-demo"
+                style="display: block; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: var(--space-3);">Input
+                field</label>
+              <input type="text" id="ds-input-demo" placeholder="Type something..."
+                style="width: 100%; padding: 11px 12px; font-family: var(--font-body); font-size: 14px; border: var(--border-default); border-radius: var(--radius-sm); background: var(--surface-card); color: var(--color-text-primary); transition: all var(--duration-normal) var(--ease-out);" />
             </div>
             <div>
-              <label for="ds-select-demo" style="display: block; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: var(--space-3);">Select dropdown</label>
-              <select id="ds-select-demo" style="width: 100%; padding: 11px 12px; font-family: var(--font-body); font-size: 14px; border: var(--border-default); border-radius: var(--radius-sm); background: var(--surface-card); color: var(--color-text-primary);">
+              <label for="ds-select-demo"
+                style="display: block; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: var(--space-3);">Select
+                dropdown</label>
+              <select id="ds-select-demo"
+                style="width: 100%; padding: 11px 12px; font-family: var(--font-body); font-size: 14px; border: var(--border-default); border-radius: var(--radius-sm); background: var(--surface-card); color: var(--color-text-primary);">
                 <option>Option 1</option>
                 <option>Option 2</option>
                 <option>Option 3</option>
               </select>
             </div>
             <div>
-              <label style="display: flex; align-items: center; gap: var(--space-3); cursor: pointer; font-size: 14px; color: var(--color-text-primary);">
+              <label
+                style="display: flex; align-items: center; gap: var(--space-3); cursor: pointer; font-size: 14px; color: var(--color-text-primary);">
                 <input type="checkbox" style="width: 16px; height: 16px; cursor: pointer;" />
                 <span>Checkbox option</span>
               </label>
             </div>
             <div>
-              <label style="display: flex; align-items: center; gap: var(--space-3); cursor: pointer; font-size: 14px; color: var(--color-text-primary);">
+              <label
+                style="display: flex; align-items: center; gap: var(--space-3); cursor: pointer; font-size: 14px; color: var(--color-text-primary);">
                 <input type="radio" name="demo" style="width: 16px; height: 16px; cursor: pointer;" />
                 <span>Radio option</span>
               </label>
@@ -991,51 +1033,82 @@
         <div style="margin-top: var(--space-16);">
           <p class="ds-section-tag">Status Badges</p>
           <div style="display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-8);">
-            <span style="display: inline-flex; align-items: center; gap: var(--space-2); padding: 6px 10px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; border-radius: var(--radius-sm); background: #E8F5E9; color: #2E7D32; font-weight: 600; border: 1px solid rgba(46, 125, 50, 0.2);">✓ Active</span>
-            <span style="display: inline-flex; align-items: center; gap: var(--space-2); padding: 6px 10px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; border-radius: var(--radius-sm); background: #FFF3E0; color: #E65100; font-weight: 600; border: 1px solid rgba(230, 81, 0, 0.2);">⚠ Warning</span>
-            <span style="display: inline-flex; align-items: center; gap: var(--space-2); padding: 6px 10px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; border-radius: var(--radius-sm); background: #FFEBEE; color: #C62828; font-weight: 600; border: 1px solid rgba(198, 40, 40, 0.2);">✕ Error</span>
-            <span style="display: inline-flex; align-items: center; gap: var(--space-2); padding: 6px 10px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; border-radius: var(--radius-sm); background: #E3F2FD; color: #1565C0; font-weight: 600; border: 1px solid rgba(21, 101, 192, 0.2);">ℹ Info</span>
+            <span
+              style="display: inline-flex; align-items: center; gap: var(--space-2); padding: 6px 10px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; border-radius: var(--radius-sm); background: #E8F5E9; color: #2E7D32; font-weight: 600; border: 1px solid rgba(46, 125, 50, 0.2);">✓
+              Active</span>
+            <span
+              style="display: inline-flex; align-items: center; gap: var(--space-2); padding: 6px 10px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; border-radius: var(--radius-sm); background: #FFF3E0; color: #E65100; font-weight: 600; border: 1px solid rgba(230, 81, 0, 0.2);">⚠
+              Warning</span>
+            <span
+              style="display: inline-flex; align-items: center; gap: var(--space-2); padding: 6px 10px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; border-radius: var(--radius-sm); background: #FFEBEE; color: #C62828; font-weight: 600; border: 1px solid rgba(198, 40, 40, 0.2);">✕
+              Error</span>
+            <span
+              style="display: inline-flex; align-items: center; gap: var(--space-2); padding: 6px 10px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; border-radius: var(--radius-sm); background: #E3F2FD; color: #1565C0; font-weight: 600; border: 1px solid rgba(21, 101, 192, 0.2);">ℹ
+              Info</span>
           </div>
         </div>
 
         <!-- CARDS & CONTAINERS -->
         <div style="margin-top: var(--space-16);">
           <p class="ds-section-tag">Cards & Containers</p>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-8); margin-top: var(--space-8);">
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-8); margin-top: var(--space-8);">
             <!-- Card 1 -->
-            <div style="padding: var(--space-8); background: var(--surface-card); border: var(--border-default); border-radius: var(--radius-md); transition: all var(--duration-normal) var(--ease-out);" class="ds-interactive">
+            <div
+              style="padding: var(--space-8); background: var(--surface-card); border: var(--border-default); border-radius: var(--radius-md); transition: all var(--duration-normal) var(--ease-out);"
+              class="ds-interactive">
               <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-6); align-items: flex-start;">
-                <div style="width: 40px; height: 40px; background: rgba(179, 157, 142, 0.1); border-radius: var(--radius-md); flex-shrink: 0;"></div>
+                <div
+                  style="width: 40px; height: 40px; background: rgba(179, 157, 142, 0.1); border-radius: var(--radius-md); flex-shrink: 0;">
+                </div>
                 <div style="flex: 1;">
-                  <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600; margin-bottom: 2px;">Component</div>
+                  <div
+                    style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600; margin-bottom: 2px;">
+                    Component</div>
                   <div style="font-size: 14px; font-weight: 600; color: var(--color-text-primary);">Feature title</div>
                 </div>
               </div>
-              <p style="font-size: 13px; line-height: 1.6; color: var(--color-text-secondary);">Descrição concisa do componente e seu propósito na interface.</p>
+              <p style="font-size: 13px; line-height: 1.6; color: var(--color-text-secondary);">Descrição concisa do
+                componente e seu propósito na interface.</p>
             </div>
 
             <!-- Card 2 -->
-            <div style="padding: var(--space-8); background: var(--surface-card); border: var(--border-default); border-radius: var(--radius-md); transition: all var(--duration-normal) var(--ease-out);" class="ds-interactive">
+            <div
+              style="padding: var(--space-8); background: var(--surface-card); border: var(--border-default); border-radius: var(--radius-md); transition: all var(--duration-normal) var(--ease-out);"
+              class="ds-interactive">
               <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-6); align-items: flex-start;">
-                <div style="width: 40px; height: 40px; background: rgba(139, 60, 58, 0.1); border-radius: var(--radius-md); flex-shrink: 0;"></div>
+                <div
+                  style="width: 40px; height: 40px; background: rgba(139, 60, 58, 0.1); border-radius: var(--radius-md); flex-shrink: 0;">
+                </div>
                 <div style="flex: 1;">
-                  <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent-600); font-weight: 600; margin-bottom: 2px;">Interactive</div>
-                  <div style="font-size: 14px; font-weight: 600; color: var(--color-text-primary);">Focused engagement</div>
+                  <div
+                    style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent-600); font-weight: 600; margin-bottom: 2px;">
+                    Interactive</div>
+                  <div style="font-size: 14px; font-weight: 600; color: var(--color-text-primary);">Focused engagement
+                  </div>
                 </div>
               </div>
-              <p style="font-size: 13px; line-height: 1.6; color: var(--color-text-secondary);">Cards que focar atenção e guiar ações do usuário de forma clara.</p>
+              <p style="font-size: 13px; line-height: 1.6; color: var(--color-text-secondary);">Cards que focar atenção
+                e guiar ações do usuário de forma clara.</p>
             </div>
 
             <!-- Card 3 -->
-            <div style="padding: var(--space-8); background: var(--surface-card); border: var(--border-default); border-radius: var(--radius-md); transition: all var(--duration-normal) var(--ease-out);" class="ds-interactive">
+            <div
+              style="padding: var(--space-8); background: var(--surface-card); border: var(--border-default); border-radius: var(--radius-md); transition: all var(--duration-normal) var(--ease-out);"
+              class="ds-interactive">
               <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-6); align-items: flex-start;">
-                <div style="width: 40px; height: 40px; background: rgba(139, 60, 58, 0.08); border-radius: var(--radius-md); flex-shrink: 0;"></div>
+                <div
+                  style="width: 40px; height: 40px; background: rgba(139, 60, 58, 0.08); border-radius: var(--radius-md); flex-shrink: 0;">
+                </div>
                 <div style="flex: 1;">
-                  <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600; margin-bottom: 2px;">Type</div>
+                  <div
+                    style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600; margin-bottom: 2px;">
+                    Type</div>
                   <div style="font-size: 14px; font-weight: 600; color: var(--color-text-primary);">Elevated state</div>
                 </div>
               </div>
-              <p style="font-size: 13px; line-height: 1.6; color: var(--color-text-secondary);">Containers que elevam através de sombras e espaçamento intencional.</p>
+              <p style="font-size: 13px; line-height: 1.6; color: var(--color-text-secondary);">Containers que elevam
+                através de sombras e espaçamento intencional.</p>
             </div>
           </div>
         </div>
@@ -1047,30 +1120,50 @@
             <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
               <thead>
                 <tr style="border-bottom: var(--border-strong);">
-                  <th style="padding: var(--space-4); text-align: left; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600;">Item</th>
-                  <th style="padding: var(--space-4); text-align: left; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600;">Type</th>
-                  <th style="padding: var(--space-4); text-align: left; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600;">Value</th>
-                  <th style="padding: var(--space-4); text-align: left; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600;">Status</th>
+                  <th
+                    style="padding: var(--space-4); text-align: left; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600;">
+                    Item</th>
+                  <th
+                    style="padding: var(--space-4); text-align: left; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600;">
+                    Type</th>
+                  <th
+                    style="padding: var(--space-4); text-align: left; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600;">
+                    Value</th>
+                  <th
+                    style="padding: var(--space-4); text-align: left; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600;">
+                    Status</th>
                 </tr>
               </thead>
               <tbody>
-                <tr style="border-bottom: var(--border-default); transition: background var(--duration-normal) var(--ease-out);">
-                  <td style="padding: var(--space-4); color: var(--color-text-primary); font-weight: 500;">Color palette</td>
+                <tr
+                  style="border-bottom: var(--border-default); transition: background var(--duration-normal) var(--ease-out);">
+                  <td style="padding: var(--space-4); color: var(--color-text-primary); font-weight: 500;">Color palette
+                  </td>
                   <td style="padding: var(--space-4); color: var(--color-text-secondary);">Editorial</td>
                   <td style="padding: var(--space-4); color: var(--color-text-secondary);">12 tokens</td>
-                  <td style="padding: var(--space-4);"><span style="display: inline-flex; align-items: center; gap: 4px; font-size: 9px; color: #2E7D32;">✓ Complete</span></td>
+                  <td style="padding: var(--space-4);"><span
+                      style="display: inline-flex; align-items: center; gap: 4px; font-size: 9px; color: #2E7D32;">✓
+                      Complete</span></td>
                 </tr>
-                <tr style="border-bottom: var(--border-default); transition: background var(--duration-normal) var(--ease-out);">
-                  <td style="padding: var(--space-4); color: var(--color-text-primary); font-weight: 500;">Typography</td>
+                <tr
+                  style="border-bottom: var(--border-default); transition: background var(--duration-normal) var(--ease-out);">
+                  <td style="padding: var(--space-4); color: var(--color-text-primary); font-weight: 500;">Typography
+                  </td>
                   <td style="padding: var(--space-4); color: var(--color-text-secondary);">System</td>
                   <td style="padding: var(--space-4); color: var(--color-text-secondary);">3 typefaces</td>
-                  <td style="padding: var(--space-4);"><span style="display: inline-flex; align-items: center; gap: 4px; font-size: 9px; color: #2E7D32;">✓ Complete</span></td>
+                  <td style="padding: var(--space-4);"><span
+                      style="display: inline-flex; align-items: center; gap: 4px; font-size: 9px; color: #2E7D32;">✓
+                      Complete</span></td>
                 </tr>
-                <tr style="border-bottom: var(--border-default); transition: background var(--duration-normal) var(--ease-out);">
-                  <td style="padding: var(--space-4); color: var(--color-text-primary); font-weight: 500;">Components</td>
+                <tr
+                  style="border-bottom: var(--border-default); transition: background var(--duration-normal) var(--ease-out);">
+                  <td style="padding: var(--space-4); color: var(--color-text-primary); font-weight: 500;">Components
+                  </td>
                   <td style="padding: var(--space-4); color: var(--color-text-secondary);">Library</td>
                   <td style="padding: var(--space-4); color: var(--color-text-secondary);">16 patterns</td>
-                  <td style="padding: var(--space-4);"><span style="display: inline-flex; align-items: center; gap: 4px; font-size: 9px; color: #E65100;">⚠ In progress</span></td>
+                  <td style="padding: var(--space-4);"><span
+                      style="display: inline-flex; align-items: center; gap: 4px; font-size: 9px; color: #E65100;">⚠ In
+                      progress</span></td>
                 </tr>
               </tbody>
             </table>
@@ -1080,15 +1173,28 @@
         <!-- NAVIGATION PATTERNS -->
         <div style="margin-top: var(--space-16);">
           <p class="ds-section-tag">Navigation Patterns</p>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-8); margin-top: var(--space-8);">
-            <div style="padding: var(--space-6); background: var(--surface-raised); border: var(--border-default); border-radius: var(--radius-md);">
-              <div style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600; margin-bottom: var(--space-4);">Nav Item</div>
-              <a href="#" style="display: block; padding: 8px; color: var(--color-text-primary); text-decoration: none; font-size: 13px; border-radius: var(--radius-sm); transition: all var(--duration-normal) var(--ease-out);" class="ds-interactive" onmouseover="this.style.background='rgba(179, 157, 142, 0.1)'" onmouseout="this.style.background='transparent'">Dashboard</a>
-              <a href="#" style="display: block; padding: 8px; color: var(--color-text-secondary); text-decoration: none; font-size: 13px; border-radius: var(--radius-sm); transition: all var(--duration-normal) var(--ease-out);" class="ds-interactive" onmouseover="this.style.background='rgba(179, 157, 142, 0.1)'" onmouseout="this.style.background='transparent'">Settings</a>
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-8); margin-top: var(--space-8);">
+            <div
+              style="padding: var(--space-6); background: var(--surface-raised); border: var(--border-default); border-radius: var(--radius-md);">
+              <div
+                style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600; margin-bottom: var(--space-4);">
+                Nav Item</div>
+              <a href="#"
+                style="display: block; padding: 8px; color: var(--color-text-primary); text-decoration: none; font-size: 13px; border-radius: var(--radius-sm); transition: all var(--duration-normal) var(--ease-out);"
+                class="ds-interactive" onmouseover="this.style.background='rgba(179, 157, 142, 0.1)'"
+                onmouseout="this.style.background='transparent'">Dashboard</a>
+              <a href="#"
+                style="display: block; padding: 8px; color: var(--color-text-secondary); text-decoration: none; font-size: 13px; border-radius: var(--radius-sm); transition: all var(--duration-normal) var(--ease-out);"
+                class="ds-interactive" onmouseover="this.style.background='rgba(179, 157, 142, 0.1)'"
+                onmouseout="this.style.background='transparent'">Settings</a>
             </div>
 
-            <div style="padding: var(--space-6); background: var(--surface-raised); border: var(--border-default); border-radius: var(--radius-md);">
-              <div style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600; margin-bottom: var(--space-4);">Breadcrumb</div>
+            <div
+              style="padding: var(--space-6); background: var(--surface-raised); border: var(--border-default); border-radius: var(--radius-md);">
+              <div
+                style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600; margin-bottom: var(--space-4);">
+                Breadcrumb</div>
               <div style="display: flex; gap: 4px; font-size: 13px; color: var(--color-text-secondary);">
                 <a href="#" style="color: var(--color-text-primary); text-decoration: none;">Home</a>
                 <span>/</span>
@@ -1098,11 +1204,17 @@
               </div>
             </div>
 
-            <div style="padding: var(--space-6); background: var(--surface-raised); border: var(--border-default); border-radius: var(--radius-md);">
-              <div style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600; margin-bottom: var(--space-4);">Tabs</div>
-              <div style="display: flex; gap: var(--space-3); border-bottom: var(--border-default); margin-bottom: var(--space-4);">
-                <button style="padding: 8px 0; border-bottom: 2px solid var(--color-accent-500); background: transparent; border: none; cursor: pointer; font-size: 13px; font-family: var(--font-body); color: var(--color-accent-500); font-weight: 600;">Active</button>
-                <button style="padding: 8px 0; border-bottom: 2px solid transparent; background: transparent; border: none; cursor: pointer; font-size: 13px; font-family: var(--font-body); color: var(--color-text-secondary);">Inactive</button>
+            <div
+              style="padding: var(--space-6); background: var(--surface-raised); border: var(--border-default); border-radius: var(--radius-md);">
+              <div
+                style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600; margin-bottom: var(--space-4);">
+                Tabs</div>
+              <div
+                style="display: flex; gap: var(--space-3); border-bottom: var(--border-default); margin-bottom: var(--space-4);">
+                <button
+                  style="padding: 8px 0; border-bottom: 2px solid var(--color-accent-500); background: transparent; border: none; cursor: pointer; font-size: 13px; font-family: var(--font-body); color: var(--color-accent-500); font-weight: 600;">Active</button>
+                <button
+                  style="padding: 8px 0; border-bottom: 2px solid transparent; background: transparent; border: none; cursor: pointer; font-size: 13px; font-family: var(--font-body); color: var(--color-text-secondary);">Inactive</button>
               </div>
             </div>
           </div>
@@ -1113,21 +1225,28 @@
       <section style="margin-top: var(--space-24); padding-top: var(--space-24); border-top: var(--border-default);">
         <p class="ds-eyebrow">05 — Operational Patterns</p>
         <h3 class="ds-preview-title">Decision Surface Patterns</h3>
-        <p class="ds-section-desc">Padrões especializados para sistemas operacionais complexos que exigem decisões críticas. Cada padrão comunica prioridade e estado de forma inequívoca.</p>
+        <p class="ds-section-desc">Padrões especializados para sistemas operacionais complexos que exigem decisões
+          críticas. Cada padrão comunica prioridade e estado de forma inequívoca.</p>
 
         <!-- Signal Panel -->
-        <div style="margin-top: var(--space-12); padding: var(--space-8); background: var(--surface-card); border: var(--border-default); border-radius: var(--radius-md);">
-          <div style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600; margin-bottom: var(--space-6);">Signal Panel</div>
+        <div
+          style="margin-top: var(--space-12); padding: var(--space-8); background: var(--surface-card); border: var(--border-default); border-radius: var(--radius-md);">
+          <div
+            style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-tertiary); font-weight: 600; margin-bottom: var(--space-6);">
+            Signal Panel</div>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: var(--space-4);">
-            <div style="padding: var(--space-6); background: rgba(46, 125, 50, 0.08); border: 1px solid rgba(46, 125, 50, 0.2); border-radius: var(--radius-sm); text-align: center;">
+            <div
+              style="padding: var(--space-6); background: rgba(46, 125, 50, 0.08); border: 1px solid rgba(46, 125, 50, 0.2); border-radius: var(--radius-sm); text-align: center;">
               <div style="font-size: 24px; font-weight: 700; color: #2E7D32; margin-bottom: 4px;">12</div>
               <div style="font-size: 9px; color: var(--color-text-secondary);">ACTIVE</div>
             </div>
-            <div style="padding: var(--space-6); background: rgba(230, 81, 0, 0.08); border: 1px solid rgba(230, 81, 0, 0.2); border-radius: var(--radius-sm); text-align: center;">
+            <div
+              style="padding: var(--space-6); background: rgba(230, 81, 0, 0.08); border: 1px solid rgba(230, 81, 0, 0.2); border-radius: var(--radius-sm); text-align: center;">
               <div style="font-size: 24px; font-weight: 700; color: #E65100; margin-bottom: 4px;">3</div>
               <div style="font-size: 9px; color: var(--color-text-secondary);">WARNING</div>
             </div>
-            <div style="padding: var(--space-6); background: rgba(198, 40, 40, 0.08); border: 1px solid rgba(198, 40, 40, 0.2); border-radius: var(--radius-sm); text-align: center;">
+            <div
+              style="padding: var(--space-6); background: rgba(198, 40, 40, 0.08); border: 1px solid rgba(198, 40, 40, 0.2); border-radius: var(--radius-sm); text-align: center;">
               <div style="font-size: 24px; font-weight: 700; color: #C62828; margin-bottom: 4px;">1</div>
               <div style="font-size: 9px; color: var(--color-text-secondary);">CRITICAL</div>
             </div>
@@ -1139,13 +1258,16 @@
       <div style="margin-top: var(--space-24); padding-top: var(--space-12); border-top: var(--border-default);">
         <p class="ds-eyebrow">Design Principles</p>
         <div class="ds-section-desc">
-          <strong>Affordances & Signifiers:</strong> Cada elemento comunica claramente seu propósito e estado. Hover states, focus rings, cores semânticas e iconografia consistente reduzem ambiguidade.
+          <strong>Affordances & Signifiers:</strong> Cada elemento comunica claramente seu propósito e estado. Hover
+          states, focus rings, cores semânticas e iconografia consistente reduzem ambiguidade.
         </div>
         <div class="ds-section-desc" style="margin-top: var(--space-6);">
-          <strong>Constrained Expression:</strong> Paleta limitada a 3 rampas de cor (base, suporte, acento), 3 famílias tipográficas e escala de espaçamento rígida garantem consistência sem sacrificar elegância.
+          <strong>Constrained Expression:</strong> Paleta limitada a 3 rampas de cor (base, suporte, acento), 3 famílias
+          tipográficas e escala de espaçamento rígida garantem consistência sem sacrificar elegância.
         </div>
         <div class="ds-section-desc" style="margin-top: var(--space-6);">
-          <strong>Motion as Feedback:</strong> Transições curtas (220ms) com easing-out reforçam interações sem parecer frívolas. Movimentos servem feedback, nunca decoração.
+          <strong>Motion as Feedback:</strong> Transições curtas (220ms) com easing-out reforçam interações sem parecer
+          frívolas. Movimentos servem feedback, nunca decoração.
         </div>
       </div>
     </main>
@@ -1180,7 +1302,7 @@
       const colorName = swatch.nextElementSibling.textContent;
       const hexCode = swatch.nextElementSibling.nextElementSibling.textContent;
       swatch.setAttribute('aria-label', `Cor: ${colorName}, Código: ${hexCode}`);
-      
+
       const copyColor = () => {
         navigator.clipboard.writeText(hexCode);
         announceAction(`Código ${hexCode} copiado para a área de transferência`);
