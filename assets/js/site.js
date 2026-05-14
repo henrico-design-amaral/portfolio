@@ -8,7 +8,7 @@ const COPY = {
     'eyebrow':      'SISTEMAS OPERACIONAIS · PLATAFORMAS ENTERPRISE · ARQUITETURA DE DECISÃO',
     'h1.l1':        'Arquitetura de decisão',
     'h1.l2':        'para sistemas críticos.',
-    'sub':          'Estruturo plataformas, fluxos operacionais e ecossistemas digitais para ambientes onde clareza impacta coordenação, escala e tomada de decisão.',
+    'sub':          'Transformo complexidade operacional em sistemas mais claros, coordenados e navegáveis.',
     'cta.primary':  'Ver caso SALA CAR',
     'cta.secondary':'Método',
     'worked-with':  'Clientes',
@@ -19,7 +19,7 @@ const COPY = {
     's2.i3':        'Sistemas de interpretação analítica',
     's2.i4':        'Fluxos financeiros regulados',
     's2.i5':        'Infraestrutura de suporte à decisão',
-    's2.statement': 'Antes da interface, estruturo os sistemas invisíveis que sustentam coordenação, escala e tomada de decisão.',
+    's2.statement': 'Antes da interface, organizo as estruturas invisíveis que sustentam coordenação, contexto e tomada de decisão.',
     's3.tag':       '03 / Casos',
     's3.title':     'Trabalhos selecionados',
     's3.all':       'Todos os casos',
@@ -80,7 +80,7 @@ const COPY = {
      'eyebrow':      'OPERATIONAL SYSTEMS · ENTERPRISE PLATFORMS · DECISION ARCHITECTURE',
      'h1.l1':        'Decision architecture',
      'h1.l2':        'for critical systems.',
-     'sub':          'Structuring platforms, operational flows, and digital ecosystems for environments where clarity impacts coordination, scale, and decision-making.',
+     'sub':          'Turning operational complexity into systems that are clearer, more coordinated, and easier to navigate.',
      'cta.primary':  'View SALA CAR case',
      'cta.secondary':'Method',
      'worked-with':  'Clients',
@@ -91,7 +91,7 @@ const COPY = {
      's2.i3':        'Analytical interpretation systems',
      's2.i4':        'Regulated financial workflows',
      's2.i5':        'Decision-support infrastructure',
-     's2.statement': 'Before the interface, I structure the invisible systems that support coordination, scale, and decision-making.',
+     's2.statement': 'Before the interface, I organize the invisible structures that support coordination, context, and decision-making.',
      's3.tag':       '03 / Cases',
      's3.title':     'Selected work',
      's3.all':       'All case studies',
@@ -231,6 +231,25 @@ if (!motionReduced) {
       }
     });
   }
+}
+
+/* ---- Subtle Atmospheric Breathing — continuous environmental drift across all sections ---- */
+if (!motionReduced) {
+  gsap.utils.toArray('section').forEach(function(section) {
+    var gridLayers = section.querySelectorAll('[style*="background-image: linear-gradient"]');
+    gridLayers.forEach(function(layer) {
+      gsap.to(layer, {
+        backgroundPosition: function() {
+          var y = gsap.utils.random(-2, 2, 0.2);
+          return '0px ' + y + 'px';
+        },
+        duration: gsap.utils.random(12, 20),
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+      });
+    });
+  });
 }
 
 function reveal(selector, vars = {}) {
