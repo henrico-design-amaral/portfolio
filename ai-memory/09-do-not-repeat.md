@@ -95,6 +95,6 @@ Não adicionar ao projeto:
 - clones de agentes
 - frameworks auxiliares que não façam parte do site publicado
 
-Esses materiais devem ficar em bibliotecas globais fora do projeto.
+Esses materiais devem ficar na biblioteca central Henrico-Agent-OS fora deste projeto.
 
 O Portfolio deve conter apenas arquivos necessários ao site, documentação, memória local e assets reais do portfólio.

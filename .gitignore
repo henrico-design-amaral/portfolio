@@ -1,8 +1,10 @@
-# Local AI agent and skill libraries
+# Local AI agent and skill libraries (Moved to Henrico-Agent-OS)
 _agents/
 _agents_skills/
 huashu-design/
 ui-ux-pro-max-skill/
+!SKILLS/
+.agents/
 
 # External prompt/skill repositories must stay outside the portfolio project
 *.skill-cache/

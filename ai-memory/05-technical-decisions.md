@@ -65,8 +65,9 @@ Motivo:
 Essas pastas são recursos operacionais externos e não pertencem ao produto publicado. Mantê-las dentro do Portfolio aumenta ruído, confunde agentes, polui o Git e cria risco de commits indevidos.
 
 Regra:
-Skills, prompts, agentes e bibliotecas externas devem ficar fora do Portfolio, preferencialmente em:
-- !PROJETOS/!SKILLS
+Skills, prompts, agentes e bibliotecas externas devem ficar fora do Portfolio, centralizados em:
+- Henrico-Agent-OS/ (Biblioteca Central)
+- !PROJETOS/!SKILLS (Quarentena/Temporário)
 - C:/Users/henri/.agents
 - C:/Users/henri/.gemini
 - C:/Users/henri/.antigravity
