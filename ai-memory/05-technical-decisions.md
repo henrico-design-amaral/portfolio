@@ -49,4 +49,27 @@ Este arquivo registra a stack real e as decisões técnicas do projeto Portfolio
 
 1. Validar responsividade em dispositivos reais.
 2. Considerar modularização se o projeto crescer em volume de conteúdo.
-3. Otimizar carregamento de imagens de cases.
+3. Otimizar carregamento de imagens de cases.
+
+## 2026-05-15 — Remoção de bibliotecas de agentes do projeto
+
+Decisão:
+Remover bibliotecas de agentes e skills de dentro do repositório Portfolio.
+
+Pastas removidas do escopo do projeto:
+- _agents/
+- huashu-design/
+- ui-ux-pro-max-skill/
+
+Motivo:
+Essas pastas são recursos operacionais externos e não pertencem ao produto publicado. Mantê-las dentro do Portfolio aumenta ruído, confunde agentes, polui o Git e cria risco de commits indevidos.
+
+Regra:
+Skills, prompts, agentes e bibliotecas externas devem ficar fora do Portfolio, preferencialmente em:
+- !PROJETOS/!SKILLS
+- C:/Users/henri/.agents
+- C:/Users/henri/.gemini
+- C:/Users/henri/.antigravity
+
+Impacto:
+O Portfolio fica mais limpo, mais fácil de versionar e menos vulnerável a alterações fora de escopo.

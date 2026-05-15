@@ -83,3 +83,18 @@ Evitar:
 ## Regra final
 
 Se uma solução parecer genérica, decorativa ou desconectada do posicionamento de Henrico, não usar.
+
+## Não manter bibliotecas de agentes dentro do Portfolio
+
+Não adicionar ao projeto:
+
+- _agents/
+- _agents/skills/
+- bibliotecas completas de prompts
+- repositórios externos de skills
+- clones de agentes
+- frameworks auxiliares que não façam parte do site publicado
+
+Esses materiais devem ficar em bibliotecas globais fora do projeto.
+
+O Portfolio deve conter apenas arquivos necessários ao site, documentação, memória local e assets reais do portfólio.

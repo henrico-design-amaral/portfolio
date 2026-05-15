@@ -67,3 +67,25 @@ A memória precisa ser mantida atualizada. Se não for atualizada após decisõe
 
 Status:
 Criado.
+
+## 2026-05-15 — Limpeza de bibliotecas de agentes fora do escopo
+
+Tipo:
+system / repository hygiene / memory
+
+Arquivos ou pastas afetadas:
+- _agents/
+- huashu-design/
+- ui-ux-pro-max-skill/
+- .gitignore
+- ai-memory/05-technical-decisions.md
+- ai-memory/09-do-not-repeat.md
+
+Resumo:
+Remoção de bibliotecas de agentes e skills de dentro do repositório Portfolio.
+
+Motivo:
+Separar o produto publicado das ferramentas operacionais usadas para criação, evitando ruído no Git e confusão de escopo para agentes.
+
+Status:
+Executado ou em validação.
