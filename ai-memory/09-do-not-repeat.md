@@ -98,3 +98,9 @@ Não adicionar ao projeto:
 Esses materiais devem ficar na biblioteca central Henrico-Agent-OS fora deste projeto.
 
 O Portfolio deve conter apenas arquivos necessários ao site, documentação, memória local e assets reais do portfólio.
+
+## Não repetir na gestão de ativos
+
+- **Não apagar referências de cases**: Materiais em `case-references/` são vitais para a memória do projeto, mesmo que não sejam públicos.
+- **Não publicar material bruto ou sensível**: Nunca commitar `case-references/` ou arquivos que contenham dados reais de clientes sem anonimização.
+- **Não usar _archive para materiais ativos**: Usar nomes semânticos como `case-references/` para evitar confusão com lixo ou arquivos deletáveis.

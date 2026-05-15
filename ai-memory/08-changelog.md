@@ -89,3 +89,21 @@ Separar o produto publicado das ferramentas operacionais usadas para criação, 
 
 Status:
 Concluído. Repositório Portfolio limpo e materiais migrados para Henrico-Agent-OS.
+
+---
+
+## 2026-05-15 — Reorganização de Referências de Cases
+
+Tipo: system / security / hygiene
+Arquivos alterados:
+- .gitignore
+- ai-memory/05-technical-decisions.md
+- ai-memory/08-changelog.md
+- ai-memory/09-do-not-repeat.md
+- docs/case-references-index.md
+Pastas renomeadas:
+- _archive/ -> case-references/
+
+Resumo: Renomeação da pasta de arquivos brutos para `case-references/` e reforço das regras de privacidade e segurança de dados de clientes.
+Motivo: Evitar exposição acidental de materiais sensíveis e organizar referências de apoio.
+Status: Concluído.

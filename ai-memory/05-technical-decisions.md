@@ -72,5 +72,19 @@ Skills, prompts, agentes e bibliotecas externas devem ficar fora do Portfolio, c
 - C:/Users/henri/.gemini
 - C:/Users/henri/.antigravity
 
-Impacto:
-O Portfolio fica mais limpo, mais fácil de versionar e menos vulnerável a alterações fora de escopo.
+Status:
+Concluído. Repositório Portfolio limpo e materiais migrados para Henrico-Agent-OS.
+
+## 2026-05-15 — Renomeação de _archive para case-references
+
+Decisão:
+Renomear a pasta `_archive/` para `case-references/` para melhor refletir seu propósito.
+
+Motivo:
+`_archive` sugeria material descartável, enquanto a pasta contém referências cruciais (brutas e privadas) para a construção dos cases.
+
+Regras de Segurança:
+- `case-references/` contém material bruto e privado (docs, imagens de apoio, dados de clientes).
+- `assets/` contém apenas arquivos públicos otimizados para o site.
+- `case-references/` não deve ser commitado no GitHub público sem curadoria prévia.
+- A pasta deve ser mantida no `.gitignore`.

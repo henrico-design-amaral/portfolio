@@ -9,5 +9,7 @@ ui-ux-pro-max-skill/
 # External prompt/skill repositories must stay outside the portfolio project
 *.skill-cache/
 
-# Private case references
+# Private/raw case references
 case-references/
+
+# Keep only published/public assets in Git
