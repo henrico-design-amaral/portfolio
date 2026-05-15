@@ -1,6 +1,6 @@
-# PROJECT CONTEXT — Portfolio_v2
+# PROJECT CONTEXT — Portfolio
 
-Portfolio_v2 é o portfólio profissional atual de Henrico Amaral.
+Portfolio é o portfólio profissional atual de Henrico Amaral.
 
 Este é o projeto ativo principal no workspace !PROJETOS.
 

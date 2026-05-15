@@ -1,6 +1,6 @@
-# AI MEMORY — Portfolio_v2
+# AI MEMORY — Portfolio
 
-Esta pasta contém a memória persistente específica do projeto Portfolio_v2.
+Esta pasta contém a memória persistente específica do projeto Portfolio.
 
 Ela registra decisões, contexto, padrões, restrições, problemas, mudanças e aprendizados relacionados exclusivamente ao portfólio profissional atual de Henrico Amaral.
 

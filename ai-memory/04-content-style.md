@@ -1,6 +1,6 @@
-# DESIGN SYSTEM MEMORY — Portfolio_v2
+# DESIGN SYSTEM MEMORY — Portfolio
 
-Este arquivo registra a memória do sistema visual do portfólio Portfolio_v2.
+Este arquivo registra a memória do sistema visual do portfólio Portfolio.
 
 Ele deve ser atualizado sempre que uma decisão visual sistêmica for consolidada.
 

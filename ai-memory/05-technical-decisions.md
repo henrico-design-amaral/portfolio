@@ -1,141 +1,52 @@
-# TECHNICAL DECISIONS — Portfolio_v2
+# TECHNICAL DECISIONS — Portfolio
 
-Este arquivo registra decisões técnicas do projeto Portfolio_v2.
+Este arquivo registra a stack real e as decisões técnicas do projeto Portfolio após inspeção estrutural.
 
-Ele deve ser atualizado após inspeção do código real e sempre que uma decisão técnica relevante for tomada.
+## Configuração do Projeto
 
-## Status
+- **Pasta local**: Portfolio
+- **Remote GitHub**: [henrico-design-amaral/portfolio](https://github.com/henrico-design-amaral/portfolio)
+- **Deploy**: GitHub Pages em [/portfolio/](https://henrico-design-amaral.github.io/portfolio/)
+- **Natureza**: Site estático
+- **Regra de Git**: Commits devem ocorrer apenas dentro de `!PROJETOS/Portfolio`
 
-Pendente de confirmação pelo código atual.
+## Stack Confirmada
 
-Não assumir stack, framework, bibliotecas ou estrutura sem verificar os arquivos reais do projeto.
+- **Frontend**: Vanilla HTML5, JS (ES6+), CSS3.
+- **Framework de Estilização**: Tailwind CSS (v3) via CDN.
+- **Engine de Animação**: GSAP (v3.12.5) + ScrollTrigger via CDN.
+- **Tipografia**: Google Fonts (Syne, Inter, JetBrains Mono).
+- **Arquitetura**: SPA Estático (Single Page Application - Monolith).
 
-## Regras técnicas gerais
+## Estrutura de Pastas
 
-Antes de alterar qualquer código:
+- `/`: Raiz com `index.html` (monolito) e arquivos de documentação.
+- `/assets/css/`: `site.css` (estilos customizados e overrides).
+- `/assets/js/`: `site.js` (dicionário i18n, constantes de motion e lógica GSAP).
+- `/assets/img/`: Ativos visuais e imagens dos cases.
+- `/docs/`: Documentação de suporte e cases detalhados.
+- `/ai-memory/`: Memória persistente do projeto.
 
-1. Identificar o framework usado.
-2. Verificar package.json.
-3. Verificar estrutura de pastas.
-4. Verificar scripts disponíveis.
-5. Verificar componentes existentes.
-6. Verificar padrões de estilo.
-7. Verificar build antes de mudanças grandes.
-8. Evitar dependências desnecessárias.
-9. Evitar refatoração ampla sem necessidade.
-10. Preservar responsividade e acessibilidade.
+## Decisões Técnicas Atuais
 
-## Regras de alteração
+1. **Monolito HTML**: O projeto concentra toda a estrutura em um único `index.html` de ~1300 linhas. Isso facilita o deploy estático simples, mas aumenta a complexidade de manutenção.
+2. **Localização (i18n)**: Implementada via JavaScript customizado (`site.js`) usando o objeto `COPY` e atributos `data-t`. Troca de idioma em tempo real sem reload.
+3. **Motion Engine**: Centralizado no objeto `MOTION` em `site.js`. Uso extensivo de ScrollTrigger para parallax e revelações de conteúdo.
+4. **Dependência de CDN**: Tailwind e GSAP são carregados externamente.
+5. **Configuração Tailwind**: Definida inline no `index.html` (dentro de `tailwind.config`) para permitir customização rápida de tokens de design.
 
-Preferir:
+## Scripts Disponíveis
 
-- alterações incrementais
-- componentes reutilizáveis
-- nomes semânticos
-- padrões existentes
-- estilos consistentes
-- código legível
-- remoção de duplicação quando segura
+- **Nenhum**: O projeto não utiliza Node.js/NPM no estado atual. É puramente estático.
 
-Evitar:
+## Riscos Técnicos
 
-- reescrever tudo
-- instalar biblioteca por conveniência
-- duplicar componentes
-- criar estilos isolados
-- quebrar rotas
-- alterar configuração sem motivo
-- mexer em build sem necessidade
-- remover código funcional sem justificativa
+1. **Manutenibilidade**: O tamanho do `index.html` torna difícil localizar e alterar seções específicas.
+2. **Performance**: O uso intensivo de filtros de blur e múltiplas instâncias de ScrollTrigger pode impactar a performance em dispositivos móveis menos potentes.
+3. **Confiabilidade**: Dependência total de CDNs externas para funcionamento do layout (Tailwind) e interações (GSAP).
 
-## Memória técnica a preencher
+## Próximos Passos Técnicos
 
-Após inspeção do projeto, registrar:
-
-### Framework
-
-Pendente.
-
-### Linguagem
-
-Pendente.
-
-### Estilização
-
-Pendente.
-
-### Bibliotecas principais
-
-Pendente.
-
-### Scripts disponíveis
-
-Pendente.
-
-### Estrutura de pastas
-
-Pendente.
-
-### Componentes principais
-
-Pendente.
-
-### Padrões de layout
-
-Pendente.
-
-### Padrões de motion
-
-Pendente.
-
-### Estratégia de deploy
-
-Pendente.
-
-## Git
-
-Commits devem ocorrer apenas dentro de:
-
-/Portfolio_v2
-
-Nunca commitar a partir de:
-
-/!PROJETOS
-
-## Antes de commit
-
-Executar:
-
-git status
-
-Confirmar que apenas arquivos do Portfolio_v2 estão alterados.
-
-## Tipos de commit recomendados
-
-- system(memory)
-- design(section)
-- content(section)
-- fix(layout)
-- docs(memory)
-- refactor(component)
-- chore(config)
-
-## Riscos conhecidos
-
-- alterar seções sem comparar com o sistema geral
-- criar variações visuais isoladas
-- quebrar responsividade mobile
-- deixar background competir com texto
-- misturar memória global com memória local
-- commitar na pasta errada
-
-## Regra final
-
-Toda decisão técnica relevante deve ser documentada aqui com:
-
-- data
-- decisão
-- motivo
-- arquivos afetados
-- impacto
-- risco
+1. Validar responsividade em dispositivos reais.
+2. Considerar modularização se o projeto crescer em volume de conteúdo.
+3. Otimizar carregamento de imagens de cases.

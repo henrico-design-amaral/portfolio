@@ -1,4 +1,4 @@
-# PRODUCT POSITIONING — Portfolio_v2
+# PRODUCT POSITIONING — Portfolio
 
 Este portfólio é um produto estratégico de reposicionamento profissional.
 

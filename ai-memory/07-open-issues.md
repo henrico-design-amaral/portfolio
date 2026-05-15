@@ -1,106 +1,42 @@
-# OPEN ISSUES — Portfolio_v2
+# OPEN ISSUES — Portfolio
 
-Este arquivo registra problemas pendentes do projeto.
+Problemas, pendências e oportunidades de melhoria identificados.
 
-Nenhum problema conhecido deve depender apenas do histórico do chat.
+## Pendências Técnicas
 
-## Formato obrigatório
+### 1. Refatoração do Monolito index.html
+- **Onde**: `index.html` (~1300 linhas).
+- **Descrição**: O arquivo central está crescendo demais, dificultando a manutenção e a localização de seções.
+- **Impacto**: Risco de erros em alterações futuras e dificuldade de modularização.
+- **Próximo Passo**: Avaliar o uso de um bundler (Vite) ou sistema de templates para separar seções.
 
-Cada problema deve ser registrado assim:
+### 2. Dependência de CDNs Externas
+- **Onde**: Tailwind, GSAP, ScrollTrigger.
+- **Descrição**: O projeto depende de conexões externas para carregar o sistema de design e as interações.
+- **Impacto**: Falha no carregamento se as CDNs estiverem lentas/offline; impossibilidade de desenvolvimento offline.
+- **Próximo Passo**: Considerar a instalação local via NPM ou download dos assets.
 
-## [Título do problema]
+### 3. Integração do Modal de Case Study
+- **Onde**: `index.html` e `site.js`.
+- **Descrição**: Verificar se o modal no final do `index.html` está consumindo corretamente todos os dados do objeto `CASE_DATA`.
+- **Impacto**: Experiência do usuário incompleta nos cases.
+- **Próximo Passo**: Testar abertura de todos os modais e validar dados.
 
-Data:
-Onde ocorre:
-Descrição:
-Impacto:
-Hipótese:
-Prioridade:
-Status:
-Próximo passo:
+## Oportunidades de Conteúdo e Design
 
----
+### 1. Aproveitamento de Conteúdo Detalhado
+- **Onde**: Pasta `/docs/`.
+- **Descrição**: Existem arquivos MD com cases detalhados que não estão sendo totalmente expostos no site (que usa apenas um resumo no modal).
+- **Próximo Passo**: Criar páginas dedicadas ou expandir o conteúdo dos modais.
 
-## Problemas iniciais conhecidos
-
-## Consistência visual entre seções
-
-Data:
-2026-05-15
-
-Onde ocorre:
-Hero, Método, Cases e demais seções do portfólio.
-
-Descrição:
-As seções precisam manter coerência visual entre backgrounds, grid, motion, tipografia, espaçamento e densidade. A seção Cases já foi identificada como área com risco de destoar do restante do sistema.
-
-Impacto:
-Seções visualmente desconectadas enfraquecem a percepção de sistema e reduzem a maturidade do portfólio.
-
-Hipótese:
-Ajustar backgrounds, intensidade de grid, motion e densidade visual pode alinhar melhor as seções.
-
-Prioridade:
-Alta.
-
-Status:
-Aberto.
-
-Próximo passo:
-Comparar Hero, Método e Cases no código e na interface antes de novos ajustes visuais.
+### 2. Acessibilidade Dinâmica
+- **Onde**: Transições GSAP e seções interativas.
+- **Descrição**: Garantir que as animações respeitem `prefers-reduced-motion` (já iniciado no JS) e que a navegação via teclado seja fluida.
+- **Próximo Passo**: Auditoria de acessibilidade WCAG 2.2.
 
 ---
 
-## Memória técnica ainda não preenchida
+## Histórico de Issues Resolvidas
 
-Data:
-2026-05-15
-
-Onde ocorre:
-ai-memory/05-technical-decisions.md
-
-Descrição:
-A stack real, bibliotecas, estrutura de pastas, scripts e padrões técnicos ainda precisam ser confirmados por inspeção do código.
-
-Impacto:
-Sem essa confirmação, agentes podem assumir stack ou arquitetura incorretamente.
-
-Hipótese:
-Uma leitura inicial de package.json, src, componentes e configs resolve a lacuna.
-
-Prioridade:
-Alta.
-
-Status:
-Aberto.
-
-Próximo passo:
-Pedir ao Antigravity para inspecionar o projeto e preencher a memória técnica sem alterar código.
-
----
-
-## Design system ainda em consolidação
-
-Data:
-2026-05-15
-
-Onde ocorre:
-ai-memory/03-design-system.md
-
-Descrição:
-O design system do portfólio ainda está em evolução e precisa registrar tokens reais, componentes, padrões de layout, motion e responsividade.
-
-Impacto:
-Sem design system documentado, novas seções podem nascer inconsistentes.
-
-Hipótese:
-Após inspeção do código e das seções atuais, documentar os padrões existentes e identificar lacunas.
-
-Prioridade:
-Alta.
-
-Status:
-Aberto.
-
-Próximo passo:
-Mapear tokens, componentes e padrões visuais atuais.
+- **[2026-05-15] Mapeamento de Memória Técnica**: Stack real identificada e documentada em `05-technical-decisions.md`.
+- **[2026-05-15] Consolidação do Design System**: Tokens de cores, fontes e motion documentados em `03-design-system.md`.

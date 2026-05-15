@@ -1,14 +1,14 @@
-# PROJECT RULE — Portfolio_v2
+# PROJECT RULE — Portfolio
 
 Este é o projeto ativo principal do portfólio profissional de Henrico Amaral.
 
 Este projeto possui escopo próprio, memória própria e Git próprio.
 
-Nunca tratar Portfolio_v2 como parte genérica da pasta !PROJETOS.
+Nunca tratar Portfolio como parte genérica da pasta !PROJETOS.
 
 Todos os commits, alterações, testes, builds e decisões deste projeto devem acontecer somente dentro da pasta:
 
-/Portfolio_v2
+/Portfolio
 
 ## OBJETIVO DO PROJETO
 
@@ -69,14 +69,14 @@ Depois de qualquer decisão relevante, atualize:
 - o arquivo de memória correspondente
 - /ai-memory/08-changelog.md
 
-A memória local deste projeto é a fonte de verdade sobre decisões específicas do Portfolio_v2.
+A memória local deste projeto é a fonte de verdade sobre decisões específicas do Portfolio.
 
 ## HIERARQUIA DA VERDADE
 
 Quando houver conflito entre informações, seguir esta ordem:
 
 1. Instrução explícita mais recente de Henrico
-2. Código real existente em Portfolio_v2
+2. Código real existente em Portfolio
 3. Memória local em /ai-memory
 4. Este GEMINI.md
 5. Memória global em ../ia-memory
@@ -92,7 +92,7 @@ Se algo não puder ser confirmado no código, na memória ou nas instruções, d
 
 ## REGRAS DE ESCOPO
 
-Ao trabalhar em Portfolio_v2, nunca alterar:
+Ao trabalhar em Portfolio, nunca alterar:
 
 - ../LavaPro
 - ../SaaS
@@ -194,11 +194,11 @@ Não criar estilos isolados que quebrem o sistema visual.
 
 Commits deste projeto devem acontecer apenas dentro de:
 
-/Portfolio_v2
+/Portfolio
 
 Antes de commit:
 
-1. Confirmar que o terminal está em /Portfolio_v2.
+1. Confirmar que o terminal está em /Portfolio.
 2. Rodar git status.
 3. Verificar se só existem arquivos deste projeto modificados.
 4. Confirmar que a memória local foi atualizada, se necessário.

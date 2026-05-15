@@ -1,6 +1,6 @@
-# DO NOT REPEAT — Portfolio_v2
+# DO NOT REPEAT — Portfolio
 
-Este arquivo registra soluções, padrões e abordagens que não devem ser repetidos no Portfolio_v2.
+Este arquivo registra soluções, padrões e abordagens que não devem ser repetidos no Portfolio.
 
 Antes de propor ou executar qualquer alteração, verificar este arquivo.
 
@@ -62,8 +62,11 @@ Evitar:
 - reescrever tudo sem necessidade
 - instalar dependências sem justificativa
 - misturar memória global com memória local
-- commitar fora da pasta Portfolio_v2
+- commitar fora da pasta Portfolio
 - usar OLD_portfolio como base sem pedido explícito
+- **Não usar comandos NPM/Node**: O projeto é puramente estático; não tente rodar `npm install` ou `npm run` a menos que um `package.json` seja explicitamente introduzido.
+- **Não quebrar o monolito sem plano**: Apesar de grande, o `index.html` é o local de todas as seções. Não tente separar arquivos sem um plano de build (ex: Vite).
+- **Não alterar tokens no site.css sem verificar index.html**: O Tailwind é configurado inline no HTML; alterações no CSS global devem respeitar os tokens definidos no script de config do Tailwind.
 
 ## Não repetir no processo
 

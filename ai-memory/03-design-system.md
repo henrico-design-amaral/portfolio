@@ -1,16 +1,6 @@
-# DESIGN SYSTEM MEMORY — Portfolio_v2
+# DESIGN SYSTEM — Portfolio
 
-Este arquivo registra a memória do sistema visual do portfólio Portfolio_v2.
-
-Ele deve ser atualizado sempre que uma decisão visual sistêmica for consolidada.
-
-## Status
-
-Sistema visual em evolução ativa.
-
-Não considerar decisões visuais antigas como definitivas sem verificar o código atual.
-
-Não reutilizar paletas, estilos ou direções antigas de outros projetos sem validação explícita.
+Este arquivo registra a memória do sistema visual do portfólio Portfolio.
 
 ## Direção visual
 
