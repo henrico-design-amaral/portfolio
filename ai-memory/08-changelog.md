@@ -142,3 +142,65 @@ Ações:
 
 Motivo: Evitar tom promocional/marketing e reforçar o posicionamento de design de infraestrutura e sistemas regulados.
 Status: Concluído.
+
+---
+
+## 2026-05-16 — Refatoração da Seção Impacto: Sistema de Grid Rígido
+
+Tipo: feat / layout / CSS / design-system
+
+Arquivos alterados:
+- `index.html` — Markup da seção Impacto reescrito com classes semânticas
+- `assets/css/site.css` — Bloco de Impact CSS reescrito do zero 3x iterado até estado final
+
+### Decisões tomadas
+
+1. **Abandonado o controle de layout por classes Tailwind inline** nos cards de impacto.
+   - Seletores como `.impact-cell .font-display.lg\:text-\[3\.5rem\]` nunca matchavam em runtime.
+   - Substituídos por classes semânticas próprias: `.impact-evidence`, `.impact-desc`, `.impact-dimension`.
+
+2. **Coluna interna dos cards fixada em `0.88fr 1.12fr`** (proporção única para todos os 4 cards).
+   - Conteúdo não pode mais alterar a largura das colunas.
+   - `flex-shrink: 0` em todos os elementos críticos garante que nada encolhe.
+
+3. **Todos os 4 cards com altura idêntica via `grid-auto-rows`.**
+   - `grid-auto-rows: 340px` (desktop) / `360px` (1280px+) no `.impact-grid`.
+   - `.impact-cell { height: 100% }` garante que cada card ocupa 100% da célula do grid.
+
+4. **Título reduzido de `clamp(3.5rem, 8vw, 8rem)` para `clamp(2.75rem, 5vw, 5rem)`.**
+   - Motivo: estava dominando demais a seção, desequilibrando o header.
+   - `font-family: 'Syne', sans-serif; font-weight: 800` agora declarado explicitamente no seletor CSS.
+   - O h2 havia perdido as classes Tailwind após o refactor e estava herdando a fonte do body.
+
+5. **Evidência controlada em `clamp(1.5rem, 2.2vw, 2.125rem)`.**
+   - Antes `clamp(2rem, 3.5vw, 3.25rem)` — Petrobras ("95% de redução no esforço manual") explodia o card.
+   - Agora todos os 4 itens de evidência têm o mesmo peso visual.
+
+6. **Subtítulo com `text-align: right` e sem `max-width`.**
+   - Alinha ao eixo direito da coluna do header, composição editorial mais sofisticada.
+
+7. **Remote Git atualizado de `Portfolio_v2.git` para `portfolio.git` (lowercase).**
+   - GitHub fez redirect automático; repositório oficial é `henrico-design-amaral/portfolio`.
+
+### Problemas resolvidos
+
+- [x] Seletores Tailwind quebrados que nunca aplicavam estilos
+- [x] Cards com alturas diferentes (conteúdo ditava a estrutura)
+- [x] Título herdando fonte errada após remoção das classes Tailwind
+- [x] BMG com peso visual inferior aos demais cards
+- [x] Markup duplicado no index.html após operação de replace com CRLF
+
+### Problemas pendentes
+
+- [ ] Verificar se o `site.js` (GSAP) ainda anima corretamente os cards com as novas classes `.impact-cell`
+- [ ] Validar o layout nos breakpoints 390px, 768px e 1366px no navegador
+- [ ] Verificar se o GitHub Pages está servindo a versão atualizada sem cache
+
+### Commit publicado
+
+```
+feat(impact): refactor section with editorial cards, SVG icons and refined typography
+system(memory): add persistent project memory
+```
+
+Status: Concluído (pendente validação visual no GitHub Pages).

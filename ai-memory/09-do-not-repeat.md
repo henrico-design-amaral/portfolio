@@ -116,3 +116,17 @@ O Portfolio deve conter apenas arquivos necessários ao site, documentação, me
 - **Preservar a densidade de dados da seção Impacto**: Cada card deve manter as 5 camadas de informação (Cliente, Dimensão, Evidência, Descrição, Tipo) para garantir profundidade técnica.
 - **Não regredir para o layout "KPI Wall"**: O grid 2x2 editorial com split-cards é o padrão final. Não usar cards verticais simples com números gigantes isolados.
 - **Não esconder conteúdo principal em atributos data-target**: Todo texto de impacto deve estar visível no HTML inicial para garantir rastreabilidade por crawlers e leitores de tela sem dependência de JavaScript.
+
+## Não repetir na Seção Impacto — CSS
+
+- **Não tentar sobrescrever classes Tailwind com seletores CSS que incluem escape de caracteres especiais** (ex: `.impact-cell .font-display.lg\:text-\[3\.5rem\]`). Esses seletores nunca matcham em runtime Tailwind JIT. Usar classes semânticas próprias (ex: `.impact-evidence`).
+
+- **Não usar apenas `min-height` para equalizar cards** quando o conteúdo varia entre eles. Usar `grid-auto-rows` no container pai + `height: 100%` no card. `min-height` permite que cards com conteúdo maior cresçam, quebrando a simetria.
+
+- **Não declarar tipografia de títulos de seção apenas via classes Tailwind no HTML** sem um seletor CSS explícito de fallback. Se as classes Tailwind forem removidas durante refactoring, o elemento herda a fonte do body. Sempre declarar `font-family`, `font-weight` e `font-size` no CSS como propriedade do seletor semântico.
+
+- **Não usar `flex: 1` em `impact-dimension` sem `overflow: hidden` em `impact-desc`**. O `flex: 1` na dimensão empurra a tag para o rodapé, mas a descrição precisa de `overflow: hidden` para não vazar a altura fixada pelo `grid-auto-rows`.
+
+- **Não usar `multi_replace_file_content` com blocos grandes em arquivos CRLF**. O seletor de `TargetContent` falha porque o arquivo tem `\r\n` mas o seletor usa `\n`. Preferir `replace_file_content` com um único ponto de ancoragem, ou usar PowerShell para operações de string complexas.
+
+- **Não repetir o padrão de `max-w-[1560px] mx-auto` sem padding lateral explícito no container filho**. O container da seção Impacto usa agora `px-6 md:px-12` diretamente no div do container.

@@ -952,175 +952,116 @@
         </svg>
       </div>
 
-      <div class="max-w-[1560px] mx-auto relative z-10">
-        <!-- Section Header: Editorial Composition -->
-        <div class="grid grid-cols-1 lg:grid-cols-[1.4fr,1fr] gap-16 mb-20 items-end">
-          <div class="header-divider lg:pr-16">
-            <span class="font-mono text-[10px] tracking-[0.3em] uppercase text-accent-600 mb-8 block font-bold"
-              data-t="s5.tag">04 / Impacto</span>
-            <h2
-              class="font-display font-bold text-[4rem] md:text-[5.5rem] lg:text-[7.5rem] tracking-[-0.04em] leading-[0.85] text-text-primary"
-              data-t="s5.title">
-              Impacto<br>operacional
-            </h2>
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
+        <!-- Section Header -->
+        <div class="impact-header">
+          <div class="header-divider">
+            <span class="font-mono text-[10px] tracking-[0.3em] uppercase text-accent-600 mb-6 block font-bold" data-t="s5.tag">04 / Impacto</span>
+            <h2 data-t="s5.title">Impacto<br>operacional</h2>
           </div>
-          <div class="lg:pb-8 lg:pl-4">
-            <h3 class="font-body text-xl md:text-2xl text-text-secondary leading-relaxed max-w-[480px]" data-t="s5.desc">
-              Evidências de escala, rastreabilidade e coordenação em sistemas enterprise, produtos regulados e operações críticas.
-            </h3>
+          <div>
+            <p class="impact-subtitle" data-t="s5.desc">Evidências de escala, rastreabilidade e coordenação em sistemas enterprise, produtos regulados e operações críticas.</p>
           </div>
         </div>
 
-        <!-- Refined Impact Grid: 2x2 Rounded Cards -->
+        <!-- Impact Grid 2x2 -->
         <div class="impact-grid">
-          
+
           <!-- Card 1: Petrobras -->
-          <div class="impact-cell grid grid-cols-1 md:grid-cols-[1.4fr,2fr]">
-            <!-- Left: Context -->
-            <div class="impact-card-side border-b md:border-b-0 md:border-r border-base-200 flex flex-col">
-              <h4 class="font-display font-bold text-2xl text-text-primary mb-16" data-t="imp1.client">Petrobras</h4>
-              
+          <div class="impact-cell">
+            <div class="impact-card-side">
+              <h4 data-t="imp1.client">Petrobras</h4>
               <div class="mb-auto">
                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
-                <span class="font-body text-lg text-text-secondary font-medium" data-t="imp1.dim">Automação operacional</span>
+                <span class="impact-dimension" data-t="imp1.dim">Automação operacional</span>
               </div>
-
-              <div class="mt-12">
-                <div class="impact-tag">
-                  <span class="dot"></span>
-                  <span data-t="imp1.type">Operação crítica</span>
-                </div>
+              <div class="impact-tag">
+                <span class="dot"></span>
+                <span data-t="imp1.type">Operação crítica</span>
               </div>
             </div>
-            <!-- Right: Evidence -->
-            <div class="impact-card-side flex flex-col justify-center">
+            <div class="impact-card-side">
               <div class="impact-icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="3"></circle>
-                  <path d="M12 3v2m0 14v2M3 12h2m14 0h2m-4.5-6.5l1.5-1.5M5.5 18.5l1.5-1.5m11.5 0l1.5 1.5M5.5 5.5l1.5 1.5"></path>
-                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v2m0 14v2M3 12h2m14 0h2m-4.5-6.5l1.5-1.5M5.5 18.5l1.5-1.5m11.5 0l1.5 1.5M5.5 5.5l1.5 1.5"></path></svg>
               </div>
               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
-              <div class="font-display font-bold text-4xl md:text-5xl lg:text-[3.5rem] text-text-primary tracking-tight leading-[1.1] mb-6" data-t="imp1.val">
-                95% de redução no esforço manual
-              </div>
-              <p class="font-body text-base text-text-secondary leading-relaxed max-w-[380px]" data-t="imp1.desc">
-                Consolidação de relatórios operacionais reorganizada para leitura contínua em contexto offshore.
-              </p>
+              <div class="impact-evidence" data-t="imp1.val">95% de redução no esforço manual</div>
+              <p class="impact-desc" data-t="imp1.desc">Consolidação de relatórios operacionais reorganizada para leitura contínua em contexto offshore.</p>
             </div>
           </div>
 
           <!-- Card 2: Bayer -->
-          <div class="impact-cell grid grid-cols-1 md:grid-cols-[1.4fr,2fr]">
-            <!-- Left: Context -->
-            <div class="impact-card-side border-b md:border-b-0 md:border-r border-base-200 flex flex-col">
-              <h4 class="font-display font-bold text-2xl text-text-primary mb-16" data-t="imp2.client">Bayer</h4>
-              
+          <div class="impact-cell">
+            <div class="impact-card-side">
+              <h4 data-t="imp2.client">Bayer</h4>
               <div class="mb-auto">
                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
-                <span class="font-body text-lg text-text-secondary font-medium" data-t="imp2.dim">Escala de dados</span>
+                <span class="impact-dimension" data-t="imp2.dim">Escala de dados</span>
               </div>
-
-              <div class="mt-12">
-                <div class="impact-tag">
-                  <span class="dot"></span>
-                  <span data-t="imp2.type">Dados agrícolas</span>
-                </div>
+              <div class="impact-tag">
+                <span class="dot"></span>
+                <span data-t="imp2.type">Dados agrícolas</span>
               </div>
             </div>
-            <!-- Right: Evidence -->
-            <div class="impact-card-side flex flex-col justify-center">
+            <div class="impact-card-side">
               <div class="impact-icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path></svg>
               </div>
               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
-              <div class="font-display font-bold text-4xl md:text-5xl lg:text-[3.5rem] text-text-primary tracking-tight leading-[1.1] mb-6" data-t="imp2.val">
-                4.000 pontos integrados
-              </div>
-              <p class="font-body text-base text-text-secondary leading-relaxed max-w-[380px]" data-t="imp2.desc">
-                Recepção de dados agrícolas consolidada em um ecossistema unificado de análise técnica.
-              </p>
+              <div class="impact-evidence" data-t="imp2.val">4.000 pontos integrados</div>
+              <p class="impact-desc" data-t="imp2.desc">Recepção de dados agrícolas consolidada em um ecossistema unificado de análise técnica.</p>
             </div>
           </div>
 
           <!-- Card 3: Ambev -->
-          <div class="impact-cell grid grid-cols-1 md:grid-cols-[1.4fr,2fr]">
-            <!-- Left: Context -->
-            <div class="impact-card-side border-b md:border-b-0 md:border-r border-base-200 flex flex-col">
-              <h4 class="font-display font-bold text-2xl text-text-primary mb-16" data-t="imp3.client">Ambev</h4>
-              
+          <div class="impact-cell">
+            <div class="impact-card-side">
+              <h4 data-t="imp3.client">Ambev</h4>
               <div class="mb-auto">
                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
-                <span class="font-body text-lg text-text-secondary font-medium" data-t="imp3.dim">Arquitetura modular</span>
+                <span class="impact-dimension" data-t="imp3.dim">Arquitetura modular</span>
               </div>
-
-              <div class="mt-12">
-                <div class="impact-tag">
-                  <span class="dot"></span>
-                  <span data-t="imp3.type">Supply chain</span>
-                </div>
+              <div class="impact-tag">
+                <span class="dot"></span>
+                <span data-t="imp3.type">Supply chain</span>
               </div>
             </div>
-            <!-- Right: Evidence -->
-            <div class="impact-card-side flex flex-col justify-center">
+            <div class="impact-card-side">
               <div class="impact-icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
               </div>
               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
-              <div class="font-display font-bold text-4xl md:text-5xl lg:text-[3.5rem] text-text-primary tracking-tight leading-[1.1] mb-6" data-t="imp3.val">
-                6 módulos operacionais
-              </div>
-              <p class="font-body text-base text-text-secondary leading-relaxed max-w-[380px]" data-t="imp3.desc">
-                Estrutura de supply chain organizada para leitura de disponibilidade, ruptura e coordenação logística.
-              </p>
+              <div class="impact-evidence" data-t="imp3.val">6 módulos operacionais</div>
+              <p class="impact-desc" data-t="imp3.desc">Estrutura de supply chain organizada para leitura de disponibilidade, ruptura e coordenação logística.</p>
             </div>
           </div>
 
           <!-- Card 4: BMG -->
-          <div class="impact-cell grid grid-cols-1 md:grid-cols-[1.4fr,2fr]">
-            <!-- Left: Context -->
-            <div class="impact-card-side border-b md:border-b-0 md:border-r border-base-200 flex flex-col">
-              <h4 class="font-display font-bold text-2xl text-text-primary mb-16" data-t="imp4.client">BMG</h4>
-              
+          <div class="impact-cell">
+            <div class="impact-card-side">
+              <h4 data-t="imp4.client">BMG</h4>
               <div class="mb-auto">
                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
-                <span class="font-body text-lg text-text-secondary font-medium" data-t="imp4.dim">Ambiente regulado</span>
+                <span class="impact-dimension" data-t="imp4.dim">Ambiente regulado</span>
               </div>
-
-              <div class="mt-12">
-                <div class="impact-tag">
-                  <span class="dot"></span>
-                  <span data-t="imp4.type">Banking / compliance</span>
-                </div>
+              <div class="impact-tag">
+                <span class="dot"></span>
+                <span data-t="imp4.type">Banking / compliance</span>
               </div>
             </div>
-            <!-- Right: Evidence -->
-            <div class="impact-card-side flex flex-col justify-center">
+            <div class="impact-card-side">
               <div class="impact-icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  <path d="m9 12 2 2 4-4"></path>
-                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
               </div>
               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
-              <div class="font-display font-bold text-4xl md:text-5xl lg:text-[3.5rem] text-text-primary tracking-tight leading-[1.1] mb-6" data-t="imp4.val">
-                Rastreabilidade completa
-              </div>
-              <p class="font-body text-base text-text-secondary leading-relaxed max-w-[380px]" data-t="imp4.desc">
-                Jornada PJ estruturada com validações, estados e fluxos aderentes a exigências operacionais e regulatórias.
-              </p>
+              <div class="impact-evidence" data-t="imp4.val">Rastreabilidade completa</div>
+              <p class="impact-desc" data-t="imp4.desc">Jornada PJ estruturada com validações, estados e fluxos aderentes a exigências operacionais e regulatórias.</p>
             </div>
           </div>
+
         </div>
       </div>
+
     </section>
 
     <!-- ABOUT & FOOTER -->
