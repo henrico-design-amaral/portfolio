@@ -67,6 +67,9 @@ Evitar:
 - **Não usar comandos NPM/Node**: O projeto é puramente estático; não tente rodar `npm install` ou `npm run` a menos que um `package.json` seja explicitamente introduzido.
 - **Não quebrar o monolito sem plano**: Apesar de grande, o `index.html` é o local de todas as seções. Não tente separar arquivos sem um plano de build (ex: Vite).
 - **Não alterar tokens no site.css sem verificar index.html**: O Tailwind é configurado inline no HTML; alterações no CSS global devem respeitar os tokens definidos no script de config do Tailwind.
+- **Não reexecutar `git init` em um repositório já inicializado**: Antes de qualquer comando Git estrutural, confirmar branch e remote com `git status --short --branch`, `git branch --show-current` e `git remote -v`.
+- **Não recriar `origin` se ele já existir**: O remote atual do Portfolio é `https://github.com/henrico-design-amaral/Portfolio.git`.
+- **Não publicar GitHub Pages por fora do fluxo da branch principal sem necessidade**: O fluxo atual é commit em `main` + push para `origin/main`.
 
 ## Não repetir no processo
 
@@ -79,6 +82,14 @@ Evitar:
 - tratar inferência como fato
 - fingir que algo foi confirmado sem ler arquivos
 - não atualizar changelog após decisão relevante
+
+## Não repetir em microtextos editoriais
+
+- **Não criar microtextos com classes Tailwind isoladas quando já existe o sistema semântico**: Usar `section-microstats section-microcopy`, `section-chip-row`, `section-chip`, `section-microflow` e `section-editorial-footer`.
+- **Não deixar Método, Cases e Impacto com padrões diferentes para elementos equivalentes**: microstats, chips e rodapés editoriais devem compartilhar a mesma gramática visual.
+- **Não aumentar microtextos para competir com o conteúdo principal**: microstats e chips ficam em `0.563rem`; rodapé editorial fica em `0.5rem`.
+- **Não inserir microtextos dentro dos cards de Impacto**: a camada editorial deve ficar no entorno da seção.
+- **Não usar microtextos como decoração barulhenta**: eles devem reforçar leitura sistêmica, não parecer badge promocional.
 
 ## Regra final
 
@@ -129,4 +140,4 @@ O Portfolio deve conter apenas arquivos necessários ao site, documentação, me
 
 - **Não usar `multi_replace_file_content` com blocos grandes em arquivos CRLF**. O seletor de `TargetContent` falha porque o arquivo tem `\r\n` mas o seletor usa `\n`. Preferir `replace_file_content` com um único ponto de ancoragem, ou usar PowerShell para operações de string complexas.
 
-- **Não repetir o padrão de `max-w-[1560px] mx-auto` sem padding lateral explícito no container filho**. O container da seção Impacto usa agora `px-6 md:px-12` diretamente no div do container.
+- **Não repetir o padrão de `max-w-[1560px] mx-auto` sem padding lateral explícito no container filho**. O container da seção Impacto usa agora `px-6 md:px-12` diretamente no div do container.

@@ -5,10 +5,12 @@ Este arquivo registra a stack real e as decisões técnicas do projeto Portfolio
 ## Configuração do Projeto
 
 - **Pasta local**: Portfolio
-- **Remote GitHub**: [henrico-design-amaral/portfolio](https://github.com/henrico-design-amaral/portfolio)
+- **Remote GitHub**: [henrico-design-amaral/Portfolio](https://github.com/henrico-design-amaral/Portfolio)
 - **Deploy**: GitHub Pages em [/portfolio/](https://henrico-design-amaral.github.io/portfolio/)
 - **Natureza**: Site estático
 - **Regra de Git**: Commits devem ocorrer apenas dentro de `!PROJETOS/Portfolio`
+- **Branch principal**: `main`
+- **Remote origin confirmado**: `https://github.com/henrico-design-amaral/Portfolio.git`
 
 ## Stack Confirmada
 
@@ -50,6 +52,47 @@ Este arquivo registra a stack real e as decisões técnicas do projeto Portfolio
 1. Validar responsividade em dispositivos reais.
 2. Considerar modularização se o projeto crescer em volume de conteúdo.
 3. Otimizar carregamento de imagens de cases.
+
+## 2026-05-16 — Estado Git confirmado
+
+Decisão:
+Não executar `git init` novamente porque `Portfolio` já possui `.git`, branch `main` ativa e remote `origin` configurado.
+
+Estado confirmado:
+- Branch atual: `main`
+- Tracking: `main...origin/main`
+- Remote fetch/push: `https://github.com/henrico-design-amaral/Portfolio.git`
+
+Regra:
+Se o repositório já estiver inicializado, não repetir `git init` nem recriar `origin`. Antes de qualquer ação Git estrutural, confirmar `git status --short --branch`, `git branch --show-current` e `git remote -v`.
+
+## 2026-05-16 — Publicação via GitHub Pages
+
+Decisão:
+Atualizações do portfólio publicado devem ser entregues por commit na branch `main` e push para `origin/main`, preservando o fluxo atual do GitHub Pages.
+
+Arquivos previstos no commit desta rodada:
+- `index.html`
+- `assets/css/site.css`
+- `assets/js/site.js`
+- `ai-memory/05-technical-decisions.md`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/07-open-issues.md`
+- `ai-memory/08-changelog.md`
+- `ai-memory/09-do-not-repeat.md`
+
+Problemas resolvidos:
+- Estado Git confirmado sem necessidade de `git init`.
+- Remote `origin` confirmado como `https://github.com/henrico-design-amaral/Portfolio.git`.
+- Deploy do GitHub Pages passa a depender apenas do push da branch `main`.
+
+Problemas pendentes:
+- Confirmar no GitHub Pages se a versão publicada atualizou após o push.
+- Validar visualmente Método, Cases e Impacto nos breakpoints principais.
+
+Próximos passos:
+- Após push, verificar a página publicada e cache do GitHub Pages.
+- Se houver atraso de publicação, aguardar o job do Pages concluir antes de nova intervenção.
 
 ## 2026-05-15 — Remoção de bibliotecas de agentes do projeto
 

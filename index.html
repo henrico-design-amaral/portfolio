@@ -270,19 +270,6 @@
 
     <!-- ── PROCESS & TERRITORY ── -->
     <section id="process" class="py-32 md:py-48 px-6 bg-base-200 relative overflow-hidden">
-      <!-- Structural Background — soft operational grid, continuous with Hero -->
-      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none" aria-hidden="true" data-parallax="0.03">
-        <div class="absolute inset-0 opacity-[0.1]" style="background-image: linear-gradient(to right, #63574A 1px, transparent 1px), linear-gradient(to bottom, #63574A 1px, transparent 1px); background-size: 64px 64px;"></div>
-        <div class="absolute inset-0 opacity-[0.025]" style="background-image: linear-gradient(to right, #63574A 1px, transparent 1px), linear-gradient(to bottom, #63574A 1px, transparent 1px); background-size: 16px 16px;"></div>
-        <!-- Topology remnants -->
-        <svg class="w-full h-full absolute inset-0" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <g opacity="0.15">
-            <path d="M-100,240 L 320,240 L 320,560 L 720,560" fill="none" stroke="#63574A" stroke-width="0.3" stroke-dasharray="4 8" style="animation: dash-flow 40s linear infinite;" />
-            <circle cx="720" cy="560" r="2" fill="none" stroke="#63574A" stroke-width="0.3" />
-          </g>
-        </svg>
-      </div>
-
       <style>
         @keyframes dash-flow { to { stroke-dashoffset: -200; } }
         @keyframes dash-flow-reverse { to { stroke-dashoffset: 200; } }
@@ -290,15 +277,15 @@
         @keyframes pulse-node { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.5); opacity: 0.1; } }
         @keyframes spin-slow { 100% { transform: rotate(360deg); } }
         @keyframes inner-trace { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
-        
+
         .spin-center { animation: spin-slow 12s linear infinite; transform-origin: center; transform-box: fill-box; }
-        
-        .framework-card { 
-          box-shadow: 0 4px 20px -2px rgba(26, 20, 16, 0.02); 
+
+        .framework-card {
+          box-shadow: 0 4px 20px -2px rgba(26, 20, 16, 0.02);
           transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .framework-card:hover { 
-          box-shadow: 0 16px 48px -12px rgba(26, 20, 16, 0.06); 
+        .framework-card:hover {
+          box-shadow: 0 16px 48px -12px rgba(26, 20, 16, 0.06);
           border-color: rgba(190, 156, 110, 0.15);
           background-color: rgba(235, 231, 224, 0.7);
         }
@@ -313,44 +300,48 @@
 
       <div class="max-w-[1440px] mx-auto relative z-10">
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24 items-start mb-32">
-          <!-- Left Column: Sticky Context -->
-          <div class="lg:col-span-10">
-            <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-accent-600 mb-6 block font-semibold" data-t="s4.tag">02 / Método</span>
-            <h2
-              class="font-display font-bold text-[3rem] md:text-[4.5rem] max-w-[1440px] w-full tracking-[-0.03em] leading-[1] mb-8 text-text-primary section-heading"
-              data-t="s4.title">Engenharia de Interação</h2>
-            <h3 class="font-body text-lg md:text-xl text-text-secondary leading-relaxed max-w-[75ch] mb-12"
-              data-t="s4.statement">
-              Antes da interface, organizo as estruturas invisíveis que sustentam coordenação, contexto e tomada de decisão.
-            </h3>
-
-            <div class="flex flex-wrap gap-3">
-              <span class="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.2em] border border-support-300 text-support-500 px-4 py-2 rounded-full font-bold">Systems Thinking</span>
-              <span class="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.2em] border border-support-300 text-support-500 px-4 py-2 rounded-full font-bold">Information Architecture</span>
-              <span class="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.2em] border border-support-300 text-support-500 px-4 py-2 rounded-full font-bold">Decision Engineering</span>
+        <!-- Section Header — standardized system -->
+        <span class="sh-kicker" data-t="s4.tag">02 / Método</span>
+        <div class="sh-grid" style="margin-bottom: 3rem;">
+          <div class="sh-title-col">
+            <h2 class="sh-title section-heading" data-t="s4.title">Engenharia<br>de Interação</h2>
+          </div>
+          <div>
+            <div class="sh-subtitle" style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-end;">
+              <div class="section-microstats section-microcopy">
+                <span data-t="s4.stat1">SISTEMAS <strong>3</strong></span>
+                <span data-t="s4.stat2">CAMADAS <strong>4</strong></span>
+                <span data-t="s4.stat3">DECISÕES <strong>+</strong></span>
+              </div>
+              <p data-t="s4.statement">Antes da interface, organizo as estruturas invisíveis que sustentam coordenação, contexto e tomada de decisão.</p>
             </div>
           </div>
         </div>
 
+        <div class="section-chip-row">
+          <span class="section-chip" data-t="s4.chip1">Systems Thinking</span>
+          <span class="section-chip" data-t="s4.chip2">Information Architecture</span>
+          <span class="section-chip" data-t="s4.chip3">Decision Engineering</span>
+        </div>
+
         <!-- Framework Architecture Implementation -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 relative" id="framework-grid">
-          
+
           <!-- Step 1: Wide Item -->
           <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden opacity-0 group">
-            
+
             <!-- Environmental Active Layer -->
             <div class="env-layer absolute inset-0 z-0 pointer-events-none opacity-0 scale-[0.98]">
               <!-- Ambient background grid -->
               <div class="absolute inset-0 opacity-[0.12]" style="background-image: linear-gradient(to right, #BE9C6E 1px, transparent 1px), linear-gradient(to bottom, #BE9C6E 1px, transparent 1px); background-size: 24px 24px; mask-image: linear-gradient(to bottom right, black, transparent 60%); -webkit-mask-image: linear-gradient(to bottom right, black, transparent 60%);"></div>
-              
+
               <!-- Subtle inner operational flow -->
               <svg class="absolute top-0 left-0 w-32 h-32" xmlns="http://www.w3.org/2000/svg">
                 <path d="M 0 24 L 80 24 L 80 120" fill="none" stroke="#BE9C6E" stroke-width="0.5" stroke-dasharray="2 4" style="animation: inner-trace 15s linear infinite;" class="opacity-40" />
                 <rect x="78" y="118" width="4" height="4" fill="#BE9C6E" class="opacity-50" style="animation: pulse-node 4s infinite; transform-origin: 80px 120px;" />
               </svg>
             </div>
-            
+
             <div class="relative z-10">
               <div class="flex items-start justify-between mb-16 md:mb-24">
                 <span class="font-mono text-[10px] text-accent-600 font-bold tracking-[0.25em] uppercase transition-colors duration-[1.5s] group-hover:text-[#8C7D6E]">01 / Input</span>
@@ -368,12 +359,12 @@
 
           <!-- Step 2: Regular Item -->
           <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden opacity-0 group">
-            
+
             <!-- Environmental Active Layer -->
             <div class="env-layer absolute inset-0 z-0 pointer-events-none opacity-0 scale-[0.98]">
               <!-- Ambient background grid -->
               <div class="absolute inset-0 opacity-[0.12]" style="background-image: linear-gradient(to right, #BE9C6E 1px, transparent 1px), linear-gradient(to bottom, #BE9C6E 1px, transparent 1px); background-size: 24px 24px; mask-image: linear-gradient(to bottom left, black, transparent 60%); -webkit-mask-image: linear-gradient(to bottom left, black, transparent 60%);"></div>
-              
+
               <!-- Subtle inner operational flow -->
               <svg class="absolute top-0 right-0 w-32 h-32" xmlns="http://www.w3.org/2000/svg">
                 <path d="M 128 24 L 40 24 L 40 120" fill="none" stroke="#BE9C6E" stroke-width="0.5" stroke-dasharray="2 4" style="animation: inner-trace 15s linear infinite reverse;" class="opacity-40" />
@@ -401,12 +392,12 @@
 
           <!-- Step 3: Regular Item -->
           <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden opacity-0 group">
-            
+
             <!-- Environmental Active Layer -->
             <div class="env-layer absolute inset-0 z-0 pointer-events-none opacity-0 scale-[0.98]">
               <!-- Ambient background grid -->
               <div class="absolute inset-0 opacity-[0.12]" style="background-image: linear-gradient(to right, #BE9C6E 1px, transparent 1px), linear-gradient(to bottom, #BE9C6E 1px, transparent 1px); background-size: 24px 24px; mask-image: linear-gradient(to top right, black, transparent 60%); -webkit-mask-image: linear-gradient(to top right, black, transparent 60%);"></div>
-              
+
               <!-- Subtle inner operational flow -->
               <svg class="absolute bottom-0 left-0 w-32 h-32" xmlns="http://www.w3.org/2000/svg">
                 <path d="M 0 104 L 80 104 L 80 8" fill="none" stroke="#BE9C6E" stroke-width="0.5" stroke-dasharray="2 4" style="animation: inner-trace 15s linear infinite;" class="opacity-40" />
@@ -431,12 +422,12 @@
 
           <!-- Step 4: Wide Item -->
           <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden opacity-0 group">
-            
+
             <!-- Environmental Active Layer -->
             <div class="env-layer absolute inset-0 z-0 pointer-events-none opacity-0 scale-[0.98]">
               <!-- Ambient background grid -->
               <div class="absolute inset-0 opacity-[0.12]" style="background-image: linear-gradient(to right, #BE9C6E 1px, transparent 1px), linear-gradient(to bottom, #BE9C6E 1px, transparent 1px); background-size: 24px 24px; mask-image: linear-gradient(to top left, black, transparent 60%); -webkit-mask-image: linear-gradient(to top left, black, transparent 60%);"></div>
-              
+
               <!-- Subtle inner operational flow -->
               <svg class="absolute bottom-0 right-0 w-32 h-32" xmlns="http://www.w3.org/2000/svg">
                 <path d="M 128 104 L 40 104 L 40 8" fill="none" stroke="#BE9C6E" stroke-width="0.5" stroke-dasharray="2 4" style="animation: inner-trace 15s linear infinite reverse;" class="opacity-40" />
@@ -460,11 +451,17 @@
           </div>
         </div>
 
+        <div class="section-editorial-footer">
+          <div class="section-microcopy section-microcopy--accent" data-t="s4.microphrase">Estruturas invisíveis, decisões mais claras.</div>
+          <div class="section-microflow" data-t="s4.microflow">Contexto → Estrutura → Interação → Decisão</div>
+          <div class="section-microcopy" data-t="s4.microcomp">Método aplicado a produtos complexos.</div>
+        </div>
+
         <script>
           // Ensure this runs after GSAP is loaded
           window.addEventListener('load', () => {
             if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-              gsap.fromTo('.framework-card', 
+              gsap.fromTo('.framework-card',
                 { y: 40, opacity: 0, scale: 0.98 },
                 {
                   y: 0,
@@ -492,51 +489,35 @@
 
         <!-- CASES -->
     <section id="cases" class="py-32 md:py-48 px-6 relative overflow-hidden bg-page border-t border-support-200/50">
-      <!-- Operational Background — soft grid, continuous across all sections -->
-      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none" aria-hidden="true">
-        <div class="absolute inset-0 opacity-[0.1]" style="background-image: linear-gradient(to right, #63574A 1px, transparent 1px), linear-gradient(to bottom, #63574A 1px, transparent 1px); background-size: 64px 64px;"></div>
-        <div class="absolute inset-0 opacity-[0.025]" style="background-image: linear-gradient(to right, #63574A 1px, transparent 1px), linear-gradient(to bottom, #63574A 1px, transparent 1px); background-size: 16px 16px;"></div>
-      </div>
-
       <div class="max-w-[1600px] mx-auto relative z-10">
-        <!-- Header Section -->
-        <div class="flex flex-col xl:flex-row xl:justify-between xl:items-end mb-16 gap-10">
-          <div class="max-w-[800px]">
-            <div class="font-mono text-[10px] tracking-[0.2em] uppercase text-support-400 mb-6 flex items-center gap-4">
-              <span>10.90.54 S</span>
-              <span class="text-accent-600 font-bold">CASES</span>
-            </div>
-            
-            <h2 class="font-display font-bold text-[3rem] md:text-[4.5rem] tracking-[-0.03em] leading-[1] text-text-primary mb-8">
-              Sistemas reais.<br>Impacto operacional.
-            </h2>
-            
-            <div class="flex flex-wrap gap-3">
-              <span class="px-4 py-1.5 rounded-[4px] border border-support-300 font-mono text-[9px] uppercase tracking-widest text-text-secondary bg-white/10 backdrop-blur-sm">Operações Críticas</span>
-              <span class="px-4 py-1.5 rounded-[4px] border border-support-300 font-mono text-[9px] uppercase tracking-widest text-text-secondary bg-white/10 backdrop-blur-sm">Sistemas Complexos</span>
-              <span class="px-4 py-1.5 rounded-[4px] border border-support-300 font-mono text-[9px] uppercase tracking-widest text-text-secondary bg-white/10 backdrop-blur-sm">Impacto Mensurável</span>
+        <!-- Header Section — standardized system -->
+        <span class="sh-kicker">
+          <span style="color: rgba(71,34,17,0.35); font-weight: 400; margin-right: 1rem;">10.90.54 S</span>03 / Cases
+        </span>
+        <div class="sh-grid">
+          <div class="sh-title-col">
+            <h2 class="sh-title">Sistemas reais.<br>Impacto operacional.</h2>
+          </div>
+          <div>
+            <div class="sh-subtitle" style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-end;">
+              <div class="section-microstats section-microcopy">
+                <span>SISTEMAS <strong>4</strong></span>
+                <span>OPERAÇÕES <strong>12+</strong></span>
+              </div>
+              <p style="text-align: right;">Sistemas desenvolvidos para operações reais, onde design organiza informação, reduz ruído e sustenta decisões críticas.</p>
             </div>
           </div>
-          
-          <div class="max-w-[450px] xl:pb-4 flex flex-col gap-6">
-            <div class="font-mono text-[9px] tracking-[0.2em] uppercase text-support-400 text-right w-full flex justify-end gap-6">
-              <span>SISTEMAS <span class="text-text-primary">4</span></span>
-              <span>OPERAÇÕES <span class="text-text-primary">12+</span></span>
-            </div>
-            <div class="font-mono text-[8px] tracking-[0.2em] uppercase text-support-400 flex items-center gap-4 xl:justify-end">
-              <span>VISÃO SISTÊMICA</span>
-              <span class="h-px w-8 bg-support-400"></span>
-              <span>IMPACTO REAL</span>
-            </div>
-            <p class="font-body text-base text-text-secondary leading-relaxed xl:text-left pt-2 border-t border-support-200">
-              Sistemas desenvolvidos para operações reais, onde design organiza informação, reduz ruído e sustenta decisões críticas.
-            </p>
-          </div>
+        </div>
+
+        <div class="section-chip-row">
+          <span class="section-chip">Operações Críticas</span>
+          <span class="section-chip">Sistemas Complexos</span>
+          <span class="section-chip">Impacto Mensurável</span>
         </div>
 
         <!-- 4-Column Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-12 relative" id="cases-grid">
-          
+
           <!-- CASE 1: PETROBRAS — Critical Offshore Operations -->
           <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="critical">
             <div class="flex-grow relative overflow-hidden">
@@ -554,7 +535,7 @@
               </svg>
               <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
               <img src="assets/img/cases/petrobras.png" alt="Petrobras" class="w-full h-full object-cover transform scale-[1.02] group-hover:scale-[1.08] transition-transform duration-[4s] ease-out origin-center opacity-80 group-hover:opacity-100" />
-              
+
               <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
                 01 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
               </div>
@@ -562,15 +543,15 @@
                 ENERGIA
               </div>
             </div>
-            
+
             <div class="px-10 pb-10 pt-6 flex flex-col relative z-20 bg-[#0B0F14]">
               <h3 class="font-display font-bold text-[2.2rem] md:text-[2.8rem] leading-[0.9] tracking-tighter mb-8 text-white">PETROBRAS</h3>
               <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Coordenação offshore crítica para monitoramento ambiental e resposta operacional em tempo real.</p>
-              
+
               <div class="absolute right-8 top-20 scale-150 text-white/30 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 transform transition-transform">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </div>
-              
+
               <div class="grid grid-cols-4 gap-4 pt-8 border-t border-white/10">
                 <div class="col-span-1">
                   <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2">Sistema</span>
@@ -609,7 +590,7 @@
               </svg>
               <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
               <img src="assets/img/cases/ambev.png" alt="Ambev" class="w-full h-full object-cover transform scale-[1.02] group-hover:scale-[1.08] transition-transform duration-[4s] ease-out origin-center opacity-80 group-hover:opacity-100" />
-              
+
               <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
                 02 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
               </div>
@@ -617,15 +598,15 @@
                 LOGÍSTICA
               </div>
             </div>
-            
+
             <div class="px-10 pb-10 pt-6 flex flex-col relative z-20 bg-[#0B0F14]">
               <h3 class="font-display font-bold text-[2.2rem] md:text-[2.8rem] leading-[0.9] tracking-tighter mb-8 text-white">AMBEV</h3>
               <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Infraestrutura logística nacional para monitoramento distribuído e gestão de rupturas operacionais.</p>
-              
+
               <div class="absolute right-8 top-20 scale-150 text-white/30 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 transform transition-transform">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </div>
-              
+
               <div class="grid grid-cols-4 gap-4 pt-8 border-t border-white/10">
                 <div class="col-span-1">
                   <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2">Sistema</span>
@@ -663,7 +644,7 @@
               </svg>
               <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
               <img src="assets/img/cases/bayer.png" alt="Bayer" class="w-full h-full object-cover transform scale-[1.02] group-hover:scale-[1.08] transition-transform duration-[4s] ease-out origin-center opacity-80 group-hover:opacity-100" />
-              
+
               <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
                 03 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
               </div>
@@ -671,15 +652,15 @@
                 AGRONEGÓCIO
               </div>
             </div>
-            
+
             <div class="px-10 pb-10 pt-6 flex flex-col relative z-20 bg-[#0B0F14]">
               <h3 class="font-display font-bold text-[2.2rem] md:text-[2.8rem] leading-[0.9] tracking-tighter mb-8 text-white">BAYER</h3>
               <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Sistema territorial de inteligência agronômica para análise ambiental e suporte à decisão agrícola.</p>
-              
+
               <div class="absolute right-8 top-20 scale-150 text-white/30 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 transform transition-transform">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </div>
-              
+
               <div class="grid grid-cols-4 gap-4 pt-8 border-t border-white/10">
                 <div class="col-span-1">
                   <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2">Sistema</span>
@@ -718,7 +699,7 @@
               </svg>
               <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
               <img src="assets/img/cases/bmg.png" alt="BMG" class="w-full h-full object-cover object-top transform scale-[1.02] group-hover:scale-[1.08] transition-transform duration-[4s] ease-out origin-center opacity-80 group-hover:opacity-100" />
-              
+
               <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
                 04 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
               </div>
@@ -726,15 +707,15 @@
                 FINANÇAS
               </div>
             </div>
-            
+
             <div class="px-10 pb-10 pt-6 flex flex-col relative z-20 bg-[#0B0F14]">
               <h3 class="font-display font-bold text-[2.2rem] md:text-[2.8rem] leading-[0.9] tracking-tighter mb-8 text-white">BMG</h3>
               <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Arquitetura financeira modular para operações PJ em ambientes regulados.</p>
-              
+
               <div class="absolute right-8 top-20 scale-150 text-white/30 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 transform transition-transform">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </div>
-              
+
               <div class="grid grid-cols-4 gap-4 pt-8 border-t border-white/10">
                 <div class="col-span-1">
                   <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2">Sistema</span>
@@ -759,18 +740,15 @@
         </div>
 
         <!-- Footer Navigation / Markers -->
-        <div class="flex flex-col md:flex-row justify-between items-end mt-16 font-mono text-[8px] tracking-[0.2em] uppercase text-support-400">
-          <div>
+        <div class="section-editorial-footer">
+          <div class="section-microcopy section-microcopy--accent">
             SISTEMAS QUE OPERAM,<br>
             DECISÕES QUE IMPORTAM.
           </div>
-          <div class="flex items-center gap-6 mt-6 md:mt-0">
-            <span>COMPLEXIDADE</span> <span class="text-accent-500">→</span>
-            <span>ESTRUTURA</span> <span class="text-accent-500">→</span>
-            <span>CLAREZA</span> <span class="text-accent-500">→</span>
-            <span>IMPACTO</span>
+          <div class="section-microflow">
+            COMPLEXIDADE → ESTRUTURA → CLAREZA → IMPACTO
           </div>
-          <div class="text-right mt-6 md:mt-0">
+          <div class="section-microcopy">
             PROJETOS SELECIONADOS<br>
             POR RELEVÂNCIA E IMPACTO.
           </div>
@@ -858,7 +836,7 @@
           .case-card[data-behavior="regulated"] .behavioral-svg { opacity: 0.35; }
           .case-card[data-behavior="regulated"]:hover .behavioral-svg { opacity: 0.5 !important; }
         </style>
-        
+
         <script>
           window.addEventListener('load', () => {
             if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
@@ -953,15 +931,29 @@
       </div>
 
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
-        <!-- Section Header -->
-        <div class="impact-header">
-          <div class="header-divider">
-            <span class="font-mono text-[10px] tracking-[0.3em] uppercase text-accent-600 mb-6 block font-bold" data-t="s5.tag">04 / Impacto</span>
-            <h2 data-t="s5.title">Impacto<br>operacional</h2>
+        <!-- Section Header — standardized system (canonical reference) -->
+        <span class="sh-kicker" data-t="s5.tag">04 / Impacto</span>
+        <div class="sh-grid">
+          <div class="sh-title-col">
+            <h2 class="sh-title" data-t="s5.title">Impacto<br>operacional</h2>
           </div>
           <div>
-            <p class="impact-subtitle" data-t="s5.desc">Evidências de escala, rastreabilidade e coordenação em sistemas enterprise, produtos regulados e operações críticas.</p>
+            <div class="sh-subtitle" style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-end;">
+              <div class="section-microstats section-microcopy">
+                <span data-t="s5.stat1">SISTEMAS <strong>4</strong></span>
+                <span data-t="s5.stat2">OPERAÇÕES <strong>12+</strong></span>
+                <span data-t="s5.stat3">DADOS <strong>+</strong></span>
+              </div>
+              <p data-t="s5.desc">Evidências de escala, rastreabilidade e coordenação em sistemas enterprise, produtos regulados e operações críticas.</p>
+            </div>
           </div>
+        </div>
+
+        <div class="section-chip-row">
+          <span class="section-chip" data-t="s5.chip1">Operações críticas</span>
+          <span class="section-chip" data-t="s5.chip2">Escala operacional</span>
+          <span class="section-chip" data-t="s5.chip3">Rastreabilidade</span>
+          <span class="section-chip" data-t="s5.chip4">Sistemas enterprise</span>
         </div>
 
         <!-- Impact Grid 2x2 -->
@@ -1059,6 +1051,12 @@
             </div>
           </div>
 
+        </div>
+
+        <div class="section-editorial-footer">
+          <div class="section-microcopy section-microcopy--accent" data-t="s5.microphrase">Evidências operacionais, não métricas decorativas.</div>
+          <div class="section-microflow" data-t="s5.microflow">Escala → Rastreabilidade → Coordenação → Impacto</div>
+          <div class="section-microcopy" data-t="s5.microcomp">Resultados observáveis em sistemas complexos.</div>
         </div>
       </div>
 

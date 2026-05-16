@@ -4,6 +4,18 @@ Problemas, pendências e oportunidades de melhoria identificados.
 
 ## Pendências Técnicas
 
+### 0. Validação visual dos microtextos editoriais
+- **Onde**: `index.html`, `assets/css/site.css`, `assets/js/site.js`.
+- **Descrição**: Método, Cases e Impacto foram alinhadas ao mesmo sistema de microtextos editoriais (`section-microstats`, `section-chip-row`, `section-editorial-footer`), mas ainda falta validação visual em navegador.
+- **Impacto**: Possível necessidade de ajuste fino de quebra, densidade e ritmo em mobile/tablet.
+- **Próximo Passo**: Testar 390px, 768px e 1366px; verificar overflow horizontal, equilíbrio dos chips e leitura dos microflows.
+
+### 0.1. Confirmação pós-deploy no GitHub Pages
+- **Onde**: GitHub Pages em `/Portfolio/` ou rota configurada no repositório.
+- **Descrição**: Após push para `origin/main`, confirmar se a versão publicada recebeu as mudanças de microtextos, fundos sólidos e memória.
+- **Impacto**: GitHub Pages pode demorar alguns minutos ou servir cache temporário.
+- **Próximo Passo**: Abrir a URL publicada após o push e verificar a versão renderizada.
+
 ### 1. Refatoração do Monolito index.html
 - **Onde**: `index.html` (~1300 linhas).
 - **Descrição**: O arquivo central está crescendo demais, dificultando a manutenção e a localização de seções.
@@ -52,6 +64,10 @@ Problemas, pendências e oportunidades de melhoria identificados.
 
 - **[2026-05-15] Mapeamento de Memória Técnica**: Stack real identificada e documentada em `05-technical-decisions.md`.
 - **[2026-05-15] Consolidação do Design System**: Tokens de cores, fontes e motion documentados em `03-design-system.md`.
+- **[2026-05-16] Estado Git confirmado**: Repositório já estava inicializado, branch `main` ativa e `origin` apontando para `https://github.com/henrico-design-amaral/Portfolio.git`.
+- **[2026-05-16] Fundos de Método e Cases**: Camadas internas de grid/topologia removidas; seções mantidas com fundos sólidos da paleta (`base-200` e `page`).
+- **[2026-05-16] Microtextos editoriais**: Método e Impacto receberam microstats, chips, microflows e rodapés editoriais sutis.
+- **[2026-05-16] Padronização editorial**: Cases foi alinhada às mesmas classes editoriais (`section-microstats`, `section-chip-row`, `section-editorial-footer`) usadas em Método e Impacto.
 - **[2026-05-16] Seletores Tailwind quebrados no Impact**: Classes como `lg\:text-\[3\.5rem\]` não matchavam. Substituídas por classes semânticas próprias.
 - **[2026-05-16] Cards com alturas diferentes**: Resolvido com `grid-auto-rows` fixo no `.impact-grid`.
 - **[2026-05-16] Título herdando fonte errada**: `font-family: Syne` agora declarado explicitamente no CSS — não depende mais de classes Tailwind no h2.
@@ -99,4 +115,4 @@ Problemas, pendências e oportunidades de melhoria identificados.
 ## Histórico de Issues Resolvidas
 
 - **[2026-05-15] Mapeamento de Memória Técnica**: Stack real identificada e documentada em `05-technical-decisions.md`.
-- **[2026-05-15] Consolidação do Design System**: Tokens de cores, fontes e motion documentados em `03-design-system.md`.
+- **[2026-05-15] Consolidação do Design System**: Tokens de cores, fontes e motion documentados em `03-design-system.md`.

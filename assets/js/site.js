@@ -37,14 +37,24 @@ const COPY = {
     'c4.metric':    'Onboarding modular e flexível',
     'view-case':    'Ver caso',
     's4.tag':       '02 / Método',
-    's4.title':     'Engenharia de Interação',
+    's4.title':     'Engenharia<br>de Interação',
     's4.statement': 'Antes da interface, organizo as estruturas invisíveis que sustentam coordenação, contexto e tomada de decisão.',
+    's4.stat1':     'SISTEMAS <strong>3</strong>',
+    's4.stat2':     'CAMADAS <strong>4</strong>',
+    's4.stat3':     'DECISÕES <strong>+</strong>',
+    's4.chip1':     'Systems Thinking',
+    's4.chip2':     'Information Architecture',
+    's4.chip3':     'Decision Engineering',
+    's4.microphrase': 'Estruturas invisíveis, decisões mais claras.',
+    's4.microflow': 'Contexto → Estrutura → Interação → Decisão',
+    's4.microcomp': 'Método aplicado a produtos complexos.',
     's5.desc':      'Métricas de eficiência e escala alcançadas através da reestruturação de arquiteturas críticas.',
     'ab.editorial': 'Quando sistemas operam sob pressão, clareza deixa de ser estética. Ela se torna infraestrutura.',
     'skip':         'Ir para o conteúdo',
     'nav.contact':  'Contato',
     'worked-with':  'Clientes',
     'c1.i':         'Coordenação de Riscos Operacionais',
+    'c1.u':         '400+',
     'c2.u':         'Escala Nacional',
     'c2.i':         'Visibilidade de Rupturas Operacionais',
     'c3.u':         'Análise Técnica',
@@ -62,6 +72,16 @@ const COPY = {
     's5.tag':       '04 / Impacto',
     's5.title':     'Impacto<br>operacional',
     's5.desc':      'Evidências de escala, rastreabilidade e coordenação em sistemas enterprise, produtos regulados e operações críticas.',
+    's5.stat1':     'SISTEMAS <strong>4</strong>',
+    's5.stat2':     'OPERAÇÕES <strong>12+</strong>',
+    's5.stat3':     'DADOS <strong>+</strong>',
+    's5.chip1':     'Operações críticas',
+    's5.chip2':     'Escala operacional',
+    's5.chip3':     'Rastreabilidade',
+    's5.chip4':     'Sistemas enterprise',
+    's5.microphrase': 'Evidências operacionais, não métricas decorativas.',
+    's5.microflow': 'Escala → Rastreabilidade → Coordenação → Impacto',
+    's5.microcomp': 'Resultados observáveis em sistemas complexos.',
     'imp.label_dim': 'DIMENSÃO',
     'imp.label_ev':  'EVIDÊNCIA',
     'imp1.client':  'Petrobras',
@@ -135,14 +155,24 @@ const COPY = {
      'c4.metric':    'Flexible and modular onboarding',
      'view-case':    'View case',
       's4.tag':       '02 / Method',
-      's4.title':     'Interaction Engineering',
+      's4.title':     'Interaction<br>Engineering',
       's4.statement': 'Before the interface, I organize the invisible structures that support coordination, context, and decision-making.',
+      's4.stat1':     'SYSTEMS <strong>3</strong>',
+      's4.stat2':     'LAYERS <strong>4</strong>',
+      's4.stat3':     'DECISIONS <strong>+</strong>',
+      's4.chip1':     'Systems Thinking',
+      's4.chip2':     'Information Architecture',
+      's4.chip3':     'Decision Engineering',
+      's4.microphrase': 'Invisible structures, clearer decisions.',
+      's4.microflow': 'Context → Structure → Interaction → Decision',
+      's4.microcomp': 'Method applied to complex products.',
       's5.desc':      'Efficiency and scale metrics achieved through restructuring critical architectures.',
       'ab.editorial': 'When systems operate under pressure, clarity stops being aesthetic. It becomes infrastructure.',
       'skip':         'Skip to content',
       'nav.contact':  'Contact',
       'worked-with':  'Clients',
       'c1.i':         'Operational Risk Coordination',
+      'c1.u':         '400+',
       'c2.u':         'National Scale',
       'c2.i':         'Operational Stockout Visibility',
       'c3.u':         'Technical Analysis',
@@ -160,6 +190,16 @@ const COPY = {
       's5.tag':       '04 / Impact',
       's5.title':     'Operational<br>Impact',
       's5.desc':      'Evidence of scale, traceability and coordination across enterprise systems, regulated products and critical operations.',
+      's5.stat1':     'SYSTEMS <strong>4</strong>',
+      's5.stat2':     'OPERATIONS <strong>12+</strong>',
+      's5.stat3':     'DATA <strong>+</strong>',
+      's5.chip1':     'Critical operations',
+      's5.chip2':     'Operational scale',
+      's5.chip3':     'Traceability',
+      's5.chip4':     'Enterprise systems',
+      's5.microphrase': 'Operational evidence, not decorative metrics.',
+      's5.microflow': 'Scale → Traceability → Coordination → Impact',
+      's5.microcomp': 'Observable results in complex systems.',
       'imp.label_dim': 'DIMENSION',
       'imp.label_ev':  'EVIDENCE',
       'imp1.client':  'Petrobras',
@@ -222,7 +262,7 @@ function setLang(lang) {
       el.innerHTML = val;
     }
   });
-  
+
   document.querySelectorAll('.lang-btn').forEach(b => {
     const active = b.dataset.lang === lang;
     if(active) {
@@ -258,7 +298,7 @@ if (motionReduced) {
   gsap.set('.hl-i', { y: '110%', rotation: 2, opacity: 0 });
   gsap.set('.sub', { opacity: 0, y: 20, filter: 'blur(4px)' });
   gsap.set('.cta-wrapper', { opacity: 0, y: 20 });
-  
+
   tl.to('.availability-badge-v2', { opacity: 1, y: 0, duration: MOTION.duration.hero, ease: MOTION.ease.standard }, 0.2)
     .to('.eyebrow-line', { scaleX: 1, duration: MOTION.duration.hero, ease: 'power4.inOut' }, 0.4)
     .to('.eyebrow-text', { opacity: 1, duration: 1 }, 0.8)
@@ -307,8 +347,8 @@ if (!motionReduced) {
 function reveal(selector, vars = {}) {
   gsap.utils.toArray(selector).forEach(el => {
     gsap.from(el, {
-      scrollTrigger: { 
-        trigger: el, 
+      scrollTrigger: {
+        trigger: el,
         start: 'top 85%',
         toggleActions: 'play none none none'
       },
@@ -330,6 +370,37 @@ if (!motionReduced) {
   reveal('.reveal-step', { stagger: MOTION.stagger.base, y: 50, scale: 0.95 });
   reveal('.case-row', { stagger: MOTION.stagger.base, y: 60 });
 
+  /* ---- Process Section: Editorial microcopy reveal ---- */
+  const processTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#process',
+      start: 'top 82%',
+      toggleActions: 'play none none none'
+    }
+  });
+
+  processTl.from('#process .section-microstats span', {
+    opacity: 0,
+    y: 10,
+    duration: 0.75,
+    stagger: 0.06,
+    ease: 'power3.out'
+  }, 0.25)
+    .from('#process .section-chip', {
+      opacity: 0,
+      y: 12,
+      duration: 0.85,
+      stagger: 0.08,
+      ease: 'power3.out'
+    }, 0.45)
+    .from('#process .section-editorial-footer > *', {
+      opacity: 0,
+      y: 12,
+      duration: 0.9,
+      stagger: 0.08,
+      ease: 'power3.out'
+    }, 0.75);
+
   /* ---- Impact Section: Operational Evidence Reveal ---- */
   const impactTl = gsap.timeline({
     scrollTrigger: {
@@ -342,14 +413,35 @@ if (!motionReduced) {
   impactTl.from('#impact [data-t="s5.tag"]', { opacity: 0, y: 10, duration: 0.8 }, 0)
     .from('#impact [data-t="s5.title"]', { opacity: 0, y: 28, duration: 1, ease: 'power4.out' }, 0.2)
     .from('#impact [data-t="s5.desc"]', { opacity: 0, y: 20, duration: 1, ease: 'power3.out' }, 0.4)
-    .from('#impact .impact-cell', { 
-      opacity: 0, 
-      y: 32, 
-      duration: 1.2, 
-      stagger: 0.12, 
+    .from('#impact .section-microstats span', {
+      opacity: 0,
+      y: 10,
+      duration: 0.75,
+      stagger: 0.06,
+      ease: 'power3.out'
+    }, 0.45)
+    .from('#impact .section-chip', {
+      opacity: 0,
+      y: 12,
+      duration: 0.85,
+      stagger: 0.08,
+      ease: 'power3.out'
+    }, 0.55)
+    .from('#impact .impact-cell', {
+      opacity: 0,
+      y: 32,
+      duration: 1.2,
+      stagger: 0.12,
       ease: 'power3.out',
       clearProps: 'all'
-    }, 0.5)
+    }, 0.7)
+    .from('#impact .section-editorial-footer > *', {
+      opacity: 0,
+      y: 12,
+      duration: 0.9,
+      stagger: 0.08,
+      ease: 'power3.out'
+    }, 0.95)
     .from('#impact .border-t, #impact .border-r, #impact .border-b', {
       scaleX: 0,
       opacity: 0,
@@ -404,7 +496,7 @@ if (!motionReduced) {
       span.style.transition = 'opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
       scrubTarget.appendChild(span);
     });
-    
+
     gsap.to(scrubTarget.children, {
       scrollTrigger: {
         trigger: scrubTarget,
@@ -426,7 +518,7 @@ if (gridBg && !motionReduced) {
   let mouseY = window.innerHeight / 2;
   let gridOffsetX = 0;
   let gridOffsetY = 0;
-  
+
   window.addEventListener('mousemove', (e) => {
     const rect = gridBg.getBoundingClientRect();
     mouseX = e.clientX - rect.left;
@@ -527,10 +619,10 @@ const CASE_DATA = [
 function openCaseModal(index) {
   const caseData = CASE_DATA[index];
   if (!caseData) return;
-  
+
   const modal = document.getElementById('case-modal');
   document.getElementById('modal-client').textContent = caseData.client;
-  
+
   // Set tags
   const tagsContainer = document.getElementById('modal-tags');
   tagsContainer.innerHTML = '';
@@ -540,15 +632,15 @@ function openCaseModal(index) {
     tagEl.textContent = tag;
     tagsContainer.appendChild(tagEl);
   });
-  
+
   document.getElementById('modal-desc').textContent = caseData.desc;
   document.getElementById('modal-metric').textContent = caseData.metric;
   document.getElementById('modal-metric-label').textContent = caseData.metricLabel;
-  
+
   // Show modal
   modal.classList.remove('hidden');
   modal.setAttribute('aria-hidden', 'false');
-  
+
   // Focus on close button for accessibility
   setTimeout(() => {
     document.getElementById('modal-close').focus();

@@ -24,3 +24,65 @@ O design deve evocar a sensação de um sistema operacional robusto e coordenado
 - **Hierarquia Editorial**: Headlines nunca devem ser interrompidas por elementos decorativos pesados; a decoração (grids/svgs) deve sempre estar na camada de infraestrutura (Z-index baixo).
 - **Consistência de Casos**: Os cases devem manter a estrutura de Bento Grid de alta fidelidade, garantindo que o impacto operacional seja a métrica visualmente dominante.
 - 6. **Evidência Operacional (V3)**: A seção Impacto utiliza um grid 2x2 de cards editoriais largos. Cada card é estruturalmente dividido entre Contexto (Project/Dimension) e Evidência (Value/Description), normalizando métricas quantitativas e qualitativas em uma mesma gramática visual. O motion sutil de entrada e a revelação de linhas internas reforçam a precisão técnica da seção.
+
+## 2026-05-16 — Fundos sólidos em Método e Cases
+
+Decisão:
+As seções Método (`#process`) e Cases (`#cases`) usam fundos sólidos da paleta existente, sem grid/topologia ambiental no fundo da seção.
+
+Paleta aplicada:
+- Método: `base-200` / `#c9c4bc`
+- Cases: `page` / `#EBE7E0`
+
+Motivo:
+Reduzir ruído visual nas duas seções de leitura e manter o foco na hierarquia editorial, nos cards de método e nos cards de cases. A camada técnica continua existindo nos elementos internos quando tem função narrativa, mas não como textura de fundo dessas seções.
+
+## 2026-05-16 — Microtextos editoriais em Método e Impacto
+
+Decisão:
+Método e Impacto passam a usar microtextos editoriais no entorno do conteúdo principal, seguindo a lógica visual de Cases sem copiar literalmente seus textos.
+
+Aplicação:
+- Método: microstats, chips técnicos, microfrase, fluxo conceitual e complemento editorial.
+- Impacto: microstats, chips de evidência operacional, microfrase, fluxo conceitual e complemento editorial.
+
+Regra:
+Microtextos devem permanecer pequenos, em uppercase, com tracking alto, contraste baixo e motion sutil. Eles não devem entrar dentro dos cards nem competir com títulos, subtítulos ou evidências principais.
+
+## 2026-05-16 — Padronização editorial entre Método, Cases e Impacto
+
+Decisões tomadas:
+- `section-microstats section-microcopy` passa a ser o padrão para pequenas métricas laterais/editoriais.
+- `section-chip-row` + `section-chip` passa a ser o padrão para chips técnicos de seção.
+- `section-editorial-footer` passa a ser o padrão para linhas editoriais inferiores.
+- Cases foi alinhada ao mesmo sistema usado em Método e Impacto.
+- Tamanhos consolidados:
+  - microstats: `0.563rem`
+  - chips via `section-chip-row`: `0.563rem`
+  - rodapé editorial via `section-editorial-footer`: `0.5rem`
+
+Arquivos alterados nesta rodada:
+- `index.html`
+- `assets/css/site.css`
+- `assets/js/site.js`
+- `ai-memory/05-technical-decisions.md`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/07-open-issues.md`
+- `ai-memory/08-changelog.md`
+- `ai-memory/09-do-not-repeat.md`
+
+Problemas resolvidos:
+- Método, Cases e Impacto estavam usando estilos diferentes para elementos editoriais equivalentes.
+- Cases ainda usava Tailwind inline para chips, microstats e footer editorial.
+- Os tamanhos dos microtextos editoriais não estavam padronizados entre seções.
+
+Problemas pendentes:
+- Validar visualmente no navegador os breakpoints 390px, 768px e 1366px.
+- Conferir se os microflows não geram overflow em telas muito estreitas.
+- Validar a entrada GSAP dos microtextos em Método e Impacto.
+- Conferir se a troca PT/EN mantém a composição editorial equilibrada.
+
+Próximos passos:
+- Rodar inspeção visual em browser local ou GitHub Pages.
+- Ajustar quebras/ocultação de microflows em mobile, se necessário.
+- Revisar se os microtextos continuam subordinados ao conteúdo principal depois da validação visual.

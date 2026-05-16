@@ -1,5 +1,143 @@
 # CHANGELOG — Portfolio
 
+## 2026-05-16 — Commit e publicação do portfólio no GitHub Pages
+
+Tipo: release / repository / memory
+
+Arquivos alterados:
+- `index.html`
+- `assets/css/site.css`
+- `assets/js/site.js`
+- `ai-memory/05-technical-decisions.md`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/07-open-issues.md`
+- `ai-memory/08-changelog.md`
+- `ai-memory/09-do-not-repeat.md`
+
+Decisões tomadas:
+- Não reexecutar `git init`, pois o repositório já está inicializado.
+- Não recriar `origin`, pois o remote já está configurado.
+- Usar branch `main` como fonte de publicação.
+- Publicar as alterações via commit + push para `origin/main`.
+
+Problemas resolvidos:
+- Estado Git confirmado antes da publicação.
+- Remote `origin` validado como `https://github.com/henrico-design-amaral/Portfolio.git`.
+- Memória persistente atualizada antes do commit.
+- Seções Método, Cases e Impacto ficaram padronizadas na camada editorial secundária.
+
+Problemas pendentes:
+- Confirmar visualmente a versão publicada no GitHub Pages após o push.
+- Validar breakpoints 390px, 768px e 1366px.
+- Verificar cache/tempo de propagação do GitHub Pages.
+
+Coisas que não devem ser repetidas:
+- Não rodar `git init` em repo já inicializado.
+- Não adicionar remote duplicado.
+- Não commitar de fora da pasta `Portfolio`.
+- Não publicar sem atualizar a memória quando houver decisão relevante.
+
+Próximos passos:
+- Fazer push para `origin/main`.
+- Abrir a URL publicada e confirmar que o GitHub Pages serviu a versão atual.
+
+Status: Preparado para commit/publicação.
+
+---
+
+## 2026-05-16 — Consolidação de memória, Git e microtextos editoriais
+
+Tipo: system / memory / design-system / repository
+
+Arquivos alterados:
+- `index.html`
+- `assets/css/site.css`
+- `assets/js/site.js`
+- `ai-memory/05-technical-decisions.md`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/07-open-issues.md`
+- `ai-memory/08-changelog.md`
+- `ai-memory/09-do-not-repeat.md`
+
+Decisões tomadas:
+- Não reexecutar `git init`, pois o repositório Portfolio já possui `.git`.
+- Manter branch principal como `main`.
+- Confirmar `origin` como `https://github.com/henrico-design-amaral/Portfolio.git`.
+- Consolidar Método, Cases e Impacto com a mesma gramática editorial para microstats, chips e rodapés editoriais.
+- Padronizar microstats e chips em `0.563rem`.
+- Padronizar rodapés editoriais em `0.5rem`.
+
+Problemas resolvidos:
+- Remote Git documentado na memória estava divergente do estado real.
+- Cases ainda usava Tailwind inline para elementos editoriais equivalentes aos de Método e Impacto.
+- Microtextos editoriais estavam com tamanhos e classes inconsistentes entre seções.
+- A memória persistente ainda não registrava integralmente as decisões recentes sobre fundos sólidos, microtextos, padronização e estado Git.
+
+Problemas pendentes:
+- Validar visualmente Método, Cases e Impacto em 390px, 768px e 1366px.
+- Conferir se microflows não causam overflow em mobile.
+- Validar animações GSAP dos microtextos e dos cards de Impacto no navegador.
+- Conferir composição em PT/EN após troca de idioma.
+
+Coisas que não devem ser repetidas:
+- Não reexecutar `git init` em repositório já inicializado.
+- Não recriar `origin` quando ele já estiver configurado.
+- Não criar microtextos editoriais com classes Tailwind isoladas quando já existe sistema semântico.
+- Não deixar Método, Cases e Impacto com padrões diferentes para microstats, chips e rodapés editoriais.
+- Não transformar microtextos em decoração barulhenta ou concorrente com o conteúdo principal.
+
+Próximos passos:
+- Rodar validação visual local ou no GitHub Pages.
+- Ajustar breakpoints dos microflows se houver overflow.
+- Revisar o `07-open-issues.md`, que ainda contém bloco duplicado antigo e pode ser limpo em uma próxima passada de documentação.
+
+Status: Concluído.
+
+---
+
+## 2026-05-16 — Microtextos editoriais em Método e Impacto
+
+Tipo: design / editorial-system / motion
+
+Arquivos alterados:
+- `index.html`
+- `assets/css/site.css`
+- `assets/js/site.js`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/08-changelog.md`
+
+Resumo:
+Adicionada camada editorial secundária nas seções Método e Impacto, aproximando as duas seções da linguagem visual já presente em Cases.
+
+Ações:
+- Criadas classes compartilhadas para microcopy, microstats, chips, microflow e rodapé editorial.
+- Método recebeu microstats, chips refinados, fluxo conceitual e frase editorial inferior.
+- Impacto recebeu microstats, chips técnicos, fluxo conceitual e frase editorial inferior.
+- Motion sutil adicionado via GSAP com opacity, translateY e stagger curto, preservando `prefers-reduced-motion`.
+
+Status: Concluído.
+
+---
+
+## 2026-05-16 — Fundos sólidos em Método e Cases
+
+Tipo: design / layout / visual-system
+
+Arquivos alterados:
+- `index.html`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/08-changelog.md`
+
+Resumo:
+Removidas as camadas internas de grid/topologia ambiental das seções Método e Cases, preservando fundos sólidos da paleta consolidada.
+
+Motivo:
+Reduzir ruído visual e reforçar a leitura editorial das duas seções, mantendo Método em `base-200` (`#c9c4bc`) e Cases em `page` (`#EBE7E0`).
+
+Status: Concluído.
+
+---
+
 ## 2026-05-15 — Renomeação Local de Pasta
 
 Tipo: system / organization
@@ -118,7 +256,7 @@ Arquivos alterados:
 - assets/js/site.js
 - ai-memory/05-technical-decisions.md
 
-Resumo: Auditoria de credibilidade e correção técnica das métricas de impacto. 
+Resumo: Auditoria de credibilidade e correção técnica das métricas de impacto.
 Ações:
 - Substituídos placeholders "0" por valores reais indexáveis no HTML.
 - Refinamento editorial dos rótulos (PT/EN) para tom de "Enterprise Product Designer".
@@ -203,4 +341,4 @@ feat(impact): refactor section with editorial cards, SVG icons and refined typog
 system(memory): add persistent project memory
 ```
 
-Status: Concluído (pendente validação visual no GitHub Pages).
+Status: Concluído (pendente validação visual no GitHub Pages).
