@@ -86,29 +86,131 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
   display: inline-block;
 }
 
+#impact {
+  scroll-margin-top: 96px;
+}
+
 .impact-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1px;
-  background: rgba(26, 20, 16, 0.06);
-  border: 1px solid rgba(26, 20, 16, 0.06);
-}
-
-@media (min-width: 640px) {
-  .impact-grid { grid-template-columns: repeat(2, 1fr); }
+  gap: 24px;
 }
 
 @media (min-width: 1024px) {
-  .impact-grid { grid-template-columns: repeat(4, 1fr); }
+  .impact-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
 }
 
 .impact-cell {
-  background: #DAD5CD;
-  padding: 2.5rem 2rem;
+  background: rgba(26, 20, 16, 0.012);
+  border: 1px solid rgba(26, 20, 16, 0.04);
+  border-radius: 6px;
+  display: grid;
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+}
+
+.impact-cell h4 {
+  font-size: 1.875rem !important; /* text-3xl */
+  margin-bottom: 3.5rem !important;
+}
+
+.impact-cell .font-body.text-lg {
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+}
+
+.impact-cell .font-display.text-[3.5rem],
+.impact-cell .font-display.lg\:text-\[3\.5rem\] {
+  font-size: 3.8rem !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.impact-cell p.font-body {
+  font-size: 0.875rem !important; /* text-sm */
+  line-height: 1.6 !important;
+  max-width: 340px !important;
+  color: rgba(71, 34, 17, 0.6) !important;
+}
+
+.impact-cell:hover {
+  background: rgba(26, 20, 16, 0.025);
+  border-color: rgba(190, 156, 110, 0.2);
+  transform: translateY(-2px);
+}
+
+.impact-card-side {
+  padding: 2.2rem 1.8rem;
+}
+
+@media (min-width: 1280px) {
+  .impact-card-side {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.impact-icon-wrapper {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  opacity: 1; /* Ensure visibility */
+  align-items: center;
+  justify-content: center;
+  background: rgba(190, 156, 110, 0.1);
+  color: #BE9C6E;
+  margin-bottom: 2.5rem;
+}
+
+.impact-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #BE9C6E;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.impact-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(190, 156, 110, 0.04);
+  border: 1px solid rgba(190, 156, 110, 0.1);
+  border-radius: 4px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(71, 34, 17, 0.5);
+}
+
+.header-divider {
+  border-right: 1px solid rgba(26, 20, 16, 0.06);
+}
+
+.impact-cell .md\:grid-cols-\[1\.4fr\,2fr\] {
+  grid-template-columns: 1.3fr 2fr !important;
+}
+
+#impact h2[data-t="s5.title"] {
+  font-size: clamp(4.5rem, 10vw, 8.5rem) !important;
+  line-height: 0.82 !important;
+}
+
+#impact .lg\:pb-8 {
+  padding-bottom: 3rem !important;
+}
+
+.impact-tag .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #BE9C6E;
 }
 
 /* Bento Grid System */

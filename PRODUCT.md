@@ -20,7 +20,7 @@ Cases covered: SALA CAR (monitoring hierarchy, signal orchestration), Bayer (dat
 
 Structural · Precise · Undecorated
 
-The voice is that of a principal engineer writing documentation — no enthusiasm, no self-promotion, no adjectives that don't earn their place. The interface communicates through structure, not styling. Confidence without performance.
+The voice is that of an enterprise product designer writing documentation — no enthusiasm, no self-promotion, no adjectives that don't earn their place. The interface communicates through structure, not styling. Confidence without performance.
 
 ## Anti-references
 

@@ -44,6 +44,13 @@ const COPY = {
     'skip':         'Ir para o conteúdo',
     'nav.contact':  'Contato',
     'worked-with':  'Clientes',
+    'c1.i':         'Coordenação de Riscos Operacionais',
+    'c2.u':         'Escala Nacional',
+    'c2.i':         'Visibilidade de Rupturas Operacionais',
+    'c3.u':         'Análise Técnica',
+    'c3.i':         'Rastreabilidade de Dados Agrícolas',
+    'c4.u':         'Acesso Simplificado',
+    'c4.i':         'Fluxos Regulados Simplificados',
     'm1.label':     'Visibilidade Operacional',
     'm1.desc':      'Identifico informações, dependências e pontos críticos antes de qualquer definição visual.',
     'm2.label':     'Estrutura de Relações',
@@ -53,17 +60,30 @@ const COPY = {
     'm4.label':     'Superfícies de Decisão',
     'm4.desc':      'Transformo regras e necessidades operacionais em interfaces que ajudam pessoas a agir com segurança e clareza.',
     's5.tag':       '04 / Impacto',
-    's5.title':     'Impacto operacional nos sistemas',
-    'imp1.lbl':     'Automação de relatórios — de consolidação manual para pipeline estruturado de monitoramento.',
-    'imp1.dom':     'AUTOMAÇÃO',
-    'imp2.lbl':     'Pontos de recebimento monitorados nacionalmente em plataforma unificada.',
-    'imp2.dom':     'ESCALA',
-    'imp3.lbl':     'Módulos integrados de supply chain em 9 regiões de operação coordenada.',
-    'imp3.dom':     'OPERAÇÕES',
-    'imp4.lbl':     'Rastreabilidade de transações — trilha de auditoria completa em todos os estados de permissão e transições de função.',
-    'imp4.dom':     'COMPLIANCE',
-    'imp2.unit':    'PDRs',
-    'imp3.unit':    'módulos',
+    's5.title':     'Impacto<br>operacional',
+    's5.desc':      'Evidências de escala, rastreabilidade e coordenação em sistemas enterprise, produtos regulados e operações críticas.',
+    'imp.label_dim': 'DIMENSÃO',
+    'imp.label_ev':  'EVIDÊNCIA',
+    'imp1.client':  'Petrobras',
+    'imp1.dim':     'Automação operacional',
+    'imp1.val':     '95% de redução no esforço manual',
+    'imp1.desc':    'Consolidação de relatórios operacionais reorganizada para leitura contínua em contexto offshore.',
+    'imp1.type':    'Operação crítica',
+    'imp2.client':  'Bayer',
+    'imp2.dim':     'Escala de dados',
+    'imp2.val':     '4.000 pontos integrados',
+    'imp2.desc':    'Recepção de dados agrícolas consolidada em um ecossistema unificado de análise técnica.',
+    'imp2.type':    'Dados agrícolas',
+    'imp3.client':  'Ambev',
+    'imp3.dim':     'Arquitetura modular',
+    'imp3.val':     '6 módulos operacionais',
+    'imp3.desc':    'Estrutura de supply chain organizada para leitura de disponibilidade, ruptura e coordenação logística.',
+    'imp3.type':    'Supply chain',
+    'imp4.client':  'BMG',
+    'imp4.dim':     'Ambiente regulado',
+    'imp4.val':     'Rastreabilidade completa',
+    'imp4.desc':    'Jornada PJ estruturada com validações, estados e fluxos aderentes a exigências operacionais e regulatórias.',
+    'imp4.type':    'Banking / compliance',
      'ab.headline':       'Interfaces são consequência.<br><em class="font-normal italic text-[#63574A]">Estrutura é o produto.</em>',
      'ab.p1':             'Há 20 anos projeto sistemas digitais para operações complexas, ambientes regulados e plataformas enterprise. Meu trabalho não começa antes da interface, começa na estrutura que sustenta fluxos, decisões e coordenação entre produto, tecnologia e operação.',
      'ab.p2':             'Ao longo da trajetória, atuei na construção de plataformas para Petrobras, Bayer, Banco do Brasil, Ambev, Claro e Bradesco, sempre em contextos onde clareza operacional impacta eficiência, risco e continuidade.',
@@ -122,6 +142,13 @@ const COPY = {
       'skip':         'Skip to content',
       'nav.contact':  'Contact',
       'worked-with':  'Clients',
+      'c1.i':         'Operational Risk Coordination',
+      'c2.u':         'National Scale',
+      'c2.i':         'Operational Stockout Visibility',
+      'c3.u':         'Technical Analysis',
+      'c3.i':         'Agricultural Data Traceability',
+      'c4.u':         'Simplified Access',
+      'c4.i':         'Simplified Regulated Flows',
      'm1.label':     'Operational Visibility',
      'm1.desc':      'I identify information, dependencies, and critical points before any visual definition.',
      'm2.label':     'Relationship Structure',
@@ -130,18 +157,31 @@ const COPY = {
      'm3.desc':      'I define priorities, hierarchies, and contexts to make systems more comprehensible and navigable.',
      'm4.label':     'Decision Surfaces',
      'm4.desc':      'I transform rules and operational needs into interfaces that help people act safely and clearly.',
-     's5.tag':       '04 / Impact',
-     's5.title':     'Operational impact across systems',
-     'imp1.lbl':     'Reporting automation — from manual consolidation to structured monitoring pipeline.',
-     'imp1.dom':     'AUTOMATION',
-     'imp2.lbl':     'Points of reception monitored nationally in a unified platform.',
-     'imp2.dom':     'SCALE',
-     'imp3.lbl':     'Supply chain modules integrated across 9 coordinated operation regions.',
-     'imp3.dom':     'OPERATIONS',
-     'imp4.lbl':     'Transaction traceability — complete audit trail across all permission states and role transitions.',
-     'imp4.dom':     'COMPLIANCE',
-     'imp2.unit':    'PDRs',
-     'imp3.unit':    'modules',
+      's5.tag':       '04 / Impact',
+      's5.title':     'Operational<br>Impact',
+      's5.desc':      'Evidence of scale, traceability and coordination across enterprise systems, regulated products and critical operations.',
+      'imp.label_dim': 'DIMENSION',
+      'imp.label_ev':  'EVIDENCE',
+      'imp1.client':  'Petrobras',
+      'imp1.dim':     'Operational automation',
+      'imp1.val':     '95% reduction in manual effort',
+      'imp1.desc':    'Operational reporting consolidation reorganized for continuous reading in offshore contexts.',
+      'imp1.type':    'Critical operation',
+      'imp2.client':  'Bayer',
+      'imp2.dim':     'Data scale',
+      'imp2.val':     '4,000 integrated points',
+      'imp2.desc':    'Agricultural data reception consolidated into a unified technical analysis ecosystem.',
+      'imp2.type':    'Agricultural data',
+      'imp3.client':  'Ambev',
+      'imp3.dim':     'Modular architecture',
+      'imp3.val':     '6 operational modules',
+      'imp3.desc':    'Supply chain structure organized for reading availability, stockouts and logistical coordination.',
+      'imp3.type':    'Supply chain',
+      'imp4.client':  'BMG',
+      'imp4.dim':     'Regulated environment',
+      'imp4.val':     'Complete traceability',
+      'imp4.desc':    'Business banking journey structured with validations, states and flows aligned with operational and regulatory requirements.',
+      'imp4.type':    'Banking / compliance',
      'ab.headline':       'Interfaces are consequences.<br><em class="font-normal italic text-[#63574A]">Structure is the product.</em>',
      'ab.p1':             'For 20 years I have designed digital systems for complex operations, regulated environments, and enterprise platforms. My work begins long before the interface—it starts in the structure that sustains flows, decisions, and coordination between product, technology, and operations.',
      'ab.p2':             'Throughout my career, I have built platforms for Petrobras, Bayer, Banco do Brasil, Ambev, Claro, and Bradesco, always in contexts where operational clarity impacts efficiency, risk, and continuity.',
@@ -289,7 +329,36 @@ if (!motionReduced) {
   reveal('.terr-item', { stagger: MOTION.stagger.slow });
   reveal('.reveal-step', { stagger: MOTION.stagger.base, y: 50, scale: 0.95 });
   reveal('.case-row', { stagger: MOTION.stagger.base, y: 60 });
-  reveal('.impact-cell', { stagger: MOTION.stagger.fast, x: -30, y: 0 });
+
+  /* ---- Impact Section: Operational Evidence Reveal ---- */
+  const impactTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#impact',
+      start: 'top 85%',
+      toggleActions: 'play none none none'
+    }
+  });
+
+  impactTl.from('#impact [data-t="s5.tag"]', { opacity: 0, y: 10, duration: 0.8 }, 0)
+    .from('#impact [data-t="s5.title"]', { opacity: 0, y: 28, duration: 1, ease: 'power4.out' }, 0.2)
+    .from('#impact [data-t="s5.desc"]', { opacity: 0, y: 20, duration: 1, ease: 'power3.out' }, 0.4)
+    .from('#impact .impact-cell', { 
+      opacity: 0, 
+      y: 32, 
+      duration: 1.2, 
+      stagger: 0.12, 
+      ease: 'power3.out',
+      clearProps: 'all'
+    }, 0.5)
+    .from('#impact .border-t, #impact .border-r, #impact .border-b', {
+      scaleX: 0,
+      opacity: 0,
+      duration: 1.2,
+      stagger: 0.05,
+      ease: 'power2.inOut',
+      transformOrigin: 'left',
+      clearProps: 'all'
+    }, 0.6);
 
   // Parallax elements
   gsap.utils.toArray('[data-parallax]').forEach(el => {
@@ -304,31 +373,6 @@ if (!motionReduced) {
         scrub: 1
       }
     });
-  });
-
-  ScrollTrigger.create({
-    trigger: '#impact',
-    start: 'top 75%',
-    once: true,
-    onEnter: () => {
-      document.querySelectorAll('.ic').forEach(el => {
-        const to = parseInt(el.dataset.to, 10);
-        const fmt = el.dataset.fmt || '';
-        const obj = { v: 0 };
-        gsap.to(obj, {
-          v: to,
-          duration: 2,
-          ease: 'power3.out',
-          onUpdate: () => {
-            if (fmt === 'K') {
-              el.textContent = obj.v < 1000 ? '<1K' : Math.round(obj.v / 1000) + 'K';
-            } else {
-              el.textContent = Math.round(obj.v);
-            }
-          }
-        });
-      });
-    }
   });
 
   // Parallax on Case Images
@@ -474,8 +518,8 @@ const CASE_DATA = [
   {
     client: 'BMG',
     tags: ['Fintech', 'Compliance'],
-    desc: 'Design de lógica de permissões complexas e fluxos de estado de transação para uma plataforma bancária corporativa com auditoria completa.',
-    metric: '100',
+    desc: 'Design de lógica de permissões complexas e fluxos de estado de transação para uma plataforma bancária corporativa com rastreabilidade completa.',
+    metric: 'Rastreabilidade',
     metricLabel: 'COMPLIANCE'
   }
 ];
