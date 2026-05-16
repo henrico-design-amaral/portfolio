@@ -104,6 +104,12 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
   display: block;
 }
 
+.sh-kicker-context {
+  color: rgba(71, 34, 17, 0.35);
+  font-weight: 400;
+  margin-right: 1rem;
+}
+
 /* Header grid — title | divider | subtitle */
 .sh-grid {
   display: grid;

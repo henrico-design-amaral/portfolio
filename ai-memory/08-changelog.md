@@ -1,5 +1,76 @@
 # CHANGELOG — Portfolio
 
+## 2026-05-16 — Publicação dos marcadores narrativos nos kickers
+
+Tipo: release / design / editorial-system
+
+Arquivos alterados:
+- `index.html`
+- `assets/css/site.css`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/08-changelog.md`
+
+Decisões tomadas:
+- Replicar em Método e Impacto a lógica do marcador narrativo já presente em Cases.
+- Usar marcadores diferentes por seção para evitar repetição mecânica.
+- Consolidar `.sh-kicker-context` como classe semântica para o marcador secundário.
+- Manter o `data-t` apenas no texto principal do kicker, preservando o marcador durante troca PT/EN.
+- Não executar `git init` nem recriar `origin`, pois o repositório já está configurado em `main` com `origin` lowercase oficial.
+
+Problemas resolvidos:
+- Método e Impacto não tinham o mesmo refinamento editorial do kicker de Cases.
+- O marcador de Cases usava estilo inline.
+- A estrutura anterior colocava `data-t` no kicker inteiro em Método/Impacto, o que impediria preservar um marcador narrativo fixo.
+
+Problemas pendentes:
+- Validar visualmente os três kickers em mobile, tablet e desktop.
+- Confirmar se os marcadores continuam equilibrados após troca PT/EN.
+- Confirmar no GitHub Pages se a versão publicada atualizou após o push.
+
+Coisas que não devem ser repetidas:
+- Não colocar `data-t` no `sh-kicker` inteiro quando houver marcador narrativo secundário.
+- Não usar estilos inline para o marcador do kicker se `.sh-kicker-context` existir.
+- Não copiar literalmente o mesmo marcador entre seções.
+- Não voltar o remote para `Portfolio.git` uppercase.
+
+Próximos passos:
+- Fazer commit e push para `origin/main`.
+- Verificar a versão publicada no GitHub Pages após a propagação.
+
+Status: Preparado para commit/publicação.
+
+---
+
+## 2026-05-16 — Marcadores narrativos nos kickers de seção
+
+Tipo: design / editorial-system
+
+Arquivos alterados:
+- `index.html`
+- `assets/css/site.css`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/08-changelog.md`
+
+Decisões tomadas:
+- Replicar a lógica do marcador secundário de Cases nos kickers de Método e Impacto.
+- Criar `.sh-kicker-context` para substituir o estilo inline do marcador de Cases.
+- Manter os marcadores diferentes entre seções para parecerem parte da narrativa, não cópia mecânica.
+- Mover `data-t` para o texto principal do kicker em Método e Impacto, preservando o marcador na troca PT/EN.
+
+Problemas resolvidos:
+- Método e Impacto estavam sem a camada editorial secundária presente em Cases.
+- O marcador de Cases usava estilo inline em vez de classe compartilhada.
+
+Problemas pendentes:
+- Validar no navegador se os marcadores não comprimem ou quebram mal em mobile.
+
+Próximos passos:
+- Conferir visualmente os três kickers em PT/EN.
+
+Status: Concluído.
+
+---
+
 ## 2026-05-16 — Commit e publicação do portfólio no GitHub Pages
 
 Tipo: release / repository / memory

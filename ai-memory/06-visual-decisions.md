@@ -86,3 +86,16 @@ Próximos passos:
 - Rodar inspeção visual em browser local ou GitHub Pages.
 - Ajustar quebras/ocultação de microflows em mobile, se necessário.
 - Revisar se os microtextos continuam subordinados ao conteúdo principal depois da validação visual.
+
+## 2026-05-16 — Marcadores narrativos nos kickers
+
+Decisão:
+Os `sh-kicker` de Método, Cases e Impacto passam a compartilhar um marcador editorial secundário antes do nome da seção.
+
+Aplicação:
+- Método: `02.04.01 M` como índice de método/camadas.
+- Cases: `10.90.54 S` preservado como coordenada editorial já existente.
+- Impacto: `95.4K.12 E` como índice de evidência, escala e operação.
+
+Regra:
+O marcador deve usar `.sh-kicker-context`, com baixa opacidade e peso reduzido. O `data-t` deve ficar apenas no texto principal da seção, para não apagar o marcador durante a troca PT/EN.
