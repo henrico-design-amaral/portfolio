@@ -104,3 +104,15 @@ O Portfolio deve conter apenas arquivos necessários ao site, documentação, me
 - **Não apagar referências de cases**: Materiais em `case-references/` são vitais para a memória do projeto, mesmo que não sejam públicos.
 - **Não publicar material bruto ou sensível**: Nunca commitar `case-references/` ou arquivos que contenham dados reais de clientes sem anonimização.
 - **Não usar _archive para materiais ativos**: Usar nomes semânticos como `case-references/` para evitar confusão com lixo ou arquivos deletáveis.
+
+## Não repetir na Seção de Impacto
+
+- **Não usar placeholders "0" em KPIs**: Nunca deixar valores zerados no HTML indexável. O valor real deve estar no markup para SEO e Acessibilidade.
+- **Não usar métricas performativas**: Evitar números bonitos sem lastro documental ou justificativa qualitativa.
+- **Não priorizar animação sobre o dado**: A animação (contador) é um bônus visual; o dado (número) é a infraestrutura da informação. O site deve ser funcional e informativo sem JS.
+- **Não transformar requisitos obrigatórios de sistema, compliance ou rastreabilidade em métricas promocionais de performance.**
+- **Não usar a expressão "100 auditável" ou métricas percentuais para conformidade regulatória.** Priorizar linguagem qualitativa como "Rastreabilidade completa" ou "Fluxos regulados simplificados".
+- **Não usar jargões internos sem contexto**: Evitar termos como "PDRs" na seção de impacto; usar linguagem compreensível como "pontos".
+- **Preservar a densidade de dados da seção Impacto**: Cada card deve manter as 5 camadas de informação (Cliente, Dimensão, Evidência, Descrição, Tipo) para garantir profundidade técnica.
+- **Não regredir para o layout "KPI Wall"**: O grid 2x2 editorial com split-cards é o padrão final. Não usar cards verticais simples com números gigantes isolados.
+- **Não esconder conteúdo principal em atributos data-target**: Todo texto de impacto deve estar visível no HTML inicial para garantir rastreabilidade por crawlers e leitores de tela sem dependência de JavaScript.

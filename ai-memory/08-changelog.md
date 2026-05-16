@@ -107,3 +107,38 @@ Pastas renomeadas:
 Resumo: Renomeação da pasta de arquivos brutos para `case-references/` e reforço das regras de privacidade e segurança de dados de clientes.
 Motivo: Evitar exposição acidental de materiais sensíveis e organizar referências de apoio.
 Status: Concluído.
+
+---
+
+## 2026-05-15 — Auditoria e Sanitização da Seção Impacto
+
+Tipo: audit / SEO / accessibility / editorial
+Arquivos alterados:
+- index.html
+- assets/js/site.js
+- ai-memory/05-technical-decisions.md
+
+Resumo: Auditoria de credibilidade e correção técnica das métricas de impacto. 
+Ações:
+- Substituídos placeholders "0" por valores reais indexáveis no HTML.
+- Refinamento editorial dos rótulos (PT/EN) para tom de "Enterprise Product Designer".
+- Ajuste da lógica JS (GSAP) para resetar contadores apenas no momento da animação.
+- Verificação de lastro documental em `case-references/`.
+
+Motivo: Garantir credibilidade, SEO e acessibilidade (legibilidade sem JS), além de elevar o nível profissional da narrativa de impacto.
+Status: Concluído.
+
+---
+
+### 2026-05-16 — Refinamento Editorial Final e Governança de Compliance
+
+Resumo: Substituição de termos genéricos por rótulos técnicos e ajuste de governança para métricas regulatórias.
+
+Ações:
+- [Editorial] Refinamento do grid de Cases: substituição de buzzwords por rótulos precisos (ex: "Coordenação de Riscos Operacionais").
+- [Compliance] Conversão da métrica "100%" (BMG) para rótulo de requisito sistêmico ("auditável").
+- [Docs] Atualização do `docs/metrics-audit.md` e diretrizes de memória.
+- [Paridade] Garantia de sincronização PT/EN no dicionário de tradução (`site.js`).
+
+Motivo: Evitar tom promocional/marketing e reforçar o posicionamento de design de infraestrutura e sistemas regulados.
+Status: Concluído.

@@ -88,3 +88,28 @@ Regras de Segurança:
 - `assets/` contém apenas arquivos públicos otimizados para o site.
 - `case-references/` não deve ser commitado no GitHub público sem curadoria prévia.
 - A pasta deve ser mantida no `.gitignore`.
+
+## 2026-05-15 — Auditoria e Sanitização da Seção Impacto
+
+**Decisão:**
+Priorizar conteúdo estático no HTML para todas as métricas de impacto, usando JavaScript apenas como camada de aprimoramento progressivo (animação).
+
+**Motivo:**
+Garantir que os dados de impacto (KPIs) sejam indexáveis por motores de busca (SEO), acessíveis para tecnologias assistivas (A11y) e legíveis mesmo sem JavaScript. Placeholders "0" foram substituídos pelos valores reais.
+
+**Diretrizes Editoriais:**
+- Métricas quantitativas devem ser acompanhadas de justificativa qualitativa ("Engenharia de dados", "Conformidade sistêmica").
+- Evitar números isolados sem contexto operacional.
+- O tom deve refletir o posicionamento de "Enterprise Product Designer", focando em resultados estruturais e escala corporativa.
+
+**Lastro Documental:**
+As métricas exibidas (95% automação, 4K pontos de recepção, etc.) foram auditadas e encontram-se suportadas pelos materiais brutos em `case-references/`.
+
+## 2026-05-16 — Refinamento Editorial e Governança de Métricas
+
+**Decisão:**
+Substituir rótulos performáticos sem lastro quantitativo direto por descrições qualitativas técnicas. Requisitos de compliance (ex: BMG) deixam de ser métricas percentuais e passam a ser requisitos de infraestrutura.
+
+**Diretrizes de Governança:**
+- **Métricas Qualitativas:** Onde o lastro quantitativo é insuficiente, priorizamos rótulos qualitativos concretos (ex: "Coordenação de Riscos Operacionais").
+- **Compliance como Infraestrutura:** Requisitos regulatórios são tratados como condições de produto ("auditável", "aderente"), não como métricas promocionais.

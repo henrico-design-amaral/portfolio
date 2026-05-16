@@ -22,4 +22,5 @@ O design deve evocar a sensação de um sistema operacional robusto e coordenado
 
 - **Filtros de Blur**: Usar blur progressivo em transições de seções para suavizar a entrada de dados.
 - **Hierarquia Editorial**: Headlines nunca devem ser interrompidas por elementos decorativos pesados; a decoração (grids/svgs) deve sempre estar na camada de infraestrutura (Z-index baixo).
-- **Consistência de Casos**: Os cases devem manter a estrutura de Bento Grid de alta fidelidade, garantindo que o impacto operacional seja a métrica visualmente dominante.
+- **Consistência de Casos**: Os cases devem manter a estrutura de Bento Grid de alta fidelidade, garantindo que o impacto operacional seja a métrica visualmente dominante.
+- 6. **Evidência Operacional (V3)**: A seção Impacto utiliza um grid 2x2 de cards editoriais largos. Cada card é estruturalmente dividido entre Contexto (Project/Dimension) e Evidência (Value/Description), normalizando métricas quantitativas e qualitativas em uma mesma gramática visual. O motion sutil de entrada e a revelação de linhas internas reforçam a precisão técnica da seção.
