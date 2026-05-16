@@ -22,9 +22,10 @@ Decisões tomadas:
 
 Problemas resolvidos:
 - Estado Git confirmado antes da publicação.
-- Remote `origin` validado como `https://github.com/henrico-design-amaral/Portfolio.git`.
+- Remote `origin` validado e corrigido para `https://github.com/henrico-design-amaral/portfolio.git`.
 - Memória persistente atualizada antes do commit.
 - Seções Método, Cases e Impacto ficaram padronizadas na camada editorial secundária.
+- Commit `7fa5ae3` publicado em `origin/main`.
 
 Problemas pendentes:
 - Confirmar visualmente a versão publicada no GitHub Pages após o push.
@@ -34,14 +35,15 @@ Problemas pendentes:
 Coisas que não devem ser repetidas:
 - Não rodar `git init` em repo já inicializado.
 - Não adicionar remote duplicado.
+- Não voltar o remote para a URL uppercase `Portfolio.git`, pois o GitHub redireciona para `portfolio.git`.
 - Não commitar de fora da pasta `Portfolio`.
 - Não publicar sem atualizar a memória quando houver decisão relevante.
 
 Próximos passos:
-- Fazer push para `origin/main`.
 - Abrir a URL publicada e confirmar que o GitHub Pages serviu a versão atual.
+- Aguardar propagação/cache do Pages se a página ainda exibir a versão anterior.
 
-Status: Preparado para commit/publicação.
+Status: Publicado em `origin/main`.
 
 ---
 
@@ -62,7 +64,7 @@ Arquivos alterados:
 Decisões tomadas:
 - Não reexecutar `git init`, pois o repositório Portfolio já possui `.git`.
 - Manter branch principal como `main`.
-- Confirmar `origin` como `https://github.com/henrico-design-amaral/Portfolio.git`.
+- Confirmar `origin` como `https://github.com/henrico-design-amaral/portfolio.git`.
 - Consolidar Método, Cases e Impacto com a mesma gramática editorial para microstats, chips e rodapés editoriais.
 - Padronizar microstats e chips em `0.563rem`.
 - Padronizar rodapés editoriais em `0.5rem`.

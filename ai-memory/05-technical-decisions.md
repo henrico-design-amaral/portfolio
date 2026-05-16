@@ -5,12 +5,12 @@ Este arquivo registra a stack real e as decisões técnicas do projeto Portfolio
 ## Configuração do Projeto
 
 - **Pasta local**: Portfolio
-- **Remote GitHub**: [henrico-design-amaral/Portfolio](https://github.com/henrico-design-amaral/Portfolio)
+- **Remote GitHub**: [henrico-design-amaral/portfolio](https://github.com/henrico-design-amaral/portfolio)
 - **Deploy**: GitHub Pages em [/portfolio/](https://henrico-design-amaral.github.io/portfolio/)
 - **Natureza**: Site estático
 - **Regra de Git**: Commits devem ocorrer apenas dentro de `!PROJETOS/Portfolio`
 - **Branch principal**: `main`
-- **Remote origin confirmado**: `https://github.com/henrico-design-amaral/Portfolio.git`
+- **Remote origin confirmado**: `https://github.com/henrico-design-amaral/portfolio.git`
 
 ## Stack Confirmada
 
@@ -61,10 +61,13 @@ Não executar `git init` novamente porque `Portfolio` já possui `.git`, branch 
 Estado confirmado:
 - Branch atual: `main`
 - Tracking: `main...origin/main`
-- Remote fetch/push: `https://github.com/henrico-design-amaral/Portfolio.git`
+- Remote fetch/push: `https://github.com/henrico-design-amaral/portfolio.git`
 
 Regra:
 Se o repositório já estiver inicializado, não repetir `git init` nem recriar `origin`. Antes de qualquer ação Git estrutural, confirmar `git status --short --branch`, `git branch --show-current` e `git remote -v`.
+
+Nota:
+Em 2026-05-16, o push para a URL `Portfolio.git` funcionou via redirect, mas o GitHub retornou aviso de repositório movido para `portfolio.git`. O remote local foi atualizado para a URL lowercase oficial.
 
 ## 2026-05-16 — Publicação via GitHub Pages
 
@@ -83,7 +86,7 @@ Arquivos previstos no commit desta rodada:
 
 Problemas resolvidos:
 - Estado Git confirmado sem necessidade de `git init`.
-- Remote `origin` confirmado como `https://github.com/henrico-design-amaral/Portfolio.git`.
+- Remote `origin` confirmado como `https://github.com/henrico-design-amaral/portfolio.git`.
 - Deploy do GitHub Pages passa a depender apenas do push da branch `main`.
 
 Problemas pendentes:

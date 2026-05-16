@@ -64,7 +64,7 @@ Problemas, pendências e oportunidades de melhoria identificados.
 
 - **[2026-05-15] Mapeamento de Memória Técnica**: Stack real identificada e documentada em `05-technical-decisions.md`.
 - **[2026-05-15] Consolidação do Design System**: Tokens de cores, fontes e motion documentados em `03-design-system.md`.
-- **[2026-05-16] Estado Git confirmado**: Repositório já estava inicializado, branch `main` ativa e `origin` apontando para `https://github.com/henrico-design-amaral/Portfolio.git`.
+- **[2026-05-16] Estado Git confirmado**: Repositório já estava inicializado, branch `main` ativa e `origin` apontando para `https://github.com/henrico-design-amaral/portfolio.git`.
 - **[2026-05-16] Fundos de Método e Cases**: Camadas internas de grid/topologia removidas; seções mantidas com fundos sólidos da paleta (`base-200` e `page`).
 - **[2026-05-16] Microtextos editoriais**: Método e Impacto receberam microstats, chips, microflows e rodapés editoriais sutis.
 - **[2026-05-16] Padronização editorial**: Cases foi alinhada às mesmas classes editoriais (`section-microstats`, `section-chip-row`, `section-editorial-footer`) usadas em Método e Impacto.

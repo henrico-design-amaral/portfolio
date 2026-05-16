@@ -68,7 +68,8 @@ Evitar:
 - **Não quebrar o monolito sem plano**: Apesar de grande, o `index.html` é o local de todas as seções. Não tente separar arquivos sem um plano de build (ex: Vite).
 - **Não alterar tokens no site.css sem verificar index.html**: O Tailwind é configurado inline no HTML; alterações no CSS global devem respeitar os tokens definidos no script de config do Tailwind.
 - **Não reexecutar `git init` em um repositório já inicializado**: Antes de qualquer comando Git estrutural, confirmar branch e remote com `git status --short --branch`, `git branch --show-current` e `git remote -v`.
-- **Não recriar `origin` se ele já existir**: O remote atual do Portfolio é `https://github.com/henrico-design-amaral/Portfolio.git`.
+- **Não recriar `origin` se ele já existir**: O remote atual do Portfolio é `https://github.com/henrico-design-amaral/portfolio.git`.
+- **Não voltar o remote para `Portfolio.git` uppercase**: O GitHub aceita redirect, mas avisa que o repositório oficial foi movido para `portfolio.git`.
 - **Não publicar GitHub Pages por fora do fluxo da branch principal sem necessidade**: O fluxo atual é commit em `main` + push para `origin/main`.
 
 ## Não repetir no processo
