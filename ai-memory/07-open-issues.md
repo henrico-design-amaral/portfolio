@@ -2,7 +2,27 @@
 
 Problemas, pendências e oportunidades de melhoria identificados.
 
-## 2026-05-16 — Pendência pós-ajuste de Sobre e Contato
+## 2026-05-17 — Pendências pós-revisão sistêmica
+
+### Foto real do Henrico em Sobre
+- **Onde**: `assets/img/henrico-amaral.jpg` (ainda inexistente).
+- **Descrição**: O bloco `.about-photo-frame` foi implementado e está pronto para receber a foto. Enquanto o arquivo não existir, a área fica em branco com background escuro.
+- **Próximo passo**: Adicionar foto real em crop 4:5 (ex: 720x900px). Preto e branco ou duotone quente. Salvar como `assets/img/henrico-amaral.jpg`.
+
+### Validação visual da revisão sistêmica
+- **Onde**: Todas as seções.
+- **Descrição**: Revisaões de background (.nbg), padding (.section-pad), kickers e títulos não foram validadas em navegador interativo.
+- **Próximo passo**: Abrir localmente e validar 1440px, 1366px, 1024px, 768px e 390px.
+
+### Cards do Sobre em mobile
+- **Onde**: `.about-grid` com 5 cards.
+- **Descrição**: Grid passa por 1col (mobile), 2col (640px+), 3col (1024px+), 5col (1280px+). Verificar overflow e altura dos cards em 390px.
+- **Próximo passo**: Testar nos breakpoints e ajustar se cards ficarem muito altos.
+
+### Tradutor i18n (site.js) desatualizado
+- **Onde**: `assets/js/site.js`, objeto `COPY`.
+- **Descrição**: Os novos cards do Sobre (ab.card5.*) e os novos títulos de seção não foram sincronizados com o dicionário EN.
+- **Próximo passo**: Revisar as chaves `ab.card5`, `ct.title`, `ab.subtitle`, `ab.p1`–`ab.p4`, `s4.title`, `s4.statement`, `s5.title`, `ct.tag` no objeto COPY do site.js.
 
 ### Validação visual de Sobre e Contato em navegador interativo real
 - **Onde**: `#about`, `#contact`, CTA de CV e bloco final/rodapé.
