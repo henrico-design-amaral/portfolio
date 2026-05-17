@@ -280,10 +280,10 @@ const COPY = {
 
 /* ── Global Motion Constants ── */
 const MOTION = {
-  duration: { fast: 0.6, base: 0.8, slow: 1.2, text: 0.7, hero: 0.9, blur: 1.0 },
-  ease: { standard: 'power3.out', heavy: 'power2.out', soft: 'sine.out', precise: 'power2.out', blur: 'power2.inOut', spring: 'back.out(1.4)' },
-  stagger: { fast: 0.04, base: 0.08, slow: 0.12 },
-  blur: { entry: 8, exit: 12, subtle: 4, hero: 10, text: 6, word: 8 }
+  duration: { fast: 0.5, base: 0.65, slow: 0.85, text: 0.55, hero: 0.75, blur: 0.75 },
+  ease: { standard: 'power2.out', heavy: 'power2.out', soft: 'sine.out', precise: 'power2.out', blur: 'power2.inOut', subtle: 'cubic-bezier(0.22, 1, 0.36, 1)' },
+  stagger: { fast: 0.04, base: 0.06, slow: 0.1 },
+  blur: { entry: 6, exit: 8, subtle: 3, hero: 8, text: 5, word: 6 }
 };
 
 let currentLang = 'pt';
@@ -359,8 +359,8 @@ const motionReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matc
 // Split hero title before animation starts
 splitHeroTitle();
 
-/* ---- Hero: Myna-style staggered word entrance ---- */
-const tl = gsap.timeline({ defaults: { ease: MOTION.ease.spring, duration: motionReduced ? 0 : MOTION.duration.hero } });
+/* ---- Hero: Subtle editorial entrance ---- */
+const tl = gsap.timeline({ defaults: { ease: MOTION.ease.subtle, duration: motionReduced ? 0 : MOTION.duration.hero } });
 
 if (motionReduced) {
   gsap.set([
@@ -383,22 +383,21 @@ if (motionReduced) {
     '.editorial-reveal'
   ], { opacity: 1, y: 0, scale: 1, scaleX: 1, scaleY: 1, filter: 'blur(0px)' });
 } else {
-  tl.from('.availability-badge-v2', { opacity: 0, y: 10, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.5, immediateRender: false, clearProps: 'filter,opacity,transform' }, 0.15)
-    .from('.eyebrow-line', { scaleX: 0, duration: 0.6, ease: 'power4.inOut', transformOrigin: 'left', immediateRender: false }, 0.3)
-    .from('.eyebrow-text', { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.5, immediateRender: false, clearProps: 'filter,opacity,transform' }, 0.4)
+  tl.from('.availability-badge-v2', { opacity: 0, y: 8, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, immediateRender: false }, 0.1)
+    .from('.eyebrow-line', { scaleX: 0, duration: 0.5, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.2)
+    .from('.eyebrow-text', { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, immediateRender: false }, 0.35)
     .from('.hero-word', {
-      y: 24,
+      y: 20,
       opacity: 0,
       filter: `blur(${MOTION.blur.word}px)`,
-      duration: 0.7,
-      stagger: 0.06,
-      ease: MOTION.ease.spring,
-      immediateRender: false,
-      clearProps: 'filter,opacity,transform'
-    }, 0.6)
-    .from('.sub', { opacity: 0, y: 16, filter: `blur(${MOTION.blur.text}px)`, duration: 0.7, ease: MOTION.ease.standard, immediateRender: false, clearProps: 'filter,opacity,transform' }, 1.0)
-    .from('.cta-wrapper', { opacity: 0, y: 14, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.6, ease: MOTION.ease.spring, immediateRender: false, clearProps: 'filter,opacity,transform' }, 1.3)
-    .from('.evidence', { opacity: 0, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.6, ease: MOTION.ease.standard, immediateRender: false, clearProps: 'filter,opacity' }, 1.6);
+      duration: 0.55,
+      stagger: 0.05,
+      ease: MOTION.ease.subtle,
+      immediateRender: false
+    }, 0.5)
+    .from('.sub', { opacity: 0, y: 12, filter: `blur(${MOTION.blur.text}px)`, duration: 0.55, ease: MOTION.ease.subtle, immediateRender: false }, 0.9)
+    .from('.cta-wrapper', { opacity: 0, y: 10, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.5, ease: MOTION.ease.subtle, immediateRender: false }, 1.15)
+    .from('.evidence', { opacity: 0, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.5, ease: MOTION.ease.subtle, immediateRender: false }, 1.4);
 }
 
 function reveal(selector, vars = {}) {
@@ -433,19 +432,19 @@ if (!motionReduced) {
     });
 
     tlSection
-      .from(`${sectionSelector} .section-kicker`, { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.5, ease: MOTION.ease.spring, immediateRender: false }, 0)
-      .from(`${sectionSelector} .section-header-title`, { opacity: 0, y: 16, filter: `blur(${MOTION.blur.entry}px)`, duration: 0.7, ease: MOTION.ease.spring, immediateRender: false }, 0.08)
-      .from(`${sectionSelector} .section-header-divider`, { opacity: 0, scaleY: 0, duration: 0.7, ease: 'power3.out', transformOrigin: 'top', immediateRender: false }, 0.14)
-      .from(`${sectionSelector} .section-header-subtitle`, { opacity: 0, y: 12, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.6, ease: MOTION.ease.spring, immediateRender: false }, 0.2)
-      .from(`${sectionSelector} .section-header-rule`, { opacity: 0, scaleX: 0, duration: 0.7, ease: 'power3.out', transformOrigin: 'left', immediateRender: false }, 0.26)
-      .from(`${sectionSelector} .section-microstats span`, { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.5, stagger: 0.04, ease: MOTION.ease.spring, immediateRender: false }, 0.3);
+      .from(`${sectionSelector} .section-kicker`, { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 0)
+      .from(`${sectionSelector} .section-header-title`, { opacity: 0, y: 12, filter: `blur(${MOTION.blur.entry}px)`, duration: 0.55, ease: MOTION.ease.subtle, immediateRender: false }, 0.06)
+      .from(`${sectionSelector} .section-header-divider`, { opacity: 0, scaleY: 0, duration: 0.5, ease: 'power2.inOut', transformOrigin: 'top', immediateRender: false }, 0.12)
+      .from(`${sectionSelector} .section-header-subtitle`, { opacity: 0, y: 8, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, ease: MOTION.ease.subtle, immediateRender: false }, 0.18)
+      .from(`${sectionSelector} .section-header-rule`, { opacity: 0, scaleX: 0, duration: 0.5, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.24)
+      .from(`${sectionSelector} .section-microstats span`, { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, stagger: 0.03, ease: MOTION.ease.subtle, immediateRender: false }, 0.28);
 
     if (cardsSelector) {
       tlSection.fromTo(
         `${sectionSelector} ${cardsSelector}`,
-        { opacity: 0, y: 20, filter: `blur(${MOTION.blur.entry}px)` },
-        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.75, stagger: 0.08, ease: MOTION.ease.spring, immediateRender: false },
-        0.45
+        { opacity: 0, y: 16, filter: `blur(${MOTION.blur.entry}px)` },
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.55, stagger: 0.06, ease: MOTION.ease.subtle, immediateRender: false },
+        0.38
       );
     }
   }
@@ -680,98 +679,3 @@ document.addEventListener('keydown', (e) => {
     closeCaseModal();
   }
 });
-
-/* ── The Infinite Grid (21st.dev inspired) ── */
-(function createInfiniteGrid() {
-  if (motionReduced) return;
-
-  const container = document.createElement('div');
-  container.className = 'infinite-grid-system';
-  container.setAttribute('aria-hidden', 'true');
-  container.style.cssText = 'position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;';
-
-  const bgLayer = document.createElement('div');
-  bgLayer.className = 'ig-layer ig-layer--bg';
-
-  const fgLayer = document.createElement('div');
-  fgLayer.className = 'ig-layer ig-layer--fg';
-
-  const orbs = document.createElement('div');
-  orbs.className = 'ig-orbs';
-
-  container.appendChild(bgLayer);
-  container.appendChild(fgLayer);
-  container.appendChild(orbs);
-
-  // Build SVG patterns
-  const svgNS = 'http://www.w3.org/2000/svg';
-  function makeSVG() {
-    const svg = document.createElementNS(svgNS, 'svg');
-    svg.setAttribute('width', '100%');
-    svg.setAttribute('height', '100%');
-    const defs = document.createElementNS(svgNS, 'defs');
-    const pattern = document.createElementNS(svgNS, 'pattern');
-    pattern.setAttribute('id', 'ig-pattern-' + Date.now());
-    pattern.setAttribute('width', '40');
-    pattern.setAttribute('height', '40');
-    pattern.setAttribute('patternUnits', 'userSpaceOnUse');
-    const path = document.createElementNS(svgNS, 'path');
-    path.setAttribute('d', 'M 40 0 L 0 0 0 40');
-    path.setAttribute('fill', 'none');
-    path.setAttribute('stroke', 'currentColor');
-    path.setAttribute('stroke-width', '0.5');
-    pattern.appendChild(path);
-    defs.appendChild(pattern);
-    svg.appendChild(defs);
-    const rect = document.createElementNS(svgNS, 'rect');
-    rect.setAttribute('width', '100%');
-    rect.setAttribute('height', '100%');
-    rect.setAttribute('fill', 'url(#' + pattern.getAttribute('id') + ')');
-    svg.appendChild(rect);
-    return { svg, pattern, id: pattern.getAttribute('id') };
-  }
-
-  const bg = makeSVG();
-  bg.svg.style.cssText = 'width:100%;height:100%;color:rgba(190,156,110,0.06);';
-  bgLayer.appendChild(bg.svg);
-
-  const fg = makeSVG();
-  fg.svg.style.cssText = 'width:100%;height:100%;color:rgba(190,156,110,0.12);';
-  fgLayer.appendChild(fg.svg);
-
-  // Mouse mask on foreground
-  const mouseX = { current: 0.5 };
-  const mouseY = { current: 0.5 };
-  let rafId = null;
-
-  function updateMask() {
-    fgLayer.style.maskImage = 'radial-gradient(320px circle at ' + (mouseX.current * 100) + '% ' + (mouseY.current * 100) + '%, black 20%, transparent 70%)';
-    fgLayer.style.webkitMaskImage = 'radial-gradient(320px circle at ' + (mouseX.current * 100) + '% ' + (mouseY.current * 100) + '%, black 20%, transparent 70%)';
-  }
-
-  document.addEventListener('mousemove', function (e) {
-    mouseX.current = e.clientX / window.innerWidth;
-    mouseY.current = e.clientY / window.innerHeight;
-    if (!rafId) {
-      rafId = requestAnimationFrame(function () {
-        updateMask();
-        rafId = null;
-      });
-    }
-  });
-
-  // Ambient orbs
-  orbs.innerHTML = '<div class="ig-orb ig-orb--1"></div><div class="ig-orb ig-orb--2"></div><div class="ig-orb ig-orb--3"></div>';
-
-  // Continuous scroll via GSAP ticker
-  let offset = 0;
-  gsap.ticker.add(function () {
-    offset = (offset + 0.15) % 40;
-    bg.pattern.setAttribute('x', offset);
-    bg.pattern.setAttribute('y', offset);
-    fg.pattern.setAttribute('x', offset);
-    fg.pattern.setAttribute('y', offset);
-  });
-
-  document.body.appendChild(container);
-})();

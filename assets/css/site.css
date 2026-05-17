@@ -1,62 +1,74 @@
 /* ═══════════════════════════════════════════════
-   NARRATIVE BACKGROUND SYSTEM
-   Single surface that progresses from light (Hero)
-   to dark (Contact) via CSS custom properties.
-   Each section sets only --nbg-base, --nbg-grid-op, --nbg-noise-op.
-   ═══════════════════════════════════════════════ */
+    GLOBAL BACKGROUND SYSTEM
+    Narrative gradient + Fixed infinite grid
+    ═══════════════════════════════════════════════ */
 
 :root {
-  --nbg-grid-color: 99, 87, 74;       /* #63574A */
-  --nbg-grid-size: 80px;
-  --grid-line: rgba(var(--nbg-grid-color), 0.055);
+  --grid-color: 92, 66, 50;
+  --grid-line: rgba(var(--grid-color), 0.13);
 }
 
-.nbg {
-  position: relative;
-  overflow: hidden;
+body {
+  background-color: #F2ECE1;
+  color: #2B1710;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-body::before {
-  content: '';
+/* Narrative Gradient - Continuous surface */
+.narrative-gradient {
   position: fixed;
   inset: 0;
+  z-index: -3;
   pointer-events: none;
-  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    #F2ECE1 0%,
+    #E8DED0 18%,
+    #D8CBBB 34%,
+    #C6B7A6 50%,
+    #6D584A 64%,
+    #241A15 76%,
+    #130D0A 88%,
+    #0B0705 100%
+  );
+}
+
+/* Fixed Infinite Grid - Simple, static, editorial */
+.fixed-infinite-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
   background-image:
     linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-  background-size: var(--nbg-grid-size) var(--nbg-grid-size);
-  opacity: 0.3;
+  background-size: 52px 52px;
+  background-position: center top;
+  opacity: 0.72;
 }
 
+/* Content Layer */
 body > * {
   position: relative;
   z-index: 1;
 }
 
-/* Per-section tonal tokens */
+/* Section backgrounds - Minimal overrides only */
 #hero {
-  background:
-    radial-gradient(circle at 82% 4%, rgba(255, 255, 255, 0.72), transparent 28%),
-    linear-gradient(180deg, #f3f0ea 0%, #ece6dd 100%);
+  background: transparent;
 }
 
 #process {
-  background:
-    radial-gradient(circle at 12% 20%, rgba(255, 255, 255, 0.42), transparent 24%),
-    linear-gradient(180deg, #ece6dd 0%, #e4ddd2 100%);
+  background: transparent;
 }
 
 #cases {
-  background:
-    radial-gradient(circle at 70% 18%, rgba(255, 255, 255, 0.32), transparent 25%),
-    linear-gradient(180deg, #e4ddd2 0%, #ded7cb 100%);
+  background: transparent;
 }
 
 #impact {
-  background:
-    radial-gradient(circle at 28% 18%, rgba(255, 255, 255, 0.26), transparent 28%),
-    linear-gradient(180deg, #ded7cb 0%, #d3c8b9 100%);
+  background: transparent;
 }
 
 /* ─── STANDARDIZED SECTION PADDING ─── */
@@ -71,7 +83,7 @@ body > * {
   .section-pad { padding-top: 4rem; padding-bottom: 4rem; }
 }
 
-body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antialiased; }
+
 ::selection { background: #BE9C6E; color: #DAD5CD; }
 
 /* ─── Global Environmental Infrastructure Animations ─── */
@@ -253,7 +265,7 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
   font-family: 'Inter', sans-serif;
   font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
   line-height: 1.55;
-  color: rgba(71, 34, 17, 0.6);
+  color: #5F4638;
   max-width: 520px;
   margin-left: auto;
   display: flex;
@@ -288,7 +300,7 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
   line-height: 1.45;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(71, 34, 17, 0.54);
+  color: #6D584A;
 }
 
 .section-microcopy--accent {
@@ -351,7 +363,7 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
   line-height: 1.5;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(71, 34, 17, 0.5);
+  color: #6D584A;
 }
 
 .section-editorial-footer {
@@ -434,17 +446,17 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
 }
 
 /* ─── CARD ─── */
-/* Left = context (narrow), Right = evidence (wide) — fixed for all 4 */
+/* Left = context (32%), Right = evidence (68%) */
 .impact-cell {
-  background: rgba(26, 20, 16, 0.018);
-  border: 1px solid rgba(26, 20, 16, 0.12);
-  border-radius: 12px;
+  background: #E8DED0;
+  border: 1px solid rgba(68, 45, 34, 0.14);
+  border-radius: 8px;
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(110px, 0.75fr) minmax(0, 1.85fr);
   min-height: 0;
   height: 100%;
   overflow: hidden;
-  transition: border-color 0.4s ease, transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 @media (max-width: 639px) {
@@ -641,64 +653,22 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
   transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* The Infinite Grid (21st.dev inspired) */
-.infinite-grid-system {
+/* The Infinite Grid - Simplified for Portfolio */
+.fixed-infinite-grid {
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: -2;
   pointer-events: none;
-  overflow: hidden;
+  background-image:
+    linear-gradient(to right, rgba(92, 66, 50, 0.13) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(92, 66, 50, 0.13) 1px, transparent 1px);
+  background-size: 52px 52px;
+  background-position: center top;
+  opacity: 0.72;
 }
-.infinite-grid-system svg {
-  display: block;
-}
-.ig-layer {
-  position: absolute;
-  inset: 0;
-}
-.ig-layer--bg {
-  opacity: 0.6;
-}
-.ig-layer--fg {
-  opacity: 0.4;
-  mask-image: radial-gradient(320px circle at 50% 50%, black 20%, transparent 70%);
-  -webkit-mask-image: radial-gradient(320px circle at 50% 50%, black 20%, transparent 70%);
-  transition: opacity 0.8s ease;
-}
-.ig-orbs {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-.ig-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  pointer-events: none;
-}
-.ig-orb--1 {
-  width: 40%;
-  height: 45%;
-  right: -10%;
-  top: -8%;
-  background: rgba(190, 156, 110, 0.08);
-}
-.ig-orb--2 {
-  width: 35%;
-  height: 35%;
-  left: -8%;
-  bottom: -10%;
-  background: rgba(190, 156, 110, 0.06);
-}
-.ig-orb--3 {
-  width: 20%;
-  height: 20%;
-  left: 50%;
-  top: 30%;
-  background: rgba(190, 156, 110, 0.04);
-}
+
 @media (prefers-reduced-motion: reduce) {
-  .infinite-grid-system { display: none; }
+  .fixed-infinite-grid { display: none; }
 }
 
 /* Beam Scan Hover Effect */
@@ -915,25 +885,7 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
   opacity: 0.55;
 }
 
-.ambient-coordinates {
-  position: absolute;
-  z-index: 1;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.563rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(242, 239, 233, 0.24);
-}
-
-.ambient-coordinates--one {
-  top: 9%;
-  right: clamp(1.5rem, 5vw, 5rem);
-}
-
-.ambient-coordinates--two {
-  bottom: 12%;
-  left: clamp(1.5rem, 5vw, 5rem);
-}
+/* Ambient - removed fake coordinates */
 
 .section-header--dark {
   color: #f2efe9;
@@ -1094,17 +1046,16 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
 .contact-intent-card {
   position: relative;
   min-width: 0;
-  border: 1px solid rgba(242, 239, 233, 0.12);
+  border: 1px solid rgba(255, 235, 210, 0.12);
   border-radius: 8px;
-  background: rgba(242, 239, 233, 0.035);
+  background: #201610;
   padding: clamp(1.35rem, 2vw, 1.8rem);
-  transition: border-color 0.35s ease, background-color 0.35s ease, transform 0.35s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .about-card:hover,
 .contact-intent-card:hover {
   border-color: rgba(190, 156, 110, 0.36);
-  background: rgba(242, 239, 233, 0.052);
   transform: translateY(-2px);
 }
 
@@ -1321,40 +1272,44 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
 }
 
 .liquid-glass {
-  background: rgba(243, 240, 234, 0.82);
-  border-bottom: 1px solid rgba(45, 21, 8, 0.12);
-  box-shadow: 0 10px 30px rgba(45, 21, 8, 0.05);
-  backdrop-filter: blur(18px) saturate(130%);
-  -webkit-backdrop-filter: blur(18px) saturate(130%);
+  background: rgba(242, 236, 225, 0.92);
+  border-bottom: 1px solid rgba(68, 45, 34, 0.16);
+  box-shadow: 0 4px 20px rgba(45, 21, 8, 0.08);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
 }
 
 #nav a {
-  color: #2d1508;
+  color: #2B1710;
+  font-weight: 600;
 }
 
 #nav .nav-links a {
-  color: rgba(45, 21, 8, 0.72);
+  color: #5F4638;
+  font-weight: 500;
 }
 
 #nav .nav-links a:hover,
 #nav .nav-links a:focus-visible {
-  color: #7a4d23;
+  color: #2B1710;
 }
 
 .nav-lang {
-  padding: 0.35rem 0.5rem;
-  border: 1px solid rgba(45, 21, 8, 0.14);
+  padding: 0.4rem 0.6rem;
+  border: 1px solid rgba(68, 45, 34, 0.2);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .lang-btn {
   min-width: 1.65rem;
-  color: rgba(45, 21, 8, 0.54);
+  color: #5F4638;
+  font-weight: 600;
 }
 
 .lang-btn.active {
-  color: #2d1508 !important;
+  color: #2B1710 !important;
+  font-weight: 700;
 }
 
 a:focus-visible,
@@ -1410,7 +1365,9 @@ button:focus-visible {
 }
 
 .section-kicker-context {
-  color: rgba(45, 21, 8, 0.45);
+  color: #5F4638;
+  font-weight: 400;
+  margin-right: 1rem;
 }
 
 .section-chip-row,
