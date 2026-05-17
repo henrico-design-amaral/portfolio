@@ -1,5 +1,57 @@
 # CHANGELOG — Portfolio
 
+## 2026-05-17 — Myna-hero style animations e The Infinite Grid
+
+Tipo: motion / design-system / performance / bugfix
+
+Arquivos alterados:
+- `assets/js/site.js`
+- `assets/css/site.css`
+- `index.html`
+- `assets/img/foto.png`
+- `ai-memory/05-technical-decisions.md`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/08-changelog.md`
+- `ai-memory/09-do-not-repeat.md`
+
+Decisões tomadas:
+- **Myna-hero style**: word-level staggered blur(8px) + spring easing (back.out 1.4) no hero title
+  - `splitHeroTitle()` quebra `.hl-i` em `<span class="hero-word">` no runtime
+  - Stagger 0.06s entre palavras, durações 0.5-0.7s
+  - `setLang()` re-aplica split após troca de idioma
+- **The Infinite Grid**: SVG-based fixed background com GSAP ticker scroll + mouse-following radial mask
+  - Duas camadas: BG (6% opacidade) + FG (12% opacidade)
+  - Scroll contínuo via `gsap.ticker` (0.15px/frame)
+  - Máscara radial segue mouse via requestAnimationFrame
+  - 3 orbs ambiente com blur(120px)
+  - Respeita `prefers-reduced-motion` (oculto via CSS)
+- **MOTION constants**: durations mais curtos (0.6-1.2s), spring easing `back.out(1.4)`, staggers 0.04-0.12
+- **revealSectionSystem()**: migrado para spring easing com durações 0.5-0.75s
+
+Problemas resolvidos:
+- Dead code removido: `reveal()` selectors (`.section-heading`, `.terr-item`, `.reveal-step`, `.case-row`), vanilla-hero-bg, `.scrub-text`, `[data-parallax]`
+- clearProps + reverse bug: removido clearProps de todas as animações com toggleActions 'play none none reverse' para evitar "pulo" visual ao scrollar de volta
+  - Afetava: case cards inline script, reveal() function, revealSectionSystem()
+
+Problemas pendentes:
+- Verificar visualmente no GitHub Pages os breakpoints 390px, 768px, 1024px, 1366px, 1440px
+- Validar performance do grid infinito em dispositivos móveis
+- Conferir se word-split funciona corretamente após troca PT/EN
+
+Coisas que não devem ser repetidas:
+- Não usar `clearProps` em animações com `toggleActions` que incluem `reverse`
+- Não adicionar seletores de animação para classes que não existem no HTML
+- Não criar block de código para elementos que não existem (vanilla-hero-bg)
+
+Próximos passos:
+- Verificar deploy no GitHub Pages
+- Validar visualmente os breakpoints
+- Opcional: adicionar mais refinamentos no motion se necessário
+
+Status: Commitado em `c46416e` — publicado via GitHub Pages.
+
+---
+
 ## 2026-05-17 — Sistema de blur progressivo (entrada, saída, scroll)
 
 Tipo: motion / design-system / accessibility / performance

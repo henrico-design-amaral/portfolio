@@ -106,6 +106,14 @@ Evitar:
 - **Não esquecer `will-change`**: elementos que recebem animação de `filter: blur()` + `opacity` + `transform` devem ter `will-change: transform, filter, opacity` para GPU acceleration.
 - **Não deixar scroll-linked effects fora do `if (!motionReduced)`**: hero scroll blur e section dividers scrub devem respeitar `prefers-reduced-motion`.
 
+## Não repetir com clearProps em reverse animations
+
+- **Não usar `clearProps` em animações que usam `toggleActions` com `reverse`**: o GSAP limpa as propriedades inline ao final da reversão, causando "pulo" visual quando o usuário scrolla de volta para cima.
+- **Exemplo do problema**: `gsap.fromTo(card, { y: 24, opacity: 0 }, { y: 0, opacity: 1, clearProps: 'filter,opacity,transform', scrollTrigger: { toggleActions: 'play none none reverse' } })`
+- **Solução**: remover `clearProps` dessas animações. O CSS pode controlar valores default se necessário, ou usar `onReverseComplete` callback para cleanup controlado.
+- **Afeta**: case cards, `reveal()` function, `revealSectionSystem()` cards selector.
+- **Verificar sempre**: antes de adicionar `clearProps` em qualquer animação com ScrollTrigger, confirmar se `toggleActions` inclui `reverse`.
+
 ## Não repetir em backgrounds e motion
 
 - **Não voltar ao grid duplo**: o padrão consolidado agora é um único grid global fixo; não recriar grid grande com microgrid interno.

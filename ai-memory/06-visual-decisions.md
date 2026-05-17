@@ -155,7 +155,7 @@ Blur deve ser sutil o suficiente para não competir com leitura, mas presente o 
 ## 2026-05-17 — Revisão minimalista sistêmica da home
 
 Decisão:
-A home passa a usar uma superfície visual mais simples e progressiva, com grid global único e fixo no `body::before`. As seções deixam de depender de múltiplas topologias, grids internos, coordenadas falsas, chips e rodapés editoriais.
+A home passa a usar uma superfície visual mais simples e progressiva, com grid global único e fixo no `body::before`. As seções deixaм de depender de múltiplas topologias, grids internos, coordenadas falsas, chips e rodapés editoriais.
 
 Aplicação:
 - Hero, Método, Cases, Impacto, Sobre e Contato mantêm a estrutura principal, mas com menos camadas decorativas.
@@ -167,3 +167,37 @@ Aplicação:
 
 Regra:
 Motion permanece como aprimoramento narrativo, não como dependência de leitura. Conteúdo principal deve ficar legível por padrão; animações GSAP não podem deixar hero, headers ou cards invisíveis se falharem.
+
+## 2026-05-17 — Myna-hero style animations
+
+Decisão:
+O hero do portfólio adota a linguagem de motion do componente myna-hero da 21st.dev: word-level staggered entrance com blur progressivo e spring easing overshoot.
+
+Aplicação visual:
+- Título do hero é quebrado em palavras individuais (`<span class="hero-word">`) via JavaScript no runtime
+- Cada palavra entra com blur(8px) → 0px, y: 24px → 0px, stagger 0.06s, spring easing (back.out 1.4)
+- Badge, eyebrow, CTAs e marquee também usam spring easing com durações mais curtas (0.5-0.6s)
+- O timing geral é mais apertado: hero animation completa em ~1.6s vs ~2.4s anterior
+
+Regra:
+Spring easing (back.out) cria overshoot sutil que comunica energia e precisão técnica. Stagger de 0.06s entre palavras cria ritmo sem parecer robótico. Este padrão deve ser usado em headers principais, não em todos os textos.
+
+## 2026-05-17 — The Infinite Grid como background fixo
+
+Decisão:
+O portfólio usa um grid infinito scrollante como elemento de infraestrutura visual, inspirado no componente the-infinite-grid da 21st.dev.
+
+Aplicação visual:
+- Grid fixo em toda a página, posição `fixed` com z-index 0
+- Duas camadas SVG: camada de fundo (dim, 6% opacidade) + camada de frente (12% opacidade)
+- A camada de frente tem uma máscara radial que segue o mouse, revelando o grid mais brilhante ao redor do cursor
+- O grid scrolla infinitamente via GSAP ticker (não CSS animation) — mais suave e controlável
+- Três orbes ambiente com blur(120px) criam profundidade sem competir com conteúdo
+
+Diferenças da implementação 21st.dev:
+- Projeto é vanilla HTML/CSS/JS, não React — implementação via JavaScript puro
+- Sem dependência de Framer Motion, usa GSAP ticker equivalente
+- Sistema de orbes adaptado para paleta de cores do portfólio (tons terra/marrom)
+
+Regra:
+O grid deve permanecer sutil (opacidade 6-12%) e nunca competir com o conteúdo. A máscara do mouse é um detalhe de interação, não uma feature principal.

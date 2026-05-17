@@ -109,7 +109,8 @@ Problemas, pendências e oportunidades de melhoria identificados.
 - **[2026-05-16] Título herdando fonte errada**: `font-family: Syne` agora declarado explicitamente no CSS — não depende mais de classes Tailwind no h2.
 - **[2026-05-16] BMG com peso visual inferior**: Todos os 4 cards agora têm markup idêntico e `.impact-evidence` com `font-size` uniforme.
 - **[2026-05-16] Markup duplicado no index.html**: Resolvido via PowerShell regex após falha dos seletores CRLF no editor.
-- **[2026-05-16] Remote Git apontando para repo inexistente**: Atualizado de `Portfolio_v2.git` para `portfolio.git`.
+- **[2026-05-16] Remote Git apontando para repo inexistente**: Atualizado de `Portfolio_v2.git` para `portfolio.git`. 
+- **[2026-05-17] Validação visual da revisão minimalista**: Hero desktop/mobile validado por screenshot local; Cases, Impacto, Sobre e Contato validados via CDP com títulos/cards visíveis; `site.js` validado com `node --check`; assets principais retornando HTTP 200; contraste principal auditado em pares críticos.
 
 
 Problemas, pendências e oportunidades de melhoria identificados.

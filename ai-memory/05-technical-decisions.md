@@ -224,3 +224,36 @@ Aplicação:
 - Removidos parallax global de infraestrutura e breathing de grids internos.
 - Corrigido o parallax dos cards de cases para atuar diretamente nas imagens reais dos cards.
 - `prefers-reduced-motion` continua respeitado.
+
+## 2026-05-17 — Myna-hero style animations e The Infinite Grid
+
+Decisão:
+Implementar animações inspiradas no componente myna-hero da 21st.dev (word-level staggered blur com spring easing) e o componente The Infinite Grid como background fixo.
+
+Mudanças no `assets/js/site.js`:
+- `MOTION` constants atualizadas: durations mais curtos (0.6-1.2s), novo easing `spring: 'back.out(1.4)'`, staggers mais apertados (0.04-0.12)
+- `splitHeroTitle()`: função que quebra `.hl-i` em `<span class="hero-word">` no runtime para animação palavra por palavra
+- Hero timeline: `.hero-word` entra com blur(8px) + y:24 + stagger:0.06 + spring easing, badge/CTAs com spring
+- `setLang()` chama `splitHeroTitle()` após troca de idioma para re-aplicar split nas novas palavras
+- `revealSectionSystem()` migrado para spring easing (back.out) com durações 0.5-0.75s e stagger 0.04-0.08s
+
+The Infinite Grid (21st.dev inspired):
+- Criado via JS (não React/shadcn — projeto vanilla)
+- SVG-based grid com duas camadas: BG (dim, opacidade 0.06) + FG (brighter, opacidade 0.12) com máscara radial
+- Scroll contínuo via `gsap.ticker` (0.15px/frame, wrap a 40px)
+- Mouse-following mask atualiza posição via requestAnimationFrame
+- 3 orbs ambiente com blur(120px)
+- Respeita `prefers-reduced-motion` (oculto via CSS)
+
+Dead code removido:
+- `reveal()` calls para seletores que não existem no HTML (`.section-heading`, `.terr-item`, `.reveal-step`, `.case-row`)
+- Bloco `vanilla-hero-bg` que referenciava elemento inexistente
+- Bloco `.scrub-text` que não existe no HTML
+- Bloco `[data-parallax]` que referencia elementos escondidos por CSS
+
+clearProps bug corrigido:
+- Removido `clearProps` de todas as animações que usam `toggleActions` com `reverse`
+- Afetava: case cards inline script, `reveal()` function, `revealSectionSystem()` cards selector
+- Problema: clearProps limpava propriedades inline ao final da reversão, causando "pulo" visual ao scrollar para cima
+
+Status: Commitado em `c46416e` via GitHub Pages.
