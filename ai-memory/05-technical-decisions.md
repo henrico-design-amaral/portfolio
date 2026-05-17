@@ -187,3 +187,40 @@ Substituir rótulos performáticos sem lastro quantitativo direto por descriçõ
 **Diretrizes de Governança:**
 - **Métricas Qualitativas:** Onde o lastro quantitativo é insuficiente, priorizamos rótulos qualitativos concretos (ex: "Coordenação de Riscos Operacionais").
 - **Compliance como Infraestrutura:** Requisitos regulatórios são tratados como condições de produto ("auditável", "aderente"), não como métricas promocionais.
+
+## 2026-05-17 — Sistema de blur progressivo com entrada, saída e scroll
+
+Decisão:
+Implementar sistema completo de blur transitions no portfólio, integrando blur-in na entrada, blur-out reverso na saída e blur vinculado ao scroll (scrub).
+
+Mudanças no `assets/js/site.js`:
+- Adicionado objeto `MOTION.blur` com constantes centralizadas: `{ entry: 8, exit: 12, subtle: 4, hero: 10, text: 6, section: 3 }`
+- Hero timeline: todos os elementos agora entram com blur progressivo — badge (4px), eyebrow (4px), título (10px), subtítulo (6px), CTAs (4px), marquee (4px)
+- `reveal()`: adicionado `end: 'top 40%'` + `toggleActions: 'play none none reverse'` para animação reversa de saída com blur
+- `revealSectionSystem()`: adicionado `filter: blur(Xpx)` em todos os elementos + `end: 'top 35%'` + `toggleActions: 'play none none reverse'` para entrada com blur e saída reversa
+- Scroll-linked hero blur: `#technical-hero-bg` recebe blur(12px) + opacidade 0.5 ao scrollar; `.sub`, `.cta-wrapper`, `.availability-badge-v2` recebem blur(10px) + fade out
+- Section dividers: animação scrub com opacidade + scaleX para transição suave entre seções
+- `prefers-reduced-motion` respeitado: todo o novo sistema fica dentro do bloco `if (!motionReduced)`
+
+Mudanças no `index.html` (Case cards inline script):
+- `behaviorConfig` atualizado: campo `textBlur` substituído por `blur` numérico (6-12px por comportamento)
+- Card, título e descrição agora usam `filter: blur()` na entrada + `toggleActions: 'play none none reverse'` para saída
+- Adicionados `end: 'top 55%'` (card) e `end: 'top 50%'` (textos) para janela de animação + reversão
+
+Mudanças no `assets/css/site.css`:
+- Adicionados `will-change: transform, filter, opacity` em `.case-card`, `.case-card h3`, `.case-card p`, `.section-header-title`, `.reveal-text`, `#technical-hero-bg`
+- Nav: transição CSS com `backdrop-filter` mais intenso (`blur(24px) saturate(160%)`) via classe `.nav-scrolled`
+
+## 2026-05-17 — Motion como aprimoramento progressivo
+
+Decisão:
+O motion da home deve preservar conteúdo visível por padrão. O hero deixou de usar `gsap.set()` para esconder título, eyebrow, subtítulo e CTAs antes da timeline; agora usa animações `.from(... immediateRender: false)`.
+
+Motivo:
+Evitar regressões onde o conteúdo principal aparece invisível em screenshots, carregamentos lentos, CDNs instáveis ou navegação direta por hash.
+
+Aplicação:
+- `assets/js/site.js` mantém GSAP/ScrollTrigger para entrada suave de hero, seções e cards.
+- Removidos parallax global de infraestrutura e breathing de grids internos.
+- Corrigido o parallax dos cards de cases para atuar diretamente nas imagens reais dos cards.
+- `prefers-reduced-motion` continua respeitado.

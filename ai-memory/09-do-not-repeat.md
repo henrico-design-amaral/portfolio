@@ -91,11 +91,27 @@ Evitar:
 
 ## Não repetir em microtextos editoriais
 
-- **Não criar microtextos com classes Tailwind isoladas quando já existe o sistema semântico**: Usar `section-microstats section-microcopy`, `section-chip-row`, `section-chip`, `section-microflow` e `section-editorial-footer`.
-- **Não deixar Método, Cases e Impacto com padrões diferentes para elementos equivalentes**: microstats, chips e rodapés editoriais devem compartilhar a mesma gramática visual.
-- **Não aumentar microtextos para competir com o conteúdo principal**: microstats e chips ficam em `0.563rem`; rodapé editorial fica em `0.5rem`.
+- **Não recriar chips, microflows ou rodapés editoriais por seção sem necessidade**: a revisão de 2026-05-17 consolidou microtexto mínimo, geralmente uma linha principal por seção.
+- **Não usar microcódigos, coordenadas falsas ou rótulos técnicos performáticos**: remover padrões como `HUMAN LAYER / ACTIVE`, `SYSTEM VIEW` e similares quando não ajudam leitura, contraste, narrativa ou conversão.
+- **Não aumentar microtextos para competir com o conteúdo principal**: microstats devem funcionar como detalhe visual legível e discreto.
 - **Não inserir microtextos dentro dos cards de Impacto**: a camada editorial deve ficar no entorno da seção.
 - **Não usar microtextos como decoração barulhenta**: eles devem reforçar leitura sistêmica, não parecer badge promocional.
+
+## Não repetir em blur e exit animations
+
+- **Não omitir blur nas animações de entrada**: blur progressivo (4-10px → 0) deve acompanhar opacity + translateY para transições mais cinematográficas.
+- **Não esquecer exit animations**: usar `toggleActions: 'play none none reverse'` com `end` definido para que elementos revertam suavemente ao scrollar para cima.
+- **Não usar blur string misturado com numérico**: padronizar `filter: blur(Xpx)` como número, não como string condicional. O campo `blur` no config deve ser numérico.
+- **Não aplicar blur no section inteiro**: blur deve ser direcionado a elementos específicos (headers, cards, textos), não no container da seção — blur no container afeta tudo dentro dele.
+- **Não esquecer `will-change`**: elementos que recebem animação de `filter: blur()` + `opacity` + `transform` devem ter `will-change: transform, filter, opacity` para GPU acceleration.
+- **Não deixar scroll-linked effects fora do `if (!motionReduced)`**: hero scroll blur e section dividers scrub devem respeitar `prefers-reduced-motion`.
+
+## Não repetir em backgrounds e motion
+
+- **Não voltar ao grid duplo**: o padrão consolidado agora é um único grid global fixo; não recriar grid grande com microgrid interno.
+- **Não usar topologias ambientais globais ou SVGs técnicos sem função**: fundos devem ser progressão tonal, não mapa técnico falso.
+- **Não remover todos os motions úteis**: preservar fade/translate/stagger sutis e os motions comportamentais dos cards de cases, desde que não atrasem leitura.
+- **Não esconder conteúdo principal por padrão com GSAP**: usar `immediateRender: false` e garantir leitura sem depender da animação.
 
 ## Regra final
 

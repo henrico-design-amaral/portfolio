@@ -1,5 +1,43 @@
 # CHANGELOG — Portfolio
 
+## 2026-05-17 — Sistema de blur progressivo (entrada, saída, scroll)
+
+Tipo: motion / design-system / accessibility / performance
+
+Arquivos alterados:
+- `assets/js/site.js`
+- `assets/css/site.css`
+- `index.html`
+- `ai-memory/05-technical-decisions.md`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/08-changelog.md`
+
+Decisões tomadas:
+- Adicionado `MOTION.blur` com constantes centralizadas (entry, exit, subtle, hero, text, section)
+- Hero: todos os elementos entram com blur progressivo (4-10px), incluindo título com blur(10px) + rotação
+- Hero scroll blur: ao scrollar para longe, fundo desfoca (12px) + conteúdo fade out com blur(10px)
+- `reveal()`: adicionado exit animation via `toggleActions: 'play none none reverse'` com blur(8px)
+- `revealSectionSystem()`: blur(4-8px) em todos os elementos + exit reverso
+- Case cards: blur numérico por comportamento (6-12px) + `toggleActions` para saída
+- Section dividers: transição scrub com opacity + scaleX
+- Nav: transição CSS com `backdrop-filter: blur(24px)` via `.nav-scrolled`
+- `will-change` adicionado em elementos animados para GPU acceleration
+- `prefers-reduced-motion` respeitado em todas as novas animações
+
+Problemas resolvidos:
+- Não havia blur nas animações de entrada (entrada era apenas opacity + translateY)
+- Não havia animações de saída (conteúdo desaparecia abruptamente ao scrollar)
+- Case cards tinham blur inconsistente (só territorial tinha, e como string)
+- Nav tinha transição brusca sem blur no backdrop
+
+Problemas pendentes:
+- Validar visualmente em navegador interativo real os breakpoints 390px, 768px, 1024px, 1366px e 1440px
+- Verificar performance do blur em dispositivos móveis menos potentes (GSAP com filter pode ser pesado)
+
+Status: Concluído localmente, sem commit.
+
+---
+
 ## 2026-05-16 — Reestruturação editorial de Sobre e Contato
 
 Tipo: design-system / content / conversion / accessibility
@@ -501,3 +539,41 @@ system(memory): add persistent project memory
 ```
 
 Status: Concluído (pendente validação visual no GitHub Pages).
+
+---
+
+## 2026-05-17 — Revisão final minimalista e sistêmica da home
+
+Tipo: design / accessibility / motion / content
+
+Arquivos alterados:
+- `index.html`
+- `assets/css/site.css`
+- `assets/js/site.js`
+- `ai-memory/05-technical-decisions.md`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/07-open-issues.md`
+- `ai-memory/08-changelog.md`
+- `ai-memory/09-do-not-repeat.md`
+
+Resumo:
+Simplificação sistêmica da home mantendo a estrutura Hero → Método → Cases → Impacto → Sobre → Contato.
+
+Ações:
+- Grid duplo substituído por um único grid global fixo.
+- Removidos ruídos visuais: infraestrutura global, grids internos, topologias de seção, chips, microflows, rodapés editoriais e Human Layer.
+- Contraste reforçado em textos, cards, labels, fundos escuros e CTA principal.
+- Cards passaram a ter superfícies reais, sem transparência excessiva.
+- Motion preservado como camada sutil: hero, reveals, cards de cases e parallax leve nas imagens.
+- Impacto ajustado para lado esquerdo menor e evidência à direita com maior peso.
+- Sobre e Contato simplificados conforme nova copy.
+
+Validação:
+- `node --check assets/js/site.js`
+- HTTP 200 para home, CSS, JS, imagens dos cases e CV.
+- Auditoria manual de contraste nos pares críticos principais.
+- Screenshots locais do Hero em desktop e mobile.
+- CDP local confirmou títulos/cards visíveis em Cases, Impacto, Sobre e Contato.
+
+Status:
+Concluído localmente. Pendente commit/push e verificação no GitHub Pages após publicação.

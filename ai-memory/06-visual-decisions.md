@@ -136,3 +136,34 @@ Aplicação:
 
 Regra:
 O marcador deve usar `.sh-kicker-context`, com baixa opacidade e peso reduzido. O `data-t` deve ficar apenas no texto principal da seção, para não apagar o marcador durante a troca PT/EN.
+
+## 2026-05-17 — Sistema de blur progressivo (entrada, saída, scroll)
+
+Decisão:
+Adicionar blur como elemento central da linguagem de motion do portfólio.
+
+Aplicação visual:
+- **Hero**: Título entra com blur(10px)→0 + rotação sutil; subtítulo com blur(6px)→0; badge, eyebrow, CTAs e marquee com blur(4px)→0. Ao scrollar para longe do hero, fundo técnico desfoca (12px) e conteúdo desfoca+some (10px).
+- **Seções editoriais**: Kicker (4px), título (8px), subtítulo (4px), microstats (4px) e cards (8px) entram com blur progressivo escalonado. Ao scrollar de volta, a animação reverte — elementos desfocam e somem suavemente.
+- **Cases**: Cada card entra com blur consistente por comportamento (6-12px). Título e descrição também entram com blur. Ao scrollar para cima, a animação reverte com blur-out.
+- **Section dividers**: Transição suave com fade + scaleX ao scrollar entre seções.
+- **Nav**: Transição mais suave ao scrollar com `backdrop-filter: blur(24px)` + classe `.nav-scrolled`.
+
+Regra:
+Blur deve ser sutil o suficiente para não competir com leitura, mas presente o bastante para criar transição cinematográfica entre estados. Valores controlados centralmente via `MOTION.blur`.
+
+## 2026-05-17 — Revisão minimalista sistêmica da home
+
+Decisão:
+A home passa a usar uma superfície visual mais simples e progressiva, com grid global único e fixo no `body::before`. As seções deixam de depender de múltiplas topologias, grids internos, coordenadas falsas, chips e rodapés editoriais.
+
+Aplicação:
+- Hero, Método, Cases, Impacto, Sobre e Contato mantêm a estrutura principal, mas com menos camadas decorativas.
+- O grid não muda entre seções; a progressão vem apenas de fundo, temperatura e contraste.
+- Cards têm superfície própria: claros nas seções claras e escuros elevados nas seções finais.
+- Os microtextos foram reduzidos a uma linha principal por seção.
+- "Human Layer", `SYSTEM VIEW`, coordenadas falsas, microflows e SVGs ambientais de seção foram removidos do HTML.
+- Cards de Impacto usam proporção mais clara: lado esquerdo menor (`0.8fr`) e evidência à direita como foco (`1.8fr`).
+
+Regra:
+Motion permanece como aprimoramento narrativo, não como dependência de leitura. Conteúdo principal deve ficar legível por padrão; animações GSAP não podem deixar hero, headers ou cards invisíveis se falharem.

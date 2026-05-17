@@ -5,10 +5,10 @@ const COPY = {
     'nav.cases':    'Casos',
     'nav.impact':   'Impacto',
     'nav.about':    'Sobre',
-    'eyebrow':      'SISTEMAS OPERACIONAIS · PLATAFORMAS ENTERPRISE · ARQUITETURA DE DECISÃO',
+    'eyebrow':      'SISTEMAS OPERACIONAIS · DECISÃO · ESCALA',
     'h1.l1':        'Arquitetura de decisão',
     'h1.l2':        'para sistemas críticos.',
-    'sub':          'Transformo complexidade operacional em sistemas mais claros, coordenados e navegáveis.',
+    'sub':          'Estruturo plataformas, fluxos e ecossistemas digitais para ambientes onde clareza sustenta coordenação, escala e tomada de decisão.',
     'cta.primary':  'Ver caso SALA CAR',
     'cta.secondary':'Método',
     'worked-with':  'Clientes',
@@ -36,10 +36,10 @@ const COPY = {
     'c4.desc':      'Banking digital modular para pequenas empresas (MEI a LTDA). Redução de burocracia no onboarding com escalabilidade progressiva de serviços financeiros e fiscais.',
     'c4.metric':    'Onboarding modular e flexível',
     'view-case':    'Ver caso',
-    's4.tag':       '02 / Método',
-    's4.title':     'Engenharia<br>de Interação',
-    's4.statement': 'Antes da interface, organizo as estruturas invisíveis que sustentam coordenação, contexto e tomada de decisão.',
-    's4.stat1':     'SISTEMAS <strong>3</strong>',
+    's4.tag':       'CONTEXTO · ESTRUTURA · INTERAÇÃO',
+    's4.title':     'Engenharia de interação<br>para sistemas complexos.',
+    's4.statement': 'Antes da interface, organizo contexto, relações e regras para transformar complexidade operacional em superfícies de decisão mais claras.',
+    's4.stat1':     'MÉTODO APLICADO A PRODUTOS COMPLEXOS',
     's4.stat2':     'CAMADAS <strong>4</strong>',
     's4.stat3':     'DECISÕES <strong>+</strong>',
     's4.chip1':     'Systems Thinking',
@@ -68,10 +68,10 @@ const COPY = {
     'm3.desc':      'Defino prioridades, hierarquias e contextos para tornar sistemas mais compreensíveis e navegáveis.',
     'm4.label':     'Superfícies de Decisão',
     'm4.desc':      'Transformo regras e necessidades operacionais em interfaces que ajudam pessoas a agir com segurança e clareza.',
-    's5.tag':       '04 / Impacto',
-    's5.title':     'Impacto<br>operacional',
+    's5.tag':       'EVIDÊNCIA · ESCALA · RASTREABILIDADE',
+    's5.title':     'Impacto mensurável.<br>Operação rastreável.',
     's5.desc':      'Evidências de escala, rastreabilidade e coordenação em sistemas enterprise, produtos regulados e operações críticas.',
-    's5.stat1':     'SISTEMAS <strong>4</strong>',
+    's5.stat1':     'RESULTADOS OBSERVÁVEIS EM SISTEMAS COMPLEXOS',
     's5.stat2':     'OPERAÇÕES <strong>12+</strong>',
     's5.stat3':     'DADOS <strong>+</strong>',
     's5.chip1':     'Operações críticas',
@@ -103,34 +103,36 @@ const COPY = {
     'imp4.val':     'Rastreabilidade completa',
     'imp4.desc':    'Jornada PJ estruturada com validações, estados e fluxos aderentes a exigências operacionais e regulatórias.',
     'imp4.type':    'Banking / compliance',
-     'ab.tag':            '05 / Sobre',
+     'ab.tag':            'TRAJETÓRIA · MÉTODO · REPERTÓRIO',
      'ab.title':          'Por trás<br>da estrutura.',
-     'ab.subtitle':       '20 anos transformando complexidade operacional em sistemas compreensíveis.',
+     'ab.subtitle':       '20 anos entre design, produto, tecnologia e operação.',
      'ab.p1':             'Não comecei no design desenhando telas. Comecei organizando informação, navegação, fluxos e decisões.',
-     'ab.p2':             'Ao longo de 20 anos, trabalhei em produtos digitais para empresas como Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood e BMG, quase sempre em contextos onde a interface era apenas a camada visível de problemas maiores.',
+     'ab.p2':             'Ao longo de 20 anos, trabalhei em produtos digitais complexos para empresas como Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood e BMG.',
      'ab.p3':             'Meu trabalho está no ponto onde produto, operação, tecnologia e decisão se encontram. Antes de pensar em componentes, eu tento entender o sistema: quem decide, com qual informação, sob qual pressão e com quais consequências.',
-     'ab.p4':             'Hoje, uso design, IA e pensamento sistêmico para acelerar diagnóstico, estruturar fluxos, organizar raciocínio e transformar complexidade em experiências mais claras, operáveis e sustentáveis.',
-     'ab.card1.title':    'O que eu estruturo',
-     'ab.card1.items':    '<li>Fluxos operacionais</li><li>Plataformas internas</li><li>Produtos B2B</li><li>Sistemas regulados</li><li>Interfaces de decisão</li>',
-     'ab.card2.title':    'Como eu penso',
-     'ab.card2.items':    '<li>Contexto antes da tela</li><li>Clareza antes da estética</li><li>Decisão antes da entrega</li><li>Sistema antes do componente</li>',
-     'ab.card3.title':    'Onde atuo melhor',
-     'ab.card3.items':    '<li>Enterprise</li><li>Operações críticas</li><li>Finanças</li><li>Seguros</li><li>Logística</li><li>Energia</li><li>Agronegócio</li>',
-     'ab.card4.title':    'Como trabalho hoje',
-     'ab.card4.items':    '<li>Figma</li><li>FigJam</li><li>Miro</li><li>Notion</li><li>Power BI</li><li>AccessMonitor</li><li>ChatGPT</li><li>Claude</li><li>Gemini</li><li>Google AI Studio</li><li>Manus</li><li>Antigravity</li><li>GitHub</li><li>Railway</li><li>Netlify</li>',
+     'ab.p4':             'Hoje, combino design, IA e pensamento sistêmico para transformar complexidade em experiências mais claras, operáveis e sustentáveis.',
+     'ab.card1.title':    'Território',
+     'ab.card1.items':    '<li>Enterprise</li><li>B2B</li><li>Operações críticas</li><li>Sistemas regulados</li>',
+     'ab.card2.title':    'Prática',
+     'ab.card2.items':    '<li>Discovery</li><li>Arquitetura da informação</li><li>Fluxos complexos</li><li>Design systems</li>',
+     'ab.card3.title':    'Setores',
+     'ab.card3.items':    '<li>Oil & Gas</li><li>Agronegócio</li><li>Logística</li><li>Finanças</li><li>Seguros</li>',
+     'ab.card4.title':    'Ferramentas',
+     'ab.card4.items':    '<li>Figma</li><li>Power BI</li><li>AccessMonitor</li><li>GitHub</li><li>IA generativa</li>',
+     'ab.card5.title':    'IA aplicada',
+     'ab.card5.items':    '<li>Agentes</li><li>Prompts</li><li>Workflows</li><li>Prototipação assistida</li>',
      'ab.beyond.title':   'Além da interface',
      'ab.beyond.items':   '<li>Pai</li><li>Observador de sistemas</li><li>Aprendiz constante</li><li>IA aplicada ao design</li><li>Reposicionamento com método</li>',
      'hero.availability': 'Status Operacional: Sistema pronto',
      'modal.case':        'Caso',
-     'ct.tag':            '06 / Contato',
-     'ct.title':          'Vamos falar sobre sistemas que precisam ficar mais claros.',
-     'ct.sub':            'Disponível para posições Senior, Lead ou Staff Product Designer em produtos enterprise, plataformas internas, operações críticas e ambientes regulados.',
+     'ct.tag':            'SÃO PAULO · REMOTO/HÍBRIDO · PT/EN',
+     'ct.title':          'Sistemas mais claros.<br>Conversas mais objetivas.',
+     'ct.sub':            'Disponível para posições Senior, Lead ou Staff Product Designer em produtos enterprise, plataformas internas e ambientes regulados.',
      'ct.card1.title':    'Para recrutadores',
-     'ct.card1.text':     'Busco oportunidades CLT ou PJ em times de produto, tecnologia e transformação digital.',
+     'ct.card1.text':     'Senior, Lead ou Staff Product Designer.',
      'ct.card2.title':    'Para empresas',
-     'ct.card2.text':     'Atuo em diagnóstico, estruturação de fluxos, arquitetura de informação, design de plataformas internas e sistemas operacionais complexos.',
+     'ct.card2.text':     'Diagnóstico, fluxos e plataformas internas.',
      'ct.card3.title':    'Para conversas técnicas',
-     'ct.card3.text':     'Aberto a trocas sobre IA aplicada ao design, design systems, produtos enterprise e visualização de decisão.',
+     'ct.card3.text':     'IA, design systems e produtos enterprise.',
      'ct.cv':             'Baixar CV',
      'ct.cases':          'Ver cases',
      'ct.meta':           'São Paulo · Remoto / Híbrido · Português / Inglês profissional',
@@ -141,7 +143,7 @@ const COPY = {
      'nav.cases':    'Cases',
      'nav.impact':   'Impact',
      'nav.about':    'About',
-     'eyebrow':      'OPERATIONAL SYSTEMS · ENTERPRISE PLATFORMS · DECISION ARCHITECTURE',
+     'eyebrow':      'OPERATIONAL SYSTEMS · DECISION · SCALE',
      'h1.l1':        'Decision architecture',
      'h1.l2':        'for critical systems.',
      'sub':          'Turning operational complexity into systems that are clearer, more coordinated, and easier to navigate.',
@@ -172,10 +174,10 @@ const COPY = {
      'c4.desc':      'Modular digital banking for small businesses (MEI to LTDA). Bureaucracy reduction in onboarding with progressive scalability of financial and fiscal services.',
      'c4.metric':    'Flexible and modular onboarding',
      'view-case':    'View case',
-      's4.tag':       '02 / Method',
-      's4.title':     'Interaction<br>Engineering',
-      's4.statement': 'Before the interface, I organize the invisible structures that support coordination, context, and decision-making.',
-      's4.stat1':     'SYSTEMS <strong>3</strong>',
+      's4.tag':       'CONTEXT · STRUCTURE · INTERACTION',
+      's4.title':     'Interaction engineering<br>for complex systems.',
+      's4.statement': 'Before the interface, I organize context, relationships and rules to turn operational complexity into clearer decision surfaces.',
+      's4.stat1':     'METHOD APPLIED TO COMPLEX PRODUCTS',
       's4.stat2':     'LAYERS <strong>4</strong>',
       's4.stat3':     'DECISIONS <strong>+</strong>',
       's4.chip1':     'Systems Thinking',
@@ -204,10 +206,10 @@ const COPY = {
      'm3.desc':      'I define priorities, hierarchies, and contexts to make systems more comprehensible and navigable.',
      'm4.label':     'Decision Surfaces',
      'm4.desc':      'I transform rules and operational needs into interfaces that help people act safely and clearly.',
-      's5.tag':       '04 / Impact',
-      's5.title':     'Operational<br>Impact',
+      's5.tag':       'EVIDENCE · SCALE · TRACEABILITY',
+      's5.title':     'Measurable impact.<br>Traceable operation.',
       's5.desc':      'Evidence of scale, traceability and coordination across enterprise systems, regulated products and critical operations.',
-      's5.stat1':     'SYSTEMS <strong>4</strong>',
+      's5.stat1':     'OBSERVABLE RESULTS IN COMPLEX SYSTEMS',
       's5.stat2':     'OPERATIONS <strong>12+</strong>',
       's5.stat3':     'DATA <strong>+</strong>',
       's5.chip1':     'Critical operations',
@@ -239,34 +241,36 @@ const COPY = {
       'imp4.val':     'Complete traceability',
       'imp4.desc':    'Business banking journey structured with validations, states and flows aligned with operational and regulatory requirements.',
       'imp4.type':    'Banking / compliance',
-     'ab.tag':            '05 / About',
+     'ab.tag':            'TRAJECTORY · METHOD · RANGE',
      'ab.title':          'Behind<br>the structure.',
-     'ab.subtitle':       '20 years turning operational complexity into understandable systems.',
+     'ab.subtitle':       '20 years across design, product, technology and operations.',
      'ab.p1':             'I did not start in design by drawing screens. I started by organizing information, navigation, flows and decisions.',
-     'ab.p2':             'Over 20 years, I have worked on digital products for companies such as Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood and BMG, almost always in contexts where the interface was only the visible layer of larger problems.',
+     'ab.p2':             'Over 20 years, I have worked on complex digital products for companies such as Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood and BMG.',
      'ab.p3':             'My work sits where product, operations, technology and decision-making meet. Before thinking about components, I try to understand the system: who decides, with what information, under what pressure and with what consequences.',
-     'ab.p4':             'Today, I use design, AI and systems thinking to accelerate diagnosis, structure flows, organize reasoning and turn complexity into clearer, more operable and sustainable experiences.',
-     'ab.card1.title':    'What I structure',
-     'ab.card1.items':    '<li>Operational flows</li><li>Internal platforms</li><li>B2B products</li><li>Regulated systems</li><li>Decision interfaces</li>',
-     'ab.card2.title':    'How I think',
-     'ab.card2.items':    '<li>Context before screen</li><li>Clarity before aesthetics</li><li>Decision before delivery</li><li>System before component</li>',
-     'ab.card3.title':    'Where I work best',
-     'ab.card3.items':    '<li>Enterprise</li><li>Critical operations</li><li>Finance</li><li>Insurance</li><li>Logistics</li><li>Energy</li><li>Agribusiness</li>',
-     'ab.card4.title':    'How I work today',
-     'ab.card4.items':    '<li>Figma</li><li>FigJam</li><li>Miro</li><li>Notion</li><li>Power BI</li><li>AccessMonitor</li><li>ChatGPT</li><li>Claude</li><li>Gemini</li><li>Google AI Studio</li><li>Manus</li><li>Antigravity</li><li>GitHub</li><li>Railway</li><li>Netlify</li>',
+     'ab.p4':             'Today, I combine design, AI and systems thinking to turn complexity into clearer, more operable and sustainable experiences.',
+     'ab.card1.title':    'Territory',
+     'ab.card1.items':    '<li>Enterprise</li><li>B2B</li><li>Critical operations</li><li>Regulated systems</li>',
+     'ab.card2.title':    'Practice',
+     'ab.card2.items':    '<li>Discovery</li><li>Information architecture</li><li>Complex flows</li><li>Design systems</li>',
+     'ab.card3.title':    'Sectors',
+     'ab.card3.items':    '<li>Oil & Gas</li><li>Agribusiness</li><li>Logistics</li><li>Finance</li><li>Insurance</li>',
+     'ab.card4.title':    'Tools',
+     'ab.card4.items':    '<li>Figma</li><li>Power BI</li><li>AccessMonitor</li><li>GitHub</li><li>Generative AI</li>',
+     'ab.card5.title':    'Applied AI',
+     'ab.card5.items':    '<li>Agents</li><li>Prompts</li><li>Workflows</li><li>Assisted prototyping</li>',
      'ab.beyond.title':   'Beyond the interface',
      'ab.beyond.items':   '<li>Father</li><li>Systems observer</li><li>Constant learner</li><li>AI applied to design</li><li>Repositioning with method</li>',
      'hero.availability': 'Operational Status: System Ready',
      'modal.case':        'Case',
-     'ct.tag':            '06 / Contact',
-     'ct.title':          'Let’s talk about systems that need to become clearer.',
-     'ct.sub':            'Available for Senior, Lead or Staff Product Designer roles in enterprise products, internal platforms, critical operations and regulated environments.',
+     'ct.tag':            'SÃO PAULO · REMOTE/HYBRID · PT/EN',
+     'ct.title':          'Clearer systems.<br>More objective conversations.',
+     'ct.sub':            'Available for Senior, Lead or Staff Product Designer roles in enterprise products, internal platforms and regulated environments.',
      'ct.card1.title':    'For recruiters',
-     'ct.card1.text':     'I am open to full-time or contract opportunities in product, technology and digital transformation teams.',
+     'ct.card1.text':     'Senior, Lead or Staff Product Designer.',
      'ct.card2.title':    'For companies',
-     'ct.card2.text':     'I work on diagnosis, flow structuring, information architecture, internal platform design and complex operational systems.',
+     'ct.card2.text':     'Diagnosis, flows and internal platforms.',
      'ct.card3.title':    'For technical conversations',
-     'ct.card3.text':     'Open to exchanges about AI applied to design, design systems, enterprise products and decision visualization.',
+     'ct.card3.text':     'AI, design systems and enterprise products.',
      'ct.cv':             'Download CV',
      'ct.cases':          'View cases',
      'ct.meta':           'São Paulo · Remote / Hybrid · Portuguese / Professional English',
@@ -276,9 +280,10 @@ const COPY = {
 
 /* ── Global Motion Constants ── */
 const MOTION = {
-  duration: { fast: 1.0, base: 1.6, slow: 2.4, text: 1.2, hero: 1.2 },
-  ease: { standard: 'power4.out', heavy: 'power3.out', soft: 'sine.out', precise: 'power2.out' },
-  stagger: { fast: 0.06, base: 0.1, slow: 0.15 }
+  duration: { fast: 0.6, base: 0.8, slow: 1.2, text: 0.7, hero: 0.9, blur: 1.0 },
+  ease: { standard: 'power3.out', heavy: 'power2.out', soft: 'sine.out', precise: 'power2.out', blur: 'power2.inOut', spring: 'back.out(1.4)' },
+  stagger: { fast: 0.04, base: 0.08, slow: 0.12 },
+  blur: { entry: 8, exit: 12, subtle: 4, hero: 10, text: 6, word: 8 }
 };
 
 let currentLang = 'pt';
@@ -315,24 +320,54 @@ function setLang(lang) {
   if (announcer) {
     announcer.textContent = lang === 'pt' ? 'Idioma alterado para Português' : 'Language changed to English';
   }
+
+  // Re-split hero title words after language change
+  splitHeroTitle();
 }
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => setLang(btn.dataset.lang));
 });
 
+/* ── Word-level split for hero title (myna-hero style) ── */
+function splitHeroTitle() {
+  const motionReducedNow = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.hl-i').forEach(el => {
+    const text = el.textContent.trim();
+    const words = text.split(/\s+/);
+    if (words.length <= 1 || motionReducedNow) return;
+    el.innerHTML = '';
+    el.style.whiteSpace = 'normal';
+    words.forEach((word, i) => {
+      const span = document.createElement('span');
+      span.className = 'hero-word';
+      span.textContent = word;
+      span.style.display = 'inline-block';
+      span.style.position = 'relative';
+      if (i < words.length - 1) {
+        span.style.marginRight = '0.25em';
+      }
+      el.appendChild(span);
+    });
+  });
+}
+
 /* ── GSAP & ScrollTrigger Animations ── */
 gsap.registerPlugin(ScrollTrigger);
 const motionReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ---- Hero: Environmental awakening ---- */
-const tl = gsap.timeline({ defaults: { ease: MOTION.ease.standard, duration: motionReduced ? 0 : MOTION.duration.hero } });
+// Split hero title before animation starts
+splitHeroTitle();
+
+/* ---- Hero: Myna-style staggered word entrance ---- */
+const tl = gsap.timeline({ defaults: { ease: MOTION.ease.spring, duration: motionReduced ? 0 : MOTION.duration.hero } });
 
 if (motionReduced) {
   gsap.set([
     '.availability-badge-v2',
     '.eyebrow-line',
     '.eyebrow-text',
+    '.hero-word',
     '.hl-i',
     '.sub',
     '.cta-wrapper',
@@ -342,64 +377,28 @@ if (motionReduced) {
     '.section-header-divider',
     '.section-header-rule',
     '.section-header-subtitle',
-    '.section-chip',
-    '.section-editorial-footer > *',
     '.framework-card',
     '.case-card',
     '.impact-cell',
     '.editorial-reveal'
   ], { opacity: 1, y: 0, scale: 1, scaleX: 1, scaleY: 1, filter: 'blur(0px)' });
 } else {
-  gsap.set('.eyebrow-line', { scaleX: 0 });
-  gsap.set('.eyebrow-text', { opacity: 0 });
-  gsap.set('.hl-i', { y: '110%', rotation: 2, opacity: 0 });
-  gsap.set('.sub', { opacity: 0, y: 20, filter: 'blur(4px)' });
-  gsap.set('.cta-wrapper', { opacity: 0, y: 20 });
-  gsap.set('.evidence', { opacity: 0 });
-
-  tl.to('.availability-badge-v2', { opacity: 1, y: 0, duration: MOTION.duration.hero, ease: MOTION.ease.standard }, 0.2)
-    .to('.eyebrow-line', { scaleX: 1, duration: MOTION.duration.hero, ease: 'power4.inOut' }, 0.4)
-    .to('.eyebrow-text', { opacity: 1, duration: 1 }, 0.8)
-    .to('.hl-i', { y: '0%', rotation: 0, opacity: 1, duration: MOTION.duration.slow, stagger: MOTION.stagger.slow, ease: MOTION.ease.standard }, 0.6)
-    .to('.sub', { opacity: 1, y: 0, filter: 'blur(0px)', duration: MOTION.duration.hero }, 1.2)
-    .to('.cta-wrapper', { opacity: 1, y: 0, duration: MOTION.duration.hero }, 1.4)
-    .to('.evidence', { opacity: 1, duration: MOTION.duration.hero }, 1.6);
-}
-
-/* ---- Environmental Infrastructure Parallax ---- */
-if (!motionReduced) {
-  const envInfra = document.getElementById('env-infrastructure');
-  if (envInfra) {
-    gsap.to(envInfra, {
-      y: () => -(ScrollTrigger.maxScroll(window) * 0.015),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: 'body',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 1.5
-      }
-    });
-  }
-}
-
-/* ---- Subtle Atmospheric Breathing — continuous environmental drift across all sections ---- */
-if (!motionReduced) {
-  gsap.utils.toArray('section').forEach(function(section) {
-    var gridLayers = section.querySelectorAll('[style*="background-image: linear-gradient"]');
-    gridLayers.forEach(function(layer) {
-      gsap.to(layer, {
-        backgroundPosition: function() {
-          var y = gsap.utils.random(-2, 2, 0.2);
-          return '0px ' + y + 'px';
-        },
-        duration: gsap.utils.random(12, 20),
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut'
-      });
-    });
-  });
+  tl.from('.availability-badge-v2', { opacity: 0, y: 10, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.5, immediateRender: false, clearProps: 'filter,opacity,transform' }, 0.15)
+    .from('.eyebrow-line', { scaleX: 0, duration: 0.6, ease: 'power4.inOut', transformOrigin: 'left', immediateRender: false }, 0.3)
+    .from('.eyebrow-text', { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.5, immediateRender: false, clearProps: 'filter,opacity,transform' }, 0.4)
+    .from('.hero-word', {
+      y: 24,
+      opacity: 0,
+      filter: `blur(${MOTION.blur.word}px)`,
+      duration: 0.7,
+      stagger: 0.06,
+      ease: MOTION.ease.spring,
+      immediateRender: false,
+      clearProps: 'filter,opacity,transform'
+    }, 0.6)
+    .from('.sub', { opacity: 0, y: 16, filter: `blur(${MOTION.blur.text}px)`, duration: 0.7, ease: MOTION.ease.standard, immediateRender: false, clearProps: 'filter,opacity,transform' }, 1.0)
+    .from('.cta-wrapper', { opacity: 0, y: 14, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.6, ease: MOTION.ease.spring, immediateRender: false, clearProps: 'filter,opacity,transform' }, 1.3)
+    .from('.evidence', { opacity: 0, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.6, ease: MOTION.ease.standard, immediateRender: false, clearProps: 'filter,opacity' }, 1.6);
 }
 
 function reveal(selector, vars = {}) {
@@ -408,51 +407,45 @@ function reveal(selector, vars = {}) {
       scrollTrigger: {
         trigger: el,
         start: 'top 85%',
-        toggleActions: 'play none none none'
+        end: 'top 40%',
+        toggleActions: 'play none none reverse'
       },
       opacity: 0,
       y: 36,
       scale: 0.98,
-      filter: 'blur(8px)',
+      filter: `blur(${MOTION.blur.entry}px)`,
       duration: MOTION.duration.base,
       ease: MOTION.ease.standard,
-      clearProps: 'filter,opacity,transform',
       ...vars
     });
   });
 }
 
 if (!motionReduced) {
-  reveal('.section-heading', { duration: MOTION.duration.slow, filter: 'blur(8px)', y: 60 });
-  reveal('.terr-item', { stagger: MOTION.stagger.slow });
-  reveal('.reveal-step', { stagger: MOTION.stagger.base, y: 50, scale: 0.95 });
-  reveal('.case-row', { stagger: MOTION.stagger.base, y: 60 });
-
   function revealSectionSystem(sectionSelector, cardsSelector) {
     const tlSection = gsap.timeline({
       scrollTrigger: {
         trigger: sectionSelector,
         start: 'top 84%',
-        toggleActions: 'play none none none'
+        end: 'top 35%',
+        toggleActions: 'play none none reverse'
       }
     });
 
     tlSection
-      .from(`${sectionSelector} .section-kicker`, { opacity: 0, y: 8, duration: 0.7, ease: 'power3.out', immediateRender: false }, 0)
-      .from(`${sectionSelector} .section-header-title`, { opacity: 0, y: 20, duration: 0.9, ease: 'power4.out', immediateRender: false }, 0.12)
-      .from(`${sectionSelector} .section-header-divider`, { opacity: 0, scaleY: 0, duration: 0.9, ease: 'power3.out', transformOrigin: 'top', immediateRender: false }, 0.18)
-      .from(`${sectionSelector} .section-header-subtitle`, { opacity: 0, y: 16, duration: 0.85, ease: 'power3.out', immediateRender: false }, 0.24)
-      .from(`${sectionSelector} .section-header-rule`, { opacity: 0, scaleX: 0, duration: 0.9, ease: 'power3.out', transformOrigin: 'left', immediateRender: false }, 0.3)
-      .from(`${sectionSelector} .section-microstats span`, { opacity: 0, y: 8, duration: 0.7, stagger: 0.05, ease: 'power3.out', immediateRender: false }, 0.36)
-      .from(`${sectionSelector} .section-chip`, { opacity: 0, y: 10, duration: 0.8, stagger: 0.08, ease: 'power3.out', immediateRender: false }, 0.42)
-      .from(`${sectionSelector} .section-editorial-footer > *`, { opacity: 0, y: 10, duration: 0.85, stagger: 0.08, ease: 'power3.out', immediateRender: false }, 0.68);
+      .from(`${sectionSelector} .section-kicker`, { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.5, ease: MOTION.ease.spring, immediateRender: false }, 0)
+      .from(`${sectionSelector} .section-header-title`, { opacity: 0, y: 16, filter: `blur(${MOTION.blur.entry}px)`, duration: 0.7, ease: MOTION.ease.spring, immediateRender: false }, 0.08)
+      .from(`${sectionSelector} .section-header-divider`, { opacity: 0, scaleY: 0, duration: 0.7, ease: 'power3.out', transformOrigin: 'top', immediateRender: false }, 0.14)
+      .from(`${sectionSelector} .section-header-subtitle`, { opacity: 0, y: 12, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.6, ease: MOTION.ease.spring, immediateRender: false }, 0.2)
+      .from(`${sectionSelector} .section-header-rule`, { opacity: 0, scaleX: 0, duration: 0.7, ease: 'power3.out', transformOrigin: 'left', immediateRender: false }, 0.26)
+      .from(`${sectionSelector} .section-microstats span`, { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.5, stagger: 0.04, ease: MOTION.ease.spring, immediateRender: false }, 0.3);
 
     if (cardsSelector) {
       tlSection.fromTo(
         `${sectionSelector} ${cardsSelector}`,
-        { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.95, stagger: 0.1, ease: 'power3.out', clearProps: 'transform', immediateRender: false },
-        0.56
+        { opacity: 0, y: 20, filter: `blur(${MOTION.blur.entry}px)` },
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.75, stagger: 0.08, ease: MOTION.ease.spring, immediateRender: false },
+        0.45
       );
     }
   }
@@ -478,77 +471,78 @@ if (!motionReduced) {
     });
   });
 
-  // Parallax on Case Images
+// Parallax on Case Images
   gsap.utils.toArray('.case-card').forEach(card => {
-    const imgContainer = card.querySelector('.aspect-\\[4\\/3\\]');
-    if (imgContainer) {
-      gsap.to(imgContainer, {
+    const img = card.querySelector('img');
+    if (img) {
+      gsap.fromTo(img,
+        { yPercent: -2, scale: 1.03 },
+        {
+        yPercent: 3,
+        scale: 1.07,
         scrollTrigger: {
           trigger: card,
           start: 'top bottom',
           end: 'bottom top',
           scrub: true
         },
-        y: -30,
-        ease: 'none'
+        ease: 'none',
+        immediateRender: false
       });
     }
   });
-
-  // Scrub Text
-  const scrubTarget = document.querySelector('.scrub-text');
-  if (scrubTarget) {
-    const words = scrubTarget.innerText.split(' ');
-    scrubTarget.innerHTML = '';
-    words.forEach(w => {
-      const span = document.createElement('span');
-      span.textContent = w + ' ';
-      span.style.opacity = '0.2';
-      span.style.transition = 'opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
-      scrubTarget.appendChild(span);
-    });
-
-    gsap.to(scrubTarget.children, {
-      scrollTrigger: {
-        trigger: scrubTarget,
-        start: 'top 80%',
-        end: 'top 40%',
-        scrub: 0.5
-      },
-      opacity: 1,
-      stagger: 0.1,
-      ease: 'none'
-    });
-  }
 }
 
-/* ── Vanilla JS Infinite Grid & Flashlight ── */
-const gridBg = document.getElementById('vanilla-hero-bg');
-if (gridBg && !motionReduced) {
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-  let gridOffsetX = 0;
-  let gridOffsetY = 0;
+  if (!motionReduced) {
 
-  window.addEventListener('mousemove', (e) => {
-    const rect = gridBg.getBoundingClientRect();
-    mouseX = e.clientX - rect.left;
-    mouseY = e.clientY - rect.top;
-    gridBg.style.setProperty('--mouse-x', `${mouseX}px`);
-    gridBg.style.setProperty('--mouse-y', `${mouseY}px`);
-  });
+    /* ── Scroll-Linked Hero Blur ── */
+    const hero = document.querySelector('#hero');
+    if (hero) {
+      gsap.to('#technical-hero-bg', {
+        filter: 'blur(12px)',
+        opacity: 0.5,
+        scrollTrigger: {
+          trigger: '#hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1.5,
+          immediateRender: false
+        }
+      });
 
-  function animateGrid() {
-    gridOffsetX = (gridOffsetX + 0.5) % 40;
-    gridOffsetY = (gridOffsetY + 0.5) % 40;
-    const patterns = gridBg.querySelectorAll('.grid-pattern');
-    patterns.forEach(p => {
-      p.style.backgroundPosition = `${gridOffsetX}px ${gridOffsetY}px`;
+      gsap.to('#hero .sub, #hero .cta-wrapper, #hero .availability-badge-v2', {
+        opacity: 0.3,
+        y: -15,
+        filter: 'blur(10px)',
+        scrollTrigger: {
+          trigger: '#hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1.5,
+          immediateRender: false
+        }
+      });
+    }
+
+    /* ── Section Cross-Transition Blur ── */
+    document.querySelectorAll('.section-divider').forEach(divider => {
+      gsap.fromTo(divider,
+        { opacity: 0.2, scaleX: 0.3 },
+        {
+          opacity: 0.75,
+          scaleX: 1,
+          scrollTrigger: {
+            trigger: divider,
+            start: 'top 92%',
+            end: 'top 70%',
+            scrub: 1.2,
+            immediateRender: false
+          }
+        }
+      );
     });
-    requestAnimationFrame(animateGrid);
+
   }
-  animateGrid();
-}
 
 /* ── Nav Scroll behavior ── */
 let lastScroll = 0;
@@ -556,9 +550,9 @@ window.addEventListener('scroll', () => {
   const nav = document.getElementById('nav');
   const currentScroll = window.pageYOffset;
   if (currentScroll > 60) {
-    nav.classList.add('shadow-sm');
+    nav.classList.add('shadow-sm', 'nav-scrolled');
   } else {
-    nav.classList.remove('shadow-sm');
+    nav.classList.remove('shadow-sm', 'nav-scrolled');
   }
   lastScroll = currentScroll;
 }, { passive: true });
@@ -686,3 +680,98 @@ document.addEventListener('keydown', (e) => {
     closeCaseModal();
   }
 });
+
+/* ── The Infinite Grid (21st.dev inspired) ── */
+(function createInfiniteGrid() {
+  if (motionReduced) return;
+
+  const container = document.createElement('div');
+  container.className = 'infinite-grid-system';
+  container.setAttribute('aria-hidden', 'true');
+  container.style.cssText = 'position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;';
+
+  const bgLayer = document.createElement('div');
+  bgLayer.className = 'ig-layer ig-layer--bg';
+
+  const fgLayer = document.createElement('div');
+  fgLayer.className = 'ig-layer ig-layer--fg';
+
+  const orbs = document.createElement('div');
+  orbs.className = 'ig-orbs';
+
+  container.appendChild(bgLayer);
+  container.appendChild(fgLayer);
+  container.appendChild(orbs);
+
+  // Build SVG patterns
+  const svgNS = 'http://www.w3.org/2000/svg';
+  function makeSVG() {
+    const svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('width', '100%');
+    svg.setAttribute('height', '100%');
+    const defs = document.createElementNS(svgNS, 'defs');
+    const pattern = document.createElementNS(svgNS, 'pattern');
+    pattern.setAttribute('id', 'ig-pattern-' + Date.now());
+    pattern.setAttribute('width', '40');
+    pattern.setAttribute('height', '40');
+    pattern.setAttribute('patternUnits', 'userSpaceOnUse');
+    const path = document.createElementNS(svgNS, 'path');
+    path.setAttribute('d', 'M 40 0 L 0 0 0 40');
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke', 'currentColor');
+    path.setAttribute('stroke-width', '0.5');
+    pattern.appendChild(path);
+    defs.appendChild(pattern);
+    svg.appendChild(defs);
+    const rect = document.createElementNS(svgNS, 'rect');
+    rect.setAttribute('width', '100%');
+    rect.setAttribute('height', '100%');
+    rect.setAttribute('fill', 'url(#' + pattern.getAttribute('id') + ')');
+    svg.appendChild(rect);
+    return { svg, pattern, id: pattern.getAttribute('id') };
+  }
+
+  const bg = makeSVG();
+  bg.svg.style.cssText = 'width:100%;height:100%;color:rgba(190,156,110,0.06);';
+  bgLayer.appendChild(bg.svg);
+
+  const fg = makeSVG();
+  fg.svg.style.cssText = 'width:100%;height:100%;color:rgba(190,156,110,0.12);';
+  fgLayer.appendChild(fg.svg);
+
+  // Mouse mask on foreground
+  const mouseX = { current: 0.5 };
+  const mouseY = { current: 0.5 };
+  let rafId = null;
+
+  function updateMask() {
+    fgLayer.style.maskImage = 'radial-gradient(320px circle at ' + (mouseX.current * 100) + '% ' + (mouseY.current * 100) + '%, black 20%, transparent 70%)';
+    fgLayer.style.webkitMaskImage = 'radial-gradient(320px circle at ' + (mouseX.current * 100) + '% ' + (mouseY.current * 100) + '%, black 20%, transparent 70%)';
+  }
+
+  document.addEventListener('mousemove', function (e) {
+    mouseX.current = e.clientX / window.innerWidth;
+    mouseY.current = e.clientY / window.innerHeight;
+    if (!rafId) {
+      rafId = requestAnimationFrame(function () {
+        updateMask();
+        rafId = null;
+      });
+    }
+  });
+
+  // Ambient orbs
+  orbs.innerHTML = '<div class="ig-orb ig-orb--1"></div><div class="ig-orb ig-orb--2"></div><div class="ig-orb ig-orb--3"></div>';
+
+  // Continuous scroll via GSAP ticker
+  let offset = 0;
+  gsap.ticker.add(function () {
+    offset = (offset + 0.15) % 40;
+    bg.pattern.setAttribute('x', offset);
+    bg.pattern.setAttribute('y', offset);
+    fg.pattern.setAttribute('x', offset);
+    fg.pattern.setAttribute('y', offset);
+  });
+
+  document.body.appendChild(container);
+})();

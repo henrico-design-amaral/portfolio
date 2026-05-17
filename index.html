@@ -114,66 +114,12 @@
   <main id="main-content">
     <div id="sr-announcer" role="status" aria-live="polite" class="sr-only"></div>
 
-    <!-- Continuous Operational Infrastructure Layer — persistent across all sections -->
-    <div class="fixed inset-0 w-full h-full z-0 pointer-events-none overflow-hidden" aria-hidden="true" id="env-infrastructure" data-parallax="0.015">
-      <svg class="w-full h-full" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.12">
-        <defs>
-          <linearGradient id="env-y-fade" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#63574A" stop-opacity="0" />
-            <stop offset="15%" stop-color="#63574A" stop-opacity="1" />
-            <stop offset="85%" stop-color="#63574A" stop-opacity="1" />
-            <stop offset="100%" stop-color="#63574A" stop-opacity="0" />
-          </linearGradient>
-        </defs>
-        <!-- Distributed topology spines -->
-        <g stroke="url(#env-y-fade)" opacity="0.6">
-          <line x1="200" y1="0" x2="200" y2="120" stroke-width="0.4" stroke-dasharray="3 8" class="env-flow" />
-          <line x1="600" y1="0" x2="600" y2="120" stroke-width="0.25" stroke-dasharray="1 6" class="env-flow-reverse" />
-          <line x1="1000" y1="0" x2="1000" y2="120" stroke-width="0.3" stroke-dasharray="2 5" class="env-flow" />
-          <line x1="1300" y1="0" x2="1300" y2="120" stroke-width="0.2" stroke-dasharray="1 8" class="env-flow-reverse" />
-        </g>
-        <!-- Cross-connect topology arcs -->
-        <g stroke="url(#env-y-fade)" opacity="0.25">
-          <path d="M 200,30 L 600,30 L 1000,50 L 1300,50" stroke-width="0.15" />
-          <path d="M 200,80 L 600,80 L 1000,70 L 1300,70" stroke-width="0.15" />
-          <path d="M 200,55 L 600,55 L 1000,45 L 1300,45" stroke-width="0.1" stroke-dasharray="1 4" />
-        </g>
-        <!-- Infrastructure nodes -->
-        <g opacity="0.4">
-          <circle cx="200" cy="30" r="2" fill="#63574A" class="env-node" />
-          <circle cx="600" cy="30" r="1.5" fill="#63574A" class="env-node" style="animation-delay:1s" />
-          <circle cx="1000" cy="50" r="2" fill="none" stroke="#63574A" stroke-width="0.5" class="env-node" style="animation-delay:2s" />
-          <circle cx="1300" cy="50" r="1.5" fill="#63574A" class="env-node" style="animation-delay:0.5s" />
-          <circle cx="600" cy="80" r="2" fill="none" stroke="#63574A" stroke-width="0.5" class="env-node" style="animation-delay:3s" />
-          <circle cx="1000" cy="70" r="1.5" fill="#63574A" class="env-node" style="animation-delay:1.5s" />
-        </g>
-      </svg>
-    </div>
-
     <!-- HERO -->
     <section id="hero" class="relative min-h-[100dvh] flex items-center pt-32 pb-16 px-6 overflow-hidden bg-page nbg">
 
       <!-- Subtle Technical Background -->
       <div id="technical-hero-bg" class="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"
         aria-hidden="true">
-        <!-- Base Grid -->
-        <div class="absolute inset-0 opacity-[0.12]"
-          style="background-image: linear-gradient(to right, #63574A 1px, transparent 1px), linear-gradient(to bottom, #63574A 1px, transparent 1px); background-size: 64px 64px;">
-        </div>
-
-        <!-- Micro Grid (Inner) -->
-        <div class="absolute inset-0 opacity-[0.03]"
-          style="background-image: linear-gradient(to right, #63574A 1px, transparent 1px), linear-gradient(to bottom, #63574A 1px, transparent 1px); background-size: 16px 16px;">
-        </div>
-
-        <!-- Environmental infrastructure remnants → integrated with global topology -->
-        <svg class="absolute inset-0 w-full h-full opacity-[0.08]" xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <path d="M 0,50 L 200,50 M 1240,50 L 1440,50" fill="none" stroke="#63574A" stroke-width="0.3" opacity="0.4" />
-          <circle cx="200" cy="50" r="2" fill="none" stroke="#63574A" stroke-width="0.3" opacity="0.3" />
-          <circle cx="1240" cy="50" r="2" fill="none" stroke="#63574A" stroke-width="0.3" opacity="0.3" />
-        </svg>
-
         <!-- Ambient Blurs for depth -->
         <div class="absolute right-[0%] top-[0%] w-[40%] h-[50%] rounded-full bg-white/40 blur-[130px]"></div>
         <div class="absolute left-[-10%] bottom-[-20%] w-[50%] h-[60%] rounded-full bg-base-100/70 blur-[130px]"></div>
@@ -198,7 +144,7 @@
             <div class="w-8 h-[1px] bg-accent-500 eyebrow-line origin-left"></div>
             <span
               class="font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-text-secondary font-bold eyebrow-text"
-              >01 / DECISION INFRASTRUCTURE — SISTEMAS OPERACIONAIS · PLATAFORMAS ENTERPRISE · ARQUITETURA DE DECISÃO</span>
+              data-t="eyebrow">SISTEMAS OPERACIONAIS · DECISÃO · ESCALA</span>
           </div>
 
           <!-- Large Headline -->
@@ -300,13 +246,6 @@
           border-color: rgba(190, 156, 110, 0.15);
           background-color: rgba(235, 231, 224, 0.7);
         }
-        .framework-card .env-layer {
-          transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .framework-card:hover .env-layer {
-          opacity: 1;
-          transform: scale(1.02);
-        }
       </style>
 
       <div class="max-w-[1440px] mx-auto relative z-10">
@@ -314,7 +253,7 @@
         <!-- Section Header — standardized system -->
         <div class="section-header">
           <span class="section-kicker">
-            <span class="section-kicker-context">02 / METHOD</span><span data-t="s4.tag"> · Método</span>
+            <span data-t="s4.tag">CONTEXTO · ESTRUTURA · INTERAÇÃO</span>
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
@@ -323,41 +262,18 @@
             <div class="section-header-divider" aria-hidden="true"></div>
             <div class="section-header-subtitle">
               <div class="section-microstats section-microcopy">
-                <span data-t="s4.stat1">SISTEMAS <strong>3</strong></span>
-                <span data-t="s4.stat2">CAMADAS <strong>4</strong></span>
-                <span data-t="s4.stat3">DECISÕES <strong>+</strong></span>
+                <span data-t="s4.stat1">MÉTODO APLICADO A PRODUTOS COMPLEXOS</span>
               </div>
               <p data-t="s4.statement">Antes da interface, organizo contexto, relações e regras para transformar complexidade operacional em superfícies de decisão mais claras.</p>
             </div>
           </div>
         </div>
 
-        <div class="section-chip-row">
-          <span class="section-chip" data-t="s4.chip1">Systems Thinking</span>
-          <span class="section-chip" data-t="s4.chip2">Information Architecture</span>
-          <span class="section-chip" data-t="s4.chip3">Decision Engineering</span>
-        </div>
-
-        <!-- microflow -->
-        <p class="section-microflow mb-8" style="font-size:0.5rem">CONTEXTO → ESTRUTURA → INTERAÇÃO → DECISÃO</p>
-
         <!-- Framework Architecture Implementation -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 relative" id="framework-grid">
 
           <!-- Step 1: Wide Item -->
           <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
-
-            <!-- Environmental Active Layer -->
-            <div class="env-layer absolute inset-0 z-0 pointer-events-none opacity-0 scale-[0.98]">
-              <!-- Ambient background grid -->
-              <div class="absolute inset-0 opacity-[0.12]" style="background-image: linear-gradient(to right, #BE9C6E 1px, transparent 1px), linear-gradient(to bottom, #BE9C6E 1px, transparent 1px); background-size: 24px 24px; mask-image: linear-gradient(to bottom right, black, transparent 60%); -webkit-mask-image: linear-gradient(to bottom right, black, transparent 60%);"></div>
-
-              <!-- Subtle inner operational flow -->
-              <svg class="absolute top-0 left-0 w-32 h-32" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 0 24 L 80 24 L 80 120" fill="none" stroke="#BE9C6E" stroke-width="0.5" stroke-dasharray="2 4" style="animation: inner-trace 15s linear infinite;" class="opacity-40" />
-                <rect x="78" y="118" width="4" height="4" fill="#BE9C6E" class="opacity-50" style="animation: pulse-node 4s infinite; transform-origin: 80px 120px;" />
-              </svg>
-            </div>
 
             <div class="relative z-10">
               <div class="flex items-start justify-between mb-16 md:mb-24">
@@ -376,18 +292,6 @@
 
           <!-- Step 2: Regular Item -->
           <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
-
-            <!-- Environmental Active Layer -->
-            <div class="env-layer absolute inset-0 z-0 pointer-events-none opacity-0 scale-[0.98]">
-              <!-- Ambient background grid -->
-              <div class="absolute inset-0 opacity-[0.12]" style="background-image: linear-gradient(to right, #BE9C6E 1px, transparent 1px), linear-gradient(to bottom, #BE9C6E 1px, transparent 1px); background-size: 24px 24px; mask-image: linear-gradient(to bottom left, black, transparent 60%); -webkit-mask-image: linear-gradient(to bottom left, black, transparent 60%);"></div>
-
-              <!-- Subtle inner operational flow -->
-              <svg class="absolute top-0 right-0 w-32 h-32" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 128 24 L 40 24 L 40 120" fill="none" stroke="#BE9C6E" stroke-width="0.5" stroke-dasharray="2 4" style="animation: inner-trace 15s linear infinite reverse;" class="opacity-40" />
-                <circle cx="40" cy="120" r="2" fill="#BE9C6E" class="opacity-50" style="animation: pulse-node 4s infinite; transform-origin: 40px 120px;" />
-              </svg>
-            </div>
 
             <div class="relative z-10">
               <div class="flex items-start justify-between mb-16 md:mb-24">
@@ -410,18 +314,6 @@
           <!-- Step 3: Regular Item -->
           <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
 
-            <!-- Environmental Active Layer -->
-            <div class="env-layer absolute inset-0 z-0 pointer-events-none opacity-0 scale-[0.98]">
-              <!-- Ambient background grid -->
-              <div class="absolute inset-0 opacity-[0.12]" style="background-image: linear-gradient(to right, #BE9C6E 1px, transparent 1px), linear-gradient(to bottom, #BE9C6E 1px, transparent 1px); background-size: 24px 24px; mask-image: linear-gradient(to top right, black, transparent 60%); -webkit-mask-image: linear-gradient(to top right, black, transparent 60%);"></div>
-
-              <!-- Subtle inner operational flow -->
-              <svg class="absolute bottom-0 left-0 w-32 h-32" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 0 104 L 80 104 L 80 8" fill="none" stroke="#BE9C6E" stroke-width="0.5" stroke-dasharray="2 4" style="animation: inner-trace 15s linear infinite;" class="opacity-40" />
-                <rect x="78" y="6" width="4" height="4" fill="none" stroke="#BE9C6E" stroke-width="1" class="opacity-50 spin-center" />
-              </svg>
-            </div>
-
             <div class="relative z-10">
               <div class="flex items-start justify-between mb-16 md:mb-24">
                 <span class="font-mono text-[10px] text-accent-600 font-bold tracking-[0.25em] uppercase transition-colors duration-[1.5s] group-hover:text-[#8C7D6E]">03 / Flow</span>
@@ -440,19 +332,6 @@
           <!-- Step 4: Wide Item -->
           <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
 
-            <!-- Environmental Active Layer -->
-            <div class="env-layer absolute inset-0 z-0 pointer-events-none opacity-0 scale-[0.98]">
-              <!-- Ambient background grid -->
-              <div class="absolute inset-0 opacity-[0.12]" style="background-image: linear-gradient(to right, #BE9C6E 1px, transparent 1px), linear-gradient(to bottom, #BE9C6E 1px, transparent 1px); background-size: 24px 24px; mask-image: linear-gradient(to top left, black, transparent 60%); -webkit-mask-image: linear-gradient(to top left, black, transparent 60%);"></div>
-
-              <!-- Subtle inner operational flow -->
-              <svg class="absolute bottom-0 right-0 w-32 h-32" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 128 104 L 40 104 L 40 8" fill="none" stroke="#BE9C6E" stroke-width="0.5" stroke-dasharray="2 4" style="animation: inner-trace 15s linear infinite reverse;" class="opacity-40" />
-                <circle cx="40" cy="8" r="3" fill="none" stroke="#BE9C6E" stroke-width="0.5" class="opacity-50" style="animation: pulse-node 3s infinite; transform-origin: 40px 8px;" />
-                <circle cx="40" cy="8" r="1" fill="#BE9C6E" class="opacity-50" />
-              </svg>
-            </div>
-
             <div class="relative z-10">
               <div class="flex items-start justify-between mb-16 md:mb-24">
                 <span class="font-mono text-[10px] text-accent-600 font-bold tracking-[0.25em] uppercase transition-colors duration-[1.5s] group-hover:text-[#8C7D6E]">04 / Output</span>
@@ -468,12 +347,6 @@
           </div>
         </div>
 
-        <div class="section-editorial-footer">
-          <div class="section-microcopy section-microcopy--accent" data-t="s4.microphrase">Estruturas invisíveis, decisões mais claras.</div>
-          <div class="section-microflow" data-t="s4.microflow">Contexto → Estrutura → Interação → Decisão</div>
-          <div class="section-microcopy" data-t="s4.microcomp">Método aplicado a produtos complexos.</div>
-        </div>
-
       </div>
     </section>
 
@@ -487,7 +360,7 @@
         <!-- Header Section — standardized system -->
         <div class="section-header">
           <span class="section-kicker">
-            <span class="section-kicker-context">03 / REAL SYSTEMS</span> · Cases
+            <span>SISTEMAS REAIS · IMPACTO OPERACIONAL</span>
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
@@ -496,18 +369,11 @@
             <div class="section-header-divider" aria-hidden="true"></div>
             <div class="section-header-subtitle">
               <div class="section-microstats section-microcopy">
-                <span>SISTEMAS <strong>4</strong></span>
-                <span>OPERAÇÕES <strong>12+</strong></span>
+                <span>ENERGIA · LOGÍSTICA · AGRO · FINANÇAS</span>
               </div>
               <p>Projetos em energia, logística, agronegócio e finanças onde design reduziu ruído, reorganizou fluxos e tornou decisões críticas mais rastreáveis.</p>
             </div>
           </div>
-        </div>
-
-        <div class="section-chip-row">
-          <span class="section-chip">Operações Críticas</span>
-          <span class="section-chip">Sistemas Complexos</span>
-          <span class="section-chip">Impacto Mensurável</span>
         </div>
 
         <!-- 4-Column Grid -->
@@ -734,21 +600,6 @@
 
         </div>
 
-        <!-- Footer Navigation / Markers -->
-        <div class="section-editorial-footer">
-          <div class="section-microcopy section-microcopy--accent">
-            SISTEMAS QUE OPERAM,<br>
-            DECISÕES QUE IMPORTAM.
-          </div>
-          <div class="section-microflow">
-            COMPLEXIDADE → ESTRUTURA → CLAREZA → IMPACTO
-          </div>
-          <div class="section-microcopy">
-            PROJETOS SELECIONADOS<br>
-            POR RELEVÂNCIA E IMPACTO.
-          </div>
-        </div>
-
         <style>
           .case-card { will-change: transform, opacity; }
 
@@ -769,8 +620,8 @@
             0%, 100% { opacity: 0.1; transform: scale(1); }
             50% { opacity: 0.4; transform: scale(1.6); }
           }
-          .case-card[data-behavior="critical"] .behavioral-svg { opacity: 0.35; }
-          .case-card[data-behavior="critical"]:hover .behavioral-svg { opacity: 0.5 !important; }
+          .case-card[data-behavior="critical"] .behavioral-svg { opacity: 0.14; }
+          .case-card[data-behavior="critical"]:hover .behavioral-svg { opacity: 0.24 !important; }
 
           /* ─── AMBEV — Distributed Logistics Infrastructure ─── */
           @keyframes ambev-flow {
@@ -785,8 +636,8 @@
             0%, 100% { opacity: 0.08; transform: scale(1); }
             25% { opacity: 0.6; transform: scale(1.5); }
           }
-          .case-card[data-behavior="distributed"] .behavioral-svg { opacity: 0.4; }
-          .case-card[data-behavior="distributed"]:hover .behavioral-svg { opacity: 0.55 !important; }
+          .case-card[data-behavior="distributed"] .behavioral-svg { opacity: 0.14; }
+          .case-card[data-behavior="distributed"]:hover .behavioral-svg { opacity: 0.24 !important; }
 
           /* ─── BAYER — Territorial Environmental Intelligence ─── */
           @keyframes bayer-scan {
@@ -808,8 +659,8 @@
             0%, 100% { opacity: 0.04; }
             50% { opacity: 0.2; }
           }
-          .case-card[data-behavior="territorial"] .behavioral-svg { opacity: 0.3; }
-          .case-card[data-behavior="territorial"]:hover .behavioral-svg { opacity: 0.45 !important; }
+          .case-card[data-behavior="territorial"] .behavioral-svg { opacity: 0.12; }
+          .case-card[data-behavior="territorial"]:hover .behavioral-svg { opacity: 0.22 !important; }
 
           /* ─── BMG — Enterprise Financial Operations ─── */
           @keyframes bmg-state {
@@ -828,36 +679,43 @@
             0%, 100% { opacity: 0.06; transform: scale(1); }
             50% { opacity: 0.25; transform: scale(1.3); }
           }
-          .case-card[data-behavior="regulated"] .behavioral-svg { opacity: 0.35; }
-          .case-card[data-behavior="regulated"]:hover .behavioral-svg { opacity: 0.5 !important; }
+          .case-card[data-behavior="regulated"] .behavioral-svg { opacity: 0.14; }
+          .case-card[data-behavior="regulated"]:hover .behavioral-svg { opacity: 0.24 !important; }
         </style>
 
         <script>
           window.addEventListener('load', () => {
             if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
 
-              // Per‑card behavioral configuration
+              // Per‑card behavioral configuration — upgraded with blur
               var behaviorConfig = {
-                critical:  { dur: 2.4, ease: 'power3.out', delayOff: 0,     textY: 40, textBlur: 0,   textDur: 2.0 },
-                distributed: { dur: 1.6, ease: 'power2.out', delayOff: 0.05, textY: 28, textBlur: 0,   textDur: 1.2 },
-                territorial: { dur: 2.0, ease: 'sine.out',   delayOff: 0.1,  textY: 32, textBlur: '6px', textDur: 2.2 },
-                regulated:   { dur: 1.3, ease: 'power2.out', delayOff: 0,    textY: 24, textBlur: 0,   textDur: 0.9 }
+                critical:  { dur: 2.4, ease: 'power3.out', delayOff: 0,     textY: 40, blur: 10,  textDur: 2.0 },
+                distributed: { dur: 1.6, ease: 'power2.out', delayOff: 0.05, textY: 28, blur: 8,   textDur: 1.2 },
+                territorial: { dur: 2.0, ease: 'sine.out',   delayOff: 0.1,  textY: 32, blur: 12,  textDur: 2.2 },
+                regulated:   { dur: 1.3, ease: 'power2.out', delayOff: 0,    textY: 24, blur: 6,   textDur: 0.9 }
               };
 
               gsap.utils.toArray('.case-card').forEach(function(card, i) {
                 var behavior = card.getAttribute('data-behavior') || 'critical';
                 var cfg = behaviorConfig[behavior] || behaviorConfig.critical;
 
-                // Card entrance
+                // Card entrance with blur + exit via reverse
                 gsap.fromTo(card,
-                  { y: 24, opacity: 0 },
+                  { y: 24, opacity: 0, filter: 'blur(' + cfg.blur + 'px)' },
                   {
                     y: 0,
                     opacity: 1,
+                    filter: 'blur(0px)',
                     duration: Math.min(cfg.dur, 1.05),
                     delay: i * 0.1,
                     ease: cfg.ease,
-                    scrollTrigger: { trigger: card, start: 'top 92%' }
+                    immediateRender: false,
+                    scrollTrigger: {
+                      trigger: card,
+                      start: 'top 92%',
+                      end: 'top 55%',
+                      toggleActions: 'play none none reverse'
+                    }
                   }
                 );
 
@@ -867,26 +725,38 @@
 
                 if (title) {
                   gsap.fromTo(title,
-                    { y: Math.min(cfg.textY, 20), opacity: 0, filter: cfg.textBlur ? 'blur(' + cfg.textBlur + ')' : 'blur(0)' },
+                    { y: Math.min(cfg.textY, 20), opacity: 0, filter: 'blur(' + cfg.blur + 'px)' },
                     {
                       y: 0, opacity: 1, filter: 'blur(0)',
                       duration: Math.min(cfg.textDur, 1.05),
                       delay: i * 0.1 + 0.18,
                       ease: cfg.ease,
-                      scrollTrigger: { trigger: card, start: 'top 87%' }
+                      immediateRender: false,
+                      scrollTrigger: {
+                        trigger: card,
+                        start: 'top 87%',
+                        end: 'top 50%',
+                        toggleActions: 'play none none reverse'
+                      }
                     }
                   );
                 }
 
                 if (desc) {
                   gsap.fromTo(desc,
-                    { y: 18, opacity: 0 },
+                    { y: 18, opacity: 0, filter: 'blur(6px)' },
                     {
-                      y: 0, opacity: 1,
+                      y: 0, opacity: 1, filter: 'blur(0)',
                       duration: Math.min(cfg.textDur * 0.75, 0.85),
                       delay: i * 0.1 + (behavior === 'distributed' ? 0.08 : behavior === 'regulated' ? 0.06 : 0.12),
                       ease: cfg.ease,
-                      scrollTrigger: { trigger: card, start: 'top 87%' }
+                      immediateRender: false,
+                      scrollTrigger: {
+                        trigger: card,
+                        start: 'top 87%',
+                        end: 'top 50%',
+                        toggleActions: 'play none none reverse'
+                      }
                     }
                   );
                 }
@@ -895,8 +765,8 @@
                 var svg = card.querySelector('.behavioral-svg');
                 if (svg) {
                   gsap.to(svg, {
-                    opacity: 1,
-                    duration: 2.5,
+                    opacity: 0.16,
+                    duration: 1.2,
                     delay: i * 0.12 + 0.6,
                     ease: 'power2.out'
                   });
@@ -915,21 +785,11 @@
     </div>
 
     <section id="impact" class="section-pad px-6 bg-base-100 relative nbg overflow-visible">
-      <!-- Environmental Background — soft grid + operational circles -->
-      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-[0.06]" aria-hidden="true"
-        data-parallax="-0.03">
-        <div class="absolute inset-0 opacity-[0.1]" style="background-image: linear-gradient(to right, #63574A 1px, transparent 1px), linear-gradient(to bottom, #63574A 1px, transparent 1px); background-size: 64px 64px;"></div>
-        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
-          <circle cx="50%" cy="50%" r="400" fill="none" stroke="#63574A" stroke-width="0.3" stroke-dasharray="4 8" />
-          <circle cx="50%" cy="50%" r="600" fill="none" stroke="#63574A" stroke-width="0.2" />
-        </svg>
-      </div>
-
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
         <!-- Section Header — standardized system (canonical reference) -->
         <div class="section-header">
           <span class="section-kicker">
-            <span class="section-kicker-context">04 / OPERATIONAL EVIDENCE</span><span data-t="s5.tag"> · Impacto</span>
+            <span data-t="s5.tag">EVIDÊNCIA · ESCALA · RASTREABILIDADE</span>
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
@@ -938,124 +798,110 @@
             <div class="section-header-divider" aria-hidden="true"></div>
             <div class="section-header-subtitle">
               <div class="section-microstats section-microcopy">
-                <span data-t="s5.stat1">SISTEMAS <strong>4</strong></span>
-                <span data-t="s5.stat2">OPERAÇÕES <strong>12+</strong></span>
-                <span data-t="s5.stat3">DADOS <strong>+</strong></span>
+                <span data-t="s5.stat1">RESULTADOS OBSERVÁVEIS EM SISTEMAS COMPLEXOS</span>
               </div>
               <p data-t="s5.desc">Evidências de escala, rastreabilidade e coordenação em sistemas enterprise, produtos regulados e operações críticas.</p>
             </div>
           </div>
         </div>
 
-        <div class="section-chip-row">
-          <span class="section-chip" data-t="s5.chip1">Operações críticas</span>
-          <span class="section-chip" data-t="s5.chip2">Escala operacional</span>
-          <span class="section-chip" data-t="s5.chip3">Rastreabilidade</span>
-          <span class="section-chip" data-t="s5.chip4">Sistemas enterprise</span>
-        </div>
-
         <!-- Impact Grid 2x2 -->
         <div class="impact-grid">
 
-          <!-- Card 1: Petrobras -->
-          <div class="impact-cell">
-            <div class="impact-card-side">
-              <h4 data-t="imp1.client">Petrobras</h4>
-              <div class="mb-auto">
-                <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
-                <span class="impact-dimension" data-t="imp1.dim">Automação operacional</span>
-              </div>
-              <div class="impact-tag">
-                <span class="dot"></span>
-                <span data-t="imp1.type">Operação crítica</span>
-              </div>
-            </div>
-            <div class="impact-card-side">
-              <div class="impact-icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v2m0 14v2M3 12h2m14 0h2m-4.5-6.5l1.5-1.5M5.5 18.5l1.5-1.5m11.5 0l1.5 1.5M5.5 5.5l1.5 1.5"></path></svg>
-              </div>
-              <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
-              <div class="impact-evidence" data-t="imp1.val">95% de redução no esforço manual</div>
-              <p class="impact-desc" data-t="imp1.desc">Consolidação de relatórios operacionais reorganizada para leitura contínua em contexto offshore.</p>
-            </div>
-          </div>
+<!-- Card 1: Petrobras -->
+           <div class="impact-cell">
+             <div class="impact-card-side">
+               <h4 data-t="imp1.client">Petrobras</h4>
+               <div class="mb-auto">
+                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
+                 <span class="impact-dimension" data-t="imp1.dim">Automação operacional</span>
+               </div>
+               <div class="impact-tag">
+                 <span class="dot"></span>
+                 <span data-t="imp1.type">Operação crítica</span>
+               </div>
+             </div>
+             <div class="impact-card-side">
+               <div class="impact-icon-wrapper">
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v2m0 14v2M3 12h2m14 0h2m-4.5-6.5l1.5-1.5M5.5 18.5l1.5-1.5m11.5 0l1.5 1.5M5.5 5.5l1.5 1.5"></path></svg>
+               </div>
+               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
+               <div class="impact-evidence" data-t="imp1.val">95% de redução no esforço manual</div>
+               <p class="impact-desc" data-t="imp1.desc">Consolidação de relatórios operacionais reorganizada para leitura contínua em contexto offshore. O sistema integra informações previamente distribuídas entre monitoramento orbital, análises geoespaciais e mobilização de recursos em um único fluxo operacional contínuo.</p>
+             </div>
+           </div>
 
-          <!-- Card 2: Bayer -->
-          <div class="impact-cell">
-            <div class="impact-card-side">
-              <h4 data-t="imp2.client">Bayer</h4>
-              <div class="mb-auto">
-                <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
-                <span class="impact-dimension" data-t="imp2.dim">Escala de dados</span>
-              </div>
-              <div class="impact-tag">
-                <span class="dot"></span>
-                <span data-t="imp2.type">Dados agrícolas</span>
-              </div>
-            </div>
-            <div class="impact-card-side">
-              <div class="impact-icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path></svg>
-              </div>
-              <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
-              <div class="impact-evidence" data-t="imp2.val">4.000 pontos integrados</div>
-              <p class="impact-desc" data-t="imp2.desc">Recepção de dados agrícolas consolidada em um ecossistema unificado de análise técnica.</p>
-            </div>
-          </div>
+<!-- Card 2: Bayer -->
+           <div class="impact-cell">
+             <div class="impact-card-side">
+               <h4 data-t="imp2.client">Bayer</h4>
+               <div class="mb-auto">
+                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
+                 <span class="impact-dimension" data-t="imp2.dim">Escala de dados</span>
+               </div>
+               <div class="impact-tag">
+                 <span class="dot"></span>
+                 <span data-t="imp2.type">Dados agrícolas</span>
+               </div>
+             </div>
+             <div class="impact-card-side">
+               <div class="impact-icon-wrapper">
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path></svg>
+               </div>
+               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
+               <div class="impact-evidence" data-t="imp2.val">4.000 pontos integrados</div>
+               <p class="impact-desc" data-t="imp2.desc">Recepção de dados agrícolas consolidada em um ecossistema unificado de análise técnica. A plataforma reorganizou as informações em torno da cultura agrícola como unidade central de análise, conectando dados técnicos, comparação de indicadores e registro de decisões dentro de um único fluxo estruturado.</p>
+             </div>
+           </div>
 
-          <!-- Card 3: Ambev -->
-          <div class="impact-cell">
-            <div class="impact-card-side">
-              <h4 data-t="imp3.client">Ambev</h4>
-              <div class="mb-auto">
-                <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
-                <span class="impact-dimension" data-t="imp3.dim">Arquitetura modular</span>
-              </div>
-              <div class="impact-tag">
-                <span class="dot"></span>
-                <span data-t="imp3.type">Supply chain</span>
-              </div>
-            </div>
-            <div class="impact-card-side">
-              <div class="impact-icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-              </div>
-              <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
-              <div class="impact-evidence" data-t="imp3.val">6 módulos operacionais</div>
-              <p class="impact-desc" data-t="imp3.desc">Estrutura de supply chain organizada para leitura de disponibilidade, ruptura e coordenação logística.</p>
-            </div>
-          </div>
+<!-- Card 3: Ambev -->
+           <div class="impact-cell">
+             <div class="impact-card-side">
+               <h4 data-t="imp3.client">Ambev</h4>
+               <div class="mb-auto">
+                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
+                 <span class="impact-dimension" data-t="imp3.dim">Arquitetura modular</span>
+               </div>
+               <div class="impact-tag">
+                 <span class="dot"></span>
+                 <span data-t="imp3.type">Supply chain</span>
+               </div>
+             </div>
+             <div class="impact-card-side">
+               <div class="impact-icon-wrapper">
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+               </div>
+               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
+               <div class="impact-evidence" data-t="imp3.val">6 módulos operacionais</div>
+               <p class="impact-desc" data-t="imp3.desc">Estrutura de supply chain organizada para leitura de disponibilidade, ruptura e coordenação logística. A plataforma passou a refletir o estado real da operação, transformando dados dispersos em uma visão única que permite identificar desvios rapidamente sem depender de cruzamento manual de relatórios.</p>
+             </div>
+           </div>
 
-          <!-- Card 4: BMG -->
-          <div class="impact-cell">
-            <div class="impact-card-side">
-              <h4 data-t="imp4.client">BMG</h4>
-              <div class="mb-auto">
-                <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
-                <span class="impact-dimension" data-t="imp4.dim">Ambiente regulado</span>
-              </div>
-              <div class="impact-tag">
-                <span class="dot"></span>
-                <span data-t="imp4.type">Banking / compliance</span>
-              </div>
-            </div>
-            <div class="impact-card-side">
-              <div class="impact-icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
-              </div>
-              <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
-              <div class="impact-evidence" data-t="imp4.val">Rastreabilidade completa</div>
-              <p class="impact-desc" data-t="imp4.desc">Jornada PJ estruturada com validações, estados e fluxos aderentes a exigências operacionais e regulatórias.</p>
-            </div>
-          </div>
+<!-- Card 4: BMG -->
+           <div class="impact-cell">
+             <div class="impact-card-side">
+               <h4 data-t="imp4.client">BMG</h4>
+               <div class="mb-auto">
+                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
+                 <span class="impact-dimension" data-t="imp4.dim">Ambiente regulado</span>
+               </div>
+               <div class="impact-tag">
+                 <span class="dot"></span>
+                 <span data-t="imp4.type">Banking / compliance</span>
+               </div>
+             </div>
+             <div class="impact-card-side">
+               <div class="impact-icon-wrapper">
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+               </div>
+               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
+               <div class="impact-evidence" data-t="imp4.val">Rastreabilidade completa</div>
+               <p class="impact-desc" data-t="imp4.desc">Jornada PJ estruturada com validações, estados e fluxos aderentes a exigências operacionais e regulatórias. A conta digital foi pensada especificamente para pequenas empresas, reduzindo tempo de abertura de semanas para menos de 24 horas enquanto mantém segurança e conformidade bancária.</p>
+             </div>
+           </div>
 
         </div>
 
-        <div class="section-editorial-footer">
-          <div class="section-microcopy section-microcopy--accent" data-t="s5.microphrase">Evidências operacionais, não métricas decorativas.</div>
-          <div class="section-microflow" data-t="s5.microflow">Escala → Rastreabilidade → Coordenação → Impacto</div>
-          <div class="section-microcopy" data-t="s5.microcomp">Resultados observáveis em sistemas complexos.</div>
-        </div>
       </div>
 
     </section>
@@ -1066,24 +912,10 @@
     </div>
 
     <section id="about" class="editorial-dark-section about-section nbg">
-      <div class="editorial-ambient" aria-hidden="true">
-        <div class="editorial-ambient-grid" data-parallax="0.025"></div>
-        <svg class="editorial-ambient-lines" viewBox="0 0 1440 920" preserveAspectRatio="none">
-          <path class="env-flow" d="M120 160 H520 V330 H850 V560 H1260" />
-          <path class="env-flow-reverse" d="M180 760 H430 V610 H720 V420 H1180" />
-          <path d="M1020 120 H1300 V300" />
-          <circle cx="520" cy="330" r="3" />
-          <circle cx="850" cy="560" r="3" />
-          <circle cx="720" cy="420" r="3" />
-        </svg>
-        <div class="ambient-coordinates ambient-coordinates--one">05 / HUMAN LAYER · ACTIVE</div>
-        <div class="ambient-coordinates ambient-coordinates--two">TRAJETÓRIA → REPERTÓRIO → MÉTODO → IA</div>
-      </div>
-
       <div class="max-w-[1440px] mx-auto relative z-10">
         <div class="section-header section-header--dark">
           <span class="section-kicker">
-            <span class="section-kicker-context">05 / HUMAN LAYER</span><span data-t="ab.tag"> · Sobre</span>
+            <span data-t="ab.tag">TRAJETÓRIA · MÉTODO · REPERTÓRIO</span>
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
@@ -1092,11 +924,9 @@
             <div class="section-header-divider" aria-hidden="true"></div>
             <div class="section-header-subtitle">
               <div class="section-microstats section-microcopy">
-                <span>SYSTEM VIEW</span>
-                <span>HUMAN LAYER</span>
-                <span>DECISION INFRASTRUCTURE</span>
+                <span>DESIGN · PRODUTO · TECNOLOGIA · OPERAÇÃO</span>
               </div>
-              <p data-t="ab.subtitle">20 anos na interseção entre design, produto, tecnologia e operação, projetando sistemas que ajudam pessoas a entender, decidir e agir com mais clareza.</p>
+              <p data-t="ab.subtitle">20 anos entre design, produto, tecnologia e operação.</p>
             </div>
           </div>
           <div class="section-header-rule" aria-hidden="true"></div>
@@ -1106,139 +936,98 @@
         <div class="about-layout">
           <div class="about-narrative">
             <p class="editorial-reveal" data-t="ab.p1">Não comecei no design desenhando telas. Comecei organizando informação, navegação, fluxos e decisões.</p>
-            <p class="editorial-reveal" data-t="ab.p2">Ao longo de 20 anos, trabalhei em produtos digitais complexos para empresas como Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood e BMG, quase sempre em contextos onde a interface era apenas a camada visível de problemas maiores.</p>
+            <p class="editorial-reveal" data-t="ab.p2">Ao longo de 20 anos, trabalhei em produtos digitais complexos para empresas como Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood e BMG.</p>
             <p class="editorial-reveal" data-t="ab.p3">Meu trabalho está no ponto onde produto, operação, tecnologia e decisão se encontram. Antes de pensar em componentes, eu procuro entender o sistema: quem decide, com qual informação, sob qual pressão e com quais consequências.</p>
-            <p class="editorial-reveal" data-t="ab.p4">Hoje, combino design, IA e pensamento sistêmico para acelerar diagnóstico, estruturar fluxos, organizar raciocínio e transformar complexidade em experiências mais claras, operáveis e sustentáveis.</p>
+            <p class="editorial-reveal" data-t="ab.p4">Hoje, combino design, IA e pensamento sistêmico para transformar complexidade em experiências mais claras, operáveis e sustentáveis.</p>
           </div>
 
-          <!-- Photo frame -->
-          <div class="about-photo-frame editorial-reveal">
-            <img
-              src="assets/img/henrico-amaral.jpg"
-              alt="Henrico Amaral, Product &amp; UX Strategist em São Paulo."
-              loading="lazy"
-              width="360"
-              height="450"
-            />
-            <div class="about-photo-caption">
-              Henrico Amaral<br>
-              Product &amp; UX Strategist<br>
-              São Paulo · Enterprise Systems · AI-assisted workflow
-            </div>
-          </div>
+<!-- Photo frame -->
+           <div class="about-photo-frame editorial-reveal">
+             <img
+               src="assets/img/foto.png"
+               alt="Henrico Amaral, Product & UX Strategist em São Paulo."
+               loading="lazy"
+               width="360"
+               height="450"
+               onerror="this.closest('.about-photo-frame').remove()"
+             />
+             <div class="about-photo-caption">
+               Henrico Amaral<br>
+               Product & UX Strategist<br>
+               São Paulo · Enterprise Systems · AI-assisted workflow
+             </div>
+           </div>
         </div>
 
         <!-- 5 professional cards -->
         <div class="about-grid" aria-label="Capacidades profissionais">
           <article class="about-card editorial-reveal">
             <span class="about-card-index">01</span>
-            <h3 data-t="ab.card1.title">Território de atuação</h3>
+            <h3 data-t="ab.card1.title">Território</h3>
             <ul data-t="ab.card1.items">
-              <li>Plataformas enterprise</li>
-              <li>Operações críticas</li>
               <li>Produtos B2B</li>
+              <li>Enterprise</li>
+              <li>Operações críticas</li>
               <li>Sistemas regulados</li>
-              <li>Dados operacionais</li>
             </ul>
           </article>
 
           <article class="about-card editorial-reveal">
             <span class="about-card-index">02</span>
-            <h3 data-t="ab.card2.title">Capacidades centrais</h3>
+            <h3 data-t="ab.card2.title">Prática</h3>
             <ul data-t="ab.card2.items">
-              <li>Product strategy</li>
               <li>Discovery</li>
               <li>Arquitetura da informação</li>
               <li>Fluxos complexos</li>
               <li>Design systems</li>
-              <li>Prototipação</li>
-              <li>UX research</li>
             </ul>
           </article>
 
           <article class="about-card editorial-reveal">
             <span class="about-card-index">03</span>
-            <h3 data-t="ab.card3.title">Contextos reais</h3>
+            <h3 data-t="ab.card3.title">Setores</h3>
             <ul data-t="ab.card3.items">
               <li>Oil &amp; Gas</li>
               <li>Agronegócio</li>
               <li>Logística</li>
               <li>Finanças</li>
               <li>Seguros</li>
-              <li>Telecom</li>
-              <li>Governo</li>
             </ul>
           </article>
 
           <article class="about-card editorial-reveal">
             <span class="about-card-index">04</span>
-            <h3 data-t="ab.card4.title">Stack de trabalho atual</h3>
+            <h3 data-t="ab.card4.title">Ferramentas</h3>
             <ul data-t="ab.card4.items">
               <li>Figma</li>
-              <li>FigJam</li>
-              <li>Miro</li>
-              <li>Notion</li>
               <li>Power BI</li>
               <li>AccessMonitor</li>
               <li>GitHub</li>
-              <li>ChatGPT</li>
-              <li>Claude</li>
-              <li>Gemini</li>
-              <li>Manus</li>
-              <li>Antigravity</li>
+              <li>IA generativa</li>
             </ul>
           </article>
 
           <article class="about-card editorial-reveal">
             <span class="about-card-index">05</span>
-            <h3 data-t="ab.card5.title">IA aplicada ao design</h3>
+            <h3 data-t="ab.card5.title">IA aplicada</h3>
             <ul data-t="ab.card5.items">
               <li>Agentes</li>
-              <li>Skills</li>
-              <li>Prompts operacionais</li>
-              <li>Workflows versionados</li>
-              <li>MCPs</li>
+              <li>Prompts</li>
+              <li>Workflows</li>
               <li>Prototipação assistida</li>
-              <li>Human-in-the-loop</li>
             </ul>
           </article>
         </div>
 
-        <aside class="about-human-band editorial-reveal" aria-labelledby="beyond-interface-title">
-          <div>
-            <span class="section-microcopy section-microcopy--accent">HUMAN LAYER</span>
-            <h3 id="beyond-interface-title" data-t="ab.beyond.title">Além da interface</h3>
-          </div>
-          <ul data-t="ab.beyond.items">
-            <li>Pai</li>
-            <li>Observador de sistemas</li>
-            <li>Aprendiz constante</li>
-            <li>IA aplicada ao design</li>
-            <li>Reposicionamento com método</li>
-          </ul>
-        </aside>
       </div>
     </section>
 
 
     <section id="contact" class="editorial-dark-section contact-section nbg">
-      <div class="editorial-ambient editorial-ambient--contact" aria-hidden="true">
-        <div class="editorial-ambient-grid" data-parallax="-0.02"></div>
-        <svg class="editorial-ambient-lines" viewBox="0 0 1440 780" preserveAspectRatio="none">
-          <path class="env-flow" d="M110 420 H420 V260 H770 V500 H1320" />
-          <path class="env-flow-reverse" d="M240 650 H620 V540 H940 V180 H1230" />
-          <circle cx="420" cy="260" r="3" />
-          <circle cx="770" cy="500" r="3" />
-          <circle cx="940" cy="180" r="3" />
-        </svg>
-        <div class="ambient-coordinates ambient-coordinates--one">SIGNAL / STRUCTURE / DECISION</div>
-        <div class="ambient-coordinates ambient-coordinates--two">OPERATIONAL CLARITY / OPEN</div>
-      </div>
-
       <div class="max-w-[1440px] mx-auto relative z-10">
         <div class="section-header section-header--dark">
           <span class="section-kicker">
-            <span class="section-kicker-context">06 / NEXT STEP</span><span data-t="ct.tag"> · Contato</span>
+            <span data-t="ct.tag">SÃO PAULO · REMOTO/HÍBRIDO · PT/EN</span>
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
@@ -1247,9 +1036,7 @@
             <div class="section-header-divider" aria-hidden="true"></div>
             <div class="section-header-subtitle">
               <div class="section-microstats section-microcopy">
-                <span>OPERATIONAL CLARITY</span>
-                <span>ENTERPRISE / B2B</span>
-                <span>SÃO PAULO · REMOTO/HÍBRIDO · PT/EN</span>
+                <span>SP · REMOTO/HÍBRIDO · PT/EN</span>
               </div>
               <p data-t="ct.sub">Disponível para posições Senior, Lead ou Staff Product Designer em produtos enterprise, plataformas internas e ambientes regulados.</p>
             </div>
@@ -1261,26 +1048,26 @@
           <article class="contact-intent-card editorial-reveal">
             <span class="about-card-index">01</span>
             <h3 data-t="ct.card1.title">Para recrutadores</h3>
-            <p data-t="ct.card1.text">Busco oportunidades CLT ou PJ em times de produto, tecnologia e transformação digital.</p>
+            <p data-t="ct.card1.text">Senior, Lead ou Staff Product Designer.</p>
           </article>
           <article class="contact-intent-card editorial-reveal">
             <span class="about-card-index">02</span>
             <h3 data-t="ct.card2.title">Para empresas</h3>
-            <p data-t="ct.card2.text">Atuo em diagnóstico, estruturação de fluxos, arquitetura de informação, design de plataformas internas e sistemas operacionais complexos.</p>
+            <p data-t="ct.card2.text">Diagnóstico, fluxos e plataformas internas.</p>
           </article>
           <article class="contact-intent-card editorial-reveal">
             <span class="about-card-index">03</span>
             <h3 data-t="ct.card3.title">Para conversas técnicas</h3>
-            <p data-t="ct.card3.text">Aberto a trocas sobre IA aplicada ao design, design systems, produtos enterprise e visualização de decisão.</p>
+            <p data-t="ct.card3.text">IA, design systems e produtos enterprise.</p>
           </article>
         </div>
 
         <nav class="contact-actions editorial-reveal" aria-label="Canais de contato">
+          <a href="mailto:henricoamaral.design@gmail.com" class="contact-action contact-action--primary">
+            <span>E-mail</span><span aria-hidden="true">↗</span>
+          </a>
           <a href="https://www.linkedin.com/in/henrico-amaral/" target="_blank" rel="noopener" class="contact-action">
             <span>LinkedIn</span><span aria-hidden="true">↗</span>
-          </a>
-          <a href="mailto:henricoamaral.design@gmail.com" class="contact-action">
-            <span>E-mail</span><span aria-hidden="true">↗</span>
           </a>
           <a href="https://wa.me/5511953970704" target="_blank" rel="noopener" class="contact-action">
             <span>WhatsApp</span><span aria-hidden="true">↗</span>
