@@ -49,7 +49,6 @@ const COPY = {
     's4.microflow': 'Contexto → Estrutura → Interação → Decisão',
     's4.microcomp': 'Método aplicado a produtos complexos.',
     's5.desc':      'Métricas de eficiência e escala alcançadas através da reestruturação de arquiteturas críticas.',
-    'ab.editorial': 'Quando sistemas operam sob pressão, clareza deixa de ser estética. Ela se torna infraestrutura.',
     'skip':         'Ir para o conteúdo',
     'nav.contact':  'Contato',
     'worked-with':  'Clientes',
@@ -104,18 +103,37 @@ const COPY = {
     'imp4.val':     'Rastreabilidade completa',
     'imp4.desc':    'Jornada PJ estruturada com validações, estados e fluxos aderentes a exigências operacionais e regulatórias.',
     'imp4.type':    'Banking / compliance',
-     'ab.headline':       'Interfaces são consequência.<br><em class="font-normal italic text-[#63574A]">Estrutura é o produto.</em>',
-     'ab.p1':             'Há 20 anos projeto sistemas digitais para operações complexas, ambientes regulados e plataformas enterprise. Meu trabalho não começa antes da interface, começa na estrutura que sustenta fluxos, decisões e coordenação entre produto, tecnologia e operação.',
-     'ab.p2':             'Ao longo da trajetória, atuei na construção de plataformas para Petrobras, Bayer, Banco do Brasil, Ambev, Claro e Bradesco, sempre em contextos onde clareza operacional impacta eficiência, risco e continuidade.',
-     'ab.p3':             'Minha especialidade está em transformar complexidade organizacional em sistemas compreensíveis, estruturando arquitetura da informação, fluxos operacionais e experiências capazes de sustentar escala, restrições técnicas e tomada de decisão crítica.',
-     'ab.tax1.title':     'EXPERTISE',
-     'ab.tax2.title':     'CAPACIDADES',
-     'ab.tax2.list':      '<li>Estruturação de sistemas</li><li>Arquitetura operacional</li><li>Discovery estratégico</li><li>Modelagem de fluxos</li><li>Coordenação cross-functional</li><li>Visualização de decisão</li>',
-     'ab.tax3.title':     'FERRAMENTAS',
+     'ab.tag':            '05 / Sobre',
+     'ab.title':          'Por trás<br>da estrutura.',
+     'ab.subtitle':       '20 anos transformando complexidade operacional em sistemas compreensíveis.',
+     'ab.p1':             'Não comecei no design desenhando telas. Comecei organizando informação, navegação, fluxos e decisões.',
+     'ab.p2':             'Ao longo de 20 anos, trabalhei em produtos digitais para empresas como Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood e BMG, quase sempre em contextos onde a interface era apenas a camada visível de problemas maiores.',
+     'ab.p3':             'Meu trabalho está no ponto onde produto, operação, tecnologia e decisão se encontram. Antes de pensar em componentes, eu tento entender o sistema: quem decide, com qual informação, sob qual pressão e com quais consequências.',
+     'ab.p4':             'Hoje, uso design, IA e pensamento sistêmico para acelerar diagnóstico, estruturar fluxos, organizar raciocínio e transformar complexidade em experiências mais claras, operáveis e sustentáveis.',
+     'ab.card1.title':    'O que eu estruturo',
+     'ab.card1.items':    '<li>Fluxos operacionais</li><li>Plataformas internas</li><li>Produtos B2B</li><li>Sistemas regulados</li><li>Interfaces de decisão</li>',
+     'ab.card2.title':    'Como eu penso',
+     'ab.card2.items':    '<li>Contexto antes da tela</li><li>Clareza antes da estética</li><li>Decisão antes da entrega</li><li>Sistema antes do componente</li>',
+     'ab.card3.title':    'Onde atuo melhor',
+     'ab.card3.items':    '<li>Enterprise</li><li>Operações críticas</li><li>Finanças</li><li>Seguros</li><li>Logística</li><li>Energia</li><li>Agronegócio</li>',
+     'ab.card4.title':    'Como trabalho hoje',
+     'ab.card4.items':    '<li>Figma</li><li>FigJam</li><li>Miro</li><li>Notion</li><li>Power BI</li><li>AccessMonitor</li><li>ChatGPT</li><li>Claude</li><li>Gemini</li><li>Google AI Studio</li><li>Manus</li><li>Antigravity</li><li>GitHub</li><li>Railway</li><li>Netlify</li>',
+     'ab.beyond.title':   'Além da interface',
+     'ab.beyond.items':   '<li>Pai</li><li>Observador de sistemas</li><li>Aprendiz constante</li><li>IA aplicada ao design</li><li>Reposicionamento com método</li>',
      'hero.availability': 'Status Operacional: Sistema pronto',
      'modal.case':        'Caso',
-     'ct.title':          'Clareza não acontece.<br>{em}Ela é projetada.{/em}',
-     'ct.sub':            'Enterprise Product Design para sistemas críticos e operações complexas.',
+     'ct.tag':            '06 / Contato',
+     'ct.title':          'Vamos falar sobre sistemas que precisam ficar mais claros.',
+     'ct.sub':            'Disponível para posições Senior, Lead ou Staff Product Designer em produtos enterprise, plataformas internas, operações críticas e ambientes regulados.',
+     'ct.card1.title':    'Para recrutadores',
+     'ct.card1.text':     'Busco oportunidades CLT ou PJ em times de produto, tecnologia e transformação digital.',
+     'ct.card2.title':    'Para empresas',
+     'ct.card2.text':     'Atuo em diagnóstico, estruturação de fluxos, arquitetura de informação, design de plataformas internas e sistemas operacionais complexos.',
+     'ct.card3.title':    'Para conversas técnicas',
+     'ct.card3.text':     'Aberto a trocas sobre IA aplicada ao design, design systems, produtos enterprise e visualização de decisão.',
+     'ct.cv':             'Baixar CV',
+     'ct.cases':          'Ver cases',
+     'ct.meta':           'São Paulo · Remoto / Híbrido · Português / Inglês profissional',
      'ft.role':           'Designer de Produto · 2026',
    },
    en: {
@@ -167,7 +185,6 @@ const COPY = {
       's4.microflow': 'Context → Structure → Interaction → Decision',
       's4.microcomp': 'Method applied to complex products.',
       's5.desc':      'Efficiency and scale metrics achieved through restructuring critical architectures.',
-      'ab.editorial': 'When systems operate under pressure, clarity stops being aesthetic. It becomes infrastructure.',
       'skip':         'Skip to content',
       'nav.contact':  'Contact',
       'worked-with':  'Clients',
@@ -222,18 +239,37 @@ const COPY = {
       'imp4.val':     'Complete traceability',
       'imp4.desc':    'Business banking journey structured with validations, states and flows aligned with operational and regulatory requirements.',
       'imp4.type':    'Banking / compliance',
-     'ab.headline':       'Interfaces are consequences.<br><em class="font-normal italic text-[#63574A]">Structure is the product.</em>',
-     'ab.p1':             'For 20 years I have designed digital systems for complex operations, regulated environments, and enterprise platforms. My work begins long before the interface—it starts in the structure that sustains flows, decisions, and coordination between product, technology, and operations.',
-     'ab.p2':             'Throughout my career, I have built platforms for Petrobras, Bayer, Banco do Brasil, Ambev, Claro, and Bradesco, always in contexts where operational clarity impacts efficiency, risk, and continuity.',
-     'ab.p3':             'My expertise lies in transforming organizational complexity into comprehensible systems, structuring information architecture, operational flows, and experiences capable of sustaining scale, technical constraints, and critical decision-making.',
-     'ab.tax1.title':     'EXPERTISE',
-     'ab.tax2.title':     'CAPABILITIES',
-     'ab.tax2.list':      '<li>System structuring</li><li>Operational architecture</li><li>Strategic discovery</li><li>Flow modeling</li><li>Cross-functional coordination</li><li>Decision visualization</li>',
-     'ab.tax3.title':     'TOOLS',
+     'ab.tag':            '05 / About',
+     'ab.title':          'Behind<br>the structure.',
+     'ab.subtitle':       '20 years turning operational complexity into understandable systems.',
+     'ab.p1':             'I did not start in design by drawing screens. I started by organizing information, navigation, flows and decisions.',
+     'ab.p2':             'Over 20 years, I have worked on digital products for companies such as Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood and BMG, almost always in contexts where the interface was only the visible layer of larger problems.',
+     'ab.p3':             'My work sits where product, operations, technology and decision-making meet. Before thinking about components, I try to understand the system: who decides, with what information, under what pressure and with what consequences.',
+     'ab.p4':             'Today, I use design, AI and systems thinking to accelerate diagnosis, structure flows, organize reasoning and turn complexity into clearer, more operable and sustainable experiences.',
+     'ab.card1.title':    'What I structure',
+     'ab.card1.items':    '<li>Operational flows</li><li>Internal platforms</li><li>B2B products</li><li>Regulated systems</li><li>Decision interfaces</li>',
+     'ab.card2.title':    'How I think',
+     'ab.card2.items':    '<li>Context before screen</li><li>Clarity before aesthetics</li><li>Decision before delivery</li><li>System before component</li>',
+     'ab.card3.title':    'Where I work best',
+     'ab.card3.items':    '<li>Enterprise</li><li>Critical operations</li><li>Finance</li><li>Insurance</li><li>Logistics</li><li>Energy</li><li>Agribusiness</li>',
+     'ab.card4.title':    'How I work today',
+     'ab.card4.items':    '<li>Figma</li><li>FigJam</li><li>Miro</li><li>Notion</li><li>Power BI</li><li>AccessMonitor</li><li>ChatGPT</li><li>Claude</li><li>Gemini</li><li>Google AI Studio</li><li>Manus</li><li>Antigravity</li><li>GitHub</li><li>Railway</li><li>Netlify</li>',
+     'ab.beyond.title':   'Beyond the interface',
+     'ab.beyond.items':   '<li>Father</li><li>Systems observer</li><li>Constant learner</li><li>AI applied to design</li><li>Repositioning with method</li>',
      'hero.availability': 'Operational Status: System Ready',
      'modal.case':        'Case',
-     'ct.title':          'Clarity doesn\'t happen.<br>{em}It is designed.{/em}',
-     'ct.sub':            'Enterprise Product Design for critical systems and complex operations.',
+     'ct.tag':            '06 / Contact',
+     'ct.title':          'Let’s talk about systems that need to become clearer.',
+     'ct.sub':            'Available for Senior, Lead or Staff Product Designer roles in enterprise products, internal platforms, critical operations and regulated environments.',
+     'ct.card1.title':    'For recruiters',
+     'ct.card1.text':     'I am open to full-time or contract opportunities in product, technology and digital transformation teams.',
+     'ct.card2.title':    'For companies',
+     'ct.card2.text':     'I work on diagnosis, flow structuring, information architecture, internal platform design and complex operational systems.',
+     'ct.card3.title':    'For technical conversations',
+     'ct.card3.text':     'Open to exchanges about AI applied to design, design systems, enterprise products and decision visualization.',
+     'ct.cv':             'Download CV',
+     'ct.cases':          'View cases',
+     'ct.meta':           'São Paulo · Remote / Hybrid · Portuguese / Professional English',
      'ft.role':           'Product Designer · 2026',
    }
 };
@@ -293,11 +329,33 @@ const motionReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matc
 const tl = gsap.timeline({ defaults: { ease: MOTION.ease.standard, duration: motionReduced ? 0 : MOTION.duration.hero } });
 
 if (motionReduced) {
-  gsap.set(['.availability-badge-v2', '.eyebrow-line', '.eyebrow-text', '.hl-i', '.sub', '.cta-wrapper', '.evidence'], { opacity: 1, y: 0, scaleX: 1, filter: 'blur(0px)' });
+  gsap.set([
+    '.availability-badge-v2',
+    '.eyebrow-line',
+    '.eyebrow-text',
+    '.hl-i',
+    '.sub',
+    '.cta-wrapper',
+    '.evidence',
+    '.section-kicker',
+    '.section-header-title',
+    '.section-header-divider',
+    '.section-header-rule',
+    '.section-header-subtitle',
+    '.section-chip',
+    '.section-editorial-footer > *',
+    '.framework-card',
+    '.case-card',
+    '.impact-cell',
+    '.editorial-reveal'
+  ], { opacity: 1, y: 0, scale: 1, scaleX: 1, scaleY: 1, filter: 'blur(0px)' });
 } else {
+  gsap.set('.eyebrow-line', { scaleX: 0 });
+  gsap.set('.eyebrow-text', { opacity: 0 });
   gsap.set('.hl-i', { y: '110%', rotation: 2, opacity: 0 });
   gsap.set('.sub', { opacity: 0, y: 20, filter: 'blur(4px)' });
   gsap.set('.cta-wrapper', { opacity: 0, y: 20 });
+  gsap.set('.evidence', { opacity: 0 });
 
   tl.to('.availability-badge-v2', { opacity: 1, y: 0, duration: MOTION.duration.hero, ease: MOTION.ease.standard }, 0.2)
     .to('.eyebrow-line', { scaleX: 1, duration: MOTION.duration.hero, ease: 'power4.inOut' }, 0.4)
@@ -370,87 +428,40 @@ if (!motionReduced) {
   reveal('.reveal-step', { stagger: MOTION.stagger.base, y: 50, scale: 0.95 });
   reveal('.case-row', { stagger: MOTION.stagger.base, y: 60 });
 
-  /* ---- Process Section: Editorial microcopy reveal ---- */
-  const processTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#process',
-      start: 'top 82%',
-      toggleActions: 'play none none none'
+  function revealSectionSystem(sectionSelector, cardsSelector) {
+    const tlSection = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionSelector,
+        start: 'top 84%',
+        toggleActions: 'play none none none'
+      }
+    });
+
+    tlSection
+      .from(`${sectionSelector} .section-kicker`, { opacity: 0, y: 8, duration: 0.7, ease: 'power3.out', immediateRender: false }, 0)
+      .from(`${sectionSelector} .section-header-title`, { opacity: 0, y: 20, duration: 0.9, ease: 'power4.out', immediateRender: false }, 0.12)
+      .from(`${sectionSelector} .section-header-divider`, { opacity: 0, scaleY: 0, duration: 0.9, ease: 'power3.out', transformOrigin: 'top', immediateRender: false }, 0.18)
+      .from(`${sectionSelector} .section-header-subtitle`, { opacity: 0, y: 16, duration: 0.85, ease: 'power3.out', immediateRender: false }, 0.24)
+      .from(`${sectionSelector} .section-header-rule`, { opacity: 0, scaleX: 0, duration: 0.9, ease: 'power3.out', transformOrigin: 'left', immediateRender: false }, 0.3)
+      .from(`${sectionSelector} .section-microstats span`, { opacity: 0, y: 8, duration: 0.7, stagger: 0.05, ease: 'power3.out', immediateRender: false }, 0.36)
+      .from(`${sectionSelector} .section-chip`, { opacity: 0, y: 10, duration: 0.8, stagger: 0.08, ease: 'power3.out', immediateRender: false }, 0.42)
+      .from(`${sectionSelector} .section-editorial-footer > *`, { opacity: 0, y: 10, duration: 0.85, stagger: 0.08, ease: 'power3.out', immediateRender: false }, 0.68);
+
+    if (cardsSelector) {
+      tlSection.fromTo(
+        `${sectionSelector} ${cardsSelector}`,
+        { opacity: 0, y: 24 },
+        { opacity: 1, y: 0, duration: 0.95, stagger: 0.1, ease: 'power3.out', clearProps: 'transform', immediateRender: false },
+        0.56
+      );
     }
-  });
+  }
 
-  processTl.from('#process .section-microstats span', {
-    opacity: 0,
-    y: 10,
-    duration: 0.75,
-    stagger: 0.06,
-    ease: 'power3.out'
-  }, 0.25)
-    .from('#process .section-chip', {
-      opacity: 0,
-      y: 12,
-      duration: 0.85,
-      stagger: 0.08,
-      ease: 'power3.out'
-    }, 0.45)
-    .from('#process .section-editorial-footer > *', {
-      opacity: 0,
-      y: 12,
-      duration: 0.9,
-      stagger: 0.08,
-      ease: 'power3.out'
-    }, 0.75);
-
-  /* ---- Impact Section: Operational Evidence Reveal ---- */
-  const impactTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#impact',
-      start: 'top 85%',
-      toggleActions: 'play none none none'
-    }
-  });
-
-  impactTl.from('#impact [data-t="s5.tag"]', { opacity: 0, y: 10, duration: 0.8 }, 0)
-    .from('#impact [data-t="s5.title"]', { opacity: 0, y: 28, duration: 1, ease: 'power4.out' }, 0.2)
-    .from('#impact [data-t="s5.desc"]', { opacity: 0, y: 20, duration: 1, ease: 'power3.out' }, 0.4)
-    .from('#impact .section-microstats span', {
-      opacity: 0,
-      y: 10,
-      duration: 0.75,
-      stagger: 0.06,
-      ease: 'power3.out'
-    }, 0.45)
-    .from('#impact .section-chip', {
-      opacity: 0,
-      y: 12,
-      duration: 0.85,
-      stagger: 0.08,
-      ease: 'power3.out'
-    }, 0.55)
-    .from('#impact .impact-cell', {
-      opacity: 0,
-      y: 32,
-      duration: 1.2,
-      stagger: 0.12,
-      ease: 'power3.out',
-      clearProps: 'all'
-    }, 0.7)
-    .from('#impact .section-editorial-footer > *', {
-      opacity: 0,
-      y: 12,
-      duration: 0.9,
-      stagger: 0.08,
-      ease: 'power3.out'
-    }, 0.95)
-    .from('#impact .border-t, #impact .border-r, #impact .border-b', {
-      scaleX: 0,
-      opacity: 0,
-      duration: 1.2,
-      stagger: 0.05,
-      ease: 'power2.inOut',
-      transformOrigin: 'left',
-      clearProps: 'all'
-    }, 0.6);
+  revealSectionSystem('#process', '.framework-card');
+  revealSectionSystem('#cases');
+  revealSectionSystem('#impact', '.impact-cell');
+  revealSectionSystem('#about', '.editorial-reveal');
+  revealSectionSystem('#contact', '.editorial-reveal');
 
   // Parallax elements
   gsap.utils.toArray('[data-parallax]').forEach(el => {

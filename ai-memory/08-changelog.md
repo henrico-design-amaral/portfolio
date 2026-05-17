@@ -1,5 +1,91 @@
 # CHANGELOG — Portfolio
 
+## 2026-05-16 — Reestruturação editorial de Sobre e Contato
+
+Tipo: design-system / content / conversion / accessibility
+
+Arquivos alterados:
+- `index.html`
+- `assets/css/site.css`
+- `assets/js/site.js`
+- `docs/Henrico-Amaral-CV.md`
+- `ai-memory/05-technical-decisions.md`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/07-open-issues.md`
+- `ai-memory/08-changelog.md`
+- `ai-memory/09-do-not-repeat.md`
+
+Decisões tomadas:
+- Substituir Sobre por narrativa mais humana, conectando trajetória, repertório enterprise, IA e pensamento sistêmico.
+- Criar quatro blocos editoriais: o que estrutura, como pensa, onde atua melhor e como trabalha hoje.
+- Adicionar faixa humana discreta, subordinada à leitura técnica.
+- Substituir Contato por seção de conversão com três intenções: recrutadores, empresas e conversas técnicas.
+- Criar CTAs para LinkedIn, E-mail, WhatsApp, CV e Cases sem exibir telefone em texto puro.
+- Manter as duas seções em fundo escuro institucional com grid/linhas/ruído sutis.
+- Incluir Sobre e Contato no `revealSectionSystem()` com `immediateRender: false`.
+
+Problemas resolvidos:
+- Sobre anterior tinha composição própria em fundo claro, menos conectada ao sistema editorial atual.
+- Contato anterior funcionava mais como encerramento conceitual do que como conversão objetiva.
+- CTAs estavam limitados e sem segmentação por intenção.
+
+Problemas pendentes:
+- Validar visualmente em navegador interativo real os breakpoints 1366px, 1024px, 768px e 390px.
+- Substituir `docs/Henrico-Amaral-CV.md` por PDF final se Henrico quiser um CV tradicional para download.
+
+Status: Concluído localmente, sem commit.
+
+---
+
+## 2026-05-16 — Auditoria global de consistência entre seções
+
+Tipo: design-system / editorial-system / motion / accessibility
+
+Arquivos alterados:
+- `index.html`
+- `assets/css/site.css`
+- `assets/js/site.js`
+- `ai-memory/05-technical-decisions.md`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/08-changelog.md`
+- `ai-memory/09-do-not-repeat.md`
+
+Decisões tomadas:
+- Criar o padrão canônico `section-header` para Método, Cases e Impacto.
+- Manter a atmosfera editorial de Cases, mas trazer sua lógica para o sistema compartilhado.
+- Preservar a clareza de Método sem tratar a seção como bloco visual isolado.
+- Refinar Impacto com título menos dominante, evidências menores e cards mais simétricos.
+- Centralizar motion de headers, chips, footers editoriais e cards em `revealSectionSystem()`.
+- Usar `JetBrains Mono`, fonte realmente carregada, nos rótulos editoriais que ainda apontavam para `Space Mono`.
+- Manter conteúdo estrutural visível por padrão e preparar estados ocultos via JS quando GSAP estiver disponível.
+
+Problemas resolvidos:
+- Headers de Método, Cases e Impacto seguiam gramáticas diferentes.
+- Impacto ainda tinha desproporção entre título, subtítulo e evidências.
+- Cards de Impacto dependiam demais do conteúdo para controlar percepção de proporção.
+- Motion de Método e Impacto era mais fragmentado do que o sistema editorial pedia.
+- Havia referências a uma fonte não carregada (`Space Mono`) em elementos editoriais.
+- Parte do conteúdo estrutural ficava invisível por padrão caso a animação não rodasse.
+
+Problemas pendentes:
+- Validar visualmente em navegador interativo real os breakpoints 1680px, 1440px, 1366px, 1024px, 768px e 390px.
+- Conferir o GitHub Pages somente depois de uma publicação futura; esta rodada não fez commit nem push.
+- Avaliar, em rodada separada, se Sobre e Contato devem receber uma versão leve do `section-header` ou permanecer como blocos conceituais próprios.
+
+Coisas que não devem ser repetidas:
+- Não criar variações de header por seção sem motivo estrutural.
+- Não usar fonte não carregada em rótulos editoriais.
+- Não depender de classes `opacity-0` no HTML para conteúdo principal.
+- Não duplicar timelines GSAP quando o padrão compartilhado resolve.
+
+Próximos passos:
+- Abrir a versão local em browser interativo e validar os breakpoints principais.
+- Se aprovado, publicar por commit em `main` + push para `origin/main` em uma rodada separada.
+
+Status: Concluído localmente, sem commit.
+
+---
+
 ## 2026-05-16 — Publicação dos marcadores narrativos nos kickers
 
 Tipo: release / design / editorial-system

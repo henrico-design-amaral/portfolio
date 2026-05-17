@@ -57,10 +57,22 @@
   </script>
 
   <link rel="stylesheet" href="assets/css/site.css">
-  <noscript>
+      <noscript>
     <style>
-      .availability-badge-v2 {
+      .availability-badge-v2,
+      .sub,
+      .cta-wrapper,
+      .evidence,
+      .framework-card,
+      .case-card,
+      .impact-cell,
+      .editorial-reveal {
         opacity: 1 !important;
+      }
+
+      .reveal-text {
+        opacity: 1 !important;
+        transform: none !important;
       }
     </style>
   </noscript>
@@ -183,9 +195,9 @@
 
           <!-- Micro Taxonomy / Eyebrow -->
           <div class="flex items-center gap-4 mb-8 overflow-hidden">
-            <div class="w-8 h-[1px] bg-accent-500 eyebrow-line origin-left scale-x-0"></div>
+            <div class="w-8 h-[1px] bg-accent-500 eyebrow-line origin-left"></div>
             <span
-              class="font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-text-secondary font-bold eyebrow-text opacity-0"
+              class="font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-text-secondary font-bold eyebrow-text"
               data-t="eyebrow">SISTEMAS OPERACIONAIS · PLATAFORMAS ENTERPRISE · ARQUITETURA DE DECISÃO</span>
           </div>
 
@@ -202,14 +214,14 @@
 
           <!-- Supporting Paragraph -->
           <h2
-            class="font-body text-base md:text-xl text-text-secondary max-w-[75ch] leading-relaxed mb-16 opacity-0 sub"
+            class="font-body text-base md:text-xl text-text-secondary max-w-[75ch] leading-relaxed mb-16 sub"
             data-t="sub">
             Estruturo plataformas, fluxos operacionais e ecossistemas digitais para ambientes onde clareza impacta
             coordenação, escala e tomada de decisão.
           </h2>
 
           <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8 opacity-0 cta-wrapper">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8 cta-wrapper">
             <!-- Primary CTA -->
             <div class="magnetic-wrap">
               <a href="#cases"
@@ -235,7 +247,7 @@
 
       <!-- Clients Marquee — pinned to hero bottom -->
       <div
-        class="absolute bottom-0 left-0 right-0 border-t border-support-200/50 bg-base-100/70 backdrop-blur-md overflow-hidden evidence opacity-0 z-20">
+        class="absolute bottom-0 left-0 right-0 border-t border-support-200/50 bg-base-100/70 backdrop-blur-md overflow-hidden evidence z-20">
         <div class="max-w-[1440px] mx-auto px-6 py-5 flex items-center gap-8">
           <span class="font-mono text-[10px] tracking-widest uppercase text-text-tertiary flex-shrink-0 font-bold"
             data-t="worked-with">Clientes</span>
@@ -301,15 +313,16 @@
       <div class="max-w-[1440px] mx-auto relative z-10">
 
         <!-- Section Header — standardized system -->
-        <span class="sh-kicker">
-          <span class="sh-kicker-context">02.04.01 M</span><span data-t="s4.tag">02 / Método</span>
-        </span>
-        <div class="sh-grid" style="margin-bottom: 3rem;">
-          <div class="sh-title-col">
-            <h2 class="sh-title section-heading" data-t="s4.title">Engenharia<br>de Interação</h2>
-          </div>
-          <div>
-            <div class="sh-subtitle" style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-end;">
+        <div class="section-header">
+          <span class="section-kicker">
+            <span class="section-kicker-context">02.04.01 M</span><span data-t="s4.tag">02 / Método</span>
+          </span>
+          <div class="section-header-grid">
+            <div class="section-header-title-col">
+              <h2 class="section-header-title" data-t="s4.title">Engenharia<br>de Interação</h2>
+            </div>
+            <div class="section-header-divider" aria-hidden="true"></div>
+            <div class="section-header-subtitle">
               <div class="section-microstats section-microcopy">
                 <span data-t="s4.stat1">SISTEMAS <strong>3</strong></span>
                 <span data-t="s4.stat2">CAMADAS <strong>4</strong></span>
@@ -330,7 +343,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 relative" id="framework-grid">
 
           <!-- Step 1: Wide Item -->
-          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden opacity-0 group">
+          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
 
             <!-- Environmental Active Layer -->
             <div class="env-layer absolute inset-0 z-0 pointer-events-none opacity-0 scale-[0.98]">
@@ -360,7 +373,7 @@
           </div>
 
           <!-- Step 2: Regular Item -->
-          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden opacity-0 group">
+          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
 
             <!-- Environmental Active Layer -->
             <div class="env-layer absolute inset-0 z-0 pointer-events-none opacity-0 scale-[0.98]">
@@ -393,7 +406,7 @@
           </div>
 
           <!-- Step 3: Regular Item -->
-          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden opacity-0 group">
+          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
 
             <!-- Environmental Active Layer -->
             <div class="env-layer absolute inset-0 z-0 pointer-events-none opacity-0 scale-[0.98]">
@@ -423,7 +436,7 @@
           </div>
 
           <!-- Step 4: Wide Item -->
-          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden opacity-0 group">
+          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
 
             <!-- Environmental Active Layer -->
             <div class="env-layer absolute inset-0 z-0 pointer-events-none opacity-0 scale-[0.98]">
@@ -459,29 +472,6 @@
           <div class="section-microcopy" data-t="s4.microcomp">Método aplicado a produtos complexos.</div>
         </div>
 
-        <script>
-          // Ensure this runs after GSAP is loaded
-          window.addEventListener('load', () => {
-            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-              gsap.fromTo('.framework-card',
-                { y: 40, opacity: 0, scale: 0.98 },
-                {
-                  y: 0,
-                  opacity: 1,
-                  scale: 1,
-                  duration: 1.6,
-                  stagger: 0.2,
-                  ease: "power2.out",
-                  scrollTrigger: {
-                    trigger: "#framework-grid",
-                    start: "top 75%",
-                  }
-                }
-              );
-            }
-          });
-        </script>
-
       </div>
     </section>
 
@@ -493,20 +483,21 @@
     <section id="cases" class="py-32 md:py-48 px-6 relative overflow-hidden bg-page border-t border-support-200/50">
       <div class="max-w-[1600px] mx-auto relative z-10">
         <!-- Header Section — standardized system -->
-        <span class="sh-kicker">
-          <span class="sh-kicker-context">10.90.54 S</span>03 / Cases
-        </span>
-        <div class="sh-grid">
-          <div class="sh-title-col">
-            <h2 class="sh-title">Sistemas reais.<br>Impacto operacional.</h2>
-          </div>
-          <div>
-            <div class="sh-subtitle" style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-end;">
+        <div class="section-header">
+          <span class="section-kicker">
+            <span class="section-kicker-context">10.90.54 S</span>03 / Cases
+          </span>
+          <div class="section-header-grid">
+            <div class="section-header-title-col">
+              <h2 class="section-header-title">Sistemas reais.<br>Impacto operacional.</h2>
+            </div>
+            <div class="section-header-divider" aria-hidden="true"></div>
+            <div class="section-header-subtitle">
               <div class="section-microstats section-microcopy">
                 <span>SISTEMAS <strong>4</strong></span>
                 <span>OPERAÇÕES <strong>12+</strong></span>
               </div>
-              <p style="text-align: right;">Sistemas desenvolvidos para operações reais, onde design organiza informação, reduz ruído e sustenta decisões críticas.</p>
+              <p>Sistemas desenvolvidos para operações reais, onde design organiza informação, reduz ruído e sustenta decisões críticas.</p>
             </div>
           </div>
         </div>
@@ -857,12 +848,12 @@
 
                 // Card entrance
                 gsap.fromTo(card,
-                  { y: 64, opacity: 0 },
+                  { y: 24, opacity: 0 },
                   {
                     y: 0,
                     opacity: 1,
-                    duration: cfg.dur,
-                    delay: i * 0.12,
+                    duration: Math.min(cfg.dur, 1.05),
+                    delay: i * 0.1,
                     ease: cfg.ease,
                     scrollTrigger: { trigger: card, start: 'top 92%' }
                   }
@@ -874,11 +865,11 @@
 
                 if (title) {
                   gsap.fromTo(title,
-                    { y: cfg.textY, opacity: 0, filter: cfg.textBlur ? 'blur(' + cfg.textBlur + ')' : 'blur(0)' },
+                    { y: Math.min(cfg.textY, 20), opacity: 0, filter: cfg.textBlur ? 'blur(' + cfg.textBlur + ')' : 'blur(0)' },
                     {
                       y: 0, opacity: 1, filter: 'blur(0)',
-                      duration: cfg.textDur,
-                      delay: i * 0.12 + 0.25,
+                      duration: Math.min(cfg.textDur, 1.05),
+                      delay: i * 0.1 + 0.18,
                       ease: cfg.ease,
                       scrollTrigger: { trigger: card, start: 'top 87%' }
                     }
@@ -890,8 +881,8 @@
                     { y: 18, opacity: 0 },
                     {
                       y: 0, opacity: 1,
-                      duration: cfg.textDur * 0.75,
-                      delay: i * 0.12 + (behavior === 'distributed' ? 0.1 : behavior === 'regulated' ? 0.08 : 0.18),
+                      duration: Math.min(cfg.textDur * 0.75, 0.85),
+                      delay: i * 0.1 + (behavior === 'distributed' ? 0.08 : behavior === 'regulated' ? 0.06 : 0.12),
                       ease: cfg.ease,
                       scrollTrigger: { trigger: card, start: 'top 87%' }
                     }
@@ -934,15 +925,16 @@
 
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
         <!-- Section Header — standardized system (canonical reference) -->
-        <span class="sh-kicker">
-          <span class="sh-kicker-context">95.4K.12 E</span><span data-t="s5.tag">04 / Impacto</span>
-        </span>
-        <div class="sh-grid">
-          <div class="sh-title-col">
-            <h2 class="sh-title" data-t="s5.title">Impacto<br>operacional</h2>
-          </div>
-          <div>
-            <div class="sh-subtitle" style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-end;">
+        <div class="section-header">
+          <span class="section-kicker">
+            <span class="section-kicker-context">95.4K.12 E</span><span data-t="s5.tag">04 / Impacto</span>
+          </span>
+          <div class="section-header-grid">
+            <div class="section-header-title-col">
+              <h2 class="section-header-title" data-t="s5.title">Impacto<br>operacional</h2>
+            </div>
+            <div class="section-header-divider" aria-hidden="true"></div>
+            <div class="section-header-subtitle">
               <div class="section-microstats section-microcopy">
                 <span data-t="s5.stat1">SISTEMAS <strong>4</strong></span>
                 <span data-t="s5.stat2">OPERAÇÕES <strong>12+</strong></span>
@@ -1071,162 +1063,200 @@
     <div class="section-divider section-divider--dark" aria-hidden="true">
     </div>
 
-    <section id="about" class="py-32 md:py-48 px-6 bg-page text-[#3A332C] relative overflow-hidden">
-      <!-- Logic Traces — soft grid + fading topology remnants -->
-      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-[0.12]" aria-hidden="true"
-        data-parallax="0.04">
-        <div class="absolute inset-0 opacity-[0.1]" style="background-image: linear-gradient(to right, #63574A 1px, transparent 1px), linear-gradient(to bottom, #63574A 1px, transparent 1px); background-size: 64px 64px;"></div>
-        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M 100,0 L 100,800 L 400,800" fill="none" stroke="#63574A" stroke-width="0.3" />
-          <path d="M 300,200 L 600,200 L 600,600" fill="none" stroke="#63574A" stroke-width="0.3" stroke-dasharray="2 4" />
-          <circle cx="100" cy="800" r="2.5" fill="none" stroke="#63574A" stroke-width="0.3" opacity="0.5" />
-          <circle cx="600" cy="600" r="2" fill="#63574A" opacity="0.4" />
+    <section id="about" class="editorial-dark-section about-section">
+      <div class="editorial-ambient" aria-hidden="true">
+        <div class="editorial-ambient-grid" data-parallax="0.025"></div>
+        <svg class="editorial-ambient-lines" viewBox="0 0 1440 920" preserveAspectRatio="none">
+          <path class="env-flow" d="M120 160 H520 V330 H850 V560 H1260" />
+          <path class="env-flow-reverse" d="M180 760 H430 V610 H720 V420 H1180" />
+          <path d="M1020 120 H1300 V300" />
+          <circle cx="520" cy="330" r="3" />
+          <circle cx="850" cy="560" r="3" />
+          <circle cx="720" cy="420" r="3" />
         </svg>
+        <div class="ambient-coordinates ambient-coordinates--one">SYSTEM VIEW / 05.20.01</div>
+        <div class="ambient-coordinates ambient-coordinates--two">HUMAN LAYER / ACTIVE</div>
       </div>
 
-      <!-- Editorial ambient overlay for contemplative depth -->
-      <div class="absolute top-[20%] right-0 w-[35%] h-[40%] rounded-full bg-white/20 blur-[120px] pointer-events-none z-[1]" aria-hidden="true"></div>
-
-      <div class="max-w-[1200px] mx-auto relative z-10">
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24 mb-24">
-          <!-- LEFT SIDE — Editorial Manifesto -->
-          <div class="lg:col-span-7 flex flex-col">
-            <h2
-              class="font-display font-bold text-[3rem] md:text-[4.5rem] tracking-[-0.03em] leading-[1] mb-10 text-[#2C2621]"
-              data-t="ab.headline">
-              Interfaces são consequência.<br>
-              <em class="font-normal italic text-[#63574A]">Estrutura é o produto.</em>
-            </h2>
-
-            <!-- Editorial statement -->
-            <div class="mb-14 pl-6 border-l-2 border-accent-500/30">
-              <p class="font-display text-xl md:text-2xl text-system leading-relaxed italic max-w-[45ch]" data-t="ab.editorial">
-                Quando sistemas operam sob pressão, clareza deixa de ser estética. Ela se torna infraestrutura.
-              </p>
+      <div class="max-w-[1440px] mx-auto relative z-10">
+        <div class="section-header section-header--dark">
+          <span class="section-kicker">
+            <span class="section-kicker-context">05.20.01 H</span><span data-t="ab.tag">05 / Sobre</span>
+          </span>
+          <div class="section-header-grid">
+            <div class="section-header-title-col">
+              <h2 class="section-header-title" data-t="ab.title">Por trás<br>da estrutura.</h2>
             </div>
-
-            <div
-              class="font-body text-base md:text-lg text-[#534940] leading-relaxed max-w-[55ch] space-y-8 font-light">
-              <p data-t="ab.p1">
-                Há 20 anos projeto sistemas digitais para operações complexas, ambientes regulados e plataformas
-                enterprise. Meu trabalho não começa antes da interface, começa na estrutura que sustenta fluxos,
-                decisões e coordenação entre produto, tecnologia e operação.
-              </p>
-              <p data-t="ab.p2">
-                Ao longo da trajetória, atuei na construção de plataformas para Petrobras, Bayer, Banco do Brasil,
-                Ambev, Claro e Bradesco, sempre em contextos onde clareza operacional impacta eficiência, risco e
-                continuidade.
-              </p>
-              <p data-t="ab.p3">
-                Minha especialidade está em transformar complexidade organizacional em sistemas compreensíveis,
-                estruturando arquitetura da informação, fluxos operacionais e experiências capazes de sustentar escala,
-                restrições técnicas e tomada de decisão crítica.
-              </p>
+            <div class="section-header-divider" aria-hidden="true"></div>
+            <div class="section-header-subtitle">
+              <div class="section-microstats section-microcopy">
+                <span>SYSTEM VIEW</span>
+                <span>HUMAN LAYER</span>
+                <span>DECISION INFRASTRUCTURE</span>
+              </div>
+              <p data-t="ab.subtitle">20 anos transformando complexidade operacional em sistemas compreensíveis.</p>
             </div>
           </div>
+          <div class="section-header-rule" aria-hidden="true"></div>
+        </div>
 
-          <!-- RIGHT SIDE — Capabilities Index -->
-          <div
-            class="lg:col-span-5 flex flex-col gap-10 lg:pl-12 border-t lg:border-t-0 lg:border-l border-[#D1CCC4] pt-10 lg:pt-0">
+        <div class="about-narrative">
+          <p class="editorial-reveal" data-t="ab.p1">Não comecei no design desenhando telas. Comecei organizando informação, navegação, fluxos e decisões.</p>
+          <p class="editorial-reveal" data-t="ab.p2">Ao longo de 20 anos, trabalhei em produtos digitais para empresas como Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood e BMG, quase sempre em contextos onde a interface era apenas a camada visível de problemas maiores.</p>
+          <p class="editorial-reveal" data-t="ab.p3">Meu trabalho está no ponto onde produto, operação, tecnologia e decisão se encontram. Antes de pensar em componentes, eu tento entender o sistema: quem decide, com qual informação, sob qual pressão e com quais consequências.</p>
+          <p class="editorial-reveal" data-t="ab.p4">Hoje, uso design, IA e pensamento sistêmico para acelerar diagnóstico, estruturar fluxos, organizar raciocínio e transformar complexidade em experiências mais claras, operáveis e sustentáveis.</p>
+        </div>
 
-            <!-- Section 01 -->
-            <div>
-              <h3 class="font-mono text-[10px] tracking-[0.15em] uppercase text-[#8C7D6E] font-semibold mb-5"
-                data-t="ab.tax1.title">EXPERTISE</h3>
-              <ul class="font-body text-sm text-[#4A4138] leading-loose space-y-1.5">
-                <li>Enterprise Product Design</li>
-                <li>Operational Systems</li>
-                <li>Decision Infrastructure</li>
-                <li>Information Architecture</li>
-                <li>Critical Platforms</li>
-                <li>Operational UX</li>
-              </ul>
-            </div>
+        <div class="about-grid" aria-label="Capacidades profissionais">
+          <article class="about-card editorial-reveal">
+            <span class="about-card-index">01</span>
+            <h3 data-t="ab.card1.title">O que eu estruturo</h3>
+            <ul data-t="ab.card1.items">
+              <li>Fluxos operacionais</li>
+              <li>Plataformas internas</li>
+              <li>Produtos B2B</li>
+              <li>Sistemas regulados</li>
+              <li>Interfaces de decisão</li>
+            </ul>
+          </article>
 
-            <!-- Section 02 -->
-            <div>
-              <h3 class="font-mono text-[10px] tracking-[0.15em] uppercase text-[#8C7D6E] font-semibold mb-5"
-                data-t="ab.tax2.title">CAPACIDADES</h3>
-              <ul class="font-body text-sm text-[#4A4138] leading-loose space-y-1.5" data-t="ab.tax2.list">
-                <li>Estruturação de sistemas</li>
-                <li>Arquitetura operacional</li>
-                <li>Discovery estratégico</li>
-                <li>Modelagem de fluxos</li>
-                <li>Coordenação cross-functional</li>
-                <li>Visualização de decisão</li>
-              </ul>
-            </div>
+          <article class="about-card editorial-reveal">
+            <span class="about-card-index">02</span>
+            <h3 data-t="ab.card2.title">Como eu penso</h3>
+            <ul data-t="ab.card2.items">
+              <li>Contexto antes da tela</li>
+              <li>Clareza antes da estética</li>
+              <li>Decisão antes da entrega</li>
+              <li>Sistema antes do componente</li>
+            </ul>
+          </article>
 
-            <!-- Section 03 -->
-            <div>
-              <h3 class="font-mono text-[10px] tracking-[0.15em] uppercase text-[#8C7D6E] font-semibold mb-5"
-                data-t="ab.tax3.title">FERRAMENTAS</h3>
-              <p class="font-body text-sm text-[#4A4138] leading-loose max-w-[30ch]">
-                Figma · FigJam · Miro · Notion · Maze · Hotjar · Power BI · Claude · ChatGPT · Gemini
-              </p>
-            </div>
+          <article class="about-card editorial-reveal">
+            <span class="about-card-index">03</span>
+            <h3 data-t="ab.card3.title">Onde atuo melhor</h3>
+            <ul data-t="ab.card3.items">
+              <li>Enterprise</li>
+              <li>Operações críticas</li>
+              <li>Finanças</li>
+              <li>Seguros</li>
+              <li>Logística</li>
+              <li>Energia</li>
+              <li>Agronegócio</li>
+            </ul>
+          </article>
 
+          <article class="about-card editorial-reveal">
+            <span class="about-card-index">04</span>
+            <h3 data-t="ab.card4.title">Como trabalho hoje</h3>
+            <ul data-t="ab.card4.items">
+              <li>Figma</li>
+              <li>FigJam</li>
+              <li>Miro</li>
+              <li>Notion</li>
+              <li>Power BI</li>
+              <li>AccessMonitor</li>
+              <li>ChatGPT</li>
+              <li>Claude</li>
+              <li>Gemini</li>
+              <li>Google AI Studio</li>
+              <li>Manus</li>
+              <li>Antigravity</li>
+              <li>GitHub</li>
+              <li>Railway</li>
+              <li>Netlify</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="about-human-band editorial-reveal" aria-labelledby="beyond-interface-title">
+          <div>
+            <span class="section-microcopy section-microcopy--accent">HUMAN LAYER</span>
+            <h3 id="beyond-interface-title" data-t="ab.beyond.title">Além da interface</h3>
           </div>
-        </div>
-
-        <!-- BOTTOM — Institutional registry -->
-        <div class="pt-12 border-t border-[#D1CCC4] flex justify-center text-center">
-          <p
-            class="font-mono text-[10px] tracking-[0.2em] uppercase text-[#63574A] font-medium leading-relaxed max-w-[60ch]">
-            Petrobras · Bayer · Banco do Brasil · Ambev · Claro · Bradesco
-          </p>
-        </div>
-
+          <ul data-t="ab.beyond.items">
+            <li>Pai</li>
+            <li>Observador de sistemas</li>
+            <li>Aprendiz constante</li>
+            <li>IA aplicada ao design</li>
+            <li>Reposicionamento com método</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <!-- CONTACT → directly connected to About for environmental continuity -->
-    <section id="contact"
-      class="py-32 md:py-48 px-6 bg-[#472211] text-[#f2efe9] relative overflow-hidden text-center flex flex-col items-center justify-center">
-
-      <!-- Deep Abstract Network Background -->
-      <div class="absolute inset-0 w-full h-full z-0 pointer-events-none" aria-hidden="true"
-        data-parallax="-0.06">
-        <div class="absolute inset-0 opacity-[0.06]" style="background-image: linear-gradient(to right, #BE9C6E 1px, transparent 1px), linear-gradient(to bottom, #BE9C6E 1px, transparent 1px); background-size: 64px 64px;"></div>
-        <svg class="w-full h-full opacity-[0.08]" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <circle cx="50%" cy="120%" r="600" fill="none" stroke="#BE9C6E" stroke-width="1" />
-          <circle cx="50%" cy="120%" r="800" fill="none" stroke="#BE9C6E" stroke-width="0.5" stroke-dasharray="4 4" />
+    <section id="contact" class="editorial-dark-section contact-section">
+      <div class="editorial-ambient editorial-ambient--contact" aria-hidden="true">
+        <div class="editorial-ambient-grid" data-parallax="-0.02"></div>
+        <svg class="editorial-ambient-lines" viewBox="0 0 1440 780" preserveAspectRatio="none">
+          <path class="env-flow" d="M110 420 H420 V260 H770 V500 H1320" />
+          <path class="env-flow-reverse" d="M240 650 H620 V540 H940 V180 H1230" />
+          <circle cx="420" cy="260" r="3" />
+          <circle cx="770" cy="500" r="3" />
+          <circle cx="940" cy="180" r="3" />
         </svg>
+        <div class="ambient-coordinates ambient-coordinates--one">SIGNAL / STRUCTURE / DECISION</div>
+        <div class="ambient-coordinates ambient-coordinates--two">OPERATIONAL CLARITY / OPEN</div>
       </div>
 
-      <div class="max-w-[1000px] mx-auto relative z-10 flex flex-col items-center">
-        <h2
-          class="section-heading font-display font-medium text-5xl md:text-[6rem] lg:text-[8rem] tracking-[-0.03em] text-white leading-[0.95] mb-8"
-          data-t="ct.title">
-          Clareza não acontece.<br><em class="font-normal italic text-[#BE9C6E]">Ela é projetada.</em>
-        </h2>
+      <div class="max-w-[1440px] mx-auto relative z-10">
+        <div class="section-header section-header--dark">
+          <span class="section-kicker">
+            <span class="section-kicker-context">06.01.00 C</span><span data-t="ct.tag">06 / Contato</span>
+          </span>
+          <div class="section-header-grid">
+            <div class="section-header-title-col">
+              <h2 class="section-header-title" data-t="ct.title">Vamos falar sobre sistemas que precisam ficar mais claros.</h2>
+            </div>
+            <div class="section-header-divider" aria-hidden="true"></div>
+            <div class="section-header-subtitle">
+              <div class="section-microstats section-microcopy">
+                <span>OPERATIONAL CLARITY</span>
+                <span>ENTERPRISE / B2B</span>
+              </div>
+              <p data-t="ct.sub">Disponível para posições Senior, Lead ou Staff Product Designer em produtos enterprise, plataformas internas, operações críticas e ambientes regulados.</p>
+            </div>
+          </div>
+          <div class="section-header-rule" aria-hidden="true"></div>
+        </div>
 
-        <p class="reveal-step font-sans text-lg md:text-xl text-white/60 mb-16" data-t="ct.sub">
-          Enterprise Product Design para sistemas críticos e operações complexas.
-        </p>
+        <div class="contact-intent-grid">
+          <article class="contact-intent-card editorial-reveal">
+            <span class="about-card-index">01</span>
+            <h3 data-t="ct.card1.title">Para recrutadores</h3>
+            <p data-t="ct.card1.text">Busco oportunidades CLT ou PJ em times de produto, tecnologia e transformação digital.</p>
+          </article>
+          <article class="contact-intent-card editorial-reveal">
+            <span class="about-card-index">02</span>
+            <h3 data-t="ct.card2.title">Para empresas</h3>
+            <p data-t="ct.card2.text">Atuo em diagnóstico, estruturação de fluxos, arquitetura de informação, design de plataformas internas e sistemas operacionais complexos.</p>
+          </article>
+          <article class="contact-intent-card editorial-reveal">
+            <span class="about-card-index">03</span>
+            <h3 data-t="ct.card3.title">Para conversas técnicas</h3>
+            <p data-t="ct.card3.text">Aberto a trocas sobre IA aplicada ao design, design systems, produtos enterprise e visualização de decisão.</p>
+          </article>
+        </div>
 
-        <div class="reveal-step flex flex-wrap justify-center gap-4 md:gap-6">
-          <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/henrico-amaral/" target="_blank" rel="noopener"
-            class="group px-8 py-4 rounded-full bg-white/5 border border-white/10 flex items-center gap-3 hover:bg-white hover:text-[#472211] transition-all duration-300">
-            <span class="font-mono text-[10px] uppercase tracking-widest font-bold">LinkedIn</span>
-            <span class="font-mono text-sm group-hover:rotate-45 transition-transform duration-300">↗</span>
+        <nav class="contact-actions editorial-reveal" aria-label="Canais de contato">
+          <a href="https://www.linkedin.com/in/henrico-amaral/" target="_blank" rel="noopener" class="contact-action">
+            <span>LinkedIn</span><span aria-hidden="true">↗</span>
           </a>
-
-          <!-- WhatsApp -->
-          <a href="https://wa.me/5511953970704" target="_blank" rel="noopener"
-            class="group px-8 py-4 rounded-full bg-white/5 border border-white/10 flex items-center gap-3 hover:bg-white hover:text-[#472211] transition-all duration-300">
-            <span class="font-mono text-[10px] uppercase tracking-widest font-bold">WhatsApp</span>
-            <span class="font-mono text-sm group-hover:rotate-45 transition-transform duration-300">↗</span>
+          <a href="mailto:henricoamaral.design@gmail.com" class="contact-action">
+            <span>E-mail</span><span aria-hidden="true">↗</span>
           </a>
-
-          <!-- Email -->
-          <a href="mailto:henricoamaral.design@gmail.com"
-            class="group px-8 py-4 rounded-full bg-white/5 border border-white/10 flex items-center gap-3 hover:bg-white hover:text-[#472211] transition-all duration-300">
-            <span class="font-mono text-[10px] uppercase tracking-widest font-bold">E-mail</span>
-            <span class="font-mono text-sm group-hover:rotate-45 transition-transform duration-300">↗</span>
+          <a href="https://wa.me/5511953970704" target="_blank" rel="noopener" class="contact-action">
+            <span>WhatsApp</span><span aria-hidden="true">↗</span>
           </a>
+          <a href="docs/Henrico-Amaral-CV.md" download class="contact-action">
+            <span data-t="ct.cv">Baixar CV</span><span aria-hidden="true">↓</span>
+          </a>
+          <a href="#cases" class="contact-action">
+            <span data-t="ct.cases">Ver cases</span><span aria-hidden="true">↓</span>
+          </a>
+        </nav>
+
+        <div class="contact-meta section-microcopy" data-t="ct.meta">
+          São Paulo · Remoto / Híbrido · Português / Inglês profissional
         </div>
       </div>
     </section>

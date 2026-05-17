@@ -2,6 +2,34 @@
 
 Este arquivo registra a stack real e as decisões técnicas do projeto Portfolio após inspeção estrutural.
 
+## 2026-05-16 — Sobre e Contato no sistema compartilhado
+
+Decisão:
+As seções Sobre (`#about`) e Contato (`#contact`) passam a usar o mesmo sistema técnico de headers, microcopy e reveal progressivo de Método, Cases e Impacto.
+
+Aplicação:
+- `index.html` usa `section-header`, `section-header--dark`, `section-header-rule` e blocos semânticos próprios para narrativa, capacidades e intenção de contato.
+- `assets/css/site.css` adiciona o sistema escuro editorial `editorial-dark-section`, `about-card`, `about-human-band`, `contact-intent-card` e `contact-action`.
+- `assets/js/site.js` inclui Sobre e Contato em `revealSectionSystem()` com `immediateRender: false` para preservar conteúdo visível por padrão antes do ScrollTrigger.
+- Criado `docs/Henrico-Amaral-CV.md` como destino inicial do CTA de CV, evitando botão quebrado enquanto não houver PDF final.
+
+Regra:
+Novas animações editoriais devem preservar legibilidade sem depender de estado inicial invisível. Para blocos abaixo da dobra, usar `immediateRender: false` quando o motion for baseado em ScrollTrigger.
+
+## 2026-05-16 — Sistema compartilhado de motion e fallback progressivo
+
+Decisão:
+As animações de header, chips, footer editorial e cards de Método, Cases e Impacto passam por uma função compartilhada em `assets/js/site.js`: `revealSectionSystem(sectionSelector, cardsSelector)`.
+
+Motivo:
+Evitar que cada seção tenha sua própria gramática de entrada, duração, stagger e easing. O motion deve reforçar o sistema editorial único, não criar identidades separadas por seção.
+
+Regras técnicas:
+- Conteúdo estrutural deve estar visível no HTML/CSS por padrão.
+- GSAP pode preparar estados de entrada apenas quando estiver disponível.
+- `prefers-reduced-motion` deve forçar visibilidade imediata dos elementos animados.
+- Evitar scripts inline de animação por seção quando uma função compartilhada resolver o comportamento.
+
 ## Configuração do Projeto
 
 - **Pasta local**: Portfolio

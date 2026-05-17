@@ -2,6 +2,22 @@
 
 Problemas, pendências e oportunidades de melhoria identificados.
 
+## 2026-05-16 — Pendência pós-ajuste de Sobre e Contato
+
+### Validação visual de Sobre e Contato em navegador interativo real
+- **Onde**: `#about`, `#contact`, CTA de CV e bloco final/rodapé.
+- **Descrição**: As seções foram reestruturadas localmente e validadas por sintaxe/HTTP/DOM. O ambiente headless continua pouco confiável para observar o estado final das animações GSAP, especialmente em deep-links e capturas com hash.
+- **Impacto**: Pode haver pequenos ajustes finos de altura, ritmo de entrada, quebras de título ou densidade dos chips em navegador interativo.
+- **Próximo Passo**: Abrir localmente a página e validar 1366px, 1024px, 768px e 390px; conferir PT/EN e o CTA `docs/Henrico-Amaral-CV.md`.
+
+## 2026-05-16 — Pendência pós-auditoria sistêmica
+
+### Validação visual em navegador interativo real
+- **Onde**: Método, Cases, Impacto, Hero.
+- **Descrição**: A auditoria local gerou screenshots headless via Microsoft Edge e confirmou HTTP 200, mas o ambiente headless não foi confiável para observar o estado final das animações GSAP. A validação visual final deve ser feita em navegador interativo.
+- **Impacto**: Pode haver pequenos ajustes finos de viewport, ritmo de motion ou quebra de microflows que só aparecem com inspeção visual manual.
+- **Próximo Passo**: Abrir localmente a página e validar 1680px, 1440px, 1366px, 1024px, 768px e 390px antes de uma próxima publicação.
+
 ## Pendências Técnicas
 
 ### 0. Validação visual dos microtextos editoriais

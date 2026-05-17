@@ -1,5 +1,42 @@
 # VISUAL DECISIONS — Portfolio
 
+## 2026-05-16 — Sobre e Contato como fechamento editorial escuro
+
+Decisão:
+Sobre e Contato deixam de ser fechamento genérico e passam a formar um bloco final escuro, técnico e institucional, continuando a lógica visual de Hero, Método, Cases e Impacto.
+
+Aplicação visual:
+- Sobre usa o `section-header` canônico em variante escura, narrativa humana em bloco editorial largo, quatro blocos técnicos e uma faixa humana discreta.
+- Contato usa o mesmo header editorial, três cards de intenção e CTAs objetivos para LinkedIn, E-mail, WhatsApp, CV e Cases.
+- A camada ambiental usa linhas finas, grid sutil, ruído leve e coordenadas técnicas, sem glow pesado ou aparência SaaS.
+- A seção humaniza Henrico com presença profissional, sem transformar o conteúdo em lifestyle.
+
+Regra:
+Sobre deve conectar trajetória, repertório, IA e pensamento sistêmico. Contato deve funcionar como conversão estratégica para recrutadores, empresas e conversas técnicas, não como rodapé decorativo.
+
+## 2026-05-16 — Auditoria global de consistência sistêmica
+
+Decisão:
+Método, Cases e Impacto passam a usar um `section-header` canônico, com kicker editorial, grid de título à esquerda, divisor vertical fino e subtítulo/microelementos à direita.
+
+Padrão criado:
+- `.section-header`
+- `.section-kicker`
+- `.section-kicker-context`
+- `.section-header-grid`
+- `.section-header-title-col`
+- `.section-header-divider`
+- `.section-header-title`
+- `.section-header-subtitle`
+
+Aplicação visual:
+- Método preserva clareza metodológica, mas agora entra na mesma gramática editorial de Cases e Impacto.
+- Cases preserva sua atmosfera autoral e passa a usar a mesma estrutura de header das demais seções.
+- Impacto deixa de ter título e evidências desproporcionais; cards mantêm grid 2x2 com alturas e colunas mais controladas.
+
+Regra:
+Novas seções editoriais não devem criar headers próprios se o padrão `section-header` atender. Variações devem nascer de conteúdo, ritmo e microtexto, não de uma gramática visual isolada.
+
 Registro de decisões estéticas e refinamentos do sistema visual consolidado.
 
 ## Conceito Central: "Infraestrutura de Decisão"

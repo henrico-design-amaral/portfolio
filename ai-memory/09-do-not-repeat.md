@@ -51,6 +51,8 @@ Evitar:
 - background competindo com conteúdo
 - contraste baixo em texto importante
 - texto pequeno demais para parecer sofisticado
+- transformar Sobre em seção clara/desconectada do sistema escuro final quando a home já estiver em linguagem editorial técnica
+- transformar a camada humana em lifestyle ou autobiografia decorativa
 
 ## Não repetir na estrutura
 
@@ -71,6 +73,9 @@ Evitar:
 - **Não recriar `origin` se ele já existir**: O remote atual do Portfolio é `https://github.com/henrico-design-amaral/portfolio.git`.
 - **Não voltar o remote para `Portfolio.git` uppercase**: O GitHub aceita redirect, mas avisa que o repositório oficial foi movido para `portfolio.git`.
 - **Não publicar GitHub Pages por fora do fluxo da branch principal sem necessidade**: O fluxo atual é commit em `main` + push para `origin/main`.
+- **Não criar headers de seção isolados quando o `section-header` atende**: Método, Cases e Impacto usam o mesmo padrão canônico de kicker, título, divisor e subtítulo.
+- **Não deixar conteúdo principal invisível por padrão dependendo de animação**: O HTML/CSS deve ser legível sem GSAP; estados ocultos devem ser preparados pelo JavaScript quando ele estiver disponível.
+- **Não criar motion específico demais por seção sem necessidade**: Usar `revealSectionSystem()` para headers, chips, rodapés editoriais e cards antes de inventar timelines paralelas.
 
 ## Não repetir no processo
 
