@@ -1,3 +1,72 @@
+/* ═══════════════════════════════════════════════
+   NARRATIVE BACKGROUND SYSTEM
+   Single surface that progresses from light (Hero)
+   to dark (Contact) via CSS custom properties.
+   Each section sets only --nbg-base, --nbg-grid-op, --nbg-noise-op.
+   ═══════════════════════════════════════════════ */
+
+:root {
+  --nbg-grid-color: 99, 87, 74;       /* #63574A */
+  --nbg-grid-size: 64px;
+  --nbg-grid-inner: 16px;
+  --grid-line: rgba(var(--nbg-grid-color), var(--nbg-grid-op, 0.10));
+  --grid-inner-line: rgba(var(--nbg-grid-color), calc(var(--nbg-grid-op, 0.10) * 0.28));
+}
+
+/* Shared structural grid injected on every section via .nbg */
+.nbg {
+  position: relative;
+  overflow: hidden;
+}
+
+.nbg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to right, var(--grid-inner-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-inner-line) 1px, transparent 1px);
+  background-size:
+    var(--nbg-grid-size) var(--nbg-grid-size),
+    var(--nbg-grid-size) var(--nbg-grid-size),
+    var(--nbg-grid-inner) var(--nbg-grid-inner),
+    var(--nbg-grid-inner) var(--nbg-grid-inner);
+  mask-image: linear-gradient(180deg,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%);
+}
+
+/* Per-section tonal tokens */
+#hero    { --nbg-grid-op: 0.11; }
+#process { --nbg-grid-op: 0.065; }
+#cases   { --nbg-grid-op: 0.04; }
+#impact  { --nbg-grid-op: 0.055; }
+#about   { --nbg-grid-op: 0.07; }
+#contact { --nbg-grid-op: 0.045; }
+
+/* ─── STANDARDIZED SECTION PADDING ─── */
+.section-pad {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+@media (max-width: 1023px) {
+  .section-pad { padding-top: 5rem; padding-bottom: 5rem; }
+}
+@media (max-width: 639px) {
+  .section-pad { padding-top: 4rem; padding-bottom: 4rem; }
+}
+
 body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antialiased; }
 ::selection { background: #BE9C6E; color: #DAD5CD; }
 
@@ -719,7 +788,7 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
 .editorial-dark-section {
   position: relative;
   overflow: hidden;
-  padding: clamp(7rem, 12vw, 12rem) 1.5rem;
+  padding: 6rem 1.5rem;
   background:
     linear-gradient(180deg, #130f0c 0%, #17110e 48%, #120d0a 100%);
   color: #f2efe9;
@@ -727,15 +796,21 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
   scroll-margin-top: 96px;
 }
 
+@media (max-width: 1023px) {
+  .editorial-dark-section { padding-top: 5rem; padding-bottom: 5rem; }
+}
+@media (max-width: 639px) {
+  .editorial-dark-section { padding-top: 4rem; padding-bottom: 4rem; }
+}
+
 .contact-section {
-  padding-top: clamp(6rem, 10vw, 10rem);
   background:
     linear-gradient(180deg, #120d0a 0%, #26170f 52%, #472211 100%);
 }
 
 .contact-section .section-header-title {
-  max-width: 940px;
-  font-size: clamp(2.65rem, 4.6vw, 5.2rem);
+  max-width: 860px;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
   line-height: 0.94;
   text-wrap: balance;
 }
@@ -875,21 +950,99 @@ body { background-color: #DAD5CD; color: #472211; -webkit-font-smoothing: antial
   letter-spacing: -0.025em;
 }
 
+/* ─── ABOUT LAYOUT WITH PHOTO ─── */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(3rem, 6vw, 5rem);
+  margin-bottom: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+@media (min-width: 1024px) {
+  .about-layout {
+    grid-template-columns: 1fr 360px;
+    align-items: start;
+    gap: clamp(4rem, 7vw, 7rem);
+  }
+}
+
+.about-photo-frame {
+  position: relative;
+  border: 1px solid rgba(242, 239, 233, 0.14);
+  border-radius: 4px;
+  overflow: hidden;
+  background: rgba(19, 15, 12, 0.6);
+  aspect-ratio: 4 / 5;
+  max-width: 360px;
+}
+
+@media (max-width: 1023px) {
+  .about-photo-frame {
+    max-width: 260px;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+.about-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(30%) contrast(1.05);
+  display: block;
+}
+
+/* grain overlay */
+.about-photo-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.07'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.about-photo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding: 1.25rem 1rem 1rem;
+  background: linear-gradient(to top, rgba(19,15,12,0.92) 0%, transparent 100%);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.563rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(242, 239, 233, 0.56);
+  line-height: 1.6;
+}
+
+/* ─── ABOUT GRID — 5 cards, responsive ─── */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.9rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .about-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 1180px) {
+@media (min-width: 1024px) {
   .about-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
