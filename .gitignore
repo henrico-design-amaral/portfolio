@@ -15,3 +15,6 @@ case-references/
 # Keep only published/public assets in Git
 # Local backup files
 *.bak_*
+
+# Local backup files
+*.bak_*
