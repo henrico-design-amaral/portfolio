@@ -2,6 +2,33 @@
 
 Problemas, pendências e oportunidades de melhoria identificados.
 
+## 2026-05-21 — Pendências pós-publicação
+
+### CV final em PDF (pendente)
+- **Onde**: `docs/Henrico-Amaral-CV.md`
+- **Descrição**: Não há PDF de CV em `docs/` ou `assets/`. O CTA usa "Ver CV" e aponta para o Markdown.
+- **Próximo passo**: Gerar e publicar um PDF final quando o conteúdo do CV estiver aprovado.
+
+### Foto real do Henrico em Sobre (pendente)
+- **Onde**: `assets/img/henrico-amaral.jpg` (ainda inexistente)
+- **Descrição**: O bloco `.about-photo-frame` está implementado. A foto atual `foto.webp` é um placeholder. O frame está funcional e responsivo.
+- **Próximo passo**: Substituir por foto real em crop 4:5 (ex: 720x900px). Preto e branco ou duotone quente.
+
+### Validação visual em navegador (pendente)
+- **Onde**: Home publicada
+- **Descrição**: Necessário validar 1680px, 1440px, 1366px, 1024px, 768px e 390px visualmente.
+- **Próximo passo**: Abrir a URL publicada e inspecionar cada breakpoint.
+
+### Validação visual em navegador interativo
+- **Onde**: Home publicada e versão local.
+- **Descrição**: O Browser interno do Codex não expôs instância `iab` nesta rodada. A validação visual precisa ser feita por fallback headless/local e, idealmente, também por navegador interativo manual.
+- **Próximo passo**: Validar 1680px, 1440px, 1366px, 1024px, 768px e 390px antes de publicar.
+
+### `ai-memory/04-content-style.md` ainda precisa de revisão editorial
+- **Onde**: `ai-memory/04-content-style.md`
+- **Descrição**: O arquivo está com conteúdo de design system, não de estilo textual. Isso não bloqueia a home, mas pode confundir futuras alterações de copy.
+- **Próximo passo**: Reescrever em uma rodada pequena de documentação, separada da correção visual/conteúdo da home.
+
 ## 2026-05-17 — Pendências pós-revisão sistêmica
 
 ### Foto real do Henrico em Sobre

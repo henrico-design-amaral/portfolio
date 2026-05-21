@@ -1,5 +1,32 @@
 # VISUAL DECISIONS — Portfolio
 
+## 2026-05-21 — i18n da legenda da foto do Sobre e refinamento do subtítulo do Hero
+
+Decisão:
+A legenda da foto na seção Sobre passou a ser traduzível via `data-t="ab.photo.caption"`, com versões PT e EN no objeto COPY. Antes estava hardcoded em inglês.
+
+O subtítulo do Hero foi simplificado: "plataformas, fluxos e sistemas digitais" → "plataformas, fluxos e sistemas", removendo "digitais" como palavra redundante.
+
+Publicação:
+Branch `fix/home-signature-content-audit` mergeada em `main` e publicada via GitHub Pages.
+
+## 2026-05-21 — Assinatura autoral e evidências sem KPI inflado
+
+Decisão:
+A frase "Pense simples. Faça melhor. Torne-se inevitável." foi incorporada como assinatura editorial, não como headline principal.
+
+Aplicação:
+- Hero: microassinatura abaixo dos CTAs, com baixo peso visual, mono, tracking alto e opacidade controlada.
+- Contato: fechamento mais forte antes dos canais de contato, funcionando como síntese autoral.
+- Footer: não recebeu repetição adicional para evitar excesso de slogan.
+
+Governança visual:
+- A seção Impacto passa a usar "Impacto observável" em vez de "Impacto mensurável", porque agora mistura uma métrica quantitativa documentada com evidências qualitativas concretas.
+- Os cards de cases deixam de usar "Usuários" quando o conteúdo é qualitativo. O eixo passa a ser Sistema / Contexto / Escopo / Impacto.
+- Letter spacing negativo foi removido dos pontos editados nesta rodada para preservar legibilidade e evitar compressão visual.
+- A escala cromática passa a usar uma progressão mais linear entre superfície clara e fechamento escuro: `#f2efe9`, `#e6ded1`, `#d8cbb8`, `#b89f82`, `#80644a`, `#5d3f2e`, `#472211`.
+- O banner de clientes não deve depender de `transform` para centralização, porque GSAP/reduced-motion pode sobrescrever transformações. A centralização deve vir de `left`/`right` explícitos com limite máximo de largura.
+
 ## 2026-05-16 — Sobre e Contato como fechamento editorial escuro
 
 Decisão:

@@ -177,7 +177,28 @@ Garantir que os dados de impacto (KPIs) sejam indexáveis por motores de busca (
 - O tom deve refletir o posicionamento de "Enterprise Product Designer", focando em resultados estruturais e escala corporativa.
 
 **Lastro Documental:**
-As métricas exibidas (95% automação, 4K pontos de recepção, etc.) foram auditadas e encontram-se suportadas pelos materiais brutos em `case-references/`.
+As métricas exibidas devem ser auditadas caso a caso. A revisão de 2026-05-21 manteve apenas o 95% da Petrobras como métrica quantitativa visível e converteu Bayer, Ambev e BMG para evidências qualitativas concretas quando o lastro textual era insuficiente.
+
+## 2026-05-21 — Fonte real do GitHub Pages e governança de métricas
+
+Decisão:
+O GitHub Pages publicado em `https://henrico-design-amaral.github.io/portfolio/` está servindo o conteúdo da branch `main`. A branch `gh-pages` existe no remoto, mas o HTML publicado corresponde byte a byte ao `index.html` de `main`, não ao `gh-pages`.
+
+Validação:
+- `index.html` local = raw `main/index.html`
+- site publicado = raw `main/index.html`
+- site publicado != raw `gh-pages/index.html`
+- repositório público com `default_branch: main`
+
+Governança de métricas:
+- Petrobras: 95% mantido como métrica quantitativa por lastro em `docs/CASE_PETROBRAS.md` e auditoria anterior.
+- Petrobras: 400+ removido da home por falta de lastro textual localizado.
+- Bayer: 4.000 pontos removido da home; `CASE_BAYER.md` ainda trata métricas como lacuna.
+- Ambev: 6 módulos removido da home; `CASE_AMBEV.md` descreve arquitetura em camadas, mas não comprova 6 módulos.
+- BMG: menos de 24 horas removido da home; aparece como resultado esperado no case, sem confirmação primária localizada.
+
+Regra:
+Números sem lastro textual claro não devem aparecer como KPI na home. Usar evidência qualitativa concreta quando o impacto for estrutural.
 
 ## 2026-05-16 — Refinamento Editorial e Governança de Métricas
 

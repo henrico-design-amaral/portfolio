@@ -8,9 +8,10 @@ const COPY = {
     'eyebrow':      'SISTEMAS OPERACIONAIS · DECISÃO · ESCALA',
     'h1.l1':        'Arquitetura de decisão',
     'h1.l2':        'para sistemas críticos.',
-    'sub':          'Estruturo plataformas, fluxos e ecossistemas digitais para ambientes onde clareza sustenta coordenação, escala e tomada de decisão.',
+      'sub':          'Estruturo plataformas, fluxos e sistemas para operações onde clareza sustenta coordenação, escala e tomada de decisão.',
     'cta.primary':  'Ver caso SALA CAR',
     'cta.secondary':'Método',
+    'signature':    'Pense simples. Faça melhor. Torne-se inevitável.',
     'worked-with':  'Clientes',
     's2.tag':       '01 / Território',
     's2.title':     'Onde atuo',
@@ -25,16 +26,20 @@ const COPY = {
     's3.all':       'Todos os casos',
     'c1.client':    'Petrobras (SALA CAR)',
     'c1.desc':      'Plataforma de consolidação de ocorrências ambientais offshore. Centralização de sinais operacionais distribuídos para garantir resposta estruturada a eventos críticos.',
-    'c1.metric':    '95% de automação no report',
+    'c1.metric':    '95% de automação documental',
+    'c1.metricLabel': 'EVIDÊNCIA QUANTITATIVA',
     'c2.client':    'Bayer',
     'c2.desc':      'Plataforma de Dados Agrícolas. Estruturação da safra como unidade central de análise, conectando indicadores técnicos e validação institucional.',
     'c2.metric':    'Múltiplas camadas integradas',
+    'c2.metricLabel': 'EVIDÊNCIA QUALITATIVA',
     'c3.client':    'AmBev',
     'c3.desc':      'Monitoramento operacional de logística. Organização de indicadores em camadas de leitura para detecção de quebras e acompanhamento contínuo de estados de distribuição nacional.',
     'c3.metric':    'Leitura contínua em escala',
+    'c3.metricLabel': 'EVIDÊNCIA QUALITATIVA',
     'c4.client':    'BMG (Conta PJ)',
     'c4.desc':      'Banking digital modular para pequenas empresas (MEI a LTDA). Redução de burocracia no onboarding com escalabilidade progressiva de serviços financeiros e fiscais.',
     'c4.metric':    'Onboarding modular e flexível',
+    'c4.metricLabel': 'EVIDÊNCIA QUALITATIVA',
     'view-case':    'Ver caso',
     's4.tag':       'CONTEXTO · ESTRUTURA · INTERAÇÃO',
     's4.title':     'Engenharia de interação<br>para sistemas complexos.',
@@ -48,29 +53,50 @@ const COPY = {
     's4.microphrase': 'Estruturas invisíveis, decisões mais claras.',
     's4.microflow': 'Contexto → Estrutura → Interação → Decisão',
     's4.microcomp': 'Método aplicado a produtos complexos.',
-    's5.desc':      'Métricas de eficiência e escala alcançadas através da reestruturação de arquiteturas críticas.',
+    's5.desc':      'Evidências quantitativas quando há lastro, evidências qualitativas quando o impacto é estrutural.',
     'skip':         'Ir para o conteúdo',
     'nav.contact':  'Contato',
     'worked-with':  'Clientes',
     'c1.i':         'Coordenação de Riscos Operacionais',
-    'c1.u':         '400+',
-    'c2.u':         'Escala Nacional',
-    'c2.i':         'Visibilidade de Rupturas Operacionais',
-    'c3.u':         'Análise Técnica',
-    'c3.i':         'Rastreabilidade de Dados Agrícolas',
-    'c4.u':         'Acesso Simplificado',
-    'c4.i':         'Fluxos Regulados Simplificados',
+    's3.header.kicker': 'SISTEMAS REAIS · IMPACTO OPERACIONAL',
+    's3.header.title': 'Sistemas reais.<br>Impacto operacional.',
+    's3.header.meta': 'ENERGIA · LOGÍSTICA · AGRO · FINANÇAS',
+    's3.header.desc': 'Projetos em energia, logística, agronegócio e finanças onde design reduziu ruído, reorganizou fluxos e tornou decisões críticas mais rastreáveis.',
+    'case.label.system': 'Sistema',
+    'case.label.context': 'Contexto',
+    'case.label.scope': 'Escopo',
+    'case.label.impact': 'Impacto',
+    'case.aria.petro': 'Abrir caso Petrobras',
+    'case.aria.ambev': 'Abrir caso Ambev',
+    'case.aria.bayer': 'Abrir caso Bayer',
+    'case.aria.bmg': 'Abrir caso BMG',
+    'card.petro.system': 'Monitoramento<br>ambiental offshore',
+    'card.petro.context': 'Operação<br>offshore',
+    'card.petro.scope': 'Resposta<br>ambiental',
+    'card.petro.impact': 'Coordenação de<br>riscos operacionais',
+    'card.ambev.system': 'Gestão logística<br>distribuída',
+    'card.ambev.context': 'Escala<br>nacional',
+    'card.ambev.scope': 'Supply<br>chain',
+    'card.ambev.impact': 'Visibilidade de<br>rupturas operacionais',
+    'card.bayer.system': 'Inteligência<br>agronômica',
+    'card.bayer.context': 'Análise<br>técnica',
+    'card.bayer.scope': 'Dados<br>agrícolas',
+    'card.bayer.impact': 'Rastreabilidade de<br>dados agrícolas',
+    'card.bmg.system': 'Plataforma financeira<br>empresarial',
+    'card.bmg.context': 'Ambiente<br>regulado',
+    'card.bmg.scope': 'Conta<br>PJ',
+    'card.bmg.impact': 'Fluxos regulados<br>simplificados',
     'm1.label':     'Visibilidade Operacional',
-    'm1.desc':      'Identifico informações, dependências e pontos críticos antes de qualquer definição visual.',
+    'm1.desc':      'Mapeio sinais, fontes de dados, responsáveis e pontos críticos antes de definir qualquer superfície.',
     'm2.label':     'Estrutura de Relações',
-    'm2.desc':      'Organizo conexões entre áreas, fluxos e regras para reduzir inconsistências e facilitar decisões.',
+    'm2.desc':      'Desenho relações entre áreas, permissões, estados e exceções para reduzir inconsistências operacionais.',
     'm3.label':     'Clareza Cognitiva',
-    'm3.desc':      'Defino prioridades, hierarquias e contextos para tornar sistemas mais compreensíveis e navegáveis.',
+    'm3.desc':      'Priorizo informação, hierarquia e contexto para diminuir esforço cognitivo em fluxos densos.',
     'm4.label':     'Superfícies de Decisão',
-    'm4.desc':      'Transformo regras e necessidades operacionais em interfaces que ajudam pessoas a agir com segurança e clareza.',
+    'm4.desc':      'Transformo regras, alertas e decisões em interfaces que ajudam equipes a agir com segurança e clareza.',
     's5.tag':       'EVIDÊNCIA · ESCALA · RASTREABILIDADE',
-    's5.title':     'Impacto mensurável.<br>Operação rastreável.',
-    's5.desc':      'Evidências de escala, rastreabilidade e coordenação em sistemas enterprise, produtos regulados e operações críticas.',
+    's5.title':     'Impacto observável.<br>Operação rastreável.',
+    's5.desc':      'Evidências quantitativas quando há lastro, evidências qualitativas quando o impacto é estrutural.',
     's5.stat1':     'RESULTADOS OBSERVÁVEIS EM SISTEMAS COMPLEXOS',
     's5.stat2':     'OPERAÇÕES <strong>12+</strong>',
     's5.stat3':     'DADOS <strong>+</strong>',
@@ -89,27 +115,29 @@ const COPY = {
     'imp1.desc':    'Consolidação de relatórios operacionais reorganizada para leitura contínua em contexto offshore.',
     'imp1.type':    'Operação crítica',
     'imp2.client':  'Bayer',
-    'imp2.dim':     'Escala de dados',
-    'imp2.val':     '4.000 pontos integrados',
-    'imp2.desc':    'Recepção de dados agrícolas consolidada em um ecossistema unificado de análise técnica.',
+    'imp2.dim':     'Dados agrícolas',
+    'imp2.val':     'Rastreabilidade de dados agrícolas',
+    'imp2.desc':    'Informações agrícolas reorganizadas em torno da cultura como unidade central de análise, conectando dados técnicos, comparação de indicadores e registro de decisões dentro de um fluxo estruturado.',
     'imp2.type':    'Dados agrícolas',
     'imp3.client':  'Ambev',
-    'imp3.dim':     'Arquitetura modular',
-    'imp3.val':     '6 módulos operacionais',
-    'imp3.desc':    'Estrutura de supply chain organizada para leitura de disponibilidade, ruptura e coordenação logística.',
+    'imp3.dim':     'Monitoramento logístico',
+    'imp3.val':     'Visibilidade de rupturas operacionais',
+    'imp3.desc':    'Estrutura de supply chain organizada para leitura de disponibilidade, ruptura e coordenação logística. A plataforma passou a refletir o estado real da operação, transformando dados dispersos em uma visão operacional compartilhada.',
     'imp3.type':    'Supply chain',
     'imp4.client':  'BMG',
     'imp4.dim':     'Ambiente regulado',
-    'imp4.val':     'Rastreabilidade completa',
-    'imp4.desc':    'Jornada PJ estruturada com validações, estados e fluxos aderentes a exigências operacionais e regulatórias.',
+    'imp4.val':     'Fluxos regulados simplificados',
+    'imp4.desc':    'Jornada PJ estruturada com validações, estados e fluxos aderentes a exigências operacionais e regulatórias. A conta digital foi pensada para pequenas empresas sem remover a segurança e a conformidade bancária do processo.',
     'imp4.type':    'Banking / compliance',
      'ab.tag':            'TRAJETÓRIA · MÉTODO · REPERTÓRIO',
      'ab.title':          'Por trás<br>da estrutura.',
-     'ab.subtitle':       '20 anos entre design, produto, tecnologia e operação.',
+     'ab.subtitle':       '20 anos entre design, tecnologia e produto; 15+ anos em UX/Product Design para ambientes complexos.',
      'ab.p1':             'Não comecei no design desenhando telas. Comecei organizando informação, navegação, fluxos e decisões.',
      'ab.p2':             'Ao longo de 20 anos, trabalhei em produtos digitais complexos para empresas como Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood e BMG.',
      'ab.p3':             'Meu trabalho está no ponto onde produto, operação, tecnologia e decisão se encontram. Antes de pensar em componentes, eu tento entender o sistema: quem decide, com qual informação, sob qual pressão e com quais consequências.',
-     'ab.p4':             'Hoje, combino design, IA e pensamento sistêmico para transformar complexidade em experiências mais claras, operáveis e sustentáveis.',
+     'ab.p4':             'Hoje, combino design, IA e pensamento sistêmico para transformar complexidade em sistemas mais claros, operáveis e sustentáveis.',
+      'ab.photo.alt':      'Henrico Amaral, Senior Product Designer especializado em sistemas enterprise.',
+      'ab.photo.caption': 'Henrico Amaral<br>Product Designer Sênior · Infraestrutura de Decisão<br>São Paulo · Sistemas Enterprise · Workflow assistido por IA',
      'ab.card1.title':    'Território',
      'ab.card1.items':    '<li>Enterprise</li><li>B2B</li><li>Operações críticas</li><li>Sistemas regulados</li>',
      'ab.card2.title':    'Prática',
@@ -126,17 +154,18 @@ const COPY = {
      'modal.case':        'Caso',
      'ct.tag':            'SÃO PAULO · REMOTO/HÍBRIDO · PT/EN',
      'ct.title':          'Sistemas mais claros.<br>Conversas mais objetivas.',
-     'ct.sub':            'Disponível para posições Senior, Lead ou Staff Product Designer em produtos enterprise, plataformas internas e ambientes regulados.',
+     'ct.sub':            'Para recrutadores, empresas e conversas técnicas sobre produtos enterprise, plataformas internas e ambientes regulados.',
      'ct.card1.title':    'Para recrutadores',
-     'ct.card1.text':     'Senior, Lead ou Staff Product Designer.',
+     'ct.card1.text':     'Senior, Lead ou Staff Product Designer para sistemas enterprise.',
      'ct.card2.title':    'Para empresas',
-     'ct.card2.text':     'Diagnóstico, fluxos e plataformas internas.',
+     'ct.card2.text':     'Diagnóstico de fluxos, arquitetura de informação e plataformas internas.',
      'ct.card3.title':    'Para conversas técnicas',
-     'ct.card3.text':     'IA, design systems e produtos enterprise.',
-     'ct.cv':             'Baixar CV',
+     'ct.card3.text':     'Design systems, IA aplicada e infraestrutura de decisão.',
+     'ct.cv':             'Ver CV',
      'ct.cases':          'Ver cases',
      'ct.meta':           'São Paulo · Remoto / Híbrido · Português / Inglês profissional',
      'ft.role':           'Designer de Produto · 2026',
+     'modal.close':       'Fechar modal',
    },
    en: {
      'nav.method':   'Method',
@@ -146,9 +175,10 @@ const COPY = {
      'eyebrow':      'OPERATIONAL SYSTEMS · DECISION · SCALE',
      'h1.l1':        'Decision architecture',
      'h1.l2':        'for critical systems.',
-     'sub':          'Turning operational complexity into systems that are clearer, more coordinated, and easier to navigate.',
+      'sub':          'I structure platforms, flows and systems for operations where clarity supports coordination, scale and decision-making.',
      'cta.primary':  'View SALA CAR case',
      'cta.secondary':'Method',
+     'signature':    'Think simple. Make it better. Become inevitable.',
      'worked-with':  'Clients',
      's2.tag':       '01 / Territory',
      's2.title':     'Where I operate',
@@ -163,16 +193,20 @@ const COPY = {
      's3.all':       'All case studies',
      'c1.client':    'Petrobras (SALA CAR)',
      'c1.desc':      'Offshore environmental occurrence consolidation platform. Centralization of distributed operational signals to ensure structured response to critical events.',
-     'c1.metric':    '95% reporting automation',
+     'c1.metric':    '95% documentation automation',
+     'c1.metricLabel': 'QUANTITATIVE EVIDENCE',
      'c2.client':    'Bayer',
      'c2.desc':      'Agricultural Data Platform. Structuring the crop as the central unit of analysis, connecting technical indicators and institutional validation.',
      'c2.metric':    'Multiple layers integrated',
+     'c2.metricLabel': 'QUALITATIVE EVIDENCE',
      'c3.client':    'AmBev',
      'c3.desc':      'Logistics operational monitoring. Organization of indicators into reading layers for disruption detection and continuous tracking of national distribution states.',
      'c3.metric':    'Continuous reading at scale',
+     'c3.metricLabel': 'QUALITATIVE EVIDENCE',
      'c4.client':    'BMG (Conta PJ)',
      'c4.desc':      'Modular digital banking for small businesses (MEI to LTDA). Bureaucracy reduction in onboarding with progressive scalability of financial and fiscal services.',
      'c4.metric':    'Flexible and modular onboarding',
+     'c4.metricLabel': 'QUALITATIVE EVIDENCE',
      'view-case':    'View case',
       's4.tag':       'CONTEXT · STRUCTURE · INTERACTION',
       's4.title':     'Interaction engineering<br>for complex systems.',
@@ -186,29 +220,50 @@ const COPY = {
       's4.microphrase': 'Invisible structures, clearer decisions.',
       's4.microflow': 'Context → Structure → Interaction → Decision',
       's4.microcomp': 'Method applied to complex products.',
-      's5.desc':      'Efficiency and scale metrics achieved through restructuring critical architectures.',
+      's5.desc':      'Quantitative evidence where documented, qualitative evidence where the impact is structural.',
       'skip':         'Skip to content',
       'nav.contact':  'Contact',
       'worked-with':  'Clients',
       'c1.i':         'Operational Risk Coordination',
-      'c1.u':         '400+',
-      'c2.u':         'National Scale',
-      'c2.i':         'Operational Stockout Visibility',
-      'c3.u':         'Technical Analysis',
-      'c3.i':         'Agricultural Data Traceability',
-      'c4.u':         'Simplified Access',
-      'c4.i':         'Simplified Regulated Flows',
+      's3.header.kicker': 'REAL SYSTEMS · OPERATIONAL IMPACT',
+      's3.header.title': 'Real systems.<br>Operational impact.',
+      's3.header.meta': 'ENERGY · LOGISTICS · AGRO · FINANCE',
+      's3.header.desc': 'Projects in energy, logistics, agribusiness and finance where design reduced noise, reorganized flows and made critical decisions more traceable.',
+      'case.label.system': 'System',
+      'case.label.context': 'Context',
+      'case.label.scope': 'Scope',
+      'case.label.impact': 'Impact',
+      'case.aria.petro': 'Open Petrobras case',
+      'case.aria.ambev': 'Open Ambev case',
+      'case.aria.bayer': 'Open Bayer case',
+      'case.aria.bmg': 'Open BMG case',
+      'card.petro.system': 'Offshore environmental<br>monitoring',
+      'card.petro.context': 'Offshore<br>operation',
+      'card.petro.scope': 'Environmental<br>response',
+      'card.petro.impact': 'Operational risk<br>coordination',
+      'card.ambev.system': 'Distributed logistics<br>management',
+      'card.ambev.context': 'National<br>scale',
+      'card.ambev.scope': 'Supply<br>chain',
+      'card.ambev.impact': 'Operational stockout<br>visibility',
+      'card.bayer.system': 'Agronomic<br>intelligence',
+      'card.bayer.context': 'Technical<br>analysis',
+      'card.bayer.scope': 'Agricultural<br>data',
+      'card.bayer.impact': 'Agricultural data<br>traceability',
+      'card.bmg.system': 'Business financial<br>platform',
+      'card.bmg.context': 'Regulated<br>environment',
+      'card.bmg.scope': 'Business<br>account',
+      'card.bmg.impact': 'Simplified regulated<br>flows',
      'm1.label':     'Operational Visibility',
-     'm1.desc':      'I identify information, dependencies, and critical points before any visual definition.',
+     'm1.desc':      'I map signals, data sources, owners and critical points before defining any surface.',
      'm2.label':     'Relationship Structure',
-     'm2.desc':      'I organize connections between areas, flows, and rules to reduce inconsistencies and facilitate decisions.',
+     'm2.desc':      'I design relationships between areas, permissions, states and exceptions to reduce operational inconsistencies.',
      'm3.label':     'Cognitive Clarity',
-     'm3.desc':      'I define priorities, hierarchies, and contexts to make systems more comprehensible and navigable.',
+     'm3.desc':      'I prioritize information, hierarchy and context to reduce cognitive effort in dense flows.',
      'm4.label':     'Decision Surfaces',
-     'm4.desc':      'I transform rules and operational needs into interfaces that help people act safely and clearly.',
+     'm4.desc':      'I turn rules, alerts and decisions into interfaces that help teams act with safety and clarity.',
       's5.tag':       'EVIDENCE · SCALE · TRACEABILITY',
-      's5.title':     'Measurable impact.<br>Traceable operation.',
-      's5.desc':      'Evidence of scale, traceability and coordination across enterprise systems, regulated products and critical operations.',
+      's5.title':     'Observable impact.<br>Traceable operation.',
+      's5.desc':      'Quantitative evidence where documented, qualitative evidence where the impact is structural.',
       's5.stat1':     'OBSERVABLE RESULTS IN COMPLEX SYSTEMS',
       's5.stat2':     'OPERATIONS <strong>12+</strong>',
       's5.stat3':     'DATA <strong>+</strong>',
@@ -227,27 +282,29 @@ const COPY = {
       'imp1.desc':    'Operational reporting consolidation reorganized for continuous reading in offshore contexts.',
       'imp1.type':    'Critical operation',
       'imp2.client':  'Bayer',
-      'imp2.dim':     'Data scale',
-      'imp2.val':     '4,000 integrated points',
-      'imp2.desc':    'Agricultural data reception consolidated into a unified technical analysis ecosystem.',
+      'imp2.dim':     'Agricultural data',
+      'imp2.val':     'Agricultural data traceability',
+      'imp2.desc':    'Agricultural information reorganized around the crop as the central unit of analysis, connecting technical data, indicator comparison and decision records inside a structured flow.',
       'imp2.type':    'Agricultural data',
       'imp3.client':  'Ambev',
-      'imp3.dim':     'Modular architecture',
-      'imp3.val':     '6 operational modules',
-      'imp3.desc':    'Supply chain structure organized for reading availability, stockouts and logistical coordination.',
+      'imp3.dim':     'Logistics monitoring',
+      'imp3.val':     'Operational stockout visibility',
+      'imp3.desc':    'Supply chain structure organized for reading availability, stockouts and logistical coordination. The platform started to reflect the real state of the operation, turning dispersed data into a shared operational view.',
       'imp3.type':    'Supply chain',
       'imp4.client':  'BMG',
       'imp4.dim':     'Regulated environment',
-      'imp4.val':     'Complete traceability',
-      'imp4.desc':    'Business banking journey structured with validations, states and flows aligned with operational and regulatory requirements.',
+      'imp4.val':     'Simplified regulated flows',
+      'imp4.desc':    'Business banking journey structured with validations, states and flows aligned with operational and regulatory requirements. The digital account was designed for small businesses without removing banking security and compliance from the process.',
       'imp4.type':    'Banking / compliance',
      'ab.tag':            'TRAJECTORY · METHOD · RANGE',
      'ab.title':          'Behind<br>the structure.',
-     'ab.subtitle':       '20 years across design, product, technology and operations.',
+     'ab.subtitle':       '20 years across design, technology and product; 15+ years in UX/Product Design for complex environments.',
      'ab.p1':             'I did not start in design by drawing screens. I started by organizing information, navigation, flows and decisions.',
      'ab.p2':             'Over 20 years, I have worked on complex digital products for companies such as Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood and BMG.',
      'ab.p3':             'My work sits where product, operations, technology and decision-making meet. Before thinking about components, I try to understand the system: who decides, with what information, under what pressure and with what consequences.',
-     'ab.p4':             'Today, I combine design, AI and systems thinking to turn complexity into clearer, more operable and sustainable experiences.',
+     'ab.p4':             'Today, I combine design, AI and systems thinking to turn complexity into clearer, more operable and sustainable systems.',
+      'ab.photo.alt':      'Henrico Amaral, Senior Product Designer specialized in enterprise systems.',
+      'ab.photo.caption': 'Henrico Amaral<br>Senior Product Designer · Decision Infrastructure<br>São Paulo · Enterprise Systems · AI-assisted workflow',
      'ab.card1.title':    'Territory',
      'ab.card1.items':    '<li>Enterprise</li><li>B2B</li><li>Critical operations</li><li>Regulated systems</li>',
      'ab.card2.title':    'Practice',
@@ -264,17 +321,18 @@ const COPY = {
      'modal.case':        'Case',
      'ct.tag':            'SÃO PAULO · REMOTE/HYBRID · PT/EN',
      'ct.title':          'Clearer systems.<br>More objective conversations.',
-     'ct.sub':            'Available for Senior, Lead or Staff Product Designer roles in enterprise products, internal platforms and regulated environments.',
+     'ct.sub':            'For recruiters, companies and technical conversations about enterprise products, internal platforms and regulated environments.',
      'ct.card1.title':    'For recruiters',
-     'ct.card1.text':     'Senior, Lead or Staff Product Designer.',
+     'ct.card1.text':     'Senior, Lead or Staff Product Designer for enterprise systems.',
      'ct.card2.title':    'For companies',
-     'ct.card2.text':     'Diagnosis, flows and internal platforms.',
+     'ct.card2.text':     'Flow diagnosis, information architecture and internal platforms.',
      'ct.card3.title':    'For technical conversations',
-     'ct.card3.text':     'AI, design systems and enterprise products.',
-     'ct.cv':             'Download CV',
+     'ct.card3.text':     'Design systems, applied AI and decision infrastructure.',
+     'ct.cv':             'View CV',
      'ct.cases':          'View cases',
      'ct.meta':           'São Paulo · Remote / Hybrid · Portuguese / Professional English',
      'ft.role':           'Product Designer · 2026',
+     'modal.close':       'Close modal',
    }
 };
 
@@ -302,6 +360,18 @@ function setLang(lang) {
     } else {
       el.innerHTML = val;
     }
+  });
+  document.querySelectorAll('[data-t-alt]').forEach(el => {
+    const key = el.getAttribute('data-t-alt');
+    if (dict[key]) el.setAttribute('alt', dict[key]);
+  });
+  document.querySelectorAll('[data-t-aria-label]').forEach(el => {
+    const key = el.getAttribute('data-t-aria-label');
+    if (dict[key]) el.setAttribute('aria-label', dict[key]);
+  });
+  document.querySelectorAll('[data-t-title]').forEach(el => {
+    const key = el.getAttribute('data-t-title');
+    if (dict[key]) el.setAttribute('title', dict[key]);
   });
 
   document.querySelectorAll('.lang-btn').forEach(b => {
@@ -431,15 +501,20 @@ if (!motionReduced) {
       }
     });
 
-    tlSection
-      .from(`${sectionSelector} .section-kicker`, { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 0)
-      .from(`${sectionSelector} .section-header-title`, { opacity: 0, y: 12, filter: `blur(${MOTION.blur.entry}px)`, duration: 0.55, ease: MOTION.ease.subtle, immediateRender: false }, 0.06)
-      .from(`${sectionSelector} .section-header-divider`, { opacity: 0, scaleY: 0, duration: 0.5, ease: 'power2.inOut', transformOrigin: 'top', immediateRender: false }, 0.12)
-      .from(`${sectionSelector} .section-header-subtitle`, { opacity: 0, y: 8, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, ease: MOTION.ease.subtle, immediateRender: false }, 0.18)
-      .from(`${sectionSelector} .section-header-rule`, { opacity: 0, scaleX: 0, duration: 0.5, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.24)
-      .from(`${sectionSelector} .section-microstats span`, { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, stagger: 0.03, ease: MOTION.ease.subtle, immediateRender: false }, 0.28);
+    const addFrom = (selector, vars, position) => {
+      if (document.querySelector(selector)) {
+        tlSection.from(selector, vars, position);
+      }
+    };
 
-    if (cardsSelector) {
+    addFrom(`${sectionSelector} .section-kicker`, { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 0);
+    addFrom(`${sectionSelector} .section-header-title`, { opacity: 0, y: 12, filter: `blur(${MOTION.blur.entry}px)`, duration: 0.55, ease: MOTION.ease.subtle, immediateRender: false }, 0.06);
+    addFrom(`${sectionSelector} .section-header-divider`, { opacity: 0, scaleY: 0, duration: 0.5, ease: 'power2.inOut', transformOrigin: 'top', immediateRender: false }, 0.12);
+    addFrom(`${sectionSelector} .section-header-subtitle`, { opacity: 0, y: 8, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, ease: MOTION.ease.subtle, immediateRender: false }, 0.18);
+    addFrom(`${sectionSelector} .section-header-rule`, { opacity: 0, scaleX: 0, duration: 0.5, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.24);
+    addFrom(`${sectionSelector} .section-microstats span`, { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, stagger: 0.03, ease: MOTION.ease.subtle, immediateRender: false }, 0.28);
+
+    if (cardsSelector && document.querySelector(`${sectionSelector} ${cardsSelector}`)) {
       tlSection.fromTo(
         `${sectionSelector} ${cardsSelector}`,
         { opacity: 0, y: 16, filter: `blur(${MOTION.blur.entry}px)` },
@@ -576,6 +651,8 @@ initMagnetic();
 setLang('pt');
 
 /* ── Case Study Modal ── */
+let lastFocusedElement = null;
+
 const CASE_DATA = [
   {
     copyKey: 'c1',
@@ -583,32 +660,31 @@ const CASE_DATA = [
     tags: ['Offshore', 'Monitoring'],
     desc: 'Centralização de sinais operacionais offshore distribuídos em um ambiente unificado de monitoramento para decisões críticas de gestão de plataformas.',
     metric: '95%',
-    metricLabel: 'AUTOMAÇÃO'
+    metricLabel: 'EVIDÊNCIA QUANTITATIVA'
   },
   {
     copyKey: 'c2',
     client: 'Bayer',
     tags: ['Agri-tech', 'Data Scale'],
     desc: 'Unificação de fluxos de dados agrícolas fragmentados — clima, solo e métricas de produção — em uma arquitetura progressiva de interpretação nacional.',
-    metric: '4000',
-    metricLabel: 'ESCALA',
-    metricFmt: 'K'
+    metric: 'Dados agrícolas',
+    metricLabel: 'EVIDÊNCIA QUALITATIVA'
   },
   {
     copyKey: 'c3',
     client: 'AmBev',
     tags: ['Supply Chain', 'Operations'],
     desc: 'Estruturação da visibilidade de exceções logísticas em uma cadeia de suprimentos distribuída para detecção de anomalias e resposta coordenada.',
-    metric: '6',
-    metricLabel: 'OPERAÇÕES'
+    metric: 'Leitura operacional',
+    metricLabel: 'EVIDÊNCIA QUALITATIVA'
   },
   {
     copyKey: 'c4',
     client: 'BMG',
     tags: ['Fintech', 'Compliance'],
     desc: 'Design de lógica de permissões complexas e fluxos de estado de transação para uma plataforma bancária corporativa com rastreabilidade completa.',
-    metric: 'Rastreabilidade',
-    metricLabel: 'COMPLIANCE'
+    metric: 'Fluxos regulados',
+    metricLabel: 'EVIDÊNCIA QUALITATIVA'
   }
 ];
 
@@ -617,6 +693,7 @@ function openCaseModal(index) {
   if (!caseData) return;
 
   const modal = document.getElementById('case-modal');
+  lastFocusedElement = document.activeElement;
   const dict = COPY[currentLang] || COPY.pt;
   const copyKey = caseData.copyKey;
   document.getElementById('modal-client').textContent = dict[`${copyKey}.client`] || caseData.client;
@@ -633,7 +710,7 @@ function openCaseModal(index) {
 
   document.getElementById('modal-desc').textContent = dict[`${copyKey}.desc`] || caseData.desc;
   document.getElementById('modal-metric').textContent = dict[`${copyKey}.metric`] || caseData.metric;
-  document.getElementById('modal-metric-label').textContent = caseData.metricLabel;
+  document.getElementById('modal-metric-label').textContent = dict[`${copyKey}.metricLabel`] || caseData.metricLabel;
 
   // Show modal
   modal.classList.remove('hidden');
@@ -649,6 +726,15 @@ function closeCaseModal() {
   const modal = document.getElementById('case-modal');
   modal.classList.add('hidden');
   modal.setAttribute('aria-hidden', 'true');
+  if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+    lastFocusedElement.focus();
+  }
+}
+
+function getModalFocusableElements() {
+  const modal = document.getElementById('case-modal');
+  return Array.from(modal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'))
+    .filter(el => el.offsetParent !== null);
 }
 
 // Add click handlers to case cards
@@ -675,7 +761,22 @@ document.getElementById('case-modal').addEventListener('click', (e) => {
 
 // Close with Escape key
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && !document.getElementById('case-modal').classList.contains('hidden')) {
+  const modal = document.getElementById('case-modal');
+  const modalOpen = !modal.classList.contains('hidden');
+  if (e.key === 'Escape' && modalOpen) {
     closeCaseModal();
+  }
+  if (e.key === 'Tab' && modalOpen) {
+    const focusable = getModalFocusableElements();
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
   }
 });

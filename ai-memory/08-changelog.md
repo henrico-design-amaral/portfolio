@@ -1,5 +1,73 @@
 # CHANGELOG — Portfolio
 
+## 2026-05-21 — Refinamento final da home: i18n, narrativa e publicação
+
+Tipo: content / i18n / release
+
+Arquivos alterados:
+- `index.html`
+- `assets/js/site.js`
+- `ai-memory/08-changelog.md`
+
+Decisões tomadas:
+- Publicada a branch `fix/home-signature-content-audit` em `main` via commit + push para GitHub Pages.
+- Adicionada chave `ab.photo.caption` ao dicionário i18n com versões PT e EN para a legenda da foto do Sobre, substituindo o texto hardcoded.
+- Refinado o subtítulo do Hero: removido "digitais" para tornar a frase mais direta.
+- i18n verificado: todas as chaves `data-t` do HTML possuem equivalente em PT e EN no objeto COPY.
+
+Métricas mantidas (com lastro documental):
+- Petrobras 95% — documentado em `docs/CASE_PETROBRAS.md:L91`
+
+Métricas substituídas por evidência qualitativa (sem lastro quantitativo):
+- Bayer: "4.000 pontos integrados" → "Rastreabilidade de dados agrícolas"
+- Ambev: "6 módulos operacionais" → "Visibilidade de rupturas operacionais"
+- BMG: "menos de 24 horas" / "Rastreabilidade completa" → "Fluxos regulados simplificados"
+
+Pendências:
+- CV em Markdown (`docs/Henrico-Amaral-CV.md`) — sem PDF final disponível
+- Validação visual pendente em breakpoints 1680px, 1440px, 1366px, 1024px, 768px, 390px
+
+Status: Publicado em `origin/main`.
+
+---
+
+## 2026-05-21 — Auditoria de métricas, assinatura autoral e i18n da home
+
+Tipo: content / accessibility / i18n / governance
+
+Arquivos alterados:
+- `index.html`
+- `assets/css/site.css`
+- `assets/js/site.js`
+- `docs/metrics-audit.md`
+- `ai-memory/05-technical-decisions.md`
+- `ai-memory/06-visual-decisions.md`
+- `ai-memory/07-open-issues.md`
+- `ai-memory/08-changelog.md`
+- `ai-memory/09-do-not-repeat.md`
+
+Decisões tomadas:
+- Confirmado que o GitHub Pages publicado serve o conteúdo de `main`, não `gh-pages`.
+- Inserida a assinatura "Pense simples. Faça melhor. Torne-se inevitável." no hero e no CTA final.
+- Removidas métricas visíveis sem lastro textual suficiente: Petrobras 400+, Bayer 4.000 pontos, Ambev 6 módulos e BMG menos de 24 horas.
+- Mantido o 95% da Petrobras como métrica quantitativa documentada.
+- Seção Impacto alterada de "mensurável" para "observável" para refletir evidências quantitativas e qualitativas.
+- Cards de cases passam a usar Sistema / Contexto / Escopo / Impacto.
+- Corrigido o banner de clientes, removendo a dependência de `transform: translateX(-50%)` para centralização.
+- Ajustada a escala de cores a partir de Impacto para uma progressão mais natural entre seções claras, médias e escuras.
+- Corrigidos warnings de GSAP para elementos opcionais de header que não existem em todas as seções.
+- Adicionado suporte i18n para `alt`, `aria-label` e novos textos PT/EN.
+- Modal ganhou `role="dialog"`, `aria-modal`, `aria-labelledby`, retorno de foco e tab trap.
+
+Pendências:
+- Não há PDF final de CV; o CTA aponta para Markdown e isso segue registrado em open issues.
+- Browser interno indisponível nesta rodada; validação visual foi conduzida por fallback local/headless.
+
+Status:
+Concluído localmente, sem commit e sem push.
+
+---
+
 ## 2026-05-17 — Myna-hero style animations e The Infinite Grid
 
 Tipo: motion / design-system / performance / bugfix

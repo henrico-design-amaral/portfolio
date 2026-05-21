@@ -150,6 +150,8 @@ O Portfolio deve conter apenas arquivos necessários ao site, documentação, me
 
 - **Não usar placeholders "0" em KPIs**: Nunca deixar valores zerados no HTML indexável. O valor real deve estar no markup para SEO e Acessibilidade.
 - **Não usar métricas performativas**: Evitar números bonitos sem lastro documental ou justificativa qualitativa.
+- **Não manter KPI sem lastro textual localizado**: se o número não aparecer em docs, case-references textuais ou memória confiável, substituir por evidência qualitativa concreta.
+- **Não chamar a seção de "Impacto mensurável" quando parte das evidências for qualitativa**: usar "Impacto observável" ou outro termo compatível com a natureza da evidência.
 - **Não priorizar animação sobre o dado**: A animação (contador) é um bônus visual; o dado (número) é a infraestrutura da informação. O site deve ser funcional e informativo sem JS.
 - **Não transformar requisitos obrigatórios de sistema, compliance ou rastreabilidade em métricas promocionais de performance.**
 - **Não usar a expressão "100 auditável" ou métricas percentuais para conformidade regulatória.** Priorizar linguagem qualitativa como "Rastreabilidade completa" ou "Fluxos regulados simplificados".
