@@ -590,6 +590,7 @@ setLang('pt');
 /* ── Case Study Modal ── */
 const CASE_DATA = [
   {
+    copyKey: 'c1',
     client: 'Petrobras (SALA CAR)',
     tags: ['Offshore', 'Monitoring'],
     desc: 'Centralização de sinais operacionais offshore distribuídos em um ambiente unificado de monitoramento para decisões críticas de gestão de plataformas.',
@@ -597,6 +598,7 @@ const CASE_DATA = [
     metricLabel: 'AUTOMAÇÃO'
   },
   {
+    copyKey: 'c2',
     client: 'Bayer',
     tags: ['Agri-tech', 'Data Scale'],
     desc: 'Unificação de fluxos de dados agrícolas fragmentados — clima, solo e métricas de produção — em uma arquitetura progressiva de interpretação nacional.',
@@ -605,6 +607,7 @@ const CASE_DATA = [
     metricFmt: 'K'
   },
   {
+    copyKey: 'c3',
     client: 'AmBev',
     tags: ['Supply Chain', 'Operations'],
     desc: 'Estruturação da visibilidade de exceções logísticas em uma cadeia de suprimentos distribuída para detecção de anomalias e resposta coordenada.',
@@ -612,6 +615,7 @@ const CASE_DATA = [
     metricLabel: 'OPERAÇÕES'
   },
   {
+    copyKey: 'c4',
     client: 'BMG',
     tags: ['Fintech', 'Compliance'],
     desc: 'Design de lógica de permissões complexas e fluxos de estado de transação para uma plataforma bancária corporativa com rastreabilidade completa.',
@@ -625,7 +629,9 @@ function openCaseModal(index) {
   if (!caseData) return;
 
   const modal = document.getElementById('case-modal');
-  document.getElementById('modal-client').textContent = caseData.client;
+  const dict = COPY[currentLang] || COPY.pt;
+  const copyKey = caseData.copyKey;
+  document.getElementById('modal-client').textContent = dict[`${copyKey}.client`] || caseData.client;
 
   // Set tags
   const tagsContainer = document.getElementById('modal-tags');
@@ -637,8 +643,8 @@ function openCaseModal(index) {
     tagsContainer.appendChild(tagEl);
   });
 
-  document.getElementById('modal-desc').textContent = caseData.desc;
-  document.getElementById('modal-metric').textContent = caseData.metric;
+  document.getElementById('modal-desc').textContent = dict[`${copyKey}.desc`] || caseData.desc;
+  document.getElementById('modal-metric').textContent = dict[`${copyKey}.metric`] || caseData.metric;
   document.getElementById('modal-metric-label').textContent = caseData.metricLabel;
 
   // Show modal
@@ -660,6 +666,12 @@ function closeCaseModal() {
 // Add click handlers to case cards
 document.querySelectorAll('[data-case-index]').forEach((card, index) => {
   card.addEventListener('click', (e) => {
+    e.preventDefault();
+    openCaseModal(parseInt(card.dataset.caseIndex));
+  });
+
+  card.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
     e.preventDefault();
     openCaseModal(parseInt(card.dataset.caseIndex));
   });
