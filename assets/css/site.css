@@ -1,51 +1,30 @@
 /* ═══════════════════════════════════════════════
-    GLOBAL BACKGROUND SYSTEM
-    Narrative gradient + Fixed infinite grid
+    SOLID SECTION BACKGROUND SYSTEM
+    Design-system palette scale, light to dark
     ═══════════════════════════════════════════════ */
 
 :root {
-  --grid-color: 92, 66, 50;
-  --grid-line: rgba(var(--grid-color), 0.13);
+  --section-hero: #f2efe9;
+  --section-process: #DAD5CD;
+  --section-cases: #c9c4bc;
+  --section-impact: #BE9C6E;
+  --section-about: #63574A;
+  --section-contact: #533E2B;
+  --section-footer: #472211;
+  --section-text-dark: #2B1710;
+  --section-text-muted: rgba(43, 23, 16, 0.74);
+  --section-text-soft: rgba(43, 23, 16, 0.58);
+  --section-text-light: #f2efe9;
+  --section-text-light-muted: rgba(242, 239, 233, 0.78);
+  --section-text-light-soft: rgba(242, 239, 233, 0.58);
+  --section-transition-size: clamp(4.5rem, 9vw, 8.5rem);
 }
 
 body {
-  background-color: #F2ECE1;
-  color: #2B1710;
+  background-color: var(--section-hero);
+  color: var(--section-text-dark);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-}
-
-/* Narrative Gradient - Continuous surface */
-.narrative-gradient {
-  position: fixed;
-  inset: 0;
-  z-index: -3;
-  pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    #F2ECE1 0%,
-    #E8DED0 18%,
-    #D8CBBB 34%,
-    #C6B7A6 50%,
-    #6D584A 64%,
-    #241A15 76%,
-    #130D0A 88%,
-    #0B0705 100%
-  );
-}
-
-/* Fixed Infinite Grid - Simple, static, editorial */
-.fixed-infinite-grid {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background-image:
-    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-  background-size: 52px 52px;
-  background-position: center top;
-  opacity: 0.72;
 }
 
 /* Content Layer */
@@ -54,21 +33,95 @@ body > * {
   z-index: 1;
 }
 
-/* Section backgrounds - Minimal overrides only */
+/* Section backgrounds - Solid design-system scale */
 #hero {
-  background: transparent;
+  background: var(--section-hero);
 }
 
 #process {
-  background: transparent;
+  background: var(--section-process);
 }
 
 #cases {
-  background: transparent;
+  background: var(--section-cases);
 }
 
 #impact {
-  background: transparent;
+  background: var(--section-impact);
+}
+
+#about {
+  background: var(--section-about);
+}
+
+#contact {
+  background: var(--section-contact);
+}
+
+footer {
+  background: var(--section-footer) !important;
+}
+
+#hero,
+#process,
+#cases,
+#impact,
+#about,
+#contact,
+footer {
+  position: relative;
+  isolation: isolate;
+}
+
+#hero > *,
+#process > *,
+#cases > *,
+#impact > *,
+#about > *,
+#contact > *,
+footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+#hero::after,
+#process::after,
+#cases::after,
+#impact::after,
+#about::after,
+#contact::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: var(--section-transition-size);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#hero::after {
+  background: linear-gradient(180deg, var(--section-hero) 0%, var(--section-process) 100%);
+}
+
+#process::after {
+  background: linear-gradient(180deg, var(--section-process) 0%, var(--section-cases) 100%);
+}
+
+#cases::after {
+  background: linear-gradient(180deg, var(--section-cases) 0%, var(--section-impact) 100%);
+}
+
+#impact::after {
+  background: linear-gradient(180deg, var(--section-impact) 0%, var(--section-about) 100%);
+}
+
+#about::after {
+  background: linear-gradient(180deg, var(--section-about) 0%, var(--section-contact) 100%);
+}
+
+#contact::after {
+  background: linear-gradient(180deg, var(--section-contact) 0%, var(--section-footer) 100%);
 }
 
 /* ─── STANDARDIZED SECTION PADDING ─── */
@@ -653,24 +706,6 @@ body > * {
   transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* The Infinite Grid - Simplified for Portfolio */
-.fixed-infinite-grid {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background-image:
-    linear-gradient(to right, rgba(92, 66, 50, 0.13) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(92, 66, 50, 0.13) 1px, transparent 1px);
-  background-size: 52px 52px;
-  background-position: center top;
-  opacity: 0.72;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fixed-infinite-grid { display: none; }
-}
-
 /* Beam Scan Hover Effect */
 .case-card {
   position: relative;
@@ -764,13 +799,7 @@ body > * {
   right: 0;
   top: 50%;
   height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(190, 156, 110, 0.12) 15%,
-    rgba(190, 156, 110, 0.12) 85%,
-    transparent
-  );
+  background: rgba(71, 34, 17, 0.12);
 }
 .section-divider-label {
   position: relative;
@@ -789,13 +818,7 @@ body > * {
   color: rgba(255, 255, 255, 0.2);
 }
 .section-divider--dark::before {
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255, 255, 255, 0.06) 15%,
-    rgba(255, 255, 255, 0.06) 85%,
-    transparent
-  );
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* Dark editorial sections — About and Contact */
@@ -803,8 +826,7 @@ body > * {
   position: relative;
   overflow: hidden;
   padding: 6rem 1.5rem;
-  background:
-    linear-gradient(180deg, #130f0c 0%, #17110e 48%, #120d0a 100%);
+  background: var(--section-about);
   color: #f2efe9;
   border-top: 1px solid rgba(242, 239, 233, 0.08);
   scroll-margin-top: 96px;
@@ -818,8 +840,7 @@ body > * {
 }
 
 .contact-section {
-  background:
-    linear-gradient(180deg, #120d0a 0%, #26170f 52%, #472211 100%);
+  background: var(--section-contact);
 }
 
 .contact-section .section-header-title {
@@ -1318,8 +1339,6 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
-#technical-hero-bg > div:not(:last-child):not(:nth-last-child(2)),
-#technical-hero-bg > svg,
 .framework-card .env-layer,
 #env-infrastructure,
 #about .editorial-ambient,
@@ -1327,10 +1346,6 @@ button:focus-visible {
 #about .about-human-band,
 #impact > [data-parallax] {
   display: none !important;
-}
-
-#technical-hero-bg {
-  will-change: filter, opacity;
 }
 
 #hero h1 {
@@ -1352,22 +1367,50 @@ button:focus-visible {
 }
 
 .section-header-title {
-  color: #2d1508;
+  color: var(--section-text-dark);
   max-width: 980px;
 }
 
 .section-header-subtitle {
-  color: rgba(45, 21, 8, 0.72);
+  color: var(--section-text-muted);
 }
 
 .section-kicker {
-  color: #7a4d23;
+  color: #5F4638;
 }
 
 .section-kicker-context {
-  color: #5F4638;
+  color: var(--section-text-muted);
   font-weight: 400;
   margin-right: 1rem;
+}
+
+#hero,
+#process,
+#cases,
+#impact {
+  color: var(--section-text-dark);
+}
+
+#hero .eyebrow-text,
+#process .section-microcopy,
+#cases .section-microcopy,
+#impact .section-microcopy,
+#process .section-microstats,
+#cases .section-microstats,
+#impact .section-microstats {
+  color: var(--section-text-soft);
+}
+
+#impact .section-kicker,
+#impact .impact-label {
+  color: #3a2416;
+}
+
+#about,
+#contact,
+footer {
+  color: var(--section-text-light);
 }
 
 .section-chip-row,
@@ -1450,26 +1493,28 @@ button:focus-visible {
 }
 
 .editorial-dark-section {
-  background:
-    radial-gradient(circle at 72% 8%, rgba(190, 156, 110, 0.13), transparent 28%),
-    linear-gradient(180deg, #19120d 0%, #20160f 56%, #17100c 100%);
+  background: var(--section-about) !important;
 }
 
 .contact-section {
-  background:
-    radial-gradient(circle at 28% 0%, rgba(190, 156, 110, 0.1), transparent 26%),
-    linear-gradient(180deg, #17100c 0%, #120d0a 100%);
+  background: var(--section-contact) !important;
 }
 
 .section-header--dark .section-header-subtitle,
 .about-narrative,
 .contact-intent-card p {
-  color: rgba(255, 248, 238, 0.78);
+  color: var(--section-text-light-muted);
 }
 
 .section-header--dark .section-microcopy,
 .section-header--dark .section-microstats {
-  color: rgba(255, 248, 238, 0.56);
+  color: var(--section-text-light-soft);
+}
+
+.section-header--dark .section-header-title,
+.section-header--dark .section-kicker,
+.section-header--dark .section-kicker-context {
+  color: var(--section-text-light);
 }
 
 .about-narrative {
@@ -1550,16 +1595,46 @@ button:focus-visible {
   background: rgba(33, 20, 12, 0.45);
 }
 
+body,
+main,
+footer {
+  background-image: none !important;
+}
+
+#hero {
+  background-color: var(--section-hero) !important;
+}
+
+#process {
+  background-color: var(--section-process) !important;
+}
+
+#cases {
+  background-color: var(--section-cases) !important;
+}
+
+#impact {
+  background-color: var(--section-impact) !important;
+}
+
+#about {
+  background-color: var(--section-about) !important;
+}
+
+#contact {
+  background-color: var(--section-contact) !important;
+}
+
+footer {
+  background-color: var(--section-footer) !important;
+}
+
 @media (max-width: 639px) {
   html,
   body,
   main {
     max-width: 100%;
     overflow-x: hidden;
-  }
-
-  body::before {
-    --nbg-grid-size: 64px;
   }
 
   #hero {

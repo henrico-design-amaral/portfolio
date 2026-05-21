@@ -497,18 +497,6 @@ if (!motionReduced) {
     /* ── Scroll-Linked Hero Blur ── */
     const hero = document.querySelector('#hero');
     if (hero) {
-      gsap.to('#technical-hero-bg', {
-        filter: 'blur(12px)',
-        opacity: 0.5,
-        scrollTrigger: {
-          trigger: '#hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 1.5,
-          immediateRender: false
-        }
-      });
-
       gsap.to('#hero .sub, #hero .cta-wrapper, #hero .availability-badge-v2', {
         opacity: 0.3,
         y: -15,

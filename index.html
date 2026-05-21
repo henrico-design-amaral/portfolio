@@ -80,10 +80,6 @@
 
 <body class="font-body overflow-x-hidden">
 
-  <!-- Global Background Layers -->
-  <div class="narrative-gradient" aria-hidden="true"></div>
-  <div class="fixed-infinite-grid" aria-hidden="true"></div>
-
   <a href="#main-content"
     class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent-500 text-white px-4 py-2 z-50 rounded"
     data-t="skip">Ir para o conteúdo</a>
@@ -120,15 +116,6 @@
 
     <!-- HERO -->
     <section id="hero" class="relative min-h-[100dvh] flex items-center pt-32 pb-16 px-6 overflow-hidden bg-page nbg">
-
-      <!-- Subtle Technical Background -->
-      <div id="technical-hero-bg" class="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"
-        aria-hidden="true">
-        <!-- Ambient Blurs for depth -->
-        <div class="absolute right-[0%] top-[0%] w-[40%] h-[50%] rounded-full bg-white/40 blur-[130px]"></div>
-        <div class="absolute left-[-10%] bottom-[-20%] w-[50%] h-[60%] rounded-full bg-base-100/70 blur-[130px]"></div>
-      </div>
-
       <!-- Hero Content (Left-Aligned Editorial Layout) -->
       <div
         class="max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 pt-10">
@@ -1113,17 +1100,6 @@
   </div>
 
   <footer class="py-20 px-6 bg-[#472211] text-[#f2efe9] relative overflow-hidden">
-    <!-- Systemic dissolution — infrastructure fading into silence -->
-    <div class="absolute inset-0 z-[1] pointer-events-none" aria-hidden="true" style="background: linear-gradient(to bottom, rgba(71,34,17,0) 0%, rgba(71,34,17,0.2) 30%, #472211 100%);"></div>
-    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#BE9C6E]/10 to-transparent z-[2]"></div>
-    <!-- Operational trace remnants -->
-    <div class="absolute inset-0 z-[0] pointer-events-none overflow-hidden" aria-hidden="true" style="opacity:0.04">
-      <svg class="w-full h-full" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="200" y1="30" x2="1240" y2="30" stroke="#BE9C6E" stroke-width="0.3" stroke-dasharray="2 6" />
-        <circle cx="200" cy="30" r="1.5" fill="#BE9C6E" />
-        <circle cx="1240" cy="30" r="1.5" fill="#BE9C6E" />
-      </svg>
-    </div>
     <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
       <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
         <div class="w-10 h-10 rounded-full border border-[#BE9C6E]/20 flex items-center justify-center">
@@ -1144,9 +1120,6 @@
         <a href="https://wa.me/5511953970704"
           class="font-mono text-[9px] tracking-widest uppercase text-[#c4beb4]/60 hover:text-[#BE9C6E] transition-colors">WhatsApp</a>
       </div>
-    </div>
-    <div
-      class="absolute bottom-[-50%] left-1/2 -translate-x-1/2 w-[80%] h-[100%] rounded-full bg-[#BE9C6E]/8 blur-[120px] pointer-events-none">
     </div>
   </footer>
 
