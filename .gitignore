@@ -13,3 +13,5 @@ ui-ux-pro-max-skill/
 case-references/
 
 # Keep only published/public assets in Git
+# Local backup files
+*.bak_*
