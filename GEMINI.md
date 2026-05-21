@@ -196,9 +196,9 @@ Correções aplicadas:
 - abertura de modal por clique e teclado
 - client, desc e metric do modal lendo COPY conforme idioma atual
 - design-system*.html mantidos em docs/
+- imagens públicas da home convertidas para WebP
 
 Próximas tarefas recomendadas:
 
-- otimizar imagens dos cases para WebP em PR separado
 - revisar destino do link de CV
 - validar responsividade da home depois de mudanças visuais

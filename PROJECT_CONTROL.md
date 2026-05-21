@@ -155,7 +155,7 @@ fix/home-modal-and-docs-structure
 
 Objetivo:
 
-Corrigir a abertura dos modais de cases, respeitar tradução dinâmica no conteúdo principal do modal e manter os arquivos de design system dentro de docs/.
+Corrigir a abertura dos modais de cases, respeitar tradução dinâmica no conteúdo principal do modal, manter os arquivos de design system dentro de docs/ e otimizar imagens públicas para WebP.
 
 Alterações executadas:
 
@@ -163,9 +163,9 @@ Alterações executadas:
 - suporte a teclado nos cards de cases
 - leitura de client, desc e metric a partir do dicionário COPY
 - design-system.html, design-system-v2.html e design-system-v3.html mantidos em docs/
+- imagens públicas da home convertidas para WebP e referências atualizadas
 
 Próximas etapas recomendadas:
 
-1. Otimizar imagens dos cases para WebP em PR separado.
-2. Revisar se o link de CV deve baixar Markdown ou apontar para PDF.
-3. Fazer revisão visual rápida da home após cada mudança.
+1. Revisar se o link de CV deve baixar Markdown ou apontar para PDF.
+2. Fazer revisão visual rápida da home após cada mudança.

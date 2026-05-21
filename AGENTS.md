@@ -315,11 +315,11 @@ Fazer isso em PR separado.
 
 ### 11.5 Imagens
 
-Converter PNGs pesados dos cases para WebP e atualizar referências.
+Status: executado na branch fix/home-modal-and-docs-structure.
 
-Fazer isso só depois das correções menores.
+PNGs pesados dos cases e foto principal foram convertidos para WebP, com referências atualizadas em index.html.
 
-Não misturar otimização de imagem com JS ou docs.
+Não misturar novas otimizações de imagem com JS ou mudanças visuais.
 
 ---
 
@@ -327,7 +327,7 @@ Não misturar otimização de imagem com JS ou docs.
 
 1. Mover arquivos de design system para docs, se voltarem a sair de docs.
 2. Atualizar referências quebradas, se aparecerem.
-3. Otimizar imagens para WebP.
+3. Revisar destino do link de CV.
 4. Testar manualmente.
 5. Commitar em PRs pequenos.
 
