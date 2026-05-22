@@ -1060,9 +1060,11 @@ footer > * {
   z-index: 3;
   padding: 1.25rem 1rem 1rem;
   background: linear-gradient(to top, rgba(19,15,12,0.92) 0%, transparent 100%);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.563rem;
-  letter-spacing: 0.18em;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(242, 239, 233, 0.85);
   text-transform: uppercase;
   color: rgba(242, 239, 233, 0.56);
   line-height: 1.6;
@@ -1277,8 +1279,9 @@ footer > * {
   margin-top: clamp(2rem, 4vw, 3rem);
   padding-top: 1.25rem;
   border-top: 1px solid rgba(242, 239, 233, 0.1);
-  color: rgba(242, 239, 233, 0.48);
+  color: rgba(242, 239, 233, 0.72);
   text-align: center;
+  font-weight: 500;
 }
 
 @media (max-width: 639px) {
@@ -1339,6 +1342,7 @@ footer > * {
   font-weight: 500;
   position: relative;
   text-decoration: none;
+  transition: color 0.26s ease, opacity 0.26s ease;
 }
 
 #nav .nav-links a::after {
@@ -1360,6 +1364,11 @@ footer > * {
 #nav .nav-links a:hover,
 #nav .nav-links a:focus-visible {
   color: #2B1710;
+  opacity: 1;
+}
+
+#nav .nav-links a:not(:hover) {
+  opacity: 0.82;
 }
 
 .nav-lang {
@@ -1451,46 +1460,6 @@ button:focus-visible {
   color: var(--section-text-dark);
 }
 
-.author-signature {
-  margin: 0;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  line-height: 1.7;
-  text-transform: uppercase;
-}
-
-.author-signature--hero {
-  margin-top: clamp(1.5rem, 3vw, 2.5rem);
-  max-width: 44rem;
-  font-size: clamp(0.6rem, 0.8vw, 0.72rem);
-  color: #5F4638;
-  opacity: 0.85;
-}
-
-.author-signature--contact {
-  margin: clamp(2.25rem, 5vw, 4rem) 0 clamp(1.75rem, 4vw, 3rem);
-  max-width: 54rem;
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(1.35rem, 3vw, 2.9rem);
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 1.08;
-  text-transform: none;
-  color: var(--section-text-light);
-}
-
-@media (max-width: 639px) {
-  .author-signature--hero {
-    max-width: 24rem;
-    font-size: 0.58rem;
-  }
-
-  .author-signature--contact {
-    font-size: clamp(1.3rem, 8vw, 2rem);
-  }
-}
-
 #hero .eyebrow-text,
 #process .section-microcopy,
 #cases .section-microcopy,
@@ -1531,8 +1500,9 @@ footer {
 
 #process .framework-card:hover {
   background: #f5eee4 !important;
-  border-color: rgba(190, 156, 110, 0.3) !important;
+  border-color: rgba(190, 156, 110, 0.35) !important;
   box-shadow: 0 12px 32px rgba(45, 21, 8, 0.06);
+  transform: translateY(-4px);
 }
 
 .case-card {
@@ -1555,11 +1525,13 @@ footer {
   border-color: rgba(45, 21, 8, 0.18);
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(45, 21, 8, 0.04);
+  transition: border-color 0.26s ease, box-shadow 0.26s ease, transform 0.26s ease;
 }
 
 .impact-cell:hover {
   border-color: rgba(190, 156, 110, 0.35);
   box-shadow: 0 12px 32px rgba(45, 21, 8, 0.06);
+  transform: translateY(-4px);
 }
 
 .impact-cell .impact-card-side:first-child {
@@ -1829,3 +1801,52 @@ footer {
      font-size: clamp(2.25rem, 11vw, 3rem);
    }
 }
+
+/* ── Framework card hover — consistent grammar ── */
+.framework-card {
+  transition: border-color 0.26s ease, box-shadow 0.26s ease, background 0.26s ease;
+}
+.framework-card:hover {
+  border-color: rgba(190, 156, 110, 0.35) !important;
+  box-shadow: 0 6px 24px -6px rgba(26, 20, 16, 0.06);
+}
+.framework-card:hover .framework-card-index {
+  opacity: 1;
+}
+
+/* ── Impact cell hover — same grammar ── */
+.impact-cell {
+  transition: border-color 0.26s ease, box-shadow 0.26s ease, transform 0.26s ease;
+}
+.impact-cell:hover {
+  border-color: rgba(190, 156, 110, 0.35);
+  box-shadow: 0 6px 24px -6px rgba(26, 20, 16, 0.06);
+  transform: translateY(-4px);
+}
+
+/* ── About card hover ── */
+.about-card {
+  transition: border-color 0.26s ease, box-shadow 0.26s ease, transform 0.26s ease;
+}
+.about-card:hover {
+  border-color: rgba(190, 156, 110, 0.35);
+  box-shadow: 0 6px 24px -6px rgba(26, 20, 16, 0.08);
+  transform: translateY(-4px);
+}
+.about-card:hover .about-card-index {
+  color: #BE9C6E;
+}
+
+/* ── Case card hover — cinematographic but controlled ── */
+.case-card img {
+  transition: transform 0.6s ease-out, opacity 0.4s ease-out;
+}
+.case-card:hover img {
+  transform: scale(1.015) !important;
+  opacity: 1 !important;
+}
+.case-card:hover .behavioral-svg {
+  opacity: 0.22 !important;
+}
+
+

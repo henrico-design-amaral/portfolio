@@ -9,9 +9,7 @@ const COPY = {
     'h1.l1':        'Arquitetura de decisão',
     'h1.l2':        'para sistemas críticos.',
       'sub':          'Estruturo plataformas, fluxos e sistemas para operações onde clareza sustenta coordenação, escala e tomada de decisão.',
-    'cta.primary':  'Ver caso SALA CAR',
-    'cta.secondary':'Método',
-    'signature':    'Pense simples. Faça melhor. Torne-se inevitável.',
+    'cta.primary':  'Vamos conversar',
     'worked-with':  'Clientes',
     's2.tag':       '01 / Território',
     's2.title':     'Onde atuo',
@@ -137,7 +135,7 @@ const COPY = {
      'ab.p3':             'Meu trabalho está no ponto onde produto, operação, tecnologia e decisão se encontram. Antes de pensar em componentes, eu tento entender o sistema: quem decide, com qual informação, sob qual pressão e com quais consequências.',
      'ab.p4':             'Hoje, combino design, IA e pensamento sistêmico para transformar complexidade em sistemas mais claros, operáveis e sustentáveis.',
       'ab.photo.alt':      'Henrico Amaral, Senior Product Designer especializado em sistemas enterprise.',
-      'ab.photo.caption': 'Henrico Amaral<br>Product Designer Sênior · Infraestrutura de Decisão<br>São Paulo · Sistemas Enterprise · Workflow assistido por IA',
+      'ab.photo.caption': 'Henrico Amaral<br>Senior Product Designer · Decision Infrastructure<br>São Paulo · Remoto / Híbrido · Português / Inglês profissional',
      'ab.card1.title':    'Território',
      'ab.card1.items':    '<li>Enterprise</li><li>B2B</li><li>Operações críticas</li><li>Sistemas regulados</li>',
      'ab.card2.title':    'Prática',
@@ -150,7 +148,7 @@ const COPY = {
      'ab.card5.items':    '<li>Agentes</li><li>Prompts</li><li>Workflows</li><li>Prototipação assistida</li>',
      'ab.beyond.title':   'Além da interface',
      'ab.beyond.items':   '<li>Pai</li><li>Observador de sistemas</li><li>Aprendiz constante</li><li>IA aplicada ao design</li><li>Reposicionamento com método</li>',
-     'hero.availability': 'Status Operacional: Sistema pronto',
+      'hero.availability': 'Disponível agora · CLT · PJ · Freelancer',
      'modal.case':        'Caso',
      'ct.tag':            'SÃO PAULO · REMOTO/HÍBRIDO · PT/EN',
      'ct.title':          'Sistemas mais claros.<br>Conversas mais objetivas.',
@@ -169,8 +167,8 @@ const COPY = {
      'ft.bio':            'Infraestrutura de decisão para sistemas críticos, plataformas enterprise e operações complexas.',
      'ft.contact-label':  'Contato',
      'ft.cv':             'Currículo',
-     'ft.info-label':     'Informação',
-     'ft.work-mode':      'Remoto / Híbrido',
+      'ft.info-label':     'Disponibilidade',
+      'ft.work-mode':      'Remoto / Híbrido',
      'modal.close':       'Fechar modal',
    },
    en: {
@@ -182,9 +180,7 @@ const COPY = {
      'h1.l1':        'Decision architecture',
      'h1.l2':        'for critical systems.',
       'sub':          'I structure platforms, flows and systems for operations where clarity supports coordination, scale and decision-making.',
-     'cta.primary':  'View SALA CAR case',
-     'cta.secondary':'Method',
-     'signature':    'Think simple. Make it better. Become inevitable.',
+      'cta.primary':  'Let\'s talk',
      'worked-with':  'Clients',
      's2.tag':       '01 / Territory',
      's2.title':     'Where I operate',
@@ -310,7 +306,7 @@ const COPY = {
      'ab.p3':             'My work sits where product, operations, technology and decision-making meet. Before thinking about components, I try to understand the system: who decides, with what information, under what pressure and with what consequences.',
      'ab.p4':             'Today, I combine design, AI and systems thinking to turn complexity into clearer, more operable and sustainable systems.',
       'ab.photo.alt':      'Henrico Amaral, Senior Product Designer specialized in enterprise systems.',
-      'ab.photo.caption': 'Henrico Amaral<br>Senior Product Designer · Decision Infrastructure<br>São Paulo · Enterprise Systems · AI-assisted workflow',
+      'ab.photo.caption': 'Henrico Amaral<br>Senior Product Designer · Decision Infrastructure<br>São Paulo · Remote / Hybrid · Portuguese / Professional English',
      'ab.card1.title':    'Territory',
      'ab.card1.items':    '<li>Enterprise</li><li>B2B</li><li>Critical operations</li><li>Regulated systems</li>',
      'ab.card2.title':    'Practice',
@@ -323,7 +319,7 @@ const COPY = {
      'ab.card5.items':    '<li>Agents</li><li>Prompts</li><li>Workflows</li><li>Assisted prototyping</li>',
      'ab.beyond.title':   'Beyond the interface',
      'ab.beyond.items':   '<li>Father</li><li>Systems observer</li><li>Constant learner</li><li>AI applied to design</li><li>Repositioning with method</li>',
-     'hero.availability': 'Operational Status: System Ready',
+      'hero.availability': 'Available now · Full-time · Contractor · Freelance',
      'modal.case':        'Case',
      'ct.tag':            'SÃO PAULO · REMOTE/HYBRID · PT/EN',
      'ct.title':          'Clearer systems.<br>More objective conversations.',
@@ -338,22 +334,22 @@ const COPY = {
      'ct.cases':          'View cases',
      'ct.meta':           'São Paulo · Remote / Hybrid · Portuguese / Professional English',
      'ft.role':           'Product Designer · 2026',
-     'ft.signature':      'Think simple. Make better. Become inevitable.',
+      'ft.signature':      'Pense simples. Faça melhor. Torne-se inevitável.',
      'ft.bio':            'Decision infrastructure for critical systems, enterprise platforms and complex operations.',
      'ft.contact-label':  'Contact',
      'ft.cv':             'Resume',
-     'ft.info-label':     'Info',
-     'ft.work-mode':      'Remote / Hybrid',
+      'ft.info-label':     'Availability',
+      'ft.work-mode':      'Remote / Hybrid',
      'modal.close':       'Close modal',
    }
 };
 
 /* ── Global Motion Constants ── */
 const MOTION = {
-  duration: { fast: 0.55, base: 0.7, slow: 0.9, text: 0.6, hero: 0.8 },
+  duration: { fast: 0.6, base: 0.7, slow: 0.85, text: 0.55, hero: 0.75 },
   ease: { standard: 'power2.out', heavy: 'power2.out', soft: 'sine.out', precise: 'power2.out', subtle: 'cubic-bezier(0.22, 1, 0.36, 1)' },
-  stagger: { fast: 0.04, base: 0.05, slow: 0.08 },
-  blur: { entry: 3, subtle: 2, hero: 4, text: 3, word: 4 }
+  stagger: { fast: 0.045, base: 0.05, slow: 0.07 },
+  blur: { entry: 2, subtle: 1, hero: 2, text: 2, word: 2 }
 };
 
 let currentLang = 'pt';
@@ -453,7 +449,6 @@ if (motionReduced) {
     '.hl-i',
     '.sub',
     '.cta-wrapper',
-    '.author-signature--hero',
     '.clients-strip',
     '.section-kicker',
     '.section-header-title',
@@ -463,25 +458,27 @@ if (motionReduced) {
     '.framework-card',
     '.case-card',
     '.impact-cell',
-    '.editorial-reveal'
+    '.editorial-reveal',
+    '#footer [data-t="ft.signature"]',
+    '#footer [data-t="ft.role"]',
+    '#footer .pt-6'
   ], { opacity: 1, y: 0, scale: 1, scaleX: 1, scaleY: 1, filter: 'blur(0px)' });
 } else {
-  tl.from('.availability-badge-v2', { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, immediateRender: false }, 0.1)
-    .from('.eyebrow-line', { scaleX: 0, duration: 0.45, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.2)
-    .from('.eyebrow-text', { opacity: 0, y: 4, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.35, immediateRender: false }, 0.3)
+  tl.from('.availability-badge-v2', { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, immediateRender: false }, 0.08)
+    .from('.eyebrow-line', { scaleX: 0, duration: 0.4, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.15)
+    .from('.eyebrow-text', { opacity: 0, y: 3, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.3, immediateRender: false }, 0.25)
     .from('.hero-word', {
-      y: 14,
+      y: 12,
       opacity: 0,
       filter: `blur(${MOTION.blur.word}px)`,
-      duration: 0.5,
-      stagger: 0.04,
+      duration: MOTION.duration.text,
+      stagger: MOTION.stagger.fast,
       ease: MOTION.ease.subtle,
       immediateRender: false
-    }, 0.45)
-    .from('.sub', { opacity: 0, y: 10, filter: `blur(${MOTION.blur.text}px)`, duration: 0.5, ease: MOTION.ease.subtle, immediateRender: false }, 0.85)
-    .from('.cta-wrapper', { opacity: 0, y: 8, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, ease: MOTION.ease.subtle, immediateRender: false }, 1.1)
-    .from('.author-signature--hero', { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 1.25)
-    .from('.clients-strip', { opacity: 0, y: 4, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 1.4);
+    }, 0.4)
+    .from('.sub', { opacity: 0, y: 8, filter: `blur(${MOTION.blur.text}px)`, duration: MOTION.duration.fast, ease: MOTION.ease.subtle, immediateRender: false }, 0.75)
+    .from('.cta-wrapper', { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 0.9)
+    .from('.clients-strip', { opacity: 0, y: 3, duration: 0.35, ease: MOTION.ease.subtle, immediateRender: false }, 1.15);
 }
 
 function reveal(selector, vars = {}) {
@@ -489,13 +486,13 @@ function reveal(selector, vars = {}) {
     gsap.from(el, {
       scrollTrigger: {
         trigger: el,
-        start: 'top 88%',
-        end: 'top 45%',
+        start: 'top 90%',
+        end: 'top 55%',
         toggleActions: 'play none none reverse'
       },
       opacity: 0,
-      y: 18,
-      filter: `blur(${MOTION.blur.entry}px)`,
+      y: 14,
+      filter: `blur(${MOTION.blur.subtle}px)`,
       duration: MOTION.duration.base,
       ease: MOTION.ease.standard,
       ...vars
@@ -508,7 +505,7 @@ if (!motionReduced) {
     const tlSection = gsap.timeline({
       scrollTrigger: {
         trigger: sectionSelector,
-        start: 'top 86%',
+        start: 'top 78%',
         end: 'top 40%',
         toggleActions: 'play none none reverse'
       }
@@ -520,19 +517,19 @@ if (!motionReduced) {
       }
     };
 
-    addFrom(`${sectionSelector} .section-kicker`, { opacity: 0, y: 4, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.35, ease: MOTION.ease.subtle, immediateRender: false }, 0);
-    addFrom(`${sectionSelector} .section-header-title`, { opacity: 0, y: 10, filter: `blur(${MOTION.blur.entry}px)`, duration: 0.5, ease: MOTION.ease.subtle, immediateRender: false }, 0.05);
-    addFrom(`${sectionSelector} .section-header-divider`, { opacity: 0, scaleY: 0, duration: 0.4, ease: 'power2.inOut', transformOrigin: 'top', immediateRender: false }, 0.1);
-    addFrom(`${sectionSelector} .section-header-subtitle`, { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 0.15);
-    addFrom(`${sectionSelector} .section-header-rule`, { opacity: 0, scaleX: 0, duration: 0.4, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.2);
-    addFrom(`${sectionSelector} .section-microstats span`, { opacity: 0, y: 4, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.35, stagger: 0.03, ease: MOTION.ease.subtle, immediateRender: false }, 0.22);
+    addFrom(`${sectionSelector} .section-kicker`, { opacity: 0, y: 3, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.3, ease: MOTION.ease.subtle, immediateRender: false }, 0);
+    addFrom(`${sectionSelector} .section-header-title`, { opacity: 0, y: 8, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, ease: MOTION.ease.subtle, immediateRender: false }, 0.04);
+    addFrom(`${sectionSelector} .section-header-divider`, { opacity: 0, scaleY: 0, duration: 0.35, ease: 'power2.inOut', transformOrigin: 'top', immediateRender: false }, 0.08);
+    addFrom(`${sectionSelector} .section-header-subtitle`, { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.35, ease: MOTION.ease.subtle, immediateRender: false }, 0.12);
+    addFrom(`${sectionSelector} .section-header-rule`, { opacity: 0, scaleX: 0, duration: 0.35, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.16);
+    addFrom(`${sectionSelector} .section-microstats span`, { opacity: 0, y: 3, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.3, stagger: 0.025, ease: MOTION.ease.subtle, immediateRender: false }, 0.18);
 
     if (cardsSelector && document.querySelector(`${sectionSelector} ${cardsSelector}`)) {
       tlSection.fromTo(
         `${sectionSelector} ${cardsSelector}`,
-        { opacity: 0, y: 12, filter: `blur(${MOTION.blur.entry}px)` },
-        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.5, stagger: 0.05, ease: MOTION.ease.subtle, immediateRender: false },
-        0.3
+        { opacity: 0, y: 10, filter: `blur(${MOTION.blur.subtle}px)` },
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.45, stagger: MOTION.stagger.base, ease: MOTION.ease.subtle, immediateRender: false },
+        0.25
       );
     }
   }
@@ -542,6 +539,20 @@ if (!motionReduced) {
   revealSectionSystem('#impact', '.impact-cell');
   revealSectionSystem('#about', '.editorial-reveal');
   revealSectionSystem('#contact', '.editorial-reveal');
+
+  /* ── Footer entrance ── */
+  const footerTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#footer',
+      start: 'top 85%',
+      end: 'top 60%',
+      toggleActions: 'play none none reverse'
+    }
+  });
+  footerTl
+    .from('#footer [data-t="ft.signature"]', { opacity: 0, y: 10, filter: `blur(${MOTION.blur.subtle}px)`, duration: MOTION.duration.base, ease: MOTION.ease.subtle, immediateRender: false }, 0)
+    .from('#footer .flex.flex-col.gap-3', { opacity: 0, y: 6, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 0.15)
+    .from('#footer .pt-6', { opacity: 0, y: 4, duration: 0.3, ease: MOTION.ease.soft, immediateRender: false }, 0.35);
 }
 
   // Parallax elements
@@ -585,7 +596,7 @@ if (!motionReduced) {
     /* ── Scroll-Linked Hero Blur ── */
     const hero = document.querySelector('#hero');
     if (hero) {
-      gsap.to('#hero .sub, #hero .cta-wrapper, #hero .availability-badge-v2', {
+      gsap.to('#hero .sub, #hero .cta-wrapper', {
         opacity: 0.3,
         y: -15,
         filter: 'blur(10px)',
