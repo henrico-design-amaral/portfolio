@@ -165,6 +165,12 @@ const COPY = {
      'ct.cases':          'Ver cases',
      'ct.meta':           'São Paulo · Remoto / Híbrido · Português / Inglês profissional',
      'ft.role':           'Designer de Produto · 2026',
+     'ft.signature':      'Pense simples. Faça melhor. Torne-se inevitável.',
+     'ft.bio':            'Infraestrutura de decisão para sistemas críticos, plataformas enterprise e operações complexas.',
+     'ft.contact-label':  'Contato',
+     'ft.cv':             'Currículo',
+     'ft.info-label':     'Informação',
+     'ft.work-mode':      'Remoto / Híbrido',
      'modal.close':       'Fechar modal',
    },
    en: {
@@ -332,16 +338,22 @@ const COPY = {
      'ct.cases':          'View cases',
      'ct.meta':           'São Paulo · Remote / Hybrid · Portuguese / Professional English',
      'ft.role':           'Product Designer · 2026',
+     'ft.signature':      'Think simple. Make better. Become inevitable.',
+     'ft.bio':            'Decision infrastructure for critical systems, enterprise platforms and complex operations.',
+     'ft.contact-label':  'Contact',
+     'ft.cv':             'Resume',
+     'ft.info-label':     'Info',
+     'ft.work-mode':      'Remote / Hybrid',
      'modal.close':       'Close modal',
    }
 };
 
 /* ── Global Motion Constants ── */
 const MOTION = {
-  duration: { fast: 0.5, base: 0.65, slow: 0.85, text: 0.55, hero: 0.75, blur: 0.75 },
-  ease: { standard: 'power2.out', heavy: 'power2.out', soft: 'sine.out', precise: 'power2.out', blur: 'power2.inOut', subtle: 'cubic-bezier(0.22, 1, 0.36, 1)' },
-  stagger: { fast: 0.04, base: 0.06, slow: 0.1 },
-  blur: { entry: 6, exit: 8, subtle: 3, hero: 8, text: 5, word: 6 }
+  duration: { fast: 0.55, base: 0.7, slow: 0.9, text: 0.6, hero: 0.8 },
+  ease: { standard: 'power2.out', heavy: 'power2.out', soft: 'sine.out', precise: 'power2.out', subtle: 'cubic-bezier(0.22, 1, 0.36, 1)' },
+  stagger: { fast: 0.04, base: 0.05, slow: 0.08 },
+  blur: { entry: 3, subtle: 2, hero: 4, text: 3, word: 4 }
 };
 
 let currentLang = 'pt';
@@ -441,6 +453,8 @@ if (motionReduced) {
     '.hl-i',
     '.sub',
     '.cta-wrapper',
+    '.author-signature--hero',
+    '.clients-strip',
     '.section-kicker',
     '.section-header-title',
     '.section-header-divider',
@@ -451,23 +465,23 @@ if (motionReduced) {
     '.impact-cell',
     '.editorial-reveal'
   ], { opacity: 1, y: 0, scale: 1, scaleX: 1, scaleY: 1, filter: 'blur(0px)' });
-  gsap.set('.evidence', { opacity: 1, filter: 'blur(0px)' });
 } else {
-  tl.from('.availability-badge-v2', { opacity: 0, y: 8, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, immediateRender: false }, 0.1)
-    .from('.eyebrow-line', { scaleX: 0, duration: 0.5, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.2)
-    .from('.eyebrow-text', { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, immediateRender: false }, 0.35)
+  tl.from('.availability-badge-v2', { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, immediateRender: false }, 0.1)
+    .from('.eyebrow-line', { scaleX: 0, duration: 0.45, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.2)
+    .from('.eyebrow-text', { opacity: 0, y: 4, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.35, immediateRender: false }, 0.3)
     .from('.hero-word', {
-      y: 20,
+      y: 14,
       opacity: 0,
       filter: `blur(${MOTION.blur.word}px)`,
-      duration: 0.55,
-      stagger: 0.05,
+      duration: 0.5,
+      stagger: 0.04,
       ease: MOTION.ease.subtle,
       immediateRender: false
-    }, 0.5)
-    .from('.sub', { opacity: 0, y: 12, filter: `blur(${MOTION.blur.text}px)`, duration: 0.55, ease: MOTION.ease.subtle, immediateRender: false }, 0.9)
-    .from('.cta-wrapper', { opacity: 0, y: 10, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.5, ease: MOTION.ease.subtle, immediateRender: false }, 1.15)
-    .from('.evidence', { opacity: 0, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.5, ease: MOTION.ease.subtle, immediateRender: false }, 1.4);
+    }, 0.45)
+    .from('.sub', { opacity: 0, y: 10, filter: `blur(${MOTION.blur.text}px)`, duration: 0.5, ease: MOTION.ease.subtle, immediateRender: false }, 0.85)
+    .from('.cta-wrapper', { opacity: 0, y: 8, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, ease: MOTION.ease.subtle, immediateRender: false }, 1.1)
+    .from('.author-signature--hero', { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 1.25)
+    .from('.clients-strip', { opacity: 0, y: 4, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 1.4);
 }
 
 function reveal(selector, vars = {}) {
@@ -475,13 +489,12 @@ function reveal(selector, vars = {}) {
     gsap.from(el, {
       scrollTrigger: {
         trigger: el,
-        start: 'top 85%',
-        end: 'top 40%',
+        start: 'top 88%',
+        end: 'top 45%',
         toggleActions: 'play none none reverse'
       },
       opacity: 0,
-      y: 36,
-      scale: 0.98,
+      y: 18,
       filter: `blur(${MOTION.blur.entry}px)`,
       duration: MOTION.duration.base,
       ease: MOTION.ease.standard,
@@ -495,8 +508,8 @@ if (!motionReduced) {
     const tlSection = gsap.timeline({
       scrollTrigger: {
         trigger: sectionSelector,
-        start: 'top 84%',
-        end: 'top 35%',
+        start: 'top 86%',
+        end: 'top 40%',
         toggleActions: 'play none none reverse'
       }
     });
@@ -507,19 +520,19 @@ if (!motionReduced) {
       }
     };
 
-    addFrom(`${sectionSelector} .section-kicker`, { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 0);
-    addFrom(`${sectionSelector} .section-header-title`, { opacity: 0, y: 12, filter: `blur(${MOTION.blur.entry}px)`, duration: 0.55, ease: MOTION.ease.subtle, immediateRender: false }, 0.06);
-    addFrom(`${sectionSelector} .section-header-divider`, { opacity: 0, scaleY: 0, duration: 0.5, ease: 'power2.inOut', transformOrigin: 'top', immediateRender: false }, 0.12);
-    addFrom(`${sectionSelector} .section-header-subtitle`, { opacity: 0, y: 8, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, ease: MOTION.ease.subtle, immediateRender: false }, 0.18);
-    addFrom(`${sectionSelector} .section-header-rule`, { opacity: 0, scaleX: 0, duration: 0.5, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.24);
-    addFrom(`${sectionSelector} .section-microstats span`, { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, stagger: 0.03, ease: MOTION.ease.subtle, immediateRender: false }, 0.28);
+    addFrom(`${sectionSelector} .section-kicker`, { opacity: 0, y: 4, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.35, ease: MOTION.ease.subtle, immediateRender: false }, 0);
+    addFrom(`${sectionSelector} .section-header-title`, { opacity: 0, y: 10, filter: `blur(${MOTION.blur.entry}px)`, duration: 0.5, ease: MOTION.ease.subtle, immediateRender: false }, 0.05);
+    addFrom(`${sectionSelector} .section-header-divider`, { opacity: 0, scaleY: 0, duration: 0.4, ease: 'power2.inOut', transformOrigin: 'top', immediateRender: false }, 0.1);
+    addFrom(`${sectionSelector} .section-header-subtitle`, { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 0.15);
+    addFrom(`${sectionSelector} .section-header-rule`, { opacity: 0, scaleX: 0, duration: 0.4, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.2);
+    addFrom(`${sectionSelector} .section-microstats span`, { opacity: 0, y: 4, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.35, stagger: 0.03, ease: MOTION.ease.subtle, immediateRender: false }, 0.22);
 
     if (cardsSelector && document.querySelector(`${sectionSelector} ${cardsSelector}`)) {
       tlSection.fromTo(
         `${sectionSelector} ${cardsSelector}`,
-        { opacity: 0, y: 16, filter: `blur(${MOTION.blur.entry}px)` },
-        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.55, stagger: 0.06, ease: MOTION.ease.subtle, immediateRender: false },
-        0.38
+        { opacity: 0, y: 12, filter: `blur(${MOTION.blur.entry}px)` },
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.5, stagger: 0.05, ease: MOTION.ease.subtle, immediateRender: false },
+        0.3
       );
     }
   }
@@ -529,6 +542,7 @@ if (!motionReduced) {
   revealSectionSystem('#impact', '.impact-cell');
   revealSectionSystem('#about', '.editorial-reveal');
   revealSectionSystem('#contact', '.editorial-reveal');
+}
 
   // Parallax elements
   gsap.utils.toArray('[data-parallax]').forEach(el => {
@@ -565,7 +579,6 @@ if (!motionReduced) {
       });
     }
   });
-}
 
   if (!motionReduced) {
 
@@ -586,23 +599,7 @@ if (!motionReduced) {
       });
     }
 
-    /* ── Section Cross-Transition Blur ── */
-    document.querySelectorAll('.section-divider').forEach(divider => {
-      gsap.fromTo(divider,
-        { opacity: 0.2, scaleX: 0.3 },
-        {
-          opacity: 0.75,
-          scaleX: 1,
-          scrollTrigger: {
-            trigger: divider,
-            start: 'top 92%',
-            end: 'top 70%',
-            scrub: 1.2,
-            immediateRender: false
-          }
-        }
-      );
-    });
+    /* Section dividers removed — no animation needed */
 
   }
 

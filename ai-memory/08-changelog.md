@@ -1,5 +1,33 @@
 # CHANGELOG — Portfolio
 
+## 2026-05-21 — Refinamento: clients strip full-bleed, section-divider removido, motion suavizado, footer reestruturado
+
+Tipo: design / motion / layout / i18n
+
+Arquivos alterados:
+- `index.html` — clients-strip full-bleed; 4 section-dividers removidos; nav hover underline via `::after`; footer reestruturado (assinatura, grid 3 colunas, contato); `evidence` class removida; i18n data-t nos novos elementos do footer; `aria-hidden` no marquee duplicado
+- `assets/css/site.css` — `.clients-strip` full-bleed (100vw, border-top, bottom:0); `.section-divider` removido; nav hover com `::after`; framework-card/impact-cell hover padronizados (0.28s ease, border dourado, box-shadow); contraste de eyebrow/author-signature ajustado; `evidence` removido do noscript
+- `assets/js/site.js` — MOTION suavizado (blur max 4, y max 18); hero timeline gentler; `reveal()` sem scale; `revealSectionSystem()` reduzido; 12 novas chaves i18n para footer (6 PT + 6 EN); bugfix: `evidence` class removida do JS, bloco duplicado de `revealSectionSystem()` removido
+- `ai-memory/07-open-issues.md` — atualizado com novas pendências
+- `ai-memory/08-changelog.md` — esta entrada
+
+Decisões tomadas:
+- Clients strip full-bleed sem backdrop-filter ou card appearance: borda superior sutil separa do hero
+- Section-divider removido por completo (não apenas escondido): transições entre seções passam a ser governadas apenas por espaçamento, ritmo tipográfico e entrada sutil de conteúdo
+- Motion padronizado com blur máximo de 4px (antes 12px), y máximo 18px (antes 36px), sem scale em reveals
+- Framework-card e impact-cell compartilham mesma gramática de hover: border-color → tom dourado, box-shadow sutil, translateY(-2px), transition 0.28s
+- Footer usa background #2d180e (mais escuro que #472211 anterior) com assinatura como elemento principal
+- Nav hover usa underline puro (sem background, glow ou transform): editorial, preciso
+
+Pendências:
+- Validação visual em navegador interativo para os breakpoints 1680, 1440, 1366, 1024, 768, 390
+- Auditoria de acessibilidade WCAG 2.1 completa: skip link, keyboard, focus-visible, contrast, aria-hidden, reduced-motion
+- Verificar se há erros no console do navegador
+
+Status: Aguardando revisão do usuário — nenhum commit feito.
+
+---
+
 ## 2026-05-21 — Finalização: PDF do CV, placeholder de foto, limpeza de branches
 
 Tipo: release / assets / repository-hygiene

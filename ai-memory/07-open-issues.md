@@ -2,6 +2,30 @@
 
 Problemas, pendências e oportunidades de melhoria identificados.
 
+## 2026-05-21 — Refinamento clients/motion/footer — pendências
+
+### Validação visual em navegador interativo
+- **Onde**: Todas as seções, especialmente clients-strip, footer, nav hover, cards
+- **Descrição**: As alterações de clients strip full-bleed, motion suavizado, footer reestruturado e hover do menu precisam de validação visual real. O ambiente headless não captura nuances de animação GSAP, blur e responsividade.
+- **Impacto**: Pode haver pequenos ajustes de padding, altura do clients-strip em breakpoints intermediários, ou quebra do marquee em mobile.
+- **Próximo Passo**: Abrir localmente e validar 1680, 1440, 1366, 1024, 768, 390.
+
+### Auditoria de acessibilidade WCAG 2.1
+- **Onde**: Todas as seções, especialmente footer e nav
+- **Descrição**: Verificar skip link, navegação por teclado, focus-visible, contraste nos novos elementos do footer, aria-hidden no marquee, reduced-motion.
+- **Próximo Passo**: Rodar auditoria com ferramenta de acessibilidade.
+
+### Console do navegador
+- **Onde**: index.html + site.js
+- **Descrição**: Verificar se não há erros de JS ou warnings de GSAP/ScrollTrigger nos novos seletores e animações.
+- **Próximo Passo**: Abrir no navegador com DevTools console aberto.
+
+### i18n do footer
+- **Descrição**: Foram adicionadas 6 chaves PT + 6 EN para o footer. Verificar se a troca de idioma reflete os novos textos sem quebra.
+- **Próximo Passo**: Testar troca PT/EN e verificar todos os novos elementos.
+
+---
+
 ## 2026-05-21 — Pendências consolidadas
 
 ### CV final em PDF (resolvido ✅)

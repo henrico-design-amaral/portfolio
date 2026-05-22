@@ -88,15 +88,13 @@ footer > * {
 #hero::after,
 #process::after,
 #cases::after,
-#impact::after,
-#about::after,
-#contact::after {
+#impact::after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: -1px;
-  height: var(--section-transition-size);
+  height: calc(var(--section-transition-size) * 0.6);
   pointer-events: none;
   z-index: 0;
 }
@@ -188,16 +186,17 @@ footer > * {
 
 .clients-strip {
   position: absolute;
-  left: 50%;
-  bottom: clamp(1.25rem, 3vh, 2.25rem);
-  width: min(calc(100% - 3rem), 1440px);
-  transform: translate3d(-50%, 0, 0);
-  border: 1px solid rgba(71, 34, 17, 0.14);
-  background: rgba(218, 213, 205, 0.72);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  border-top: 1px solid rgba(71, 34, 17, 0.1);
+  background: rgba(226, 218, 207, 0.85);
   overflow: hidden;
   z-index: 20;
+  height: clamp(3.5rem, 6vh, 4.5rem);
+  display: flex;
+  align-items: center;
 }
 
 #hero > .clients-strip {
@@ -210,7 +209,11 @@ footer > * {
   align-items: center;
   gap: clamp(1rem, 2vw, 2rem);
   min-width: 0;
-  padding: 1rem 1.25rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
 }
 
 .clients-label {
@@ -573,7 +576,7 @@ footer > * {
   min-height: 0;
   height: 100%;
   overflow: hidden;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  transition: border-color 0.28s ease, box-shadow 0.28s ease;
 }
 
 @media (max-width: 639px) {
@@ -585,14 +588,13 @@ footer > * {
 }
 
 .impact-cell:hover {
-  border-color: rgba(190, 156, 110, 0.3);
-  transform: translateY(-3px);
-  box-shadow: none;
+  border-color: rgba(190, 156, 110, 0.35);
+  transform: translateY(-2px);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .impact-cell { transition: none; }
-  .impact-cell:hover { transform: none; box-shadow: none; }
+  .impact-cell:hover { transform: none; }
 }
 
 /* ─── CARD SIDES ─── */
@@ -847,43 +849,7 @@ footer > * {
   .marquee-content { animation: none !important; }
 }
 
-/* Section Dividers — inspired by giulopesgalvao.com.br */
-.section-divider {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 24px;
-  height: 1px;
-}
-.section-divider::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 1px;
-  background: rgba(71, 34, 17, 0.12);
-}
-.section-divider-label {
-  position: relative;
-  z-index: 1;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(190, 156, 110, 0.4);
-  background: #DAD5CD;
-  padding: 6px 16px;
-}
-.section-divider--dark .section-divider-label {
-  background: #080808;
-  color: rgba(255, 255, 255, 0.2);
-}
-.section-divider--dark::before {
-  background: rgba(255, 255, 255, 0.08);
-}
+/* Section dividers removed — transitions handled by section spacing alone */
 
 /* Dark editorial sections — About and Contact */
 .editorial-dark-section {
@@ -1140,8 +1106,7 @@ footer > * {
 
 .about-card:hover,
 .contact-intent-card:hover {
-  border-color: rgba(190, 156, 110, 0.36);
-  transform: translateY(-2px);
+  border-color: rgba(190, 156, 110, 0.35);
 }
 
 .about-card-index {
@@ -1372,6 +1337,24 @@ footer > * {
 #nav .nav-links a {
   color: #5F4638;
   font-weight: 500;
+  position: relative;
+  text-decoration: none;
+}
+
+#nav .nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 1.5px;
+  background: #BE9C6E;
+  transition: right 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#nav .nav-links a:hover::after,
+#nav .nav-links a:focus-visible::after {
+  right: 0;
 }
 
 #nav .nav-links a:hover,
@@ -1399,8 +1382,17 @@ footer > * {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #8a5a26;
-  outline-offset: 4px;
+  outline: 2px solid #BE9C6E;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+#nav a:focus-visible {
+  outline: none;
+}
+
+#nav a:focus-visible::after {
+  right: 0;
 }
 
 .framework-card .env-layer,
@@ -1424,10 +1416,13 @@ button:focus-visible {
   color: #412312 !important;
 }
 
-#hero .eyebrow-text,
+#hero .eyebrow-text {
+  color: rgba(45, 21, 8, 0.82);
+}
+
 .section-microcopy,
 .section-microstats {
-  color: rgba(45, 21, 8, 0.68);
+  color: rgba(45, 21, 8, 0.7);
 }
 
 .section-header-title {
@@ -1469,8 +1464,8 @@ button:focus-visible {
   margin-top: clamp(1.5rem, 3vw, 2.5rem);
   max-width: 44rem;
   font-size: clamp(0.6rem, 0.8vw, 0.72rem);
-  color: var(--section-text-soft);
-  opacity: 0.78;
+  color: #5F4638;
+  opacity: 0.85;
 }
 
 .author-signature--contact {
@@ -1523,23 +1518,21 @@ footer {
   display: none !important;
 }
 
-.section-divider {
-  height: 1px;
-  opacity: 0.75;
-}
+/* section-divider removed */
 
 #process .framework-card {
   background: #f0e9df !important;
-  border-color: rgba(45, 21, 8, 0.16) !important;
+  border-color: rgba(45, 21, 8, 0.12) !important;
   border-radius: 8px;
-  box-shadow: 0 18px 45px rgba(45, 21, 8, 0.06);
+  box-shadow: 0 8px 24px rgba(45, 21, 8, 0.04);
   backdrop-filter: none !important;
+  transition: border-color 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease;
 }
 
 #process .framework-card:hover {
   background: #f5eee4 !important;
-  border-color: rgba(122, 77, 35, 0.28) !important;
-  box-shadow: 0 22px 55px rgba(45, 21, 8, 0.08);
+  border-color: rgba(190, 156, 110, 0.3) !important;
+  box-shadow: 0 12px 32px rgba(45, 21, 8, 0.06);
 }
 
 .case-card {
@@ -1561,12 +1554,12 @@ footer {
   background: #efe5d8;
   border-color: rgba(45, 21, 8, 0.18);
   border-radius: 8px;
-  box-shadow: 0 16px 40px rgba(45, 21, 8, 0.055);
+  box-shadow: 0 8px 24px rgba(45, 21, 8, 0.04);
 }
 
 .impact-cell:hover {
-  border-color: rgba(122, 77, 35, 0.32);
-  box-shadow: 0 22px 55px rgba(45, 21, 8, 0.08);
+  border-color: rgba(190, 156, 110, 0.35);
+  box-shadow: 0 12px 32px rgba(45, 21, 8, 0.06);
 }
 
 .impact-cell .impact-card-side:first-child {
@@ -1796,12 +1789,12 @@ footer {
   }
 
   .clients-strip {
-    width: calc(100% - 2rem);
+    height: clamp(2.75rem, 5vh, 3.25rem);
   }
 
   .clients-strip-inner {
     gap: 0.75rem;
-    padding: 0.75rem 0.875rem;
+    padding: 0 1rem;
   }
 
   .clients-label {
