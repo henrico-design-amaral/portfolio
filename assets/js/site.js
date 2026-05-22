@@ -441,7 +441,6 @@ if (motionReduced) {
     '.hl-i',
     '.sub',
     '.cta-wrapper',
-    '.evidence',
     '.section-kicker',
     '.section-header-title',
     '.section-header-divider',
@@ -452,6 +451,7 @@ if (motionReduced) {
     '.impact-cell',
     '.editorial-reveal'
   ], { opacity: 1, y: 0, scale: 1, scaleX: 1, scaleY: 1, filter: 'blur(0px)' });
+  gsap.set('.evidence', { opacity: 1, filter: 'blur(0px)' });
 } else {
   tl.from('.availability-badge-v2', { opacity: 0, y: 8, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, immediateRender: false }, 0.1)
     .from('.eyebrow-line', { scaleX: 0, duration: 0.5, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.2)

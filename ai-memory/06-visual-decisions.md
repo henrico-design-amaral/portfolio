@@ -25,7 +25,7 @@ Governança visual:
 - Os cards de cases deixam de usar "Usuários" quando o conteúdo é qualitativo. O eixo passa a ser Sistema / Contexto / Escopo / Impacto.
 - Letter spacing negativo foi removido dos pontos editados nesta rodada para preservar legibilidade e evitar compressão visual.
 - A escala cromática passa a usar uma progressão mais linear entre superfície clara e fechamento escuro: `#f2efe9`, `#e6ded1`, `#d8cbb8`, `#b89f82`, `#80644a`, `#5d3f2e`, `#472211`.
-- O banner de clientes não deve depender de `transform` para centralização, porque GSAP/reduced-motion pode sobrescrever transformações. A centralização deve vir de `left`/`right` explícitos com limite máximo de largura.
+- O banner de clientes continua centralizado por `transform`, mas o GSAP não pode aplicar `y`/`scale` nesse elemento em reduced motion, para não sobrescrever a centralização. A regra `#hero > *` também não pode rebaixar a faixa para `position: relative`; manter exceção específica para `#hero > .clients-strip`.
 
 ## 2026-05-16 — Sobre e Contato como fechamento editorial escuro
 

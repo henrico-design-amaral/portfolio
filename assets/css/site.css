@@ -188,15 +188,20 @@ footer > * {
 
 .clients-strip {
   position: absolute;
-  left: max(1.5rem, calc((100% - 1440px) * 0.5));
-  right: max(1.5rem, calc((100% - 1440px) * 0.5));
+  left: 50%;
   bottom: clamp(1.25rem, 3vh, 2.25rem);
-  width: auto;
+  width: min(calc(100% - 3rem), 1440px);
+  transform: translate3d(-50%, 0, 0);
   border: 1px solid rgba(71, 34, 17, 0.14);
   background: rgba(218, 213, 205, 0.72);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
   overflow: hidden;
+  z-index: 20;
+}
+
+#hero > .clients-strip {
+  position: absolute;
   z-index: 20;
 }
 
@@ -1791,8 +1796,7 @@ footer {
   }
 
   .clients-strip {
-    left: 1rem;
-    right: 1rem;
+    width: calc(100% - 2rem);
   }
 
   .clients-strip-inner {

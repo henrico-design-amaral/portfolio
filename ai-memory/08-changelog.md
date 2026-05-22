@@ -1,5 +1,42 @@
 # CHANGELOG — Portfolio
 
+## 2026-05-21 — Finalização: PDF do CV, placeholder de foto, limpeza de branches
+
+Tipo: release / assets / repository-hygiene
+
+Arquivos alterados:
+- `index.html` — src da foto alterado para SVG placeholder; link do CV alterado para PDF
+- `assets/img/foto-placeholder.svg` — novo placeholder geométrico em duotone quente
+- `assets/img/foto.webp` — removido (substituído por SVG)
+- `docs/Henrico-Amaral-CV.pdf` — novo PDF do CV gerado via Edge headless
+- `ai-memory/07-open-issues.md` — atualizado com status resolvido
+- `ai-memory/08-changelog.md` — esta entrada
+- `tools/cv-to-html.js` — script de build do CV (mantido para regeneração futura)
+
+Branches deletadas:
+- `audit/home-structure` (local, não mergeada, removida com -D)
+- `design/solid-section-backgrounds` (local, mergeada)
+- `fix/home-modal-and-docs-structure` (local, mergeada)
+- `gh-pages` (local, stale)
+- `master` (local, stale)
+
+Screenshots capturados:
+- 6 breakpoints (1680, 1440, 1366, 1024, 768, 390) em `$env:TEMP\portfolio-val\`
+
+Decisões tomadas:
+- Placeholder de foto usa SVG em vez de PNG/WebP porque permite resultado profissional imediato sem ferramentas de imagem (ImageMagick/sharp indisponíveis). O design é um retrato geométrico abstrato em warm duotone, consistente com a paleta do portfólio.
+- CV em PDF foi gerado com layout A4 profissional, tipografia Syne/Inter/JetBrains Mono idêntica ao site, e mantém a assinatura "Pense simples. Faça melhor. Torne-se inevitável." no rodapé.
+- O script `tools/cv-to-html.js` foi preservado para regeneração futura do PDF quando o conteúdo do CV mudar.
+
+Pendências:
+- Branche remota `origin/gh-pages` ainda existe — pode ser deletada se não estiver em uso.
+- Placeholder SVG deve ser substituído por foto real quando disponível, mantendo as mesmas proporções (4:5, 360x450).
+- Validação visual em navegador interativo manual ainda recomendada.
+
+Status: Aguardando commit, merge e push para `origin/main`.
+
+---
+
 ## 2026-05-21 — Refinamento final da home: i18n, narrativa e publicação
 
 Tipo: content / i18n / release
@@ -53,7 +90,7 @@ Decisões tomadas:
 - Mantido o 95% da Petrobras como métrica quantitativa documentada.
 - Seção Impacto alterada de "mensurável" para "observável" para refletir evidências quantitativas e qualitativas.
 - Cards de cases passam a usar Sistema / Contexto / Escopo / Impacto.
-- Corrigido o banner de clientes, removendo a dependência de `transform: translateX(-50%)` para centralização.
+- Corrigido o banner de clientes, impedindo que a regra global `#hero > *` substitua o `position: absolute` da faixa e preservando o transform em reduced motion.
 - Ajustada a escala de cores a partir de Impacto para uma progressão mais natural entre seções claras, médias e escuras.
 - Corrigidos warnings de GSAP para elementos opcionais de header que não existem em todas as seções.
 - Adicionado suporte i18n para `alt`, `aria-label` e novos textos PT/EN.
