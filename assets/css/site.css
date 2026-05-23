@@ -44,10 +44,15 @@ body > * {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.36;
-  background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%235A2A18' stroke-opacity='0.12' stroke-width='1'%3E%3Cpath d='M72 0H0V72'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 72px 72px;
+  opacity: 0.04;
+  background-image: radial-gradient(rgba(71, 34, 17, 0.8) 1.5px, transparent 1.5px);
+  background-size: 64px 64px;
   background-position: center top;
+  mask-image: radial-gradient(ellipse at center, transparent 15%, black 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, transparent 15%, black 70%);
+}
+@media (max-width: 767px) {
+  #hero::before { opacity: 0.01; }
 }
 
 #process {
@@ -259,7 +264,7 @@ footer > * {
 
 /* ═══════════════════════════════════════════════
    SECTION HEADER SYSTEM — shared across editorial sections
-   Pattern: kicker / title | divider | subtitle + microcopy
+   Pattern: kicker / title | subtitle + microcopy
    ═══════════════════════════════════════════════ */
 
 .section-header {
@@ -300,8 +305,8 @@ footer > * {
 
   /*
     Section header contract:
-    two content columns only. Section dividers were intentionally removed from
-    the editorial system; never reserve a 1px grid track for a missing divider.
+    two content columns only. Visual separators are intentionally absent from
+    the editorial system; never reserve a 1px grid track for missing chrome.
   */
   .section-header-grid,
   .sh-grid {
@@ -326,7 +331,6 @@ h2.section-header-title,
   letter-spacing: 0;
   color: #472211;
   margin: 0;
-  max-width: min(100%, 14ch);
   overflow-wrap: normal;
   word-break: normal;
   hyphens: none;
@@ -578,7 +582,7 @@ h2.section-header-title,
   }
 }
 
-/* Left col vertical divider */
+/* Left column internal split */
 .impact-cell .impact-card-side:first-child {
   border-right: 1px solid rgba(26, 20, 16, 0.07);
 }
@@ -592,7 +596,7 @@ h2.section-header-title,
 }
 
 /* ─── CLIENT NAME ─── */
-.impact-cell h4 {
+.impact-cell h3 {
   font-family: 'Syne', sans-serif;
   font-size: clamp(1.25rem, 1.4vw, 1.5rem);
   font-weight: 700;
@@ -808,7 +812,7 @@ h2.section-header-title,
   .marquee-content { animation: none !important; }
 }
 
-/* Section dividers removed — transitions handled by section spacing alone */
+/* Section transitions are handled by spacing and solid surfaces alone. */
 
 /* Dark editorial sections — About and Contact */
 .editorial-dark-section {
@@ -817,7 +821,6 @@ h2.section-header-title,
   padding: 6rem 1.5rem;
   background: var(--section-about);
   color: #f2efe9;
-  border-top: 1px solid rgba(242, 239, 233, 0.08);
   scroll-margin-top: 96px;
 }
 
@@ -1224,15 +1227,6 @@ h2.section-header-title,
   transform: scaleX(1);
 }
 
-.contact-meta {
-  margin-top: clamp(2rem, 4vw, 3rem);
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(242, 239, 233, 0.1);
-  color: rgba(242, 239, 233, 0.72);
-  text-align: center;
-  font-weight: 500;
-}
-
 @media (max-width: 639px) {
   .editorial-dark-section {
     padding-left: 1.25rem;
@@ -1339,6 +1333,50 @@ h2.section-header-title,
   font-weight: 700;
 }
 
+.mobile-menu-toggle {
+  display: inline-flex;
+  width: 2.35rem;
+  height: 2.35rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.34rem;
+  border: 1px solid rgba(68, 45, 34, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #2B1710;
+}
+
+.mobile-menu-toggle span {
+  width: 0.95rem;
+  height: 1px;
+  background: currentColor;
+}
+
+.mobile-menu {
+  padding: 0.25rem 1.5rem 1rem;
+  background: rgba(242, 239, 233, 0.96);
+  border-bottom: 1px solid rgba(68, 45, 34, 0.12);
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.9rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #3a2418;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-toggle,
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid #BE9C6E;
@@ -1437,7 +1475,7 @@ footer {
   display: none !important;
 }
 
-/* section-divider removed */
+/* Legacy separator class removed */
 
 #process .framework-card {
   background: #f0e9df !important;
@@ -1503,7 +1541,7 @@ footer {
 }
 
 .impact-evidence,
-.impact-cell h4 {
+.impact-cell h3 {
   color: #2d1508;
 }
 
@@ -1584,7 +1622,6 @@ footer {
 }
 
 .contact-section .section-header-title {
-   max-width: 760px;
    font-size: clamp(2.5rem, 4vw, 3.3rem);
    line-height: 1;
  }

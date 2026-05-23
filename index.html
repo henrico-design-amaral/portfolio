@@ -88,7 +88,7 @@
   <!-- NAV -->
   <nav class="fixed top-0 left-0 w-full z-50 liquid-glass transition-transform duration-300" id="nav"
     aria-label="Navegação principal">
-    <div class="max-w-[1440px] mx-auto flex items-center justify-between px-6 py-4">
+    <div class="max-w-[1440px] w-full mx-auto flex items-center justify-between px-6 py-4">
       <div class="magnetic-wrap">
         <a href="#hero" class="font-display font-bold text-lg md:text-xl tracking-[0]">Henrico Amaral</a>
       </div>
@@ -103,11 +103,23 @@
       </div>
 
       <div class="flex items-center gap-2 font-mono text-[12px] uppercase font-bold nav-lang" id="nav-lang">
-        <button class="lang-btn active transition-colors" data-lang="pt" aria-pressed="true">PT</button>
+        <button class="lang-btn active transition-colors" data-lang="pt" aria-label="Português" aria-pressed="true">PT</button>
         <span class="text-support-300">/</span>
         <button class="lang-btn text-text-tertiary hover:text-accent-500 transition-colors" data-lang="en"
-          aria-pressed="false">EN</button>
+          aria-label="Switch to English" aria-pressed="false">EN</button>
       </div>
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle md:hidden" type="button"
+        aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu md:hidden" hidden>
+      <a href="#process" data-t="nav.method">Método</a>
+      <a href="#cases" data-t="nav.cases">Casos</a>
+      <a href="#impact" data-t="nav.impact">Impacto</a>
+      <a href="#about" data-t="nav.about">Sobre</a>
+      <a href="#contact" data-t="nav.contact">Contato</a>
     </div>
   </nav>
 
@@ -178,7 +190,7 @@
       <div class="clients-strip">
         <div class="clients-strip-inner">
           <span class="clients-label" data-t="worked-with">Clientes</span>
-          <div class="marquee clients-marquee">
+          <div class="marquee clients-marquee" aria-label="Clientes">
             <div class="marquee-content">
               <span>Petrobras</span><span class="text-support-300">·</span>
               <span>Bayer</span><span class="text-support-300">·</span>
@@ -219,7 +231,7 @@
         }
       </style>
 
-      <div class="max-w-[1440px] mx-auto relative z-10">
+      <div class="max-w-[1440px] w-full mx-auto relative z-10">
 
         <!-- Section Header — standardized system -->
         <div class="section-header">
@@ -322,11 +334,11 @@
 
     <!-- CASES -->
     <section id="cases" class="section-pad px-6 relative nbg bg-page">
-      <div class="max-w-[1600px] mx-auto relative z-10">
+      <div class="max-w-[1440px] w-full mx-auto relative z-10">
         <!-- Header Section — standardized system -->
         <div class="section-header">
           <span class="section-kicker">
-            <span data-t="s3.header.kicker">Projetos reais · Problemas complexos</span>
+            <span data-t="s3.header.kicker">PROJETOS REAIS · PROBLEMAS COMPLEXOS</span>
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
@@ -360,7 +372,7 @@
                 <circle cx="70" cy="60" r="1.5" fill="#BE9C6E" opacity="0.2" style="transform-origin: 70px 60px; animation: petro-node-breathe 8s ease-in-out infinite 4s;" />
               </svg>
               <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
-              <img src="assets/img/cases/petrobras.webp" alt="Petrobras" class="w-full h-full object-cover scale-[1.02] opacity-80" />
+              <img src="assets/img/cases/petrobras.webp" alt="Petrobras" class="w-full h-full object-cover scale-[1.02] opacity-80" width="1200" height="1200" loading="lazy" decoding="async" />
 
               <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
                 01 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
@@ -415,7 +427,7 @@
                 <line x1="70" y1="50" x2="70" y2="75" stroke="#BE9C6E" stroke-width="0.12" opacity="0.12" />
               </svg>
               <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
-              <img src="assets/img/cases/ambev.webp" alt="Ambev" class="w-full h-full object-cover scale-[1.02] opacity-80" />
+              <img src="assets/img/cases/ambev.webp" alt="Ambev" class="w-full h-full object-cover scale-[1.02] opacity-80" width="1200" height="1200" loading="lazy" decoding="async" />
 
               <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
                 02 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
@@ -469,7 +481,7 @@
                 <circle cx="50" cy="50" r="20" fill="none" stroke="#BE9C6E" stroke-width="0.1" opacity="0.08" style="transform-origin: 50% 50%; animation: bayer-pulse 8s ease-in-out infinite;" />
               </svg>
               <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
-              <img src="assets/img/cases/bayer.webp" alt="Bayer" class="w-full h-full object-cover scale-[1.02] opacity-80" />
+              <img src="assets/img/cases/bayer.webp" alt="Bayer" class="w-full h-full object-cover scale-[1.02] opacity-80" width="1200" height="1200" loading="lazy" decoding="async" />
 
               <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
                 03 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
@@ -524,7 +536,7 @@
                 <rect x="42" y="16" width="12" height="12" fill="none" stroke="#BE9C6E" stroke-width="0.2" opacity="0.12" style="animation: bmg-module 5s ease-in-out infinite 2.5s;" />
               </svg>
               <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
-              <img src="assets/img/cases/bmg.webp" alt="BMG" class="w-full h-full object-cover object-top scale-[1.02] opacity-80" />
+              <img src="assets/img/cases/bmg.webp" alt="BMG" class="w-full h-full object-cover object-top scale-[1.02] opacity-80" width="1200" height="1200" loading="lazy" decoding="async" />
 
               <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
                 04 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
@@ -651,6 +663,8 @@
         <script>
           window.addEventListener('load', () => {
             if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+              var motionOff = window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.matchMedia('(max-width: 768px)').matches;
+              if (motionOff) return;
 
               // Per‑card behavioral configuration — softened
               var behaviorConfig = {
@@ -746,7 +760,7 @@
 
     <!-- IMPACT -->
     <section id="impact" class="section-pad px-6 bg-base-100 relative nbg overflow-visible">
-      <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
+      <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12 relative z-10">
         <!-- Section Header — standardized system (canonical reference) -->
         <div class="section-header">
           <span class="section-kicker">
@@ -760,7 +774,7 @@
               <div class="section-microstats section-microcopy">
                 <span data-t="s5.stat1">RESULTADOS OBSERVÁVEIS EM SISTEMAS COMPLEXOS</span>
               </div>
-              <p data-t="s5.desc">Evidências quantitativas quando há lastro, evidências qualitativas quando o impacto é estrutural.</p>
+              <p data-t="s5.desc">Quando há número validado, ele aparece. Quando o impacto é estrutural, a evidência é descrita com precisão.</p>
             </div>
           </div>
         </div>
@@ -771,7 +785,7 @@
 <!-- Card 1: Petrobras -->
            <div class="impact-cell">
              <div class="impact-card-side">
-               <h4 data-t="imp1.client">Petrobras</h4>
+               <h3 data-t="imp1.client">Petrobras</h3>
                <div class="mb-auto">
                  <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
                  <span class="impact-dimension" data-t="imp1.dim">Automação operacional</span>
@@ -794,7 +808,7 @@
 <!-- Card 2: Bayer -->
            <div class="impact-cell">
              <div class="impact-card-side">
-               <h4 data-t="imp2.client">Bayer</h4>
+               <h3 data-t="imp2.client">Bayer</h3>
                <div class="mb-auto">
                  <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
                  <span class="impact-dimension" data-t="imp2.dim">Dados agrícolas</span>
@@ -817,7 +831,7 @@
 <!-- Card 3: Ambev -->
            <div class="impact-cell">
              <div class="impact-card-side">
-               <h4 data-t="imp3.client">Ambev</h4>
+               <h3 data-t="imp3.client">Ambev</h3>
                <div class="mb-auto">
                  <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
                  <span class="impact-dimension" data-t="imp3.dim">Monitoramento logístico</span>
@@ -840,7 +854,7 @@
 <!-- Card 4: BMG -->
            <div class="impact-cell">
              <div class="impact-card-side">
-               <h4 data-t="imp4.client">BMG</h4>
+               <h3 data-t="imp4.client">BMG</h3>
                <div class="mb-auto">
                  <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
                  <span class="impact-dimension" data-t="imp4.dim">Ambiente regulado</span>
@@ -868,7 +882,7 @@
 
     <!-- ABOUT -->
     <section id="about" class="editorial-dark-section about-section nbg">
-      <div class="max-w-[1440px] mx-auto relative z-10">
+      <div class="max-w-[1440px] w-full mx-auto relative z-10">
         <div class="section-header section-header--dark">
           <span class="section-kicker">
             <span data-t="ab.tag">TRAJETÓRIA · MÉTODO · REPERTÓRIO</span>
@@ -881,7 +895,7 @@
               <div class="section-microstats section-microcopy">
                 <span>DESIGN · PRODUTO · TECNOLOGIA · OPERAÇÃO</span>
               </div>
-              <p data-t="ab.subtitle">20 anos entre design, tecnologia e produto; 15+ anos em UX/Product Design para ambientes complexos.</p>
+              <p data-t="ab.subtitle">Senior Product Designer para plataformas B2B, sistemas internos e operações complexas.</p>
             </div>
           </div>
         </div>
@@ -891,7 +905,7 @@
           <div class="about-narrative">
             <p class="editorial-reveal" data-t="ab.p1">Sou Senior Product Designer com 20 anos em design digital e mais de 15 anos em UX/Product Design.</p>
             <p class="editorial-reveal" data-t="ab.p2">Meu trabalho é organizar fluxos, informação e decisões em produtos digitais usados por times de operação, negócio e tecnologia.</p>
-            <p class="editorial-reveal" data-t="ab.p3">Atuei em projetos para Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood, BMG e Youse. Em comum, esses projetos tinham o mesmo desafio: transformar complexidade em sistemas mais claros, confiáveis e fáceis de operar.</p>
+            <p class="editorial-reveal" data-t="ab.p3">Atuei em projetos para Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood, BMG e Youse. São setores diferentes, mas o desafio se repete: transformar complexidade em sistemas mais claros, confiáveis e fáceis de operar.</p>
             <p class="editorial-reveal" data-t="ab.p4">Não parto da tela. Parto do problema, do fluxo, das regras e das decisões que o sistema precisa sustentar.</p>
           </div>
 
@@ -908,8 +922,7 @@
              />
              <div class="about-photo-caption" data-t="ab.photo.caption">
                 Henrico Amaral<br>
-                Senior Product Designer · Decision Infrastructure<br>
-                São Paulo · Remoto / Híbrido · PT/EN
+                Senior Product Designer · Decision Infrastructure
               </div>
            </div>
         </div>
@@ -918,8 +931,9 @@
         <div class="about-grid" aria-label="Capacidades profissionais">
           <article class="about-card editorial-reveal">
             <span class="about-card-index">01</span>
-            <h3 data-t="ab.card1.title">Senior Product Designer</h3>
+            <h3 data-t="ab.card1.title">Papel</h3>
             <ul data-t="ab.card1.items">
+              <li>Senior Product Designer</li>
               <li>Plataformas B2B</li>
               <li>Sistemas internos</li>
               <li>Workflows complexos</li>
@@ -929,7 +943,7 @@
 
           <article class="about-card editorial-reveal">
             <span class="about-card-index">02</span>
-            <h3 data-t="ab.card2.title">Complexidade operacional</h3>
+            <h3 data-t="ab.card2.title">O que resolvo</h3>
             <ul data-t="ab.card2.items">
               <li>Fluxos confusos</li>
               <li>Dados dispersos</li>
@@ -940,7 +954,7 @@
 
           <article class="about-card editorial-reveal">
             <span class="about-card-index">03</span>
-            <h3 data-t="ab.card3.title">Estrutura antes da interface</h3>
+            <h3 data-t="ab.card3.title">Como trabalho</h3>
             <ul data-t="ab.card3.items">
               <li>Discovery</li>
               <li>Arquitetura da informação</li>
@@ -951,7 +965,7 @@
 
           <article class="about-card editorial-reveal">
             <span class="about-card-index">04</span>
-            <h3 data-t="ab.card4.title">Projetos enterprise</h3>
+            <h3 data-t="ab.card4.title">Experiência</h3>
             <ul data-t="ab.card4.items">
               <li>Energia</li>
               <li>Bancos e seguros</li>
@@ -966,10 +980,11 @@
             <h3 data-t="ab.card5.title">Ferramentas</h3>
             <ul data-t="ab.card5.items">
               <li>Figma</li>
-              <li>Miro / FigJam</li>
+              <li>FigJam / Miro</li>
               <li>AccessMonitor</li>
               <li>GitHub</li>
               <li>IA generativa</li>
+              <li>Antigravity</li>
             </ul>
           </article>
         </div>
@@ -979,17 +994,17 @@
 
 
     <section id="contact" class="editorial-dark-section contact-section nbg">
-      <div class="max-w-[1440px] mx-auto relative z-10">
+      <div class="max-w-[1440px] w-full mx-auto relative z-10">
         <div class="section-header section-header--dark">
           <span class="section-kicker">
             <span data-t="ct.tag">SÃO PAULO · REMOTO/HÍBRIDO · PT/EN</span>
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
-              <h2 class="section-header-title" data-t="ct.title">Vamos falar sobre o seu<br>próximo sistema complexo.</h2>
+              <h2 class="section-header-title" data-t="ct.title">Sistemas mais claros.<br>Conversas mais objetivas.</h2>
             </div>
             <div class="section-header-subtitle">
-              <p data-t="ct.sub">Para vagas sêniores, projetos enterprise, plataformas internas ou conversas técnicas sobre produto, operação e decisão.</p>
+              <p data-t="ct.sub">Para vagas sêniores, projetos enterprise e conversas técnicas sobre produto, operação e decisão.</p>
             </div>
           </div>
         </div>
@@ -1008,7 +1023,7 @@
           <article class="contact-intent-card editorial-reveal">
             <span class="about-card-index">03</span>
             <h3 data-t="ct.card3.title">Para conversas técnicas</h3>
-            <p data-t="ct.card3.text">Arquitetura da informação, IA aplicada, prototipação e clareza operacional.</p>
+            <p data-t="ct.card3.text">Arquitetura da informação, prototipação, IA aplicada e clareza operacional.</p>
           </article>
         </div>
 
@@ -1043,7 +1058,7 @@
         <span class="w-6 h-6 flex items-center justify-center">×</span>
       </button>
       <div class="space-y-6">
-        <h3 id="modal-client" class="font-display font-bold text-3xl md:text-4xl text-text-primary"></h3>
+        <h2 id="modal-client" class="font-display font-bold text-3xl md:text-4xl text-text-primary" data-t="modal.case">Caso</h2>
         <div id="modal-tags" class="flex flex-wrap gap-2"></div>
         <p id="modal-desc" class="font-body text-lg text-text-secondary leading-relaxed"></p>
         <div class="flex items-center gap-4">
@@ -1056,7 +1071,7 @@
   </div>
 
   <footer class="py-20 px-6 bg-[#2d180e] text-[#f2efe9] relative overflow-hidden" id="footer">
-    <div class="max-w-[1440px] mx-auto relative z-10">
+    <div class="max-w-[1440px] w-full mx-auto relative z-10">
       <!-- 2-col grid: identity left, signature right -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-16 md:mb-20">
         <!-- Left: Identity -->
