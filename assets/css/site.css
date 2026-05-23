@@ -17,7 +17,6 @@
   --section-text-light: #f2efe9;
   --section-text-light-muted: rgba(242, 239, 233, 0.92);
   --section-text-light-soft: rgba(242, 239, 233, 0.78);
-  --section-transition-size: clamp(4.5rem, 9vw, 8.5rem);
 }
 
 body {
@@ -37,6 +36,18 @@ body > * {
 #hero {
   background: var(--section-hero);
   padding-bottom: clamp(9rem, 14vh, 12rem) !important;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.36;
+  background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%235A2A18' stroke-opacity='0.12' stroke-width='1'%3E%3Cpath d='M72 0H0V72'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 72px 72px;
+  background-position: center top;
 }
 
 #process {
@@ -83,44 +94,6 @@ footer {
 footer > * {
   position: relative;
   z-index: 1;
-}
-
-#hero::after,
-#process::after,
-#cases::after,
-#impact::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: calc(var(--section-transition-size) * 0.6);
-  pointer-events: none;
-  z-index: 0;
-}
-
-#hero::after {
-  background: linear-gradient(180deg, var(--section-hero) 0%, var(--section-process) 100%);
-}
-
-#process::after {
-  background: linear-gradient(180deg, var(--section-process) 0%, var(--section-cases) 100%);
-}
-
-#cases::after {
-  background: linear-gradient(180deg, var(--section-cases) 0%, var(--section-impact) 100%);
-}
-
-#impact::after {
-  background: linear-gradient(180deg, var(--section-impact) 0%, var(--section-about) 100%);
-}
-
-#about::after {
-  background: linear-gradient(180deg, var(--section-about) 0%, var(--section-contact) 100%);
-}
-
-#contact::after {
-  background: linear-gradient(180deg, var(--section-contact) 0%, var(--section-footer) 100%);
 }
 
 /* ─── STANDARDIZED SECTION PADDING ─── */
@@ -190,7 +163,6 @@ footer > * {
   right: 0;
   bottom: 0;
   width: 100vw;
-  border-top: 1px solid rgba(71, 34, 17, 0.1);
   background: rgba(226, 218, 207, 0.85);
   overflow: hidden;
   z-index: 20;
@@ -224,13 +196,6 @@ footer > * {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--section-text-soft);
-}
-
-.clients-divider {
-  flex: 0 0 auto;
-  width: 1px;
-  height: 1rem;
-  background: rgba(71, 34, 17, 0.18);
 }
 
 .clients-marquee {
@@ -345,28 +310,12 @@ footer > * {
   min-width: 0;
 }
 
-.section-header-divider {
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .section-header-divider {
-    display: block;
-    width: 1px;
-    min-height: 132px;
-    align-self: stretch;
-    background: rgba(26, 20, 16, 0.08);
-    transform-origin: top;
-  }
-}
-
-.section-header-title,
-.sh-title,
-.contact-section .section-header-title {
+h2.section-header-title,
+.sh-title {
   will-change: transform, filter, opacity;
   font-family: 'Syne', sans-serif;
   font-weight: 700;
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.3rem);
   line-height: 0.86;
   letter-spacing: 0;
   color: #472211;
@@ -374,9 +323,9 @@ footer > * {
 }
 
 @media (max-width: 767px) {
-  .section-header-title,
+  h2.section-header-title,
   .sh-title {
-    font-size: clamp(2.75rem, 12vw, 4.25rem);
+    font-size: clamp(2.5rem, 4vw, 3.3rem);
   }
 }
 
@@ -875,7 +824,7 @@ footer > * {
 
 .contact-section .section-header-title {
   max-width: 860px;
-  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.3rem);
   line-height: 0.94;
   text-wrap: balance;
 }
@@ -954,10 +903,6 @@ footer > * {
   color: #f2efe9;
 }
 
-.section-header--dark .section-header-divider {
-  background: rgba(242, 239, 233, 0.12);
-}
-
 .section-header--dark .section-header-subtitle {
   color: rgba(242, 239, 233, 0.68);
 }
@@ -968,12 +913,6 @@ footer > * {
 
 .section-header--dark .section-microstats strong {
   color: #f2efe9;
-}
-
-.section-header-rule {
-  height: 1px;
-  margin-top: clamp(2.25rem, 4vw, 3.5rem);
-  background: linear-gradient(90deg, rgba(190, 156, 110, 0.34), rgba(242, 239, 233, 0.08), transparent);
 }
 
 .about-narrative {
@@ -1635,7 +1574,7 @@ footer {
 
 .contact-section .section-header-title {
    max-width: 760px;
-   font-size: clamp(2.5rem, 4vw, 3.5rem);
+   font-size: clamp(2.5rem, 4vw, 3.3rem);
    line-height: 1;
  }
 
@@ -1797,9 +1736,9 @@ footer {
     border-bottom-color: rgba(45, 21, 8, 0.12);
   }
 
-.contact-section .section-header-title {
-     font-size: clamp(2.25rem, 11vw, 3rem);
-   }
+  .contact-section .section-header-title {
+    font-size: clamp(2.5rem, 4vw, 3.3rem);
+  }
 }
 
 /* ── Framework card hover — consistent grammar ── */
