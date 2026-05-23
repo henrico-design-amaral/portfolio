@@ -1,4 +1,4 @@
-﻿# PROJECT CONTROL — PORTFOLIO
+# PROJECT CONTROL — PORTFOLIO
 
 Este arquivo define o controle básico do projeto Portfolio.
 
@@ -151,21 +151,19 @@ Não mexer em gh-pages nem master agora.
 
 Branch:
 
-fix/home-modal-and-docs-structure
+main
 
 Objetivo:
 
-Corrigir a abertura dos modais de cases, respeitar tradução dinâmica no conteúdo principal do modal, manter os arquivos de design system dentro de docs/ e otimizar imagens públicas para WebP.
+Correção cirúrgica de regressões: remoção de degradês, bg da hero atualizado para dot grid, cópia da hero e método refatoradas, seções de contato enxugadas, acessibilidade em botões melhorada e hierarquia de headings corrigida.
 
 Alterações executadas:
 
-- data-case-index nos cards da home
-- suporte a teclado nos cards de cases
-- leitura de client, desc e metric a partir do dicionário COPY
-- design-system.html, design-system-v2.html e design-system-v3.html mantidos em docs/
-- imagens públicas da home convertidas para WebP e referências atualizadas
+- index.html: classes legadas de width e paddings ajustadas, botões de idioma receberam labels de acessibilidade, tags h4 de impacto corrigidas para h3.
+- assets/css/site.css: remoção de legacy dividers, background radial-gradient dot-grid estabelecido na hero, opacidade adaptada para mobile.
+- assets/js/site.js: dicionários de cópia e microcopies atualizados.
 
 Próximas etapas recomendadas:
 
-1. Revisar se o link de CV deve baixar Markdown ou apontar para PDF.
-2. Fazer revisão visual rápida da home após cada mudança.
+1. Garantir monitoramento contínuo das implementações para evitar o retorno de regressões.
+2. Analisar desempenho na ferramenta Lighthouse localmente quando viável.
