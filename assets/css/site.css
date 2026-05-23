@@ -298,10 +298,16 @@ footer > * {
     margin-bottom: 3.25rem;
   }
 
+  /*
+    Section header contract:
+    two content columns only. Section dividers were intentionally removed from
+    the editorial system; never reserve a 1px grid track for a missing divider.
+  */
   .section-header-grid,
   .sh-grid {
-    grid-template-columns: minmax(0, 1.4fr) 1px minmax(0, 1fr);
-    gap: 4rem;
+    grid-template-columns: minmax(0, 1.35fr) minmax(20rem, 0.75fr);
+    column-gap: clamp(3rem, 6vw, 6rem);
+    row-gap: 2rem;
   }
 }
 
@@ -316,17 +322,20 @@ h2.section-header-title,
   font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: clamp(2.5rem, 4vw, 3.3rem);
-  line-height: 0.86;
+  line-height: 0.96;
   letter-spacing: 0;
   color: #472211;
   margin: 0;
+  max-width: min(100%, 14ch);
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 @media (max-width: 767px) {
   h2.section-header-title,
   .sh-title {
-    font-size: clamp(2.5rem, 4vw, 3.3rem);
-  }
+\n  }
 }
 
 .section-header-subtitle,
@@ -337,6 +346,7 @@ h2.section-header-title,
   color: #5F4638;
   max-width: 520px;
   margin-left: auto;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -1230,7 +1240,8 @@ h2.section-header-title,
   }
 
   .section-header--dark .section-header-title {
-    font-size: clamp(2.6rem, 12vw, 4rem);
+    font-size: clamp(2.05rem, 9vw, 2.7rem);
+    line-height: 1.02;
   }
 
   .about-narrative {
@@ -1737,8 +1748,7 @@ footer {
   }
 
   .contact-section .section-header-title {
-    font-size: clamp(2.5rem, 4vw, 3.3rem);
-  }
+\n  }
 }
 
 /* ── Framework card hover — consistent grammar ── */
@@ -1787,5 +1797,6 @@ footer {
 .case-card:hover .behavioral-svg {
   opacity: 0.22 !important;
 }
+
 
 
