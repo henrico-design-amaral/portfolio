@@ -1,0 +1,49 @@
+﻿"moment","strategy","audit_id","title","score","display_value","numeric_value"
+"after","desktop","cache-insight","Use ciclos de vida eficientes de cache","0,5","Economia estimada de 123 KiB",
+"before","desktop","cache-insight","Use ciclos de vida eficientes de cache","0,5","Economia estimada de 637 KiB",
+"after","desktop","cumulative-layout-shift","Cumulative Layout Shift","1","0,031","0,031438999999999995"
+"before","desktop","cumulative-layout-shift","Cumulative Layout Shift","1","0,031","0,031438999999999995"
+"after","desktop","first-contentful-paint","First Contentful Paint","0,65","1,4Â s","1357,748846500327"
+"before","desktop","first-contentful-paint","First Contentful Paint","0,94","0,8Â s","816,0324127697763"
+"after","desktop","forced-reflow-insight","Reflow forÃ§ado","0",,
+"before","desktop","forced-reflow-insight","Reflow forÃ§ado","0",,
+"after","desktop","image-delivery-insight","Melhorar a entrega de imagens","1",,
+"before","desktop","image-delivery-insight","Melhorar a entrega de imagens","0,5","Economia estimada de 568 KiB",
+"after","desktop","interactive","Time to Interactive","0,99","1,4Â s","1357,748846500327"
+"before","desktop","interactive","Time to Interactive","1","1,1Â s","1105,2157302555647"
+"after","desktop","largest-contentful-paint","Largest Contentful Paint","0,85","1,4Â s","1357,748846500327"
+"before","desktop","largest-contentful-paint","Largest Contentful Paint","0,97","0,9Â s","876,0356790228217"
+"after","desktop","mainthread-work-breakdown","Minimiza o trabalho da thread principal","1","1,7Â s","1689,434999999991"
+"before","desktop","mainthread-work-breakdown","Minimiza o trabalho da thread principal","1","1,4Â s","1385,735999999996"
+"after","desktop","max-potential-fid","Max Potential First Input Delay","1","20Â ms","21"
+"before","desktop","max-potential-fid","Max Potential First Input Delay","0,23","360Â ms","359,9999999999999"
+"after","desktop","network-dependency-tree-insight","Ãrvore de dependÃªncia da rede","0",,
+"before","desktop","network-dependency-tree-insight","Ãrvore de dependÃªncia da rede","0",,
+"after","desktop","speed-index","Speed Index","0,13","3,8Â s","3761,4711752046005"
+"before","desktop","speed-index","Speed Index","0,95","1,1Â s","1119,2488416112005"
+"after","desktop","total-blocking-time","Total Blocking Time","1","0Â ms","0"
+"before","desktop","total-blocking-time","Total Blocking Time","0,96","110Â ms","106,73331748578835"
+"after","mobile","cache-insight","Use ciclos de vida eficientes de cache","0,5","Economia estimada de 76 KiB",
+"before","mobile","cache-insight","Use ciclos de vida eficientes de cache","0,5","Economia estimada de 499 KiB",
+"after","mobile","cumulative-layout-shift","Cumulative Layout Shift","1","0","0"
+"before","mobile","cumulative-layout-shift","Cumulative Layout Shift","1","0","0"
+"after","mobile","first-contentful-paint","First Contentful Paint","0,35","3,5Â s","3489,474132446151"
+"before","mobile","first-contentful-paint","First Contentful Paint","0,32","3,6Â s","3613,178558998011"
+"after","mobile","forced-reflow-insight","Reflow forÃ§ado","0",,
+"before","mobile","forced-reflow-insight","Reflow forÃ§ado","0",,
+"after","mobile","image-delivery-insight","Melhorar a entrega de imagens","0,5","Economia estimada de 27 KiB",
+"before","mobile","image-delivery-insight","Melhorar a entrega de imagens","0,5","Economia estimada de 410 KiB",
+"after","mobile","interactive","Time to Interactive","0,91","3,6Â s","3573,8075281113197"
+"before","mobile","interactive","Time to Interactive","0,91","3,6Â s","3613,178558998011"
+"after","mobile","largest-contentful-paint","Largest Contentful Paint","0,62","3,6Â s","3566,1408557781224"
+"before","mobile","largest-contentful-paint","Largest Contentful Paint","0,6","3,6Â s","3613,178558998011"
+"after","mobile","mainthread-work-breakdown","Minimize o trabalho da thread principal","0,5","2,1Â s","2076,7356000000136"
+"before","mobile","mainthread-work-breakdown","Minimize o trabalho da thread principal","0,5","2,2Â s","2205,8568000000114"
+"after","mobile","max-potential-fid","Max Potential First Input Delay","1","20Â ms","16"
+"before","mobile","max-potential-fid","Max Potential First Input Delay","1","20Â ms","16"
+"after","mobile","network-dependency-tree-insight","Ãrvore de dependÃªncia da rede","0",,
+"before","mobile","network-dependency-tree-insight","Ãrvore de dependÃªncia da rede","0",,
+"after","mobile","speed-index","Speed Index","0,69","4,7Â s","4693,238786978334"
+"before","mobile","speed-index","Speed Index","0,87","3,6Â s","3613,178558998011"
+"after","mobile","total-blocking-time","Total Blocking Time","1","0Â ms","0"
+"before","mobile","total-blocking-time","Total Blocking Time","1","0Â ms","0"
