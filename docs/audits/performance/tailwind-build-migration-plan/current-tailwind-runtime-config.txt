@@ -1,0 +1,31 @@
+﻿  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:17:  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:18:  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:19:  <script src="https://cdn.tailwindcss.com"></script>
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:20:  <script>
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:21:    tailwind.config = {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:22:      theme: {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:23:        extend: {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:24:          colors: {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:25:            'base': {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:26:              50: '#f2efe9',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:27:              100: '#DAD5CD',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:28:              200: '#c9c4bc',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:29:              300: '#BE9C6E',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:30:            },
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:31:            'support': {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:32:              100: '#c4beb4',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:33:              200: '#533E2B',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:34:              300: '#8a7a6a',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:48:            'text-tertiary': '#7a6a5e',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:49:          },
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:50:          fontFamily: {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:51:            'display': ['Syne', 'sans-serif'],
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:52:            'body': ['Inter', 'sans-serif'],
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:53:            'mono': ['JetBrains Mono', 'monospace'],
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:54:          }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:55:        }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:56:      }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:57:    }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:58:  </script>
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:59:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:60:  <link rel="stylesheet" href="assets/css/site.css">
