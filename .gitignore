@@ -13,3 +13,4 @@ ui-ux-pro-max-skill/
 case-references/
 
 # Keep only published/public assets in Git
+node_modules/

@@ -15,21 +15,22 @@ module.exports = {
         },
         support: {
           100: "#c4beb4",
-          200: "#a89f92",
-          300: "#8C7D6E",
-          400: "#6F5C4A",
-          500: "#4D4037"
+          200: "#533E2B",
+          300: "#8a7a6a",
+          400: "#7a6a5e",
+          500: "#533E2B",
+          600: "#472211"
         },
         accent: {
-          400: "#D9B16F",
           500: "#BE9C6E",
-          600: "#8C6B4A"
+          600: "#9e825c",
+          700: "#7a6340"
         },
-        text: {
-          primary: "#2B1710",
-          secondary: "#5f4b3b",
-          tertiary: "#7a6a5e"
-        }
+        system: "#63574A",
+        page: "#EBE7E0",
+        "text-primary": "#472211",
+        "text-secondary": "#533E2B",
+        "text-tertiary": "#7a6a5e"
       },
       fontFamily: {
         display: ["Syne", "sans-serif"],
