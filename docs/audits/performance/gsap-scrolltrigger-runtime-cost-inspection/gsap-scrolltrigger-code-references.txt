@@ -1,0 +1,297 @@
+﻿  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:15:    rel="stylesheet">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:16:
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:17:  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:18:  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:19:  <link rel="stylesheet" href="assets/css/tailwind.generated.css">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:20:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:21:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:22:  <link rel="stylesheet" href="assets/css/site.css">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:28:      .clients-strip,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:29:      .framework-card,
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:30:      .case-card,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:31:      .impact-cell,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:32:      .editorial-reveal {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:33:        opacity: 1 !important;
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:34:      }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:320:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:321:          <!-- CASE 1: PETROBRAS — Critical Offshore Operations -->
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:322:          <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="critical" data-case-index="0" role="button" tabindex="0">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:323:            <div class="flex-grow relative overflow-hidden">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:324:              <!-- Petrobras Behavioral Overlay: slow radar sweep, environmental pulse rings, maritime routing drift -->
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:325:              <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:326:                <g style="transform-origin: 50% 50%; animation: petro-radar 18s linear infinite;">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:375:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:376:          <!-- CASE 2: AMBEV — Distributed Logistics Infrastructure -->
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:377:          <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="distributed" data-case-index="2" role="button" tabindex="0">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:378:            <div class="flex-grow relative overflow-hidden">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:379:              <!-- Ambev Behavioral Overlay: distributed flow movement, synchronized pulses, logistics routing -->
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:380:              <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:381:                <path d="M 0,25 L 30,25 L 30,50 L 70,50 L 70,75 L 100,75" fill="none" stroke="#BE9C6E" stroke-width="0.4" stroke-dasharray="2 4" opacity="0.2" style="animation: ambev-flow 5s linear infinite;" />
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:430:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:431:          <!-- CASE 3: BAYER — Territorial Environmental Intelligence -->
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:432:          <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="territorial" data-case-index="1" role="button" tabindex="0">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:433:            <div class="flex-grow relative overflow-hidden">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:434:              <!-- Bayer Behavioral Overlay: territorial scan, atmospheric drift, predictive geospatial grid -->
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:435:              <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:436:                <rect x="0" y="0" width="100" height="2" fill="#BE9C6E" opacity="0.15" style="animation: bayer-scan 9s ease-in-out infinite;" />
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:484:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:485:          <!-- CASE 4: BMG — Enterprise Financial Operations -->
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:486:          <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="regulated" data-case-index="3" role="button" tabindex="0">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:487:            <div class="flex-grow relative overflow-hidden">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:488:              <!-- BMG Behavioral Overlay: workflow state transitions, modular activation, supervision pulses -->
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:489:              <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:490:                <circle cx="15" cy="50" r="3" fill="none" stroke="#BE9C6E" stroke-width="0.3" opacity="0.25" style="animation: bmg-state 4s ease-in-out infinite;" />
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:541:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:542:        <style>
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:543:          .case-card { will-change: transform, opacity; }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:544:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:545:          /* ─── PETROBRAS — Critical Offshore Operations ─── */
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:546:          @keyframes petro-radar {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:547:            from { transform: rotate(0deg); }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:560:            50% { opacity: 0.4; transform: scale(1.6); }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:561:          }
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:562:          .case-card[data-behavior="critical"] .behavioral-svg { opacity: 0.14; }
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:563:          .case-card[data-behavior="critical"]:hover .behavioral-svg { opacity: 0.24 !important; }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:564:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:565:          /* ─── AMBEV — Distributed Logistics Infrastructure ─── */
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:566:          @keyframes ambev-flow {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:567:            0% { stroke-dashoffset: 0; }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:576:            25% { opacity: 0.6; transform: scale(1.5); }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:577:          }
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:578:          .case-card[data-behavior="distributed"] .behavioral-svg { opacity: 0.14; }
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:579:          .case-card[data-behavior="distributed"]:hover .behavioral-svg { opacity: 0.24 !important; }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:580:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:581:          /* ─── BAYER — Territorial Environmental Intelligence ─── */
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:582:          @keyframes bayer-scan {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:583:            0% { transform: translateY(0px); opacity: 0; }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:599:            50% { opacity: 0.2; }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:600:          }
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:601:          .case-card[data-behavior="territorial"] .behavioral-svg { opacity: 0.12; }
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:602:          .case-card[data-behavior="territorial"]:hover .behavioral-svg { opacity: 0.22 !important; }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:603:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:604:          /* ─── BMG — Enterprise Financial Operations ─── */
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:605:          @keyframes bmg-state {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:606:            0%, 100% { opacity: 0.08; }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:619:            50% { opacity: 0.25; transform: scale(1.3); }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:620:          }
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:621:          .case-card[data-behavior="regulated"] .behavioral-svg { opacity: 0.14; }
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:622:          .case-card[data-behavior="regulated"]:hover .behavioral-svg { opacity: 0.24 !important; }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:623:        </style>
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:624:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:625:        <script>
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:626:          window.addEventListener('load', () => {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:627:            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:628:              var motionOff = window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.matchMedia('(max-width: 768px)').matches;
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:629:              if (motionOff) return;
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:630:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:631:              // Per‑card behavioral configuration — softened
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:632:              var behaviorConfig = {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:637:              };
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:638:
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:639:              gsap.utils.toArray('.case-card').forEach(function(card, i) {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:640:                var behavior = card.getAttribute('data-behavior') || 'critical';
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:641:                var cfg = behaviorConfig[behavior] || behaviorConfig.critical;
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:642:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:643:                // Card entrance — softened
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:644:                gsap.fromTo(card,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:645:                  { y: 14, opacity: 0, filter: 'blur(' + cfg.blur + 'px)' },
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:646:                  {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:647:                    y: 0,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:648:                    opacity: 1,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:652:                    ease: cfg.ease,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:653:                    immediateRender: false,
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:654:                    scrollTrigger: {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:655:                      trigger: card,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:656:                      start: 'top 92%',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:657:                      end: 'top 60%',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:658:                      toggleActions: 'play none none reverse'
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:666:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:667:                if (title) {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:668:                  gsap.fromTo(title,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:669:                    { y: cfg.textY, opacity: 0, filter: 'blur(' + cfg.blur + 'px)' },
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:670:                    {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:671:                      y: 0, opacity: 1, filter: 'blur(0)',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:672:                      duration: cfg.textDur,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:674:                      ease: cfg.ease,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:675:                      immediateRender: false,
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:676:                      scrollTrigger: {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:677:                        trigger: card,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:678:                        start: 'top 90%',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:679:                        end: 'top 55%',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:680:                        toggleActions: 'play none none reverse'
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:685:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:686:                if (desc) {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:687:                  gsap.fromTo(desc,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:688:                    { y: 10, opacity: 0, filter: 'blur(2px)' },
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:689:                    {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:690:                      y: 0, opacity: 1, filter: 'blur(0)',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:691:                      duration: cfg.textDur * 0.7,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:693:                      ease: cfg.ease,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:694:                      immediateRender: false,
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:695:                      scrollTrigger: {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:696:                        trigger: card,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:697:                        start: 'top 90%',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:698:                        end: 'top 55%',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:699:                        toggleActions: 'play none none reverse'
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:706:                var svg = card.querySelector('.behavioral-svg');
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:707:                if (svg) {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:708:                  gsap.to(svg, {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:709:                    opacity: 0.18,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:710:                    duration: 1.0,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:711:                    delay: i * 0.1 + 0.4,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:712:                    ease: 'power2.out'
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:437:/* ── Word-level split for hero title (myna-hero style) ── */
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:438:function splitHeroTitle() {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:439:  const motionReducedNow = window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.matchMedia('(max-width: 768px)').matches;
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:440:  document.querySelectorAll('.hl-i').forEach(el => {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:441:    const text = el.textContent.trim();
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:442:    const words = text.split(/\s+/);
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:443:    if (words.length <= 1 || motionReducedNow) return;
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:461:}
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:462:
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:463:/* ── GSAP & ScrollTrigger Animations ── */
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:464:gsap.registerPlugin(ScrollTrigger);
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:465:const motionReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.matchMedia('(max-width: 768px)').matches;
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:466:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:467:// Split hero title before animation starts
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:468:splitHeroTitle();
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:469:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:470:/* ---- Hero: Subtle editorial entrance ---- */
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:471:const tl = gsap.timeline({ defaults: { ease: MOTION.ease.subtle, duration: motionReduced ? 0 : MOTION.duration.hero } });
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:472:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:473:if (motionReduced) {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:474:  gsap.set([
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:475:    '.availability-badge-v2',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:476:    '.eyebrow-line',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:477:    '.eyebrow-text',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:478:    '.hero-word',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:485:    '.section-header-subtitle',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:486:    '.framework-card',
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:487:    '.case-card',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:488:    '.impact-cell',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:489:    '.editorial-reveal',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:490:    '#footer [data-t="ft.signature"]',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:491:    '#footer [data-t="ft.role"]',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:493:  ], { opacity: 1, y: 0, scale: 1, scaleX: 1, scaleY: 1, filter: 'blur(0px)' });
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:494:} else {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:495:  tl.from('.availability-badge-v2', { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, immediateRender: false }, 0.08)
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:496:    .from('.eyebrow-line', { scaleX: 0, duration: 0.4, ease: 'power2.inOut', transformOrigin: 'left', immediateRender: false }, 0.15)
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:497:    .from('.eyebrow-text', { opacity: 0, y: 3, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.3, immediateRender: false }, 0.25)
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:498:    .from('.hero-word', {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:499:      y: 12,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:500:      opacity: 0,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:501:      filter: `blur(${MOTION.blur.word}px)`,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:502:      duration: MOTION.duration.text,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:505:      immediateRender: false
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:506:    }, 0.4)
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:507:    .from('.sub', { opacity: 0, y: 8, filter: `blur(${MOTION.blur.text}px)`, duration: MOTION.duration.fast, ease: MOTION.ease.subtle, immediateRender: false }, 0.75)
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:508:    .from('.cta-wrapper', { opacity: 0, y: 6, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 0.9)
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:509:    .from('.clients-strip', { opacity: 0, y: 3, duration: 0.35, ease: MOTION.ease.subtle, immediateRender: false }, 1.15);
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:510:}
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:511:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:512:function reveal(selector, vars = {}) {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:513:  gsap.utils.toArray(selector).forEach(el => {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:514:    gsap.from(el, {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:515:      scrollTrigger: {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:516:        trigger: el,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:517:        start: 'top 90%',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:518:        end: 'top 55%',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:519:        toggleActions: 'play none none reverse'
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:531:if (!motionReduced) {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:532:  function revealSectionSystem(sectionSelector, cardsSelector) {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:533:    const tlSection = gsap.timeline({
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:534:      scrollTrigger: {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:535:        trigger: sectionSelector,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:536:        start: 'top 78%',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:537:        end: 'top 40%',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:538:        toggleActions: 'play none none reverse'
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:542:    const addFrom = (selector, vars, position) => {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:543:      if (document.querySelector(selector)) {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:544:        tlSection.from(selector, vars, position);
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:545:      }
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:546:    };
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:547:
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:548:    addFrom(`${sectionSelector} .section-kicker`, { opacity: 0, y: 3, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.3, ease: MOTION.ease.subtle, immediateRender: false }, 0);
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:549:    addFrom(`${sectionSelector} .section-header-title`, { opacity: 0, y: 8, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.45, ease: MOTION.ease.subtle, immediateRender: false }, 0.04);
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:550:    addFrom(`${sectionSelector} .section-header-subtitle`, { opacity: 0, y: 5, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.35, ease: MOTION.ease.subtle, immediateRender: false }, 0.12);
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:551:    addFrom(`${sectionSelector} .section-microstats span`, { opacity: 0, y: 3, filter: `blur(${MOTION.blur.subtle}px)`, duration: 0.3, stagger: 0.025, ease: MOTION.ease.subtle, immediateRender: false }, 0.18);
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:552:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:553:    if (cardsSelector && document.querySelector(`${sectionSelector} ${cardsSelector}`)) {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:554:      tlSection.fromTo(
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:555:        `${sectionSelector} ${cardsSelector}`,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:556:        { opacity: 0, y: 10, filter: `blur(${MOTION.blur.subtle}px)` },
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:557:        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.45, stagger: MOTION.stagger.base, ease: MOTION.ease.subtle, immediateRender: false },
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:558:        0.25
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:568:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:569:  /* ── Footer entrance ── */
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:570:  const footerTl = gsap.timeline({
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:571:    scrollTrigger: {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:572:      trigger: '#footer',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:573:      start: 'top 85%',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:574:      end: 'top 60%',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:575:      toggleActions: 'play none none reverse'
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:577:  });
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:578:  footerTl
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:579:    .from('#footer [data-t="ft.signature"]', { opacity: 0, y: 10, filter: `blur(${MOTION.blur.subtle}px)`, duration: MOTION.duration.base, ease: MOTION.ease.subtle, immediateRender: false }, 0)
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:580:    .from('#footer .flex.flex-col.gap-3', { opacity: 0, y: 6, duration: 0.4, ease: MOTION.ease.subtle, immediateRender: false }, 0.15)
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:581:    .from('#footer .pt-6', { opacity: 0, y: 4, duration: 0.3, ease: MOTION.ease.soft, immediateRender: false }, 0.35);
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:582:}
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:583:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:584:  // Parallax elements
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:585:  gsap.utils.toArray('[data-parallax]').forEach(el => {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:586:    const speed = parseFloat(el.getAttribute('data-parallax')) || 0.1;
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:587:    gsap.to(el, {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:588:      y: () => -(ScrollTrigger.maxScroll(window) * speed),
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:589:      ease: 'none',
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:590:      scrollTrigger: {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:591:        trigger: el.closest('section') || 'body',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:592:        start: 'top bottom',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:593:        end: 'bottom top',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:594:        scrub: 1
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:598:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:599:// Parallax on Case Images
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:600:  gsap.utils.toArray('.case-card').forEach(card => {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:601:    const img = card.querySelector('img');
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:602:    if (img) {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:603:      gsap.fromTo(img,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:604:        { yPercent: -2, scale: 1.03 },
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:605:        {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:606:        yPercent: 3,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:607:        scale: 1.07,
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:608:        scrollTrigger: {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:609:          trigger: card,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:610:          start: 'top bottom',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:611:          end: 'bottom top',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:612:          scrub: true
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:623:    const hero = document.querySelector('#hero');
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:624:    if (hero) {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:625:      gsap.to('#hero .sub, #hero .cta-wrapper', {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:626:        opacity: 0.3,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:627:        y: -15,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:628:        filter: 'blur(10px)',
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:629:        scrollTrigger: {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:630:          trigger: '#hero',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:631:          start: 'top top',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:632:          end: 'bottom top',
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:633:          scrub: 1.5,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:663:      const x = e.clientX - left - width / 2;
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:664:      const y = e.clientY - top - height / 2;
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:665:      gsap.to(magnet, {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:666:        x: x * 0.3,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:667:        y: y * 0.3,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:668:        duration: 0.6,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:669:        ease: 'power2.out'
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:671:    });
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:672:    magnet.addEventListener('mouseleave', () => {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:673:      gsap.to(magnet, {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:674:        x: 0,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:675:        y: 0,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:676:        duration: 1,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:677:        ease: 'elastic.out(1, 0.3)'
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:768:function getModalFocusableElements() {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:769:  const modal = document.getElementById('case-modal');
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:770:  return Array.from(modal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'))
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:771:    .filter(el => el.offsetParent !== null);
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:772:}
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:773:
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\assets\js\site.js:774:// Add click handlers to case cards
