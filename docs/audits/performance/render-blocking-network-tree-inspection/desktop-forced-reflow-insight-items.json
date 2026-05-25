@@ -1,0 +1,19 @@
+﻿{
+    "headings":  [
+                     {
+                         "valueType":  "source-location",
+                         "key":  "source",
+                         "label":  "Fonte"
+                     },
+                     {
+                         "label":  "Tempo total de reflow",
+                         "granularity":  1,
+                         "key":  "reflowTime",
+                         "valueType":  "ms"
+                     }
+                 ],
+    "type":  "table",
+    "items":  [
+
+              ]
+}

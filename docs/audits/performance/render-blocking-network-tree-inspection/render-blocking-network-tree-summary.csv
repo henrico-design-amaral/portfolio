@@ -1,0 +1,13 @@
+﻿"strategy","audit_id","title","score","score_display_mode","display_value","numeric_value"
+"desktop","bootup-time","Tempo de execuÃ§Ã£o de JavaScript","1","metricSavings","0,5Â s","453,70900000000086"
+"desktop","forced-reflow-insight","Reflow forÃ§ado","1","numeric",,
+"desktop","mainthread-work-breakdown","Minimiza o trabalho da thread principal","1","metricSavings","1,1Â s","1076,9099999999967"
+"desktop","network-dependency-tree-insight","Ãrvore de dependÃªncia da rede","0","numeric",,
+"desktop","script-treemap-data","Script Treemap Data","1","informative",,
+"desktop","unused-javascript","Reduza o JavaScript nÃ£o usado","0,5","metricSavings","Economia estimada de 38 KiB","0"
+"mobile","bootup-time","Tempo de execuÃ§Ã£o de JavaScript","1","metricSavings","0,5Â s","510,2772000000008"
+"mobile","forced-reflow-insight","Reflow forÃ§ado","0","numeric",,
+"mobile","mainthread-work-breakdown","Minimiza o trabalho da thread principal","1","metricSavings","1,3Â s","1322,5728000000108"
+"mobile","network-dependency-tree-insight","Ãrvore de dependÃªncia da rede","0","numeric",,
+"mobile","script-treemap-data","Script Treemap Data","1","informative",,
+"mobile","unused-javascript","Reduza o JavaScript nÃ£o usado","0,5","metricSavings","Economia estimada de 38 KiB","0"
