@@ -1,0 +1,25 @@
+﻿1: <!DOCTYPE html>
+2: <html lang="pt-BR" data-lang="pt">
+3: 
+4: <head>
+5:   <meta charset="UTF-8">
+6:   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+7:   <title>Henrico Amaral â€” Senior Product Designer</title>
+8:   <meta name="description" content="Senior Product Designer especializado em plataformas B2B, sistemas internos, workflows complexos e produtos digitais para operaÃ§Ãµes crÃ­ticas.">
+9:   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+10: 
+11:   <link rel="preconnect" href="https://fonts.googleapis.com">
+12:   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+13:   <link
+14:     href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap"
+15:     rel="stylesheet">
+16: 
+17:   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+18:   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+19:   <link rel="stylesheet" href="assets/css/tailwind.generated.css">
+20: 
+21: 
+22:   <link rel="stylesheet" href="assets/css/site.css">
+23:       <noscript>
+24:     <style>
+25:       .availability-badge-v2,
