@@ -1962,3 +1962,52 @@ footer {
     touch-action: manipulation;
   }
 }
+
+
+/* A11Y — color contrast groups */
+.section-header-subtitle,
+.section-header-subtitle p {
+  color: rgba(43, 23, 16, 0.84);
+}
+
+.section-microcopy,
+.section-microstats,
+.section-microstats span {
+  color: rgba(43, 23, 16, 0.86);
+}
+
+#process .section-microstats,
+#cases .section-microstats,
+#impact .section-microstats {
+  color: rgba(43, 23, 16, 0.84);
+}
+
+.col-span-1 .font-mono,
+.grid .w-10 .font-display {
+  color: #5d3f2e;
+}
+
+.section-header--dark .section-header-subtitle,
+.section-header--dark .section-header-subtitle p,
+.section-header--dark .section-microcopy,
+.section-header--dark .section-microstats,
+.section-header--dark .section-microstats span {
+  color: rgba(255, 248, 238, 0.86);
+}
+
+.about-narrative,
+.about-narrative p,
+.about-narrative p.editorial-reveal,
+.contact-intent-card p {
+  color: rgba(255, 248, 238, 0.84);
+}
+
+.about-card .about-card-index,
+.contact-intent-card .about-card-index {
+  color: #d8c1a0;
+}
+
+footer .font-mono,
+footer a.font-mono {
+  color: rgba(255, 248, 238, 0.88);
+}
