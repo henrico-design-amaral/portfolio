@@ -6,59 +6,55 @@ Portfolio profissional de Henrico Amaral.
 
 ## Estado atual
 
-Branch atual: `docs/add-orchestrator-phase-1`
+Branch atual esperada: `main`
 
-Branch base: `main`
+Último marco concluído: PR #5 — `docs: add portfolio orchestrator phase 1`
 
-Status esperado do Git: branch limpa antes das alterações documentais.
+Commit relevante: `4b8648c`
+
+Status esperado do Git: `main` limpa e sincronizada com `origin/main`.
 
 ## Objetivo atual
 
-Aplicar a Fase 1 do Henrico Agent OS ao Portfolio, criando uma camada mínima de contexto compartilhado, handoff, tarefas, decisões e quality gates.
+Usar a Fase 1 do Henrico Agent OS como contexto operacional padrão para próximas sessões do Portfolio.
 
 ## Contexto
 
-O Portfolio é o projeto piloto do Henrico Agent OS.
+O Portfolio já está conectado ao Henrico Agent OS por meio de arquivos locais de handoff, tarefas, decisões e quality gates.
 
-O objetivo não é alterar interface nesta branch.  
-O objetivo é preparar o projeto para ser operado com mais segurança por ChatGPT, Codex local, Codex no Antigravity e GitHub.
+A Fase 1 documental foi criada e mesclada sem alterações em interface, CSS, JavaScript ou assets.
 
-## Escopo permitido
+## Escopo permitido para a próxima ação
 
-- Criar documentação de orquestração do Portfolio.
-- Criar arquivos de handoff, tasks, decisions e quality gates.
-- Criar `docs/orchestrator/`.
-- Registrar como o Portfolio deve usar a Fase 1 global.
+- Atualizar o estado dos arquivos de orquestração.
+- Rodar nova auditoria PSI mobile e desktop da versão publicada.
+- Registrar resultado em `docs/audits/performance/`, se necessário.
+- Avaliar criação de `CHANGELOG.md`.
 
 ## Fora do escopo
 
 - Alterar `index.html`.
 - Alterar `assets/css/site.css`.
 - Alterar `assets/js/site.js`.
+- Alterar layout.
 - Alterar imagens.
-- Refatorar layout.
-- Otimizar performance.
 - Criar automações complexas.
 - Instalar Paperclip, Obsidian CLI ou MCPs.
 
-## Arquivos prováveis
+## Arquivos de contexto prioritários
 
+- `PROJECT_CONTROL.md`
+- `AGENTS.md`
+- `GEMINI.md`
 - `HANDOFF.md`
 - `TASKS.md`
 - `DECISIONS.md`
 - `QUALITY_GATES.md`
-- `docs/orchestrator/README.md`
 - `docs/orchestrator/PHASE_1.md`
-
-## Riscos
-
-- Misturar documentação com alteração de interface.
-- Duplicar regras já existentes em `PROJECT_CONTROL.md`, `AGENTS.md` e `GEMINI.md`.
-- Criar documentação grande demais e pouco prática.
 
 ## Próxima ação segura
 
-Criar os arquivos mínimos da Fase 1, revisar `git diff --stat`, commitar apenas documentação e abrir PR separado.
+Criar uma branch pequena para atualizar o estado do orquestrador e, depois disso, rodar uma nova auditoria PSI da versão atual publicada.
 
 ## Última atualização
 
