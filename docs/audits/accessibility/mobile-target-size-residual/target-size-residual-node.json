@@ -1,0 +1,42 @@
+﻿{
+    "subItems":  {
+                     "type":  "subitems",
+                     "items":  [
+                                   {
+                                       "relatedNode":  {
+                                                           "type":  "node",
+                                                           "selector":  "nav#nav \u003e div.max-w-[1440px] \u003e div#nav-lang \u003e button.lang-btn",
+                                                           "boundingRect":  {
+                                                                                "bottom":  67,
+                                                                                "left":  363,
+                                                                                "width":  44,
+                                                                                "top":  23,
+                                                                                "right":  407,
+                                                                                "height":  44
+                                                                            },
+                                                           "nodeLabel":  "EN",
+                                                           "path":  "1,HTML,1,BODY,2,NAV,0,DIV,2,DIV,2,BUTTON",
+                                                           "snippet":  "\u003cbutton class=\"lang-btn text-text-tertiary hover:text-accent-500 transition-colors\" data-lang=\"en\" aria-label=\"EN â€” English\" aria-pressed=\"false\"\u003e",
+                                                           "lhId":  "1-42-BUTTON"
+                                                       }
+                                   }
+                               ]
+                 },
+    "node":  {
+                 "snippet":  "\u003cbutton id=\"mobile-menu-toggle\" class=\"mobile-menu-toggle md:hidden\" type=\"button\" aria-label=\"Abrir menu\" aria-controls=\"mobile-menu\" aria-expanded=\"false\"\u003e",
+                 "path":  "1,HTML,1,BODY,2,NAV,0,DIV,3,BUTTON",
+                 "nodeLabel":  "Abrir menu",
+                 "lhId":  "1-41-BUTTON",
+                 "type":  "node",
+                 "explanation":  "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 22.7px by 52px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 13px instead of at least 24px.",
+                 "boundingRect":  {
+                                      "bottom":  68,
+                                      "left":  340,
+                                      "top":  16,
+                                      "width":  52,
+                                      "height":  52,
+                                      "right":  392
+                                  },
+                 "selector":  "body.font-body \u003e nav#nav \u003e div.max-w-[1440px] \u003e button#mobile-menu-toggle"
+             }
+}
