@@ -64,11 +64,10 @@
         <a href="#contact" data-t="nav.contact" class="hover:text-accent-500 transition-colors py-2 px-1">Contato</a>
       </div>
 
-      <div class="flex items-center gap-2 font-mono text-[12px] uppercase font-bold nav-lang" id="nav-lang">
-        <button class="lang-btn active transition-colors" data-lang="pt" aria-label="PT — Português" aria-pressed="true">PT</button>
-        <span class="text-support-300">/</span>
-        <button class="lang-btn text-text-tertiary hover:text-accent-500 transition-colors" data-lang="en"
-          aria-label="EN — English" aria-pressed="false">EN</button>
+      <div class="lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
+        <span class="lang-toggle__thumb" aria-hidden="true"></span>
+        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="Português" aria-pressed="true">PT</button>
+        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
       </div>
       <button id="mobile-menu-toggle" class="mobile-menu-toggle md:hidden" type="button"
         aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
@@ -82,6 +81,11 @@
       <a href="#impact" data-t="nav.impact">Impacto</a>
       <a href="#about" data-t="nav.about">Sobre</a>
       <a href="#contact" data-t="nav.contact">Contato</a>
+      <div class="lang-toggle mobile-lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
+        <span class="lang-toggle__thumb" aria-hidden="true"></span>
+        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="Português" aria-pressed="true">PT</button>
+        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
     </div>
   </nav>
 
@@ -936,35 +940,26 @@
     </div>
   </div>
 
-  <footer class="py-20 px-6 bg-[#2d180e] text-[#f2efe9] relative overflow-hidden" id="footer">
-    <div class="max-w-[1440px] w-full mx-auto relative z-10">
-      <!-- 2-col grid: identity left, signature right -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-16 md:mb-20">
-        <!-- Left: Identity -->
-        <div class="flex flex-col gap-3">
-          <div class="w-10 h-10 rounded-full border border-[#BE9C6E]/25 flex items-center justify-center mb-1">
-            <span class="font-display font-bold text-lg text-[#BE9C6E]/80">HA</span>
+  <footer class="site-footer" id="footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__top">
+        <div class="site-footer__identity">
+          <div class="site-footer__mark" aria-hidden="true">HA</div>
+          <div>
+            <p class="site-footer__name">Henrico Amaral</p>
+            <p class="site-footer__role" data-t="ft.role">Senior Product Designer · Decision Infrastructure</p>
           </div>
-          <span class="font-display font-bold text-lg md:text-xl tracking-[0] text-[#f2efe9]/90">Henrico Amaral</span>
-          <span class="font-body text-sm text-[#c4beb4]/78" data-t="ft.role">Senior Product Designer · Decision Infrastructure</span>
         </div>
 
-        <!-- Right: Signature -->
-        <div class="md:text-right md:self-end">
-          <p class="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-[#f2efe9]/85 leading-[1.1] max-w-xl md:ml-auto" data-t="ft.signature">
-            Pense simples. Faça melhor.<br>Torne-se inevitável.
-          </p>
-        </div>
+        <p class="site-footer__signature" data-t="ft.signature">
+          Pense simples. Faça melhor.<br>
+          Torne-se inevitável.
+        </p>
       </div>
 
-      <!-- Bottom bar -->
-      <div class="pt-6 border-t border-[#f2efe9]/10 flex flex-col md:flex-row justify-between items-center gap-4">
-        <span class="font-mono text-[9px] md:text-[10px] tracking-widest uppercase text-[#c4beb4]/60">
-          Henrico Amaral &middot; Product Designer &middot; 2026
-        </span>
-        <a href="#hero" class="font-mono text-[9px] md:text-[10px] tracking-widest uppercase text-[#c4beb4]/60 hover:text-[#BE9C6E] transition-all duration-300 hover:-translate-y-[1px]">
-          ↑ Topo
-        </a>
+      <div class="site-footer__bottom">
+        <p>Henrico Amaral · Product Designer · 2026</p>
+        <a href="#hero" class="site-footer__toplink">↑ Topo</a>
       </div>
     </div>
   </footer>
