@@ -1891,3 +1891,37 @@ footer {
     touch-action: manipulation;
   }
 }
+
+
+/* A11Y — residual mobile target-size spacing */
+@media (max-width: 767px) {
+  #nav .max-w-\[1440px\] {
+    column-gap: 1.5rem;
+  }
+
+  .nav-lang {
+    margin-left: auto;
+    margin-right: 1.5rem;
+  }
+
+  #mobile-menu-toggle.mobile-menu-toggle {
+    position: relative;
+    z-index: 20;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+    padding: 0;
+    margin-left: 0;
+    isolation: isolate;
+    flex-shrink: 0;
+    touch-action: manipulation;
+  }
+
+  #mobile-menu-toggle.mobile-menu-toggle::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    pointer-events: none;
+  }
+}
