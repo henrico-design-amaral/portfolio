@@ -2011,3 +2011,29 @@ footer .font-mono,
 footer a.font-mono {
   color: rgba(255, 248, 238, 0.88);
 }
+
+
+/* A11Y — residual color contrast selectors */
+#about .about-narrative,
+#about .about-narrative p,
+#about .about-narrative p.editorial-reveal {
+  color: rgba(255, 248, 238, 0.94);
+}
+
+.section-header-subtitle p,
+.section-microstats span {
+  color: rgba(43, 23, 16, 0.94);
+}
+
+.section-header--dark .section-header-subtitle p,
+.section-header--dark .section-microstats span {
+  color: rgba(255, 248, 238, 0.94);
+}
+
+.grid .w-10 .font-display {
+  color: #472211;
+}
+
+.section-header--dark .grid .w-10 .font-display {
+  color: #fff8ee;
+}
