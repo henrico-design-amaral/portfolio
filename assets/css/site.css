@@ -1925,3 +1925,40 @@ footer {
     pointer-events: none;
   }
 }
+
+
+/* A11Y — mobile nav hit area structural fix */
+@media (max-width: 767px) {
+  #nav .max-w-\[1440px\] {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  #nav .nav-lang {
+    position: static;
+    inset: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-left: auto;
+    margin-right: 2rem;
+    z-index: auto;
+    flex-shrink: 0;
+  }
+
+  #mobile-menu-toggle.mobile-menu-toggle {
+    position: relative;
+    z-index: 30;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+    padding: 0;
+    margin-left: 0;
+    flex-shrink: 0;
+    touch-action: manipulation;
+  }
+}
