@@ -36,3 +36,35 @@ Arquivos relacionados:
 Status:
 
 Ativa.
+
+## Decisão 002
+
+Data: 2026-05-25
+
+Contexto:
+
+Após o merge do PR #5, os arquivos da Fase 1 passaram a existir na `main`. O primeiro uso real do orquestrador revelou que `HANDOFF.md` e `TASKS.md` ainda descreviam a branch de criação da Fase 1, não o estado atual pós-merge.
+
+Decisão:
+
+Manter `HANDOFF.md` e `TASKS.md` como arquivos vivos, atualizados conforme o estado operacional do projeto muda.
+
+Motivo:
+
+O handoff precisa refletir o próximo passo real, não apenas o histórico da branch que criou a documentação.
+
+Impacto:
+
+- Novas sessões começam com contexto mais preciso.
+- Agentes reduzem risco de trabalhar com estado antigo.
+- O Portfolio passa a testar o orquestrador como sistema vivo, não como documentação estática.
+
+Arquivos relacionados:
+
+- `HANDOFF.md`
+- `TASKS.md`
+- `DECISIONS.md`
+
+Status:
+
+Ativa.
