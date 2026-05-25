@@ -1,0 +1,45 @@
+﻿15:     rel="stylesheet">
+16: 
+17:   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+18:   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+19:   <script src="https://cdn.tailwindcss.com"></script>
+20:   <script>
+21:     tailwind.config = {
+22:       theme: {
+23:         extend: {
+24:           colors: {
+25:             'base': {
+26:               50: '#f2efe9',
+27:               100: '#DAD5CD',
+28:               200: '#c9c4bc',
+29:               300: '#BE9C6E',
+30:             },
+31:             'support': {
+32:               100: '#c4beb4',
+33:               200: '#533E2B',
+34:               300: '#8a7a6a',
+35:               400: '#7a6a5e',
+36:               500: '#533E2B',
+37:               600: '#472211',
+38:             },
+39:             'accent': {
+40:               500: '#BE9C6E',
+41:               600: '#9e825c',
+42:               700: '#7a6340',
+43:             },
+44:             'system': '#63574A',
+45:             'page': '#EBE7E0',
+46:             'text-primary': '#472211',
+47:             'text-secondary': '#533E2B',
+48:             'text-tertiary': '#7a6a5e',
+49:           },
+50:           fontFamily: {
+51:             'display': ['Syne', 'sans-serif'],
+52:             'body': ['Inter', 'sans-serif'],
+53:             'mono': ['JetBrains Mono', 'monospace'],
+54:           }
+55:         }
+56:       }
+57:     }
+58:   </script>
+59: 

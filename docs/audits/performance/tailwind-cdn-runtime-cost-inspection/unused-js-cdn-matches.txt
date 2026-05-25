@@ -1,0 +1,7 @@
+﻿  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\docs\audits\performance\tailwind-cdn-runtime-cost-inspection\desktop-unused-javascript-items.json:2:    "wastedBytes":  38452,
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\docs\audits\performance\tailwind-cdn-runtime-cost-inspection\desktop-unused-javascript-items.json:3:    "url":  "https://cdn.tailwindcss.com/",
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\docs\audits\performance\tailwind-cdn-runtime-cost-inspection\desktop-unused-javascript-items.json:4:    "wastedPercent":  30.45676305431903,
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\docs\audits\performance\tailwind-cdn-runtime-cost-inspection\desktop-unused-javascript-items.json:5:    "totalBytes":  126250
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\docs\audits\performance\tailwind-cdn-runtime-cost-inspection\mobile-unused-javascript-items.json:4:    "wastedBytes":  38458,
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\docs\audits\performance\tailwind-cdn-runtime-cost-inspection\mobile-unused-javascript-items.json:5:    "url":  "https://cdn.tailwindcss.com/"
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\docs\audits\performance\tailwind-cdn-runtime-cost-inspection\mobile-unused-javascript-items.json:6:}
