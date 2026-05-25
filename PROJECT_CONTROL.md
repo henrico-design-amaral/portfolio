@@ -205,3 +205,31 @@ Observações:
 Próxima etapa recomendada:
 
 1. Decidir se `cases/petrobras.html` deve ser publicado, movido para área privada ou removido do workspace.
+
+---
+
+## 10. FECHAMENTO DE SESSÃO — 2026-05-25 — AJUSTE FOOTER
+
+Branch validada:
+
+main
+
+Objetivo:
+
+Ajuste pontual da escala tipográfica da assinatura do footer.
+
+Alteração executada:
+
+- `assets/css/site.css`: `.site-footer__signature` ajustado para `font-size: clamp(2rem, 4vw, 3rem);`.
+
+Validações executadas:
+
+- validação npm aplicável ao projeto
+- checagem de JS
+- revisão de arquivos ignorados e padrões sensíveis
+- validação local via navegador automatizado
+
+Observações:
+
+- O projeto continua sem script `build`; o pipeline disponível permanece `build:css`.
+- `cases/petrobras.html` permanece não rastreado e fora do commit por exigir decisão explícita antes de publicação.
