@@ -1,0 +1,8 @@
+﻿"strategy","audit_id","title","url","wasted_bytes","total_bytes","node_label","selector"
+"mobile","image-delivery-insight","Melhorar a entrega de imagens","https://henrico-design-amaral.github.io/portfolio/assets/img/cases/ambev.webp","161501","199142","Ambev","div#cases-grid > div.bg-[#0B0F14] > div.flex-grow > img.w-full"
+"mobile","image-delivery-insight","Melhorar a entrega de imagens","https://henrico-design-amaral.github.io/portfolio/assets/img/cases/petrobras.webp","138073","175714","Petrobras","div#cases-grid > div.bg-[#0B0F14] > div.flex-grow > img.w-full"
+"mobile","image-delivery-insight","Melhorar a entrega de imagens","https://henrico-design-amaral.github.io/portfolio/assets/img/cases/bayer.webp","120442","157834","Bayer","div#cases-grid > div.bg-[#0B0F14] > div.flex-grow > img.w-full"
+"desktop","image-delivery-insight","Melhorar a entrega de imagens","https://henrico-design-amaral.github.io/portfolio/assets/img/cases/ambev.webp","168837","199142","Ambev","div#cases-grid > div.bg-[#0B0F14] > div.flex-grow > img.w-full"
+"desktop","image-delivery-insight","Melhorar a entrega de imagens","https://henrico-design-amaral.github.io/portfolio/assets/img/cases/petrobras.webp","148974","175714","Petrobras","div#cases-grid > div.bg-[#0B0F14] > div.flex-grow > img.w-full"
+"desktop","image-delivery-insight","Melhorar a entrega de imagens","https://henrico-design-amaral.github.io/portfolio/assets/img/cases/bayer.webp","133815","157834","Bayer","div#cases-grid > div.bg-[#0B0F14] > div.flex-grow > img.w-full"
+"desktop","image-delivery-insight","Melhorar a entrega de imagens","https://henrico-design-amaral.github.io/portfolio/assets/img/cases/bmg.webp","130305","153774","BMG","div#cases-grid > div.bg-[#0B0F14] > div.flex-grow > img.w-full"
