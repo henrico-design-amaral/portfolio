@@ -1,0 +1,37 @@
+﻿[
+    {
+        "group":  "scriptEvaluation",
+        "groupLabel":  "Script Evaluation",
+        "duration":  429.90299999999775
+    },
+    {
+        "group":  "styleLayout",
+        "groupLabel":  "Style \u0026 Layout",
+        "duration":  299.7980000000002
+    },
+    {
+        "duration":  186.44199999999915,
+        "group":  "other",
+        "groupLabel":  "Other"
+    },
+    {
+        "duration":  73.12599999999964,
+        "groupLabel":  "Rendering",
+        "group":  "paintCompositeRender"
+    },
+    {
+        "groupLabel":  "Script Parsing \u0026 Compilation",
+        "group":  "scriptParseCompile",
+        "duration":  51.68999999999999
+    },
+    {
+        "groupLabel":  "Garbage Collection",
+        "group":  "garbageCollection",
+        "duration":  21.379000000000012
+    },
+    {
+        "duration":  14.571999999999957,
+        "groupLabel":  "Parse HTML \u0026 CSS",
+        "group":  "parseHTML"
+    }
+]

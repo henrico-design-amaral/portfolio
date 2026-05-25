@@ -1,0 +1,14 @@
+﻿> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:17:  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:18:  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:19:  <script src="https://cdn.tailwindcss.com"></script>
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:20:  <script>
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:21:    tailwind.config = {
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:22:      theme: {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:58:  </script>
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:59:
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:663:        <script>
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:664:          window.addEventListener('load', () => {
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:756:        </script>
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:757:
+> C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1106:  <script defer src="assets/js/site.js"></script>
+  C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1107:</body>

@@ -1,0 +1,32 @@
+﻿[
+    {
+        "scripting":  302.7804000000008,
+        "total":  495.76440000000076,
+        "url":  "https://henrico-design-amaral.github.io/portfolio/",
+        "scriptParseCompile":  0.9624
+    },
+    {
+        "total":  460.17119999999807,
+        "scripting":  34.30919999999995,
+        "url":  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js",
+        "scriptParseCompile":  4.0248
+    },
+    {
+        "scripting":  68.5572,
+        "total":  136.94639999999998,
+        "scriptParseCompile":  3.0480000000000005,
+        "url":  "https://henrico-design-amaral.github.io/portfolio/assets/js/site.js"
+    },
+    {
+        "url":  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+        "scriptParseCompile":  6.4164,
+        "scripting":  15.335999999999997,
+        "total":  106.12319999999981
+    },
+    {
+        "scriptParseCompile":  37.3224,
+        "url":  "https://cdn.tailwindcss.com/",
+        "scripting":  37.52040000000001,
+        "total":  79.614
+    }
+]

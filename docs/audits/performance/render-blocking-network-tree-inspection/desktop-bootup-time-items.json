@@ -1,0 +1,26 @@
+﻿[
+    {
+        "total":  571.4110000000007,
+        "url":  "https://henrico-design-amaral.github.io/portfolio/",
+        "scriptParseCompile":  1.177,
+        "scripting":  248.3860000000007
+    },
+    {
+        "url":  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+        "total":  268.4970000000003,
+        "scripting":  58.59200000000011,
+        "scriptParseCompile":  8.373000000000001
+    },
+    {
+        "total":  72.761,
+        "url":  "https://cdn.tailwindcss.com/",
+        "scriptParseCompile":  32.599,
+        "scripting":  40.03000000000001
+    },
+    {
+        "scriptParseCompile":  2.695,
+        "scripting":  61.85700000000002,
+        "total":  70.649,
+        "url":  "https://henrico-design-amaral.github.io/portfolio/assets/js/site.js"
+    }
+]
