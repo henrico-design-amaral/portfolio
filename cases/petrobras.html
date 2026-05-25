@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petrobras — Henrico Amaral</title>
+  <meta name="description" content="Case study: Petrobras - Sistema de gestão de ocorrências ambientais offshore.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/tailwind.generated.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+
+<body class="font-body overflow-x-hidden bg-page">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 w-full z-50 liquid-glass transition-transform duration-300" id="nav" aria-label="Navegação principal">
+    <div class="max-w-[1440px] w-full mx-auto flex items-center justify-between px-6 py-4">
+      <div class="magnetic-wrap">
+        <a href="../index.html" class="font-display font-bold text-lg md:text-xl tracking-[0] hover:text-accent-500 transition-colors">
+          ← Voltar para Home
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main id="main-content">
+    
+    <!-- Hero -->
+    <section class="relative min-h-[70dvh] flex flex-col justify-end pt-32 pb-16 px-6 overflow-hidden bg-base-200 nbg">
+      <div class="max-w-[1440px] mx-auto w-full relative z-10">
+        <!-- Eyebrow -->
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-8 h-[1px] bg-accent-500"></div>
+          <span class="font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-text-secondary font-bold">Design de Infraestrutura de Decisão</span>
+        </div>
+        
+        <h1 class="font-display font-bold text-[3em] md:text-[5em] tracking-[0] leading-[0.95] text-text-primary mb-8 text-balance max-w-[20ch]">
+          <span class="block overflow-hidden reveal-mask">
+            <span class="block reveal-text hl-i">Petrobras —</span>
+          </span>
+          <span class="block overflow-hidden reveal-mask">
+            <span class="block reveal-text hl-i text-support-600 text-[0.7em] mt-2">Sistema de gestão de ocorrências ambientais offshore</span>
+          </span>
+        </h1>
+        
+        <p class="font-body text-lg md:text-xl text-text-secondary max-w-[65ch] leading-relaxed mb-12 sub">
+          Como estruturar informação, fluxos e prioridades para apoiar decisões operacionais em um ambiente crítico.
+        </p>
+      </div>
+    </section>
+
+    <!-- Project Snapshot -->
+    <section class="section-pad px-6 bg-page relative nbg">
+      <div class="max-w-[1440px] mx-auto w-full grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-support-200/50 pt-12">
+        <div>
+          <span class="block font-mono text-[10px] uppercase tracking-[0.2em] text-text-tertiary mb-3">Cliente</span>
+          <span class="block font-display font-semibold text-lg text-text-primary">Petrobras / SALA CAR</span>
+        </div>
+        <div>
+          <span class="block font-mono text-[10px] uppercase tracking-[0.2em] text-text-tertiary mb-3">Escopo</span>
+          <span class="block font-display font-semibold text-lg text-text-primary">Resposta Ambiental</span>
+        </div>
+        <div>
+          <span class="block font-mono text-[10px] uppercase tracking-[0.2em] text-text-tertiary mb-3">Ambiente</span>
+          <span class="block font-display font-semibold text-lg text-text-primary">Operação Offshore</span>
+        </div>
+        <div>
+          <span class="block font-mono text-[10px] uppercase tracking-[0.2em] text-text-tertiary mb-3">Foco</span>
+          <span class="block font-display font-semibold text-lg text-text-primary">Gestão e Coordenação</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="section-pad px-6 bg-page relative nbg">
+      <div class="max-w-[900px] mx-auto w-full space-y-24">
+        
+        <!-- Contexto Operacional -->
+        <article class="editorial-reveal">
+          <div class="mb-6 flex items-center gap-4">
+            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-accent-600 font-bold">01 / Contexto</span>
+            <div class="w-12 h-[1px] bg-support-300"></div>
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6 tracking-tight">Contexto Operacional</h2>
+          <div class="prose prose-lg text-text-secondary leading-relaxed font-body">
+            <p>O projeto Petrobras está relacionado a um sistema de gestão de ocorrências ambientais em operação offshore. Neste cenário, a operação envolve riscos críticos e requer alto grau de coordenação entre múltiplas equipes.</p>
+            <p>O sistema precisava apoiar o monitoramento em tempo real, a classificação de incidentes, a mobilização de recursos e a consolidação de informações operacionais. O desafio era estruturar um ambiente digital onde diferentes áreas pudessem atuar simultaneamente sob pressão, sem perder a rastreabilidade e a clareza dos fatos.</p>
+          </div>
+        </article>
+
+        <!-- O Problema -->
+        <article class="editorial-reveal">
+          <div class="mb-6 flex items-center gap-4">
+            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-accent-600 font-bold">02 / Desafio</span>
+            <div class="w-12 h-[1px] bg-support-300"></div>
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6 tracking-tight">O Problema</h2>
+          <div class="prose prose-lg text-text-secondary leading-relaxed font-body">
+            <p>A fragmentação de dados e os fluxos de comunicação manuais geravam riscos de lentidão ou inconsistência na resposta a ocorrências. Em momentos críticos, a ambiguidade na troca de informações representa um risco direto à operação e ao meio ambiente.</p>
+            <p>Era preciso consolidar as informações operacionais dispersas para garantir uma resposta rápida, padronizada e segura, reduzindo a dependência de interpretações individuais e canais não estruturados.</p>
+          </div>
+        </article>
+
+        <!-- Minha Função -->
+        <article class="editorial-reveal">
+          <div class="mb-6 flex items-center gap-4">
+            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-accent-600 font-bold">03 / Atuação</span>
+            <div class="w-12 h-[1px] bg-support-300"></div>
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6 tracking-tight">Minha Função</h2>
+          <div class="prose prose-lg text-text-secondary leading-relaxed font-body">
+            <p>O trabalho envolveu o mapeamento de fluxos de decisão, a organização da arquitetura de informação e o desenho de estados de um sistema complexo. Atuei na tradução de requisitos técnicos e operacionais rigorosos em soluções visuais claras.</p>
+            <p>Conduzi a prototipação de interfaces focadas em eficiência operacional, garantindo que a tecnologia servisse como suporte confiável para as equipes em campo e nas bases onshore.</p>
+          </div>
+        </article>
+
+        <!-- Modelo do Sistema -->
+        <article class="editorial-reveal">
+          <div class="mb-6 flex items-center gap-4">
+            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-accent-600 font-bold">04 / Arquitetura</span>
+            <div class="w-12 h-[1px] bg-support-300"></div>
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-text-primary mb-8 tracking-tight">Modelo do Sistema</h2>
+          
+          <!-- Simple CSS Diagram -->
+          <div class="p-8 md:p-12 border border-support-200/50 bg-base-100/50 rounded-lg shadow-sm mb-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
+              
+              <!-- Input -->
+              <div class="flex flex-col items-center text-center w-full md:w-1/3 group">
+                <div class="w-16 h-16 rounded-full border border-accent-500 bg-accent-50 flex items-center justify-center mb-4 transition-transform group-hover:scale-105">
+                  <span class="font-mono text-xs text-accent-700 font-bold">IN</span>
+                </div>
+                <h4 class="font-display font-semibold text-text-primary mb-2">Detecção</h4>
+                <p class="font-body text-sm text-text-tertiary">Alertas e reporte de campo</p>
+              </div>
+
+              <!-- Arrow -->
+              <div class="hidden md:flex flex-col items-center justify-center text-support-300 w-12">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+
+              <!-- Processing -->
+              <div class="flex flex-col items-center text-center w-full md:w-1/3 group">
+                <div class="w-16 h-16 rounded-sm border-2 border-text-primary bg-text-primary flex items-center justify-center mb-4 transition-transform group-hover:scale-105 shadow-lg shadow-black/5">
+                  <span class="font-mono text-xs text-white font-bold">CORE</span>
+                </div>
+                <h4 class="font-display font-semibold text-text-primary mb-2">Classificação</h4>
+                <p class="font-body text-sm text-text-tertiary">Triagem, criticidade e consolidação de dados operacionais</p>
+              </div>
+
+              <!-- Arrow -->
+              <div class="hidden md:flex flex-col items-center justify-center text-support-300 w-12">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+
+              <!-- Output -->
+              <div class="flex flex-col items-center text-center w-full md:w-1/3 group">
+                <div class="w-16 h-16 rounded-sm border border-support-400 border-dashed flex items-center justify-center mb-4 transition-transform group-hover:scale-105">
+                  <span class="font-mono text-xs text-text-secondary font-bold">OUT</span>
+                </div>
+                <h4 class="font-display font-semibold text-text-primary mb-2">Mobilização</h4>
+                <p class="font-body text-sm text-text-tertiary">Coordenação de recursos e mitigação</p>
+              </div>
+
+            </div>
+          </div>
+          
+          <div class="prose prose-lg text-text-secondary leading-relaxed font-body">
+            <p>O fluxo precisava garantir que o sinal bruto (um alerta ambiental) fosse rapidamente traduzido em um estado compreensível, classificado por gravidade, para que a mobilização dos recursos corretos ocorresse com segurança e previsibilidade.</p>
+          </div>
+        </article>
+
+        <!-- Decisões de Design -->
+        <article class="editorial-reveal">
+          <div class="mb-6 flex items-center gap-4">
+            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-accent-600 font-bold">05 / Abordagem</span>
+            <div class="w-12 h-[1px] bg-support-300"></div>
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6 tracking-tight">Decisões de Design</h2>
+          <div class="prose prose-lg text-text-secondary leading-relaxed font-body">
+            <p>A densidade de informação era uma restrição necessária. Ocupamos o espaço com dados essenciais, evitando sobrecarga visual ou elementos puramente estéticos.</p>
+            <p>O uso de cores foi estritamente reservado para sinalizar estados críticos (severidade, urgência). O restante da interface operava em uma paleta neutra e técnica.</p>
+            <p>Adotamos tipografia monoespaçada (monospace) para a exibição de dados operacionais, como coordenadas geográficas, códigos de identificação de equipamentos e timestamps. Isso reduziu erros de leitura durante momentos de fadiga operacional.</p>
+          </div>
+        </article>
+
+        <!-- Interface como Infraestrutura -->
+        <article class="editorial-reveal">
+          <div class="mb-6 flex items-center gap-4">
+            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-accent-600 font-bold">06 / Fundamento</span>
+            <div class="w-12 h-[1px] bg-support-300"></div>
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6 tracking-tight">Interface como Infraestrutura</h2>
+          <div class="prose prose-lg text-text-secondary leading-relaxed font-body">
+            <p>A interface foi estruturada para reduzir o esforço cognitivo do operador. Cada componente em tela precisava responder à pergunta central da operação: <em>"O que eu preciso decidir ou informar agora?"</em>.</p>
+            <p>A rastreabilidade das ações tomadas no sistema foi priorizada desde o início. Em contextos regulados, a capacidade de auditar o que aconteceu, quando aconteceu e quem reportou é tão importante quanto a resolução do problema em si.</p>
+          </div>
+        </article>
+
+        <!-- Impacto -->
+        <article class="editorial-reveal">
+          <div class="mb-6 flex items-center gap-4">
+            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-accent-600 font-bold">07 / Resultados</span>
+            <div class="w-12 h-[1px] bg-support-300"></div>
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6 tracking-tight">Impacto</h2>
+          <div class="prose prose-lg text-text-secondary leading-relaxed font-body">
+            <p>O projeto padronizou o registro e o acompanhamento de ocorrências ambientais. Ao centralizar as informações, reduziu consideravelmente a ambiguidade na comunicação entre as equipes operacionais (onshore e offshore).</p>
+            <p>O sistema permitiu uma consolidação mais rápida de informações operacionais complexas, oferecendo suporte sólido e rastreável para a tomada de decisão em níveis táticos e gerenciais.</p>
+          </div>
+        </article>
+
+        <!-- Reflexões -->
+        <article class="editorial-reveal bg-base-200 p-8 md:p-12 rounded-lg border border-support-200/40 relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-8 text-support-300 opacity-20 pointer-events-none">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          </div>
+          <div class="relative z-10">
+            <div class="mb-6 flex items-center gap-4">
+              <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-accent-600 font-bold">08 / Síntese</span>
+            </div>
+            <h2 class="font-display font-bold text-3xl text-text-primary mb-6 tracking-tight">Reflexões</h2>
+            <div class="font-body text-xl text-text-secondary leading-relaxed font-medium text-balance">
+              <p>Em operações críticas, a interface não pode ser apenas uma camada visual. Ela precisa funcionar como uma <strong>infraestrutura de decisão</strong>. O design em contextos de alta complexidade é, acima de tudo, sobre retirar ruído e iluminar o que realmente importa.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-20 px-6 bg-[#2d180e] text-[#f2efe9] relative overflow-hidden" id="footer">
+    <div class="max-w-[1440px] w-full mx-auto relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-16 md:mb-20">
+        <!-- Left: Identity -->
+        <div class="flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-full border border-[#BE9C6E]/25 flex items-center justify-center mb-1">
+            <span class="font-display font-bold text-lg text-[#BE9C6E]/80">HA</span>
+          </div>
+          <span class="font-display font-bold text-lg md:text-xl tracking-[0] text-[#f2efe9]/90">Henrico Amaral</span>
+          <span class="font-body text-sm text-[#c4beb4]/78">Senior Product Designer · Decision Infrastructure</span>
+        </div>
+
+        <!-- Right: Signature -->
+        <div class="md:text-right md:self-end">
+          <p class="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-[#f2efe9]/85 leading-[1.1] max-w-xl md:ml-auto">
+            Pense simples. Faça melhor.<br>Torne-se inevitável.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="pt-6 border-t border-[#f2efe9]/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <span class="font-mono text-[9px] md:text-[10px] tracking-widest uppercase text-[#c4beb4]/60">
+          Henrico Amaral &middot; Product Designer &middot; 2026
+        </span>
+        <a href="#nav" class="font-mono text-[9px] md:text-[10px] tracking-widest uppercase text-[#c4beb4]/60 hover:text-[#BE9C6E] transition-all duration-300 hover:-translate-y-[1px]">
+          ↑ Topo
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../assets/js/site.js"></script>
+</body>
+</html>

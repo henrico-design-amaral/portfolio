@@ -95,6 +95,23 @@
 
     <!-- HERO -->
     <section id="hero" class="relative min-h-[100dvh] flex items-center pt-32 pb-16 px-6 overflow-hidden bg-page nbg">
+
+      <!-- HERO SYSTEM BACKGROUND (Orbit & Nodes) -->
+      <!-- HERO SYSTEM BACKGROUND (Orbit & Nodes) -->
+      <div class="hero-system hero-system--bg" aria-hidden="true">
+        <!-- Órbita center aligned on right -->
+        <div class="hero-system__orbit">
+          <svg viewBox="0 0 600 600" class="ev-orbit">
+            <circle cx="300" cy="300" r="160" class="orbit-trace" style="stroke-dasharray: 1005; stroke-dashoffset: 1005;" />
+            <circle cx="300" cy="300" r="260" class="orbit-trace" style="stroke-dasharray: 1633; stroke-dashoffset: 1633;" />
+          </svg>
+          <!-- Active signal nodes on orbit -->
+          <div class="orbit-node node-1"></div>
+          <div class="orbit-node node-2"></div>
+          <div class="orbit-node node-3"></div>
+        </div>
+      </div>
+
       <!-- Hero Content (Left-Aligned Editorial Layout) -->
       <div
         class="max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 pt-10">
@@ -135,19 +152,62 @@
           </p>
 
           <!-- CTA -->
-          <div class="cta-wrapper">
-            <div class="magnetic-wrap">
+          <div class="cta-wrapper mb-8">
+            <div class="magnetic-wrap inline-block">
               <a href="#contact"
-                class="group relative inline-flex items-center gap-4 bg-accent-600 text-white px-8 py-4 rounded-full font-bold overflow-hidden transition-all duration-300 hover:-translate-y-[1px] active:translate-y-0 shadow-[0_2px_12px_rgba(158,130,92,0.25)] hover:shadow-[0_4px_20px_rgba(158,130,92,0.35)]">
-                <div
-                  class="absolute inset-0 bg-accent-700 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                </div>
+                class="group relative inline-flex items-center gap-4 bg-accent-600 text-white border border-transparent hover:border-white/20 px-8 py-4 rounded-full font-bold overflow-hidden transition-all duration-300 shadow-sm hover:shadow-md hero-cta">
+                <div class="hero-cta__bg"></div>
                 <span class="relative tracking-wide" data-t="cta.primary">Vamos conversar</span>
-                <span class="relative transition-all duration-300 group-hover:translate-x-1.5 group-hover:-translate-y-[1px]">→</span>
+                <span class="hero-cta__arrow">→</span>
               </a>
             </div>
           </div>
 
+          <!-- Microassinatura -->
+          <div class="hero-micro">
+            <span class="hero-micro__text">H</span>
+          </div>
+
+        </div>
+
+        <!-- Hero Cards Lateral (Right side) -->
+        <div class="hero-system hero-system--cards" id="hero-cards">
+          <!-- Card 1 -->
+          <div class="hero-system__card-wrapper group hero-card">
+            <div class="hero-line hero-line-1"></div>
+            <div class="hero-line-node hero-line-node-1"></div>
+            <div class="hero-system__card">
+              <div class="hero-system__card-tag">01 / <span data-t="hc.1.t">Fluxos claros</span></div>
+              <div class="hero-system__card-text" data-t="hc.1.d">Menos atrito. Mais controle. Decisões com confiança.</div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="hero-system__card-wrapper group hero-card">
+            <div class="hero-line hero-line-2"></div>
+            <div class="hero-line-node hero-line-node-2"></div>
+            <div class="hero-system__card">
+              <div class="hero-system__card-tag">02 / <span data-t="hc.2.t">Impacto real</span></div>
+              <div class="hero-system__card-text" data-t="hc.2.d">Resultados observáveis em operações complexas.</div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="hero-system__card-wrapper group hero-card">
+            <div class="hero-line hero-line-3"></div>
+            <div class="hero-line-node hero-line-node-3"></div>
+            <div class="hero-system__card">
+              <div class="hero-system__card-tag">03 / <span data-t="hc.3.t">Dados úteis</span></div>
+              <div class="hero-system__card-text" data-t="hc.3.d">Informação que guia, não apenas preenche tela.</div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="hero-system__card-wrapper group hero-card">
+            <div class="hero-line hero-line-4"></div>
+            <div class="hero-line-node hero-line-node-4"></div>
+            <div class="hero-system__card">
+              <div class="hero-system__card-tag">04 / <span data-t="hc.4.t">Experiência simples</span></div>
+              <div class="hero-system__card-text" data-t="hc.4.d">Interfaces que pessoas entendem, adotam e usam.</div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -156,24 +216,26 @@
       <div class="clients-strip">
         <div class="clients-strip-inner">
           <span class="clients-label" data-t="worked-with">Clientes</span>
-          <div class="marquee clients-marquee" aria-label="Clientes">
-            <div class="marquee-content">
-              <span>Petrobras</span><span class="text-support-300">·</span>
-              <span>Bayer</span><span class="text-support-300">·</span>
-              <span>Ambev</span><span class="text-support-300">·</span>
-              <span>Banco do Brasil</span><span class="text-support-300">·</span>
-              <span>Bradesco</span><span class="text-support-300">·</span>
-              <span>Claro</span><span class="text-support-300">·</span>
-              <span>Globo</span><span class="text-support-300">·</span>
-            </div>
-            <div class="marquee-content" aria-hidden="true">
-              <span>Petrobras</span><span class="text-support-300">·</span>
-              <span>Bayer</span><span class="text-support-300">·</span>
-              <span>Ambev</span><span class="text-support-300">·</span>
-              <span>Banco do Brasil</span><span class="text-support-300">·</span>
-              <span>Bradesco</span><span class="text-support-300">·</span>
-              <span>Claro</span><span class="text-support-300">·</span>
-              <span>Globo</span><span class="text-support-300">·</span>
+          <div class="ev-marquee overflow-hidden w-full" aria-label="Clientes">
+            <div class="ev-track">
+              <div class="marquee-content flex gap-x-4 pr-4">
+                <span>Petrobras</span><span class="text-support-300">·</span>
+                <span>Bayer</span><span class="text-support-300">·</span>
+                <span>Ambev</span><span class="text-support-300">·</span>
+                <span>Banco do Brasil</span><span class="text-support-300">·</span>
+                <span>Bradesco</span><span class="text-support-300">·</span>
+                <span>Claro</span><span class="text-support-300">·</span>
+                <span>Globo</span><span class="text-support-300">·</span>
+              </div>
+              <div class="marquee-content flex gap-x-4 pr-4" aria-hidden="true">
+                <span>Petrobras</span><span class="text-support-300">·</span>
+                <span>Bayer</span><span class="text-support-300">·</span>
+                <span>Ambev</span><span class="text-support-300">·</span>
+                <span>Banco do Brasil</span><span class="text-support-300">·</span>
+                <span>Bradesco</span><span class="text-support-300">·</span>
+                <span>Claro</span><span class="text-support-300">·</span>
+                <span>Globo</span><span class="text-support-300">·</span>
+              </div>
             </div>
           </div>
         </div>

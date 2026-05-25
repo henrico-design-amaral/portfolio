@@ -149,6 +149,14 @@ const COPY = {
      'ab.beyond.title':   'Além da interface',
      'ab.beyond.items':   '<li>Pai</li><li>Observador de sistemas</li><li>Aprendiz constante</li><li>IA aplicada ao design</li><li>Reposicionamento com método</li>',
       'hero.availability': 'Disponível agora · CLT · PJ · Freelancer',
+      'hc.1.t': 'Fluxos claros',
+      'hc.1.d': 'Menos atrito. Mais controle. Decisões com confiança.',
+      'hc.2.t': 'Impacto real',
+      'hc.2.d': 'Resultados observáveis em operações complexas.',
+      'hc.3.t': 'Dados úteis',
+      'hc.3.d': 'Informação que guia, não apenas preenche tela.',
+      'hc.4.t': 'Experiência simples',
+      'hc.4.d': 'Interfaces que pessoas entendem, adotam e usam.',
      'modal.case':        'Caso',
      'ct.tag':            'SÃO PAULO · REMOTO/HÍBRIDO · PT/EN',
      'ct.title':          'Sistemas mais claros.<br>Conversas mais objetivas.',
@@ -317,8 +325,16 @@ const COPY = {
      'ab.card5.title':    'Tools',
      'ab.card5.items':    '<li>Figma</li><li>FigJam / Miro</li><li>AccessMonitor</li><li>GitHub</li><li>Generative AI</li><li>Antigravity</li>',
      'ab.beyond.title':   'Beyond the interface',
-     'ab.beyond.items':   '<li>Father</li><li>Systems observer</li><li>Constant learner</li><li>AI applied to design</li><li>Repositioning with method</li>',
+     'ab.beyond.items':   '<li>Father</li><li>Systems observer</li><li>Constant learner</li><li>Applied AI in design</li><li>Methodical repositioning</li>',
       'hero.availability': 'Available now · Full-time · Contractor · Freelance',
+      'hc.1.t': 'Clear workflows',
+      'hc.1.d': 'Less friction. More control. Decisions with confidence.',
+      'hc.2.t': 'Real impact',
+      'hc.2.d': 'Observable outcomes in complex operations.',
+      'hc.3.t': 'Useful data',
+      'hc.3.d': 'Information that guides, not just fills the screen.',
+      'hc.4.t': 'Simple experience',
+      'hc.4.d': 'Interfaces people understand, adopt and use.',
      'modal.case':        'Case',
      'ct.tag':            'SÃO PAULO · REMOTE/HYBRID · PT/EN',
      'ct.title':          'Clearer systems.<br>More objective conversations.',
@@ -455,28 +471,95 @@ function setMotionFinalState() {
 }
 
 function initHeroMotion() {
-  const heroItems = [
-    '#nav',
-    '.availability-badge-v2',
-    '.eyebrow-line',
-    '.eyebrow-text',
-    '#hero .hl-i',
-    '#hero .sub',
-    '#hero .cta-wrapper',
-    '.clients-strip'
-  ].filter(selector => document.querySelector(selector));
+  const hero = document.querySelector('#hero');
+  if (!hero) return;
 
-  if (!heroItems.length) return;
+  const motionReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (motionReduced || !hasMotionEngine()) {
+    setMotionFinalState();
+    return;
+  }
 
-  gsap.timeline({ defaults: { ease: MOTION.ease.organic, duration: MOTION.duration.hero } })
-    .from(heroItems, {
-      autoAlpha: 0,
-      y: 14,
-      filter: `blur(${MOTION.blur.hero}px)`,
-      stagger: MOTION.stagger.slow,
-      immediateRender: false,
-      overwrite: true
+  const tl = gsap.timeline({
+    defaults: { ease: 'power3.out' },
+    onComplete: () => {
+      document.body.classList.remove('motion-ready');
+    }
+  });
+
+  // 1. Header entra com fade curto
+  if (document.querySelector('#nav')) {
+    tl.from('#nav', { autoAlpha: 0, y: -8, duration: 0.6 }, 0);
+  }
+
+  // 2. Órbita central aparece com stroke-draw suave
+  const orbitTraces = gsap.utils.toArray('.orbit-trace');
+  if (orbitTraces.length) {
+    orbitTraces.forEach(el => {
+      const match = el.getAttribute('style')?.match(/stroke-dasharray:\s*(\d+)/);
+      const dash = match ? match[1] : 1000;
+      tl.from(el, { strokeDashoffset: dash, autoAlpha: 0, duration: 1.5, ease: 'power2.out' }, 0.2);
     });
+  }
+
+  // 3. Pontos da órbita aparecem em sequência curta
+  const orbitNodes = gsap.utils.toArray('.orbit-node');
+  if (orbitNodes.length) {
+    tl.from(orbitNodes, { autoAlpha: 0, scale: 0.5, duration: 0.5, stagger: 0.15 }, 0.6);
+  }
+
+  // 4. Linhas laterais desenham do centro para fora
+  const heroLines = gsap.utils.toArray('.hero-line');
+  if (heroLines.length) {
+    tl.from(heroLines, { scaleX: 0, autoAlpha: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out' }, 0.8);
+  }
+
+  // 5. Cards laterais entram com fade + y mínimo
+  const heroCards = gsap.utils.toArray('.hero-system__card');
+  const heroLineNodes = gsap.utils.toArray('.hero-line-node');
+  if (heroCards.length) {
+    tl.from(heroCards, { autoAlpha: 0, y: 8, duration: 0.6, stagger: 0.1 }, 0.9);
+  }
+  if (heroLineNodes.length) {
+    tl.from(heroLineNodes, { autoAlpha: 0, scale: 0, duration: 0.4, stagger: 0.1 }, 1.0);
+  }
+
+  // 6. Badge entra
+  if (document.querySelector('.availability-badge-v2')) {
+    tl.from('.availability-badge-v2', { autoAlpha: 0, y: 12, filter: 'blur(2px)', duration: 0.7 }, 1.1);
+  }
+
+  // 7. Eyebrow entra
+  if (document.querySelector('.eyebrow-line') && document.querySelector('.eyebrow-text')) {
+    tl.from('.eyebrow-line', { scaleX: 0, duration: 0.6 }, 1.2);
+    tl.from('.eyebrow-text', { autoAlpha: 0, y: 8, filter: 'blur(2px)', duration: 0.6 }, 1.3);
+  }
+
+  // 8. H1 entra com fade + y leve
+  const hl = gsap.utils.toArray('#hero .hl-i');
+  if (hl.length) {
+    tl.from(hl, { autoAlpha: 0, y: 12, filter: 'blur(2px)', duration: 0.8, stagger: 0.1 }, 1.4);
+  }
+
+  // 9. Sub entra
+  if (document.querySelector('#hero .sub')) {
+    tl.from('#hero .sub', { autoAlpha: 0, y: 10, filter: 'blur(2px)', duration: 0.7 }, 1.6);
+  }
+
+  // 10. CTA entra
+  if (document.querySelector('#hero .cta-wrapper')) {
+    tl.from('#hero .cta-wrapper', { autoAlpha: 0, y: 10, filter: 'blur(2px)', duration: 0.7 }, 1.8);
+  }
+
+  // 11. Microassinatura/monograma entra
+  if (document.querySelector('.hero-micro')) {
+    tl.from('.hero-micro', { autoAlpha: 0, duration: 1 }, 2.0);
+  }
+
+  // 12. Faixa de clientes entra por último
+  if (document.querySelector('.clients-strip')) {
+    tl.from('.clients-strip', { autoAlpha: 0, y: 8, duration: 0.8 }, 2.2);
+  }
 }
 
 function revealBatch(selector, options = {}) {
