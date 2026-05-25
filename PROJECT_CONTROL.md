@@ -167,3 +167,41 @@ Próximas etapas recomendadas:
 
 1. Garantir monitoramento contínuo das implementações para evitar o retorno de regressões.
 2. Analisar desempenho na ferramenta Lighthouse localmente quando viável.
+
+---
+
+## 9. FECHAMENTO DE SESSÃO — 2026-05-25
+
+Branch validada:
+
+main
+
+Remoto validado:
+
+origin -> https://github.com/henrico-design-amaral/portfolio.git
+
+Estado publicado:
+
+- Commit de produto publicado em main: `47f9c4a refine portfolio motion and language toggle`.
+- GitHub Pages validado em `https://henrico-design-amaral.github.io/portfolio/`.
+- Toggle PT/EN segmentado, footer editorial e motion system da home preservados como escopo consolidado.
+
+Validações executadas:
+
+- `npm run build --if-present`
+- `npm run build:css`
+- `npm run lint --if-present`
+- `npm run test --if-present`
+- `node --check assets/js/site.js`
+- revisão de arquivos ignorados e padrões sensíveis
+- validação local e publicada via navegador automatizado
+
+Observações:
+
+- O projeto não possui script `build`; o pipeline npm disponível é `build:css`.
+- `npm run build:css` emite aviso informativo de Browserslist desatualizado, sem falha de build.
+- `cases/petrobras.html` permanece não rastreado e fora do commit por exigir decisão explícita antes de publicação.
+
+Próxima etapa recomendada:
+
+1. Decidir se `cases/petrobras.html` deve ser publicado, movido para área privada ou removido do workspace.
