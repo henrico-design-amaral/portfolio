@@ -1,0 +1,154 @@
+﻿[
+    {
+        "type":  "list-section",
+        "value":  {
+                      "longestChain":  {
+                                           "duration":  597
+                                       },
+                      "type":  "network-tree",
+                      "chains":  {
+                                     "E436828CDAE8AFA06DB89413659ECF57":  {
+                                                                              "url":  "https://henrico-design-amaral.github.io/portfolio/",
+                                                                              "isLongest":  true,
+                                                                              "transferSize":  13472,
+                                                                              "children":  {
+                                                                                               "53.2":  {
+                                                                                                            "url":  "https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800\u0026family=Inter:wght@300;400;500;600;700\u0026family=JetBrains+Mono:wght@300;400;500;600\u0026display=swap",
+                                                                                                            "isLongest":  true,
+                                                                                                            "transferSize":  2061,
+                                                                                                            "navStartToEndTime":  191,
+                                                                                                            "children":  {
+                                                                                                                             "53.80":  {
+                                                                                                                                           "navStartToEndTime":  597,
+                                                                                                                                           "children":  {
+
+                                                                                                                                                        },
+                                                                                                                                           "transferSize":  35372,
+                                                                                                                                           "isLongest":  true,
+                                                                                                                                           "url":  "https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9G78HEY.woff2"
+                                                                                                                                       },
+                                                                                                                             "53.25":  {
+                                                                                                                                           "transferSize":  49244,
+                                                                                                                                           "children":  {
+
+                                                                                                                                                        },
+                                                                                                                                           "navStartToEndTime":  596,
+                                                                                                                                           "url":  "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2"
+                                                                                                                                       },
+                                                                                                                             "53.59":  {
+                                                                                                                                           "children":  {
+
+                                                                                                                                                        },
+                                                                                                                                           "navStartToEndTime":  596,
+                                                                                                                                           "url":  "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2",
+                                                                                                                                           "transferSize":  41292
+                                                                                                                                       }
+                                                                                                                         }
+                                                                                                        },
+                                                                                               "53.5":  {
+                                                                                                            "transferSize":  5553,
+                                                                                                            "children":  {
+
+                                                                                                                         },
+                                                                                                            "navStartToEndTime":  310,
+                                                                                                            "url":  "https://henrico-design-amaral.github.io/portfolio/assets/css/tailwind.generated.css"
+                                                                                                        },
+                                                                                               "53.6":  {
+                                                                                                            "transferSize":  10070,
+                                                                                                            "children":  {
+
+                                                                                                                         },
+                                                                                                            "navStartToEndTime":  321,
+                                                                                                            "url":  "https://henrico-design-amaral.github.io/portfolio/assets/css/site.css"
+                                                                                                        }
+                                                                                           },
+                                                                              "navStartToEndTime":  177
+                                                                          }
+                                 }
+                  }
+    },
+    {
+        "title":  "Origens prÃ©-conectadas",
+        "value":  {
+                      "items":  [
+                                    {
+                                        "origin":  "https://fonts.googleapis.com/",
+                                        "source":  {
+                                                       "selector":  "head \u003e link",
+                                                       "lhId":  "page-12-LINK",
+                                                       "boundingRect":  {
+                                                                            "left":  0,
+                                                                            "bottom":  0,
+                                                                            "top":  0,
+                                                                            "height":  0,
+                                                                            "width":  0,
+                                                                            "right":  0
+                                                                        },
+                                                       "type":  "node",
+                                                       "snippet":  "\u003clink rel=\"preconnect\" href=\"https://fonts.googleapis.com\"\u003e",
+                                                       "path":  "1,HTML,0,HEAD,5,LINK",
+                                                       "nodeLabel":  "head \u003e link"
+                                                   },
+                                        "subItems":  {
+                                                         "type":  "subitems",
+                                                         "items":  [
+
+                                                                   ]
+                                                     }
+                                    },
+                                    {
+                                        "subItems":  {
+                                                         "type":  "subitems",
+                                                         "items":  [
+
+                                                                   ]
+                                                     },
+                                        "source":  {
+                                                       "selector":  "head \u003e link",
+                                                       "type":  "node",
+                                                       "snippet":  "\u003clink rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\"\u003e",
+                                                       "lhId":  "page-13-LINK",
+                                                       "boundingRect":  {
+                                                                            "width":  0,
+                                                                            "height":  0,
+                                                                            "right":  0,
+                                                                            "left":  0,
+                                                                            "bottom":  0,
+                                                                            "top":  0
+                                                                        },
+                                                       "path":  "1,HTML,0,HEAD,6,LINK",
+                                                       "nodeLabel":  "head \u003e link"
+                                                   },
+                                        "origin":  "https://fonts.gstatic.com/"
+                                    }
+                                ],
+                      "headings":  [
+                                       {
+                                           "label":  "Origem",
+                                           "subItemsHeading":  {
+                                                                   "key":  "warning"
+                                                               },
+                                           "valueType":  "text",
+                                           "key":  "origin"
+                                       },
+                                       {
+                                           "valueType":  "node",
+                                           "key":  "source",
+                                           "label":  "Fonte"
+                                       }
+                                   ],
+                      "type":  "table"
+                  },
+        "description":  "As dicas de [prÃ©-conexÃ£o](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) ajudam o navegador a estabelecer uma conexÃ£o mais cedo durante o carregamento da pÃ¡gina, poupando tempo quando a primeira solicitaÃ§Ã£o para essa origem Ã© feita. A pÃ¡gina fez a prÃ©-conexÃ£o com as seguintes origens:",
+        "type":  "list-section"
+    },
+    {
+        "type":  "list-section",
+        "value":  {
+                      "value":  "Nenhuma outra origem Ã© uma boa candidata para a prÃ©-conexÃ£o",
+                      "type":  "text"
+                  },
+        "description":  "Adicione dicas de [prÃ©-conexÃ£o](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) Ã s suas origens mais importantes, mas tente nÃ£o usar mais que 4.",
+        "title":  "Candidatos Ã  prÃ©-conexÃ£o"
+    }
+]

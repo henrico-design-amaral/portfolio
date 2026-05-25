@@ -1,0 +1,32 @@
+﻿[
+    {
+        "duration":  558.4523999999996,
+        "group":  "styleLayout",
+        "groupLabel":  "Style \u0026 Layout"
+    },
+    {
+        "duration":  524.9219999999985,
+        "groupLabel":  "Other",
+        "group":  "other"
+    },
+    {
+        "groupLabel":  "Rendering",
+        "group":  "paintCompositeRender",
+        "duration":  177.85920000002247
+    },
+    {
+        "group":  "scriptEvaluation",
+        "groupLabel":  "Script Evaluation",
+        "duration":  171.36000000000024
+    },
+    {
+        "duration":  22.075200000000006,
+        "group":  "scriptParseCompile",
+        "groupLabel":  "Script Parsing \u0026 Compilation"
+    },
+    {
+        "group":  "parseHTML",
+        "groupLabel":  "Parse HTML \u0026 CSS",
+        "duration":  18.162
+    }
+]

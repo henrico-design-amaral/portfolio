@@ -1,0 +1,23 @@
+﻿"strategy","audit_id","title","score","display_value","numeric_value"
+"desktop","bootup-time","Tempo de execuÃ§Ã£o de JavaScript","1","0,1Â s","59,85300000000005"
+"desktop","font-display","AUDIT_NOT_FOUND","","",""
+"desktop","forced-reflow-insight","Reflow forÃ§ado","0",,
+"desktop","legacy-javascript","AUDIT_NOT_FOUND","","",""
+"desktop","mainthread-work-breakdown","Minimiza o trabalho da thread principal","1","0,7Â s","684,6289999999979"
+"desktop","network-dependency-tree-insight","Ãrvore de dependÃªncia da rede","0",,
+"desktop","render-blocking-resources","AUDIT_NOT_FOUND","","",""
+"desktop","render-blocking-resources-insight","AUDIT_NOT_FOUND","","",""
+"desktop","third-party-summary","AUDIT_NOT_FOUND","","",""
+"desktop","unused-javascript","Reduza o JavaScript nÃ£o usado","1",,"0"
+"desktop","uses-rel-preconnect","AUDIT_NOT_FOUND","","",""
+"mobile","bootup-time","Tempo de execuÃ§Ã£o de JavaScript","1","0,2Â s","189,33719999999994"
+"mobile","font-display","AUDIT_NOT_FOUND","","",""
+"mobile","forced-reflow-insight","Reflow forÃ§ado","0",,
+"mobile","legacy-javascript","AUDIT_NOT_FOUND","","",""
+"mobile","mainthread-work-breakdown","Minimiza o trabalho da thread principal","1","1,5Â s","1472,8308000000209"
+"mobile","network-dependency-tree-insight","Ãrvore de dependÃªncia da rede","0",,
+"mobile","render-blocking-resources","AUDIT_NOT_FOUND","","",""
+"mobile","render-blocking-resources-insight","AUDIT_NOT_FOUND","","",""
+"mobile","third-party-summary","AUDIT_NOT_FOUND","","",""
+"mobile","unused-javascript","Reduza o JavaScript nÃ£o usado","1",,"0"
+"mobile","uses-rel-preconnect","AUDIT_NOT_FOUND","","",""
