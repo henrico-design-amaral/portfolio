@@ -1,0 +1,14 @@
+﻿[
+    {
+        "scriptParseCompile":  0.669,
+        "url":  "https://henrico-design-amaral.github.io/portfolio/",
+        "total":  354.768,
+        "scripting":  4.93
+    },
+    {
+        "total":  226.77800000000167,
+        "url":  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+        "scriptParseCompile":  6.9990000000000006,
+        "scripting":  47.255000000000045
+    }
+]

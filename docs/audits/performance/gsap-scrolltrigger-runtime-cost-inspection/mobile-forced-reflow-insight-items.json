@@ -1,0 +1,118 @@
+﻿[
+    {
+        "headings":  [
+                         {
+                             "label":  "Chamada de funÃ§Ã£o principal",
+                             "valueType":  "source-location",
+                             "key":  "source"
+                         },
+                         {
+                             "valueType":  "ms",
+                             "key":  "reflowTime",
+                             "label":  "Tempo total de reflow",
+                             "granularity":  1
+                         }
+                     ],
+        "type":  "table",
+        "items":  [
+                      {
+                          "reflowTime":  26.05,
+                          "source":  {
+                                         "url":  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js",
+                                         "line":  10,
+                                         "type":  "source-location",
+                                         "column":  17321,
+                                         "urlProvider":  "network"
+                                     }
+                      }
+                  ]
+    },
+    {
+        "headings":  [
+                         {
+                             "valueType":  "source-location",
+                             "key":  "source",
+                             "label":  "Fonte"
+                         },
+                         {
+                             "label":  "Tempo total de reflow",
+                             "granularity":  1,
+                             "valueType":  "ms",
+                             "key":  "reflowTime"
+                         }
+                     ],
+        "type":  "table",
+        "items":  [
+                      {
+                          "reflowTime":  231.661,
+                          "source":  {
+                                         "url":  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js",
+                                         "line":  9,
+                                         "type":  "source-location",
+                                         "column":  33734,
+                                         "urlProvider":  "network"
+                                     }
+                      },
+                      {
+                          "reflowTime":  26.025,
+                          "source":  {
+                                         "urlProvider":  "network",
+                                         "column":  13363,
+                                         "type":  "source-location",
+                                         "line":  9,
+                                         "url":  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+                                     }
+                      },
+                      {
+                          "reflowTime":  0.255,
+                          "source":  {
+                                         "urlProvider":  "network",
+                                         "column":  12623,
+                                         "type":  "source-location",
+                                         "line":  9,
+                                         "url":  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+                                     }
+                      },
+                      {
+                          "source":  {
+                                         "urlProvider":  "network",
+                                         "column":  16743,
+                                         "line":  9,
+                                         "type":  "source-location",
+                                         "url":  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+                                     },
+                          "reflowTime":  0.215
+                      },
+                      {
+                          "reflowTime":  49.371,
+                          "source":  {
+                                         "urlProvider":  "network",
+                                         "column":  55073,
+                                         "line":  9,
+                                         "type":  "source-location",
+                                         "url":  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+                                     }
+                      },
+                      {
+                          "reflowTime":  2.749,
+                          "source":  {
+                                         "column":  9918,
+                                         "urlProvider":  "network",
+                                         "url":  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js",
+                                         "line":  9,
+                                         "type":  "source-location"
+                                     }
+                      },
+                      {
+                          "reflowTime":  0.477,
+                          "source":  {
+                                         "urlProvider":  "network",
+                                         "column":  3496,
+                                         "type":  "source-location",
+                                         "line":  9,
+                                         "url":  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+                                     }
+                      }
+                  ]
+    }
+]
