@@ -1,0 +1,352 @@
+﻿C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:82:<body class="font-body overflow-x-hidden">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:85:    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent-500 text-white px-4 py-2 z-50 rounded"
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:89:  <nav class="fixed top-0 left-0 w-full z-50 liquid-glass transition-transform duration-300" id="nav"
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:91:    <div class="max-w-[1440px] w-full mx-auto flex items-center justify-between px-6 py-4">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:92:      <div class="magnetic-wrap">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:93:        <a href="#hero" class="font-display font-bold text-lg md:text-xl tracking-[0]">Henrico Amaral</a>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:97:        class="hidden md:flex items-center gap-8 font-mono text-[12px] tracking-widest uppercase font-semibold text-text-secondary nav-links">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:98:        <a href="#process" data-t="nav.method" class="hover:text-accent-500 transition-colors py-2 px-1">Método</a>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:99:        <a href="#cases" data-t="nav.cases" class="hover:text-accent-500 transition-colors py-2 px-1">Casos</a>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:100:        <a href="#impact" data-t="nav.impact" class="hover:text-accent-500 transition-colors py-2 px-1">Impacto</a>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:101:        <a href="#about" data-t="nav.about" class="hover:text-accent-500 transition-colors py-2 px-1">Sobre</a>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:102:        <a href="#contact" data-t="nav.contact" class="hover:text-accent-500 transition-colors py-2 px-1">Contato</a>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:105:      <div class="flex items-center gap-2 font-mono text-[12px] uppercase font-bold nav-lang" id="nav-lang">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:106:        <button class="lang-btn active transition-colors" data-lang="pt" aria-label="PT — Português" aria-pressed="true">PT</button>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:107:        <span class="text-support-300">/</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:108:        <button class="lang-btn text-text-tertiary hover:text-accent-500 transition-colors" data-lang="en"
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:111:      <button id="mobile-menu-toggle" class="mobile-menu-toggle md:hidden" type="button"
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:117:    <div id="mobile-menu" class="mobile-menu md:hidden" hidden>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:128:    <div id="sr-announcer" role="status" aria-live="polite" class="sr-only"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:131:    <section id="hero" class="relative min-h-[100dvh] flex items-center pt-32 pb-16 px-6 overflow-hidden bg-page nbg">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:134:        class="max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 pt-10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:135:        <div class="lg:col-span-10 relative z-10 text-left">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:139:            class="availability-badge-v2 inline-flex items-center gap-3 mb-10 px-4 py-2 rounded-full border border-support-300 bg-base-100/60 backdrop-blur-md">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:140:            <span class="avail-dot-v2 w-2 h-2 rounded-full bg-accent-600 flex-shrink-0" aria-hidden="true"></span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:141:            <span class="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-text-primary font-bold whitespace-nowrap"
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:146:          <div class="flex items-center gap-4 mb-8 overflow-hidden">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:147:            <div class="w-8 h-[1px] bg-accent-500 eyebrow-line origin-left"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:149:              class="font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-text-secondary font-bold eyebrow-text"
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:155:            class="font-display font-bold text-[6em] w-full max-w-[1440px] tracking-[0] leading-[0.95] text-text-primary mb-12 text-balance">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:156:            <span class="block overflow-hidden reveal-mask">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:157:              <span class="block reveal-text hl-i" data-t="h1.l1">Sistemas claros</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:159:            <span class="block overflow-hidden reveal-mask">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:160:              <span class="block reveal-text hl-i text-support-600" data-t="h1.l2">para decisões difíceis.</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:166:             class="font-body text-base md:text-xl text-text-secondary max-w-[75ch] leading-relaxed mb-16 sub"
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:172:          <div class="cta-wrapper">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:173:            <div class="magnetic-wrap">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:175:                class="group relative inline-flex items-center gap-4 bg-accent-600 text-white px-8 py-4 rounded-full font-bold overflow-hidden transition-all duration-300 hover:-translate-y-[1px] active:translate-y-0 shadow-[0_2px_12px_rgba(158,130,92,0.25)] hover:shadow-[0_4px_20px_rgba(158,130,92,0.35)]">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:177:                  class="absolute inset-0 bg-accent-700 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:179:                <span class="relative tracking-wide" data-t="cta.primary">Vamos conversar</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:180:                <span class="relative transition-all duration-300 group-hover:translate-x-1.5 group-hover:-translate-y-[1px]">→</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:190:      <div class="clients-strip">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:191:        <div class="clients-strip-inner">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:192:          <span class="clients-label" data-t="worked-with">Clientes</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:193:          <div class="marquee clients-marquee" aria-label="Clientes">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:194:            <div class="marquee-content">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:195:              <span>Petrobras</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:196:              <span>Bayer</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:197:              <span>Ambev</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:198:              <span>Banco do Brasil</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:199:              <span>Bradesco</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:200:              <span>Claro</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:201:              <span>Globo</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:203:            <div class="marquee-content" aria-hidden="true">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:204:              <span>Petrobras</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:205:              <span>Bayer</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:206:              <span>Ambev</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:207:              <span>Banco do Brasil</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:208:              <span>Bradesco</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:209:              <span>Claro</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:210:              <span>Globo</span><span class="text-support-300">·</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:218:    <section id="process" class="section-pad px-6 bg-base-200 relative nbg">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:234:      <div class="max-w-[1440px] w-full mx-auto relative z-10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:237:        <div class="section-header">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:238:          <span class="section-kicker">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:241:          <div class="section-header-grid">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:242:            <div class="section-header-title-col">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:243:              <h2 class="section-header-title" data-t="s4.title">Antes de desenhar telas,<br>organizo o problema.</h2>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:245:            <div class="section-header-subtitle">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:246:              <div class="section-microstats section-microcopy">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:255:        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 relative" id="framework-grid">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:258:          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:260:            <div class="relative z-10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:261:              <div class="flex items-start justify-between mb-16 md:mb-24">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:262:                <span class="font-mono text-[10px] text-accent-600 font-bold tracking-[0.25em] uppercase transition-colors duration-[1.5s] group-hover:text-[#8C7D6E]">01 / Input</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:264:                <div class="flex items-center gap-3 opacity-30 group-hover:opacity-80 transition-opacity duration-[1.5s] ease-out">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:265:                  <div class="w-1.5 h-1.5 bg-accent-500 rounded-full" style="animation: pulse-node 3s infinite;"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:266:                  <div class="w-12 h-[1px] bg-support-400"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:267:                  <div class="w-3 h-3 border border-support-500 rounded-sm"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:270:              <h3 class="font-display font-bold text-2xl md:text-3xl mb-4 text-text-primary tracking-[0] transition-transform duration-[1.5s] ease-out group-hover:translate-x-1" data-t="m1.label">Entender o contexto</h3>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:271:              <p class="font-body text-sm md:text-base text-text-secondary leading-relaxed max-w-[35ch]" data-t="m1.desc">Identifico quem usa, quem decide, quais regras importam e onde o fluxo quebra.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:276:          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:278:            <div class="relative z-10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:279:              <div class="flex items-start justify-between mb-16 md:mb-24">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:280:                <span class="font-mono text-[10px] text-accent-600 font-bold tracking-[0.25em] uppercase transition-colors duration-[1.5s] group-hover:text-[#8C7D6E]">02 / Logic</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:282:                <div class="grid grid-cols-2 gap-1.5 opacity-30 group-hover:opacity-80 transition-opacity duration-[1.5s] ease-out">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:283:                  <div class="w-2.5 h-2.5 border border-support-500"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:284:                  <div class="w-2.5 h-2.5 border border-support-500"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:285:                  <div class="w-2.5 h-2.5 border border-accent-500 bg-accent-500/10 relative overflow-hidden">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:286:                     <div class="absolute inset-0 bg-accent-500/30 transform scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-[2s] ease-in-out"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:288:                  <div class="w-2.5 h-2.5 border border-support-500"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:291:              <h3 class="font-display font-bold text-2xl md:text-3xl mb-4 text-text-primary tracking-[0] transition-transform duration-[1.5s] ease-out group-hover:translate-x-1" data-t="m2.label">Organizar a estrutura</h3>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:292:              <p class="font-body text-sm md:text-base text-text-secondary leading-relaxed max-w-[35ch]" data-t="m2.desc">Transformo processos dispersos em jornadas, estados, permissões e prioridades claras.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:297:          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:299:            <div class="relative z-10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:300:              <div class="flex items-start justify-between mb-16 md:mb-24">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:301:                <span class="font-mono text-[10px] text-accent-600 font-bold tracking-[0.25em] uppercase transition-colors duration-[1.5s] group-hover:text-[#8C7D6E]">03 / Flow</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:303:                <div class="flex flex-col gap-2 opacity-30 group-hover:opacity-80 transition-opacity duration-[1.5s] ease-out items-end">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:304:                  <div class="w-8 h-[2px] bg-support-400 transform origin-right group-hover:scale-x-110 transition-transform duration-[1.5s] ease-out"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:305:                  <div class="w-12 h-[2px] bg-accent-500 transform origin-right group-hover:scale-x-95 transition-transform duration-[1.5s] ease-out delay-100"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:306:                  <div class="w-6 h-[2px] bg-support-400 transform origin-right group-hover:scale-x-125 transition-transform duration-[1.5s] ease-out delay-200"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:309:              <h3 class="font-display font-bold text-2xl md:text-3xl mb-4 text-text-primary tracking-[0] transition-transform duration-[1.5s] ease-out group-hover:translate-x-1" data-t="m3.label">Desenhar a experiência</h3>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:310:              <p class="font-body text-sm md:text-base text-text-secondary leading-relaxed max-w-[35ch]" data-t="m3.desc">Crio interfaces que reduzem esforço, orientam ação e deixam o sistema mais fácil de operar.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:315:          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:317:            <div class="relative z-10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:318:              <div class="flex items-start justify-between mb-16 md:mb-24">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:319:                <span class="font-mono text-[10px] text-accent-600 font-bold tracking-[0.25em] uppercase transition-colors duration-[1.5s] group-hover:text-[#8C7D6E]">04 / Output</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:321:                <div class="relative w-7 h-7 opacity-30 group-hover:opacity-80 transition-all duration-[1.5s] ease-out mt-1 mr-1 group-hover:rotate-90">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:322:                  <div class="absolute inset-0 border border-support-500 transform rotate-45 transition-transform duration-[2s] group-hover:scale-110"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:323:                  <div class="absolute inset-1.5 bg-accent-500 transform rotate-45 transition-transform duration-[1.5s] group-hover:scale-90"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:326:              <h3 class="font-display font-bold text-2xl md:text-3xl mb-4 text-text-primary tracking-[0] transition-transform duration-[1.5s] ease-out group-hover:translate-x-1" data-t="m4.label">Validar e ajustar</h3>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:327:              <p class="font-body text-sm md:text-base text-text-secondary leading-relaxed max-w-[35ch]" data-t="m4.desc">Testo hipóteses, alinho áreas envolvidas e refino a solução antes da implementação.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:336:    <section id="cases" class="section-pad px-6 relative nbg bg-page">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:337:      <div class="max-w-[1440px] w-full mx-auto relative z-10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:339:        <div class="section-header">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:340:          <span class="section-kicker">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:343:          <div class="section-header-grid">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:344:            <div class="section-header-title-col">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:345:              <h2 class="section-header-title" data-t="s3.header.title">Trabalhos onde clareza<br>virou operação.</h2>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:347:            <div class="section-header-subtitle">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:348:              <div class="section-microstats section-microcopy">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:357:        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-12 relative" id="cases-grid">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:360:          <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="critical" data-case-index="0" role="button" tabindex="0">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:361:            <div class="flex-grow relative overflow-hidden">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:363:              <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:374:              <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:375:              <img src="assets/img/cases/petrobras.webp" srcset="assets/img/cases/petrobras-640.webp 640w, assets/img/cases/petrobras-960.webp 960w, assets/img/cases/petrobras.webp 1200w" sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) calc(50vw - 64px), 360px" alt="Petrobras" class="w-full h-full object-cover scale-[1.02] opacity-80" width="1200" height="1200" loading="lazy" decoding="async" />
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:377:              <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:378:                01 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:380:              <div class="absolute top-5 right-5 z-20 text-white/50 font-mono text-[8px] tracking-[0.2em] uppercase">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:385:            <div class="px-10 pb-10 pt-6 flex flex-col relative z-20 bg-[#0B0F14]">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:386:              <h3 class="font-display font-bold text-[2.2rem] md:text-[2.8rem] leading-[0.9] tracking-[0] mb-8 text-white">PETROBRAS</h3>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:387:              <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Coordenação offshore crítica para monitoramento ambiental e resposta operacional em tempo real.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:389:              <div class="absolute right-8 top-20 scale-150 text-white/30 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 transform transition-transform">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:393:              <div class="grid grid-cols-4 gap-4 pt-8 border-t border-white/10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:394:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:395:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.system">Sistema</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:396:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.petro.system">Monitoramento<br>ambiental offshore</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:398:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:399:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.context">Contexto</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:400:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.petro.context">Operação<br>offshore</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:402:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:403:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.scope">Escopo</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:404:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.petro.scope">Resposta<br>ambiental</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:406:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:407:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.impact">Impacto</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:408:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.petro.impact">Coordenação de<br>riscos operacionais</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:415:          <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="distributed" data-case-index="2" role="button" tabindex="0">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:416:            <div class="flex-grow relative overflow-hidden">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:418:              <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:429:              <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:430:              <img src="assets/img/cases/ambev.webp" srcset="assets/img/cases/ambev-640.webp 640w, assets/img/cases/ambev-960.webp 960w, assets/img/cases/ambev.webp 1200w" sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) calc(50vw - 64px), 360px" alt="Ambev" class="w-full h-full object-cover scale-[1.02] opacity-80" width="1200" height="1200" loading="lazy" decoding="async" />
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:432:              <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:433:                02 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:435:              <div class="absolute top-5 right-5 z-20 text-white/50 font-mono text-[8px] tracking-[0.2em] uppercase">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:440:            <div class="px-10 pb-10 pt-6 flex flex-col relative z-20 bg-[#0B0F14]">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:441:              <h3 class="font-display font-bold text-[2.2rem] md:text-[2.8rem] leading-[0.9] tracking-[0] mb-8 text-white">AMBEV</h3>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:442:              <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Infraestrutura logística nacional para monitoramento distribuído e gestão de rupturas operacionais.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:444:              <div class="absolute right-8 top-20 scale-150 text-white/30 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 transform transition-transform">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:448:              <div class="grid grid-cols-4 gap-4 pt-8 border-t border-white/10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:449:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:450:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.system">Sistema</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:451:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.ambev.system">Gestão logística<br>distribuída</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:453:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:454:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.context">Contexto</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:455:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.ambev.context">Escala<br>nacional</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:457:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:458:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.scope">Escopo</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:459:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.ambev.scope">Supply<br>chain</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:461:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:462:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.impact">Impacto</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:463:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.ambev.impact">Visibilidade de<br>rupturas operacionais</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:470:          <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="territorial" data-case-index="1" role="button" tabindex="0">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:471:            <div class="flex-grow relative overflow-hidden">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:473:              <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:483:              <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:484:              <img src="assets/img/cases/bayer.webp" srcset="assets/img/cases/bayer-640.webp 640w, assets/img/cases/bayer-960.webp 960w, assets/img/cases/bayer.webp 1200w" sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) calc(50vw - 64px), 360px" alt="Bayer" class="w-full h-full object-cover scale-[1.02] opacity-80" width="1200" height="1200" loading="lazy" decoding="async" />
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:486:              <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:487:                03 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:489:              <div class="absolute top-5 right-5 z-20 text-white/50 font-mono text-[8px] tracking-[0.2em] uppercase">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:494:            <div class="px-10 pb-10 pt-6 flex flex-col relative z-20 bg-[#0B0F14]">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:495:              <h3 class="font-display font-bold text-[2.2rem] md:text-[2.8rem] leading-[0.9] tracking-[0] mb-8 text-white">BAYER</h3>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:496:              <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Sistema territorial de inteligência agronômica para análise ambiental e suporte à decisão agrícola.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:498:              <div class="absolute right-8 top-20 scale-150 text-white/30 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 transform transition-transform">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:502:              <div class="grid grid-cols-4 gap-4 pt-8 border-t border-white/10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:503:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:504:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.system">Sistema</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:505:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.bayer.system">Inteligência<br>agronômica</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:507:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:508:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.context">Contexto</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:509:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.bayer.context">Análise<br>técnica</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:511:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:512:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.scope">Escopo</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:513:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.bayer.scope">Dados<br>agrícolas</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:515:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:516:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.impact">Impacto</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:517:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.bayer.impact">Rastreabilidade de<br>dados agrícolas</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:524:          <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="regulated" data-case-index="3" role="button" tabindex="0">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:525:            <div class="flex-grow relative overflow-hidden">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:527:              <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:538:              <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:539:              <img src="assets/img/cases/bmg.webp" srcset="assets/img/cases/bmg-640.webp 640w, assets/img/cases/bmg-960.webp 960w, assets/img/cases/bmg.webp 1200w" sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) calc(50vw - 64px), 360px" alt="BMG" class="w-full h-full object-cover object-top scale-[1.02] opacity-80" width="1200" height="1200" loading="lazy" decoding="async" />
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:541:              <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:542:                04 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:544:              <div class="absolute top-5 right-5 z-20 text-white/50 font-mono text-[8px] tracking-[0.2em] uppercase">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:549:            <div class="px-10 pb-10 pt-6 flex flex-col relative z-20 bg-[#0B0F14]">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:550:              <h3 class="font-display font-bold text-[2.2rem] md:text-[2.8rem] leading-[0.9] tracking-[0] mb-8 text-white">BMG</h3>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:551:              <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Arquitetura financeira modular para operações PJ em ambientes regulados.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:553:              <div class="absolute right-8 top-20 scale-150 text-white/30 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 transform transition-transform">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:557:              <div class="grid grid-cols-4 gap-4 pt-8 border-t border-white/10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:558:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:559:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.system">Sistema</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:560:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.bmg.system">Plataforma financeira<br>empresarial</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:562:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:563:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.context">Contexto</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:564:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.bmg.context">Ambiente<br>regulado</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:566:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:567:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.scope">Escopo</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:568:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.bmg.scope">Conta<br>PJ</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:570:                <div class="col-span-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:571:                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.impact">Impacto</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:572:                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.bmg.impact">Fluxos regulados<br>simplificados</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:762:    <section id="impact" class="section-pad px-6 bg-base-100 relative nbg overflow-visible">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:763:      <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12 relative z-10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:765:        <div class="section-header">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:766:          <span class="section-kicker">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:769:          <div class="section-header-grid">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:770:            <div class="section-header-title-col">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:771:              <h2 class="section-header-title" data-t="s5.title">Impacto observável.<br>Operação rastreável.</h2>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:773:            <div class="section-header-subtitle">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:774:              <div class="section-microstats section-microcopy">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:783:        <div class="impact-grid">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:786:           <div class="impact-cell">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:787:             <div class="impact-card-side">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:789:               <div class="mb-auto">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:790:                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:791:                 <span class="impact-dimension" data-t="imp1.dim">Automação operacional</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:793:               <div class="impact-tag">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:794:                 <span class="dot"></span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:798:             <div class="impact-card-side">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:799:               <div class="impact-icon-wrapper">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:802:               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:803:               <div class="impact-evidence" data-t="imp1.val">95% de redução no esforço manual</div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:804:               <p class="impact-desc" data-t="imp1.desc">Consolidação de relatórios operacionais reorganizada para leitura contínua em contexto offshore. O sistema integra informações previamente distribuídas entre monitoramento orbital, análises geoespaciais e mobilização de recursos em um único fluxo operacional contínuo.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:809:           <div class="impact-cell">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:810:             <div class="impact-card-side">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:812:               <div class="mb-auto">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:813:                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:814:                 <span class="impact-dimension" data-t="imp2.dim">Dados agrícolas</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:816:               <div class="impact-tag">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:817:                 <span class="dot"></span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:821:             <div class="impact-card-side">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:822:               <div class="impact-icon-wrapper">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:825:               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:826:               <div class="impact-evidence" data-t="imp2.val">Rastreabilidade de dados agrícolas</div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:827:               <p class="impact-desc" data-t="imp2.desc">Informações agrícolas reorganizadas em torno da cultura como unidade central de análise, conectando dados técnicos, comparação de indicadores e registro de decisões dentro de um fluxo estruturado.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:832:           <div class="impact-cell">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:833:             <div class="impact-card-side">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:835:               <div class="mb-auto">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:836:                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:837:                 <span class="impact-dimension" data-t="imp3.dim">Monitoramento logístico</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:839:               <div class="impact-tag">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:840:                 <span class="dot"></span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:844:             <div class="impact-card-side">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:845:               <div class="impact-icon-wrapper">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:848:               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:849:               <div class="impact-evidence" data-t="imp3.val">Visibilidade de rupturas operacionais</div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:850:               <p class="impact-desc" data-t="imp3.desc">Estrutura de supply chain organizada para leitura de disponibilidade, ruptura e coordenação logística. A plataforma passou a refletir o estado real da operação, transformando dados dispersos em uma visão operacional compartilhada.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:855:           <div class="impact-cell">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:856:             <div class="impact-card-side">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:858:               <div class="mb-auto">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:859:                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:860:                 <span class="impact-dimension" data-t="imp4.dim">Ambiente regulado</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:862:               <div class="impact-tag">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:863:                 <span class="dot"></span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:867:             <div class="impact-card-side">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:868:               <div class="impact-icon-wrapper">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:871:               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:872:               <div class="impact-evidence" data-t="imp4.val">Fluxos regulados simplificados</div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:873:               <p class="impact-desc" data-t="imp4.desc">Jornada PJ estruturada com validações, estados e fluxos aderentes a exigências operacionais e regulatórias. A conta digital foi pensada para pequenas empresas sem remover a segurança e a conformidade bancária do processo.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:884:    <section id="about" class="editorial-dark-section about-section nbg">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:885:      <div class="max-w-[1440px] w-full mx-auto relative z-10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:886:        <div class="section-header section-header--dark">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:887:          <span class="section-kicker">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:890:          <div class="section-header-grid">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:891:            <div class="section-header-title-col">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:892:              <h2 class="section-header-title" data-t="ab.title">Por trás<br>da estrutura.</h2>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:894:            <div class="section-header-subtitle">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:895:              <div class="section-microstats section-microcopy">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:904:        <div class="about-layout">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:905:          <div class="about-narrative">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:906:            <p class="editorial-reveal" data-t="ab.p1">Sou Senior Product Designer com 20 anos em design digital e mais de 15 anos em UX/Product Design.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:907:            <p class="editorial-reveal" data-t="ab.p2">Meu trabalho é organizar fluxos, informação e decisões em produtos digitais usados por times de operação, negócio e tecnologia.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:908:            <p class="editorial-reveal" data-t="ab.p3">Atuei em projetos para Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood, BMG e Youse. São setores diferentes, mas o desafio se repete: transformar complexidade em sistemas mais claros, confiáveis e fáceis de operar.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:909:            <p class="editorial-reveal" data-t="ab.p4">Não parto da tela. Parto do problema, do fluxo, das regras e das decisões que o sistema precisa sustentar.</p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:913:           <div class="about-photo-frame editorial-reveal">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:923:             <div class="about-photo-caption" data-t="ab.photo.caption">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:931:        <div class="about-grid" aria-label="Capacidades profissionais">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:932:          <article class="about-card editorial-reveal">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:933:            <span class="about-card-index">01</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:944:          <article class="about-card editorial-reveal">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:945:            <span class="about-card-index">02</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:955:          <article class="about-card editorial-reveal">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:956:            <span class="about-card-index">03</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:966:          <article class="about-card editorial-reveal">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:967:            <span class="about-card-index">04</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:978:          <article class="about-card editorial-reveal">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:979:            <span class="about-card-index">05</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:996:    <section id="contact" class="editorial-dark-section contact-section nbg">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:997:      <div class="max-w-[1440px] w-full mx-auto relative z-10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:998:        <div class="section-header section-header--dark">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:999:          <span class="section-kicker">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1002:          <div class="section-header-grid">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1003:            <div class="section-header-title-col">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1004:              <h2 class="section-header-title" data-t="ct.title">Sistemas mais claros.<br>Conversas mais objetivas.</h2>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1006:            <div class="section-header-subtitle">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1012:        <div class="contact-intent-grid">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1013:          <article class="contact-intent-card editorial-reveal">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1014:            <span class="about-card-index">01</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1018:          <article class="contact-intent-card editorial-reveal">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1019:            <span class="about-card-index">02</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1023:          <article class="contact-intent-card editorial-reveal">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1024:            <span class="about-card-index">03</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1030:        <nav class="contact-actions editorial-reveal" aria-label="Canais de contato">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1031:          <a href="mailto:henricoamaral.design@gmail.com" class="contact-action contact-action--primary">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1034:          <a href="https://www.linkedin.com/in/henrico-amaral/" target="_blank" rel="noopener" class="contact-action">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1037:          <a href="https://wa.me/5511953970704" target="_blank" rel="noopener" class="contact-action">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1040:          <a href="docs/Henrico-Amaral-CV.pdf" class="contact-action">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1043:          <a href="#cases" class="contact-action">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1053:  <div id="case-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden"
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1055:    <div class="bg-white rounded-lg p-6 w-full max-w-2xl md:w-[90%] relative">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1056:      <button id="modal-close" class="absolute top-3 right-3 text-text-tertiary hover:text-accent-500 transition-colors"
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1058:        <span class="w-6 h-6 flex items-center justify-center">×</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1060:      <div class="space-y-6">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1061:        <h2 id="modal-client" class="font-display font-bold text-3xl md:text-4xl text-text-primary" data-t="modal.case">Caso</h2>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1062:        <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1063:        <p id="modal-desc" class="font-body text-lg text-text-secondary leading-relaxed"></p>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1064:        <div class="flex items-center gap-4">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1065:          <div id="modal-metric" class="font-display font-bold text-5xl text-text-primary"></div>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1067:            class="font-mono text-[10px] uppercase tracking-widest text-support-400 font-semibold"></span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1073:  <footer class="py-20 px-6 bg-[#2d180e] text-[#f2efe9] relative overflow-hidden" id="footer">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1074:    <div class="max-w-[1440px] w-full mx-auto relative z-10">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1076:      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-16 md:mb-20">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1078:        <div class="flex flex-col gap-3">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1079:          <div class="w-10 h-10 rounded-full border border-[#BE9C6E]/25 flex items-center justify-center mb-1">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1080:            <span class="font-display font-bold text-lg text-[#BE9C6E]/80">HA</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1082:          <span class="font-display font-bold text-lg md:text-xl tracking-[0] text-[#f2efe9]/90">Henrico Amaral</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1083:          <span class="font-body text-sm text-[#c4beb4]/78" data-t="ft.role">Senior Product Designer · Decision Infrastructure</span>
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1087:        <div class="md:text-right md:self-end">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1088:          <p class="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-[#f2efe9]/85 leading-[1.1] max-w-xl md:ml-auto" data-t="ft.signature">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1095:      <div class="pt-6 border-t border-[#f2efe9]/10 flex flex-col md:flex-row justify-between items-center gap-4">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1096:        <span class="font-mono text-[9px] md:text-[10px] tracking-widest uppercase text-[#c4beb4]/60">
+C:\Users\henri\Documents\!PROJETOS\01_ACTIVE\Portfolio\index.html:1099:        <a href="#hero" class="font-mono text-[9px] md:text-[10px] tracking-widest uppercase text-[#c4beb4]/60 hover:text-[#BE9C6E] transition-all duration-300 hover:-translate-y-[1px]">
