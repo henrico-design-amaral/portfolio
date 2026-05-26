@@ -113,3 +113,40 @@ At the end of any task, report:
 - next recommended step.
 
 Never say the work is complete unless `git status -sb` is clean or the remaining changes are explicitly listed.
+
+## HTML page structure rule
+
+Whenever an HTML file is created or updated, the code must be as semantic as possible.
+
+HTML must be responsible for structure and content.
+
+CSS must live under:
+
+`assets/css/`
+
+JavaScript must live under:
+
+`assets/js/`
+
+Do not embed large CSS or JavaScript blocks inside HTML.
+
+Inline CSS is allowed only as a deliberate temporary exception, critical minimal bootstrapping or no-script fallback.
+
+Inline JavaScript is allowed only for critical minimal bootstrapping, such as preventing language flash before first paint.
+
+If inline CSS or JavaScript is used, explain why it exists and whether it should be migrated later.
+
+Every created or updated portfolio page must support both PT-BR and EN-US content.
+
+Use clear semantic landmarks:
+
+- `header`;
+- `nav`;
+- `main`;
+- `section`;
+- `article`;
+- `aside`;
+- `footer`.
+
+Preserve heading hierarchy and accessibility basics.
+
