@@ -46,3 +46,33 @@ Use Antigravity for:
 Agents and skills must serve the portfolio.
 
 They must not become a separate product or distraction from the main goal: creating a strong portfolio around complex systems, operational platforms and decision infrastructure.
+
+## Operating command prompts
+
+Reusable command prompts live in:
+
+`docs/orchestration/COMMAND_PROMPTS.md`
+
+Use this file for:
+
+- session start;
+- session closeout;
+- home refinement;
+- case creation;
+- case refinement;
+- visual regression checks;
+- PSI validation;
+- PR closeout through terminal.
+
+## HTML/CSS/JS organization rule
+
+All created or updated HTML pages must preserve semantic structure.
+
+CSS belongs in `assets/css/`.
+
+JavaScript belongs in `assets/js/`.
+
+Large inline CSS or JavaScript blocks are not acceptable as a default pattern.
+
+Every created or updated portfolio page must support both PT-BR and EN-US.
+
