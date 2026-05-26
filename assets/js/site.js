@@ -8,7 +8,7 @@ const COPY = {
     'eyebrow':      'Product Design · Enterprise · Operações complexas',
     'h1.l1':        'Sistemas claros',
     'h1.l2':        'para decisões difíceis.',
-      'sub':          'Ajudo empresas a transformar fluxos confusos, dados dispersos e regras complexas em produtos digitais fáceis de operar.',
+      'sub':          'Transformo fluxos confusos, dados dispersos e regras complexas em produtos digitais fáceis de operar.',
     'cta.primary':  'Vamos conversar',
     'worked-with':  'Clientes',
     's2.tag':       '01 / Território',
@@ -186,7 +186,7 @@ const COPY = {
      'eyebrow':      'Product Design · Enterprise · Complex Operations',
      'h1.l1':        'Clear systems',
      'h1.l2':        'for hard decisions.',
-      'sub':          'I help companies turn messy workflows, scattered data and complex rules into digital products teams can actually operate.',
+      'sub':          'I turn messy workflows, scattered data and complex rules into digital products teams can actually operate.',
       'cta.primary':  'Let\'s talk',
      'worked-with':  'Clients',
      's2.tag':       '01 / Territory',
@@ -489,7 +489,7 @@ function initHeroMotion() {
 
   // 1. Header entra com fade curto
   if (document.querySelector('#nav')) {
-    tl.from('#nav', { autoAlpha: 0, y: -8, duration: 0.6 }, 0);
+    tl.fromTo('#nav', { autoAlpha: 0, y: -8 }, { autoAlpha: 1, y: 0, duration: 0.6 }, 0);
   }
 
   // 2. Órbita central aparece com stroke-draw suave
@@ -497,68 +497,112 @@ function initHeroMotion() {
   if (orbitTraces.length) {
     orbitTraces.forEach(el => {
       const match = el.getAttribute('style')?.match(/stroke-dasharray:\s*(\d+)/);
-      const dash = match ? match[1] : 1000;
-      tl.from(el, { strokeDashoffset: dash, autoAlpha: 0, duration: 1.5, ease: 'power2.out' }, 0.2);
+      const dash = match ? Number(match[1]) : 1000;
+      tl.fromTo(el,
+        { strokeDashoffset: dash, autoAlpha: 0 },
+        { strokeDashoffset: 0, autoAlpha: 1, duration: 1.5, ease: 'power2.out' },
+        0.2
+      );
     });
   }
 
   // 3. Pontos da órbita aparecem em sequência curta
   const orbitNodes = gsap.utils.toArray('.orbit-node');
   if (orbitNodes.length) {
-    tl.from(orbitNodes, { autoAlpha: 0, scale: 0.5, duration: 0.5, stagger: 0.15 }, 0.6);
+    tl.fromTo(orbitNodes,
+      { autoAlpha: 0, scale: 0.5 },
+      { autoAlpha: 1, scale: 1, duration: 0.5, stagger: 0.15 },
+      0.6
+    );
   }
 
   // 4. Linhas laterais desenham do centro para fora
   const heroLines = gsap.utils.toArray('.hero-line');
   if (heroLines.length) {
-    tl.from(heroLines, { scaleX: 0, autoAlpha: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out' }, 0.8);
+    tl.fromTo(heroLines,
+      { scaleX: 0, autoAlpha: 0 },
+      { scaleX: 1, autoAlpha: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out' },
+      0.8
+    );
   }
 
   // 5. Cards laterais entram com fade + y mínimo
   const heroCards = gsap.utils.toArray('.hero-system__card');
   const heroLineNodes = gsap.utils.toArray('.hero-line-node');
   if (heroCards.length) {
-    tl.from(heroCards, { autoAlpha: 0, y: 8, duration: 0.6, stagger: 0.1 }, 0.9);
+    tl.fromTo(heroCards,
+      { autoAlpha: 0, y: 8, filter: 'blur(2px)' },
+      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.6, stagger: 0.1, ease: 'power3.out' },
+      0.9
+    );
   }
   if (heroLineNodes.length) {
-    tl.from(heroLineNodes, { autoAlpha: 0, scale: 0, duration: 0.4, stagger: 0.1 }, 1.0);
+    tl.fromTo(heroLineNodes,
+      { autoAlpha: 0, scale: 0 },
+      { autoAlpha: 1, scale: 1, duration: 0.4, stagger: 0.1 },
+      1.0
+    );
   }
 
   // 6. Badge entra
   if (document.querySelector('.availability-badge-v2')) {
-    tl.from('.availability-badge-v2', { autoAlpha: 0, y: 12, filter: 'blur(2px)', duration: 0.7 }, 1.1);
+    tl.fromTo('.availability-badge-v2',
+      { autoAlpha: 0, y: 12, filter: 'blur(2px)' },
+      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.7 },
+      1.1
+    );
   }
 
   // 7. Eyebrow entra
   if (document.querySelector('.eyebrow-line') && document.querySelector('.eyebrow-text')) {
-    tl.from('.eyebrow-line', { scaleX: 0, duration: 0.6 }, 1.2);
-    tl.from('.eyebrow-text', { autoAlpha: 0, y: 8, filter: 'blur(2px)', duration: 0.6 }, 1.3);
+    tl.fromTo('.eyebrow-line', { scaleX: 0 }, { scaleX: 1, duration: 0.6 }, 1.2);
+    tl.fromTo('.eyebrow-text',
+      { autoAlpha: 0, y: 8, filter: 'blur(2px)' },
+      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.6 },
+      1.3
+    );
   }
 
   // 8. H1 entra com fade + y leve
   const hl = gsap.utils.toArray('#hero .hl-i');
   if (hl.length) {
-    tl.from(hl, { autoAlpha: 0, y: 12, filter: 'blur(2px)', duration: 0.8, stagger: 0.1 }, 1.4);
+    tl.fromTo(hl,
+      { autoAlpha: 0, y: 12, filter: 'blur(2px)' },
+      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.8, stagger: 0.1 },
+      1.4
+    );
   }
 
   // 9. Sub entra
   if (document.querySelector('#hero .sub')) {
-    tl.from('#hero .sub', { autoAlpha: 0, y: 10, filter: 'blur(2px)', duration: 0.7 }, 1.6);
+    tl.fromTo('#hero .sub',
+      { autoAlpha: 0, y: 10, filter: 'blur(2px)' },
+      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.7 },
+      1.6
+    );
   }
 
   // 10. CTA entra
   if (document.querySelector('#hero .cta-wrapper')) {
-    tl.from('#hero .cta-wrapper', { autoAlpha: 0, y: 10, filter: 'blur(2px)', duration: 0.7 }, 1.8);
+    tl.fromTo('#hero .cta-wrapper',
+      { autoAlpha: 0, y: 10, filter: 'blur(2px)' },
+      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.7 },
+      1.8
+    );
   }
 
   // 11. Microassinatura/monograma entra
   if (document.querySelector('.hero-micro')) {
-    tl.from('.hero-micro', { autoAlpha: 0, duration: 1 }, 2.0);
+    tl.fromTo('.hero-micro', { autoAlpha: 0 }, { autoAlpha: 1, duration: 1 }, 2.0);
   }
 
   // 12. Faixa de clientes entra por último
   if (document.querySelector('.clients-strip')) {
-    tl.from('.clients-strip', { autoAlpha: 0, y: 8, duration: 0.8 }, 2.2);
+    tl.fromTo('.clients-strip',
+      { autoAlpha: 0, y: 8 },
+      { autoAlpha: 1, y: 0, duration: 0.8 },
+      2.2
+    );
   }
 }
 

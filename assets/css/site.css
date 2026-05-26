@@ -201,8 +201,6 @@ footer > * {
   gap: 2rem;
   min-width: max-content;
   white-space: nowrap;
-  animation: client-marquee 38s linear infinite;
-  will-change: transform;
 }
 @keyframes client-marquee {
   from { transform: translate3d(0, 0, 0); }
@@ -2312,35 +2310,6 @@ footer:not(.site-footer) a.font-mono {
   color: #fff8ee;
 }
 
-/* ── Hero Orbit & Cards System ── */
-@keyframes spin-slow { 100% { transform: rotate(360deg); } }
-@keyframes pulse-node-subtle {
-  0%, 100% { opacity: 0.45; transform: scale(1); }
-  50% { opacity: 0.75; transform: scale(1.08); }
-}
-
-.ev-track {
-  display: flex;
-  width: max-content;
-  animation: client-marquee 40s linear infinite;
-  will-change: transform;
-}
-
-@keyframes client-marquee {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
-}
-
-.ev-marquee:hover .ev-track {
-  animation-play-state: paused;
-}
-
-@media (max-width: 768px) {
-    flex-shrink: 0;
-  }
-}
-
-
 /* A11Y — structural mobile target spacing */
 @media (max-width: 767px) {
   #nav .max-w-\[1440px\] {
@@ -2566,9 +2535,9 @@ footer:not(.site-footer) a.font-mono {
 }
 
 .hero-system--bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
   pointer-events: none;
   overflow: hidden;
 }
@@ -2721,6 +2690,10 @@ footer:not(.site-footer) a.font-mono {
   background-color: rgba(158, 130, 92, 1);
   opacity: 0;
   transition: opacity 0.3s;
+}
+
+.hero-cta:hover {
+  transform: translateY(-1px);
 }
 
 .hero-cta:hover .hero-cta__bg {
