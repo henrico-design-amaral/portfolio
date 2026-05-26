@@ -135,7 +135,7 @@ const COPY = {
      'ab.p3':             'Atuei em projetos para Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood, BMG e Youse. São setores diferentes, mas o desafio se repete: transformar complexidade em sistemas mais claros, confiáveis e fáceis de operar.',
      'ab.p4':             'Não parto da tela. Parto do problema, do fluxo, das regras e das decisões que o sistema precisa sustentar.',
       'ab.photo.alt':      'Henrico Amaral, Senior Product Designer especializado em sistemas enterprise.',
-      'ab.photo.caption': 'Henrico Amaral<br>Senior Product Designer · Decision Infrastructure',
+      'ab.photo.caption': 'Henrico Amaral<br>Senior Product Designer',
      'ab.card1.title':    'Papel',
      'ab.card1.items':    '<li>Senior Product Designer</li><li>Plataformas B2B</li><li>Sistemas internos</li><li>Workflows complexos</li><li>Ambientes regulados</li>',
      'ab.card2.title':    'O que resolvo',
@@ -149,14 +149,6 @@ const COPY = {
      'ab.beyond.title':   'Além da interface',
      'ab.beyond.items':   '<li>Pai</li><li>Observador de sistemas</li><li>Aprendiz constante</li><li>IA aplicada ao design</li><li>Reposicionamento com método</li>',
       'hero.availability': 'Disponível agora · CLT · PJ · Freelancer',
-      'hc.1.t': 'Fluxos claros',
-      'hc.1.d': 'Menos atrito. Mais controle. Decisões com confiança.',
-      'hc.2.t': 'Impacto real',
-      'hc.2.d': 'Resultados observáveis em operações complexas.',
-      'hc.3.t': 'Dados úteis',
-      'hc.3.d': 'Informação que guia, não apenas preenche tela.',
-      'hc.4.t': 'Experiência simples',
-      'hc.4.d': 'Interfaces que pessoas entendem, adotam e usam.',
      'modal.case':        'Caso',
      'ct.tag':            'SÃO PAULO · REMOTO/HÍBRIDO · PT/EN',
      'ct.title':          'Sistemas mais claros.<br>Conversas mais objetivas.',
@@ -313,7 +305,7 @@ const COPY = {
      'ab.p3':             'I’ve worked on projects for Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood, BMG and Youse. Different industries, same challenge: turning complexity into clearer, more reliable and easier-to-operate systems.',
      'ab.p4':             'I don’t start from the screen. I start from the problem, the workflow, the rules and the decisions the system needs to support.',
       'ab.photo.alt':      'Henrico Amaral, Senior Product Designer specialized in enterprise systems.',
-      'ab.photo.caption': 'Henrico Amaral<br>Senior Product Designer · Decision Infrastructure',
+      'ab.photo.caption': 'Henrico Amaral<br>Senior Product Designer',
      'ab.card1.title':    'Role',
      'ab.card1.items':    '<li>Senior Product Designer</li><li>B2B platforms</li><li>Internal systems</li><li>Complex workflows</li><li>Regulated environments</li>',
      'ab.card2.title':    'What I solve',
@@ -327,14 +319,6 @@ const COPY = {
      'ab.beyond.title':   'Beyond the interface',
      'ab.beyond.items':   '<li>Father</li><li>Systems observer</li><li>Constant learner</li><li>Applied AI in design</li><li>Methodical repositioning</li>',
       'hero.availability': 'Available now · Full-time · Contractor · Freelance',
-      'hc.1.t': 'Clear workflows',
-      'hc.1.d': 'Less friction. More control. Decisions with confidence.',
-      'hc.2.t': 'Real impact',
-      'hc.2.d': 'Observable outcomes in complex operations.',
-      'hc.3.t': 'Useful data',
-      'hc.3.d': 'Information that guides, not just fills the screen.',
-      'hc.4.t': 'Simple experience',
-      'hc.4.d': 'Interfaces people understand, adopt and use.',
      'modal.case':        'Case',
      'ct.tag':            'SÃO PAULO · REMOTE/HYBRID · PT/EN',
      'ct.title':          'Clearer systems.<br>More objective conversations.',
@@ -492,59 +476,7 @@ function initHeroMotion() {
     tl.fromTo('#nav', { autoAlpha: 0, y: -8 }, { autoAlpha: 1, y: 0, duration: 0.6 }, 0);
   }
 
-  // 2. Órbita central aparece com stroke-draw suave
-  const orbitTraces = gsap.utils.toArray('.orbit-trace');
-  if (orbitTraces.length) {
-    orbitTraces.forEach(el => {
-      const match = el.getAttribute('style')?.match(/stroke-dasharray:\s*(\d+)/);
-      const dash = match ? Number(match[1]) : 1000;
-      tl.fromTo(el,
-        { strokeDashoffset: dash, autoAlpha: 0 },
-        { strokeDashoffset: 0, autoAlpha: 1, duration: 1.5, ease: 'power2.out' },
-        0.2
-      );
-    });
-  }
-
-  // 3. Pontos da órbita aparecem em sequência curta
-  const orbitNodes = gsap.utils.toArray('.orbit-node');
-  if (orbitNodes.length) {
-    tl.fromTo(orbitNodes,
-      { autoAlpha: 0, scale: 0.5 },
-      { autoAlpha: 1, scale: 1, duration: 0.5, stagger: 0.15 },
-      0.6
-    );
-  }
-
-  // 4. Linhas laterais desenham do centro para fora
-  const heroLines = gsap.utils.toArray('.hero-line');
-  if (heroLines.length) {
-    tl.fromTo(heroLines,
-      { scaleX: 0, autoAlpha: 0 },
-      { scaleX: 1, autoAlpha: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out' },
-      0.8
-    );
-  }
-
-  // 5. Cards laterais entram com fade + y mínimo
-  const heroCards = gsap.utils.toArray('.hero-system__card');
-  const heroLineNodes = gsap.utils.toArray('.hero-line-node');
-  if (heroCards.length) {
-    tl.fromTo(heroCards,
-      { autoAlpha: 0, y: 8, filter: 'blur(2px)' },
-      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.6, stagger: 0.1, ease: 'power3.out' },
-      0.9
-    );
-  }
-  if (heroLineNodes.length) {
-    tl.fromTo(heroLineNodes,
-      { autoAlpha: 0, scale: 0 },
-      { autoAlpha: 1, scale: 1, duration: 0.4, stagger: 0.1 },
-      1.0
-    );
-  }
-
-  // 6. Badge entra
+  // 2. Badge entra
   if (document.querySelector('.availability-badge-v2')) {
     tl.fromTo('.availability-badge-v2',
       { autoAlpha: 0, y: 12, filter: 'blur(2px)' },
@@ -591,12 +523,7 @@ function initHeroMotion() {
     );
   }
 
-  // 11. Microassinatura/monograma entra
-  if (document.querySelector('.hero-micro')) {
-    tl.fromTo('.hero-micro', { autoAlpha: 0 }, { autoAlpha: 1, duration: 1 }, 2.0);
-  }
-
-  // 12. Faixa de clientes entra por último
+  // 11. Faixa de clientes entra por último
   if (document.querySelector('.clients-strip')) {
     tl.fromTo('.clients-strip',
       { autoAlpha: 0, y: 8 },
