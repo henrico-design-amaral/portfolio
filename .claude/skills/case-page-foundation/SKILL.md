@@ -18,3 +18,8 @@ Create the foundation for an individual portfolio case page.
 ## Output
 
 Report files changed, structure created, risks and next step.
+## Language rule
+
+Every case page must support both PT-BR and EN-US content.
+
+When creating or updating a case page, provide both language versions and preserve the language-switching pattern used in the portfolio.
