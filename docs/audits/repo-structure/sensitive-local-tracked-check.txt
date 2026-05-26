@@ -1,0 +1,11 @@
+ai-memory/00-global-profile.md
+ai-memory/01-project-context.md
+ai-memory/02-product-positioning.md
+ai-memory/03-design-system.md
+ai-memory/04-content-style.md
+ai-memory/05-technical-decisions.md
+ai-memory/06-visual-decisions.md
+ai-memory/07-open-issues.md
+ai-memory/08-changelog.md
+ai-memory/09-do-not-repeat.md
+ai-memory/README.md
