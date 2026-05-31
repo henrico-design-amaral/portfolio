@@ -5,17 +5,19 @@ Branch de origem: `main` (inicialmente diagnosticado na branch `hero/build-clean
 Commit de origem: `140514a` ("feat(home): rebuild index from zero (#49)")
 Tag criada: `legacy/pre-foundation-reset-20260531`
 Branch legado criada: `legacy/pre-foundation-reset-20260531`
-Backup físico: `C:\Users\henri\Documents\04_PROJETOS_CONTEÚDO\99_BACKUPS\portfolio\pre-foundation-reset-20260531-1921`
+Backup físico: `C:\Users\henri\Documents\04_PROJETOS_CONTEÚDO\99_BACKUPS\portfolio\pre-foundation-reset-20260531-1922`
 Motivo do reset: O projeto atual acumulou dívida técnica, resíduos visuais, múltiplas gerações de CSS/JS, backups locais internos, branches experimentais e decisões conflitantes de design. A prioridade é obter controle absoluto sobre cada linha de código, seguindo a diretriz de simplificar para fazer melhor.
 
 > [!NOTE]
-> O backup físico completo do repositório foi criado em uma pasta externa fora da raiz ativa (`C:\Users\henri\Documents\04_PROJETOS_CONTEÚDO\99_BACKUPS\portfolio\pre-foundation-reset-20260531-1921`). Isso garante que os resíduos pesados e dependências antigas fiquem fora do repositório ativo e não contaminem a nova base limpa.
+> O backup físico completo do repositório foi criado em uma pasta externa fora da raiz ativa (`C:\Users\henri\Documents\04_PROJETOS_CONTEÚDO\99_BACKUPS\portfolio\pre-foundation-reset-20260531-1922`). Isso garante que os resíduos pesados e dependências antigas fiquem fora do repositório ativo e não contaminem a nova base limpa.
 
 Itens preservados na base ativa:
 - `.git`
 - `.claude`
 - `ai-memory`
 - `docs` (incluindo CV, especificações de design, documentação de decisões e este manifesto)
+- `docs/design-system/PORTFOLIO_DESIGN_SYSTEM.md`
+- `docs/design-system/TOKENS.md`
 - `assets/fonts`
 - `assets/img`
 - `AGENTS.md`
@@ -25,6 +27,7 @@ Itens preservados na base ativa:
 - `PROJECT_CONTROL.md`
 - `.gitignore`
 - `.nojekyll`
+- `favicon.svg`
 
 Itens movidos para legado (removidos da base ativa):
 - `_backups` (antigos backups internos que poluíam o repositório)
@@ -36,6 +39,9 @@ Itens movidos para legado (removidos da base ativa):
 - `package.json`
 - `package-lock.json`
 - `tailwind.config.js`
+- `docs/design-system.html`
+- `docs/design-system-v2.html`
+- `docs/design-system-v3.html`
 
 Critérios de aceite:
 1. A nova `index.html` carrega apenas `main.css?v=foundation-01` e `main.js?v=foundation-01`.
@@ -47,5 +53,5 @@ Critérios de aceite:
 
 Próximas etapas:
 1. Validar a base limpa e semântica com o usuário.
-2. Planejar a estilização premium dos componentes básicos sob controle estrito de CSS vanilla.
-3. Avaliar interações leves e acessíveis sem pacotes de animações pesados.
+2. Implementar a hero canônica alinhada com o Design System.
+3. Desenvolver estilos para Método, Cases, Sobre e Contato sem dependências de animações complexas.
