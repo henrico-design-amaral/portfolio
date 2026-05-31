@@ -1,756 +1,204 @@
-<!DOCTYPE html>
-<html lang="pt-BR" data-lang="pt">
-
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Henrico Amaral — Senior Product Designer</title>
-  <meta name="description" content="Senior Product Designer especializado em plataformas B2B, sistemas internos, workflows complexos e produtos digitais para operações críticas.">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
-
-  <!-- CSS — nova home, sem site.css -->
-  <link rel="stylesheet" href="assets/css/home.css?v=home-zero-01">
-
-  <!-- Fallback sem JS -->
-  <noscript>
-    <style>
-      .hero-badge,
-      .hero-eyebrow,
-      .hero-title,
-      .hero-sub,
-      .hero-cta,
-      .clients-strip,
-      .method-card,
-      .case-card,
-      .impact-cell,
-      .about-card,
-      .contact-intent-card {
-        opacity: 1 !important;
-        transform: none !important;
-        filter: none !important;
-      }
-    </style>
-  </noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta.title">Henrico Amaral — Senior Product Designer</title>
+    <meta name="description" content="Sistemas claros para decisões difíceis. Senior Product Designer especializado em operações complexas e enterprise." data-i18n-meta="description">
+    
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.css?v=foundation-01">
 </head>
-
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link" data-i18n="nav.skip">Ir para o conteúdo principal</a>
 
-  <!-- Skip link -->
-  <a href="#main-content" class="skip-link" data-t="skip">Ir para o conteúdo</a>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="logo-link" aria-label="Henrico Amaral Home">
+                <span class="logo-tag">HA</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="menu-icon-line"></span>
+                <span class="menu-icon-line"></span>
+                <span class="menu-icon-line"></span>
+            </button>
 
-  <!-- ── HEADER / NAV ── -->
-  <header id="site-header" class="site-header">
-    <div class="nav-inner">
-
-      <!-- Logo -->
-      <a href="#hero" class="nav-logo" aria-label="Henrico Amaral — topo da página">Henrico Amaral</a>
-
-      <!-- Links desktop -->
-      <nav class="nav-links" aria-label="Navegação principal">
-        <a href="#method"  data-t="nav.method">Método</a>
-        <a href="#cases"   data-t="nav.cases">Casos</a>
-        <a href="#impact"  data-t="nav.impact">Impacto</a>
-        <a href="#about"   data-t="nav.about">Sobre</a>
-        <a href="#contact" data-t="nav.contact">Contato</a>
-      </nav>
-
-      <!-- Direita: lang toggle + mobile trigger -->
-      <div class="nav-end">
-        <div class="lang-toggle"
-             data-lang-toggle
-             data-current-lang="pt"
-             role="group"
-             aria-label="Selecionar idioma">
-          <span class="lang-toggle__thumb" aria-hidden="true"></span>
-          <button type="button" class="lang-toggle__option" data-lang="pt"
-                  aria-label="Português" aria-pressed="true">PT</button>
-          <button type="button" class="lang-toggle__option" data-lang="en"
-                  aria-label="English" aria-pressed="false">EN</button>
+            <nav class="site-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#method" class="nav-link" data-i18n="nav.method">Método</a></li>
+                    <li><a href="#cases" class="nav-link" data-i18n="nav.cases">Casos</a></li>
+                    <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contato</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="lang-toggle" class="lang-toggle-btn" aria-label="Alterar idioma" aria-pressed="false">
+                        <span class="lang-text">EN</span>
+                    </button>
+                </div>
+            </nav>
         </div>
+    </header>
 
-        <button id="mobile-menu-toggle"
-                class="mobile-menu-toggle"
-                type="button"
-                aria-label="Abrir menu"
-                aria-controls="mobile-menu"
-                aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="section-hero" id="hero">
+            <div class="container hero-container">
+                <div class="hero-status-badge">
+                    <span class="status-dot"></span>
+                    <span data-i18n="hero.status">Disponível agora · CLT · PJ · Freelancer</span>
+                </div>
+                <p class="hero-specialties" data-i18n="hero.specialties">Product Design · Enterprise · Operações complexas</p>
+                <h1 class="hero-title" data-i18n="hero.title">Sistemas claros para decisões difíceis.</h1>
+                <p class="hero-description" data-i18n="hero.description">
+                    Ajudo empresas a transformar fluxos confusos, dados dispersos e regras complexas em produtos digitais fáceis de operar.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary" data-i18n="hero.cta">Vamos conversar</a>
+                </div>
+            </div>
+        </section>
 
-    </div>
+        <!-- Method Section -->
+        <section class="section-method" id="method">
+            <div class="container">
+                <span class="section-badge" data-i18n="method.badge">Abordagem</span>
+                <h2 class="section-title" data-i18n="method.title">Método de Trabalho</h2>
+                <p class="section-intro" data-i18n="method.intro">Design focado em simplificação de processos e infraestrutura de clareza visual.</p>
+                <div class="grid grid-three-cols">
+                    <div class="card">
+                        <div class="card-num">01</div>
+                        <h3 class="card-title" data-i18n="method.step1.title">Mapeamento de Complexidade</h3>
+                        <p class="card-desc" data-i18n="method.step1.desc">Identificação de gargalos operacionais e regras de negócios intrincadas antes de propor qualquer interface.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-num">02</div>
+                        <h3 class="card-title" data-i18n="method.step2.title">Infraestrutura Visual</h3>
+                        <p class="card-desc" data-i18n="method.step2.desc">Criação de hierarquias de informação fortes que apoiam a tomada de decisões corporativas eficientes.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-num">03</div>
+                        <h3 class="card-title" data-i18n="method.step3.title">Iteração e Validação</h3>
+                        <p class="card-desc" data-i18n="method.step3.desc">Refinamento contínuo com usuários especialistas para reduzir tempo de aprendizado e mitigar erros operacionais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Menu mobile -->
-    <nav id="mobile-menu" class="mobile-menu" aria-label="Menu mobile" hidden>
-      <a href="#method"  data-t="nav.method">Método</a>
-      <a href="#cases"   data-t="nav.cases">Casos</a>
-      <a href="#impact"  data-t="nav.impact">Impacto</a>
-      <a href="#about"   data-t="nav.about">Sobre</a>
-      <a href="#contact" data-t="nav.contact">Contato</a>
+        <!-- Cases Section -->
+        <section class="section-cases" id="cases">
+            <div class="container">
+                <span class="section-badge" data-i18n="cases.badge">Portfólio</span>
+                <h2 class="section-title" data-i18n="cases.title">Casos de Sucesso</h2>
+                <div class="grid grid-two-cols">
+                    <article class="case-card">
+                        <div class="case-card-content">
+                            <span class="case-category">Enterprise · Operações</span>
+                            <h3 class="case-title" data-i18n="cases.case1.title">Painel de Operações Logísticas</h3>
+                            <p class="case-desc" data-i18n="cases.case1.desc">Redução de sobrecarga cognitiva e tempo de resposta operacional em central de distribuição crítica.</p>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-card-content">
+                            <span class="case-category">Fintech · B2B</span>
+                            <h3 class="case-title" data-i18n="cases.case2.title">Terminal de Auditoria Financeira</h3>
+                            <p class="case-desc" data-i18n="cases.case2.desc">Simplificação de fluxos de conciliação bancária complexos para equipes de conformidade de alta performance.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-      <div class="lang-toggle"
-           data-lang-toggle
-           data-current-lang="pt"
-           role="group"
-           aria-label="Selecionar idioma">
-        <span class="lang-toggle__thumb" aria-hidden="true"></span>
-        <button type="button" class="lang-toggle__option" data-lang="pt"
-                aria-label="Português" aria-pressed="true">PT</button>
-        <button type="button" class="lang-toggle__option" data-lang="en"
-                aria-label="English" aria-pressed="false">EN</button>
-      </div>
-    </nav>
-  </header>
+        <!-- Impact Section -->
+        <section class="section-impact" id="impact">
+            <div class="container">
+                <span class="section-badge" data-i18n="impact.badge">Resultados</span>
+                <h2 class="section-title" data-i18n="impact.title">Impacto em Números</h2>
+                <div class="grid grid-three-cols stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">-40%</div>
+                        <p class="stat-label" data-i18n="impact.stat1">Tempo de integração de novos operadores</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">99.8%</div>
+                        <p class="stat-label" data-i18n="impact.stat2">Precisão na execução de tarefas críticas</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">+25%</div>
+                        <p class="stat-label" data-i18n="impact.stat3">Eficiência na tomada de decisão operacional</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Screen reader announcer -->
-  <div id="sr-announcer" role="status" aria-live="polite" class="sr-only"></div>
+        <!-- About Section -->
+        <section class="section-about" id="about">
+            <div class="container grid grid-two-cols about-container">
+                <div class="about-visual">
+                    <div class="designer-card">
+                        <span class="designer-initials">HA</span>
+                        <div class="designer-info">
+                            <p class="designer-name">Henrico Amaral</p>
+                            <p class="designer-role" data-i18n="about.role">Senior Product Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="section-badge" data-i18n="about.badge">Sobre mim</span>
+                    <h2 class="section-title" data-i18n="about.title">Focado em simplificar o complexo</h2>
+                    <p class="about-p" data-i18n="about.p1">
+                        Com ampla experiência em ambientes enterprise, atuo na intersecção entre processos operacionais complexos e design focado no usuário.
+                    </p>
+                    <p class="about-p" data-i18n="about.p2">
+                        Meu foco principal é projetar sistemas de alta eficiência que apoiam decisões difíceis e reduzem erros de execução de forma estruturada.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <!-- ── MAIN ── -->
-  <main id="main-content">
+        <!-- Contact Section -->
+        <section class="section-contact" id="contact">
+            <div class="container contact-container">
+                <span class="section-badge" data-i18n="contact.badge">Contato</span>
+                <h2 class="section-title" data-i18n="contact.title">Vamos construir algo sólido juntos</h2>
+                <p class="contact-desc" data-i18n="contact.desc">Disponível para projetos enterprise sob demanda e consultorias operacionais.</p>
+                <div class="contact-actions">
+                    <a href="mailto:contato@henricoamaral.design" class="btn-primary btn-large" data-i18n="contact.cta">Enviar e-mail</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- ── HERO ── -->
-    <section id="hero" aria-labelledby="hero-title">
-
-      <div class="hero-inner">
-
-        <!-- Badge -->
-        <p class="hero-badge">
-          <span class="hero-badge__dot" aria-hidden="true"></span>
-          <span data-t="hero.badge">Disponível agora · CLT · PJ · Freelancer</span>
-        </p>
-
-        <!-- Eyebrow -->
-        <div class="hero-eyebrow" aria-hidden="true">
-          <span class="hero-eyebrow__line"></span>
-          <span class="hero-eyebrow__text" data-t="hero.eyebrow">
-            Product Design · Enterprise · Operações complexas
-          </span>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">HA</span>
+                <div>
+                    <p class="footer-name">Henrico Amaral</p>
+                    <p class="footer-role" data-i18n="footer.role">Senior Product Designer · Decision Infrastructure</p>
+                </div>
+            </div>
+            <div class="footer-quotes">
+                <p class="quote-primary" data-i18n="footer.quote1">Pense simples. Faça melhor.</p>
+                <p class="quote-secondary" data-i18n="footer.quote2">Torne-se inevitável.</p>
+            </div>
+            <div class="footer-meta">
+                <p class="footer-copy" data-i18n="footer.copy">Henrico Amaral · Product Designer · 2026</p>
+                <a href="#hero" class="back-to-top" aria-label="Voltar ao topo" data-i18n="footer.top">↑ Topo</a>
+            </div>
         </div>
+    </footer>
 
-        <!-- H1 — único no documento -->
-        <h1 id="hero-title" class="hero-title" data-t="hero.title">
-          Sistemas claros para decisões difíceis.
-        </h1>
-
-        <!-- Sub -->
-        <p class="hero-sub" data-t="hero.sub">
-          Ajudo empresas a transformar fluxos confusos, dados dispersos e regras complexas em produtos digitais fáceis de operar.
-        </p>
-
-        <!-- CTA -->
-        <a href="#contact" class="hero-cta">
-          <span data-t="hero.cta">Vamos conversar</span>
-          <span class="hero-cta__arrow" aria-hidden="true">→</span>
-        </a>
-
-      </div>
-
-      <!-- Clients strip — rodapé da hero -->
-      <div class="clients-strip" aria-label="Clientes e empresas com quem trabalhei">
-        <span class="clients-strip__label" data-t="worked-with">Clientes</span>
-        <div class="clients-strip__track">
-          <!-- Set A — lido por screen reader -->
-          <div class="clients-strip__set">
-            <span>Petrobras</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Bayer</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Ambev</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Banco do Brasil</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Bradesco</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Claro</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Globo</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>iFood</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Youse</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-          </div>
-          <!-- Set B — duplicata para animação contínua, oculta para SR -->
-          <div class="clients-strip__set" aria-hidden="true">
-            <span>Petrobras</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Bayer</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Ambev</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Banco do Brasil</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Bradesco</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Claro</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Globo</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>iFood</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-            <span>Youse</span><span class="clients-strip__sep" aria-hidden="true">·</span>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- ── MÉTODO ── -->
-    <section id="method" class="section" aria-labelledby="method-title">
-      <div class="section__inner">
-
-        <header class="section-header">
-          <span class="section-kicker" data-t="s2.kicker">CONTEXTO · ESTRUTURA · INTERAÇÃO</span>
-          <div class="section-header-grid">
-            <div>
-              <h2 id="method-title" class="section-title" data-t="s2.title">
-                Antes de desenhar telas,<br>organizo o problema.
-              </h2>
-            </div>
-            <div>
-              <p class="section-subtitle" data-t="s2.sub">
-                Mapeio fluxos, regras, usuários e decisões para transformar sistemas complexos em produtos mais claros.
-              </p>
-            </div>
-          </div>
-        </header>
-
-        <div class="method-grid">
-
-          <article class="method-card">
-            <span class="method-card__step" data-t="m1.step">01 / Input</span>
-            <h3 class="method-card__title" data-t="m1.title">Entender o contexto</h3>
-            <p class="method-card__desc" data-t="m1.desc">Identifico quem usa, quem decide, quais regras importam e onde o fluxo quebra.</p>
-          </article>
-
-          <article class="method-card">
-            <span class="method-card__step" data-t="m2.step">02 / Logic</span>
-            <h3 class="method-card__title" data-t="m2.title">Organizar a estrutura</h3>
-            <p class="method-card__desc" data-t="m2.desc">Transformo processos dispersos em jornadas, estados, permissões e prioridades claras.</p>
-          </article>
-
-          <article class="method-card">
-            <span class="method-card__step" data-t="m3.step">03 / Flow</span>
-            <h3 class="method-card__title" data-t="m3.title">Desenhar a experiência</h3>
-            <p class="method-card__desc" data-t="m3.desc">Crio interfaces que reduzem esforço, orientam ação e deixam o sistema mais fácil de operar.</p>
-          </article>
-
-          <article class="method-card">
-            <span class="method-card__step" data-t="m4.step">04 / Output</span>
-            <h3 class="method-card__title" data-t="m4.title">Validar e ajustar</h3>
-            <p class="method-card__desc" data-t="m4.desc">Testo hipóteses, alinho áreas envolvidas e refino a solução antes da implementação.</p>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ── CASOS ── -->
-    <section id="cases" class="section" aria-labelledby="cases-title">
-      <div class="section__inner">
-
-        <header class="section-header">
-          <span class="section-kicker" data-t="s3.kicker">PROJETOS REAIS · PROBLEMAS COMPLEXOS</span>
-          <div class="section-header-grid">
-            <div>
-              <h2 id="cases-title" class="section-title" data-t="s3.title">
-                Trabalhos onde clareza<br>virou operação.
-              </h2>
-            </div>
-            <div>
-              <p class="section-subtitle" data-t="s3.sub">
-                Cases em plataformas internas, produtos B2B e sistemas de decisão. Os setores mudam. O problema é o mesmo: organizar complexidade para melhorar a operação.
-              </p>
-            </div>
-          </div>
-        </header>
-
-        <div class="cases-grid">
-
-          <!-- Case 1: Petrobras -->
-          <article class="case-card"
-                   data-case-index="0"
-                   role="button"
-                   tabindex="0"
-                   aria-label="PETROBRAS — Abrir caso Petrobras">
-            <div class="case-card__image-wrap">
-              <img
-                src="assets/img/cases/petrobras.webp"
-                srcset="assets/img/cases/petrobras-640.webp 640w, assets/img/cases/petrobras-960.webp 960w, assets/img/cases/petrobras.webp 1200w"
-                sizes="(max-width: 767px) calc(100vw - 2.5rem), (max-width: 1279px) calc(50vw - 4rem), 600px"
-                alt="Petrobras — plataforma offshore"
-                class="case-card__img"
-                width="1200" height="1200"
-                loading="lazy" decoding="async">
-              <div class="case-card__overlay" aria-hidden="true"></div>
-              <span class="case-card__badge">01</span>
-              <span class="case-card__sector" data-t="c1.sector">ENERGIA</span>
-            </div>
-            <div class="case-card__body">
-              <h3 class="case-card__client" data-t="c1.client">Petrobras</h3>
-              <p class="case-card__desc" data-t="c1.desc">Coordenação offshore crítica para monitoramento ambiental e resposta operacional em tempo real.</p>
-              <div class="case-card__meta">
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.sys">Sistema</span>
-                  <span data-t="c1.sys">Monitoramento<br>ambiental offshore</span>
-                </div>
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.ctx">Contexto</span>
-                  <span data-t="c1.ctx">Operação<br>offshore</span>
-                </div>
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.scope">Escopo</span>
-                  <span data-t="c1.scope">Resposta<br>ambiental</span>
-                </div>
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.imp">Impacto</span>
-                  <span data-t="c1.imp">Coordenação de<br>riscos operacionais</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Case 2: Ambev -->
-          <article class="case-card"
-                   data-case-index="1"
-                   role="button"
-                   tabindex="0"
-                   aria-label="AMBEV — Abrir caso Ambev">
-            <div class="case-card__image-wrap">
-              <img
-                src="assets/img/cases/ambev.webp"
-                srcset="assets/img/cases/ambev-640.webp 640w, assets/img/cases/ambev-960.webp 960w, assets/img/cases/ambev.webp 1200w"
-                sizes="(max-width: 767px) calc(100vw - 2.5rem), (max-width: 1279px) calc(50vw - 4rem), 600px"
-                alt="Ambev — logística distribuída"
-                class="case-card__img"
-                width="1200" height="1200"
-                loading="lazy" decoding="async">
-              <div class="case-card__overlay" aria-hidden="true"></div>
-              <span class="case-card__badge">02</span>
-              <span class="case-card__sector" data-t="c2.sector">LOGÍSTICA</span>
-            </div>
-            <div class="case-card__body">
-              <h3 class="case-card__client" data-t="c2.client">Ambev</h3>
-              <p class="case-card__desc" data-t="c2.desc">Infraestrutura logística nacional para monitoramento distribuído e gestão de rupturas operacionais.</p>
-              <div class="case-card__meta">
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.sys">Sistema</span>
-                  <span data-t="c2.sys">Gestão logística<br>distribuída</span>
-                </div>
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.ctx">Contexto</span>
-                  <span data-t="c2.ctx">Escala<br>nacional</span>
-                </div>
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.scope">Escopo</span>
-                  <span data-t="c2.scope">Supply<br>chain</span>
-                </div>
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.imp">Impacto</span>
-                  <span data-t="c2.imp">Visibilidade de<br>rupturas operacionais</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Case 3: Bayer -->
-          <article class="case-card"
-                   data-case-index="2"
-                   role="button"
-                   tabindex="0"
-                   aria-label="BAYER — Abrir caso Bayer">
-            <div class="case-card__image-wrap">
-              <img
-                src="assets/img/cases/bayer.webp"
-                srcset="assets/img/cases/bayer-640.webp 640w, assets/img/cases/bayer-960.webp 960w, assets/img/cases/bayer.webp 1200w"
-                sizes="(max-width: 767px) calc(100vw - 2.5rem), (max-width: 1279px) calc(50vw - 4rem), 600px"
-                alt="Bayer — inteligência agronômica"
-                class="case-card__img"
-                width="1200" height="1200"
-                loading="lazy" decoding="async">
-              <div class="case-card__overlay" aria-hidden="true"></div>
-              <span class="case-card__badge">03</span>
-              <span class="case-card__sector" data-t="c3.sector">AGRONEGÓCIO</span>
-            </div>
-            <div class="case-card__body">
-              <h3 class="case-card__client" data-t="c3.client">Bayer</h3>
-              <p class="case-card__desc" data-t="c3.desc">Sistema territorial de inteligência agronômica para análise ambiental e suporte à decisão agrícola.</p>
-              <div class="case-card__meta">
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.sys">Sistema</span>
-                  <span data-t="c3.sys">Inteligência<br>agronômica</span>
-                </div>
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.ctx">Contexto</span>
-                  <span data-t="c3.ctx">Análise<br>técnica</span>
-                </div>
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.scope">Escopo</span>
-                  <span data-t="c3.scope">Dados<br>agrícolas</span>
-                </div>
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.imp">Impacto</span>
-                  <span data-t="c3.imp">Rastreabilidade de<br>dados agrícolas</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Case 4: BMG -->
-          <article class="case-card"
-                   data-case-index="3"
-                   role="button"
-                   tabindex="0"
-                   aria-label="BMG — Abrir caso BMG">
-            <div class="case-card__image-wrap">
-              <img
-                src="assets/img/cases/bmg.webp"
-                srcset="assets/img/cases/bmg-640.webp 640w, assets/img/cases/bmg-960.webp 960w, assets/img/cases/bmg.webp 1200w"
-                sizes="(max-width: 767px) calc(100vw - 2.5rem), (max-width: 1279px) calc(50vw - 4rem), 600px"
-                alt="BMG — plataforma financeira empresarial"
-                class="case-card__img"
-                width="1200" height="1200"
-                loading="lazy" decoding="async">
-              <div class="case-card__overlay" aria-hidden="true"></div>
-              <span class="case-card__badge">04</span>
-              <span class="case-card__sector" data-t="c4.sector">FINANÇAS</span>
-            </div>
-            <div class="case-card__body">
-              <h3 class="case-card__client" data-t="c4.client">BMG</h3>
-              <p class="case-card__desc" data-t="c4.desc">Arquitetura financeira modular para operações PJ em ambientes regulados.</p>
-              <div class="case-card__meta">
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.sys">Sistema</span>
-                  <span data-t="c4.sys">Plataforma financeira<br>empresarial</span>
-                </div>
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.ctx">Contexto</span>
-                  <span data-t="c4.ctx">Ambiente<br>regulado</span>
-                </div>
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.scope">Escopo</span>
-                  <span data-t="c4.scope">Conta<br>PJ</span>
-                </div>
-                <div class="case-card__meta-item">
-                  <span data-t="case.label.imp">Impacto</span>
-                  <span data-t="c4.imp">Fluxos regulados<br>simplificados</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ── IMPACTO ── -->
-    <section id="impact" class="section" aria-labelledby="impact-title">
-      <div class="section__inner">
-
-        <header class="section-header">
-          <span class="section-kicker" data-t="s4.kicker">EVIDÊNCIA · ESCALA · RASTREABILIDADE</span>
-          <div class="section-header-grid">
-            <div>
-              <h2 id="impact-title" class="section-title" data-t="s4.title">
-                Impacto observável.<br>Operação rastreável.
-              </h2>
-            </div>
-            <div>
-              <p class="section-subtitle" data-t="s4.sub">
-                Quando há número validado, ele aparece. Quando o impacto é estrutural, a evidência é descrita com precisão.
-              </p>
-            </div>
-          </div>
-        </header>
-
-        <div class="impact-grid">
-
-          <!-- Petrobras -->
-          <article class="impact-cell">
-            <div class="impact-cell__side">
-              <div>
-                <span class="impact-cell__label" data-t="imp.dim">DIMENSÃO</span>
-                <h3 class="impact-cell__client" data-t="imp1.client">Petrobras</h3>
-                <p class="impact-cell__dim" data-t="imp1.dim">Automação operacional</p>
-              </div>
-              <span class="impact-cell__tag" data-t="imp1.type">Operação crítica</span>
-            </div>
-            <div class="impact-cell__side">
-              <div>
-                <span class="impact-cell__label" data-t="imp.ev">EVIDÊNCIA</span>
-                <p class="impact-cell__value" data-t="imp1.value">95% de redução no esforço manual</p>
-                <p class="impact-cell__desc" data-t="imp1.desc">Consolidação de relatórios operacionais reorganizada para leitura contínua em contexto offshore.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Bayer -->
-          <article class="impact-cell">
-            <div class="impact-cell__side">
-              <div>
-                <span class="impact-cell__label" data-t="imp.dim">DIMENSÃO</span>
-                <h3 class="impact-cell__client" data-t="imp2.client">Bayer</h3>
-                <p class="impact-cell__dim" data-t="imp2.dim">Dados agrícolas</p>
-              </div>
-              <span class="impact-cell__tag" data-t="imp2.type">Dados agrícolas</span>
-            </div>
-            <div class="impact-cell__side">
-              <div>
-                <span class="impact-cell__label" data-t="imp.ev">EVIDÊNCIA</span>
-                <p class="impact-cell__value" data-t="imp2.value">Rastreabilidade de dados agrícolas</p>
-                <p class="impact-cell__desc" data-t="imp2.desc">Informações agrícolas reorganizadas em torno da cultura como unidade central de análise, conectando dados técnicos, comparação de indicadores e registro de decisões dentro de um fluxo estruturado.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Ambev -->
-          <article class="impact-cell">
-            <div class="impact-cell__side">
-              <div>
-                <span class="impact-cell__label" data-t="imp.dim">DIMENSÃO</span>
-                <h3 class="impact-cell__client" data-t="imp3.client">Ambev</h3>
-                <p class="impact-cell__dim" data-t="imp3.dim">Monitoramento logístico</p>
-              </div>
-              <span class="impact-cell__tag" data-t="imp3.type">Supply chain</span>
-            </div>
-            <div class="impact-cell__side">
-              <div>
-                <span class="impact-cell__label" data-t="imp.ev">EVIDÊNCIA</span>
-                <p class="impact-cell__value" data-t="imp3.value">Visibilidade de rupturas operacionais</p>
-                <p class="impact-cell__desc" data-t="imp3.desc">Estrutura de supply chain organizada para leitura de disponibilidade, ruptura e coordenação logística. A plataforma passou a refletir o estado real da operação.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- BMG -->
-          <article class="impact-cell">
-            <div class="impact-cell__side">
-              <div>
-                <span class="impact-cell__label" data-t="imp.dim">DIMENSÃO</span>
-                <h3 class="impact-cell__client" data-t="imp4.client">BMG</h3>
-                <p class="impact-cell__dim" data-t="imp4.dim">Ambiente regulado</p>
-              </div>
-              <span class="impact-cell__tag" data-t="imp4.type">Banking / compliance</span>
-            </div>
-            <div class="impact-cell__side">
-              <div>
-                <span class="impact-cell__label" data-t="imp.ev">EVIDÊNCIA</span>
-                <p class="impact-cell__value" data-t="imp4.value">Fluxos regulados simplificados</p>
-                <p class="impact-cell__desc" data-t="imp4.desc">Jornada PJ estruturada com validações, estados e fluxos aderentes a exigências operacionais e regulatórias.</p>
-              </div>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ── SOBRE ── -->
-    <section id="about" class="section" aria-labelledby="about-title">
-      <div class="section__inner">
-
-        <header class="section-header">
-          <span class="section-kicker" data-t="s5.kicker">TRAJETÓRIA · MÉTODO · REPERTÓRIO</span>
-          <h2 id="about-title" class="section-title" data-t="s5.title">
-            Por trás<br>da estrutura.
-          </h2>
-        </header>
-
-        <div class="about-bio">
-          <p data-t="ab.p1">Sou Senior Product Designer com 20 anos em design digital e mais de 15 anos em UX/Product Design.</p>
-          <p data-t="ab.p2">Meu trabalho é organizar fluxos, informação e decisões em produtos digitais usados por times de operação, negócio e tecnologia.</p>
-          <p data-t="ab.p3">Atuei em projetos para Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood, BMG e Youse. São setores diferentes, mas o desafio se repete: transformar complexidade em sistemas mais claros, confiáveis e fáceis de operar.</p>
-          <p data-t="ab.p4">Não parto da tela. Parto do problema, do fluxo, das regras e das decisões que o sistema precisa sustentar.</p>
-        </div>
-
-        <div class="about-grid" aria-label="Capacidades profissionais">
-          <article class="about-card">
-            <span class="about-card__index">01</span>
-            <h3 data-t="ab.c1.title">Papel</h3>
-            <ul data-t="ab.c1.items">
-              <li>Senior Product Designer</li>
-              <li>Plataformas B2B</li>
-              <li>Sistemas internos</li>
-              <li>Workflows complexos</li>
-              <li>Ambientes regulados</li>
-            </ul>
-          </article>
-
-          <article class="about-card">
-            <span class="about-card__index">02</span>
-            <h3 data-t="ab.c2.title">O que resolvo</h3>
-            <ul data-t="ab.c2.items">
-              <li>Fluxos confusos</li>
-              <li>Dados dispersos</li>
-              <li>Regras de negócio</li>
-              <li>Múltiplos stakeholders</li>
-            </ul>
-          </article>
-
-          <article class="about-card">
-            <span class="about-card__index">03</span>
-            <h3 data-t="ab.c3.title">Como trabalho</h3>
-            <ul data-t="ab.c3.items">
-              <li>Discovery</li>
-              <li>Arquitetura da informação</li>
-              <li>Fluxos e estados</li>
-              <li>Prototipação</li>
-            </ul>
-          </article>
-
-          <article class="about-card">
-            <span class="about-card__index">04</span>
-            <h3 data-t="ab.c4.title">Experiência</h3>
-            <ul data-t="ab.c4.items">
-              <li>Energia</li>
-              <li>Bancos e seguros</li>
-              <li>Telecom</li>
-              <li>Agro e logística</li>
-              <li>Produtos digitais em escala</li>
-            </ul>
-          </article>
-
-          <article class="about-card">
-            <span class="about-card__index">05</span>
-            <h3 data-t="ab.c5.title">Ferramentas</h3>
-            <ul data-t="ab.c5.items">
-              <li>Figma</li>
-              <li>FigJam / Miro</li>
-              <li>GitHub</li>
-              <li>IA generativa</li>
-            </ul>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ── CONTATO ── -->
-    <section id="contact" class="section" aria-labelledby="contact-title">
-      <div class="section__inner">
-
-        <header class="section-header">
-          <span class="section-kicker" data-t="s6.kicker">SÃO PAULO · REMOTO/HÍBRIDO · PT/EN</span>
-          <div class="section-header-grid">
-            <div>
-              <h2 id="contact-title" class="section-title" data-t="s6.title">
-                Sistemas mais claros.<br>Conversas mais objetivas.
-              </h2>
-            </div>
-            <div>
-              <p class="section-subtitle" data-t="s6.sub">
-                Para vagas sêniores, projetos enterprise e conversas técnicas sobre produto, operação e decisão.
-              </p>
-            </div>
-          </div>
-        </header>
-
-        <div class="contact-intent-grid">
-          <article class="contact-intent-card">
-            <span class="contact-intent-card__index">01</span>
-            <h3 data-t="ct.c1.title">Para recrutadores</h3>
-            <p data-t="ct.c1.text">Senior Product Designer para produtos B2B, sistemas internos e operações complexas.</p>
-          </article>
-          <article class="contact-intent-card">
-            <span class="contact-intent-card__index">02</span>
-            <h3 data-t="ct.c2.title">Para empresas</h3>
-            <p data-t="ct.c2.text">Diagnóstico e desenho de fluxos, plataformas internas e produtos digitais com alta complexidade.</p>
-          </article>
-          <article class="contact-intent-card">
-            <span class="contact-intent-card__index">03</span>
-            <h3 data-t="ct.c3.title">Para conversas técnicas</h3>
-            <p data-t="ct.c3.text">Arquitetura da informação, prototipação e clareza operacional.</p>
-          </article>
-        </div>
-
-        <nav class="contact-actions" aria-label="Canais de contato">
-          <a href="mailto:henricoamaral.design@gmail.com"
-             class="contact-action contact-action--primary">
-            <span>E-mail</span><span aria-hidden="true">↗</span>
-          </a>
-          <a href="https://www.linkedin.com/in/henrico-amaral/"
-             target="_blank" rel="noopener noreferrer"
-             class="contact-action">
-            <span>LinkedIn</span><span aria-hidden="true">↗</span>
-          </a>
-          <a href="https://wa.me/5511953970704"
-             target="_blank" rel="noopener noreferrer"
-             class="contact-action">
-            <span>WhatsApp</span><span aria-hidden="true">↗</span>
-          </a>
-          <a href="docs/Henrico-Amaral-CV.pdf"
-             class="contact-action">
-            <span data-t="ct.cv">Ver CV</span><span aria-hidden="true">↗</span>
-          </a>
-          <a href="#cases" class="contact-action">
-            <span data-t="ct.cases">Ver cases</span><span aria-hidden="true">↓</span>
-          </a>
-        </nav>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ── MODAL CASO ── -->
-  <div id="case-modal-overlay"
-       class="case-modal-overlay"
-       role="dialog"
-       aria-modal="true"
-       aria-labelledby="modal-client"
-       aria-hidden="true"
-       hidden>
-    <div class="case-modal">
-      <button id="modal-close"
-              class="case-modal__close"
-              type="button"
-              aria-label="Fechar modal"
-              data-t-aria="modal.close">×</button>
-      <h2 id="modal-client" class="case-modal__client"></h2>
-      <div id="modal-tags" class="case-modal__tags"></div>
-      <p id="modal-desc" class="case-modal__desc"></p>
-      <div>
-        <p id="modal-metric" class="case-modal__metric-value"></p>
-        <p id="modal-metric-label" class="case-modal__metric-label"></p>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- ── FOOTER ── -->
-  <footer class="site-footer" id="footer">
-    <div class="site-footer__inner">
-
-      <div class="site-footer__top">
-
-        <div class="site-footer__identity">
-          <div class="site-footer__mark" aria-hidden="true">HA</div>
-          <div>
-            <p class="site-footer__name">Henrico Amaral</p>
-            <p class="site-footer__role" data-t="ft.role">Senior Product Designer · Decision Infrastructure</p>
-          </div>
-        </div>
-
-        <p class="site-footer__signature" data-t="ft.signature">
-          Pense simples. Faça melhor.<br>
-          Torne-se inevitável.
-        </p>
-
-      </div>
-
-      <div class="site-footer__bottom">
-        <p data-t="ft.bottom">Henrico Amaral · Product Designer · 2026</p>
-        <a href="#hero" class="site-footer__toplink" data-t="ft.top">↑ Topo</a>
-      </div>
-
-    </div>
-  </footer>
-
-
-  <!-- JS — nova home, sem site.js -->
-  <script defer src="assets/js/home.js?v=home-zero-01"></script>
-
+    <!-- Script -->
+    <script src="assets/js/main.js?v=foundation-01" defer></script>
 </body>
-
 </html>
