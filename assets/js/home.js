@@ -184,7 +184,7 @@ const COPY = {
     'hero.eyebrow': 'Product Design · Enterprise · Complex Operations',
     'hero.title':   'Clear systems for hard decisions.',
     'hero.sub':     'I help companies turn messy workflows, scattered data and complex rules into digital products teams can actually operate.',
-    'hero.cta':     "Let's talk",
+    'hero.cta':     "Let’s talk",
     'worked-with':  'Clients',
 
     /* Método */
