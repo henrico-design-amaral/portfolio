@@ -149,30 +149,21 @@ footer > * {
 
 .motion-item,
 .motion-group,
-.reveal,
-.reveal-soft,
-.reveal-blur,
-.reveal-card,
-.reveal-text {
+.reveal {
   opacity: 1;
+  visibility: visible;
   transform: none;
   filter: none;
 }
 
-.motion-ready .reveal,
-.motion-ready .reveal-soft,
-.motion-ready .reveal-blur,
-.motion-ready .reveal-card {
+.motion-ready .reveal {
   opacity: 0;
-  transform: translate3d(0, var(--reveal-y), 0);
+  visibility: visible;
+  transform: translate3d(0, 12px, 0);
   filter: blur(var(--reveal-blur));
 }
 
-.motion-ready .is-visible,
-.motion-ready .reveal.is-visible,
-.motion-ready .reveal-soft.is-visible,
-.motion-ready .reveal-blur.is-visible,
-.motion-ready .reveal-card.is-visible {
+.motion-ready .reveal.is-visible {
   opacity: 1;
   transform: translate3d(0, 0, 0);
   filter: blur(0);
@@ -202,16 +193,7 @@ footer > * {
   min-width: max-content;
   white-space: nowrap;
 }
-@keyframes client-marquee {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(calc(-100% - 2rem), 0, 0); }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .clients-marquee:hover .marquee-content {
-    animation-play-state: paused;
-  }
-}
+/* Marquee keyframes and hover-pause live in the .ev-track block below */
 
 .clients-strip {
   position: absolute;
@@ -270,11 +252,7 @@ footer > * {
   white-space: nowrap;
 }
 
-@media (max-width: 767px) {
-  .marquee-content {
-    animation-duration: 54s;
-  }
-}
+/* Mobile marquee duration lives in the .ev-track responsive block below */
 
 /* Magnetic Button & Interaction */
 .btn-hover-fx { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -849,16 +827,13 @@ h2.section-header-title,
 
 /* Motion Sensitivity */
 @media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
-    animation-delay: 0ms !important;
-    animation-duration: .001ms !important;
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
-    background-attachment: initial !important;
     scroll-behavior: auto !important;
-    transition-duration: .001ms !important;
-    transition-delay: 0ms !important;
+    transition-duration: 1ms !important;
   }
-  .marquee-content { animation: none !important; }
+
   .reveal,
   .reveal-soft,
   .reveal-blur,
@@ -870,8 +845,18 @@ h2.section-header-title,
   .motion-ready .reveal-card,
   .motion-ready .reveal-text {
     opacity: 1 !important;
+    visibility: visible !important;
     transform: none !important;
     filter: none !important;
+  }
+
+  .ev-track {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .marquee-content {
+    animation: none !important;
   }
 }
 
@@ -2476,12 +2461,7 @@ footer:not(.site-footer) a.font-mono {
   color: #fff8ee;
 }
 
-/* ── Hero Orbit & Cards System ── */
-@keyframes spin-slow { 100% { transform: rotate(360deg); } }
-@keyframes pulse-node-subtle {
-  0%, 100% { opacity: 0.45; transform: scale(1); }
-  50% { opacity: 0.75; transform: scale(1.08); }
-}
+/* ── Home motion system ── */
 
 .ev-track {
   display: flex;
@@ -2495,8 +2475,10 @@ footer:not(.site-footer) a.font-mono {
   to { transform: translate3d(-50%, 0, 0); }
 }
 
-.ev-marquee:hover .ev-track {
-  animation-play-state: paused;
+@media (hover: hover) and (pointer: fine) {
+  .ev-marquee:hover .ev-track {
+    animation-play-state: paused;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2536,6 +2518,50 @@ footer:not(.site-footer) a.font-mono {
 
 .hero-cta:hover .hero-cta__arrow {
   transform: translateX(4px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .framework-card:hover,
+  .case-card:hover,
+  .impact-cell:hover,
+  .about-card:hover,
+  .contact-intent-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(190, 156, 110, 0.35) !important;
+    box-shadow: 0 6px 24px -6px rgba(26, 20, 16, 0.06);
+  }
+
+  .framework-card:hover {
+    background: #f5eee4 !important;
+  }
+
+  .impact-cell:hover {
+    background: #f3e9dc;
+  }
+
+  .about-card:hover,
+  .contact-intent-card:hover {
+    background: #2a1e16;
+  }
+
+  .framework-card:hover h3,
+  .impact-cell:hover h3,
+  .about-card:hover h3,
+  .contact-intent-card:hover h3 {
+    color: inherit;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .framework-card:hover,
+  .case-card:hover,
+  .impact-cell:hover,
+  .about-card:hover,
+  .contact-intent-card:hover,
+  .case-card:hover img,
+  .hero-cta:hover {
+    transform: none !important;
+  }
 }
 
 /* End of file */

@@ -344,10 +344,10 @@ const COPY = {
 
 /* ── Global Motion Constants ── */
 const MOTION = {
-  duration: { fast: 0.42, base: 0.82, slow: 1.05, text: 0.74, hero: 0.9 },
+  duration: { fast: 0.45, base: 0.75, slow: 0.85, hero: 0.85 },
   ease: { organic: 'power3.out', soft: 'power2.out', linear: 'none' },
-  stagger: { fast: 0.055, base: 0.065, slow: 0.085 },
-  blur: { entry: 2, subtle: 1, hero: 2, text: 2, card: 2 }
+  stagger: { fast: 0.045, base: 0.05, slow: 0.065 },
+  blur: { entry: 2, subtle: 1, hero: 2, card: 2 }
 };
 
 const LANG_STORAGE_KEY = 'henrico_lang';
@@ -447,10 +447,35 @@ function hasMotionEngine() {
   return Boolean(window.gsap && window.ScrollTrigger);
 }
 
+function motionBlur() {
+  return window.matchMedia('(max-width: 767px)').matches ? 0 : MOTION.blur.entry;
+}
+
+function toArray(selectorOrElements) {
+  if (!selectorOrElements) return [];
+  if (typeof selectorOrElements === 'string') {
+    return Array.from(document.querySelectorAll(selectorOrElements));
+  }
+  return Array.from(selectorOrElements).filter(Boolean);
+}
+
+function prepareReveal(selectorOrElements) {
+  const elements = toArray(selectorOrElements);
+  elements.forEach(el => {
+    el.classList.add('reveal');
+    el.classList.remove('is-visible');
+  });
+  return elements;
+}
+
 function setMotionFinalState() {
   document.body.classList.remove('motion-ready');
-  document.querySelectorAll('.reveal, .reveal-soft, .reveal-blur, .reveal-card').forEach(el => {
+  document.querySelectorAll('.reveal').forEach(el => {
     el.classList.add('is-visible');
+    el.style.removeProperty('opacity');
+    el.style.removeProperty('visibility');
+    el.style.removeProperty('transform');
+    el.style.removeProperty('filter');
   });
 }
 
@@ -458,105 +483,48 @@ function initHeroMotion() {
   const hero = document.querySelector('#hero');
   if (!hero) return;
 
-  const motionReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (motionReduced || !hasMotionEngine()) {
-    setMotionFinalState();
-    return;
-  }
+  const sequence = [
+    prepareReveal('#nav'),
+    prepareReveal('.availability-badge-v2'),
+    prepareReveal(['.eyebrow-line', '.eyebrow-text'].map(sel => document.querySelector(sel))),
+    prepareReveal('#hero .hl-i'),
+    prepareReveal('#hero .sub'),
+    prepareReveal('#hero .cta-wrapper'),
+    prepareReveal('.clients-strip')
+  ].filter(group => group.length);
 
-  const tl = gsap.timeline({
-    defaults: { ease: 'power3.out' },
-    onComplete: () => {
-      document.body.classList.remove('motion-ready');
-    }
+  const tl = gsap.timeline({ defaults: { ease: MOTION.ease.organic } });
+  sequence.forEach((group, index) => {
+    tl.to(group, {
+      opacity: 1,
+      y: 0,
+      filter: 'blur(0px)',
+      duration: index === 3 ? MOTION.duration.hero : 0.7,
+      stagger: group.length > 1 ? MOTION.stagger.slow : 0,
+      clearProps: 'opacity,visibility,transform,filter',
+      onStart: () => group.forEach(el => el.classList.add('is-visible'))
+    }, index * MOTION.stagger.slow);
   });
-
-  // 1. Header entra com fade curto
-  if (document.querySelector('#nav')) {
-    tl.fromTo('#nav', { autoAlpha: 0, y: -8 }, { autoAlpha: 1, y: 0, duration: 0.6 }, 0);
-  }
-
-  // 2. Badge entra
-  if (document.querySelector('.availability-badge-v2')) {
-    tl.fromTo('.availability-badge-v2',
-      { autoAlpha: 0, y: 12, filter: 'blur(2px)' },
-      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.7 },
-      1.1
-    );
-  }
-
-  // 7. Eyebrow entra
-  if (document.querySelector('.eyebrow-line') && document.querySelector('.eyebrow-text')) {
-    tl.fromTo('.eyebrow-line', { scaleX: 0 }, { scaleX: 1, duration: 0.6 }, 1.2);
-    tl.fromTo('.eyebrow-text',
-      { autoAlpha: 0, y: 8, filter: 'blur(2px)' },
-      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.6 },
-      1.3
-    );
-  }
-
-  // 8. H1 entra com fade + y leve
-  const hl = gsap.utils.toArray('#hero .hl-i');
-  if (hl.length) {
-    tl.fromTo(hl,
-      { autoAlpha: 0, y: 12, filter: 'blur(2px)' },
-      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.8, stagger: 0.1 },
-      1.4
-    );
-  }
-
-  // 9. Sub entra
-  if (document.querySelector('#hero .sub')) {
-    tl.fromTo('#hero .sub',
-      { autoAlpha: 0, y: 10, filter: 'blur(2px)' },
-      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.7 },
-      1.6
-    );
-  }
-
-  // 10. CTA entra
-  if (document.querySelector('#hero .cta-wrapper')) {
-    tl.fromTo('#hero .cta-wrapper',
-      { autoAlpha: 0, y: 10, filter: 'blur(2px)' },
-      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.7 },
-      1.8
-    );
-  }
-
-  // 11. Faixa de clientes entra por último
-  if (document.querySelector('.clients-strip')) {
-    tl.fromTo('.clients-strip',
-      { autoAlpha: 0, y: 8 },
-      { autoAlpha: 1, y: 0, duration: 0.8 },
-      2.2
-    );
-  }
 }
 
 function revealBatch(selector, options = {}) {
-  const elements = gsap.utils.toArray(selector);
+  const elements = prepareReveal(selector);
   if (!elements.length) return;
-  elements.forEach(el => el.classList.add(options.className ?? 'reveal'));
-
-  gsap.set(elements, {
-    autoAlpha: 0,
-    y: options.y ?? 14,
-    filter: `blur(${options.blur ?? MOTION.blur.entry}px)`
-  });
 
   ScrollTrigger.batch(elements, {
-    start: options.start ?? 'top 82%',
+    start: 'top 82%',
     once: true,
     onEnter: batch => {
       gsap.to(batch, {
-        autoAlpha: 1,
+        opacity: 1,
         y: 0,
         filter: 'blur(0px)',
         duration: options.duration ?? MOTION.duration.base,
         stagger: options.stagger ?? MOTION.stagger.base,
-        ease: options.ease ?? MOTION.ease.organic,
+        ease: MOTION.ease.organic,
         overwrite: true,
-        onComplete: () => batch.forEach(el => el.classList.add('is-visible'))
+        clearProps: 'opacity,visibility,transform,filter',
+        onStart: () => batch.forEach(el => el.classList.add('is-visible'))
       });
     }
   });
@@ -564,49 +532,39 @@ function revealBatch(selector, options = {}) {
 
 function initScrollReveals() {
   revealBatch('.section-kicker, .section-header-title, .section-header-subtitle, .section-microstats span', {
-    y: 12,
-    blur: MOTION.blur.subtle,
     stagger: MOTION.stagger.fast,
-    className: 'reveal-text'
   });
 
   revealBatch('.framework-card, .case-card, .impact-cell, .editorial-reveal', {
-    y: 14,
-    blur: MOTION.blur.card,
     stagger: MOTION.stagger.base,
-    className: 'reveal-card'
   });
 }
 
 function initFooterMotion() {
-  const items = gsap.utils.toArray('.site-footer__identity, .site-footer__signature, .site-footer__bottom');
+  const items = prepareReveal('.site-footer__identity, .site-footer__signature, .site-footer__bottom');
   if (!items.length) return;
 
-  items.forEach(el => el.classList.add('reveal-card'));
-  gsap.set(items, {
-    autoAlpha: 0,
-    y: 12,
-    filter: `blur(${MOTION.blur.card}px)`
-  });
-
   gsap.to(items, {
-    autoAlpha: 1,
+    opacity: 1,
     y: 0,
     filter: 'blur(0px)',
-    duration: 0.75,
-    stagger: 0.06,
+    duration: MOTION.duration.base,
+    stagger: MOTION.stagger.base,
     ease: MOTION.ease.organic,
     overwrite: true,
+    clearProps: 'opacity,visibility,transform,filter',
     scrollTrigger: {
       trigger: '#footer',
       start: 'top 82%',
       once: true
     },
-    onComplete: () => items.forEach(el => el.classList.add('is-visible'))
+    onStart: () => items.forEach(el => el.classList.add('is-visible'))
   });
 }
 
 function initClientMarquee() {
+  if (motionReduced) return;
+
   document.querySelectorAll('.marquee-content[aria-hidden="true"]').forEach(track => {
     track.setAttribute('aria-hidden', 'true');
   });
@@ -640,6 +598,7 @@ function initMagnetic() {
 
 function initHomeMotion() {
   motionReduced = reduceMotionQuery.matches;
+  document.documentElement.style.setProperty('--reveal-blur', `${motionBlur()}px`);
 
   initClientMarquee();
 
@@ -648,12 +607,17 @@ function initHomeMotion() {
     return;
   }
 
-  gsap.registerPlugin(ScrollTrigger);
-  document.body.classList.add('motion-ready');
-  initHeroMotion();
-  initScrollReveals();
-  initFooterMotion();
-  initMagnetic();
+  try {
+    gsap.registerPlugin(ScrollTrigger);
+    document.body.classList.add('motion-ready');
+    initHeroMotion();
+    initScrollReveals();
+    initFooterMotion();
+    initMagnetic();
+  } catch (error) {
+    setMotionFinalState();
+    console.warn('Home motion disabled; content kept visible.', error);
+  }
 }
 
 /* ── Nav Scroll behavior ── */
