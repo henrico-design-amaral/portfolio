@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambev Monitoring — Henrico Amaral</title>
+  <meta name="description" content="Case Ambev Monitoring — plataforma de monitoramento operacional logístico para leitura de rupturas, carregamentos e estado da distribuição. / Operational logistics monitoring platform for reading stockouts, shipments, and distribution state.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/tailwind.generated.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" href="../assets/css/case-petrobras.css">
+  <script>(function(){try{var l=localStorage.getItem('henrico_lang');if(l==='en'){document.documentElement.lang='en';document.documentElement.dataset.lang='en';}}catch(e){}})()</script>
+</head>
+
+<body class="font-body overflow-x-hidden">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent-500 text-white px-4 py-2 z-50 rounded" data-t="skip">Ir para o conteúdo</a>
+
+  <nav class="fixed top-0 left-0 w-full z-50 liquid-glass transition-transform duration-300" id="nav" aria-label="Navegação principal">
+    <div class="max-w-[1440px] w-full mx-auto flex items-center justify-between px-6 py-4">
+      <a href="../index.html" class="font-display font-bold text-lg md:text-xl tracking-[0]">Henrico Amaral</a>
+      <div class="hidden md:flex items-center gap-8 font-mono text-[12px] tracking-widest uppercase font-semibold text-text-secondary nav-links">
+        <a href="../index.html#process" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.method">Método</a>
+        <a href="../index.html#cases" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.cases">Casos</a>
+        <a href="../index.html#impact" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.impact">Impacto</a>
+        <a href="../about.html" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.about">Sobre</a>
+        <a href="../index.html#contact" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.contact">Contato</a>
+      </div>
+      <div class="lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
+        <span class="lang-toggle__thumb" aria-hidden="true"></span>
+        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT Português" aria-pressed="true">PT</button>
+        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
+      </div>
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle md:hidden" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu md:hidden" hidden>
+      <a href="../index.html#process" data-t="nav.method">Método</a>
+      <a href="../index.html#cases" data-t="nav.cases">Casos</a>
+      <a href="../index.html#impact" data-t="nav.impact">Impacto</a>
+      <a href="../about.html" data-t="nav.about">Sobre</a>
+      <a href="../index.html#contact" data-t="nav.contact">Contato</a>
+      <div class="lang-toggle mobile-lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
+        <span class="lang-toggle__thumb" aria-hidden="true"></span>
+        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT Português" aria-pressed="true">PT</button>
+        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <div id="sr-announcer" role="status" aria-live="polite" class="sr-only"></div>
+
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="max-w-[1440px] mx-auto w-full">
+        <div class="case-hero-eyebrow">
+          <span class="case-hero-dot" aria-hidden="true"></span>
+          <span class="lang-pt">03 · Logística · Monitoramento Operacional</span>
+          <span class="lang-en">03 · Logistics · Operational Monitoring</span>
+        </div>
+        <h1 id="case-title">Ambev Monitoring</h1>
+        <p class="case-hero-client">Ambev</p>
+        <p class="case-hero-desc">
+          <span class="lang-pt">Plataforma de monitoramento para transformar relatórios logísticos desconectados em uma leitura compartilhada do estado da operação.</span>
+          <span class="lang-en">Monitoring platform that transformed disconnected logistics reports into a shared reading of the operation's state.</span>
+        </p>
+        <div class="case-meta-row">
+          <div class="case-meta-item"><span class="case-meta-label"><span class="lang-pt">Cliente</span><span class="lang-en">Client</span></span><span class="case-meta-value">Ambev</span></div>
+          <div class="case-meta-item"><span class="case-meta-label"><span class="lang-pt">Período</span><span class="lang-en">Period</span></span><span class="case-meta-value">2019 — 2020</span></div>
+          <div class="case-meta-item"><span class="case-meta-label"><span class="lang-pt">Sistema</span><span class="lang-en">System</span></span><span class="case-meta-value"><span class="lang-pt">Monitoramento logístico</span><span class="lang-en">Logistics monitoring</span></span></div>
+          <div class="case-meta-item"><span class="case-meta-label"><span class="lang-pt">Papel</span><span class="lang-en">Role</span></span><span class="case-meta-value">UX Design</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad px-6 bg-page nbg" id="snapshot">
+      <div class="max-w-[1440px] mx-auto w-full">
+        <div class="section-header">
+          <span class="section-kicker"><span class="lang-pt">PROJETO · CONTEXTO · ESCOPO</span><span class="lang-en">PROJECT · CONTEXT · SCOPE</span></span>
+          <div class="section-header-grid">
+            <div class="section-header-title-col">
+              <h2 class="section-header-title"><span class="lang-pt">Uma leitura comum<br>da operação nacional.</span><span class="lang-en">A common reading<br>of national operations.</span></h2>
+            </div>
+            <div class="section-header-subtitle">
+              <p><span class="lang-pt">A plataforma reorganizou rupturas, carregamentos e indicadores de disponibilidade em torno do estado da operação.</span><span class="lang-en">The platform reorganized stockouts, shipments, and availability indicators around the state of the operation.</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="snapshot-grid">
+          <div class="snapshot-cell"><span class="snapshot-cell-label">Setor</span><span class="snapshot-cell-value"><span class="lang-pt">Bebidas · Distribuição nacional</span><span class="lang-en">Beverage · National distribution</span></span></div>
+          <div class="snapshot-cell"><span class="snapshot-cell-label"><span class="lang-pt">Ambiente</span><span class="lang-en">Environment</span></span><span class="snapshot-cell-value"><span class="lang-pt">Centros de controle e acompanhamento contínuo</span><span class="lang-en">Control centers and continuous monitoring</span></span></div>
+          <div class="snapshot-cell"><span class="snapshot-cell-label"><span class="lang-pt">Unidade</span><span class="lang-en">Unit</span></span><span class="snapshot-cell-value"><span class="lang-pt">Estado da operação</span><span class="lang-en">Operational state</span></span></div>
+          <div class="snapshot-cell"><span class="snapshot-cell-label"><span class="lang-pt">Impacto</span><span class="lang-en">Impact</span></span><span class="snapshot-cell-value"><span class="lang-pt">Visibilidade qualitativa de exceções logísticas</span><span class="lang-en">Qualitative visibility of logistics exceptions</span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad px-6 bg-page nbg" id="case-body">
+      <div class="max-w-[1440px] mx-auto w-full">
+        <div class="case-content">
+          <article class="case-article editorial-reveal" id="context">
+            <div class="case-eyebrow-tag"><span class="lang-pt">01 / Contexto</span><span class="lang-en">01 / Context</span><span class="case-eyebrow-line" aria-hidden="true"></span></div>
+            <h2 class="case-h2"><span class="lang-pt">A distribuição nacional exige múltiplas leituras ao mesmo tempo.</span><span class="lang-en">National distribution requires multiple readings at once.</span></h2>
+            <div class="case-grid">
+              <div>
+                <p class="case-lead lang-pt">Centros de distribuição, equipes logísticas, times regionais e gestores acompanhavam partes diferentes da mesma operação.</p>
+                <p class="case-lead lang-en">Distribution centers, logistics teams, regional teams, and managers followed different parts of the same operation.</p>
+                <p class="case-body lang-pt">Quando uma ruptura ou atraso aparecia, entender impacto exigia cruzar relatórios, sistemas internos e planilhas regionais. O custo operacional invisível era a reconstrução do contexto antes da decisão.</p>
+                <p class="case-body lang-en">When a stockout or delay appeared, understanding impact required crossing reports, internal systems, and regional spreadsheets. The invisible operational cost was rebuilding context before deciding.</p>
+              </div>
+              <div class="case-aside">
+                <span class="case-aside-label"><span class="lang-pt">Perfis de leitura</span><span class="lang-en">Reading profiles</span></span>
+                <ul class="case-aside-list">
+                  <li><span class="lang-pt">Centros de distribuição</span><span class="lang-en">Distribution centers</span></li>
+                  <li><span class="lang-pt">Equipes logísticas</span><span class="lang-en">Logistics teams</span></li>
+                  <li><span class="lang-pt">Times regionais</span><span class="lang-en">Regional teams</span></li>
+                  <li><span class="lang-pt">Gestores de operação</span><span class="lang-en">Operations managers</span></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-article editorial-reveal" id="problem">
+            <div class="case-eyebrow-tag"><span class="lang-pt">02 / Problema</span><span class="lang-en">02 / Problem</span><span class="case-eyebrow-line" aria-hidden="true"></span></div>
+            <h2 class="case-h2"><span class="lang-pt">A operação existia. A leitura da operação não.</span><span class="lang-en">The operation existed. Its reading did not.</span></h2>
+            <p class="case-lead lang-pt">Indicadores críticos estavam distribuídos, criando versões paralelas do que estava acontecendo.</p>
+            <p class="case-lead lang-en">Critical indicators were distributed, creating parallel versions of what was happening.</p>
+            <p class="case-body lang-pt">Monitoramento contínuo e investigação de causa estavam misturados. Isso aumentava o esforço cognitivo de quem precisava apenas entender prioridade e agir.</p>
+            <p class="case-body lang-en">Continuous monitoring and cause investigation were mixed. This increased cognitive effort for people who only needed to understand priority and act.</p>
+          </article>
+
+          <article class="case-article editorial-reveal" id="approach">
+            <div class="case-eyebrow-tag"><span class="lang-pt">03 / Abordagem</span><span class="lang-en">03 / Approach</span><span class="case-eyebrow-line" aria-hidden="true"></span></div>
+            <h2 class="case-h2"><span class="lang-pt">O estado da operação virou o objeto central.</span><span class="lang-en">The operation's state became the central object.</span></h2>
+            <p class="case-body lang-pt">A plataforma deixou de refletir sistemas de origem e passou a refletir sinais operacionais: disponibilidade, rupturas, carregamentos e nível de serviço.</p>
+            <p class="case-body lang-en">The platform stopped reflecting source systems and started reflecting operational signals: availability, stockouts, shipments, and service level.</p>
+            <div class="state-flow" role="list" aria-label="Camadas da operação / Operation layers">
+              <span class="state-chip" role="listitem"><span class="lang-pt">Visão nacional</span><span class="lang-en">National view</span></span>
+              <span class="state-arrow" aria-hidden="true">→</span>
+              <span class="state-chip" role="listitem"><span class="lang-pt">Indicadores críticos</span><span class="lang-en">Critical indicators</span></span>
+              <span class="state-arrow" aria-hidden="true">→</span>
+              <span class="state-chip" role="listitem"><span class="lang-pt">Eventos operacionais</span><span class="lang-en">Operational events</span></span>
+            </div>
+          </article>
+
+          <article class="case-article editorial-reveal" id="decisions">
+            <div class="case-eyebrow-tag"><span class="lang-pt">04 / Decisões</span><span class="lang-en">04 / Decisions</span><span class="case-eyebrow-line" aria-hidden="true"></span></div>
+            <h2 class="case-h2"><span class="lang-pt">Separar monitoramento de investigação.</span><span class="lang-en">Separate monitoring from investigation.</span></h2>
+            <div class="decision-list">
+              <div class="decision-item"><span class="decision-num">01</span><div><h3 class="decision-title"><span class="lang-pt">Estado da operação como unidade principal</span><span class="lang-en">Operational state as primary unit</span></h3><p class="decision-desc lang-pt">A interface passou a organizar dados pela leitura operacional, não pelo sistema de origem.</p><p class="decision-desc lang-en">The interface began organizing data by operational reading, not by source system.</p></div></div>
+              <div class="decision-item"><span class="decision-num">02</span><div><h3 class="decision-title"><span class="lang-pt">Hierarquia explícita de sinais críticos</span><span class="lang-en">Explicit hierarchy of critical signals</span></h3><p class="decision-desc lang-pt">Disponibilidade, rupturas e carregamentos receberam prioridade visual sobre métricas secundárias.</p><p class="decision-desc lang-en">Availability, stockouts, and shipments gained visual priority over secondary metrics.</p></div></div>
+              <div class="decision-item"><span class="decision-num">03</span><div><h3 class="decision-title"><span class="lang-pt">Consistência entre escalas de leitura</span><span class="lang-en">Consistency across reading scales</span></h3><p class="decision-desc lang-pt">Visão nacional, regional e operacional seguem a mesma lógica para reduzir esforço cognitivo.</p><p class="decision-desc lang-en">National, regional, and operational views follow the same logic to reduce cognitive effort.</p></div></div>
+            </div>
+          </article>
+
+          <article class="case-article editorial-reveal" id="impact">
+            <div class="case-eyebrow-tag"><span class="lang-pt">05 / Impacto</span><span class="lang-en">05 / Impact</span><span class="case-eyebrow-line" aria-hidden="true"></span></div>
+            <h2 class="case-h2"><span class="lang-pt">Uma leitura operacional compartilhada.</span><span class="lang-en">A shared operational reading.</span></h2>
+            <p class="case-lead lang-pt">O impacto documentado é qualitativo: maior visibilidade de rupturas operacionais e redução da dependência de cruzamento manual de relatórios.</p>
+            <p class="case-lead lang-en">The documented impact is qualitative: greater visibility of operational exceptions and less dependence on manually crossing reports.</p>
+            <ul class="impact-list">
+              <li><span class="lang-pt">Priorização mais clara de desvios relevantes</span><span class="lang-en">Clearer prioritization of relevant deviations</span></li>
+              <li><span class="lang-pt">Mesma leitura para equipes com perspectivas diferentes</span><span class="lang-en">Same reading for teams with different perspectives</span></li>
+              <li><span class="lang-pt">Separação entre estado operacional e análise de causa</span><span class="lang-en">Separation between operational state and cause analysis</span></li>
+            </ul>
+          </article>
+
+          <article class="case-article editorial-reveal" id="reflection">
+            <div class="case-eyebrow-tag"><span class="lang-pt">06 / Reflexão</span><span class="lang-en">06 / Reflection</span><span class="case-eyebrow-line" aria-hidden="true"></span></div>
+            <h2 class="case-h2"><span class="lang-pt">Monitoramento é uma linguagem compartilhada.</span><span class="lang-en">Monitoring is a shared language.</span></h2>
+            <p class="case-body lang-pt">O desafio não era exibir mais indicadores. Era fazer com que equipes diferentes reconhecessem a mesma operação, com a mesma prioridade, no mesmo momento.</p>
+            <p class="case-body lang-en">The challenge was not showing more indicators. It was making different teams recognize the same operation, with the same priority, at the same moment.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <nav class="case-nav-bar" aria-label="Navegação do caso / Case navigation">
+      <div class="case-nav-bar-inner">
+        <a href="bayer.html" class="case-nav-link"><span aria-hidden="true">←</span><span>Bayer</span></a>
+        <a href="bmg.html" class="case-nav-link case-nav-link--primary"><span class="lang-pt">Próximo: BMG</span><span class="lang-en">Next: BMG</span><span aria-hidden="true">→</span></a>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__top">
+        <div class="site-footer__identity"><div class="site-footer__mark" aria-hidden="true">HA</div><div><p class="site-footer__name">Henrico Amaral</p><p class="site-footer__role" data-t="ft.role">Senior Product Designer · Decision Infrastructure</p></div></div>
+        <p class="site-footer__signature" data-t="ft.signature">Pense simples. Faça melhor.<br>Torne-se inevitável.</p>
+      </div>
+      <div class="site-footer__bottom"><p>Henrico Amaral · Product Designer · 2026</p><a href="#" class="site-footer__toplink">↑ Topo</a></div>
+    </div>
+  </footer>
+  <script defer src="../assets/js/site.js"></script>
+</body>
+
+</html>

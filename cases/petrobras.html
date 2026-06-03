@@ -8,12 +8,6 @@
   <meta name="description" content="SALA CAR — sistema de gestão de ocorrências ambientais offshore da Petrobras. Infraestrutura de decisão para operações críticas. / Petrobras offshore environmental management system. Decision infrastructure for critical operations.">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
-
   <!-- GSAP not loaded on case pages. site.js detects absence and degrades gracefully. -->
   <link rel="stylesheet" href="../assets/css/tailwind.generated.css">
   <link rel="stylesheet" href="../assets/css/site.css">
@@ -47,13 +41,13 @@
         <a href="../index.html#process" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.method">Método</a>
         <a href="../index.html#cases"   class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.cases">Casos</a>
         <a href="../index.html#impact"  class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.impact">Impacto</a>
-        <a href="../index.html#about"   class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.about">Sobre</a>
+        <a href="../about.html"   class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.about">Sobre</a>
         <a href="../index.html#contact" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.contact">Contato</a>
       </div>
       <div class="lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
         <span class="lang-toggle__thumb" aria-hidden="true"></span>
-        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="Português" aria-pressed="true">PT</button>
-        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
+        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT Português" aria-pressed="true">PT</button>
+        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
       </div>
       <button id="mobile-menu-toggle" class="mobile-menu-toggle md:hidden" type="button"
         aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
@@ -65,13 +59,13 @@
       <a href="../index.html#process" data-t="nav.method">Método</a>
       <a href="../index.html#cases"   data-t="nav.cases">Casos</a>
       <a href="../index.html#impact"  data-t="nav.impact">Impacto</a>
-      <a href="../index.html#about"   data-t="nav.about">Sobre</a>
+      <a href="../about.html"   data-t="nav.about">Sobre</a>
       <a href="../index.html#contact" data-t="nav.contact">Contato</a>
       <div class="lang-toggle mobile-lang-toggle" data-lang-toggle data-current-lang="pt" role="group"
         aria-label="Selecionar idioma">
         <span class="lang-toggle__thumb" aria-hidden="true"></span>
-        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="Português" aria-pressed="true">PT</button>
-        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
+        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT Português" aria-pressed="true">PT</button>
+        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
       </div>
     </div>
   </nav>
@@ -538,9 +532,9 @@
           <span class="lang-pt">Voltar aos casos</span>
           <span class="lang-en">Back to cases</span>
         </a>
-        <a href="../index.html#contact" class="case-nav-link case-nav-link--primary">
-          <span class="lang-pt">Vamos conversar</span>
-          <span class="lang-en">Let's talk</span>
+        <a href="bayer.html" class="case-nav-link case-nav-link--primary">
+          <span class="lang-pt">Próximo: Bayer</span>
+          <span class="lang-en">Next: Bayer</span>
           <span aria-hidden="true">→</span>
         </a>
       </div>

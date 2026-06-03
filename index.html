@@ -8,12 +8,6 @@
   <meta name="description" content="Senior Product Designer especializado em plataformas B2B, sistemas internos, workflows complexos e produtos digitais para operações críticas.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
-
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <link rel="stylesheet" href="assets/css/tailwind.generated.css?v=20260526-home-fix-01">
@@ -60,14 +54,14 @@
         <a href="#process" data-t="nav.method" class="hover:text-accent-500 transition-colors py-2 px-1">Método</a>
         <a href="#cases" data-t="nav.cases" class="hover:text-accent-500 transition-colors py-2 px-1">Casos</a>
         <a href="#impact" data-t="nav.impact" class="hover:text-accent-500 transition-colors py-2 px-1">Impacto</a>
-        <a href="#about" data-t="nav.about" class="hover:text-accent-500 transition-colors py-2 px-1">Sobre</a>
+        <a href="about.html" data-t="nav.about" class="hover:text-accent-500 transition-colors py-2 px-1">Sobre</a>
         <a href="#contact" data-t="nav.contact" class="hover:text-accent-500 transition-colors py-2 px-1">Contato</a>
       </div>
 
       <div class="lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
         <span class="lang-toggle__thumb" aria-hidden="true"></span>
-        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="Português" aria-pressed="true">PT</button>
-        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
+        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT Português" aria-pressed="true">PT</button>
+        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
       </div>
       <button id="mobile-menu-toggle" class="mobile-menu-toggle md:hidden" type="button"
         aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
@@ -79,12 +73,12 @@
       <a href="#process" data-t="nav.method">Método</a>
       <a href="#cases" data-t="nav.cases">Casos</a>
       <a href="#impact" data-t="nav.impact">Impacto</a>
-      <a href="#about" data-t="nav.about">Sobre</a>
+      <a href="about.html" data-t="nav.about">Sobre</a>
       <a href="#contact" data-t="nav.contact">Contato</a>
       <div class="lang-toggle mobile-lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
         <span class="lang-toggle__thumb" aria-hidden="true"></span>
-        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="Português" aria-pressed="true">PT</button>
-        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
+        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT Português" aria-pressed="true">PT</button>
+        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
       </div>
     </div>
   </nav>
@@ -937,6 +931,10 @@
           <span id="modal-metric-label"
             class="font-mono text-[10px] uppercase tracking-widest text-support-400 font-semibold"></span>
         </div>
+        <a id="modal-case-link" href="#" class="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-text-primary font-semibold hover:text-accent-500 transition-colors">
+          <span data-t="modal.openCase">Abrir página do case</span>
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
   </div>

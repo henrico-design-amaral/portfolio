@@ -148,8 +148,9 @@ const COPY = {
      'ab.card5.items':    '<li>Figma</li><li>FigJam / Miro</li><li>AccessMonitor</li><li>GitHub</li><li>IA generativa</li><li>Antigravity</li>',
      'ab.beyond.title':   'Além da interface',
      'ab.beyond.items':   '<li>Pai</li><li>Observador de sistemas</li><li>Aprendiz constante</li><li>IA aplicada ao design</li><li>Reposicionamento com método</li>',
-      'hero.availability': 'Disponível agora · CLT · PJ · Freelancer',
+     'hero.availability': 'Disponível agora · CLT · PJ · Freelancer',
      'modal.case':        'Caso',
+     'modal.openCase':    'Abrir página do case',
      'ct.tag':            'SÃO PAULO · REMOTO/HÍBRIDO · PT/EN',
      'ct.title':          'Sistemas mais claros.<br>Conversas mais objetivas.',
      'ct.sub':            'Para vagas sêniores, projetos enterprise e conversas técnicas sobre produto, operação e decisão.',
@@ -159,6 +160,7 @@ const COPY = {
      'ct.card2.text':     'Diagnóstico e desenho de fluxos, plataformas internas e produtos digitais com alta complexidade.',
      'ct.card3.title':    'Para conversas técnicas',
      'ct.card3.text':     'Arquitetura da informação, prototipação, IA aplicada e clareza operacional.',
+     'ct.email':           'Enviar e-mail',
      'ct.cv':             'Ver CV',
      'ct.cases':          'Ver cases',
      'ft.role':           'Senior Product Designer · Decision Infrastructure',
@@ -320,6 +322,7 @@ const COPY = {
      'ab.beyond.items':   '<li>Father</li><li>Systems observer</li><li>Constant learner</li><li>Applied AI in design</li><li>Methodical repositioning</li>',
       'hero.availability': 'Available now · Full-time · Contractor · Freelance',
      'modal.case':        'Case',
+     'modal.openCase':    'Open case page',
      'ct.tag':            'SÃO PAULO · REMOTE/HYBRID · PT/EN',
      'ct.title':          'Clearer systems.<br>More objective conversations.',
      'ct.sub':            'For senior roles, enterprise projects and technical conversations about product, operations and decision-making.',
@@ -329,6 +332,7 @@ const COPY = {
      'ct.card2.text':     'Diagnosis and design of workflows, internal platforms and highly complex digital products.',
      'ct.card3.title':    'For technical conversations',
      'ct.card3.text':     'Information architecture, prototyping, applied AI and operational clarity.',
+     'ct.email':           'Send email',
      'ct.cv':             'View CV',
      'ct.cases':          'View cases',
      'ft.role':           'Senior Product Designer · Decision Infrastructure',
@@ -679,6 +683,7 @@ const CASE_DATA = [
   {
     copyKey: 'c1',
     client: 'Petrobras (SALA CAR)',
+    url: 'cases/petrobras.html',
     tags: ['Offshore', 'Monitoring'],
     desc: 'Centralização de sinais operacionais offshore distribuídos em um ambiente unificado de monitoramento para decisões críticas de gestão de plataformas.',
     metric: '95%',
@@ -687,6 +692,7 @@ const CASE_DATA = [
   {
     copyKey: 'c2',
     client: 'Bayer',
+    url: 'cases/bayer.html',
     tags: ['Agri-tech', 'Data Scale'],
     desc: 'Unificação de fluxos de dados agrícolas fragmentados — clima, solo e métricas de produção — em uma arquitetura progressiva de interpretação nacional.',
     metric: 'Dados agrícolas',
@@ -695,6 +701,7 @@ const CASE_DATA = [
   {
     copyKey: 'c3',
     client: 'AmBev',
+    url: 'cases/ambev.html',
     tags: ['Supply Chain', 'Operations'],
     desc: 'Estruturação da visibilidade de exceções logísticas em uma cadeia de suprimentos distribuída para detecção de anomalias e resposta coordenada.',
     metric: 'Leitura operacional',
@@ -703,6 +710,7 @@ const CASE_DATA = [
   {
     copyKey: 'c4',
     client: 'BMG',
+    url: 'cases/bmg.html',
     tags: ['Fintech', 'Compliance'],
     desc: 'Design de lógica de permissões complexas e fluxos de estado de transação para uma plataforma bancária corporativa com rastreabilidade completa.',
     metric: 'Fluxos regulados',
@@ -715,6 +723,7 @@ function openCaseModal(index) {
   if (!caseData) return;
 
   const modal = document.getElementById('case-modal');
+  if (!modal) return;
   lastFocusedElement = document.activeElement;
   const dict = COPY[currentLang] || COPY.pt;
   const copyKey = caseData.copyKey;
@@ -733,6 +742,10 @@ function openCaseModal(index) {
   document.getElementById('modal-desc').textContent = dict[`${copyKey}.desc`] || caseData.desc;
   document.getElementById('modal-metric').textContent = dict[`${copyKey}.metric`] || caseData.metric;
   document.getElementById('modal-metric-label').textContent = dict[`${copyKey}.metricLabel`] || caseData.metricLabel;
+  const modalCaseLink = document.getElementById('modal-case-link');
+  if (modalCaseLink) {
+    modalCaseLink.href = caseData.url;
+  }
 
   // Show modal
   modal.classList.remove('hidden');
@@ -746,6 +759,7 @@ function openCaseModal(index) {
 
 function closeCaseModal() {
   const modal = document.getElementById('case-modal');
+  if (!modal) return;
   modal.classList.add('hidden');
   modal.setAttribute('aria-hidden', 'true');
   if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
@@ -755,6 +769,7 @@ function closeCaseModal() {
 
 function getModalFocusableElements() {
   const modal = document.getElementById('case-modal');
+  if (!modal) return [];
   return Array.from(modal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'))
     .filter(el => el.offsetParent !== null);
 }
@@ -774,16 +789,21 @@ document.querySelectorAll('[data-case-index]').forEach((card, index) => {
 });
 
 // Close modal handlers
-document.getElementById('modal-close').addEventListener('click', closeCaseModal);
-document.getElementById('case-modal').addEventListener('click', (e) => {
-  if (e.target === e.currentTarget) {
-    closeCaseModal();
-  }
-});
+const modalCloseButton = document.getElementById('modal-close');
+const caseModal = document.getElementById('case-modal');
+if (modalCloseButton && caseModal) {
+  modalCloseButton.addEventListener('click', closeCaseModal);
+  caseModal.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+      closeCaseModal();
+    }
+  });
+}
 
 // Close with Escape key
 document.addEventListener('keydown', (e) => {
   const modal = document.getElementById('case-modal');
+  if (!modal) return;
   const modalOpen = !modal.classList.contains('hidden');
   if (e.key === 'Escape' && modalOpen) {
     closeCaseModal();
