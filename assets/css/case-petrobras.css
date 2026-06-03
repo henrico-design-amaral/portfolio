@@ -3,10 +3,6 @@
   Extracted from cases/petrobras.html to keep HTML semantic and CSS separated by concern.
 */
 
-/* ── Bilingual visibility ── */
-    html[data-lang="en"] .lang-pt { display: none !important; }
-    html[data-lang="pt"] .lang-en { display: none !important; }
-
     /* ── Case hero ── */
     .case-hero {
       background: #0B0F14;
@@ -116,7 +112,7 @@
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #BE9C6E;
+      color: #7A4F25;
       margin-bottom: 0.45rem;
       display: block;
     }
@@ -151,7 +147,7 @@
       font-weight: 700;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: #BE9C6E;
+      color: #7A4F25;
       display: flex;
       align-items: center;
       gap: 0.75rem;
@@ -216,7 +212,7 @@
       font-weight: 700;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: #BE9C6E;
+      color: #7A4F25;
       margin-bottom: 0.65rem;
       display: block;
     }
@@ -266,7 +262,7 @@
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #BE9C6E;
+      color: #7A4F25;
       margin-bottom: 0.45rem;
       display: block;
     }
@@ -315,7 +311,7 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
       font-weight: 700;
-      color: rgba(190, 156, 110, 0.7);
+      color: #7A4F25;
       padding-top: 0.22rem;
     }
     .decision-title {
@@ -361,6 +357,17 @@
     }
     .impact-list li:last-child { border-bottom: none; }
 
+    #impact .case-eyebrow-tag,
+    #impact .case-aside-label {
+      color: #2B1710;
+    }
+
+    #impact .case-body,
+    #impact .impact-list li,
+    #impact .case-aside-list li {
+      color: #2B1710;
+    }
+
     /* ── Case navigation bar ── */
     .case-nav-bar {
       background: #0B0F14;
@@ -380,7 +387,7 @@
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: rgba(242, 239, 233, 0.38);
+      color: rgba(242, 239, 233, 0.66);
       text-decoration: none;
       display: inline-flex;
       align-items: center;

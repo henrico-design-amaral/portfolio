@@ -3,6 +3,54 @@
     Design-system palette scale, light to dark
     ═══════════════════════════════════════════════ */
 
+@font-face {
+  font-family: 'Syne';
+  src: url('../fonts/Syne-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+html[data-lang="en"] .lang-pt {
+  display: none !important;
+}
+
+html[data-lang="pt"] .lang-en {
+  display: none !important;
+}
+
 :root {
   --section-hero: #f2efe9;
   --section-process: #e6ded1;
@@ -1469,14 +1517,14 @@ h2.section-header-title,
   line-height: 1;
   letter-spacing: 0.11em;
   text-transform: uppercase;
-  color: rgba(72, 46, 32, 0.44);
+  color: rgba(72, 46, 32, 0.72);
   transition:
     color 220ms var(--toggle-ease),
     transform 220ms var(--toggle-ease);
 }
 
 .lang-toggle__option:hover {
-  color: rgba(72, 46, 32, 0.72);
+  color: rgba(48, 29, 20, 0.86);
 }
 
 .lang-toggle__option[aria-pressed="true"],
@@ -1863,7 +1911,7 @@ footer {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.72rem;
   letter-spacing: 0.12em;
-  color: rgba(244, 236, 226, 0.34);
+  color: rgba(244, 236, 226, 0.72);
   flex: 0 0 auto;
 }
 
