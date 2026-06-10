@@ -15,6 +15,9 @@ const mimeTypes = {
   '.webp': 'image/webp',
   '.svg': 'image/svg+xml',
   '.pdf': 'application/pdf',
+  '.ttf': 'font/ttf',
+  '.woff': 'font/woff',
+  '.woff2': 'font/woff2',
 };
 
 const server = http.createServer((req, res) => {
@@ -34,14 +37,14 @@ const server = http.createServer((req, res) => {
       }
     } else {
       res.writeHead(200, { 'Content-Type': contentType });
-      res.end(content, 'utf-8');
+      res.end(content);
     }
   });
 });
 
 server.listen(port, '127.0.0.1', () => {
   console.log(`Static server running at http://127.0.0.1:${port}/`);
-  
+
   console.log('Starting verification script...');
   const verifyProcess = spawn('node', [path.join(__dirname, 'portfolio-verify.js')], {
     stdio: 'inherit',

@@ -8,11 +8,10 @@
   <meta name="description" content="SALA CAR — sistema de gestão de ocorrências ambientais offshore da Petrobras. Infraestrutura de decisão para operações críticas. / Petrobras offshore environmental management system. Decision infrastructure for critical operations.">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <link rel="stylesheet" href="../assets/css/tailwind.generated.css">
   <link rel="stylesheet" href="../assets/css/site.css">
   <link rel="stylesheet" href="../assets/css/cases.css">
+  <link rel="stylesheet" href="../assets/css/motion.css?v=20260610">
 
   <script>(function(){try{var l=localStorage.getItem('henrico_lang');if(l==='en'){document.documentElement.lang='en';document.documentElement.dataset.lang='en';}}catch(e){}})()</script>
   <noscript>
@@ -74,25 +73,25 @@
 
     <!-- ── HERO ── -->
     <header class="case-hero" aria-labelledby="case-title">
-      <img src="../assets/img/cases/petrobras.webp" alt="Petrobras Hero" class="case-hero-bg">
+      <img src="../assets/img/cases/petrobras.webp" alt="Petrobras Hero" class="case-hero-bg motion-parallax-bg">
       <div class="case-hero-overlay"></div>
 
       <div class="max-w-[1440px] mx-auto w-full">
-        <div class="case-hero-eyebrow">
+        <div class="case-hero-eyebrow motion-reveal-up motion-hero">
           <span class="case-hero-dot" aria-hidden="true"></span>
           <span class="lang-pt">01 · Energia · Operações Críticas Offshore</span>
           <span class="lang-en">01 · Energy · Critical Offshore Operations</span>
         </div>
 
-        <h1 id="case-title">SALA CAR</h1>
-        <p class="case-hero-client">Petrobras</p>
+        <h1 id="case-title" class="motion-reveal-up motion-hero">SALA CAR</h1>
+        <p class="case-hero-client motion-reveal-up motion-hero">Petrobras</p>
 
-        <p class="case-hero-desc">
+        <p class="case-hero-desc motion-reveal-up motion-blur-in motion-hero">
           <span class="lang-pt">Sistema de gestão de ocorrências ambientais offshore. Coordenação em tempo real entre equipes operacionais, dados geoespaciais e obrigações regulatórias em operações de petróleo e gás.</span>
           <span class="lang-en">Offshore environmental occurrence management system. Real-time coordination across operational teams, geospatial data, and regulatory obligations in oil and gas operations.</span>
         </p>
 
-        <div class="case-meta-row">
+        <div class="case-meta-row motion-reveal-up motion-hero">
           <div class="case-meta-item">
             <span class="case-meta-label"><span class="lang-pt">Cliente</span><span class="lang-en">Client</span></span>
             <span class="case-meta-value">Petrobras</span>
@@ -125,7 +124,7 @@
     <section class="section-pad px-6 bg-page nbg" id="snapshot">
       <div class="max-w-[1440px] mx-auto w-full">
         <div class="section-header">
-          <span class="section-kicker">
+          <span class="section-kicker motion-reveal-up motion-section">
             <span class="lang-pt">PROJETO · CONTEXTO · ESCOPO</span>
             <span class="lang-en">PROJECT · CONTEXT · SCOPE</span>
           </span>
@@ -145,26 +144,26 @@
           </div>
         </div>
 
-        <div class="snapshot-grid">
-          <div class="snapshot-cell">
+        <div class="snapshot-grid motion-stagger">
+          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
             <span class="snapshot-cell-label"><span class="lang-pt">Sistema</span><span class="lang-en">System</span></span>
             <span class="snapshot-cell-value">SALA CAR</span>
           </div>
-          <div class="snapshot-cell">
+          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
             <span class="snapshot-cell-label"><span class="lang-pt">Domínio</span><span class="lang-en">Domain</span></span>
             <span class="snapshot-cell-value">
               <span class="lang-pt">Gestão ambiental · Energia</span>
               <span class="lang-en">Environmental mgt · Energy</span>
             </span>
           </div>
-          <div class="snapshot-cell">
+          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
             <span class="snapshot-cell-label"><span class="lang-pt">Usuários</span><span class="lang-en">Users</span></span>
             <span class="snapshot-cell-value">
               <span class="lang-pt">Técnicos e Coordenadores</span>
               <span class="lang-en">Techs and Coordinators</span>
             </span>
           </div>
-          <div class="snapshot-cell">
+          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
             <span class="snapshot-cell-label"><span class="lang-pt">Resultado</span><span class="lang-en">Outcome</span></span>
             <span class="snapshot-cell-value">
               <span class="lang-pt">Estado unificado e rastreável</span>
@@ -183,7 +182,7 @@
         <section class="section-pad px-6 case-sec--dark" id="context">
           <div class="max-w-[1440px] w-full mx-auto relative z-10">
             <div class="section-header section-header--dark">
-              <span class="section-kicker">
+              <span class="section-kicker motion-reveal-up motion-section">
                 <span class="lang-pt">01 / Contexto Operacional</span>
                 <span class="lang-en">01 / Operational Context</span>
               </span>
@@ -208,7 +207,7 @@
                 <p class="case-body lang-en">Any event — from a wastewater parameter deviation to a spill — must be registered, classified, addressed, and closed with full traceability. The cycle involves teams in different locations: environmental technicians on platforms, remote monitoring analysts onshore, coordination managers in control centers, and compliance managers responsible for formal regulatory response.</p>
               </div>
               <div>
-                <div class="case-aside">
+                <div class="case-aside motion-reveal-up motion-card">
                   <span class="case-aside-label"><span class="lang-pt">Canais de Origem</span><span class="lang-en">Source Channels</span></span>
                   <ul class="case-aside-list">
                     <li><span class="lang-pt">Monitoramento orbital</span><span class="lang-en">Orbital monitoring</span></li>
@@ -221,7 +220,7 @@
             </div>
 
             <!-- Flow Diagram -->
-            <div class="diagram-wrap">
+            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram">
               <div class="d-flow">
                 <div class="d-flow-nodes">
                   <div class="d-node"><span class="lang-pt">Monitoramento orbital</span><span class="lang-en">Orbital monitoring</span></div>
@@ -248,7 +247,7 @@
         <section class="section-pad px-6 case-sec--dark" id="legacy">
           <div class="max-w-[1440px] w-full mx-auto relative z-10">
             <div class="section-header section-header--dark">
-              <span class="section-kicker">
+              <span class="section-kicker motion-reveal-up motion-section">
                 <span class="lang-pt">02 / Arquitetura Legada</span>
                 <span class="lang-en">02 / Legacy Architecture</span>
               </span>
@@ -273,7 +272,7 @@
                 <p class="case-body lang-en">The ICS 214 logged the chronology. Spreadsheets controlled resource mobilization. Technical reports consolidated geospatial and drift analysis. None of these records shared a common operational structure, requiring analysts to manually reconstruct the context.</p>
               </div>
               <div>
-                <div class="case-aside">
+                <div class="case-aside motion-reveal-up motion-card">
                   <span class="case-aside-label"><span class="lang-pt">Registros Fragmentados</span><span class="lang-en">Fragmented Records</span></span>
                   <ul class="case-aside-list">
                     <li><span class="lang-pt">Planilhas locais de recursos</span><span class="lang-en">Local resource spreadsheets</span></li>
@@ -286,7 +285,7 @@
             </div>
 
             <!-- Convergence Diagram -->
-            <div class="diagram-wrap">
+            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram">
               <div class="d-conv">
                 <div class="d-conv-inputs">
                   <div class="d-node"><span class="lang-pt">Planilhas</span><span class="lang-en">Spreadsheets</span></div>
@@ -310,7 +309,7 @@
         <section class="section-pad px-6" id="problem">
           <div class="max-w-[1440px] w-full mx-auto relative z-10">
             <div class="section-header">
-              <span class="section-kicker">
+              <span class="section-kicker motion-reveal-up motion-section">
                 <span class="lang-pt">03 / Definição do Problema</span>
                 <span class="lang-en">03 / Problem Definition</span>
               </span>
@@ -338,7 +337,7 @@
         <section class="section-pad px-6" id="role">
           <div class="max-w-[1440px] w-full mx-auto relative z-10">
             <div class="section-header">
-              <span class="section-kicker">
+              <span class="section-kicker motion-reveal-up motion-section">
                 <span class="lang-pt">04 / Atuação do Designer</span>
                 <span class="lang-en">04 / Designer Role</span>
               </span>
@@ -358,7 +357,7 @@
               </div>
             </div>
 
-            <div class="insight-grid">
+            <div class="insight-grid motion-stagger">
               <div class="insight-item">
                 <span class="insight-num">01</span>
                 <div>
@@ -409,7 +408,7 @@
         <section class="section-pad px-6" id="constraints">
           <div class="max-w-[1440px] w-full mx-auto relative z-10">
             <div class="section-header">
-              <span class="section-kicker">
+              <span class="section-kicker motion-reveal-up motion-section">
                 <span class="lang-pt">05 / Restrições do Projeto</span>
                 <span class="lang-en">05 / Project Constraints</span>
               </span>
@@ -424,7 +423,7 @@
                 </div>
               </div>
             </div>
-            <div class="info-box">
+            <div class="info-box motion-reveal-up motion-card">
               <span class="info-box-label"><span class="lang-pt">Condições de Contorno</span><span class="lang-en">Boundary Conditions</span></span>
               <ul class="info-box-list">
                 <li>
@@ -452,7 +451,7 @@
         <section class="section-pad px-6 case-sec--dark" id="decisions">
           <div class="max-w-[1440px] w-full mx-auto relative z-10">
             <div class="section-header section-header--dark">
-              <span class="section-kicker">
+              <span class="section-kicker motion-reveal-up motion-section">
                 <span class="lang-pt">06 / Decisão Estrutural</span>
                 <span class="lang-en">06 / Structural Decision</span>
               </span>
@@ -473,7 +472,7 @@
             </div>
 
             <!-- Hub Diagram -->
-            <div class="diagram-wrap">
+            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram">
               <div class="d-hub">
                 <div class="d-hub-orbit"></div>
                 <div class="d-node highlight d-hub-center"><span class="lang-pt">Ocorrência</span><span class="lang-en">Occurrence</span></div>
@@ -491,7 +490,7 @@
             </div>
 
             <!-- Pipeline Diagram -->
-            <div class="diagram-wrap">
+            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram">
               <div class="d-pipeline">
                 <div class="d-node"><span class="lang-pt">Registro</span><span class="lang-en">Registry</span></div>
                 <div class="d-node"><span class="lang-pt">Interpretação</span><span class="lang-en">Interpretation</span></div>
@@ -509,7 +508,7 @@
             </div>
 
             <!-- Full Flow Image -->
-            <div class="screen-img">
+            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft">
               <img src="Cases/Petrobras/salacar-fluxo-completo.webp" alt="Full Operational Flow" loading="lazy">
             </div>
 
@@ -520,7 +519,7 @@
         <section class="section-pad px-6" id="scale">
           <div class="max-w-[1440px] w-full mx-auto relative z-10">
             <div class="section-header">
-              <span class="section-kicker">
+              <span class="section-kicker motion-reveal-up motion-section">
                 <span class="lang-pt">07 / Escala Operacional</span>
                 <span class="lang-en">07 / Operational Scale</span>
               </span>
@@ -541,7 +540,7 @@
             </div>
 
             <!-- Walkthrough Screens -->
-            <div class="screen-img">
+            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft">
               <img src="Cases/Petrobras/ocorrencias-01-listagem.png" alt="Ocorrências - Listagem" loading="lazy">
             </div>
             <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
@@ -552,17 +551,17 @@
             <p class="case-body lang-en">The occurrence list stopped being just a table. It became a prioritization and control board, consolidating risk classification, estimated slick size, and allocated resources.</p>
 
             <div class="case-grid-2">
-              <div class="screen-img">
+              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft">
                 <img src="Cases/Petrobras/ocorrencias-02-tipo-emergencia-classificada.jpg" alt="Ocorrência Classificada" loading="lazy">
               </div>
-              <div class="screen-img">
+              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft">
                 <img src="Cases/Petrobras/ocorrencias-04-origem-geoprocessamento.jpg" alt="Geoprocessamento Integrado" loading="lazy">
               </div>
             </div>
             <p class="case-body lang-pt">Telas com os detalhes e a classificação estruturada de emergência ambiental (à esquerda) e a integração com dados da origem do geoprocessamento em tempo real (à direita).</p>
             <p class="case-body lang-en">Screens showing details and structured classification of environmental emergency (left) and real-time integration with geoprocessing origin data (right).</p>
 
-            <div class="screen-img">
+            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft">
               <img src="Cases/Petrobras/ocorrencias-05-tratamento-da-ocorrencia-aba-ics-214.jpg" alt="ICS 214 Cronologia" loading="lazy">
             </div>
             <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
@@ -573,17 +572,17 @@
             <p class="case-body lang-en">The ICS 214 event log was integrated into the central incident navigation. The analyst can log operational actions continuously, creating native traceability without external files.</p>
 
             <div class="case-grid-2">
-              <div class="screen-img">
+              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft">
                 <img src="Cases/Petrobras/embarcacao-01-mobilizar.jpg" alt="Mobilização de Recurso" loading="lazy">
               </div>
-              <div class="screen-img">
+              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft">
                 <img src="Cases/Petrobras/embarcacao-02-mobilizada.png" alt="Recurso Mobilizado" loading="lazy">
               </div>
             </div>
             <p class="case-body lang-pt">O fluxo de mobilização de recursos: seleção e simulação de ativação de embarcações (à esquerda) e confirmação visual da embarcação em resposta (à direita).</p>
             <p class="case-body lang-en">The resource mobilization flow: selection and simulation of vessel activation (left) and visual confirmation of vessel in response (right).</p>
 
-            <div class="screen-img">
+            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft">
               <img src="Cases/Petrobras/embarcacao-05-listagem-de-embarcacoes.jpg" alt="Listagem de Embarcações" loading="lazy">
             </div>
             <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
@@ -593,7 +592,7 @@
             <p class="case-body lang-pt">Painel consolidado mostrando todas as embarcações disponíveis na bacia offshore, sua capacidade operacional de recolhimento de óleo e posição de monitoramento.</p>
             <p class="case-body lang-en">Consolidated dashboard showing all available vessels in the offshore basin, their operational recovery capacity, and monitored position.</p>
 
-            <div class="screen-img">
+            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft">
               <img src="Cases/Petrobras/geoprocessamento-02-edicao.jpg" alt="Edição de Geoprocessamento" loading="lazy">
             </div>
             <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
@@ -609,7 +608,7 @@
         <section class="section-pad px-6" id="tradeoffs">
           <div class="max-w-[1440px] w-full mx-auto relative z-10">
             <div class="section-header">
-              <span class="section-kicker">
+              <span class="section-kicker motion-reveal-up motion-section">
                 <span class="lang-pt">08 / Limitações Estruturais</span>
                 <span class="lang-en">08 / Structural Limitations</span>
               </span>
@@ -637,7 +636,7 @@
         <section class="section-pad px-6 case-sec--dark" id="impact">
           <div class="max-w-[1440px] w-full mx-auto relative z-10">
             <div class="section-header section-header--dark">
-              <span class="section-kicker">
+              <span class="section-kicker motion-reveal-up motion-section">
                 <span class="lang-pt">09 / Impacto do Projeto</span>
                 <span class="lang-en">09 / Project Impact</span>
               </span>
@@ -657,8 +656,8 @@
               </div>
             </div>
 
-            <div class="impact-boxes">
-              <div class="impact-box">
+            <div class="impact-boxes motion-stagger">
+              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
                 <div class="case-metric">
                   <span class="case-metric-num">95</span>
                   <span class="case-metric-unit">%</span>
@@ -668,7 +667,7 @@
                   <span class="lang-en">Automation of operational reports and reduction of fragmented spreadsheets.</span>
                 </p>
               </div>
-              <div class="impact-box">
+              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
                 <div class="case-metric">
                   <span class="case-metric-num">12</span>
                   <span class="case-metric-unit"><span class="lang-pt">meses</span><span class="lang-en">months</span></span>
@@ -678,7 +677,7 @@
                   <span class="lang-en">Project duration — complete discovery and architecture lifecycle.</span>
                 </p>
               </div>
-              <div class="impact-box">
+              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
                 <div class="case-metric">
                   <span class="case-metric-num">7</span>
                   <span class="case-metric-unit"><span class="lang-pt">canais</span><span class="lang-en">channels</span></span>
@@ -688,7 +687,7 @@
                   <span class="lang-en">Orbital and aerial monitoring sources integrated into a single hub.</span>
                 </p>
               </div>
-              <div class="impact-box">
+              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
                 <div class="case-metric">
                   <span class="case-metric-num">100</span>
                   <span class="case-metric-unit">%</span>
@@ -706,18 +705,18 @@
         <section class="section-pad px-6" id="reflection">
           <div class="max-w-[1440px] w-full mx-auto relative z-10">
             <div class="section-header">
-              <span class="section-kicker">
+              <span class="section-kicker motion-reveal-up motion-section">
                 <span class="lang-pt">10 / Reflexões do Designer</span>
                 <span class="lang-en">10 / Designer Reflections</span>
               </span>
               <div class="section-header-grid">
                 <div class="section-header-title-col">
-                  <h2 class="section-header-title">
+                  <h2 class="section-header-title motion-reveal-up motion-section">
                     <span class="lang-pt">Modelagem conceitual deve preceder as telas.</span>
                     <span class="lang-en">Conceptual modeling must precede screens.</span>
                   </h2>
                 </div>
-                <div class="section-header-subtitle">
+                <div class="section-header-subtitle motion-reveal-up motion-section">
                   <p>
                     <span class="lang-pt">O maior aprendizado foi sobre modelagem antes de design. Tentar desenhar telas sem um modelo claro de entidades, estados e transições é montar um mapa sem conhecer o território.</span>
                     <span class="lang-en">The biggest learning was about modeling before design. Trying to draw screens without a clear model of entities, states, and transitions is building a map without knowing the terrain.</span>
@@ -725,8 +724,8 @@
                 </div>
               </div>
             </div>
-            <p class="case-body lang-pt">O tempo investido em entender o domínio operacional — antes de qualquer wireframe — foi o que tornou as decisões de interface defensáveis. Não "achei que ficaria mais claro assim", mas "o fluxo de classificação exige esse campo porque o regulamento prevê essa obrigação".</p>
-            <p class="case-body lang-en">The time invested in understanding the operational domain — before any wireframe — was what made interface decisions defensible. Not "I thought this would be clearer", but "the classification flow requires this field because the regulation stipulates this obligation".</p>
+            <p class="case-body lang-pt motion-reveal-up motion-section">O tempo investido em entender o domínio operacional — antes de qualquer wireframe — foi o que tornou as decisões de interface defensáveis. Não "achei que ficaria mais claro assim", mas "o fluxo de classificação exige esse campo porque o regulamento prevê essa obrigação".</p>
+            <p class="case-body lang-en motion-reveal-up motion-section">The time invested in understanding the operational domain — before any wireframe — was what made interface decisions defensible. Not "I thought this would be clearer", but "the classification flow requires this field because the regulation stipulates this obligation".</p>
           </div>
         </section>
 
@@ -734,7 +733,7 @@
     </div>
 
     <!-- NEXT CASE NAVIGATION -->
-    <nav class="case-nav-bar" aria-label="Navegação do caso">
+    <nav class="case-nav-bar motion-reveal-up motion-section" aria-label="Navegação do caso">
       <div class="case-nav-bar-inner">
         <a href="bmg.html" class="case-nav-link"><span aria-hidden="true">←</span><span>BMG</span></a>
         <a href="bayer.html" class="case-nav-link case-nav-link--primary">
@@ -770,6 +769,7 @@
   </footer>
 
   <script defer src="../assets/js/site.js"></script>
+  <script defer src="../assets/js/motion.js?v=20260610"></script>
 </body>
 
 </html>

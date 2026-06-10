@@ -14,6 +14,7 @@
 
 
   <link rel="stylesheet" href="assets/css/site.css?v=20260526-home-fix-01">
+  <link rel="stylesheet" href="assets/css/motion.css?v=20260610">
       <noscript>
     <style>
       .availability-badge-v2,
@@ -97,14 +98,14 @@
 
           <!-- Availability Badge -->
           <div
-            class="availability-badge-v2 inline-flex items-center gap-3 mb-10 px-4 py-2 rounded-full border border-support-300 bg-base-100/60 backdrop-blur-md">
+            class="availability-badge-v2 motion-reveal-up motion-hero inline-flex items-center gap-3 mb-10 px-4 py-2 rounded-full border border-support-300 bg-base-100/60 backdrop-blur-md">
             <span class="avail-dot-v2 w-2 h-2 rounded-full bg-accent-600 flex-shrink-0" aria-hidden="true"></span>
             <span class="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-text-primary font-bold whitespace-nowrap"
               data-t="hero.availability">Disponível agora · CLT · PJ · Freelancer</span>
           </div>
 
           <!-- Micro Taxonomy / Eyebrow -->
-          <div class="flex items-center gap-4 mb-8 overflow-hidden">
+          <div class="flex items-center gap-4 mb-8 overflow-hidden motion-reveal-up motion-hero">
             <div class="w-8 h-[1px] bg-accent-500 eyebrow-line origin-left"></div>
             <span
               class="font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-text-secondary font-bold eyebrow-text"
@@ -124,13 +125,13 @@
 
           <!-- Supporting Paragraph -->
           <p
-             class="font-body text-base md:text-xl text-text-secondary max-w-[75ch] leading-relaxed mb-16 sub"
+             class="font-body text-base md:text-xl text-text-secondary max-w-[75ch] leading-relaxed mb-16 sub motion-reveal-up motion-blur-in motion-hero"
              data-t="sub">
              Ajudo empresas a transformar fluxos confusos, dados dispersos e regras complexas em produtos digitais fáceis de operar.
           </p>
 
           <!-- CTA -->
-          <div class="cta-wrapper mb-8">
+          <div class="cta-wrapper mb-8 motion-reveal-up motion-hero">
             <div class="magnetic-wrap inline-block">
               <a href="#contact"
                 class="group relative inline-flex items-center gap-4 bg-accent-600 text-white border border-transparent hover:border-white/20 px-8 py-4 rounded-full font-bold overflow-hidden transition-all duration-300 shadow-sm hover:shadow-md hero-cta">
@@ -146,7 +147,7 @@
       </div>
 
       <!-- Clients Marquee -->
-      <div class="clients-strip">
+      <div class="clients-strip motion-reveal-up motion-hero">
         <div class="clients-strip-inner">
           <span class="clients-label" data-t="worked-with">Clientes</span>
           <div class="ev-marquee overflow-hidden w-full" aria-label="Clientes">
@@ -196,14 +197,14 @@
 
         <!-- Section Header — standardized system -->
         <div class="section-header">
-          <span class="section-kicker">
+          <span class="section-kicker motion-reveal-up motion-section">
             <span data-t="s4.tag">CONTEXTO · ESTRUTURA · INTERAÇÃO</span>
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
-              <h2 class="section-header-title" data-t="s4.title">Antes de desenhar telas,<br>organizo o problema.</h2>
+              <h2 class="section-header-title motion-reveal-up motion-section" data-t="s4.title">Antes de desenhar telas,<br>organizo o problema.</h2>
             </div>
-            <div class="section-header-subtitle">
+            <div class="section-header-subtitle motion-reveal-up motion-section">
               <div class="section-microstats section-microcopy">
                 <span data-t="s4.stat1">MÉTODO APLICADO A PRODUTOS COMPLEXOS</span>
               </div>
@@ -213,10 +214,10 @@
         </div>
 
         <!-- Framework Architecture Implementation -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 relative" id="framework-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 relative" id="framework-grid" class="motion-stagger">
 
           <!-- Step 1: Wide Item -->
-          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
+          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card motion-stagger-item motion-reveal-up motion-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
 
             <div class="relative z-10">
               <div class="flex items-start justify-between mb-16 md:mb-24">
@@ -234,7 +235,7 @@
           </div>
 
           <!-- Step 2: Regular Item -->
-          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
+          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card motion-stagger-item motion-reveal-up motion-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
 
             <div class="relative z-10">
               <div class="flex items-start justify-between mb-16 md:mb-24">
@@ -255,7 +256,7 @@
           </div>
 
           <!-- Step 3: Regular Item -->
-          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
+          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card motion-stagger-item motion-reveal-up motion-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
 
             <div class="relative z-10">
               <div class="flex items-start justify-between mb-16 md:mb-24">
@@ -273,7 +274,7 @@
           </div>
 
           <!-- Step 4: Wide Item -->
-          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
+          <div class="col-span-1 md:col-span-2 lg:col-span-2 framework-card motion-stagger-item motion-reveal-up motion-card relative p-8 md:p-10 border border-support-200/40 bg-base-100/50 backdrop-blur-md overflow-hidden group">
 
             <div class="relative z-10">
               <div class="flex items-start justify-between mb-16 md:mb-24">
@@ -303,7 +304,7 @@
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
-              <h2 class="section-header-title" data-t="s3.header.title">Trabalhos onde clareza<br>virou operação.</h2>
+              <h2 class="section-header-title motion-reveal-up motion-section" data-t="s3.header.title">Trabalhos onde clareza<br>virou operação.</h2>
             </div>
             <div class="section-header-subtitle">
               <div class="section-microstats section-microcopy">
@@ -315,10 +316,10 @@
         </div>
 
         <!-- 4-Column Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-12 relative" id="cases-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-12 relative" id="cases-grid" class="motion-stagger">
 
           <!-- CASE 1: PETROBRAS — Critical Offshore Operations -->
-          <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="critical" data-case-index="0" role="button" tabindex="0">
+          <a href="cases/petrobras.html" class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card block motion-stagger-item motion-reveal-up motion-card" data-behavior="critical" data-case-index="0">
             <div class="flex-grow relative overflow-hidden">
               <!-- Petrobras Behavioral Overlay: slow radar sweep, environmental pulse rings, maritime routing drift -->
               <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -370,10 +371,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- CASE 2: AMBEV — Distributed Logistics Infrastructure -->
-          <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="distributed" data-case-index="2" role="button" tabindex="0">
+          <a href="cases/ambev.html" class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card block motion-stagger-item motion-reveal-up motion-card" data-behavior="distributed" data-case-index="2">
             <div class="flex-grow relative overflow-hidden">
               <!-- Ambev Behavioral Overlay: distributed flow movement, synchronized pulses, logistics routing -->
               <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -425,10 +426,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- CASE 3: BAYER — Territorial Environmental Intelligence -->
-          <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="territorial" data-case-index="1" role="button" tabindex="0">
+          <a href="cases/bayer.html" class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card block motion-stagger-item motion-reveal-up motion-card" data-behavior="territorial" data-case-index="1">
             <div class="flex-grow relative overflow-hidden">
               <!-- Bayer Behavioral Overlay: territorial scan, atmospheric drift, predictive geospatial grid -->
               <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -479,10 +480,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- CASE 4: BMG — Enterprise Financial Operations -->
-          <div class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card" data-behavior="regulated" data-case-index="3" role="button" tabindex="0">
+          <a href="cases/bmg.html" class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card block motion-stagger-item motion-reveal-up motion-card" data-behavior="regulated" data-case-index="3">
             <div class="flex-grow relative overflow-hidden">
               <!-- BMG Behavioral Overlay: workflow state transitions, modular activation, supervision pulses -->
               <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -534,7 +535,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
         </div>
 
@@ -645,10 +646,10 @@
         </div>
 
         <!-- Impact Grid 2x2 -->
-        <div class="impact-grid">
+        <div class="impact-grid motion-stagger">
 
 <!-- Card 1: Petrobras -->
-           <div class="impact-cell">
+           <div class="impact-cell motion-stagger-item motion-reveal-up motion-card">
              <div class="impact-card-side">
                <h3 data-t="imp1.client">Petrobras</h3>
                <div class="mb-auto">
@@ -671,7 +672,7 @@
            </div>
 
 <!-- Card 2: Bayer -->
-           <div class="impact-cell">
+           <div class="impact-cell motion-stagger-item motion-reveal-up motion-card">
              <div class="impact-card-side">
                <h3 data-t="imp2.client">Bayer</h3>
                <div class="mb-auto">
@@ -694,7 +695,7 @@
            </div>
 
 <!-- Card 3: Ambev -->
-           <div class="impact-cell">
+           <div class="impact-cell motion-stagger-item motion-reveal-up motion-card">
              <div class="impact-card-side">
                <h3 data-t="imp3.client">Ambev</h3>
                <div class="mb-auto">
@@ -717,7 +718,7 @@
            </div>
 
 <!-- Card 4: BMG -->
-           <div class="impact-cell">
+           <div class="impact-cell motion-stagger-item motion-reveal-up motion-card">
              <div class="impact-card-side">
                <h3 data-t="imp4.client">BMG</h3>
                <div class="mb-auto">
@@ -964,6 +965,7 @@
   </footer>
 
   <script defer src="assets/js/site.js?v=20260526-home-fix-01"></script>
+  <script defer src="assets/js/motion.js?v=20260610"></script>
 </body>
 
 </html>

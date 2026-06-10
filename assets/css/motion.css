@@ -1,0 +1,175 @@
+/**
+ * Organic & Semantic Motion System
+ * Henrico Amaral Portfolio
+ */
+
+:root {
+  --motion-duration-fast: 480ms;
+  --motion-duration-base: 780ms;
+  --motion-duration-slow: 1080ms;
+  --motion-ease-organic: cubic-bezier(0.16, 1, 0.3, 1); /* power4.out-like smooth deceleration */
+  --motion-ease-soft: cubic-bezier(0.25, 1, 0.5, 1);    /* power3.out-like soft easing */
+  --motion-ease-linear: linear;
+  --motion-delay: 0ms;
+}
+
+/* Base class for reveal elements */
+.motion-reveal,
+.motion-reveal-up,
+.motion-reveal-down,
+.motion-reveal-left,
+.motion-reveal-right,
+.motion-blur-in,
+.motion-fade-in,
+.motion-scale-in {
+  opacity: 0;
+  will-change: transform, opacity, filter;
+  transition:
+    opacity var(--motion-duration-base) var(--motion-ease-organic) var(--motion-delay),
+    transform var(--motion-duration-base) var(--motion-ease-organic) var(--motion-delay),
+    filter var(--motion-duration-base) var(--motion-ease-organic) var(--motion-delay);
+}
+
+/* Specific reveal variations */
+.motion-reveal-up {
+  transform: translateY(24px);
+}
+.motion-reveal-down {
+  transform: translateY(-24px);
+}
+.motion-reveal-left {
+  transform: translateX(18px);
+}
+.motion-reveal-right {
+  transform: translateX(-18px);
+}
+.motion-blur-in {
+  filter: blur(5px);
+}
+.motion-fade-in {
+  /* Simple fade - no displacement */
+}
+.motion-scale-in {
+  transform: scale(0.97);
+}
+
+/* State when active / visible */
+.motion-reveal.is-visible,
+.motion-reveal-up.is-visible,
+.motion-reveal-down.is-visible,
+.motion-reveal-left.is-visible,
+.motion-reveal-right.is-visible,
+.motion-blur-in.is-visible,
+.motion-fade-in.is-visible,
+.motion-scale-in.is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+  filter: blur(0px);
+}
+
+/* Combinations */
+.motion-reveal-up.motion-blur-in {
+  transform: translateY(24px);
+  filter: blur(5px);
+}
+.motion-reveal-up.motion-blur-in.is-visible {
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+/* Semantics */
+.motion-hero {
+  --motion-duration-base: var(--motion-duration-slow);
+}
+.motion-card {
+  --motion-duration-base: var(--motion-duration-base);
+}
+.motion-image,
+.motion-diagram {
+  --motion-duration-base: var(--motion-duration-slow);
+}
+.motion-section {
+  --motion-duration-base: var(--motion-duration-slow);
+}
+
+/* Stagger structure */
+.motion-stagger > .motion-stagger-item:nth-child(1) { --motion-delay: 40ms; }
+.motion-stagger > .motion-stagger-item:nth-child(2) { --motion-delay: 90ms; }
+.motion-stagger > .motion-stagger-item:nth-child(3) { --motion-delay: 140ms; }
+.motion-stagger > .motion-stagger-item:nth-child(4) { --motion-delay: 190ms; }
+.motion-stagger > .motion-stagger-item:nth-child(5) { --motion-delay: 240ms; }
+.motion-stagger > .motion-stagger-item:nth-child(6) { --motion-delay: 290ms; }
+.motion-stagger > .motion-stagger-item:nth-child(7) { --motion-delay: 340ms; }
+.motion-stagger > .motion-stagger-item:nth-child(8) { --motion-delay: 390ms; }
+
+/* Parallax setup */
+.motion-parallax,
+.motion-parallax-soft {
+  will-change: transform;
+}
+
+/* Editorial Hero Background Parallax */
+.motion-parallax-bg {
+  will-change: transform, opacity;
+  transform: scale(1.04);
+}
+
+/* Microinteractions - discretely premium cards hover */
+.case-card, .impact-cell, .framework-card, .about-card {
+  transition:
+    border-color 0.4s var(--motion-ease-soft),
+    box-shadow 0.4s var(--motion-ease-soft),
+    transform 0.4s var(--motion-ease-soft),
+    background 0.4s var(--motion-ease-soft);
+}
+
+.case-card:hover {
+  border-color: rgba(190, 156, 110, 0.22);
+  transform: translateY(-2px);
+}
+
+.impact-cell:hover {
+  border-color: rgba(190, 156, 110, 0.24);
+  transform: translateY(-1px);
+}
+
+.framework-card:hover {
+  border-color: rgba(190, 156, 110, 0.25);
+  transform: translateY(-1px);
+}
+
+.about-card:hover {
+  border-color: rgba(190, 156, 110, 0.25);
+  transform: translateY(-1px);
+}
+
+/* prefers-reduced-motion: reduce overrides */
+@media (prefers-reduced-motion: reduce) {
+  .motion-reveal,
+  .motion-reveal-up,
+  .motion-reveal-down,
+  .motion-reveal-left,
+  .motion-reveal-right,
+  .motion-blur-in,
+  .motion-fade-in,
+  .motion-scale-in,
+  .motion-reveal-up.motion-blur-in {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+  .motion-parallax,
+  .motion-parallax-soft,
+  .motion-parallax-bg {
+    transform: none !important;
+    transition: none !important;
+  }
+  .magnetic-wrap, .motion-magnetic {
+    transform: none !important;
+    transition: none !important;
+  }
+  .case-card:hover, .impact-cell:hover, .framework-card:hover {
+    transform: none !important;
+  }
+}

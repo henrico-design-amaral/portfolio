@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/tailwind.generated.css?v=20260526-home-fix-01">
   <link rel="stylesheet" href="assets/css/site.css?v=20260526-home-fix-01">
   <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/motion.css?v=20260610">
   <script>(function(){try{var l=localStorage.getItem('henrico_lang');if(l==='en'){document.documentElement.lang='en';document.documentElement.dataset.lang='en';}}catch(e){}})()</script>
 </head>
 
@@ -53,21 +54,21 @@
   <main id="main-content">
     <div id="sr-announcer" role="status" aria-live="polite" class="sr-only"></div>
 
-    <section class="about-hero" aria-labelledby="about-title">
+    <section class="about-hero" id="hero" aria-labelledby="about-title">
       <div class="max-w-[1440px] mx-auto w-full">
-        <p class="about-eyebrow">
+        <p class="about-eyebrow motion-reveal-up motion-hero">
           <span class="lang-pt">Sobre · Trajetória · Método</span>
           <span class="lang-en">About · Trajectory · Method</span>
         </p>
-        <h1 id="about-title">
+        <h1 id="about-title" class="motion-reveal-up motion-hero">
           <span class="lang-pt">Antes da tela, a estrutura.</span>
           <span class="lang-en">Structure before the screen.</span>
         </h1>
-        <p class="about-hero__lead">
+        <p class="about-hero__lead motion-reveal-up motion-blur-in motion-hero">
           <span class="lang-pt">Sou Senior Product Designer especializado em sistemas complexos, plataformas enterprise e interfaces que sustentam decisões operacionais. Meu trabalho é transformar fluxos, dados e regras em produtos que equipes conseguem entender, operar e defender.</span>
           <span class="lang-en">I am a Senior Product Designer focused on complex systems, enterprise platforms, and interfaces that support operational decisions. My work turns workflows, data, and rules into products teams can understand, operate, and defend.</span>
         </p>
-        <div class="about-summary-grid" aria-label="Resumo profissional / Professional summary">
+        <div class="about-summary-grid motion-reveal-up motion-hero" aria-label="Resumo profissional / Professional summary">
           <div class="about-summary-cell">
             <span class="lang-pt">Experiência</span><span class="lang-en">Experience</span>
             <strong><span class="lang-pt">Aprox. 20 anos em design digital; 15+ em UX/Product Design.</span><span class="lang-en">Approx. 20 years in digital design; 15+ in UX/Product Design.</span></strong>
@@ -87,37 +88,37 @@
     <section class="about-section" id="trajectory" aria-labelledby="trajectory-title">
       <div class="about-shell about-section-grid">
         <div>
-          <span class="about-kicker"><span class="lang-pt">01 / Trajetória</span><span class="lang-en">01 / Trajectory</span></span>
-          <h2 class="about-section-title" id="trajectory-title"><span class="lang-pt">Uma linha de trabalho.</span><span class="lang-en">One line of work.</span></h2>
+          <span class="about-kicker motion-reveal-up motion-section"><span class="lang-pt">01 / Trajetória</span><span class="lang-en">01 / Trajectory</span></span>
+          <h2 class="about-section-title motion-reveal-up motion-section" id="trajectory-title"><span class="lang-pt">Uma linha de trabalho.</span><span class="lang-en">One line of work.</span></h2>
         </div>
         <div>
-          <p class="about-copy">
+          <p class="about-copy motion-reveal-up motion-section">
             <span class="lang-pt">A trajetória não foi uma troca de tema a cada projeto. Foi uma aproximação progressiva de problemas onde interface, operação e decisão se sobrepõem.</span>
             <span class="lang-en">The trajectory was not a change of subject from project to project. It was a progressive move toward problems where interface, operation, and decision-making overlap.</span>
           </p>
-          <div class="about-timeline">
-            <article class="about-timeline-item">
+          <div class="about-timeline motion-stagger">
+            <article class="about-timeline-item motion-stagger-item motion-reveal-up motion-card">
               <span class="about-timeline-phase"><span class="lang-pt">Fase 01</span><span class="lang-en">Phase 01</span></span>
               <div>
                 <h3 class="about-timeline-title"><span class="lang-pt">Base em design digital e interface.</span><span class="lang-en">Digital design and interface foundation.</span></h3>
                 <p class="about-timeline-body"><span class="lang-pt">A base veio do desenho de produtos digitais, hierarquia visual, layout, interação e entrega de interfaces para contextos reais de negócio.</span><span class="lang-en">The foundation came from digital product design, visual hierarchy, layout, interaction, and interface delivery for real business contexts.</span></p>
               </div>
             </article>
-            <article class="about-timeline-item">
+            <article class="about-timeline-item motion-stagger-item motion-reveal-up motion-card">
               <span class="about-timeline-phase"><span class="lang-pt">Fase 02</span><span class="lang-en">Phase 02</span></span>
               <div>
                 <h3 class="about-timeline-title"><span class="lang-pt">Transição para UX e Product Design.</span><span class="lang-en">Transition into UX and Product Design.</span></h3>
                 <p class="about-timeline-body"><span class="lang-pt">O foco saiu da tela isolada e foi para fluxos, jornadas, regras de negócio, usuários, validação e decisões de produto.</span><span class="lang-en">The focus moved from isolated screens to workflows, journeys, business rules, users, validation, and product decisions.</span></p>
               </div>
             </article>
-            <article class="about-timeline-item">
+            <article class="about-timeline-item motion-stagger-item motion-reveal-up motion-card">
               <span class="about-timeline-phase"><span class="lang-pt">Fase 03</span><span class="lang-en">Phase 03</span></span>
               <div>
                 <h3 class="about-timeline-title"><span class="lang-pt">Enterprise, B2B e sistemas internos.</span><span class="lang-en">Enterprise, B2B, and internal systems.</span></h3>
                 <p class="about-timeline-body"><span class="lang-pt">Projetos para Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood, BMG e Youse consolidaram repertório em sistemas com múltiplos atores, dados distribuídos e restrições operacionais.</span><span class="lang-en">Projects for Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood, BMG, and Youse consolidated a repertoire in systems with multiple actors, distributed data, and operational constraints.</span></p>
               </div>
             </article>
-            <article class="about-timeline-item">
+            <article class="about-timeline-item motion-stagger-item motion-reveal-up motion-card">
               <span class="about-timeline-phase"><span class="lang-pt">Fase 04</span><span class="lang-en">Phase 04</span></span>
               <div>
                 <h3 class="about-timeline-title"><span class="lang-pt">Infraestrutura de decisão.</span><span class="lang-en">Decision infrastructure.</span></h3>
@@ -132,23 +133,23 @@
     <section class="about-section about-section--dark" id="work" aria-labelledby="work-title">
       <div class="about-shell about-section-grid">
         <div>
-          <span class="about-kicker"><span class="lang-pt">02 / Como trabalho</span><span class="lang-en">02 / How I work</span></span>
-          <h2 class="about-section-title" id="work-title"><span class="lang-pt">Do domínio para a interface.</span><span class="lang-en">From domain to interface.</span></h2>
+          <span class="about-kicker motion-reveal-up motion-section"><span class="lang-pt">02 / Como trabalho</span><span class="lang-en">02 / How I work</span></span>
+          <h2 class="about-section-title motion-reveal-up motion-section" id="work-title"><span class="lang-pt">Do domínio para a interface.</span><span class="lang-en">From domain to interface.</span></h2>
         </div>
-        <div class="about-card-grid">
-          <article class="about-card">
+        <div class="about-card-grid motion-stagger">
+          <article class="about-card motion-stagger-item motion-reveal-up motion-card">
             <h3><span class="lang-pt">Entender o contexto</span><span class="lang-en">Understand context</span></h3>
             <p><span class="lang-pt">Mapear quem usa, quem decide, quais regras importam, onde o fluxo quebra e o que precisa ser rastreável.</span><span class="lang-en">Map who uses it, who decides, which rules matter, where the flow breaks, and what needs traceability.</span></p>
           </article>
-          <article class="about-card">
+          <article class="about-card motion-stagger-item motion-reveal-up motion-card">
             <h3><span class="lang-pt">Organizar a estrutura</span><span class="lang-en">Organize structure</span></h3>
             <p><span class="lang-pt">Transformar processos dispersos em jornadas, estados, permissões, prioridades e relações entre entidades.</span><span class="lang-en">Turn dispersed processes into journeys, states, permissions, priorities, and entity relationships.</span></p>
           </article>
-          <article class="about-card">
+          <article class="about-card motion-stagger-item motion-reveal-up motion-card">
             <h3><span class="lang-pt">Desenhar a experiência</span><span class="lang-en">Design the experience</span></h3>
             <p><span class="lang-pt">Criar interfaces que reduzem ambiguidade, orientam ação e tornam o sistema operável sem simplificar falsamente o domínio.</span><span class="lang-en">Create interfaces that reduce ambiguity, guide action, and make the system operable without falsely simplifying the domain.</span></p>
           </article>
-          <article class="about-card">
+          <article class="about-card motion-stagger-item motion-reveal-up motion-card">
             <h3><span class="lang-pt">Validar e ajustar</span><span class="lang-en">Validate and adjust</span></h3>
             <p><span class="lang-pt">Testar hipóteses, alinhar áreas envolvidas e refinar a solução antes de consolidar padrões de interface.</span><span class="lang-en">Test hypotheses, align involved teams, and refine the solution before consolidating interface patterns.</span></p>
           </article>
@@ -159,11 +160,11 @@
     <section class="about-section" id="repertoire" aria-labelledby="repertoire-title">
       <div class="about-shell about-section-grid">
         <div>
-          <span class="about-kicker"><span class="lang-pt">03 / Repertório</span><span class="lang-en">03 / Repertoire</span></span>
-          <h2 class="about-section-title" id="repertoire-title"><span class="lang-pt">Setores diferentes. Problema recorrente.</span><span class="lang-en">Different sectors. Recurring problem.</span></h2>
+          <span class="about-kicker motion-reveal-up motion-section"><span class="lang-pt">03 / Repertório</span><span class="lang-en">03 / Repertoire</span></span>
+          <h2 class="about-section-title motion-reveal-up motion-section" id="repertoire-title"><span class="lang-pt">Setores diferentes. Problema recorrente.</span><span class="lang-en">Different sectors. Recurring problem.</span></h2>
         </div>
-        <div class="about-card-grid">
-          <article class="about-card">
+        <div class="about-card-grid motion-stagger">
+          <article class="about-card motion-stagger-item motion-reveal-up motion-card">
             <h3><span class="lang-pt">O que resolvo</span><span class="lang-en">What I solve</span></h3>
             <ul>
               <li><span class="lang-pt">Fluxos confusos e decisões sem contexto.</span><span class="lang-en">Messy flows and decisions without context.</span></li>
@@ -172,7 +173,7 @@
               <li><span class="lang-pt">Múltiplos stakeholders operando versões diferentes da realidade.</span><span class="lang-en">Multiple stakeholders operating from different versions of reality.</span></li>
             </ul>
           </article>
-          <article class="about-card">
+          <article class="about-card motion-stagger-item motion-reveal-up motion-card">
             <h3><span class="lang-pt">Onde atuo</span><span class="lang-en">Where I operate</span></h3>
             <ul>
               <li><span class="lang-pt">Energia, bancos, seguros, telecom, agro e logística.</span><span class="lang-en">Energy, banking, insurance, telecom, agriculture, and logistics.</span></li>
@@ -181,7 +182,7 @@
               <li><span class="lang-pt">Ambientes com produto, tecnologia e negócio decidindo juntos.</span><span class="lang-en">Environments where product, technology, and business decide together.</span></li>
             </ul>
           </article>
-          <article class="about-card">
+          <article class="about-card motion-stagger-item motion-reveal-up motion-card">
             <h3><span class="lang-pt">Princípios</span><span class="lang-en">Principles</span></h3>
             <ul>
               <li><span class="lang-pt">Arquitetura antes da interface.</span><span class="lang-en">Architecture before interface.</span></li>
@@ -190,7 +191,7 @@
               <li><span class="lang-pt">Simplicidade como organização, não como remoção de complexidade.</span><span class="lang-en">Simplicity as organization, not complexity removal.</span></li>
             </ul>
           </article>
-          <article class="about-card">
+          <article class="about-card motion-stagger-item motion-reveal-up motion-card">
             <h3><span class="lang-pt">Ferramentas reais</span><span class="lang-en">Real tools</span></h3>
             <ul>
               <li>Figma, FigJam, Miro, Notion</li>
@@ -206,24 +207,30 @@
     <section class="about-section about-section--dark" id="contact" aria-labelledby="contact-title">
       <div class="about-shell about-section-grid">
         <div>
-          <span class="about-kicker"><span class="lang-pt">04 / Conversa</span><span class="lang-en">04 / Conversation</span></span>
-          <h2 class="about-section-title" id="contact-title"><span class="lang-pt">Para projetos e vagas sêniores.</span><span class="lang-en">For senior projects and roles.</span></h2>
+          <span class="about-kicker motion-reveal-up motion-section"><span class="lang-pt">04 / Conversa</span><span class="lang-en">04 / Conversation</span></span>
+          <h2 class="about-section-title motion-reveal-up motion-section" id="contact-title"><span class="lang-pt">Para projetos e vagas sêniores.</span><span class="lang-en">For senior projects and roles.</span></h2>
         </div>
         <div>
-          <p class="about-copy">
+          <p class="about-copy motion-reveal-up motion-section">
             <span class="lang-pt">Disponível para posições CLT, contratos PJ, freelas e conversas técnicas sobre produtos B2B, sistemas internos, plataformas enterprise e operações complexas.</span>
             <span class="lang-en">Available for full-time roles, contractor work, freelance projects, and technical conversations about B2B products, internal systems, enterprise platforms, and complex operations.</span>
           </p>
-          <div class="about-cta">
-            <a href="mailto:henricoamaral.design@gmail.com" class="contact-action contact-action--primary">
-              <span data-t="ct.email">Enviar e-mail</span><span aria-hidden="true">→</span>
-            </a>
-            <a href="docs/Henrico-Amaral-CV.pdf" class="contact-action">
-              <span data-t="ct.cv">Ver CV</span><span aria-hidden="true">↗</span>
-            </a>
-            <a href="index.html#cases" class="contact-action">
-              <span data-t="ct.cases">Ver cases</span><span aria-hidden="true">↓</span>
-            </a>
+          <div class="about-cta motion-reveal-up motion-section">
+            <div class="magnetic-wrap inline-block">
+              <a href="mailto:henricoamaral.design@gmail.com" class="contact-action contact-action--primary">
+                <span data-t="ct.email">Enviar e-mail</span><span aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="magnetic-wrap inline-block">
+              <a href="docs/Henrico-Amaral-CV.pdf" class="contact-action">
+                <span data-t="ct.cv">Ver CV</span><span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <div class="magnetic-wrap inline-block">
+              <a href="index.html#cases" class="contact-action">
+                <span data-t="ct.cases">Ver cases</span><span aria-hidden="true">↓</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -253,6 +260,7 @@
   </footer>
 
   <script defer src="assets/js/site.js?v=20260526-home-fix-01"></script>
+  <script defer src="assets/js/motion.js?v=20260610"></script>
 </body>
 
 </html>

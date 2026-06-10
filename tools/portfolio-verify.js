@@ -198,7 +198,8 @@ async function inspectEnglishToggle(browser) {
   return state;
 }
 
-async function inspectCaseModal(browser) {
+
+async function inspectCaseLinks(browser) {
   const expectedLinks = {
     '0': 'cases/petrobras.html',
     '1': 'cases/bayer.html',
@@ -206,8 +207,7 @@ async function inspectCaseModal(browser) {
     '3': 'cases/bmg.html',
   };
   const context = await browser.newContext({
-    viewport: { width: 1366, height: 900 },
-    reducedMotion: 'reduce',
+    viewport: { width: 1366, height: 900 }
   });
   const page = await context.newPage();
   const messages = [];
@@ -220,57 +220,38 @@ async function inspectCaseModal(browser) {
   page.on('pageerror', (error) => messages.push(`pageerror: ${error.message}`));
 
   await page.goto(`${BASE_URL}/`, { waitUntil: 'networkidle' });
-  await page.locator('#cases').scrollIntoViewIfNeeded();
 
   const results = [];
   const cards = await page.locator('[data-case-index]').count();
 
   for (let order = 0; order < cards; order += 1) {
     const card = page.locator('[data-case-index]').nth(order);
-    await card.scrollIntoViewIfNeeded();
     const index = await card.getAttribute('data-case-index');
-    await card.click({ force: true });
-    await page.waitForSelector('#case-modal:not(.hidden)', { timeout: 5000 });
-
-    const modalState = await page.evaluate(() => ({
-      client: document.querySelector('#modal-client')?.textContent?.trim() || '',
-      desc: document.querySelector('#modal-desc')?.textContent?.trim() || '',
-      metric: document.querySelector('#modal-metric')?.textContent?.trim() || '',
-      link: document.querySelector('#modal-case-link')?.getAttribute('href') || '',
-      hidden: document.querySelector('#case-modal')?.classList.contains('hidden') ?? true,
-    }));
+    const tagName = await card.evaluate(el => el.tagName.toLowerCase());
+    const href = await card.getAttribute('href');
 
     results.push({
       order,
       index,
+      tagName,
+      href,
       expectedLink: expectedLinks[index],
-      ...modalState,
     });
-
-    await page.keyboard.press('Escape');
-    await page.waitForFunction(
-      () => document.querySelector('#case-modal')?.classList.contains('hidden'),
-      null,
-      { timeout: 5000 }
-    );
   }
 
-  const firstCard = page.locator('[data-case-index]').first();
-  await firstCard.focus();
-  await page.keyboard.press('Enter');
-  await page.waitForSelector('#case-modal:not(.hidden)', { timeout: 5000 });
-  const enterOpens = await page.evaluate(() => !document.querySelector('#case-modal')?.classList.contains('hidden'));
-  await page.keyboard.press('Escape');
-  await page.waitForFunction(
-    () => document.querySelector('#case-modal')?.classList.contains('hidden'),
-    null,
-    { timeout: 5000 }
-  );
-
-  await firstCard.focus();
-  await page.keyboard.press('Space');
-  await page.waitForSelector('#case-modal:not(.hidden)', { timeout: 5000 });
-  const spaceOpens = await page.evaluate(() => !document.querySelector('#case-modal')?.classList.contains('hidden'));
+  // Verify that clicking a card actually navigates to the expected page
+  let navigationSuccess = true;
+  for (let order = 0; order < cards; order += 1) {
+    await page.goto(`${BASE_URL}/`, { waitUntil: 'networkidle' });
+    const card = page.locator('[data-case-index]').nth(order);
+    const index = await card.getAttribute('data-case-index');
+    const targetHref = expectedLinks[index];
+    await card.click();
+    await page.waitForURL(`**/${targetHref}`, { timeout: 5000 });
+    if (!page.url().endsWith(targetHref)) {
+      navigationSuccess = false;
+    }
+  }
 
   await page.close();
   await context.close();
@@ -278,13 +259,12 @@ async function inspectCaseModal(browser) {
   return {
     cards,
     results,
-    enterOpens,
-    spaceOpens,
+    navigationSuccess,
     messages,
   };
 }
 
-function collectFailures(results, englishToggle, caseModal, referenceFailures) {
+function collectFailures(results, englishToggle, caseLinks, referenceFailures) {
   const failures = [];
 
   for (const result of results) {
@@ -315,22 +295,22 @@ function collectFailures(results, englishToggle, caseModal, referenceFailures) {
     failures.push(`local reference: ${failure}`);
   }
 
-  if (caseModal.cards !== 4) {
-    failures.push(`case modal: expected 4 cards, found ${caseModal.cards}`);
+  if (caseLinks.cards !== 4) {
+    failures.push(`case links: expected 4 cards, found ${caseLinks.cards}`);
   }
-  if (!caseModal.enterOpens) failures.push('case modal: Enter key did not open modal');
-  if (!caseModal.spaceOpens) failures.push('case modal: Space key did not open modal');
-  if (caseModal.messages.length > 0) failures.push(`case modal: console ${caseModal.messages.join(' | ')}`);
+  if (!caseLinks.navigationSuccess) {
+    failures.push('case links: navigation failed when clicking card');
+  }
+  if (caseLinks.messages.length > 0) {
+    failures.push(`case links: console ${caseLinks.messages.join(' | ')}`);
+  }
 
-  for (const result of caseModal.results) {
-    const prefix = `case modal card ${result.order} index ${result.index}`;
+  for (const result of caseLinks.results) {
+    const prefix = `case links card ${result.order} index ${result.index}`;
     if (!result.index) failures.push(`${prefix}: missing data-case-index`);
-    if (result.hidden) failures.push(`${prefix}: modal remained hidden`);
-    if (!result.client) failures.push(`${prefix}: missing client`);
-    if (!result.desc) failures.push(`${prefix}: missing description`);
-    if (!result.metric) failures.push(`${prefix}: missing metric`);
-    if (result.link !== result.expectedLink) {
-      failures.push(`${prefix}: link ${result.link}, expected ${result.expectedLink}`);
+    if (result.tagName !== 'a') failures.push(`${prefix}: tagName is "${result.tagName}", expected "a"`);
+    if (result.href !== result.expectedLink) {
+      failures.push(`${prefix}: href "${result.href}", expected "${result.expectedLink}"`);
     }
   }
 
@@ -350,16 +330,16 @@ function collectFailures(results, englishToggle, caseModal, referenceFailures) {
   }
 
   const englishToggle = await inspectEnglishToggle(browser);
-  const caseModal = await inspectCaseModal(browser);
+  const caseLinks = await inspectCaseLinks(browser);
   await browser.close();
 
   const referenceFailures = inspectLocalReferences();
-  const failures = collectFailures(results, englishToggle, caseModal, referenceFailures);
+  const failures = collectFailures(results, englishToggle, caseLinks, referenceFailures);
   const summary = {
     baseUrl: BASE_URL,
     checkedPages: results.length,
     englishToggle,
-    caseModal,
+    caseLinks,
     localReferences: {
       failures: referenceFailures,
     },
