@@ -94,7 +94,7 @@ function inspectLocalReferences() {
   const cssFiles = [
     'assets/css/site.css',
     'assets/css/about.css',
-    'assets/css/case-petrobras.css',
+    'assets/css/cases.css',
   ];
 
   for (const target of pages) {

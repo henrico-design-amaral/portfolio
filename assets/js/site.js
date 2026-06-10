@@ -642,6 +642,104 @@ function initMagnetic() {
   });
 }
 
+function initCaseHeroMotion() {
+  const caseHero = document.querySelector('.case-hero');
+  if (!caseHero) return;
+
+  const tl = gsap.timeline({
+    defaults: { ease: 'power3.out' }
+  });
+
+  // Fade and scale bg image gently
+  const bg = caseHero.querySelector('.case-hero-bg');
+  if (bg) {
+    tl.fromTo(bg,
+      { autoAlpha: 0, scale: 1.05 },
+      { autoAlpha: 0.25, scale: 1, duration: 1.4 },
+      0
+    );
+  }
+
+  // Animate eyebrow
+  const eyebrow = caseHero.querySelector('.case-hero-eyebrow');
+  if (eyebrow) {
+    tl.fromTo(eyebrow,
+      { autoAlpha: 0, y: 8, filter: 'blur(2px)' },
+      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.8 },
+      0.4
+    );
+  }
+
+  // Animate H1
+  const h1 = caseHero.querySelector('h1');
+  if (h1) {
+    tl.fromTo(h1,
+      { autoAlpha: 0, y: 12, filter: 'blur(2px)' },
+      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.9 },
+      0.5
+    );
+  }
+
+  // Animate client name
+  const client = caseHero.querySelector('.case-hero-client');
+  if (client) {
+    tl.fromTo(client,
+      { autoAlpha: 0, y: 8, filter: 'blur(2px)' },
+      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.8 },
+      0.6
+    );
+  }
+
+  // Animate description
+  const desc = caseHero.querySelector('.case-hero-desc');
+  if (desc) {
+    tl.fromTo(desc,
+      { autoAlpha: 0, y: 10, filter: 'blur(2px)' },
+      { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.8 },
+      0.7
+    );
+  }
+
+  // Animate metadata row items
+  const metaItems = caseHero.querySelectorAll('.case-meta-item');
+  if (metaItems.length) {
+    tl.fromTo(metaItems,
+      { autoAlpha: 0, y: 8 },
+      { autoAlpha: 1, y: 0, duration: 0.8, stagger: 0.05 },
+      0.9
+    );
+  }
+}
+
+function initCaseHeroParallax() {
+  const caseHero = document.querySelector('.case-hero');
+  if (!caseHero) return;
+  const heroBg = caseHero.querySelector('.case-hero-bg');
+  if (!heroBg) return;
+
+  gsap.fromTo(heroBg,
+    { yPercent: -5 },
+    {
+      yPercent: 12,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: caseHero,
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    }
+  );
+}
+
+function initCaseMotion() {
+  const caseHero = document.querySelector('.case-hero');
+  if (!caseHero) return;
+
+  initCaseHeroMotion();
+  initCaseHeroParallax();
+}
+
 function initHomeMotion() {
   motionReduced = reduceMotionQuery.matches;
 
@@ -655,6 +753,7 @@ function initHomeMotion() {
   gsap.registerPlugin(ScrollTrigger);
   document.body.classList.add('motion-ready');
   initHeroMotion();
+  initCaseMotion();
   initScrollReveals();
   initFooterMotion();
   initMagnetic();
