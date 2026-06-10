@@ -11,6 +11,8 @@ ui-ux-pro-max-skill/
 
 # Private/raw case references
 case-references/
+cases/Cases/
+
 
 # Keep only published/public assets in Git
 node_modules/
