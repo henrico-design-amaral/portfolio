@@ -1,0 +1,39 @@
+name: Cache Hygiene CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check-cache-hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Audit tracked files for cache or noise
+        run: |
+          PATTERN='(^|/)(node_modules|dist|build|out|\.next|\.vercel|\.netlify|\.cache|\.parcel-cache|\.vite|\.turbo|coverage|\.lighthouseci|playwright-report|test-results)(/|$)|(\.log$|\.tsbuildinfo$|\.eslintcache$|\.stylelintcache$|Thumbs\.db$|\.DS_Store$|desktop\.ini$)'
+          
+          # Find tracked files
+          TRACKED_FILES=$(git ls-files)
+          BLOCKED_FILES=""
+          
+          for file in $TRACKED_FILES; do
+            if echo "$file" | grep -E -q "$PATTERN"; then
+              BLOCKED_FILES="${BLOCKED_FILES}\n- ${file}"
+            fi
+          done
+          
+          if [ ! -z "$BLOCKED_FILES" ]; then
+            echo -e "\033[31mError: Tracked cache/noise files found in repository:\033[0m"
+            echo -e "$BLOCKED_FILES"
+            echo -e "\033[31mPlease remove these files from git using 'git rm --cached <file>'.\033[0m"
+            exit 1
+          fi
+          
+          echo "Success: No cache or noise files are tracked."
