@@ -10,7 +10,7 @@
     const observerOptions = {
       root: null,
       rootMargin: '0px 0px -10% 0px', // Trigger when element is 10% in viewport
-      threshold: 0.02
+      threshold: 0.14
     };
 
     const revealObserver = new IntersectionObserver((entries, observer) => {

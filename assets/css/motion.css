@@ -4,13 +4,14 @@
  */
 
 :root {
-  --motion-duration-fast: 480ms;
+  --motion-duration-fast: 420ms;
   --motion-duration-base: 780ms;
-  --motion-duration-slow: 1080ms;
+  --motion-duration-slow: 1200ms;
   --motion-ease-organic: cubic-bezier(0.16, 1, 0.3, 1); /* power4.out-like smooth deceleration */
   --motion-ease-soft: cubic-bezier(0.25, 1, 0.5, 1);    /* power3.out-like soft easing */
   --motion-ease-linear: linear;
   --motion-delay: 0ms;
+  --motion-blur-amount: 12px;
 }
 
 /* Base class for reveal elements */
@@ -44,13 +45,13 @@
   transform: translateX(-18px);
 }
 .motion-blur-in {
-  filter: blur(5px);
+  filter: blur(var(--motion-blur-amount));
 }
 .motion-fade-in {
   /* Simple fade - no displacement */
 }
 .motion-scale-in {
-  transform: scale(0.97);
+  transform: scale(0.985); /* max 1.015 entry */
 }
 
 /* State when active / visible */
@@ -70,7 +71,7 @@
 /* Combinations */
 .motion-reveal-up.motion-blur-in {
   transform: translateY(24px);
-  filter: blur(5px);
+  filter: blur(var(--motion-blur-amount));
 }
 .motion-reveal-up.motion-blur-in.is-visible {
   transform: translateY(0);
@@ -125,22 +126,22 @@
 
 .case-card:hover {
   border-color: rgba(190, 156, 110, 0.22);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.015); /* max 1.04 hover */
 }
 
 .impact-cell:hover {
   border-color: rgba(190, 156, 110, 0.24);
-  transform: translateY(-1px);
+  transform: translateY(-1px) scale(1.005);
 }
 
 .framework-card:hover {
   border-color: rgba(190, 156, 110, 0.25);
-  transform: translateY(-1px);
+  transform: translateY(-1px) scale(1.005);
 }
 
 .about-card:hover {
   border-color: rgba(190, 156, 110, 0.25);
-  transform: translateY(-1px);
+  transform: translateY(-1px) scale(1.005);
 }
 
 /* prefers-reduced-motion: reduce overrides */
