@@ -1,7 +1,7 @@
 /**
  * Organic & Semantic Motion System
  * Henrico Amaral Portfolio
- * v20260610-motion-cache-zero-02
+ * v20260610-motion-cache-zero-03
  */
 
 /* ── TOKENS ──────────────────────────────────────────────────────────────────── */
@@ -190,7 +190,7 @@ html.motion-ready .motion-impact.is-visible {
   min-width: max-content;
   gap: 0;
   will-change: transform;
-  animation: ev-client-marquee-track 28s linear infinite;
+  animation: ev-client-marquee-track 22s linear infinite;
 }
 
 .ev-track .marquee-content,
@@ -209,7 +209,7 @@ html.motion-ready .motion-impact.is-visible {
 
 .clients-marquee .marquee-content {
   will-change: transform;
-  animation: ev-client-marquee-content 28s linear infinite;
+  animation: ev-client-marquee-content 22s linear infinite;
 }
 
 @keyframes ev-client-marquee-track {
@@ -225,7 +225,7 @@ html.motion-ready .motion-impact.is-visible {
 @media (max-width: 767px) {
   .ev-track,
   .clients-marquee .marquee-content {
-    animation-duration: 22s;
+    animation-duration: 16s;
   }
 }
 
@@ -233,6 +233,52 @@ html.motion-ready .motion-impact.is-visible {
 .ev-marquee:hover .ev-track,
 .clients-marquee:hover .marquee-content {
   animation-play-state: running;
+}
+
+/* ── MOBILE VISIBILITY CALIBRATION ───────────────────────────────────────────── */
+@media (max-width: 767px) {
+  :root {
+    --motion-duration-slow: 920ms;
+    --motion-distance-y: 34px;
+    --motion-blur-amount: 12px;
+  }
+
+  #hero {
+    min-height: 100svh;
+    padding-bottom: 6.5rem !important;
+  }
+
+  .motion-hero,
+  .motion-case-hero {
+    --motion-distance-y: 34px;
+    --motion-blur-amount: 12px;
+  }
+
+  .clients-strip {
+    display: flex !important;
+    min-height: 3.75rem;
+  }
+
+  html.motion-ready .clients-strip,
+  html.motion-ready .clients-strip.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .clients-strip-inner {
+    gap: 0.85rem;
+  }
+
+  .clients-label {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+  }
+
+  .ev-track .marquee-content span,
+  .clients-marquee .marquee-content span {
+    font-size: 0.95rem;
+  }
 }
 
 /* ── MICRO-INTERACTIONS ──────────────────────────────────────────────────────── */
