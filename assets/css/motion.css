@@ -190,7 +190,7 @@ html.motion-ready .motion-impact.is-visible {
   min-width: max-content;
   gap: 0;
   will-change: transform;
-  animation: ev-client-marquee 28s linear infinite;
+  animation: ev-client-marquee-track 28s linear infinite;
 }
 
 .ev-track .marquee-content,
@@ -203,13 +203,23 @@ html.motion-ready .motion-impact.is-visible {
   white-space: nowrap;
 }
 
-.clients-marquee .marquee-content {
-  animation: ev-client-marquee 28s linear infinite;
+.clients-marquee {
+  display: flex;
 }
 
-@keyframes ev-client-marquee {
+.clients-marquee .marquee-content {
+  will-change: transform;
+  animation: ev-client-marquee-content 28s linear infinite;
+}
+
+@keyframes ev-client-marquee-track {
   from { transform: translate3d(0, 0, 0); }
   to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes ev-client-marquee-content {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(calc(-100% - 2rem), 0, 0); }
 }
 
 @media (max-width: 767px) {
