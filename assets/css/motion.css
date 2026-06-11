@@ -203,13 +203,20 @@ html.motion-ready .motion-impact.is-visible {
   white-space: nowrap;
 }
 
+.clients-marquee .marquee-content {
+  animation: ev-client-marquee 28s linear infinite;
+}
+
 @keyframes ev-client-marquee {
   from { transform: translate3d(0, 0, 0); }
   to { transform: translate3d(-50%, 0, 0); }
 }
 
 @media (max-width: 767px) {
-  .ev-track { animation-duration: 22s; }
+  .ev-track,
+  .clients-marquee .marquee-content {
+    animation-duration: 22s;
+  }
 }
 
 /* Ininterrupta: não pausa no hover. */
