@@ -1,101 +1,105 @@
 /**
  * Organic & Semantic Motion System
  * Henrico Amaral Portfolio
+ * v20260610-motion-cache-zero-01
  */
 
+/* ── TOKENS ──────────────────────────────────────────────────────────────────── */
 :root {
   --motion-duration-fast: 420ms;
   --motion-duration-base: 780ms;
   --motion-duration-slow: 1200ms;
-  --motion-ease-organic: cubic-bezier(0.16, 1, 0.3, 1); /* power4.out-like smooth deceleration */
-  --motion-ease-soft: cubic-bezier(0.25, 1, 0.5, 1);    /* power3.out-like soft easing */
-  --motion-ease-linear: linear;
-  --motion-delay: 0ms;
-  --motion-blur-amount: 12px;
+  --motion-ease-organic: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-soft:    cubic-bezier(0.25, 1, 0.5, 1);
+  --motion-delay:        0ms;
+  --motion-blur-amount:  12px;
 }
 
-/* Base class for reveal elements */
+/* ── BASE REVEAL STATE ───────────────────────────────────────────────────────── */
 .motion-reveal,
 .motion-reveal-up,
-.motion-reveal-down,
 .motion-reveal-left,
 .motion-reveal-right,
-.motion-blur-in,
 .motion-fade-in,
+.motion-blur-in,
 .motion-scale-in {
   opacity: 0;
   will-change: transform, opacity, filter;
   transition:
-    opacity var(--motion-duration-base) var(--motion-ease-organic) var(--motion-delay),
+    opacity   var(--motion-duration-base) var(--motion-ease-organic) var(--motion-delay),
     transform var(--motion-duration-base) var(--motion-ease-organic) var(--motion-delay),
-    filter var(--motion-duration-base) var(--motion-ease-organic) var(--motion-delay);
+    filter    var(--motion-duration-base) var(--motion-ease-organic) var(--motion-delay);
 }
 
-/* Specific reveal variations */
-.motion-reveal-up {
-  transform: translateY(24px);
-}
-.motion-reveal-down {
-  transform: translateY(-24px);
-}
-.motion-reveal-left {
-  transform: translateX(18px);
-}
-.motion-reveal-right {
-  transform: translateX(-18px);
-}
-.motion-blur-in {
-  filter: blur(var(--motion-blur-amount));
-}
-.motion-fade-in {
-  /* Simple fade - no displacement */
-}
-.motion-scale-in {
-  transform: scale(0.985); /* max 1.015 entry */
-}
+/* ── REVEAL VARIATIONS ───────────────────────────────────────────────────────── */
+.motion-reveal-up    { transform: translateY(24px); }
+.motion-reveal-left  { transform: translateX(18px); }
+.motion-reveal-right { transform: translateX(-18px); }
+.motion-blur-in      { filter: blur(var(--motion-blur-amount)); }
+.motion-fade-in      { /* pure fade — no displacement */ }
+.motion-scale-in     { transform: scale(0.985); }
 
-/* State when active / visible */
-.motion-reveal.is-visible,
-.motion-reveal-up.is-visible,
-.motion-reveal-down.is-visible,
-.motion-reveal-left.is-visible,
-.motion-reveal-right.is-visible,
-.motion-blur-in.is-visible,
-.motion-fade-in.is-visible,
-.motion-scale-in.is-visible {
-  opacity: 1;
-  transform: translate(0) scale(1);
-  filter: blur(0px);
-}
-
-/* Combinations */
+/* Combination: reveal-up + blur (most common) */
 .motion-reveal-up.motion-blur-in {
   transform: translateY(24px);
   filter: blur(var(--motion-blur-amount));
 }
-.motion-reveal-up.motion-blur-in.is-visible {
-  transform: translateY(0);
-  filter: blur(0px);
+
+/* ── VISIBLE STATE ───────────────────────────────────────────────────────────── */
+.motion-reveal.is-visible,
+.motion-reveal-up.is-visible,
+.motion-reveal-left.is-visible,
+.motion-reveal-right.is-visible,
+.motion-fade-in.is-visible,
+.motion-blur-in.is-visible,
+.motion-scale-in.is-visible {
+  opacity:   1;
+  transform: translate(0) scale(1);
+  filter:    blur(0px);
 }
 
-/* Semantics */
+/* ── SEMANTIC DURATION TOKENS ────────────────────────────────────────────────── */
+
+/* Hero — slow, cinematic read */
 .motion-hero {
   --motion-duration-base: var(--motion-duration-slow);
 }
-.motion-card {
-  --motion-duration-base: var(--motion-duration-base);
-}
-.motion-image,
-.motion-diagram {
+
+/* Case hero — same weight as index hero */
+.motion-case-hero {
   --motion-duration-base: var(--motion-duration-slow);
 }
+
+/* Case narrative block — medium, readable */
+.motion-case-block {
+  --motion-duration-base: var(--motion-duration-base);
+}
+
+/* Impact / metrics — firm, factual, no fuss */
+.motion-impact {
+  --motion-duration-base: var(--motion-duration-fast);
+}
+
+/* Section kicker / heading */
 .motion-section {
   --motion-duration-base: var(--motion-duration-slow);
 }
 
-/* Stagger structure */
-.motion-stagger > .motion-stagger-item:nth-child(1) { --motion-delay: 40ms; }
-.motion-stagger > .motion-stagger-item:nth-child(2) { --motion-delay: 90ms; }
+/* Cards */
+.motion-card {
+  --motion-duration-base: var(--motion-duration-base);
+}
+
+/* Images and diagrams — slow reveal = depth */
+.motion-image,
+.motion-diagram,
+.motion-panel {
+  --motion-duration-base: var(--motion-duration-slow);
+}
+
+/* ── STAGGER DELAYS ──────────────────────────────────────────────────────────── */
+.motion-stagger > .motion-stagger-item:nth-child(1) { --motion-delay:  40ms; }
+.motion-stagger > .motion-stagger-item:nth-child(2) { --motion-delay:  90ms; }
 .motion-stagger > .motion-stagger-item:nth-child(3) { --motion-delay: 140ms; }
 .motion-stagger > .motion-stagger-item:nth-child(4) { --motion-delay: 190ms; }
 .motion-stagger > .motion-stagger-item:nth-child(5) { --motion-delay: 240ms; }
@@ -103,33 +107,39 @@
 .motion-stagger > .motion-stagger-item:nth-child(7) { --motion-delay: 340ms; }
 .motion-stagger > .motion-stagger-item:nth-child(8) { --motion-delay: 390ms; }
 
-/* Parallax setup */
+/* ── PARALLAX SETUP ──────────────────────────────────────────────────────────── */
 .motion-parallax,
-.motion-parallax-soft {
+.motion-parallax-soft,
+[data-parallax] {
   will-change: transform;
 }
 
-/* Editorial Hero Background Parallax */
+/* Hero background parallax (over-scaled for subtle translate) */
 .motion-parallax-bg {
-  will-change: transform, opacity;
+  will-change: transform;
   transform: scale(1.04);
 }
 
-/* Microinteractions - discretely premium cards hover */
-.case-card, .impact-cell, .framework-card, .about-card {
+/* ── MICRO-INTERACTIONS ──────────────────────────────────────────────────────── */
+.case-card,
+.impact-cell,
+.framework-card,
+.about-card,
+.snapshot-cell {
   transition:
     border-color 0.4s var(--motion-ease-soft),
-    box-shadow 0.4s var(--motion-ease-soft),
-    transform 0.4s var(--motion-ease-soft),
-    background 0.4s var(--motion-ease-soft);
+    box-shadow   0.4s var(--motion-ease-soft),
+    transform    0.4s var(--motion-ease-soft),
+    background   0.4s var(--motion-ease-soft);
 }
 
 .case-card:hover {
   border-color: rgba(190, 156, 110, 0.22);
-  transform: translateY(-2px) scale(1.015); /* max 1.04 hover */
+  transform: translateY(-2px) scale(1.015);
 }
 
-.impact-cell:hover {
+.impact-cell:hover,
+.snapshot-cell:hover {
   border-color: rgba(190, 156, 110, 0.24);
   transform: translateY(-1px) scale(1.005);
 }
@@ -144,33 +154,60 @@
   transform: translateY(-1px) scale(1.005);
 }
 
-/* prefers-reduced-motion: reduce overrides */
+/* Case nav link hover */
+.case-nav-link {
+  transition: color 0.3s var(--motion-ease-soft), opacity 0.3s var(--motion-ease-soft);
+}
+
+/* ── PREFERS-REDUCED-MOTION ─────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
+  /* Global kill-switch — spec-required */
+  *,
+  *::before,
+  *::after {
+    animation-duration:        .001ms !important;
+    animation-iteration-count: 1      !important;
+    scroll-behavior:           auto   !important;
+    transition-duration:       .001ms !important;
+  }
+
+  /* Reveal classes — force visible, no transform/filter */
   .motion-reveal,
   .motion-reveal-up,
-  .motion-reveal-down,
   .motion-reveal-left,
   .motion-reveal-right,
-  .motion-blur-in,
   .motion-fade-in,
+  .motion-blur-in,
   .motion-scale-in,
   .motion-reveal-up.motion-blur-in {
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
+    opacity:    1 !important;
+    transform:  none !important;
+    filter:     none !important;
     transition: none !important;
   }
+
+  /* Parallax — no movement */
   .motion-parallax,
   .motion-parallax-soft,
-  .motion-parallax-bg {
-    transform: none !important;
+  .motion-parallax-bg,
+  [data-parallax] {
+    transform:  none !important;
     transition: none !important;
   }
-  .magnetic-wrap, .motion-magnetic {
-    transform: none !important;
+
+  /* Magnetic — no movement */
+  .magnetic-wrap,
+  .motion-magnetic {
+    transform:  none !important;
     transition: none !important;
   }
-  .case-card:hover, .impact-cell:hover, .framework-card:hover {
+
+  /* Hover micro-interactions — static */
+  .case-card:hover,
+  .impact-cell:hover,
+  .snapshot-cell:hover,
+  .framework-card:hover,
+  .about-card:hover {
     transform: none !important;
   }
 }
