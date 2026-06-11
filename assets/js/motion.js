@@ -1,26 +1,61 @@
 /**
  * Organic & Semantic Motion Engine — ES5
  * Henrico Amaral Portfolio
- * v20260610-motion-cache-zero-01
+ * v20260610-motion-cache-zero-02
  */
 (function () {
   'use strict';
 
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root = document.documentElement;
+  root.classList.add('js');
+  root.classList.add('motion-ready');
+
+  var mediaQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  var reduceMotion = mediaQuery ? mediaQuery.matches : false;
+
+  var revealSelector = [
+    '[data-motion]',
+    '.motion-reveal',
+    '.motion-reveal-up',
+    '.motion-reveal-left',
+    '.motion-reveal-right',
+    '.motion-fade-in',
+    '.motion-blur-in',
+    '.motion-scale-in',
+    '.motion-section',
+    '.motion-card',
+    '.motion-image',
+    '.motion-diagram',
+    '.motion-panel',
+    '.motion-case-hero',
+    '.motion-case-block',
+    '.motion-impact'
+  ].join(', ');
+
+  function addVisible(el) {
+    if (!el) return;
+    el.classList.add('is-visible');
+  }
+
+  function setVisibleList(list) {
+    for (var i = 0; i < list.length; i++) {
+      addVisible(list[i]);
+    }
+  }
+
+  function isInsideHeroChild(el) {
+    var hero = document.getElementById('hero') || document.querySelector('.case-hero');
+    if (!hero || !el || el === hero) return false;
+    return hero.contains(el);
+  }
 
   // ── 1. REVEAL ENGINE ─────────────────────────────────────────────────────────
   function initReveal() {
-    var targets = document.querySelectorAll(
-      '[data-motion], .motion-reveal, .motion-reveal-up, .motion-reveal-left, .motion-reveal-right, .motion-fade-in, .motion-blur-in, .motion-scale-in'
-    );
-
+    var targets = document.querySelectorAll(revealSelector);
     if (!targets.length) return;
 
-    // If reduced motion, make everything visible immediately
-    if (reduceMotion) {
-      for (var i = 0; i < targets.length; i++) {
-        targets[i].classList.add('is-visible');
-      }
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      setVisibleList(targets);
       return;
     }
 
@@ -28,22 +63,24 @@
       for (var j = 0; j < entries.length; j++) {
         var entry = entries[j];
         if (!entry.isIntersecting) continue;
-        entry.target.classList.add('is-visible');
+        addVisible(entry.target);
         obs.unobserve(entry.target);
       }
     }, {
-      threshold: 0.14,
-      rootMargin: '0px 0px -10% 0px'
+      threshold: 0.12,
+      rootMargin: '0px 0px -8% 0px'
     });
 
     for (var k = 0; k < targets.length; k++) {
       var el = targets[k];
-      // Skip hero children — they're handled by initHero()
-      if (el.closest && (el.closest('#hero') || el.closest('.case-hero'))) continue;
-      // Assign stagger delay only if not explicitly set
+
+      // Hero children are sequenced by initHero(). The hero container itself still needs visibility.
+      if (isInsideHeroChild(el)) continue;
+
       if (!el.style.getPropertyValue('--motion-delay') && !el.classList.contains('motion-hero')) {
-        el.style.setProperty('--motion-delay', Math.min(k * 30, 200) + 'ms');
+        el.style.setProperty('--motion-delay', Math.min(k * 28, 220) + 'ms');
       }
+
       observer.observe(el);
     }
   }
@@ -53,22 +90,32 @@
     var hero = document.getElementById('hero') || document.querySelector('.case-hero');
     if (!hero) return;
 
-    var sequence = hero.querySelectorAll(
-      '.motion-reveal, .motion-reveal-up, .motion-blur-in, .motion-fade-in, .motion-hero'
-    );
+    var sequence = hero.querySelectorAll([
+      '[data-motion]',
+      '.motion-reveal',
+      '.motion-reveal-up',
+      '.motion-reveal-left',
+      '.motion-reveal-right',
+      '.motion-blur-in',
+      '.motion-fade-in',
+      '.motion-scale-in',
+      '.motion-hero',
+      '.motion-case-hero',
+      '.motion-card',
+      '.motion-panel'
+    ].join(', '));
+
+    addVisible(hero);
 
     if (reduceMotion) {
-      for (var i = 0; i < sequence.length; i++) {
-        sequence[i].classList.add('is-visible');
-      }
+      setVisibleList(sequence);
       return;
     }
 
     for (var j = 0; j < sequence.length; j++) {
       var el = sequence[j];
-      // Each hero element gets incremental delay via CSS custom property
-      el.style.setProperty('--motion-delay', (j * 110) + 'ms');
-      el.classList.add('is-visible');
+      el.style.setProperty('--motion-delay', Math.min(j * 95, 620) + 'ms');
+      addVisible(el);
     }
   }
 
@@ -77,7 +124,7 @@
     if (reduceMotion) return;
 
     var softItems = document.querySelectorAll('.motion-parallax-soft, [data-parallax]');
-    var bgItem    = document.querySelector('.motion-parallax-bg');
+    var bgItem = document.querySelector('.motion-parallax-bg');
 
     if (!softItems.length && !bgItem) return;
 
@@ -87,28 +134,26 @@
     function update() {
       viewportH = window.innerHeight || document.documentElement.clientHeight;
 
-      // Soft parallax on scroll-triggered images/diagrams
       for (var i = 0; i < softItems.length; i++) {
-        var el   = softItems[i];
+        var el = softItems[i];
         var rect = el.getBoundingClientRect();
         if (rect.bottom < 0 || rect.top > viewportH) continue;
 
-        var speed    = parseFloat(el.getAttribute('data-parallax') || '0.03');
-        var center   = rect.top + rect.height / 2;
-        var diff     = center - viewportH / 2;
-        var y        = diff * speed;
-        var cap      = 18;
+        var speed = parseFloat(el.getAttribute('data-parallax') || '0.025');
+        var center = rect.top + rect.height / 2;
+        var diff = center - viewportH / 2;
+        var y = diff * speed;
+        var cap = 16;
         y = Math.max(-cap, Math.min(cap, y));
 
         el.style.transform = 'translate3d(0,' + y.toFixed(2) + 'px,0)';
       }
 
-      // Hero background parallax
       if (bgItem) {
         var parentRect = bgItem.parentElement ? bgItem.parentElement.getBoundingClientRect() : null;
         if (parentRect && parentRect.top < viewportH && parentRect.bottom > 0) {
           var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-          var offset  = scrollY * 0.10;
+          var offset = scrollY * 0.08;
           bgItem.style.transform = 'scale(1.04) translateY(' + offset.toFixed(2) + 'px)';
         }
       }
@@ -139,8 +184,8 @@
 
         el.addEventListener('mousemove', function (e) {
           var rect = el.getBoundingClientRect();
-          var x    = (e.clientX - rect.left - rect.width / 2) * 0.12;
-          var y    = (e.clientY - rect.top  - rect.height / 2) * 0.12;
+          var x = (e.clientX - rect.left - rect.width / 2) * 0.10;
+          var y = (e.clientY - rect.top - rect.height / 2) * 0.10;
           el.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)';
         });
 
@@ -164,5 +209,4 @@
   } else {
     init();
   }
-
 }());
