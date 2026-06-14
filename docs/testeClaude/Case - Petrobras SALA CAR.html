@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petrobras · SALA CAR — Henrico Amaral</title>
+<meta name="description" content="SALA CAR — Sistema de gestão de ocorrências ambientais offshore para a Petrobras. Case de Product Design de Henrico Amaral.">
+<link rel="stylesheet" href="portfolio/styles.css">
+<link rel="stylesheet" href="portfolio/case.css">
+</head>
+<body>
+<a class="skip" href="#overview">Ir para o conteúdo</a>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav dark" aria-label="Principal">
+  <a class="nav__brand" href="Portfolio — Henrico Amaral.html#hero"><span class="dot"></span>Henrico Amaral</a>
+  <div class="nav__links">
+    <a href="Portfolio — Henrico Amaral.html#process">Método</a>
+    <a href="Portfolio — Henrico Amaral.html#cases">Casos</a>
+    <a href="Portfolio — Henrico Amaral.html#impact">Impacto</a>
+    <a href="Portfolio — Henrico Amaral.html#about">Sobre</a>
+    <a href="Portfolio — Henrico Amaral.html#contact">Contato</a>
+  </div>
+  <a class="nav__cta" href="Portfolio — Henrico Amaral.html#cases">← Todos os casos</a>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="case-hero" data-navdark data-screen-label="Case Hero">
+  <div class="case-hero__img" style="background-image:url('https://henrico-design-amaral.github.io/portfolio/assets/img/cases/petrobras.webp')"></div>
+  <div class="case-hero__in">
+    <div class="case-hero__eyebrow mono"><span class="ln"></span>01 · Energia · Operações Críticas Offshore</div>
+    <h1>SALA CAR</h1>
+    <span class="case-hero__client">Petrobras</span>
+    <p class="case-hero__lead">Sistema de gestão de ocorrências ambientais offshore. Coordenação em tempo real entre equipes operacionais, dados geoespaciais e obrigações regulatórias em operações de petróleo e gás.</p>
+  </div>
+</header>
+
+<!-- ===================== META SPEC ===================== -->
+<section class="case-spec" aria-label="Ficha do projeto">
+  <dl class="case-spec__grid">
+    <div class="case-spec__cell"><dt>Cliente</dt><dd>Petrobras</dd></div>
+    <div class="case-spec__cell"><dt>Setor</dt><dd>Energia · Offshore</dd></div>
+    <div class="case-spec__cell"><dt>Tipo</dt><dd>Plataforma interna</dd></div>
+    <div class="case-spec__cell"><dt>Papel</dt><dd>Product Designer</dd></div>
+    <div class="case-spec__cell"><dt>Escopo</dt><dd>Discovery · IA · UX · Prototipação</dd></div>
+    <div class="case-spec__cell"><dt>Plataforma</dt><dd>Web · Desktop-first</dd></div>
+  </dl>
+</section>
+
+<!-- ===================== OVERVIEW ===================== -->
+<section class="overview" id="overview" data-screen-label="Overview">
+  <div class="wrap overview__grid">
+    <div class="reveal">
+      <div class="overview__kicker mono"><span class="ln"></span>Projeto · Contexto · Escopo</div>
+      <h2>Gestão de ocorrências ambientais offshore.</h2>
+      <p>O SALA CAR organiza o ciclo completo de uma ocorrência ambiental: da detecção à resposta, da classificação ao encerramento regulatório.</p>
+    </div>
+    <dl class="subfacts reveal" data-d="1">
+      <div class="subfacts__row"><dt>Sistema</dt><dd>SALA CAR</dd></div>
+      <div class="subfacts__row"><dt>Domínio</dt><dd>Gestão ambiental · Energia</dd></div>
+      <div class="subfacts__row"><dt>Usuários</dt><dd>Técnicos e Coordenadores</dd></div>
+      <div class="subfacts__row"><dt>Resultado</dt><dd>Estado unificado e rastreável</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ===================== 01 CONTEXTO ===================== -->
+<section class="ed ed--cream" data-screen-label="01 Contexto">
+  <div class="ed__grid">
+    <div class="ed__index reveal"><div class="tick"></div><span class="no">01 / 10</span><span class="lbl">Contexto<br>Operacional</span></div>
+    <div class="ed__body reveal" data-d="1">
+      <h2 class="ed__h">O que é operar ambientalmente offshore.</h2>
+      <p>Operações de petróleo offshore estão sujeitas a regulações ambientais federais que exigem monitoramento contínuo, registro de ocorrências e capacidade de resposta documentada.</p>
+      <p>Qualquer evento — de uma variação em parâmetros de efluentes a um derramamento — precisa ser registrado, classificado, tratado e encerrado com rastreabilidade completa. O ciclo envolve equipes em locais diferentes: técnicos ambientais nas plataformas, analistas de monitoramento remoto em terra, coordenadores nos centros de controle e gestores de conformidade responsáveis pela resposta formal ao órgão regulador.</p>
+      <div class="diagram">
+        <div class="diagram__flow">
+          <div class="chips">
+            <span class="chip">Monitoramento orbital</span>
+            <span class="chip">OSD</span>
+            <span class="chip">Poseidon II</span>
+            <span class="chip">Sobrevoo aéreo (LES)</span>
+            <span class="chip">Unidade marítima</span>
+            <span class="chip">Embarcação de apoio</span>
+            <span class="chip">Centro de controle (CAE)</span>
+          </div>
+          <span class="diagram__arrow">→</span>
+          <span class="node node--alert">Nova ocorrência</span>
+        </div>
+        <p class="diagram__cap">Sete canais independentes podiam originar uma ocorrência ambiental.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 02 LEGADO ===================== -->
+<section class="ed ed--sand" data-screen-label="02 Legado">
+  <div class="ed__grid">
+    <div class="ed__index reveal"><div class="tick"></div><span class="no">02 / 10</span><span class="lbl">Arquitetura<br>Legada</span></div>
+    <div class="ed__body reveal" data-d="1">
+      <h2 class="ed__h">Antes do sistema, cada etapa era registrada isoladamente.</h2>
+      <p>Informações sobre um único incidente podiam estar distribuídas em planilhas locais, cadeias de e-mail, sistemas legados de diferentes áreas e PDFs gerados manualmente.</p>
+      <p>O ICS 214 registrava a cronologia. Planilhas controlavam a mobilização de recursos. Relatórios técnicos consolidavam as análises geoespaciais e de dispersão de manchas. <strong>Nenhum desses registros compartilhava uma estrutura operacional comum</strong>, exigindo dos analistas uma exaustiva reconstituição manual do contexto.</p>
+      <div class="diagram diagram--legacy">
+        <div class="diagram__flow">
+          <div class="chips">
+            <span class="chip chip--dim">Planilhas locais de recursos</span>
+            <span class="chip chip--dim">Relatórios técnicos em PDF</span>
+            <span class="chip chip--dim">Controle cronológico manual</span>
+            <span class="chip chip--dim">Sistemas de geoprocessamento</span>
+          </div>
+          <span class="diagram__arrow">⇢</span>
+          <span class="node">Registros paralelos</span>
+        </div>
+        <p class="diagram__cap">A estrutura isolada limitava o compartilhamento de contexto operacional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 03 PROBLEMA ===================== -->
+<section class="ed ed--cream" data-screen-label="03 Problema">
+  <div class="ed__grid">
+    <div class="ed__index reveal"><div class="tick"></div><span class="no">03 / 10</span><span class="lbl">Definição<br>do Problema</span></div>
+    <div class="ed__body reveal" data-d="1">
+      <h2 class="ed__h">O custo estava em montar o contexto operacional.</h2>
+      <p class="lead">O problema não era falta de dados — a operação já produzia informação suficiente.</p>
+      <p>A fragmentação tinha consequências diretas: atrasos na classificação de incidentes, esforço duplicado no registro, risco de resposta descoordenada entre equipes e exposição regulatória por ausência de rastreabilidade.</p>
+      <p>O gargalo estava na energia gasta para cruzar dados dispersos sob pressão de tempo. Para responder de forma precisa, o time dependia da reconstituição manual de logs e posições de embarcações.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 04 ATUAÇÃO ===================== -->
+<section class="ed ed--sand" data-screen-label="04 Atuação">
+  <div class="ed__grid">
+    <div class="ed__index reveal"><div class="tick"></div><span class="no">04 / 10</span><span class="lbl">Atuação<br>do Designer</span></div>
+    <div class="ed__body reveal" data-d="1">
+      <h2 class="ed__h">Definição estrutural e design de interface.</h2>
+      <p>Atuei no mapeamento dos fluxos e no desenho das interfaces unificadas. Trabalhei lado a lado com especialistas ambientais e desenvolvedores para traduzir o ciclo de resposta em uma arquitetura de produto robusta.</p>
+      <div class="role-grid">
+        <article class="role"><span class="no">01</span><h3>Definição da arquitetura centrada na ocorrência</h3><p>Propus organizar todo o sistema em torno do evento de ocorrência, ligando todas as análises e recursos a ele.</p></article>
+        <article class="role"><span class="no">02</span><h3>Modelagem de módulos operacionais</h3><p>Definição das entidades e fluxos necessários para cada etapa do ciclo: monitoramento, mobilização e encerramento.</p></article>
+        <article class="role"><span class="no">03</span><h3>Estruturação da linha do tempo</h3><p>Substituição de abas isoladas por uma linha do tempo unificada (ICS 214) que atua como eixo de navegação e auditoria.</p></article>
+        <article class="role"><span class="no">04</span><h3>Integração do geoprocessamento</h3><p>Posicionei as ferramentas de mapa diretamente no fluxo operacional das equipes, em vez de uma tela isolada.</p></article>
+        <article class="role"><span class="no">05</span><h3>Desenho das telas de controle e resposta</h3><p>Prototipação de interfaces críticas para técnicos ambientais e gestores de conformidade regulatória.</p></article>
+        <article class="role"><span class="no">06</span><h3>Colaboração com UX Research</h3><p>Leitura direta dos artefatos legados em campo junto com a equipe de pesquisa para fundamentar as decisões.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 05 RESTRIÇÕES ===================== -->
+<section class="ed ed--cream" data-screen-label="05 Restrições">
+  <div class="ed__grid">
+    <div class="ed__index reveal"><div class="tick"></div><span class="no">05 / 10</span><span class="lbl">Restrições<br>do Projeto</span></div>
+    <div class="ed__body reveal" data-d="1">
+      <h2 class="ed__h">Limites e condicionantes operacionais.</h2>
+      <p>O sistema precisava operar dentro de condições rígidas de conformidade, colaboração e usabilidade sob pressão.</p>
+      <div class="panel">
+        <div class="panel__head"><span>Condições de Contorno</span><span>04</span></div>
+        <ul>
+          <li><span><strong>Aderência ao fluxo real</strong><span class="ds">O sistema precisava refletir a operação real e as exigências do órgão regulador federal (IBAMA).</span></span></li>
+          <li><span><strong>Garantia de rastreabilidade</strong><span class="ds">Toda ação, parecer técnico e mudança de estado precisava gerar registros permanentes e auditáveis.</span></span></li>
+          <li><span><strong>Colaboração entre atores</strong><span class="ds">Técnicos offshore e equipes de monitoramento remoto em terra precisavam cooperar sobre o mesmo evento.</span></span></li>
+          <li><span><strong>Facilidade de uso sob pressão</strong><span class="ds">Registrar dados precisava ser mais simples e rápido do que preencher planilhas manuais.</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 06 DECISÃO ESTRUTURAL (DARK) ===================== -->
+<section class="ed ed--dark" data-navdark data-screen-label="06 Decisão">
+  <div class="ed__grid">
+    <div class="ed__index reveal"><div class="tick"></div><span class="no">06 / 10</span><span class="lbl">Decisão<br>Estrutural</span></div>
+    <div class="ed__body reveal" data-d="1">
+      <h2 class="ed__h">A ocorrência como elemento estruturador do fluxo.</h2>
+      <p>Propus reorganizar o sistema usando a ocorrência como a unidade central do fluxo de trabalho. Em vez de telas isoladas por ferramenta, o analista visualiza todas as dimensões de um incidente no mesmo contexto.</p>
+      <div class="hub">
+        <div class="hub__center"><span class="core">Ocorrência</span></div>
+        <div class="hub__ring">
+          <span class="chip">Monitoramento</span>
+          <span class="chip">Geoprocessamento</span>
+          <span class="chip">Mobilização</span>
+          <span class="chip">Resposta</span>
+          <span class="chip">Cronologia</span>
+          <span class="chip">Encerramento</span>
+        </div>
+      </div>
+      <p style="margin-top:30px">O ciclo completo de vida de uma ocorrência operacional passou a pertencer a um evento único:</p>
+      <div class="lifecycle">
+        <span class="st">Registro</span><span class="sep">→</span>
+        <span class="st">Interpretação</span><span class="sep">→</span>
+        <span class="st">Classificação</span><span class="sep">→</span>
+        <span class="st">Mobilização</span><span class="sep">→</span>
+        <span class="st">Resposta</span><span class="sep">→</span>
+        <span class="st">Cronologia</span><span class="sep">→</span>
+        <span class="st">Consolidação</span><span class="sep">→</span>
+        <span class="st">Encerramento</span>
+      </div>
+      <div class="flow-slot figph"><span class="figph__tag">Diagrama</span><span class="figph__t">Fluxo operacional completo (SALA CAR)</span><span class="figph__s">arraste a exportação do diagrama</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 07 ESCALA / TELAS ===================== -->
+<section class="ed ed--cream" data-screen-label="07 Escala">
+  <div class="ed__grid">
+    <div class="ed__index reveal"><div class="tick"></div><span class="no">07 / 10</span><span class="lbl">Escala<br>Operacional</span></div>
+    <div class="ed__body reveal" data-d="1">
+      <h2 class="ed__h">Telas, fluxos e interações integradas.</h2>
+      <p>A sequência de telas que estrutura o monitoramento operacional, a mobilização de embarcações de apoio e a análise contextual por mapas.</p>
+    </div>
+  </div>
+
+  <div class="figs">
+    <figure class="figure reveal">
+      <div class="figslot figph"><span class="figph__tag">Screenshot</span><span class="figph__t">Listagem e controle de ocorrências</span><span class="figph__s">PNG · arraste o screenshot real</span></div>
+      <figcaption class="figure__cap"><h3>Visão geral e controle de ocorrências</h3><p>A listagem deixou de ser apenas uma tabela. Tornou-se um painel de priorização e controle, consolidando classificação de risco, tamanho estimado da mancha e recursos alocados.</p></figcaption>
+    </figure>
+
+    <div class="figpair reveal">
+      <div class="figslot figph"><span class="figph__tag">Screenshot</span><span class="figph__t">Ocorrência classificada</span><span class="figph__s">JPG</span></div>
+      <div class="figslot figph"><span class="figph__tag">Screenshot</span><span class="figph__t">Geoprocessamento integrado</span><span class="figph__s">JPG</span></div>
+    </div>
+    <figcaption class="figure__cap reveal" style="margin-top:18px"><h3>Classificação e origem</h3><p>Detalhes e classificação estruturada da emergência ambiental (à esquerda) e a integração com dados de origem do geoprocessamento em tempo real (à direita).</p></figcaption>
+
+    <figure class="figure reveal">
+      <div class="figslot figph"><span class="figph__tag">Screenshot</span><span class="figph__t">Aba ICS 214 — cronologia</span><span class="figph__s">JPG · arraste o screenshot real</span></div>
+      <figcaption class="figure__cap"><h3>Aba ICS 214 — cronologia da ocorrência</h3><p>O log de eventos foi inserido na navegação central do incidente. O analista registra ações operacionais de forma contínua, gerando rastreabilidade nativa sem preencher arquivos paralelos.</p></figcaption>
+    </figure>
+
+    <div class="figpair reveal">
+      <div class="figslot figph"><span class="figph__tag">Screenshot</span><span class="figph__t">Mobilização de recurso</span><span class="figph__s">JPG</span></div>
+      <div class="figslot figph"><span class="figph__tag">Screenshot</span><span class="figph__t">Recurso mobilizado</span><span class="figph__s">PNG</span></div>
+    </div>
+    <figcaption class="figure__cap reveal" style="margin-top:18px"><h3>Fluxo de mobilização</h3><p>Seleção e simulação de ativação de embarcações (à esquerda) e confirmação visual da embarcação em resposta (à direita).</p></figcaption>
+
+    <figure class="figure reveal">
+      <div class="figslot figph"><span class="figph__tag">Screenshot</span><span class="figph__t">Painel de embarcações</span><span class="figph__s">JPG · arraste o screenshot real</span></div>
+      <figcaption class="figure__cap"><h3>Gestão e painel de embarcações</h3><p>Painel consolidado com todas as embarcações disponíveis na bacia offshore, capacidade operacional de recolhimento de óleo e posição de monitoramento.</p></figcaption>
+    </figure>
+
+    <figure class="figure reveal">
+      <div class="figslot figph"><span class="figph__tag">Screenshot</span><span class="figph__t">Módulo de geoprocessamento</span><span class="figph__s">JPG · arraste o screenshot real</span></div>
+      <figcaption class="figure__cap"><h3>Módulo de geoprocessamento e mapas</h3><p>Ferramenta contextual de mapa embarcada no tratamento do incidente. O analista edita e delimita o polígono da mancha suspeita sem sair do fluxo operacional.</p></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== 08 LIMITAÇÕES ===================== -->
+<section class="ed ed--sand" data-screen-label="08 Limitações">
+  <div class="ed__grid">
+    <div class="ed__index reveal"><div class="tick"></div><span class="no">08 / 10</span><span class="lbl">Limitações<br>Estruturais</span></div>
+    <div class="ed__body reveal" data-d="1">
+      <h2 class="ed__h">Nem tudo pôde ser integrado de imediato.</h2>
+      <p>Limitações técnicas e a natureza complexa das regulações exigiram manter alguns fluxos temporariamente externos ou dependentes de processos manuais.</p>
+      <p>Algumas integrações de sensores satelitais herdados permaneceram em canais de consulta paralelos por restrições de API de fornecedores internacionais. O fechamento formal do relatório regulatório com o órgão externo continuou exigindo o preenchimento de formulários específicos no ambiente governamental, forçando o sistema a conviver com <strong>integrações parciais</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 09 IMPACTO (DARK STATS) ===================== -->
+<section class="case-impact" data-navdark data-screen-label="09 Impacto">
+  <div class="case-impact__head reveal">
+    <div class="k"><span class="ln"></span>09 / 10 · Impacto do Projeto</div>
+    <h2>Resultados reais na operação offshore.</h2>
+    <p>A unificação das informações reduziu o custo de reconstrução do contexto, permitindo às equipes operacionais agir com mais agilidade e segurança jurídica.</p>
+  </div>
+  <div class="stat-grid reveal" data-d="1">
+    <div class="stat"><div class="stat__n">95<small>%</small></div><p class="stat__d">Automação de relatórios operacionais e redução de planilhas fragmentadas.</p></div>
+    <div class="stat"><div class="stat__n">12<small>meses</small></div><p class="stat__d">Duração do projeto — ciclo completo de discovery e arquitetura.</p></div>
+    <div class="stat"><div class="stat__n">7<small>canais</small></div><p class="stat__d">Fontes de monitoramento orbital e aéreo integradas em um único hub.</p></div>
+    <div class="stat"><div class="stat__n">100<small>%</small></div><p class="stat__d">Rastreabilidade e trilha de auditoria do sinal ao encerramento.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 10 REFLEXÕES ===================== -->
+<section class="reflection" data-screen-label="10 Reflexões">
+  <div class="reflection__in reveal">
+    <div class="k"><span class="ln"></span>10 / 10 · Reflexões do Designer</div>
+    <h2>Modelagem conceitual deve preceder as telas.</h2>
+    <p>O maior aprendizado foi sobre <strong>modelagem antes de design</strong>. Tentar desenhar telas sem um modelo claro de entidades, estados e transições é montar um mapa sem conhecer o território.</p>
+    <p>O tempo investido em entender o domínio operacional — antes de qualquer wireframe — foi o que tornou as decisões de interface defensáveis. Não "achei que ficaria mais claro assim", mas "o fluxo de classificação exige esse campo porque o regulamento prevê essa obrigação".</p>
+  </div>
+</section>
+
+<!-- ===================== CASE NAV ===================== -->
+<nav class="case-nav" aria-label="Outros casos">
+  <div class="case-nav__grid">
+    <a href="https://henrico-design-amaral.github.io/portfolio/cases/bmg.html"><span class="dir">← Anterior</span><span class="nm">BMG</span></a>
+    <a href="https://henrico-design-amaral.github.io/portfolio/cases/bayer.html"><span class="dir">Próximo →</span><span class="nm">Bayer</span></a>
+  </div>
+</nav>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" data-navdark>
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__id">
+        <div class="mono-mark">HA</div>
+        <div>
+          <div class="nm">Henrico Amaral</div>
+          <div class="rl">Senior Product Designer · Decision Infrastructure</div>
+        </div>
+      </div>
+      <p class="manifesto">Pense simples.<br>Faça melhor.<br><em>Torne-se inevitável.</em></p>
+    </div>
+    <div class="footer__bar">
+      <span>Henrico Amaral · Product Designer · <span id="year">2026</span></span>
+      <a href="#">↑ Voltar ao topo</a>
+    </div>
+  </div>
+</footer>
+
+<script src="portfolio/case.js"></script>
+</body>
+</html>
