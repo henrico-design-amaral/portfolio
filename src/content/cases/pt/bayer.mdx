@@ -1,0 +1,119 @@
+---
+lang: "pt"
+caseSlug: "bayer"
+title: "Inteligência Agronômica"
+client: "Bayer"
+system: "Plataforma de análise territorial"
+sector: "Agronegócio"
+type: "Plataforma interna"
+role: "Product Designer"
+scope: "Discovery · Arquitetura da informação · UX · Prototipação"
+platform: "Web · Desktop-first"
+order: 2
+heroImage: "/assets/img/cases/bayer.webp"
+description: "Sistema territorial de inteligência agronômica para análise ambiental e suporte à decisão agrícola. Case de Product Design de Henrico Amaral."
+lead: "A decisão agrícola técnica depende de comparação. Cultura, região, safra, indicador e parecer precisam aparecer como partes do mesmo raciocínio, não como arquivos soltos."
+domain: "Inteligência agronômica · Agro"
+users: "Especialistas agronômicos, analistas técnicos e times de validação"
+outcome: "Rastreabilidade de dados agrícolas"
+evidence: "Evidência qualitativa: continuidade entre análise técnica, comparação de indicadores e registro de decisões. Métricas quantitativas anteriores foram removidas por baixo lastro."
+stats:
+  - value: "Cultura"
+    unit: "como centro"
+    description: "A análise passa a se organizar pela unidade real de decisão agrícola."
+  - value: "Comparável"
+    unit: "por cenário"
+    description: "Regiões, safras e tecnologias podem ser lidas em contraste."
+  - value: "Rastreável"
+    unit: "no fluxo"
+    description: "Pareceres técnicos ficam conectados ao contexto que os gerou."
+  - value: "Menos"
+    unit: "fragmentação"
+    description: "Menor dependência de reconstrução manual entre relatórios e planilhas."
+prevCase:
+  slug: "petrobras"
+  name: "Petrobras"
+nextCase:
+  slug: "ambev"
+  name: "Ambev"
+---
+
+## 01. Contexto
+
+Especialistas agronômicos não decidem a partir de um número isolado. Eles comparam culturas, regiões, safras, tecnologias, histórico de testes e condições ambientais.
+
+O sistema precisava apoiar esse tipo de raciocínio técnico: lento, comparativo, documentado e dependente de contexto.
+
+## 02. Problema
+
+Os dados existiam, mas a análise não acontecia dentro de uma estrutura única. Antes de interpretar o cenário, o especialista precisava reunir materiais dispersos e reconstruir manualmente a base da decisão.
+
+Isso criava variação entre análises, dificultava rastreabilidade e separava o parecer técnico do contexto que o justificava.
+
+## 03. Sistema anterior ou cenário operacional
+
+Relatórios, planilhas, formulários e sistemas internos registravam pedaços do processo. Cada ferramenta respondia a uma parte da operação, mas nenhuma sustentava o ciclo completo de análise e validação.
+
+O cenário anterior exigia que o especialista fosse o integrador do sistema. O produto precisava assumir parte desse trabalho.
+
+## 04. Meu papel
+
+Atuei na estruturação da informação e no desenho de interfaces analíticas para suporte à decisão técnica.
+
+- Modelei a cultura agrícola como unidade central de análise.
+- Organizei camadas de indicadores técnicos, ambientais e de mercado.
+- Estruturei comparação entre regiões, períodos e tecnologias.
+- Conectei análise técnica, validação e documentação institucional.
+- Validei a lógica com especialistas de campo e times técnicos.
+
+## 05. Restrições
+
+O domínio exigia profundidade. Simplificar demais os dados poderia apagar variações relevantes entre culturas, regiões e safras.
+
+Também havia heterogeneidade de fontes e granularidades. O desenho precisava reduzir ruído sem criar uma falsa sensação de precisão.
+
+## 06. Decisão de design
+
+A decisão central foi organizar o sistema pela cultura agrícola, não pelos sistemas de origem dos dados.
+
+Essa escolha aproxima a interface do modelo mental dos especialistas. Eles não começam perguntando em qual banco de dados está a informação; começam perguntando o que acontece com uma cultura em determinada condição.
+
+## 07. Arquitetura da solução
+
+A plataforma foi estruturada como um fluxo contínuo:
+
+- visão da cultura;
+- indicadores técnicos e ambientais;
+- análise comparativa;
+- validação e parecer;
+- documentação institucional.
+
+Cada camada precisava manter relação com as anteriores. A comparação só era útil quando o usuário entendia origem, período, região e condição do dado.
+
+## 08. Fluxo principal
+
+O especialista escolhe uma cultura, avalia indicadores, compara cenários, identifica variações relevantes e registra a decisão técnica no mesmo ambiente.
+
+O fluxo evita que a análise termine em um documento separado. O parecer passa a nascer dentro do contexto técnico que o sustenta.
+
+## 09. Evidências visuais
+
+A evidência visual principal é a organização da comparação: dados agrícolas deixam de aparecer como tabela avulsa e passam a se relacionar por cultura, território, período e tecnologia.
+
+O desenho favorece leitura por camadas. Primeiro o usuário entende o cenário. Depois compara. Só então registra uma decisão.
+
+## 10. Impacto
+
+O impacto publicado é qualitativo porque não há métrica quantitativa com lastro suficiente para este case.
+
+O ganho estrutural foi reduzir a fragmentação entre análise e decisão: especialistas passaram a ter uma leitura mais contínua do processo técnico e maior rastreabilidade institucional.
+
+## 11. Limitações
+
+Algumas bases históricas permaneceram em formatos legados. A cobertura de dados também variava por região, safra e cultura.
+
+Essas limitações precisavam aparecer como parte da leitura. Em um sistema técnico, esconder lacunas de cobertura é pior do que assumi-las.
+
+## 12. Aprendizado
+
+Dados agrícolas só viram inteligência quando ganham modelo. Neste projeto, o valor do design não estava em embelezar indicadores, mas em estruturar comparação, contexto e decisão.

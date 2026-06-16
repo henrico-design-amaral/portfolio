@@ -1,758 +1,458 @@
-﻿ï¿½<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR" data-lang="pt">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bayer Platform â€” Henrico Amaral</title>
-  <meta name="description" content="Bayer Platform â€” plataforma interna para anÃ¡lise tÃ©cnica de dados agrÃ­colas, validaÃ§Ã£o de tecnologias e licenciamento de soluÃ§Ãµes no agronegÃ³cio. / Internal agricultural data platform for technical analysis, technology validation, and licensing.">
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-
-  <link rel="stylesheet" href="../assets/css/tailwind.generated.css?v=20260610-motion-cache-zero-03">
-  <link rel="stylesheet" href="../assets/css/site.css?v=20260610-motion-cache-zero-03">
-  <link rel="stylesheet" href="../assets/css/cases.css?v=20260610-motion-cache-zero-03">
-  <link rel="stylesheet" href="../assets/css/motion.css?v=20260610-motion-cache-zero-03">
-
-  <script>(function(){try{var l=localStorage.getItem('henrico_lang');if(l==='en'){document.documentElement.lang='en';document.documentElement.dataset.lang='en';}}catch(e){}})()</script>
-  <noscript>
-    <style>
-      .lang-pt, .lang-en { display: inline !important; }
-    </style>
-  </noscript>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bayer · Inteligência Agronômica — Henrico Amaral</title>
+<meta name="description" content="Bayer — plataforma de inteligência agronômica para validação técnica, licenciamento e rastreabilidade de decisões agrícolas.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/cases.css?v=20260615-case-blueprint">
 </head>
-
-<body class="font-body overflow-x-hidden">
-
-  <a href="#main-content"
-    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent-500 text-white px-4 py-2 z-50 rounded"
-    data-t="skip">Ir para o conteÃºdo</a>
-
-  <!-- NAV -->
-  <nav class="fixed top-0 left-0 w-full z-50 liquid-glass transition-transform duration-300" id="nav"
-    aria-label="NavegaÃ§Ã£o principal">
-    <div class="max-w-[1440px] w-full mx-auto flex items-center justify-between px-6 py-4">
-      <div class="magnetic-wrap">
-        <a href="../index.html" class="font-display font-bold text-lg md:text-xl tracking-[0]">Henrico Amaral</a>
-      </div>
-      <div
-        class="hidden md:flex items-center gap-8 font-mono text-[12px] tracking-widest uppercase font-semibold text-text-secondary nav-links">
-        <a href="../index.html#process" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.method">MÃ©todo</a>
-        <a href="../index.html#cases"   class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.cases">Casos</a>
-        <a href="../index.html#impact"  class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.impact">Impacto</a>
-        <a href="../about.html"   class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.about">Sobre</a>
-        <a href="../index.html#contact" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.contact">Contato</a>
-      </div>
-      <div class="lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
-        <span class="lang-toggle__thumb" aria-hidden="true"></span>
-        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT PortuguÃªs" aria-pressed="true">PT</button>
-        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
-      </div>
-      <button id="mobile-menu-toggle" class="mobile-menu-toggle md:hidden" type="button"
-        aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
-    </div>
-    <div id="mobile-menu" class="mobile-menu md:hidden" hidden>
-      <a href="../index.html#process" data-t="nav.method">MÃ©todo</a>
-      <a href="../index.html#cases"   data-t="nav.cases">Casos</a>
-      <a href="../index.html#impact"  data-t="nav.impact">Impacto</a>
-      <a href="../about.html"   data-t="nav.about">Sobre</a>
-      <a href="../index.html#contact" data-t="nav.contact">Contato</a>
-      <div class="lang-toggle mobile-lang-toggle" data-lang-toggle data-current-lang="pt" role="group"
-        aria-label="Selecionar idioma">
-        <span class="lang-toggle__thumb" aria-hidden="true"></span>
-        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT PortuguÃªs" aria-pressed="true">PT</button>
-        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
-      </div>
-    </div>
-  </nav>
-
-  <main id="main-content">
-    <div id="sr-announcer" role="status" aria-live="polite" class="sr-only"></div>
-
-    <!-- â”€â”€ HERO â”€â”€ -->
-    <header class="case-hero motion-case-hero" aria-labelledby="case-title">
-      <img src="../assets/img/cases/bayer.webp" alt="Bayer Platform Hero" class="case-hero-bg motion-parallax-bg">
-      <div class="case-hero-overlay"></div>
-
-      <div class="max-w-[1440px] mx-auto w-full">
-        <div class="case-hero-eyebrow motion-reveal-up motion-hero">
-          <span class="case-hero-dot" aria-hidden="true"></span>
-          <span class="lang-pt">02 Â· Agricultura Â· ValidaÃ§Ã£o TÃ©cnica</span>
-          <span class="lang-en">02 Â· Agriculture Â· Technical Validation</span>
-        </div>
-
-        <h1 id="case-title" class="motion-reveal-up motion-hero">Bayer Platform</h1>
-        <p class="case-hero-client motion-reveal-up motion-hero">Bayer</p>
-
-        <p class="case-hero-desc motion-reveal-up motion-blur-in motion-hero">
-          <span class="lang-pt">Plataforma de Dados AgrÃ­colas para anÃ¡lise tÃ©cnica de culturas, validaÃ§Ã£o de tecnologias e licenciamento de soluÃ§Ãµes no agronegÃ³cio de soja e algodÃ£o.</span>
-          <span class="lang-en">Agricultural Data Platform for technical crop analysis, technology validation, and licensing of agricultural solutions in soy and cotton agribusiness.</span>
-        </p>
-
-        <div class="case-meta-row motion-reveal-up motion-hero">
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Cliente</span><span class="lang-en">Client</span></span>
-            <span class="case-meta-value">Bayer</span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Setor</span><span class="lang-en">Sector</span></span>
-            <span class="case-meta-value"><span class="lang-pt">AgronegÃ³cio</span><span class="lang-en">Agribusiness</span></span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Tipo</span><span class="lang-en">Type</span></span>
-            <span class="case-meta-value"><span class="lang-pt">Plataforma interna</span><span class="lang-en">Internal platform</span></span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Papel</span><span class="lang-en">Role</span></span>
-            <span class="case-meta-value">Product Designer</span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Escopo</span><span class="lang-en">Scope</span></span>
-            <span class="case-meta-value"><span class="lang-pt">Discovery Â· Arquitetura Â· UX Â· PrototipaÃ§Ã£o</span><span class="lang-en">Discovery Â· Architecture Â· UX Â· Prototyping</span></span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Plataforma</span><span class="lang-en">Platform</span></span>
-            <span class="case-meta-value">Web Â· Desktop-first</span>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- â”€â”€ PROJECT SNAPSHOT â”€â”€ -->
-    <section class="section-pad px-6 bg-page nbg motion-case-block" id="snapshot" data-motion>
-      <div class="max-w-[1440px] mx-auto w-full">
-        <div class="section-header">
-          <span class="section-kicker motion-reveal-up motion-section">
-            <span class="lang-pt">PROJETO Â· CONTEXTO Â· ESCOPO</span>
-            <span class="lang-en">PROJECT Â· CONTEXT Â· SCOPE</span>
-          </span>
-          <div class="section-header-grid">
-            <div class="section-header-title-col">
-              <h2 class="section-header-title">
-                <span class="lang-pt">Dados agrÃ­colas como<br>estrutura de decisÃ£o.</span>
-                <span class="lang-en">Agricultural data as<br>decision structure.</span>
-              </h2>
-            </div>
-            <div class="section-header-subtitle">
-              <p>
-                <span class="lang-pt">A plataforma organizou resultados de testes, dados tÃ©cnicos e registros institucionais em torno da cultura agrÃ­cola como unidade principal de anÃ¡lise.</span>
-                <span class="lang-en">The platform organized test results, technical data, and institutional records around the crop as the primary unit of analysis.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="snapshot-grid motion-stagger">
-          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
-            <span class="snapshot-cell-label"><span class="lang-pt">Sistema</span><span class="lang-en">System</span></span>
-            <span class="snapshot-cell-value">Bayer Platform</span>
-          </div>
-          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
-            <span class="snapshot-cell-label"><span class="lang-pt">DomÃ­nio</span><span class="lang-en">Domain</span></span>
-            <span class="snapshot-cell-value">
-              <span class="lang-pt">AgronegÃ³cio Â· ValidaÃ§Ã£o</span>
-              <span class="lang-en">Agribusiness Â· Validation</span>
-            </span>
-          </div>
-          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
-            <span class="snapshot-cell-label"><span class="lang-pt">UsuÃ¡rios</span><span class="lang-en">Users</span></span>
-            <span class="snapshot-cell-value">
-              <span class="lang-pt">Especialistas e Gestores</span>
-              <span class="lang-en">Specialists and Managers</span>
-            </span>
-          </div>
-          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
-            <span class="snapshot-cell-label"><span class="lang-pt">Resultado</span><span class="lang-en">Outcome</span></span>
-            <span class="snapshot-cell-value">
-              <span class="lang-pt">Rastreabilidade e Clareza</span>
-              <span class="lang-en">Traceability and Clarity</span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- â”€â”€ CONTENT SECTIONS â”€â”€ -->
-    <div class="bg-page">
-      <div class="max-w-[1440px] mx-auto w-full">
-
-        <!-- 01 / Operational Context -->
-        <section class="section-pad px-6 case-sec--dark motion-case-block" id="context" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header section-header--dark">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">01 / Contexto Operacional</span>
-                <span class="lang-en">01 / Operational Context</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">A validaÃ§Ã£o de tecnologias agrÃ­colas depende de dados tÃ©cnicos complexos.</span>
-                    <span class="lang-en">Agricultural technology validation requires careful reading of technical data.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Especialistas analisam desempenho por cultura, comportamento regional, resultados de testes e histÃ³rico de safras antes de recomendar o uso de uma tecnologia.</span>
-                    <span class="lang-en">Specialists analyze performance by crop, regional behavior, test results, and crop history before recommending technology usage.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="case-grid">
-              <div>
-                <p class="case-body lang-pt">Esse processo envolve diferentes Ã¡reas â€” especialistas agronÃ´micos, equipes comerciais, gestÃ£o tÃ©cnica e Ã¡reas institucionais â€” cada uma com sua perspectiva e seus prÃ³prios registros. Antes da plataforma, essas anÃ¡lises aconteciam de forma fragmentada. Os dados eram consultados em sistemas distintos, as comparaÃ§Ãµes eram feitas em planilhas e as decisÃµes eram registradas de forma manual em relatÃ³rios fÃ­sicos ou e-mails.</p>
-                <p class="case-body lang-en">This process involves different areas â€” agronomic specialists, commercial teams, technical management, and institutional areas â€” each with their own perspective and records. Before the platform, these analyses were fragmented. Data was queried across separate systems, comparisons were made in spreadsheets, and decisions were manually logged in physical reports or email chains.</p>
-              </div>
-              <div>
-                <div class="case-aside motion-reveal-up motion-card">
-                  <span class="case-aside-label"><span class="lang-pt">Ãreas Envolvidas</span><span class="lang-en">Areas Involved</span></span>
-                  <ul class="case-aside-list">
-                    <li><span class="lang-pt">Especialistas agronÃ´micos</span><span class="lang-en">Agronomic specialists</span></li>
-                    <li><span class="lang-pt">Equipes comerciais</span><span class="lang-en">Commercial teams</span></li>
-                    <li><span class="lang-pt">GestÃ£o tÃ©cnica</span><span class="lang-en">Technical management</span></li>
-                    <li><span class="lang-pt">Ãreas institucionais (CADE)</span><span class="lang-en">Institutional areas (CADE)</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Flow Diagram -->
-            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram" data-parallax="0.02">
-              <div class="d-flow">
-                <div class="d-flow-nodes">
-                  <div class="d-node"><span class="lang-pt">Especialista agronÃ´mico</span><span class="lang-en">Agronomic specialist</span></div>
-                  <div class="d-node"><span class="lang-pt">Time comercial</span><span class="lang-en">Commercial team</span></div>
-                  <div class="d-node"><span class="lang-pt">Parecer regulatÃ³rio (CADE)</span><span class="lang-en">Regulatory opinion (CADE)</span></div>
-                  <div class="d-node"><span class="lang-pt">GestÃ£o tÃ©cnica</span><span class="lang-en">Technical management</span></div>
-                </div>
-                <div class="d-line-down"></div>
-                <div class="d-node highlight"><span class="lang-pt">ValidaÃ§Ã£o de Tecnologia</span><span class="lang-en">Technology Validation</span></div>
-              </div>
-              <span class="diagram-caption">
-                <span class="lang-pt">MÃºltiplas fontes e pareceres regulatÃ³rios convergem no processo de validaÃ§Ã£o.</span>
-                <span class="lang-en">Multiple sources and regulatory opinions converge in the validation process.</span>
-              </span>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- 02 / Legacy Architecture -->
-        <section class="section-pad px-6 case-sec--dark motion-case-block" id="legacy" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header section-header--dark">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">02 / Arquitetura Legada</span>
-                <span class="lang-en">02 / Legacy Architecture</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Antes do sistema, cada etapa era registrada isoladamente.</span>
-                    <span class="lang-en">Before the system, each stage was recorded separately.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">InformaÃ§Ãµes sobre uma Ãºnica validaÃ§Ã£o de tecnologia podiam estar distribuÃ­das em planilhas locais, cadeias de e-mail e sistemas legados de diferentes Ã¡reas.</span>
-                    <span class="lang-en">Information about a single technology validation could be distributed across local spreadsheets, email chains, and legacy systems from different areas.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="case-grid">
-              <div>
-                <p class="case-body lang-pt">Planilhas locais de comparaÃ§Ã£o controlavam as microrregiÃµes. RelatÃ³rios tÃ©cnicos em PDF consolidavam os pareceres. Nenhum desses registros compartilhava uma estrutura de dados comum, o que quebrava a continuidade do processo e dificultava a rastreabilidade posterior exigida institucionalmente.</p>
-                <p class="case-body lang-en">Local comparison spreadsheets controlled micro-regions. Technical PDF reports consolidated recommendations. None of these records shared a common data structure, breaking process continuity and hindering the subsequent traceability required institutionally.</p>
-              </div>
-              <div>
-                <div class="case-aside motion-reveal-up motion-card">
-                  <span class="case-aside-label"><span class="lang-pt">Registros Fragmentados</span><span class="lang-en">Fragmented Records</span></span>
-                  <ul class="case-aside-list">
-                    <li><span class="lang-pt">Planilhas locais de comparaÃ§Ã£o</span><span class="lang-en">Local comparison spreadsheets</span></li>
-                    <li><span class="lang-pt">RelatÃ³rios tÃ©cnicos em PDF</span><span class="lang-en">Technical PDF reports</span></li>
-                    <li><span class="lang-pt">Pareceres e aprovaÃ§Ãµes em e-mails</span><span class="lang-en">Opinions and approvals in emails</span></li>
-                    <li><span class="lang-pt">AusÃªncia de trilha de auditoria</span><span class="lang-en">Lack of audit trail</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Convergence Diagram -->
-            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram" data-parallax="0.02">
-              <div class="d-conv">
-                <div class="d-conv-inputs">
-                  <div class="d-node"><span class="lang-pt">Planilhas de comparaÃ§Ã£o</span><span class="lang-en">Comparison spreadsheets</span></div>
-                  <div class="d-node"><span class="lang-pt">RelatÃ³rios tÃ©cnicos</span><span class="lang-en">Technical reports</span></div>
-                  <div class="d-node"><span class="lang-pt">Pareceres em PDF</span><span class="lang-en">Opinions in PDF</span></div>
-                </div>
-                <div class="d-conv-output">
-                  <div class="d-node highlight"><span class="lang-pt">ConsolidaÃ§Ã£o Manual</span><span class="lang-en">Manual Consolidation</span></div>
-                </div>
-              </div>
-              <span class="diagram-caption">
-                <span class="lang-pt">Antes: informaÃ§Ãµes dispersas exigiam esforÃ§o manual preliminar de compilaÃ§Ã£o.</span>
-                <span class="lang-en">Before: scattered information required preliminary manual compilation effort.</span>
-              </span>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- 03 / Problem Definition -->
-        <section class="section-pad px-6 motion-case-block" id="problem" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">03 / DefiniÃ§Ã£o do Problema</span>
-                <span class="lang-en">03 / Problem Definition</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">O custo estava em montar o contexto operacional de anÃ¡lise.</span>
-                    <span class="lang-en">The cost was in assembling the operational context for analysis.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">A fragmentaÃ§Ã£o tinha consequÃªncias claras: perda de tempo na preparaÃ§Ã£o dos dados, risco de pareceres baseados em dados desatualizados e variabilidade nos critÃ©rios de aprovaÃ§Ã£o de tecnologias.</span>
-                    <span class="lang-en">Fragmentation had clear consequences: time lost in data preparation, risk of opinions based on outdated data, and variability in technology approval criteria.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <p class="case-body lang-pt">O problema nÃ£o era a falta de dados â€” o time comercial e os laboratÃ³rios geravam dados de alta qualidade. O gargalo estava na energia mental gasta pelos especialistas para cruzar as safras anteriores com as condiÃ§Ãµes de microrregiÃµes e exigÃªncias de patentes do CADE. A validaÃ§Ã£o dependia de um esforÃ§o manual recorrente que atrasava o ciclo de licenciamento.</p>
-            <p class="case-body lang-en">The problem was not lack of data â€” commercial teams and labs generated high-quality data. The bottleneck was the mental energy spent by specialists crossing previous seasons with micro-region conditions and CADE patent requirements. Validation depended on a recurring manual effort that delayed the licensing cycle.</p>
-          </div>
-        </section>
-
-        <!-- 04 / Designer Role -->
-        <section class="section-pad px-6 motion-case-block" id="role" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">04 / AtuaÃ§Ã£o do Designer</span>
-                <span class="lang-en">04 / Designer Role</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Modelagem de fluxos e design do ecossistema de validaÃ§Ã£o.</span>
-                    <span class="lang-en">Workflow modeling and validation ecosystem design.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Atuei desde o mapeamento de processos agronÃ´micos e reuniÃµes com especialistas atÃ© o design da interface e arquitetura de navegaÃ§Ã£o. Colaborei de perto com Maria Antonieta Santos (UX Researcher) e o time de engenharia para estruturar o fluxo de validaÃ§Ã£o.</span>
-                    <span class="lang-en">I worked from mapping agronomic processes and interviewing specialists to designing the interface and navigation architecture. I collaborated closely with Maria Antonieta Santos (UX Researcher) and the engineering team to structure the validation flow.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="insight-grid motion-stagger">
-              <div class="insight-item">
-                <span class="insight-num">01</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Arquitetura centrada na cultura.</span><span class="lang-en">Crop-centric architecture.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Mapeei e propus organizar todas as visÃµes de dados e decisÃµes em torno da cultura agrÃ­cola selecionada (soja, algodÃ£o).</span><span class="lang-en">Mapped and proposed organizing all data views and decisions around the selected agricultural crop (soy, cotton).</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">02</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">EstruturaÃ§Ã£o do fluxo de pareceres.</span><span class="lang-en">Opinion workflow structuring.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Desenhei um assistente de parecer tÃ©cnico que divide o julgamento em etapas claras e dependÃªncias de validaÃ§Ã£o.</span><span class="lang-en">Designed a technical opinion assistant that divides judgment into clear stages and validation dependencies.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">03</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">MÃ³dulo de comparaÃ§Ã£o regional.</span><span class="lang-en">Regional comparison module.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Criei uma interface de comparaÃ§Ã£o lado a lado para cruzar a produtividade da tecnologia em diferentes microrregiÃµes.</span><span class="lang-en">Created a side-by-side comparison interface to cross technology productivity across different micro-regions.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">04</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">IntegraÃ§Ã£o de regras do CADE.</span><span class="lang-en">CADE rules integration.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Posicionei as travas regulatÃ³rias e restriÃ§Ãµes de patentes no inÃ­cio do fluxo para evitar anÃ¡lises de tecnologias invÃ¡lidas.</span><span class="lang-en">Positioned regulatory blocks and patent constraints at the start of the flow to prevent analysis of invalid technologies.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">05</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Walkthrough de auditoria.</span><span class="lang-en">Audit walkthrough.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Desenhei uma linha do tempo documental que mostra quem, quando e com base em qual dado uma tecnologia foi aprovada.</span><span class="lang-en">Designed a documentary timeline showing who, when, and based on which data a technology was approved.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">06</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Densidade de dados controlada.</span><span class="lang-en">Controlled data density.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Colaborei no design de componentes que exibem dados densos sem poluiÃ§Ã£o visual, mantendo a precisÃ£o tÃ©cnica.</span><span class="lang-en">Collaborated in designing components that display dense data without visual clutter, maintaining technical accuracy.</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 05 / Project Constraints -->
-        <section class="section-pad px-6 motion-case-block" id="constraints" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">05 / RestriÃ§Ãµes do Projeto</span>
-                <span class="lang-en">05 / Project Constraints</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Limites regulatÃ³rios e variabilidade agronÃ´mica.</span>
-                    <span class="lang-en">Regulatory limits and agronomic variability.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                </div>
-              </div>
-            </div>
-            <div class="info-box motion-reveal-up motion-card">
-              <span class="info-box-label"><span class="lang-pt">CondiÃ§Ãµes de Contorno</span><span class="lang-en">Boundary Conditions</span></span>
-              <ul class="info-box-list">
-                <li>
-                  <span class="lang-pt"><strong>Variabilidade tÃ©cnica:</strong> O sistema precisava suportar diferentes indicadores para culturas distintas (soja, algodÃ£o) sem perder clareza visual.</span>
-                  <span class="lang-en"><strong>Technical variability:</strong> The system had to support different indicators for distinct crops (soy, cotton) without losing visual clarity.</span>
-                </li>
-                <li>
-                  <span class="lang-pt"><strong>Regras do CADE e Patentes:</strong> ValidaÃ§Ãµes institucionais de patentes e restriÃ§Ãµes regulatÃ³rias precisavam ser integradas como travas rÃ­gidas no fluxo.</span>
-                  <span class="lang-en"><strong>CADE & Patent rules:</strong> Institutional patent validations and regulatory constraints had to be integrated as hard blocks in the flow.</span>
-                </li>
-                <li>
-                  <span class="lang-pt"><strong>ManutenÃ§Ã£o de profundidade:</strong> Especialistas exigiam acesso aos dados numÃ©ricos granulares de safras passadas; ocultar dados em prol do design era inaceitÃ¡vel.</span>
-                  <span class="lang-en"><strong>Maintaining depth:</strong> Specialists demanded access to granular numeric data from past seasons; hiding data for the sake of design was unacceptable.</span>
-                </li>
-                <li>
-                  <span class="lang-pt"><strong>Rastreabilidade de DecisÃ£o:</strong> Todo parecer precisava ser imutÃ¡vel e associado ao lote de dados utilizado para a tomada de decisÃ£o.</span>
-                  <span class="lang-en"><strong>Decision Traceability:</strong> Every opinion had to be immutable and linked to the data batch used for decision-making.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- 06 / Structural Decision -->
-        <section class="section-pad px-6 case-sec--dark motion-case-block" id="decisions" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header section-header--dark">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">06 / DecisÃ£o Estrutural</span>
-                <span class="lang-en">06 / Structural Decision</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">A cultura agrÃ­cola como centro do modelo mental.</span>
-                    <span class="lang-en">The crop as the core of the mental model.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">A grande mudanÃ§a estrutural foi desenhar a plataforma em torno da cultura avaliada. O especialista seleciona a soja ou o algodÃ£o e tem todas as ferramentas e fluxos organizados sob esse guarda-chuva.</span>
-                    <span class="lang-en">The major structural shift was designing the platform around the evaluated crop. The specialist selects soy or cotton and has all tools and workflows organized under that umbrella.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Hub Diagram -->
-            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram" data-parallax="0.02">
-              <div class="d-hub">
-                <div class="d-hub-orbit"></div>
-                <div class="d-node highlight d-hub-center"><span class="lang-pt">Cultura agrÃ­cola</span><span class="lang-en">Agricultural crop</span></div>
-                <div class="d-node d-hub-sat" style="top:0%; left:50%;"><span class="lang-pt">Dados TÃ©cnicos</span><span class="lang-en">Technical Data</span></div>
-                <div class="d-node d-hub-sat" style="top:50%; left:95%;"><span class="lang-pt">ComparaÃ§Ã£o</span><span class="lang-en">Comparison</span></div>
-                <div class="d-node d-hub-sat" style="top:100%; left:50%;"><span class="lang-pt">ValidaÃ§Ã£o</span><span class="lang-en">Validation</span></div>
-                <div class="d-node d-hub-sat" style="top:50%; left:5%;"><span class="lang-pt">DocumentaÃ§Ã£o</span><span class="lang-en">Documentation</span></div>
-              </div>
-              <span class="diagram-caption">
-                <span class="lang-pt">Modelo unificado: a cultura agrÃ­cola no centro da tomada de decisÃ£o.</span>
-                <span class="lang-en">Unified model: the agricultural crop at the center of decision making.</span>
-              </span>
-            </div>
-
-            <!-- Pipeline Diagram -->
-            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram" data-parallax="0.02">
-              <div class="d-pipeline">
-                <div class="d-node"><span class="lang-pt">Dados da Cultura</span><span class="lang-en">Crop Data</span></div>
-                <div class="d-node"><span class="lang-pt">ComparaÃ§Ã£o Regional</span><span class="lang-en">Regional Comparison</span></div>
-                <div class="d-node"><span class="lang-pt">Parecer TÃ©cnico</span><span class="lang-en">Technical Opinion</span></div>
-                <div class="d-node highlight"><span class="lang-pt">HomologaÃ§Ã£o</span><span class="lang-en">Homologation</span></div>
-              </div>
-              <span class="diagram-caption">
-                <span class="lang-pt">O pipeline de etapas de validaÃ§Ã£o dentro da plataforma.</span>
-                <span class="lang-en">The validation steps pipeline within the platform.</span>
-              </span>
-            </div>
-
-            <!-- Full Flow Image -->
-            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-              <img src="Cases/Bayer/licenciamento/workflow.png" alt="Licensing workflow" loading="lazy">
-            </div>
-
-          </div>
-        </section>
-
-        <!-- 07 / Operational Scale -->
-        <section class="section-pad px-6 motion-case-block" id="scale" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">07 / Escala Operacional</span>
-                <span class="lang-en">07 / Operational Scale</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Telas e fluxos da plataforma de licenciamento e validaÃ§Ã£o.</span>
-                    <span class="lang-en">Screens and flows of the licensing and validation platform.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Abaixo, a sequÃªncia de interfaces que estruturam o gerenciamento e validaÃ§Ã£o regulatÃ³ria de tecnologias e safras.</span>
-                    <span class="lang-en">Below, the sequence of interfaces structuring the management and regulatory validation of technologies and crops.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Walkthrough Screens -->
-            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-              <img src="Cases/Bayer/licenciamento/dashboard.png" alt="Dashboard e VisÃ£o Geral" loading="lazy">
-            </div>
-            <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
-              <span class="lang-pt">Painel de Controle e VisÃ£o Geral</span>
-              <span class="lang-en">Dashboard and Overview</span>
-            </h3>
-            <p class="case-body lang-pt">A tela inicial apresenta os processos de validaÃ§Ã£o em andamento, organizados por cultura agrÃ­cola, pendÃªncias regulatÃ³rias e urgÃªncia legal para o time tÃ©cnico e gestÃ£o.</p>
-            <p class="case-body lang-en">The home screen displays ongoing validation processes, organized by crop, regulatory issues, and legal urgency for the technical and management teams.</p>
-
-            <div class="case-grid-2">
-              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-                <img src="Cases/Bayer/licenciamento/triagem_inicial.png" alt="Triagem Inicial" loading="lazy">
-              </div>
-              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-                <img src="Cases/Bayer/licenciamento/analise_tecnica.png" alt="AnÃ¡lise TÃ©cnica Detalhada" loading="lazy">
-              </div>
-            </div>
-            <p class="case-body lang-pt">MÃ³dulo de triagem de tecnologia agrÃ­cola (Ã  esquerda) e a tela de anÃ¡lise tÃ©cnica detalhada (Ã  direita), onde os indicadores de desempenho da safra e microrregiÃµes sÃ£o avaliados.</p>
-            <p class="case-body lang-en">Agricultural technology screening module (left) and the detailed technical analysis screen (right), where crop performance indicators and micro-regions are evaluated.</p>
-
-            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-              <img src="Cases/Bayer/licenciamento/formulario.png" alt="FormulÃ¡rio de ValidaÃ§Ã£o" loading="lazy">
-            </div>
-            <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
-              <span class="lang-pt">FormulÃ¡rio de ValidaÃ§Ã£o e Regras do CADE</span>
-              <span class="lang-en">Validation Form and CADE Rules</span>
-            </h3>
-            <p class="case-body lang-pt">FormulÃ¡rio estruturado para inserÃ§Ã£o de pareceres tÃ©cnicos e checagem automatizada de pendÃªncias de patentes e restriÃ§Ãµes regulatÃ³rias impostas pelo CADE.</p>
-            <p class="case-body lang-en">Structured form for inserting technical opinions and automated checking of patent issues and regulatory restrictions imposed by CADE.</p>
-
-            <div class="case-grid-2">
-              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-                <img src="Cases/Bayer/licenciamento/aprovacao_condicionada.png" alt="AprovaÃ§Ã£o Condicionada" loading="lazy">
-              </div>
-              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-                <img src="Cases/Bayer/licenciamento/parecer_final.png" alt="Parecer Final Consolidado" loading="lazy">
-              </div>
-            </div>
-            <p class="case-body lang-pt">Processo de aprovaÃ§Ã£o condicionada sob restriÃ§Ãµes tÃ©cnicas (Ã  esquerda) e a emissÃ£o do parecer tÃ©cnico final consolidado (Ã  direita) para homologaÃ§Ã£o.</p>
-            <p class="case-body lang-en">Conditional approval process under technical constraints (left) and the issuance of the consolidated final technical opinion (right) for approval.</p>
-
-            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-              <img src="Cases/Bayer/licenciamento/auditoria.png" alt="Tela de Auditoria Documental" loading="lazy">
-            </div>
-            <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
-              <span class="lang-pt">Walkthrough de Auditoria e Rastreabilidade</span>
-              <span class="lang-en">Audit Walkthrough and Traceability</span>
-            </h3>
-            <p class="case-body lang-pt">A tela de auditoria documental exibe o histÃ³rico completo de pareceres, alteraÃ§Ãµes de status e justificativas anexadas, garantindo conformidade com Ã³rgÃ£os externos e compliance.</p>
-            <p class="case-body lang-en">The documentary audit screen displays the complete history of opinions, status changes, and attached justifications, ensuring compliance with external bodies.</p>
-          </div>
-        </section>
-
-        <!-- 08 / Structural Limitations -->
-        <section class="section-pad px-6 motion-case-block" id="tradeoffs" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">08 / LimitaÃ§Ãµes Estruturais</span>
-                <span class="lang-en">08 / Structural Limitations</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">IntegraÃ§Ãµes legadas e fronteiras de processo.</span>
-                    <span class="lang-en">Legacy integrations and process boundaries.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Nem todo o fluxo de licenciamento pÃ´de ser automatizado em um Ãºnico passo por limitaÃ§Ãµes de sistemas externos.</span>
-                    <span class="lang-en">Not all licensing workflows could be automated in a single step due to limitations in external systems.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <p class="case-body lang-pt">A validaÃ§Ã£o junto aos Ã³rgÃ£os de propriedade industrial e patentes governamentais permaneceu dependendo de consultas a portais pÃºblicos externos e inserÃ§Ãµes manuais de cÃ³digos de homologaÃ§Ã£o. O sistema atua como o centralizador de evidÃªncias tÃ©cnicas, mas a assinatura legal do contrato de licenciamento ainda transita por um ecossistema de assinatura digital corporativo externo por questÃµes de compliance global da empresa.</p>
-            <p class="case-body lang-en">Validation with industrial property bodies and government patents remained dependent on queries to external public portals and manual entry of approval codes. The system acts as the technical evidence hub, but the legal signature of the licensing contract still transits through an external corporate digital signature ecosystem due to global compliance issues.</p>
-          </div>
-        </section>
-
-        <!-- 09 / Impact -->
-        <section class="section-pad px-6 case-sec--dark motion-impact" id="impact" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header section-header--dark">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">09 / Impacto do Projeto</span>
-                <span class="lang-en">09 / Project Impact</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Resultados na validaÃ§Ã£o e licenciamento de culturas.</span>
-                    <span class="lang-en">Results in validation and crop licensing.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">A centralizaÃ§Ã£o dos dados agrÃ­colas eliminou o retrabalho de consolidaÃ§Ã£o e estruturou um fluxo seguro para decisÃµes crÃ­ticas.</span>
-                    <span class="lang-en">The centralization of agricultural data eliminated consolidation rework and structured a secure flow for critical decisions.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="impact-boxes motion-stagger">
-              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
-                <div class="case-metric">
-                  <span class="case-metric-num">100</span>
-                  <span class="case-metric-unit">%</span>
-                </div>
-                <p>
-                  <span class="lang-pt">De rastreabilidade de pareceres e decisÃµes de validaÃ§Ã£o no agronegÃ³cio.</span>
-                  <span class="lang-en">Of traceability for opinions and validation decisions in agribusiness.</span>
-                </p>
-              </div>
-              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
-                <div class="case-metric">
-                  <span class="case-metric-num">5</span>
-                  <span class="case-metric-unit"><span class="lang-pt">depts</span><span class="lang-en">depts</span></span>
-                </div>
-                <p>
-                  <span class="lang-pt">Conectados em um Ãºnico fluxo de trabalho (AgronÃ´mico, Comercial, CADE, GestÃ£o, Fiscal).</span>
-                  <span class="lang-en">Connected in a single workflow (Agronomic, Commercial, CADE, Management, Tax).</span>
-                </p>
-              </div>
-              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
-                <div class="case-metric">
-                  <span class="case-metric-num">4</span>
-                  <span class="case-metric-unit"><span class="lang-pt">meses</span><span class="lang-en">months</span></span>
-                </div>
-                <p>
-                  <span class="lang-pt">De projeto â€” da fase de mapeamento de requisitos Ã  entrega de protÃ³tipos funcionais.</span>
-                  <span class="lang-en">Of project â€” from requirement mapping to functional prototype delivery.</span>
-                </p>
-              </div>
-              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
-                <div class="case-metric">
-                  <span class="case-metric-num">0</span>
-                  <span class="case-metric-unit"><span class="lang-pt">planilhas</span><span class="lang-en">spreadsheets</span></span>
-                </div>
-                <p>
-                  <span class="lang-pt">Manuais necessÃ¡rias para compilaÃ§Ã£o preliminar de dados antes da anÃ¡lise.</span>
-                  <span class="lang-en">Manual spreadsheets needed for preliminary data compilation before analysis.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 10 / Reflections -->
-        <section class="section-pad px-6 motion-case-block" id="reflection" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">10 / ReflexÃµes do Designer</span>
-                <span class="lang-en">10 / Designer Reflections</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title motion-reveal-up motion-section">
-                    <span class="lang-pt">Projetar para especialistas exige abraÃ§ar a complexidade real.</span>
-                    <span class="lang-en">Designing for specialists requires embracing real complexity.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle motion-reveal-up motion-section">
-                  <p>
-                    <span class="lang-pt">O maior aprendizado foi perceber que simplificar a interface ocultando dados cruciais Ã© um erro quando se projeta para especialistas. Cientistas agrÃ­colas e gestores precisam de densidade de dados para decidir com seguranÃ§a. O papel do designer Ã© criar legibilidade e estrutura, e nÃ£o remover a complexidade necessÃ¡ria.</span>
-                    <span class="lang-en">The biggest learning was realizing that simplifying the interface by hiding crucial data is a mistake when designing for specialists. Agricultural scientists and managers need data density to decide with confidence. The designer's role is to create legibility and structure, not remove necessary complexity.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </div>
-    </div>
-
-    <!-- NEXT CASE NAVIGATION -->
-    <nav class="case-nav-bar motion-reveal-up motion-section" aria-label="NavegaÃ§Ã£o do caso">
-      <div class="case-nav-bar-inner">
-        <div class="magnetic-wrap inline-block">
-          <a href="petrobras.html" class="case-nav-link"><span aria-hidden="true">â†</span><span>Petrobras</span></a>
-        </div>
-        <div class="magnetic-wrap inline-block">
-          <a href="ambev.html" class="case-nav-link case-nav-link--primary">
-            <span class="lang-pt">PrÃ³ximo: Ambev</span>
-            <span class="lang-en">Next: Ambev</span>
-            <span aria-hidden="true">â†’</span>
-          </a>
-        </div>
-      </div>
-    </nav>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer" id="footer">
-    <div class="container site-footer__inner">
-      <div class="site-footer__top">
-        <div class="site-footer__identity">
-          <div class="site-footer__mark" aria-hidden="true">HA</div>
-          <div>
-            <p class="site-footer__name">Henrico Amaral</p>
-            <p class="site-footer__role" data-t="ft.role">Senior Product Designer Â· Decision Infrastructure</p>
-          </div>
-        </div>
-        <p class="site-footer__signature" data-t="ft.signature">
-          Pense simples. FaÃ§a melhor.<br>
-          Torne-se inevitÃ¡vel.
-        </p>
-      </div>
-      <div class="site-footer__bottom">
-        <p>Henrico Amaral Â· Product Designer Â· 2026</p>
-        <a href="#" class="site-footer__toplink">â†‘ Topo</a>
-      </div>
-    </div>
-  </footer>
-
-  <script defer src="../assets/js/site.js?v=20260610-motion-cache-zero-03"></script>
-  <script defer src="../assets/js/motion.js?v=20260610-motion-cache-zero-03"></script>
+<body>
+<a class="skip" href="#overview">Ir para o conteúdo</a>
+<nav class="nav dark" aria-label="Principal">
+<a class="nav__brand" href="../index.html#hero">
+<span class="dot" aria-hidden="true">
+</span>Henrico Amaral</a>
+<div class="nav__links">
+<a href="../index.html#process">Método</a>
+<a href="../index.html#cases">Casos</a>
+<a href="../index.html#impact">Impacto</a>
+<a href="../index.html#about">Sobre</a>
+<a href="../index.html#contact">Contato</a>
+</div>
+<span class="nav__lang" aria-label="Idioma">PT/EN</span>
+<a class="nav__cta" href="../index.html#cases">← Voltar ao portfólio</a>
+</nav>
+<header class="case-hero" data-navdark data-screen-label="Case Hero">
+<div class="case-hero__img" style="background-image:url('../assets/img/cases/bayer.webp')">
+</div>
+<div class="case-hero__in">
+<div class="case-hero__eyebrow mono">
+<span class="ln">
+</span>02 · Agronegócio · Dados Agrícolas e Licenciamento</div>
+<h1>Inteligência Agronômica</h1>
+<span class="case-hero__client">Bayer</span>
+<p class="case-hero__lead">Sistema territorial de inteligência agronômica para análise ambiental, validação técnica e suporte à decisão agrícola em ciclos de licenciamento.</p>
+</div>
+</header>
+<section class="case-spec project-info" aria-label="Informações do Projeto">
+<div class="project-info__inner">
+<div class="project-info__intro">
+<p class="project-info__eyebrow mono">Informações do Projeto</p>
+<h2>Plataforma de dados agrícolas para validação técnica.</h2>
+<p>Projeto desenvolvido para organizar dados agrícolas, análise técnica e validação de tecnologias em um sistema interno.</p>
+</div>
+<dl class="project-info__grid">
+<div class="project-info__cell"><dt>Product Designer</dt><dd>Henrico Amaral</dd></div>
+<div class="project-info__cell"><dt>UX Researcher</dt><dd>Maria Antonieta Santos</dd></div>
+<div class="project-info__cell"><dt>Empresa</dt><dd>MaxxiData</dd></div>
+<div class="project-info__cell"><dt>Cliente</dt><dd>Bayer</dd></div>
+<div class="project-info__cell"><dt>Período</dt><dd>Dezembro 2021 — Março 2022</dd></div>
+<div class="project-info__cell"><dt>Duração</dt><dd>4 meses</dd></div>
+<div class="project-info__cell"><dt>Tipo</dt><dd>Plataforma interna de dados agrícolas</dd></div>
+<div class="project-info__cell"><dt>Plataforma</dt><dd>Web · Sistema interno</dd></div>
+<div class="project-info__cell project-info__cell--wide"><dt>Escopo</dt><dd>Discovery · Arquitetura da informação · UX · Prototipação</dd></div>
+</dl>
+<p class="project-info__closing">Mais do que um projeto de interface, este trabalho envolveu compreender como a validação técnica agrícola funciona no dia a dia.</p>
+</div>
+</section>
+<section class="overview" id="overview" data-screen-label="Overview">
+<div class="wrap overview__grid">
+<div class="reveal">
+<div class="overview__kicker mono">
+<span class="ln">
+</span>Projeto · Contexto · Escopo</div>
+<h2>Dados agrícolas como estrutura de decisão.</h2>
+<p>A plataforma organiza culturas, microrregiões, pareceres técnicos e evidências regulatórias em um fluxo único de validação.</p>
+</div>
+<dl class="subfacts reveal" data-d="1">
+<div class="subfacts__row">
+<dt>Sistema</dt>
+<dd>Bayer Platform</dd>
+</div>
+<div class="subfacts__row">
+<dt>Domínio</dt>
+<dd>Dados agrícolas · Licenciamento</dd>
+</div>
+<div class="subfacts__row">
+<dt>Usuários</dt>
+<dd>Especialistas agronômicos e gestão técnica</dd>
+</div>
+<div class="subfacts__row">
+<dt>Resultado</dt>
+<dd>Rastreabilidade de pareceres e decisões</dd>
+</div>
+</dl>
+</div>
+</section>
+<section class="ed ed--cream" data-screen-label="01 Contexto">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">01 / 10</span>
+<span class="lbl">Contexto<br>Operacional</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Decidir no agro exige cruzar dados técnicos, legais e territoriais.</h2>
+<p>O processo de validação agrícola envolve especialistas agronômicos, equipes comerciais, gestão técnica e áreas institucionais, cada uma com registros e critérios próprios.</p>
+<p>Antes da plataforma, análises aconteciam de forma fragmentada: dados em sistemas distintos, comparações em planilhas e decisões em relatórios ou e-mails.</p>
+<div class="diagram">
+<div class="diagram__flow">
+<div class="chips">
+<span class="chip">Cultura agrícola</span>
+<span class="chip">Microrregião</span>
+<span class="chip">Safra</span>
+<span class="chip">Parecer técnico</span>
+<span class="chip">CADE</span>
+<span class="chip">Licenciamento</span>
+<span class="chip">Gestão</span>
+</div>
+<span class="diagram__arrow">→</span>
+<span class="node node--alert">Decisão agrícola</span>
+</div>
+<p class="diagram__cap">A decisão dependia de uma leitura comum entre áreas técnicas e institucionais.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--sand" data-screen-label="02 Legado">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">02 / 10</span>
+<span class="lbl">Arquitetura<br>Legada</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">A arquitetura anterior espalhava evidências em registros paralelos.</h2>
+<p>Planilhas locais controlavam microrregiões. Relatórios técnicos em PDF consolidavam pareceres. E-mails registravam aprovações e pendências.</p>
+<p>Nenhum desses registros compartilhava uma estrutura de dados comum, quebrando continuidade e dificultando rastreabilidade posterior.</p>
+<div class="diagram diagram--legacy">
+<div class="diagram__flow">
+<div class="chips">
+<span class="chip chip--dim">Planilhas de microrregião</span>
+<span class="chip chip--dim">PDFs técnicos</span>
+<span class="chip chip--dim">E-mails de aprovação</span>
+<span class="chip chip--dim">Consultas externas</span>
+</div>
+<span class="diagram__arrow">⇢</span>
+<span class="node">Pareceres dispersos</span>
+</div>
+<p class="diagram__cap">A falta de estrutura comum tornava a decisão difícil de auditar.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--cream" data-screen-label="03 Problema">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">03 / 10</span>
+<span class="lbl">Definição<br>do Problema</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">O gargalo era transformar evidência técnica em decisão rastreável.</h2>
+<p class="lead">O problema não era falta de dados — o time gerava dados de alta qualidade.</p>
+<p>A dificuldade estava em cruzar safras anteriores, condições de microrregiões e exigências de propriedade intelectual.</p>
+<p>A validação dependia de esforço manual recorrente, atrasando licenciamento e fragilizando justificativas posteriores.</p>
+</div>
+</div>
+</section>
+<section class="ed ed--sand" data-screen-label="04 Atuação">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">04 / 10</span>
+<span class="lbl">Atuação<br>do Designer</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Arquitetura de informação para decisão técnica.</h2>
+<p>Atuei na organização das visões de dados, estados e registros de parecer em torno da cultura agrícola como unidade central de análise.</p>
+<div class="role-grid">
+<article class="role">
+<span class="no">01</span>
+<h3>Modelo centrado na cultura</h3>
+<p>Organizar indicadores, pareceres e status por cultura agrícola.</p>
+</article>
+<article class="role">
+<span class="no">02</span>
+<h3>Fluxos de validação</h3>
+<p>Conectar triagem, análise técnica, aprovação condicionada e parecer final.</p>
+</article>
+<article class="role">
+<span class="no">03</span>
+<h3>Dados para auditoria</h3>
+<p>Associar cada parecer ao conjunto de evidências usado na decisão.</p>
+</article>
+<article class="role">
+<span class="no">04</span>
+<h3>Hierarquia de indicadores</h3>
+<p>Priorizar dados agronômicos, legais e comerciais em telas densas.</p>
+</article>
+<article class="role">
+<span class="no">05</span>
+<h3>Prototipação crítica</h3>
+<p>Desenhar telas de triagem, análise, formulário, parecer e auditoria.</p>
+</article>
+<article class="role">
+<span class="no">06</span>
+<h3>Alinhamento especialista</h3>
+<p>Traduzir critérios técnicos para equipes heterogêneas.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--cream" data-screen-label="05 Restrições">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">05 / 10</span>
+<span class="lbl">Restrições<br>do Projeto</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Restrições do projeto.</h2>
+<p>Condições que limitaram a solução e orientaram as decisões de arquitetura.</p>
+<div class="panel">
+<div class="panel__head">
+<span>Condições de Contorno</span>
+<span>04</span>
+</div>
+<ul>
+<li>
+<span>
+<strong>Densidade informacional</strong>
+<span class="ds">Especialistas precisavam ver dados suficientes para decidir.</span>
+</span>
+</li>
+<li>
+<span>
+<strong>Rastreabilidade</strong>
+<span class="ds">Cada decisão precisava manter vínculo com evidências.</span>
+</span>
+</li>
+<li>
+<span>
+<strong>Órgãos externos</strong>
+<span class="ds">Partes do processo legal continuavam fora da plataforma.</span>
+</span>
+</li>
+<li>
+<span>
+<strong>Vocabulário técnico</strong>
+<span class="ds">A interface precisava respeitar termos do domínio.</span>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--dark" data-navdark data-screen-label="06 Decisão">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">06 / 10</span>
+<span class="lbl">Decisão<br>Estrutural</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">A cultura agrícola como eixo da decisão.</h2>
+<p>A decisão estrutural foi organizar o sistema em torno da cultura agrícola. A partir dela, o usuário acessa microrregiões, tecnologias, pareceres, pendências e histórico.</p>
+<div class="hub">
+<div class="hub__center">
+<span class="core">Cultura agrícola</span>
+</div>
+<div class="hub__ring">
+<span class="chip">Microrregião</span>
+<span class="chip">Tecnologia</span>
+<span class="chip">Safra</span>
+<span class="chip">Parecer</span>
+<span class="chip">CADE</span>
+<span class="chip">Auditoria</span>
+</div>
+</div>
+<p class="decision-note">Ciclo operacional estruturado:</p>
+<div class="lifecycle">
+<span class="st">Seleção</span>
+<span class="sep">→</span>
+<span class="st">Triagem</span>
+<span class="sep">→</span>
+<span class="st">Análise</span>
+<span class="sep">→</span>
+<span class="st">Parecer</span>
+<span class="sep">→</span>
+<span class="st">Condição</span>
+<span class="sep">→</span>
+<span class="st">Aprovação</span>
+<span class="sep">→</span>
+<span class="st">Auditoria</span>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--cream" data-screen-label="07 Escala">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">07 / 10</span>
+<span class="lbl">Escala<br>Operacional</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Fluxos de validação técnica em telas integradas.</h2>
+<p>A sequência estrutura leitura de processos, triagem, análise técnica, emissão de parecer e auditoria documental.</p>
+</div>
+</div>
+<div class="figs">
+<figure class="figure reveal">
+<div class="figure__frame screen-img">
+<img src="Cases/Bayer/licenciamento/dashboard.png" alt="Dashboard de processos Bayer" loading="lazy">
+</div>
+<figcaption class="figure__cap">
+<h3>Painel de controle e visão geral</h3>
+<p>A tela inicial apresenta processos de validação por cultura, pendências regulatórias e urgência legal.</p>
+</figcaption>
+</figure>
+<div class="figpair reveal">
+<div class="figslot screen-img">
+<img src="Cases/Bayer/licenciamento/triagem_inicial.png" alt="Triagem inicial de tecnologia agrícola" loading="lazy">
+</div>
+<div class="figslot screen-img">
+<img src="Cases/Bayer/licenciamento/analise_tecnica.png" alt="Análise técnica detalhada" loading="lazy">
+</div>
+</div>
+<figcaption class="figure__cap reveal">
+<h3>Triagem e análise técnica</h3>
+<p>Triagem de tecnologia agrícola e análise detalhada de indicadores de safra e microrregiões.</p>
+</figcaption>
+<figure class="figure reveal">
+<div class="figure__frame screen-img">
+<img src="Cases/Bayer/licenciamento/formulario.png" alt="Formulário de parecer técnico" loading="lazy">
+</div>
+<figcaption class="figure__cap">
+<h3>Formulário de parecer técnico</h3>
+<p>Estrutura para inserir pareceres e checar pendências de patentes e restrições regulatórias.</p>
+</figcaption>
+</figure>
+<div class="figpair reveal">
+<div class="figslot screen-img">
+<img src="Cases/Bayer/licenciamento/aprovacao_condicionada.png" alt="Aprovação condicionada" loading="lazy">
+</div>
+<div class="figslot screen-img">
+<img src="Cases/Bayer/licenciamento/parecer_final.png" alt="Parecer final consolidado" loading="lazy">
+</div>
+</div>
+<figcaption class="figure__cap reveal">
+<h3>Aprovação condicionada e parecer final</h3>
+<p>Fluxo para decisões sob restrições técnicas e consolidação do parecer final.</p>
+</figcaption>
+<figure class="figure reveal">
+<div class="figure__frame screen-img">
+<img src="Cases/Bayer/licenciamento/auditoria.png" alt="Auditoria documental" loading="lazy">
+</div>
+<figcaption class="figure__cap">
+<h3>Auditoria documental</h3>
+<p>Histórico de pareceres, status e justificativas para conformidade.</p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="ed ed--sand" data-screen-label="08 Limitações">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">08 / 10</span>
+<span class="lbl">Limitações<br>Estruturais</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Parte da validação continuou fora da plataforma.</h2>
+<p>Consultas a órgãos de propriedade industrial e patentes governamentais permaneceram dependentes de portais públicos externos.</p>
+<p>O sistema centralizou evidências técnicas, mas a assinatura legal do contrato ainda transitava por ecossistema corporativo externo.</p>
+</div>
+</div>
+</section>
+<section class="case-impact" data-navdark data-screen-label="09 Impacto">
+<div class="case-impact__head reveal">
+<div class="k">
+<span class="ln">
+</span>09 / 10 · Impacto do Projeto</div>
+<h2>Resultados na validação e licenciamento de culturas.</h2>
+<p>A centralização dos dados agrícolas reduziu retrabalho de consolidação e estruturou um fluxo seguro para decisões críticas.</p>
+</div>
+<div class="stat-grid reveal" data-d="1">
+<div class="stat">
+<div class="stat__n">1<small>fluxo</small>
+</div>
+<p class="stat__d">Fluxo rastreável para pareceres e decisões de validação.</p>
+</div>
+<div class="stat">
+<div class="stat__n">5<small>áreas</small>
+</div>
+<p class="stat__d">Agronômico, comercial, CADE, gestão e fiscal conectados.</p>
+</div>
+<div class="stat">
+<div class="stat__n">4<small>meses</small>
+</div>
+<p class="stat__d">Da fase de requisitos à entrega de protótipos funcionais.</p>
+</div>
+<div class="stat">
+<div class="stat__n">1<small>base</small>
+</div>
+<p class="stat__d">Base estruturada para reduzir consolidação manual.</p>
+</div>
+</div>
+</section>
+<section class="reflection" data-screen-label="10 Reflexões">
+<div class="reflection__in reveal">
+<div class="k">
+<span class="ln">
+</span>10 / 10 · Reflexões do Designer</div>
+<h2>Projetar para especialistas exige abraçar a complexidade real.</h2>
+<p>Simplificar escondendo dados cruciais é erro quando se projeta para especialistas.</p>
+<p>O papel do designer é criar legibilidade e estrutura, não remover a complexidade necessária.</p>
+</div>
+</section>
+<nav class="case-nav" aria-label="Outros casos">
+<div class="case-nav__grid">
+<a href="petrobras.html">
+<span class="dir">← Anterior</span>
+<span class="nm">Petrobras</span>
+</a>
+<a href="ambev.html">
+<span class="dir">Próximo →</span>
+<span class="nm">Ambev</span>
+</a>
+</div>
+</nav>
+<footer class="footer" data-navdark>
+<div class="wrap">
+<div class="footer__top">
+<div class="footer__id">
+<div class="mono-mark">HA</div>
+<div>
+<div class="nm">Henrico Amaral</div>
+<div class="rl">Senior Product Designer · Decision Infrastructure</div>
+</div>
+</div>
+<p class="manifesto">Pense simples.<br>Faça melhor.<br>
+<em>Torne-se inevitável.</em>
+</p>
+</div>
+<div class="footer__bar">
+<span>Henrico Amaral · Product Designer · <span id="year">2026</span>
+</span>
+<a href="#">↑ Voltar ao topo</a>
+</div>
+</div>
+</footer>
+<script defer src="../assets/js/site.js?v=20260615-case-blueprint">
+</script>
 </body>
-
 </html>

@@ -1,752 +1,458 @@
-﻿ï¿½<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR" data-lang="pt">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ambev Monitoring â€” Henrico Amaral</title>
-  <meta name="description" content="Ambev Monitoring â€” plataforma de monitoramento operacional logÃ­stico em escala nacional para controle de rupturas, carregamentos e visibilidade de exceÃ§Ãµes. / National-scale logistics operational monitoring platform.">
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-
-  <link rel="stylesheet" href="../assets/css/tailwind.generated.css?v=20260610-motion-cache-zero-03">
-  <link rel="stylesheet" href="../assets/css/site.css?v=20260610-motion-cache-zero-03">
-  <link rel="stylesheet" href="../assets/css/cases.css?v=20260610-motion-cache-zero-03">
-  <link rel="stylesheet" href="../assets/css/motion.css?v=20260610-motion-cache-zero-03">
-
-  <script>(function(){try{var l=localStorage.getItem('henrico_lang');if(l==='en'){document.documentElement.lang='en';document.documentElement.dataset.lang='en';}}catch(e){}})()</script>
-  <noscript>
-    <style>
-      .lang-pt, .lang-en { display: inline !important; }
-    </style>
-  </noscript>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ambev · Monitoring — Henrico Amaral</title>
+<meta name="description" content="Ambev Monitoring — plataforma de monitoramento operacional logístico em escala nacional para controle de rupturas, carregamentos e visibilidade de exceções.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/cases.css?v=20260615-case-blueprint">
 </head>
-
-<body class="font-body overflow-x-hidden">
-
-  <a href="#main-content"
-    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent-500 text-white px-4 py-2 z-50 rounded"
-    data-t="skip">Ir para o conteÃºdo</a>
-
-  <!-- NAV -->
-  <nav class="fixed top-0 left-0 w-full z-50 liquid-glass transition-transform duration-300" id="nav"
-    aria-label="NavegaÃ§Ã£o principal">
-    <div class="max-w-[1440px] w-full mx-auto flex items-center justify-between px-6 py-4">
-      <div class="magnetic-wrap">
-        <a href="../index.html" class="font-display font-bold text-lg md:text-xl tracking-[0]">Henrico Amaral</a>
-      </div>
-      <div
-        class="hidden md:flex items-center gap-8 font-mono text-[12px] tracking-widest uppercase font-semibold text-text-secondary nav-links">
-        <a href="../index.html#process" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.method">MÃ©todo</a>
-        <a href="../index.html#cases"   class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.cases">Casos</a>
-        <a href="../index.html#impact"  class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.impact">Impacto</a>
-        <a href="../about.html"   class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.about">Sobre</a>
-        <a href="../index.html#contact" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.contact">Contato</a>
-      </div>
-      <div class="lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
-        <span class="lang-toggle__thumb" aria-hidden="true"></span>
-        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT PortuguÃªs" aria-pressed="true">PT</button>
-        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
-      </div>
-      <button id="mobile-menu-toggle" class="mobile-menu-toggle md:hidden" type="button"
-        aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
-    </div>
-    <div id="mobile-menu" class="mobile-menu md:hidden" hidden>
-      <a href="../index.html#process" data-t="nav.method">MÃ©todo</a>
-      <a href="../index.html#cases"   data-t="nav.cases">Casos</a>
-      <a href="../index.html#impact"  data-t="nav.impact">Impacto</a>
-      <a href="../about.html"   data-t="nav.about">Sobre</a>
-      <a href="../index.html#contact" data-t="nav.contact">Contato</a>
-      <div class="lang-toggle mobile-lang-toggle" data-lang-toggle data-current-lang="pt" role="group"
-        aria-label="Selecionar idioma">
-        <span class="lang-toggle__thumb" aria-hidden="true"></span>
-        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT PortuguÃªs" aria-pressed="true">PT</button>
-        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
-      </div>
-    </div>
-  </nav>
-
-  <main id="main-content">
-    <div id="sr-announcer" role="status" aria-live="polite" class="sr-only"></div>
-
-    <!-- â”€â”€ HERO â”€â”€ -->
-    <header class="case-hero motion-case-hero" aria-labelledby="case-title">
-      <img src="../assets/img/cases/ambev.webp" alt="Ambev Monitoring Hero" class="case-hero-bg motion-parallax-bg">
-      <div class="case-hero-overlay"></div>
-
-      <div class="max-w-[1440px] mx-auto w-full">
-        <div class="case-hero-eyebrow motion-reveal-up motion-hero">
-          <span class="case-hero-dot" aria-hidden="true"></span>
-          <span class="lang-pt">03 Â· LogÃ­stica Â· Monitoramento Operacional</span>
-          <span class="lang-en">03 Â· Logistics Â· Operational Monitoring</span>
-        </div>
-
-        <h1 id="case-title" class="motion-reveal-up motion-hero">Ambev Monitoring</h1>
-        <p class="case-hero-client motion-reveal-up motion-hero">Ambev</p>
-
-        <p class="case-hero-desc motion-reveal-up motion-blur-in motion-hero">
-          <span class="lang-pt">Plataforma de monitoramento operacional logÃ­stico em escala nacional, transformando relatÃ³rios desconectados em uma leitura compartilhada e integrada do estado da operaÃ§Ã£o.</span>
-          <span class="lang-en">National-scale logistics operational monitoring platform, transforming disconnected reports into a shared, integrated reading of the operation's state.</span>
-        </p>
-
-        <div class="case-meta-row motion-reveal-up motion-hero">
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Cliente</span><span class="lang-en">Client</span></span>
-            <span class="case-meta-value">Ambev</span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Setor</span><span class="lang-en">Sector</span></span>
-            <span class="case-meta-value"><span class="lang-pt">LogÃ­stica Â· DistribuiÃ§Ã£o</span><span class="lang-en">Logistics Â· Distribution</span></span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Tipo</span><span class="lang-en">Type</span></span>
-            <span class="case-meta-value"><span class="lang-pt">Plataforma interna</span><span class="lang-en">Internal platform</span></span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Papel</span><span class="lang-en">Role</span></span>
-            <span class="case-meta-value">UX Design</span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Escopo</span><span class="lang-en">Scope</span></span>
-            <span class="case-meta-value"><span class="lang-pt">Discovery Â· IA Â· UX Research Â· Arquitetura</span><span class="lang-en">Discovery Â· IA Â· UX Research Â· Architecture</span></span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Plataforma</span><span class="lang-en">Platform</span></span>
-            <span class="case-meta-value">Web Â· Control Room / Desktop</span>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- â”€â”€ PROJECT SNAPSHOT â”€â”€ -->
-    <section class="section-pad px-6 bg-page nbg motion-case-block" id="snapshot" data-motion>
-      <div class="max-w-[1440px] mx-auto w-full">
-        <div class="section-header">
-          <span class="section-kicker motion-reveal-up motion-section">
-            <span class="lang-pt">PROJETO Â· CONTEXTO Â· ESCOPO</span>
-            <span class="lang-en">PROJECT Â· CONTEXT Â· SCOPE</span>
-          </span>
-          <div class="section-header-grid">
-            <div class="section-header-title-col">
-              <h2 class="section-header-title">
-                <span class="lang-pt">Uma leitura comum<br>da operaÃ§Ã£o nacional.</span>
-                <span class="lang-en">A common reading<br>of national operations.</span>
-              </h2>
-            </div>
-            <div class="section-header-subtitle">
-              <p>
-                <span class="lang-pt">A plataforma organizou rupturas, carregamentos e indicadores de disponibilidade em torno do estado da operaÃ§Ã£o como unidade central de leitura.</span>
-                <span class="lang-en">The platform organized stockouts, shipments, and availability indicators around the operational state as the primary unit of reading.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="snapshot-grid motion-stagger">
-          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
-            <span class="snapshot-cell-label"><span class="lang-pt">Sistema</span><span class="lang-en">System</span></span>
-            <span class="snapshot-cell-value">Ambev Monitoring</span>
-          </div>
-          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
-            <span class="snapshot-cell-label"><span class="lang-pt">DomÃ­nio</span><span class="lang-en">Domain</span></span>
-            <span class="snapshot-cell-value">
-              <span class="lang-pt">LogÃ­stica Â· S&OE</span>
-              <span class="lang-en">Logistics Â· S&OE</span>
-            </span>
-          </div>
-          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
-            <span class="snapshot-cell-label"><span class="lang-pt">UsuÃ¡rios</span><span class="lang-en">Users</span></span>
-            <span class="snapshot-cell-value">
-              <span class="lang-pt">Equipes de Controle e CD</span>
-              <span class="lang-en">Control and DC Teams</span>
-            </span>
-          </div>
-          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
-            <span class="snapshot-cell-label"><span class="lang-pt">Resultado</span><span class="lang-en">Outcome</span></span>
-            <span class="snapshot-cell-value">
-              <span class="lang-pt">SincronizaÃ§Ã£o e Resposta</span>
-              <span class="lang-en">Synchronization and Response</span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- â”€â”€ CONTENT SECTIONS â”€â”€ -->
-           <!-- 01 / Operational Context -->
-        <section class="section-pad px-6 case-sec--dark motion-case-block" id="context" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header section-header--dark">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">01 / Contexto Operacional</span>
-                <span class="lang-en">01 / Operational Context</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">A distribuiÃ§Ã£o nacional envolve mÃºltiplos centros de decisÃ£o simultÃ¢neos.</span>
-                    <span class="lang-en">National distribution involves multiple simultaneous decision centers.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Quatro perfis de leitura operacional coexistiam na mesma operaÃ§Ã£o: centros de distribuiÃ§Ã£o, equipes logÃ­sticas, times regionais e gestores de operaÃ§Ã£o.</span>
-                    <span class="lang-en">Four operational reading profiles coexisted: distribution centers, logistics teams, regional teams, and operations managers.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="case-grid">
-              <div>
-                <p class="case-body lang-pt">Cada um desses perfis operava de forma isolada. Quando surgia uma ruptura ou atraso relevante na entrega, entender o impacto real exigia cruzar informaÃ§Ãµes manualmente â€” entre relatÃ³rios fÃ­sicos, sistemas internos e planilhas regionais. O centro de controle precisava responder rapidamente trÃªs perguntas: onde estÃ¡ o problema, qual regiÃ£o foi afetada e o que precisa ser priorizado no momento.</p>
-                <p class="case-body lang-en">Each profile operated in isolation. When a stockout or delivery delay occurred, understanding the real impact required manually crossing information â€” between reports, internal systems, and regional spreadsheets. The control center needed quick answers: where the problem is, which region is affected, and what needs immediate prioritization.</p>
-              </div>
-              <div>
-                <div class="case-aside motion-reveal-up motion-card">
-                  <span class="case-aside-label"><span class="lang-pt">Perfis de Equipe</span><span class="lang-en">Team Profiles</span></span>
-                  <ul class="case-aside-list">
-                    <li><span class="lang-pt">Centros de DistribuiÃ§Ã£o (Estoques)</span><span class="lang-en">Distribution Centers (Stocks)</span></li>
-                    <li><span class="lang-pt">Equipes LogÃ­sticas (Carregamento)</span><span class="lang-en">Logistics Teams (Loadings)</span></li>
-                    <li><span class="lang-pt">Times Regionais (NÃ­vel de ServiÃ§o)</span><span class="lang-en">Regional Teams (Service Level)</span></li>
-                    <li><span class="lang-pt">Gestores (Desempenho Agregado)</span><span class="lang-en">Managers (Aggregated Performance)</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Flow Diagram -->
-            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram" data-parallax="0.02">
-              <div class="d-flow">
-                <div class="d-flow-nodes">
-                  <div class="d-node"><span class="lang-pt">Alerta de ruptura</span><span class="lang-en">Rupture alert</span></div>
-                  <div class="d-node"><span class="lang-pt">Atraso de frota</span><span class="lang-en">Fleet delay</span></div>
-                  <div class="d-node"><span class="lang-pt">Corte de pedido</span><span class="lang-en">Order cuts</span></div>
-                  <div class="d-node"><span class="lang-pt">Indisponibilidade</span><span class="lang-en">Unavailability</span></div>
-                </div>
-                <div class="d-line-down"></div>
-                <div class="d-node highlight"><span class="lang-pt">ExceÃ§Ã£o LogÃ­stica (S&OE)</span><span class="lang-en">Logistics Exception (S&OE)</span></div>
-              </div>
-              <span class="diagram-caption">
-                <span class="lang-pt">Desvios em diferentes canais convergem no monitoramento de exceÃ§Ãµes.</span>
-                <span class="lang-en">Deviations in different channels converge in exception monitoring.</span>
-              </span>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- 02 / Legacy Architecture -->
-        <section class="section-pad px-6 case-sec--dark motion-case-block" id="legacy" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header section-header--dark">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">02 / Arquitetura Legada</span>
-                <span class="lang-en">02 / Legacy Architecture</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Antes do sistema, a operaÃ§Ã£o existia, mas a leitura da operaÃ§Ã£o nÃ£o.</span>
-                    <span class="lang-en">Before the system, the operation existed, but its reading did not.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Indicadores crÃ­ticos de rupturas e frotas estavam distribuÃ­dos em planilhas locais e relatÃ³rios offline de faturamento.</span>
-                    <span class="lang-en">Critical stockout and fleet indicators were distributed across local spreadsheets and offline billing reports.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="case-grid">
-              <div>
-                <p class="case-body lang-pt">Esta fragmentaÃ§Ã£o criava mÃºltiplas versÃµes da realidade logÃ­stica acontecendo simultaneamente. Sem uma visualizaÃ§Ã£o consolidada da distribuiÃ§Ã£o nacional, o tempo de resposta era alto, pois as equipes precisavam gastar tempo montando manualmente o cenÃ¡rio antes de agir e tomar decisÃµes.</p>
-                <p class="case-body lang-en">This fragmentation created multiple parallel versions of the logistics reality. Without a consolidated visualization of national distribution, response times were high as teams had to spend time manually building the scenario before taking action.</p>
-              </div>
-              <div>
-                <div class="case-aside motion-reveal-up motion-card">
-                  <span class="case-aside-label"><span class="lang-pt">Registros Legados</span><span class="lang-en">Legacy Records</span></span>
-                  <ul class="case-aside-list">
-                    <li><span class="lang-pt">Planilhas regionais isoladas</span><span class="lang-en">Isolated regional spreadsheets</span></li>
-                    <li><span class="lang-pt">RelatÃ³rios periÃ³dicos em papel/PDF</span><span class="lang-en">Periodic paper/PDF reports</span></li>
-                    <li><span class="lang-pt">HistÃ³rico de frotas assÃ­ncrono</span><span class="lang-en">Asynchronous fleet history</span></li>
-                    <li><span class="lang-pt">AusÃªncia de alarmes estruturados</span><span class="lang-en">Lack of structured alarms</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Convergence Diagram -->
-            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram" data-parallax="0.02">
-              <div class="d-conv">
-                <div class="d-conv-inputs">
-                  <div class="d-node"><span class="lang-pt">Planilhas locais</span><span class="lang-en">Local spreadsheets</span></div>
-                  <div class="d-node"><span class="lang-pt">RelatÃ³rios periÃ³dicos</span><span class="lang-en">Periodic reports</span></div>
-                  <div class="d-node"><span class="lang-pt">Logs de frotas</span><span class="lang-en">Fleet logs</span></div>
-                </div>
-                <div class="d-conv-output">
-                  <div class="d-node highlight"><span class="lang-pt">ReconstituiÃ§Ã£o Manual</span><span class="lang-en">Manual Reconstruction</span></div>
-                </div>
-              </div>
-              <span class="diagram-caption">
-                <span class="lang-pt">Antes: a fragmentaÃ§Ã£o de relatÃ³rios exigia compilaÃ§Ã£o manual lenta antes de agir.</span>
-                <span class="lang-en">Before: report fragmentation required slow manual compilation before action.</span>
-              </span>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- 03 / Problem Definition -->
-        <section class="section-pad px-6 motion-case-block" id="problem" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">03 / DefiniÃ§Ã£o do Problema</span>
-                <span class="lang-en">03 / Problem Definition</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">O problema nÃ£o era a ausÃªncia de dados, mas a ausÃªncia de estrutura.</span>
-                    <span class="lang-en">The problem was not lack of data, but lack of structure.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Com dados abundantes mas sem conexÃ£o, o monitoramento contÃ­nuo e a anÃ¡lise de causa raiz de rupturas estavam misturados na mesma tela, inflando o effort cognitivo.</span>
-                    <span class="lang-en">With abundant but unconnected data, continuous monitoring and stockout root-cause analysis were mixed on the same screen, inflating cognitive effort.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <p class="case-body lang-pt">A equipe gastava mais tempo descobrindo onde estava o problema do que agindo nele. Centros de distribuiÃ§Ã£o e times comerciais trabalhavam com leituras dessincronizadas, o que gerava rupturas desnecessÃ¡rias de estoque no ponto de venda e atrasos na liberaÃ§Ã£o de carregamentos crÃ­ticos.</p>
-            <p class="case-body lang-en">The team spent more time figuring out where the problem was than fixing it. Distribution centers and commercial teams worked with out-of-sync readings, generating unnecessary stockouts at the point of sale and delays in critical shipment releases.</p>
-          </div>
-        </section>
-
-        <!-- 04 / Designer Role -->
-        <section class="section-pad px-6 motion-case-block" id="role" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">04 / AtuaÃ§Ã£o do Designer</span>
-                <span class="lang-en">04 / Designer Role</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">EstruturaÃ§Ã£o da arquitetura de informaÃ§Ã£o e fluxos de decisÃ£o.</span>
-                    <span class="lang-en">Information architecture structuring and decision flows.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Trabalhei como UX Designer na estruturaÃ§Ã£o da arquitetura e fluxos de decisÃ£o da plataforma. Colaborei de perto com Andrea Parente (UX Research) no mapeamento de requisitos e na dinÃ¢mica com especialistas logÃ­sticos, e com a equipe de UI (Michelle Santos e Afonso Lopez) para materializar a interface.</span>
-                    <span class="lang-en">I worked as UX Designer structuring the platform's information architecture and decision flows. I collaborated closely with Andrea Parente (UX Research) in mapping requirements and hosting workshops with logistics specialists, and with the UI team (Michelle Santos and Afonso Lopez) to shape the interface.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="insight-grid motion-stagger">
-              <div class="insight-item">
-                <span class="insight-num">01</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Arquitetura de 3 camadas.</span><span class="lang-en">3-layer architecture.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Propus estruturar o sistema em trÃªs nÃ­veis progressivos: nacional, regional e de detalhes do evento.</span><span class="lang-en">Proposed structuring the system into three progressive levels: national, regional, and event details.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">02</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Monitoramento separado da investigaÃ§Ã£o.</span><span class="lang-en">Monitoring separated from investigation.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Dividi a interface em modo de visualizaÃ§Ã£o rÃ¡pida da operaÃ§Ã£o e mÃ³dulo investigativo de causa raiz.</span><span class="lang-en">Divided the interface into a quick operational view mode and a root-cause investigative module.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">03</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Hierarquia de sinais crÃ­ticos.</span><span class="lang-en">Hierarchy of critical signals.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Posicionei rupturas e carregamentos em andamento com prioridade visual absoluta sobre dados histÃ³ricos.</span><span class="lang-en">Positioned ongoing stockouts and shipments with absolute visual priority over historical data.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">04</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">ConsistÃªncia entre escalas.</span><span class="lang-en">Consistency across scales.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Padronizei os componentes e grÃ¡ficos para que a leitura nacional e a regional usassem o mesmo modelo visual.</span><span class="lang-en">Standardized components and charts so that national and regional readings used the same visual model.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">05</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Mapeamento geogrÃ¡fico interativo.</span><span class="lang-en">Interactive geographic mapping.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Desenhei a integraÃ§Ã£o do mapa nacional com os indicadores agregados por estado e centro de distribuiÃ§Ã£o.</span><span class="lang-en">Designed national map integration with aggregated indicators by state and distribution center.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">06</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Foco em Control Room.</span><span class="lang-en">Control Room focus.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Ajustei o design e contraste para funcionar perfeitamente em mÃºltiplos monitores e telÃµes compartilhados.</span><span class="lang-en">Adjusted design and contrast to work perfectly on multiple monitors and shared wallboards.</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 05 / Project Constraints -->
-        <section class="section-pad px-6 motion-case-block" id="constraints" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">05 / RestriÃ§Ãµes do Projeto</span>
-                <span class="lang-en">05 / Project Constraints</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Escala de dados, frequÃªncias de atualizaÃ§Ã£o e cenÃ¡rios de uso.</span>
-                    <span class="lang-en">Data scale, update frequencies, and usage scenarios.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                </div>
-              </div>
-            </div>
-            <div class="info-box motion-reveal-up motion-card">
-              <span class="info-box-label"><span class="lang-pt">CondiÃ§Ãµes de Contorno</span><span class="lang-en">Boundary Conditions</span></span>
-              <ul class="info-box-list">
-                <li>
-                  <span class="lang-pt"><strong>AtualizaÃ§Ã£o contÃ­nua:</strong> O fluxo de dados exigia processamento constante para garantir leitura em tempo real sem latÃªncia.</span>
-                  <span class="lang-en"><strong>Continuous updates:</strong> The data flow required constant processing to ensure real-time reading without latency.</span>
-                </li>
-                <li>
-                  <span class="lang-pt"><strong>MÃºltiplos perfis de leitura:</strong> A plataforma precisava atender diretores corporativos e tÃ©cnicos operacionais no mesmo sistema.</span>
-                  <span class="lang-en"><strong>Multiple reading profiles:</strong> The platform had to serve corporate directors and operational techs within the same system.</span>
-                </li>
-                <li>
-                  <span class="lang-pt"><strong>Uso coletivo (TelÃ£o):</strong> O design precisava ser visÃ­vel e compreensÃ­vel a distÃ¢ncia nos centros de controle fÃ­sico (Control Tower).</span>
-                  <span class="lang-en"><strong>Collective use (Wallboard):</strong> The design had to be readable and understandable from a distance in physical control centers.</span>
-                </li>
-                <li>
-                  <span class="lang-pt"><strong>IntegraÃ§Ã£o legada:</strong> CoexistÃªncia e sincronia com sistemas de frotas e ERPs clÃ¡ssicos de distribuiÃ§Ã£o sem quebras operacionais.</span>
-                  <span class="lang-en"><strong>Legacy integration:</strong> Coexistence and synchrony with fleet systems and classic distribution ERPs without operational breaks.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- 06 / Structural Decision -->
-        <section class="section-pad px-6 case-sec--dark motion-case-block" id="decisions" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header section-header--dark">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">06 / DecisÃ£o Estrutural</span>
-                <span class="lang-en">06 / Structural Decision</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">O estado da operaÃ§Ã£o como objeto central do sistema.</span>
-                    <span class="lang-en">The operation's state as the central system object.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">A decisÃ£o central foi unificar todos os indicadores de carregamento, rupturas and disponibilidade em torno do estado atual da distribuiÃ§Ã£o, organizados em trÃªs camadas conectadas.</span>
-                    <span class="lang-en">The central decision was to unify all loading, stockout, and availability indicators around the current distribution state, organized into three connected layers.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Hub Diagram -->
-            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram" data-parallax="0.02">
-              <div class="d-hub">
-                <div class="d-hub-orbit"></div>
-                <div class="d-node highlight d-hub-center"><span class="lang-pt">OperaÃ§Ã£o</span><span class="lang-en">Operation</span></div>
-                <div class="d-node d-hub-sat" style="top:0%; left:50%;"><span class="lang-pt">Disponibilidade</span><span class="lang-en">Availability</span></div>
-                <div class="d-node d-hub-sat" style="top:50%; left:95%;"><span class="lang-pt">Carregamentos</span><span class="lang-en">Loadings</span></div>
-                <div class="d-node d-hub-sat" style="top:100%; left:50%;"><span class="lang-pt">Rupturas</span><span class="lang-en">Stockouts</span></div>
-                <div class="d-node d-hub-sat" style="top:50%; left:5%;"><span class="lang-pt">Desempenho</span><span class="lang-en">Performance</span></div>
-              </div>
-              <span class="diagram-caption">
-                <span class="lang-pt">Modelo unificado: o estado da operaÃ§Ã£o integrando indicadores logÃ­sticos.</span>
-                <span class="lang-en">Unified model: the operational state integrating logistics indicators.</span>
-              </span>
-            </div>
-
-            <!-- Pipeline Diagram -->
-            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram" data-parallax="0.02">
-              <div class="d-pipeline">
-                <div class="d-node"><span class="lang-pt">NÃ­vel Nacional</span><span class="lang-en">National Level</span></div>
-                <div class="d-node"><span class="lang-pt">NÃ­vel Regional</span><span class="lang-en">Regional Level</span></div>
-                <div class="d-node"><span class="lang-pt">Indicadores CrÃ­ticos</span><span class="lang-en">Critical Indicators</span></div>
-                <div class="d-node highlight"><span class="lang-pt">AÃ§Ã£o Corretiva</span><span class="lang-en">Corrective Action</span></div>
-              </div>
-              <span class="diagram-caption">
-                <span class="lang-pt">O fluxo de navegaÃ§Ã£o da escala nacional Ã  aÃ§Ã£o na exceÃ§Ã£o.</span>
-                <span class="lang-en">The navigation workflow from national scale to action on exceptions.</span>
-              </span>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- 07 / Operational Scale -->
-        <section class="section-pad px-6 motion-case-block" id="scale" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">07 / Escala Operacional</span>
-                <span class="lang-en">07 / Operational Scale</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Telas e walkthrough de monitoramento de frotas e rupturas.</span>
-                    <span class="lang-en">Screens and walkthrough of fleet and stockout monitoring.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Abaixo, a sequÃªncia de interfaces que estruturam o monitoramento nacional da distribuiÃ§Ã£o e o controle de desvios operacionais.</span>
-                    <span class="lang-en">Below, the sequence of interfaces structuring the national monitoring of distribution and control of operational deviations.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Walkthrough Screens -->
-            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-              <img src="Cases/Ambev/001.jpg" alt="Mapa Nacional de Monitoramento" loading="lazy">
-            </div>
-            <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
-              <span class="lang-pt">Monitoramento GeogrÃ¡fico Nacional</span>
-              <span class="lang-en">National Geographic Monitoring</span>
-            </h3>
-            <p class="case-body lang-pt">Mapa geogrÃ¡fico interativo integrado com os status operacionais por regiÃ£o, permitindo detectar desvios e atrasos de carregamento em tempo real nos centros de controle.</p>
-            <p class="case-body lang-en">Interactive geographic map integrated with operational statuses by region, allowing real-time detection of load delays and deviations in control centers.</p>
-
-            <div class="case-grid-2">
-              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-                <img src="Cases/Ambev/002.jpg" alt="Dashboard de Carregamentos" loading="lazy">
-              </div>
-              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-                <img src="Cases/Ambev/003.jpg" alt="Acompanhamento Regional de Frota" loading="lazy">
-              </div>
-            </div>
-            <p class="case-body lang-pt">PainÃ©is de controle de carregamentos em andamento (Ã  esquerda) e a tela de detalhe regional de frota e rotas (Ã  direita) para acompanhamento pontual.</p>
-            <p class="case-body lang-en">Control dashboards for ongoing loadings (left) and the regional fleet and route details screen (right) for specific tracking.</p>
-
-            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-              <img src="Cases/Ambev/005.jpg" alt="Acompanhamento de Estoque" loading="lazy">
-            </div>
-            <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
-              <span class="lang-pt">Acompanhamento de Estoques e NÃ­vel de ServiÃ§o</span>
-              <span class="lang-en">Inventory and Service Level Tracking</span>
-            </h3>
-            <p class="case-body lang-pt">Interface de monitoramento de disponibilidade fÃ­sica de produtos e checagem de corte de pedidos nos centros de distribuiÃ§Ã£o regional.</p>
-            <p class="case-body lang-en">Inventory availability monitoring interface and order cuts check across regional distribution centers.</p>
-
-            <div class="case-grid-2">
-              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-                <img src="Cases/Ambev/004.jpg" alt="GestÃ£o de ExceÃ§Ãµes LogÃ­sticas" loading="lazy">
-              </div>
-              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-                <img src="Cases/Ambev/006.jpg" alt="HistÃ³rico Temporal" loading="lazy">
-              </div>
-            </div>
-            <p class="case-body lang-pt">MÃ³dulo de exceÃ§Ãµes com priorizaÃ§Ã£o de carregamentos crÃ­ticos (Ã  esquerda) e detalhe de anÃ¡lise temporal de faturamento e produtividade logÃ­sitca (Ã  direita).</p>
-            <p class="case-body lang-en">Exceptions module with prioritization of critical shipments (left) and timeline analysis of billing and logistics productivity (right).</p>
-
-            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-              <img src="Cases/Ambev/007.jpg" alt="DiagnÃ³stico de Rupturas" loading="lazy">
-            </div>
-            <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
-              <span class="lang-pt">AnÃ¡lise de Causa Raiz de Rupturas</span>
-              <span class="lang-en">Stockout Root Cause Analysis</span>
-            </h3>
-            <p class="case-body lang-pt">Tela detalhada para investigaÃ§Ã£o e diagnÃ³stico de rupturas de estoque, cruzando volumes demandados e em trÃ¢nsito com janelas de transporte de frotas.</p>
-            <p class="case-body lang-en">Detailed screen for stockout investigation and diagnosis, crossing demanded and in-transit volumes with fleet transportation windows.</p>
-          </div>
-        </section>
-
-        <!-- 08 / Structural Limitations -->
-        <section class="section-pad px-6 motion-case-block" id="tradeoffs" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">08 / LimitaÃ§Ãµes Estruturais</span>
-                <span class="lang-en">08 / Structural Limitations</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">LatÃªncia de dados legados e fronteiras do sistema.</span>
-                    <span class="lang-en">Legacy data latency and system boundaries.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Alguns sistemas legados de rastreamento de frotas apresentavam atualizaÃ§Ãµes assÃ­ncronas que impediam tempo de resposta imediato.</span>
-                    <span class="lang-en">Some legacy fleet tracking systems had asynchronous updates that prevented immediate response times.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <p class="case-body lang-pt">A latÃªncia na transmissÃ£o de dados de satÃ©lite de frotas terceirizadas exigia que o sistema mantivesse uma sinalizaÃ§Ã£o visual de "idade do dado" para evitar decisÃµes baseadas em posiÃ§Ãµes antigas de caminhÃµes. O despacho final de motoristas e a reprogramaÃ§Ã£o de rotas continuaram sob a responsabilidade de ERPs externos especÃ­ficos.</p>
-            <p class="case-body lang-en">Latency in satellite data transmission from third-party fleets required the system to maintain a visual "data age" indicator to prevent decisions based on stale truck positions. Final driver dispatch and route rescheduling remained under the responsibility of specific external ERPs.</p>
-          </div>
-        </section>
-
-        <!-- 09 / Impact -->
-        <section class="section-pad px-6 case-sec--dark motion-impact" id="impact" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header section-header--dark">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">09 / Impacto do Projeto</span>
-                <span class="lang-en">09 / Project Impact</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Impacto da unificaÃ§Ã£o da leitura logÃ­stica nacional.</span>
-                    <span class="lang-en">Impact of national logistics reading unification.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">A centralizaÃ§Ã£o dos dados no Ambev Monitoring sincronizou a operaÃ§Ã£o entre o centro de distribuiÃ§Ã£o e o time de vendas.</span>
-                    <span class="lang-en">The data centralization on Ambev Monitoring synchronized the operation between distribution centers and the sales team.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="impact-boxes motion-stagger">
-              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
-                <div class="case-metric">
-                  <span class="case-metric-num">12</span>
-                  <span class="case-metric-unit"><span class="lang-pt">meses</span><span class="lang-en">months</span></span>
-                </div>
-                <p>
-                  <span class="lang-pt">De duraÃ§Ã£o do projeto â€” ciclo completo de UX, IA e testes em campo.</span>
-                  <span class="lang-en">Of project duration â€” complete cycle of UX, IA, and field tests.</span>
-                </p>
-              </div>
-              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
-                <div class="case-metric">
-                  <span class="case-metric-num">1</span>
-                  <span class="case-metric-unit"><span class="lang-pt">visÃ£o</span><span class="lang-en">view</span></span>
-                </div>
-                <p>
-                  <span class="lang-pt">Unificada compartilhada por centros de distribuiÃ§Ã£o e gestores logÃ­sticos nacionais.</span>
-                  <span class="lang-en">Unified view shared by distribution centers and national logistics managers.</span>
-                </p>
-              </div>
-              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
-                <div class="case-metric">
-                  <span class="case-metric-num">100</span>
-                  <span class="case-metric-unit">%</span>
-                </div>
-                <p>
-                  <span class="lang-pt">Rastreabilidade dos alertas operacionais de carregamentos a desvios de frotas.</span>
-                  <span class="lang-en">Traceability of operational alerts from loadings to fleet deviations.</span>
-                </p>
-              </div>
-              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
-                <div class="case-metric">
-                  <span class="case-metric-num">4</span>
-                  <span class="case-metric-unit"><span class="lang-pt">perfis</span><span class="lang-en">profiles</span></span>
-                </div>
-                <p>
-                  <span class="lang-pt">De usuÃ¡rios integrados na mesma interface de leitura de exceÃ§Ãµes.</span>
-                  <span class="lang-en">User profiles integrated into the same exceptions reading interface.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 10 / Reflections -->
-        <section class="section-pad px-6 motion-case-block" id="reflection" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">10 / ReflexÃµes do Designer</span>
-                <span class="lang-en">10 / Designer Reflections</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title motion-reveal-up motion-section">
-                    <span class="lang-pt">Projetar para a escala nacional exige clareza e hierarquia de sinal.</span>
-                    <span class="lang-en">Designing for national scale requires clarity and signal hierarchy.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle motion-reveal-up motion-section">
-                  <p>
-                    <span class="lang-pt">O maior aprendizado foi ver que, em operaÃ§Ãµes de alta velocidade, a hierarquia de sinal Ã© tudo. Um dashboard logÃ­stico poluÃ­do ou que misture monitoramento com diagnÃ³stico manual gera inÃ©rcia e atraso. O design deve guiar o olhar do operador para a exceÃ§Ã£o que precisa de aÃ§Ã£o imediata.</span>
-                    <span class="lang-en">The biggest learning was seeing that, in high-velocity operations, signal hierarchy is everything. A cluttered logistics dashboard that mixes monitoring with manual diagnosis causes inertia and delay. Design must guide the operator's eye directly to the exception requiring immediate action.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>gest learning was seeing that, in high-velocity operations, signal hierarchy is everything. A cluttered logistics dashboard that mixes monitoring with manual diagnosis causes inertia and delay. Design must guide the operator's eye directly to the exception requiring immediate action.</p>
-          </div>
-        </section>
-
-      </div>
-    </div>
-
-    <!-- NEXT CASE NAVIGATION -->
-    <nav class="case-nav-bar motion-reveal-up motion-section" aria-label="NavegaÃ§Ã£o do caso">
-      <div class="case-nav-bar-inner">
-        <div class="magnetic-wrap inline-block">
-          <a href="bayer.html" class="case-nav-link"><span aria-hidden="true">â†</span><span>Bayer</span></a>
-        </div>
-        <div class="magnetic-wrap inline-block">
-          <a href="bmg.html" class="case-nav-link case-nav-link--primary">
-            <span class="lang-pt">PrÃ³ximo: BMG</span>
-            <span class="lang-en">Next: BMG</span>
-            <span aria-hidden="true">â†’</span>
-          </a>
-        </div>
-      </div>
-    </nav>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer" id="footer">
-    <div class="container site-footer__inner">
-      <div class="site-footer__top">
-        <div class="site-footer__identity">
-          <div class="site-footer__mark" aria-hidden="true">HA</div>
-          <div>
-            <p class="site-footer__name">Henrico Amaral</p>
-            <p class="site-footer__role" data-t="ft.role">Senior Product Designer Â· Decision Infrastructure</p>
-          </div>
-        </div>
-        <p class="site-footer__signature" data-t="ft.signature">
-          Pense simples. FaÃ§a melhor.<br>
-          Torne-se inevitÃ¡vel.
-        </p>
-      </div>
-      <div class="site-footer__bottom">
-        <p>Henrico Amaral Â· Product Designer Â· 2026</p>
-        <a href="#" class="site-footer__toplink">â†‘ Topo</a>
-      </div>
-    </div>
-  </footer>
-
-  <script defer src="../assets/js/site.js?v=20260610-motion-cache-zero-03"></script>
-  <script defer src="../assets/js/motion.js?v=20260610-motion-cache-zero-03"></script>
+<body>
+<a class="skip" href="#overview">Ir para o conteúdo</a>
+<nav class="nav dark" aria-label="Principal">
+<a class="nav__brand" href="../index.html#hero">
+<span class="dot" aria-hidden="true">
+</span>Henrico Amaral</a>
+<div class="nav__links">
+<a href="../index.html#process">Método</a>
+<a href="../index.html#cases">Casos</a>
+<a href="../index.html#impact">Impacto</a>
+<a href="../index.html#about">Sobre</a>
+<a href="../index.html#contact">Contato</a>
+</div>
+<span class="nav__lang" aria-label="Idioma">PT/EN</span>
+<a class="nav__cta" href="../index.html#cases">← Voltar ao portfólio</a>
+</nav>
+<header class="case-hero" data-navdark data-screen-label="Case Hero">
+<div class="case-hero__img" style="background-image:url('../assets/img/cases/ambev.webp')">
+</div>
+<div class="case-hero__in">
+<div class="case-hero__eyebrow mono">
+<span class="ln">
+</span>03 · Logística · Monitoramento Operacional Nacional</div>
+<h1>Ambev Monitoring</h1>
+<span class="case-hero__client">Ambev</span>
+<p class="case-hero__lead">Plataforma de monitoramento operacional logístico em escala nacional, transformando relatórios desconectados em uma leitura compartilhada do estado da operação.</p>
+</div>
+</header>
+<section class="case-spec project-info" aria-label="Informações do Projeto">
+<div class="project-info__inner">
+<div class="project-info__intro">
+<p class="project-info__eyebrow mono">Informações do Projeto</p>
+<h2>Plataforma de monitoramento operacional logístico.</h2>
+<p>Projeto desenvolvido para estruturar uma leitura operacional compartilhada da distribuição logística em escala nacional.</p>
+</div>
+<dl class="project-info__grid">
+<div class="project-info__cell"><dt>UX Design</dt><dd>Henrico Amaral · Andrea Parente</dd></div>
+<div class="project-info__cell"><dt>UI Design</dt><dd>Michelle Santos · Afonso Lopez</dd></div>
+<div class="project-info__cell"><dt>Empresa</dt><dd>Qintess</dd></div>
+<div class="project-info__cell"><dt>Cliente</dt><dd>Ambev</dd></div>
+<div class="project-info__cell"><dt>Período</dt><dd>2019 — 2020</dd></div>
+<div class="project-info__cell"><dt>Duração</dt><dd>12 meses</dd></div>
+<div class="project-info__cell"><dt>Tipo</dt><dd>Plataforma de monitoramento operacional logístico</dd></div>
+<div class="project-info__cell"><dt>Plataforma</dt><dd>Web · Centros de controle</dd></div>
+<div class="project-info__cell project-info__cell--wide"><dt>Escopo</dt><dd>UX Design · Arquitetura da informação · Monitoramento operacional</dd></div>
+</dl>
+<p class="project-info__closing">Mais do que um projeto de interface, este trabalho envolveu compreender como uma operação logística nacional funciona no dia a dia.</p>
+</div>
+</section>
+<section class="overview" id="overview" data-screen-label="Overview">
+<div class="wrap overview__grid">
+<div class="reveal">
+<div class="overview__kicker mono">
+<span class="ln">
+</span>Projeto · Contexto · Escopo</div>
+<h2>Uma leitura comum da operação nacional.</h2>
+<p>A plataforma organizou rupturas, carregamentos e indicadores de disponibilidade em torno do estado da operação como unidade central de leitura.</p>
+</div>
+<dl class="subfacts reveal" data-d="1">
+<div class="subfacts__row">
+<dt>Sistema</dt>
+<dd>Ambev Monitoring</dd>
+</div>
+<div class="subfacts__row">
+<dt>Domínio</dt>
+<dd>Logística · S&OE</dd>
+</div>
+<div class="subfacts__row">
+<dt>Usuários</dt>
+<dd>Equipes de controle e centros de distribuição</dd>
+</div>
+<div class="subfacts__row">
+<dt>Resultado</dt>
+<dd>Visibilidade de rupturas operacionais</dd>
+</div>
+</dl>
+</div>
+</section>
+<section class="ed ed--cream" data-screen-label="01 Contexto">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">01 / 10</span>
+<span class="lbl">Contexto<br>Operacional</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">A distribuição nacional envolve múltiplos centros de decisão simultâneos.</h2>
+<p>Quatro perfis coexistiam na mesma operação: centros de distribuição, equipes logísticas, times regionais e gestores de operação.</p>
+<p>Quando surgia ruptura ou atraso relevante, entender o impacto exigia cruzar informações manualmente entre relatórios, sistemas internos e planilhas regionais.</p>
+<div class="diagram">
+<div class="diagram__flow">
+<div class="chips">
+<span class="chip">Centro de distribuição</span>
+<span class="chip">Logística</span>
+<span class="chip">Time regional</span>
+<span class="chip">Gestão nacional</span>
+<span class="chip">Frota</span>
+<span class="chip">Pedidos</span>
+<span class="chip">Disponibilidade</span>
+</div>
+<span class="diagram__arrow">→</span>
+<span class="node node--alert">Exceção logística</span>
+</div>
+<p class="diagram__cap">A operação existia, mas a leitura compartilhada da operação não.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--sand" data-screen-label="02 Legado">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">02 / 10</span>
+<span class="lbl">Arquitetura<br>Legada</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">A operação era acompanhada por relatórios e sistemas desconectados.</h2>
+<p>Cada equipe mantinha uma visão parcial: carregamentos, ruptura, disponibilidade, frota e faturamento eram lidos em superfícies diferentes.</p>
+<p>Essa fragmentação criava múltiplas versões da realidade logística e aumentava o tempo de resposta.</p>
+<div class="diagram diagram--legacy">
+<div class="diagram__flow">
+<div class="chips">
+<span class="chip chip--dim">Relatórios físicos</span>
+<span class="chip chip--dim">Planilhas regionais</span>
+<span class="chip chip--dim">Sistemas de frota</span>
+<span class="chip chip--dim">ERPs de distribuição</span>
+</div>
+<span class="diagram__arrow">⇢</span>
+<span class="node">Leituras paralelas</span>
+</div>
+<p class="diagram__cap">A arquitetura legada dificultava priorizar a exceção certa.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--cream" data-screen-label="03 Problema">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">03 / 10</span>
+<span class="lbl">Definição<br>do Problema</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">O time gastava mais tempo localizando o problema do que atuando nele.</h2>
+<p class="lead">O gargalo era a falta de uma leitura operacional comum.</p>
+<p>Centros de distribuição e times comerciais trabalhavam com leituras dessincronizadas, gerando rupturas e atrasos em carregamentos críticos.</p>
+<p>A interface precisava mostrar onde estava o problema, qual região foi afetada e o que deveria ser priorizado.</p>
+</div>
+</div>
+</section>
+<section class="ed ed--sand" data-screen-label="04 Atuação">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">04 / 10</span>
+<span class="lbl">Atuação<br>do Designer</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Estruturação da arquitetura de informação e fluxos de decisão.</h2>
+<p>Atuei como UX Designer organizando arquitetura e fluxos de decisão, em colaboração com pesquisa, especialistas logísticos e equipe de UI.</p>
+<div class="role-grid">
+<article class="role">
+<span class="no">01</span>
+<h3>Perfis de operação</h3>
+<p>Identificar necessidades de CD, logística, regional e gestão.</p>
+</article>
+<article class="role">
+<span class="no">02</span>
+<h3>Estado operacional</h3>
+<p>Organizar indicadores ao redor da condição atual da distribuição.</p>
+</article>
+<article class="role">
+<span class="no">03</span>
+<h3>Hierarquia de alertas</h3>
+<p>Diferenciar monitoramento contínuo de exceções acionáveis.</p>
+</article>
+<article class="role">
+<span class="no">04</span>
+<h3>Camadas de leitura</h3>
+<p>Separar visão nacional, detalhe regional e causa raiz.</p>
+</article>
+<article class="role">
+<span class="no">05</span>
+<h3>Centro de controle</h3>
+<p>Projetar telas legíveis em desktop e telão operacional.</p>
+</article>
+<article class="role">
+<span class="no">06</span>
+<h3>Especialistas logísticos</h3>
+<p>Traduzir rituais logísticos em fluxos acionáveis.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--cream" data-screen-label="05 Restrições">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">05 / 10</span>
+<span class="lbl">Restrições<br>do Projeto</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Restrições do projeto.</h2>
+<p>Condições que limitaram a solução e orientaram as decisões de arquitetura.</p>
+<div class="panel">
+<div class="panel__head">
+<span>Condições de Contorno</span>
+<span>04</span>
+</div>
+<ul>
+<li>
+<span>
+<strong>Múltiplos perfis</strong>
+<span class="ds">Diretores e técnicos precisavam usar o mesmo sistema.</span>
+</span>
+</li>
+<li>
+<span>
+<strong>Uso em telão</strong>
+<span class="ds">A interface precisava ser compreensível à distância.</span>
+</span>
+</li>
+<li>
+<span>
+<strong>Integração legada</strong>
+<span class="ds">Frotas e ERPs precisavam coexistir sem quebras.</span>
+</span>
+</li>
+<li>
+<span>
+<strong>Latência de dados</strong>
+<span class="ds">O sistema precisava indicar idade e confiabilidade do dado.</span>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--dark" data-navdark data-screen-label="06 Decisão">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">06 / 10</span>
+<span class="lbl">Decisão<br>Estrutural</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">O estado da operação como objeto central do sistema.</h2>
+<p>A decisão estrutural foi unificar indicadores de carregamento, ruptura e disponibilidade em torno do estado atual da distribuição.</p>
+<div class="hub">
+<div class="hub__center">
+<span class="core">Estado da operação</span>
+</div>
+<div class="hub__ring">
+<span class="chip">Rupturas</span>
+<span class="chip">Carregamentos</span>
+<span class="chip">Disponibilidade</span>
+<span class="chip">Frota</span>
+<span class="chip">Região</span>
+<span class="chip">Alertas</span>
+</div>
+</div>
+<p class="decision-note">Ciclo operacional estruturado:</p>
+<div class="lifecycle">
+<span class="st">Monitorar</span>
+<span class="sep">→</span>
+<span class="st">Detectar</span>
+<span class="sep">→</span>
+<span class="st">Priorizar</span>
+<span class="sep">→</span>
+<span class="st">Investigar</span>
+<span class="sep">→</span>
+<span class="st">Acionar</span>
+<span class="sep">→</span>
+<span class="st">Acompanhar</span>
+<span class="sep">→</span>
+<span class="st">Resolver</span>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--cream" data-screen-label="07 Escala">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">07 / 10</span>
+<span class="lbl">Escala<br>Operacional</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Monitoramento nacional e controle de desvios.</h2>
+<p>A sequência de interfaces estrutura o monitoramento da distribuição e o controle de exceções operacionais em escala nacional.</p>
+</div>
+</div>
+<div class="figs">
+<figure class="figure reveal">
+<div class="figure__frame screen-img">
+<img src="Cases/Ambev/001.jpg" alt="Mapa operacional nacional" loading="lazy">
+</div>
+<figcaption class="figure__cap">
+<h3>Mapa operacional nacional</h3>
+<p>Mapa geográfico integrado aos status por região para detectar desvios em tempo real.</p>
+</figcaption>
+</figure>
+<div class="figpair reveal">
+<div class="figslot screen-img">
+<img src="Cases/Ambev/002.jpg" alt="Painel de carregamentos" loading="lazy">
+</div>
+<div class="figslot screen-img">
+<img src="Cases/Ambev/003.jpg" alt="Detalhe regional de frota e rotas" loading="lazy">
+</div>
+</div>
+<figcaption class="figure__cap reveal">
+<h3>Carregamentos e detalhe regional</h3>
+<p>Controle de carregamentos e detalhe regional para acompanhamento de frota e rotas.</p>
+</figcaption>
+<figure class="figure reveal">
+<div class="figure__frame screen-img">
+<img src="Cases/Ambev/005.jpg" alt="Monitoramento de disponibilidade física" loading="lazy">
+</div>
+<figcaption class="figure__cap">
+<h3>Disponibilidade e corte de pedidos</h3>
+<p>Monitoramento de disponibilidade física e checagem de corte de pedidos nos centros de distribuição.</p>
+</figcaption>
+</figure>
+<div class="figpair reveal">
+<div class="figslot screen-img">
+<img src="Cases/Ambev/004.jpg" alt="Módulo de exceções logísticas" loading="lazy">
+</div>
+<div class="figslot screen-img">
+<img src="Cases/Ambev/006.jpg" alt="Análise temporal logística" loading="lazy">
+</div>
+</div>
+<figcaption class="figure__cap reveal">
+<h3>Exceções e análise temporal</h3>
+<p>Priorização de carregamentos críticos e análise temporal de faturamento e produtividade logística.</p>
+</figcaption>
+<figure class="figure reveal">
+<div class="figure__frame screen-img">
+<img src="Cases/Ambev/007.jpg" alt="Diagnóstico de rupturas de estoque" loading="lazy">
+</div>
+<figcaption class="figure__cap">
+<h3>Diagnóstico de rupturas</h3>
+<p>Investigação de rupturas cruzando volumes demandados, trânsito e janelas de transporte.</p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="ed ed--sand" data-screen-label="08 Limitações">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">08 / 10</span>
+<span class="lbl">Limitações<br>Estruturais</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Latência e despacho final permaneceram fora do núcleo.</h2>
+<p>A transmissão de dados de satélite de frotas terceirizadas exigia sinalização visual de idade do dado.</p>
+<p>O despacho final de motoristas e a reprogramação de rotas continuaram sob responsabilidade de ERPs externos.</p>
+</div>
+</div>
+</section>
+<section class="case-impact" data-navdark data-screen-label="09 Impacto">
+<div class="case-impact__head reveal">
+<div class="k">
+<span class="ln">
+</span>09 / 10 · Impacto do Projeto</div>
+<h2>Impacto da unificação da leitura logística nacional.</h2>
+<p>A centralização dos dados sincronizou a operação entre centros de distribuição, logística e times comerciais.</p>
+</div>
+<div class="stat-grid reveal" data-d="1">
+<div class="stat">
+<div class="stat__n">12<small>meses</small>
+</div>
+<p class="stat__d">Ciclo completo de UX, arquitetura e testes em campo.</p>
+</div>
+<div class="stat">
+<div class="stat__n">1<small>visão</small>
+</div>
+<p class="stat__d">Visão unificada compartilhada por distribuição e gestão.</p>
+</div>
+<div class="stat">
+<div class="stat__n">1<small>trilha</small>
+</div>
+<p class="stat__d">Trilha de leitura para alertas, carregamentos e desvios.</p>
+</div>
+<div class="stat">
+<div class="stat__n">4<small>perfis</small>
+</div>
+<p class="stat__d">Perfis integrados na mesma interface de exceções.</p>
+</div>
+</div>
+</section>
+<section class="reflection" data-screen-label="10 Reflexões">
+<div class="reflection__in reveal">
+<div class="k">
+<span class="ln">
+</span>10 / 10 · Reflexões do Designer</div>
+<h2>Projetar para escala nacional exige clareza e hierarquia de sinal.</h2>
+<p>Em operações de alta velocidade, hierarquia de sinal é tudo.</p>
+<p>O design precisa guiar o olhar para a exceção que exige ação imediata sem apagar o contexto.</p>
+</div>
+</section>
+<nav class="case-nav" aria-label="Outros casos">
+<div class="case-nav__grid">
+<a href="bayer.html">
+<span class="dir">← Anterior</span>
+<span class="nm">Bayer</span>
+</a>
+<a href="bmg.html">
+<span class="dir">Próximo →</span>
+<span class="nm">BMG</span>
+</a>
+</div>
+</nav>
+<footer class="footer" data-navdark>
+<div class="wrap">
+<div class="footer__top">
+<div class="footer__id">
+<div class="mono-mark">HA</div>
+<div>
+<div class="nm">Henrico Amaral</div>
+<div class="rl">Senior Product Designer · Decision Infrastructure</div>
+</div>
+</div>
+<p class="manifesto">Pense simples.<br>Faça melhor.<br>
+<em>Torne-se inevitável.</em>
+</p>
+</div>
+<div class="footer__bar">
+<span>Henrico Amaral · Product Designer · <span id="year">2026</span>
+</span>
+<a href="#">↑ Voltar ao topo</a>
+</div>
+</div>
+</footer>
+<script defer src="../assets/js/site.js?v=20260615-case-blueprint">
+</script>
 </body>
-
 </html>

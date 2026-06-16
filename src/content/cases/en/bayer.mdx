@@ -1,0 +1,119 @@
+---
+lang: "en"
+caseSlug: "bayer"
+title: "Agronomic Intelligence"
+client: "Bayer"
+system: "Territorial analysis platform"
+sector: "Agribusiness"
+type: "Internal platform"
+role: "Product Designer"
+scope: "Discovery · Information architecture · UX · Prototyping"
+platform: "Web · Desktop-first"
+order: 2
+heroImage: "/assets/img/cases/bayer.webp"
+description: "Territorial agronomic intelligence system for environmental analysis and agricultural decision support. Product Design case by Henrico Amaral."
+lead: "A technical agricultural decision depends on comparison. Crop, region, season, indicator, and technical opinion need to appear as one reasoning system, not as loose files."
+domain: "Agronomic intelligence · Agro"
+users: "Agronomic specialists, technical analysts, and validation teams"
+outcome: "Agricultural data traceability"
+evidence: "Qualitative evidence: continuity between technical analysis, indicator comparison, and decision records. Previous quantitative metrics were removed due to weak evidence."
+stats:
+  - value: "Crop"
+    unit: "as center"
+    description: "Analysis organized around the real unit of agricultural decision-making."
+  - value: "Comparable"
+    unit: "by scenario"
+    description: "Regions, seasons, and technologies can be read in contrast."
+  - value: "Traceable"
+    unit: "in flow"
+    description: "Technical opinions remain connected to the context that produced them."
+  - value: "Less"
+    unit: "fragmentation"
+    description: "Less dependence on manual reconstruction across reports and spreadsheets."
+prevCase:
+  slug: "petrobras"
+  name: "Petrobras"
+nextCase:
+  slug: "ambev"
+  name: "Ambev"
+---
+
+## 01. Context
+
+Agronomic specialists do not decide from an isolated number. They compare crops, regions, seasons, technologies, test history, and environmental conditions.
+
+The system needed to support that kind of technical reasoning: slow, comparative, documented, and context-dependent.
+
+## 02. Problem
+
+The data existed, but analysis did not happen inside a single structure. Before interpreting a scenario, specialists had to gather scattered material and manually rebuild the basis for decision-making.
+
+This created variation between analyses, weakened traceability, and separated the technical opinion from the context that justified it.
+
+## 03. Previous system or operational scenario
+
+Reports, spreadsheets, forms, and internal systems recorded pieces of the process. Each tool answered one part of the operation, but none supported the full analysis and validation cycle.
+
+The previous scenario required the specialist to become the system integrator. The product needed to assume part of that work.
+
+## 04. My role
+
+I worked on information structure and analytical interfaces for technical decision support.
+
+- Modeled crop as the central analysis unit.
+- Organized layers of technical, environmental, and market indicators.
+- Structured comparisons across regions, periods, and technologies.
+- Connected technical analysis, validation, and institutional documentation.
+- Validated the logic with field specialists and technical teams.
+
+## 05. Constraints
+
+The domain required depth. Oversimplifying the data could erase relevant variations between crops, regions, and seasons.
+
+The sources also had different structures and granularities. The design had to reduce noise without creating a false sense of precision.
+
+## 06. Design decision
+
+The core decision was to organize the system around crop, not around the source systems.
+
+This brought the interface closer to how specialists think. They do not start by asking which database stores the information; they start by asking what happens to a crop under a specific condition.
+
+## 07. Solution architecture
+
+The platform was structured as a continuous flow:
+
+- crop view;
+- technical and environmental indicators;
+- comparative analysis;
+- validation and technical opinion;
+- institutional documentation.
+
+Each layer needed to keep its relationship with the previous ones. Comparison only matters when users understand data origin, period, region, and condition.
+
+## 08. Main flow
+
+The specialist selects a crop, reviews indicators, compares scenarios, identifies relevant variations, and records the technical decision in the same environment.
+
+The flow avoids ending the analysis in a separate document. The opinion is created inside the technical context that sustains it.
+
+## 09. Visual evidence
+
+The main visual evidence is the structure of comparison: agricultural data stops appearing as loose tables and begins to relate through crop, territory, period, and technology.
+
+The design favors layered reading. First the user understands the scenario. Then compares. Only after that records a decision.
+
+## 10. Impact
+
+The published impact is qualitative because there is no quantitative metric with enough evidence for this case.
+
+The structural gain was reducing fragmentation between analysis and decision: specialists could read the technical process more continuously and with stronger institutional traceability.
+
+## 11. Limitations
+
+Some historical sources remained in legacy formats. Data coverage also varied by region, season, and crop.
+
+Those limits needed to appear as part of the reading. In a technical system, hiding coverage gaps is worse than exposing them clearly.
+
+## 12. Learning
+
+Agricultural data only becomes intelligence when it has a model. In this project, the value of design was not making indicators more attractive, but structuring comparison, context, and decision.

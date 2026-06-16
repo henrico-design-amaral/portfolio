@@ -1,0 +1,119 @@
+---
+lang: "en"
+caseSlug: "petrobras"
+title: "SALA CAR"
+client: "Petrobras"
+system: "SALA CAR"
+sector: "Energy · Offshore"
+type: "Internal platform"
+role: "Product Designer"
+scope: "Discovery · Information architecture · UX · Prototyping"
+platform: "Web · Desktop-first"
+order: 1
+heroImage: "/assets/img/cases/petrobras.webp"
+description: "Offshore environmental occurrence management system for Petrobras. Product Design case by Henrico Amaral."
+lead: "An offshore environmental occurrence is not just a record. It is a risk situation that needs to connect detection, geospatial analysis, mobilization, documentation, and operational decision-making."
+domain: "Environmental management · Energy"
+users: "Environmental technicians, analysts, coordinators, and compliance managers"
+outcome: "Unified and traceable operational state"
+evidence: "95% reduction in operational documentation effort, supported by docs/metrics-audit.md and docs/CASE_PETROBRAS.md."
+stats:
+  - value: "95"
+    unit: "%"
+    description: "Documented reduction in operational report consolidation effort."
+  - value: "Occurrence"
+    unit: "as axis"
+    description: "Event, map, resource, analysis, and closure organized around one unit."
+  - value: "ICS 214"
+    unit: "timeline"
+    description: "Operational chronology treated as navigation and audit structure."
+  - value: "Traceable"
+    unit: "by design"
+    description: "Actions, analysis, and closure connected to the occurrence lifecycle."
+prevCase:
+  slug: "bmg"
+  name: "BMG"
+nextCase:
+  slug: "bayer"
+  name: "Bayer"
+---
+
+## 01. Context
+
+An offshore operation needs to respond to signals that emerge far from the decision center. A suspicious feature may appear in satellite imagery, aerial inspection, platform records, support vessels, or operational contact.
+
+The risk is not only detecting the event. It is understanding quickly whether it is a false positive, a natural phenomenon, or an environmental occurrence that requires mobilization, geographic analysis, and formal documentation.
+
+## 02. Problem
+
+The team needed to understand the real state of each occurrence while the situation was still active. The central question was direct: what is happening, where is it happening, who has been mobilized, and which decision must be recorded now?
+
+When that answer depends on manual reconstruction, the operation loses time exactly when context and traceability matter most.
+
+## 03. Previous system or operational scenario
+
+Before the product, critical parts of the flow lived in different places: local spreadsheets, technical reports, emails, chronological logs, geoprocessing systems, and mobilization controls.
+
+Each source had value. The problem was the absence of a shared structure. The operation had data, but not a shared state of the occurrence.
+
+## 04. My role
+
+I worked as Product Designer on modeling the operational cycle and translating that cycle into product architecture, navigation, and prototypes.
+
+- Defined the occurrence as the central unit of the system.
+- Organized states, entities, modules, and relationships between teams.
+- Structured the ICS 214 timeline as an audit axis.
+- Connected map, mobilized resources, analysis, and documentation in one interface logic.
+- Prototyped critical screens for technicians, analysts, coordinators, and managers.
+
+## 05. Constraints
+
+The design had to respect real operation, regulatory obligations, and collaboration across distributed teams. No visual shortcut could compromise traceability.
+
+There were also partial integrations. Some sensors, suppliers, and external flows would remain outside the system in the short term. The interface had to clarify what the product controlled and what depended on external input.
+
+## 06. Design decision
+
+The main decision was to abandon tool-oriented navigation and organize everything around the occurrence.
+
+This shifted the product from a set of screens into a monitoring system: registration, classification, analysis, mobilization, response, consolidation, and closure became part of the same operational line.
+
+## 07. Solution architecture
+
+The system was designed as a coordination layer between five blocks:
+
+- signal origin and occurrence classification;
+- map, coordinates, and geospatial analysis;
+- mobilized resources and responsibilities;
+- operational timeline;
+- documentation consolidation and closure.
+
+This architecture preserves context while users move between territorial view, operational decision, and documentation.
+
+## 08. Main flow
+
+The flow starts with signal identification, moves through classification, connects the affected area to the map, mobilizes resources, and records decisions in the timeline.
+
+Operators do not need to rebuild the case at every step. The occurrence carries the context: origin, location, resources, analysis, decisions, and closure status.
+
+## 09. Visual evidence
+
+The publishable evidence was organized around operational logic, not isolated screens: occurrence list, map, mobilization panel, ICS 214 chronology, and closure states.
+
+The visual priority was preserving the relationship between event, territory, and decision. A map without a timeline becomes a geographic tool. A timeline without a map loses operational context.
+
+## 10. Impact
+
+The documented impact was a 95% reduction in operational report consolidation effort. This number remains published because it is supported by local audit documents.
+
+The structural impact was turning the occurrence into a traceable object: the same event began to carry analysis, resources, actions, and closure in a readable sequence.
+
+## 11. Limitations
+
+Not everything could be integrated immediately. Closure with external agencies, supplier queries, and part of the technical channels remained outside the product.
+
+Instead of hiding those boundaries, the design made the limits explicit. The interface needed to communicate dependencies and handoff points without suggesting full control over the operation.
+
+## 12. Learning
+
+In critical systems, interface follows modeling. Clarity appeared when the occurrence stopped being only a record and became the structure connecting risk, territory, response, and documentation.

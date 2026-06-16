@@ -1,0 +1,263 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface Props {
+  locale: 'pt' | 'en';
+}
+
+const { locale } = Astro.props;
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+const path = (value: string) => `${basePath}${value.startsWith('/') ? value : `/${value}`}`;
+const cases = (await getCollection('cases', ({ data }) => data.lang === locale))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const copy = {
+  pt: {
+    lang: 'pt-BR',
+    title: 'Henrico Amaral — Senior Product Designer',
+    description: 'Senior Product Designer especializado em plataformas B2B, sistemas internos, workflows complexos e produtos digitais para operações críticas.',
+    available: 'Disponível agora · CLT · PJ · Freelancer',
+    eyebrow: 'Product Design · Enterprise · Operações complexas',
+    h1a: 'Sistemas claros',
+    h1b: 'para decisões difíceis.',
+    sub: 'Ajudo empresas a transformar fluxos confusos, dados dispersos e regras complexas em produtos digitais fáceis de operar.',
+    cta: 'Vamos conversar',
+    spec: ['Ficha técnica', 'Perfil', 'Senior Product Designer', 'Foco', 'Sistemas de decisão & B2B', 'Especialidade', 'Clareza operacional & complexidade', 'Disponibilidade', 'CLT · PJ · Freelancer (São Paulo / Remoto)'],
+    clients: 'Clientes',
+    processKicker: 'Contexto · Estrutura · Interação',
+    processTitle: 'Antes de desenhar telas, organizo o problema.',
+    processMeta: 'MÉTODO APLICADO A PRODUTOS COMPLEXOS',
+    processLead: 'Mapeio fluxos, regras, usuários e decisões para transformar sistemas complexos em produtos mais claros.',
+    casesKicker: 'PROJETOS REAIS · PROBLEMAS COMPLEXOS',
+    casesTitle: 'Trabalhos onde clareza virou operação.',
+    casesMeta: 'Plataformas internas · B2B · Decisão',
+    casesLead: 'Cases em plataformas internas, produtos B2B e sistemas de decisão. Os setores mudam. O problema é o mesmo: organizar complexidade para melhorar a operação.',
+    impactKicker: 'EVIDÊNCIA · ESCALA · RASTREABILIDADE',
+    impactTitle: 'Impacto observável. Operação rastreável.',
+    impactMeta: 'RESULTADOS OBSERVÁVEIS EM SISTEMAS COMPLEXOS',
+    impactLead: 'Quando há número validado, ele aparece. Quando o impacto é estrutural, a evidência é descrita com precisão.',
+    aboutKicker: 'TRAJETÓRIA · MÉTODO · REPERTÓRIO',
+    aboutTitle: 'Por trás da estrutura.',
+    aboutMeta: 'Design · Produto · Tecnologia · Operação',
+    aboutLead: 'Senior Product Designer para plataformas B2B, sistemas internos e operações complexas.',
+    about: [
+      'Sou Senior Product Designer com 20 anos em design digital e mais de 15 anos em UX/Product Design.',
+      'Meu trabalho é organizar fluxos, informação e decisões em produtos digitais usados por times de operação, negócio e tecnologia.',
+      'Atuei em projetos para Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood, BMG e Youse.',
+      'Não parto da tela. Parto do problema, do fluxo, das regras e das decisões que o sistema precisa sustentar.'
+    ],
+    contactKicker: 'São Paulo · Remoto/híbrido · PT/EN',
+    contactTitle: 'Sistemas mais claros. Conversas mais objetivas.',
+    contactMeta: 'FALE COMIGO',
+    contactLead: 'Para vagas sêniores, projetos enterprise e conversas técnicas sobre produto, operação e decisão.',
+    labels: ['Sistema', 'Contexto', 'Escopo', 'Impacto'],
+    seeCv: 'Ver CV',
+    cv: 'Download PDF',
+  },
+  en: {
+    lang: 'en',
+    title: 'Henrico Amaral — Senior Product Designer',
+    description: 'Senior Product Designer focused on B2B platforms, internal systems, complex workflows, and digital products for critical operations.',
+    available: 'Available now · Full-time · Contract · Freelance',
+    eyebrow: 'Product Design · Enterprise · Complex operations',
+    h1a: 'Clear systems',
+    h1b: 'for difficult decisions.',
+    sub: 'I help companies turn confusing flows, scattered data, and complex rules into digital products that are easier to operate.',
+    cta: 'Start a conversation',
+    spec: ['Technical profile', 'Profile', 'Senior Product Designer', 'Focus', 'Decision systems & B2B', 'Specialty', 'Operational clarity & complexity', 'Availability', 'Full-time · Contract · Freelance (São Paulo / Remote)'],
+    clients: 'Clients',
+    processKicker: 'CONTEXT · STRUCTURE · INTERACTION',
+    processTitle: 'Before drawing screens, I organize the problem.',
+    processMeta: 'METHOD APPLIED TO COMPLEX PRODUCTS',
+    processLead: 'I map flows, rules, users, and decisions to turn complex systems into clearer products.',
+    casesKicker: 'REAL PROJECTS · COMPLEX PROBLEMS',
+    casesTitle: 'Work where clarity became operation.',
+    casesMeta: 'INTERNAL PLATFORMS · B2B · DECISION',
+    casesLead: 'Cases in internal platforms, B2B products, and decision systems. The sectors change. The problem repeats: organize complexity to improve operation.',
+    impactKicker: 'EVIDENCE · SCALE · TRACEABILITY',
+    impactTitle: 'Observable impact. Traceable operation.',
+    impactMeta: 'OBSERVABLE RESULTS IN COMPLEX SYSTEMS',
+    impactLead: 'When a number is validated, it appears. When impact is structural, evidence is described precisely.',
+    aboutKicker: 'TRAJECTORY · METHOD · REPERTOIRE',
+    aboutTitle: 'Behind the structure.',
+    aboutMeta: 'DESIGN · PRODUCT · TECHNOLOGY · OPERATION',
+    aboutLead: 'Senior Product Designer for B2B platforms, internal systems, and complex operations.',
+    about: [
+      'I am a Senior Product Designer with 20 years in digital design and more than 15 years in UX/Product Design.',
+      'My work is to organize flows, information, and decisions in digital products used by operations, business, and technology teams.',
+      'I have worked on projects for Petrobras, Bayer, Ambev, Banco do Brasil, Bradesco, Claro, Globo, iFood, BMG, and Youse.',
+      'I do not start from the screen. I start from the problem, the flow, the rules, and the decisions the system needs to sustain.'
+    ],
+    contactKicker: 'São Paulo · Remote/hybrid · PT/EN',
+    contactTitle: 'Clearer systems. More objective conversations.',
+    contactMeta: 'CONTACT',
+    contactLead: 'For senior roles, enterprise projects, and technical conversations about product, operation, and decision-making.',
+    labels: ['System', 'Context', 'Scope', 'Impact'],
+    seeCv: 'View CV',
+    cv: 'PDF download',
+  },
+}[locale];
+
+const steps = locale === 'pt' ? [
+  ['01 / INPUT', 'Discovery', 'Entender o contexto', 'Identifico quem usa, quem decide, quais regras importam e onde o fluxo operacional quebra.'],
+  ['02 / LOGIC', 'Arquitetura', 'Organizar a estrutura', 'Transformo processos dispersos em jornadas, estados, permissões e prioridades claras.'],
+  ['03 / FLOW', 'Interface', 'Desenhar a experiência', 'Crio interfaces que reduzem esforço, orientam ação e deixam o sistema mais fácil de operar.'],
+  ['04 / OUTPUT', 'Ajuste', 'Validar e ajustar', 'Testo hipóteses, alinho áreas envolvidas e refino a solução antes da implementação.'],
+] : [
+  ['01 / INPUT', 'Discovery', 'Understand context', 'I identify who uses, who decides, which rules matter, and where the operational flow breaks.'],
+  ['02 / LOGIC', 'Architecture', 'Organize structure', 'I turn scattered processes into clear journeys, states, permissions, and priorities.'],
+  ['03 / FLOW', 'Interface', 'Design the experience', 'I create interfaces that reduce effort, guide action, and make the system easier to operate.'],
+  ['04 / OUTPUT', 'Refinement', 'Validate and adjust', 'I test hypotheses, align involved areas, and refine the solution before implementation.'],
+];
+---
+
+<BaseLayout title={copy.title} description={copy.description} lang={locale === 'en' ? 'en' : 'pt-BR'} locale={locale}>
+  <style>
+    @import '../styles/home.css';
+  </style>
+
+  <section id="hero" class="hero" data-navdark>
+    <div class="wrap hero__grid">
+      <div data-reveal="hero">
+        <div class="pill"><span class="dot"></span><span>{copy.available}</span></div>
+        <div class="hero__eyebrow mono"><span class="ln"></span>{copy.eyebrow}</div>
+        <h1>{copy.h1a}<br /><span style="color: var(--clay);">{copy.h1b}</span></h1>
+        <p class="hero__sub">{copy.sub}</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contact"><span>{copy.cta}</span><span class="arr">→</span></a>
+        </div>
+      </div>
+
+      <dl class="spec" data-reveal="hero" data-stagger="1">
+        <div class="spec__top"><span class="mono">{copy.spec[0]}</span><span class="spec__id">HA-2026</span></div>
+        <div class="spec__row"><dt>{copy.spec[1]}</dt><dd>{copy.spec[2]}</dd></div>
+        <div class="spec__row"><dt>{copy.spec[3]}</dt><dd>{copy.spec[4]}</dd></div>
+        <div class="spec__row"><dt>{copy.spec[5]}</dt><dd>{copy.spec[6]}</dd></div>
+        <div class="spec__row"><dt>{copy.spec[7]}</dt><dd>{copy.spec[8]}</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="clients" aria-label={copy.clients}>
+    <div class="wrap clients__inner">
+      <div class="clients__label mono">{copy.clients}</div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          {['Petrobras', 'Bayer', 'Ambev', 'Banco do Brasil', 'Bradesco', 'Claro', 'Globo', 'iFood', 'BMG', 'Youse', 'Petrobras', 'Bayer', 'Ambev', 'Banco do Brasil', 'Bradesco', 'Claro', 'Globo', 'iFood', 'BMG', 'Youse'].map((client) => <span>{client}</span>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section method">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="sec-head__kicker mono"><span class="ln"></span>{copy.processKicker}</div>
+          <h2>{copy.processTitle}</h2>
+        </div>
+        <div class="sec-head__lead"><span class="mono">{copy.processMeta}</span><p>{copy.processLead}</p></div>
+      </div>
+      <div class="steps reveal" data-d="1">
+        {steps.map((step) => (
+          <article class="step">
+            <div class="step__top"><span class="step__no">{step[0]}</span><span class="step__tag">{step[1]}</span></div>
+            <h3>{step[2]}</h3>
+            <p>{step[3]}</p>
+            <div class="step__bar"></div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="cases" class="section cases">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="sec-head__kicker mono"><span class="ln"></span>{copy.casesKicker}</div>
+          <h2>{copy.casesTitle}</h2>
+        </div>
+        <div class="sec-head__lead"><span class="mono">{copy.casesMeta}</span><p>{copy.casesLead}</p></div>
+      </div>
+      <div class="case-grid reveal" data-d="1">
+        {cases.map((entry) => (
+          <a class="case" href={path(`${locale === 'en' ? '/en' : ''}/cases/${entry.data.caseSlug}/`)}>
+            <div class="case__img" style={`background-image: url('${path(entry.data.heroImage)}')`}></div>
+            <div class="case__head"><span class="case__no">{String(entry.data.order).padStart(2, '0')}</span><span class="case__sector">{entry.data.sector.split('·')[0].trim()}</span></div>
+            <div>
+              <h3>{entry.data.client}</h3>
+              <p class="case__desc">{entry.data.lead}</p>
+              <dl class="case__meta">
+                <div><dt>{copy.labels[0]}</dt><dd>{entry.data.system}</dd></div>
+                <div><dt>{copy.labels[1]}</dt><dd>{entry.data.type}</dd></div>
+                <div><dt>{copy.labels[2]}</dt><dd>{entry.data.scope.split('·')[0].trim()}</dd></div>
+                <div><dt>{copy.labels[3]}</dt><dd>{entry.data.outcome}</dd></div>
+              </dl>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="impact" class="section impact" data-navdark>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="sec-head__kicker mono"><span class="ln"></span>{copy.impactKicker}</div>
+          <h2>{copy.impactTitle}</h2>
+        </div>
+        <div class="sec-head__lead"><span class="mono">{copy.impactMeta}</span><p>{copy.impactLead}</p></div>
+      </div>
+      <div class="imp-grid reveal" data-d="1">
+        {cases.map((entry) => (
+          <article class="imp">
+            <div class="imp__top"><span class="imp__client">{entry.data.client}</span><span class="imp__dim mono">{entry.data.domain}</span></div>
+            <div class="imp__stat">{entry.data.stats[0].value} <span>{entry.data.stats[0].unit}</span></div>
+            <p class="imp__desc">{entry.data.evidence}</p>
+            <div class="imp__foot mono"><span class="sq"></span>{entry.data.type}</div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about" data-navdark>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="sec-head__kicker mono"><span class="ln"></span>{copy.aboutKicker}</div>
+          <h2>{copy.aboutTitle}</h2>
+        </div>
+        <div class="sec-head__lead"><span class="mono">{copy.aboutMeta}</span><p>{copy.aboutLead}</p></div>
+      </div>
+      <div class="about__main reveal" data-d="1">
+        <div class="about__bio">{copy.about.map((p, i) => <p class={i === 0 ? '' : 'soft'}>{p}</p>)}</div>
+        <div class="about__photo">
+          <img src={path('/assets/img/foto.png')} alt="Henrico Amaral" />
+          <div class="about__cap mono"><span>Henrico Amaral · Product Designer</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact" data-navdark>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="sec-head__kicker mono"><span class="ln"></span>{copy.contactKicker}</div>
+          <h2>{copy.contactTitle}</h2>
+        </div>
+        <div class="sec-head__lead"><span class="mono">{copy.contactMeta}</span><p>{copy.contactLead}</p></div>
+      </div>
+      <div class="links reveal" data-d="1">
+        <a href="mailto:henricoamaral.design@gmail.com" class="link"><span class="link__l"><span class="link__k">E-mail</span><span class="link__v">henricoamaral.design@gmail.com</span></span><span class="arr">↗</span></a>
+        <a href="https://www.linkedin.com/in/henrico-amaral/" target="_blank" rel="noopener" class="link"><span class="link__l"><span class="link__k">LinkedIn</span><span class="link__v">in/henrico-amaral</span></span><span class="arr">↗</span></a>
+        <a href="https://wa.me/5511953970704" target="_blank" rel="noopener" class="link"><span class="link__l"><span class="link__k">WhatsApp</span><span class="link__v">+55 11 95397-0704</span></span><span class="arr">↗</span></a>
+        <a href={path('/assets/docs/Henrico-Amaral-CV.pdf')} target="_blank" rel="noopener" class="link"><span class="link__l"><span class="link__k">{copy.seeCv}</span><span class="link__v">{copy.cv}</span></span><span class="arr">↓</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

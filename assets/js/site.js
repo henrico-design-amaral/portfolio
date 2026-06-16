@@ -459,4 +459,75 @@ window.addEventListener('scroll', () => {
   lastScroll = currentScroll;
 }, { passive: true });
 
+function initCaseLightbox() {
+  const images = Array.from(document.querySelectorAll('.screen-img img'));
+  if (!images.length) return;
+
+  const lightbox = document.createElement('div');
+  lightbox.className = 'case-lightbox';
+  lightbox.hidden = true;
+  lightbox.setAttribute('role', 'dialog');
+  lightbox.setAttribute('aria-modal', 'true');
+  lightbox.setAttribute('aria-label', 'Imagem ampliada do case / Enlarged case image');
+  lightbox.innerHTML = `
+    <div class="case-lightbox__backdrop" data-lightbox-close></div>
+    <figure class="case-lightbox__panel">
+      <button class="case-lightbox__close" type="button" data-lightbox-close>Fechar</button>
+      <img class="case-lightbox__image" alt="">
+      <figcaption class="case-lightbox__caption"></figcaption>
+    </figure>
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImage = lightbox.querySelector('.case-lightbox__image');
+  const lightboxCaption = lightbox.querySelector('.case-lightbox__caption');
+  const closeButton = lightbox.querySelector('.case-lightbox__close');
+  let activeTrigger = null;
+
+  const closeLightbox = () => {
+    if (lightbox.hidden) return;
+    lightbox.hidden = true;
+    document.body.classList.remove('case-lightbox-open');
+    if (activeTrigger) activeTrigger.focus();
+    activeTrigger = null;
+  };
+
+  const openLightbox = (trigger, image) => {
+    activeTrigger = trigger;
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt || '';
+    lightboxCaption.textContent = image.alt || '';
+    lightbox.hidden = false;
+    document.body.classList.add('case-lightbox-open');
+    closeButton.focus();
+  };
+
+  images.forEach(image => {
+    if (image.closest('.case-lightbox-trigger')) return;
+
+    const trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'case-lightbox-trigger';
+    trigger.setAttribute('aria-label', `Ampliar imagem / Open enlarged image: ${image.alt || 'case'}`);
+
+    const hint = document.createElement('span');
+    hint.className = 'case-lightbox-hint';
+    hint.textContent = 'Zoom';
+
+    image.parentNode.insertBefore(trigger, image);
+    trigger.appendChild(image);
+    trigger.appendChild(hint);
+    trigger.addEventListener('click', () => openLightbox(trigger, image));
+  });
+
+  lightbox.querySelectorAll('[data-lightbox-close]').forEach(control => {
+    control.addEventListener('click', closeLightbox);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeLightbox();
+  });
+}
+
+initCaseLightbox();
 initLanguageToggle();

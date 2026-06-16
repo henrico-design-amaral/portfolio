@@ -1,0 +1,117 @@
+---
+lang: "pt"
+caseSlug: "ambev"
+title: "Gestão Logística Distribuída"
+client: "Ambev"
+system: "Plataforma de monitoramento logístico"
+sector: "Logística"
+type: "Plataforma interna"
+role: "Product Designer"
+scope: "Discovery · Arquitetura da informação · UX · Prototipação"
+platform: "Web · Desktop-first"
+order: 3
+heroImage: "/assets/img/cases/ambev.webp"
+description: "Infraestrutura logística nacional para monitoramento distribuído e gestão de rupturas operacionais. Case de Product Design de Henrico Amaral."
+lead: "Em logística nacional, a ruptura não é um card vermelho. É um desvio distribuído que precisa ser localizado, priorizado e lido por áreas diferentes ao mesmo tempo."
+domain: "Supply chain · Logística"
+users: "Analistas de supply chain, coordenadores e times de operação"
+outcome: "Visibilidade de rupturas operacionais"
+evidence: "Evidência qualitativa: leitura compartilhada do estado operacional e menor dependência de reconstrução manual de contexto. Afirmações quantitativas anteriores foram removidas por baixo lastro."
+stats:
+  - value: "Estado"
+    unit: "operacional"
+    description: "Rupturas, alertas e normalidade organizados como condição da operação."
+  - value: "Contínuo"
+    unit: "monitoramento"
+    description: "Indicadores críticos apresentados para leitura recorrente."
+  - value: "Compartilhado"
+    unit: "entre áreas"
+    description: "Uma mesma leitura para logística, comercial, planejamento e operação."
+  - value: "Contextual"
+    unit: "por escala"
+    description: "Visão nacional, regional e detalhe conectadas sem perda de contexto."
+prevCase:
+  slug: "bayer"
+  name: "Bayer"
+nextCase:
+  slug: "bmg"
+  name: "BMG"
+---
+
+## 01. Contexto
+
+Uma operação logística nacional não quebra em um único ponto. Ela perde sincronização por sinais distribuídos: disponibilidade, ruptura, carregamento, região, rota, produto e prioridade comercial.
+
+O desafio era criar uma leitura comum para áreas que olham a mesma operação por recortes diferentes.
+
+## 02. Problema
+
+Quando uma ruptura aparece tarde, a operação já está reagindo em atraso. O time precisa saber onde está o problema, qual região foi afetada, quais produtos importam mais e o que precisa ser priorizado.
+
+Antes do sistema, essa leitura dependia de cruzamento manual entre relatórios e visões regionais.
+
+## 03. Sistema anterior ou cenário operacional
+
+Relatórios logísticos, planilhas regionais, dashboards isolados e sistemas internos mostravam partes da operação. O problema não era falta de indicador; era falta de leitura operacional integrada.
+
+Cada área podia ter uma versão diferente do mesmo estado. Isso dificultava priorização e alinhamento.
+
+## 04. Meu papel
+
+Atuei na estruturação da visibilidade operacional e no desenho de interfaces para monitoramento e priorização.
+
+- Modelei a leitura por estado operacional.
+- Separei monitoramento contínuo de investigação de causa.
+- Defini hierarquia para rupturas, alertas, carregamentos e disponibilidade.
+- Estruturei navegação entre visão nacional, regional e detalhe.
+- Validei fluxos com times de operação e supply chain.
+
+## 05. Restrições
+
+O sistema precisava atender diferentes maturidades operacionais, latências de dados e necessidades por área.
+
+Nem todo dado chegava com a mesma frequência. O desenho precisava comunicar defasagem, prioridade e confiança sem prometer precisão inexistente.
+
+## 06. Decisão de design
+
+A decisão principal foi organizar a interface pelo estado da operação, não pela hierarquia administrativa nem pelos sistemas de origem.
+
+Isso coloca o usuário diante da pergunta certa: o que exige atenção agora?
+
+## 07. Arquitetura da solução
+
+A solução foi estruturada em três camadas:
+
+- monitoramento nacional da distribuição;
+- indicadores críticos de disponibilidade, ruptura, carregamento e nível de serviço;
+- análise contextual de eventos operacionais.
+
+Essa arquitetura permite sair do panorama para o detalhe sem quebrar o raciocínio.
+
+## 08. Fluxo principal
+
+O usuário começa pela leitura nacional, identifica regiões em atenção, aprofunda a ruptura ou desvio e entende o contexto necessário para priorizar ação.
+
+O fluxo não tenta explicar tudo ao mesmo tempo. Ele conduz da anomalia para o diagnóstico, mantendo escala e contexto.
+
+## 09. Evidências visuais
+
+A evidência visual está na hierarquia de sinais: ruptura e prioridade precisam aparecer antes de métricas secundárias.
+
+O desenho usa contraste entre normalidade, atenção e desvio para transformar dados logísticos em uma leitura operacional compartilhada.
+
+## 10. Impacto
+
+O impacto publicado é qualitativo. Não há métrica quantitativa com lastro suficiente para comunicar redução de tempo ou volume monitorado.
+
+O ganho estrutural foi tornar o estado da operação mais visível e compartilhado, reduzindo a dependência de reconstrução manual antes da tomada de decisão.
+
+## 11. Limitações
+
+Alguns centros, rotas e indicadores dependiam de processamento em lote. Sistemas legados também impunham diferenças de granularidade.
+
+O produto não podia fingir tempo real onde havia defasagem. A interface precisava explicitar frescor do dado, nível de confiança e caminho de aprofundamento.
+
+## 12. Aprendizado
+
+Monitoramento não é apenas exibir indicadores. Em operação distribuída, design é construir uma leitura comum para que áreas diferentes consigam agir sobre a mesma realidade.

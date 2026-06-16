@@ -17,6 +17,7 @@ cases/Cases/
 node_modules/
 
 # build outputs
+.astro/
 dist/
 build/
 out/

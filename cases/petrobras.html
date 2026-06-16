@@ -1,779 +1,469 @@
-﻿�<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR" data-lang="pt">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Petrobras / SALA CAR — Henrico Amaral</title>
-  <meta name="description" content="SALA CAR — sistema de gestão de ocorrências ambientais offshore da Petrobras. Infraestrutura de decisão para operações críticas. / Petrobras offshore environmental management system. Decision infrastructure for critical operations.">
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-
-  <link rel="stylesheet" href="../assets/css/tailwind.generated.css?v=20260610-motion-cache-zero-03">
-  <link rel="stylesheet" href="../assets/css/site.css?v=20260610-motion-cache-zero-03">
-  <link rel="stylesheet" href="../assets/css/cases.css?v=20260610-motion-cache-zero-03">
-  <link rel="stylesheet" href="../assets/css/motion.css?v=20260610-motion-cache-zero-03">
-
-  <script>(function(){try{var l=localStorage.getItem('henrico_lang');if(l==='en'){document.documentElement.lang='en';document.documentElement.dataset.lang='en';}}catch(e){}})()</script>
-  <noscript>
-    <style>
-      .lang-pt, .lang-en { display: inline !important; }
-    </style>
-  </noscript>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petrobras · SALA CAR — Henrico Amaral</title>
+<meta name="description" content="SALA CAR — Sistema de gestão de ocorrências ambientais offshore para a Petrobras. Case de Product Design de Henrico Amaral.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/cases.css?v=20260615-case-blueprint">
 </head>
-
-<body class="font-body overflow-x-hidden">
-
-  <a href="#main-content"
-    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent-500 text-white px-4 py-2 z-50 rounded"
-    data-t="skip">Ir para o conteúdo</a>
-
-  <!-- NAV -->
-  <nav class="fixed top-0 left-0 w-full z-50 liquid-glass transition-transform duration-300" id="nav"
-    aria-label="Navegação principal">
-    <div class="max-w-[1440px] w-full mx-auto flex items-center justify-between px-6 py-4">
-      <div class="magnetic-wrap">
-        <a href="../index.html" class="font-display font-bold text-lg md:text-xl tracking-[0]">Henrico Amaral</a>
-      </div>
-      <div
-        class="hidden md:flex items-center gap-8 font-mono text-[12px] tracking-widest uppercase font-semibold text-text-secondary nav-links">
-        <a href="../index.html#process" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.method">Método</a>
-        <a href="../index.html#cases"   class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.cases">Casos</a>
-        <a href="../index.html#impact"  class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.impact">Impacto</a>
-        <a href="../about.html"   class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.about">Sobre</a>
-        <a href="../index.html#contact" class="hover:text-accent-500 transition-colors py-2 px-1" data-t="nav.contact">Contato</a>
-      </div>
-      <div class="lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
-        <span class="lang-toggle__thumb" aria-hidden="true"></span>
-        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT Português" aria-pressed="true">PT</button>
-        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
-      </div>
-      <button id="mobile-menu-toggle" class="mobile-menu-toggle md:hidden" type="button"
-        aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
-    </div>
-    <div id="mobile-menu" class="mobile-menu md:hidden" hidden>
-      <a href="../index.html#process" data-t="nav.method">Método</a>
-      <a href="../index.html#cases"   data-t="nav.cases">Casos</a>
-      <a href="../index.html#impact"  data-t="nav.impact">Impacto</a>
-      <a href="../about.html"   data-t="nav.about">Sobre</a>
-      <a href="../index.html#contact" data-t="nav.contact">Contato</a>
-      <div class="lang-toggle mobile-lang-toggle" data-lang-toggle data-current-lang="pt" role="group"
-        aria-label="Selecionar idioma">
-        <span class="lang-toggle__thumb" aria-hidden="true"></span>
-        <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT Português" aria-pressed="true">PT</button>
-        <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
-      </div>
-    </div>
-  </nav>
-
-  <main id="main-content">
-    <div id="sr-announcer" role="status" aria-live="polite" class="sr-only"></div>
-
-    <!-- ── HERO ── -->
-    <header class="case-hero motion-case-hero" aria-labelledby="case-title">
-      <img src="../assets/img/cases/petrobras.webp" alt="Petrobras Hero" class="case-hero-bg motion-parallax-bg">
-      <div class="case-hero-overlay"></div>
-
-      <div class="max-w-[1440px] mx-auto w-full">
-        <div class="case-hero-eyebrow motion-reveal-up motion-hero">
-          <span class="case-hero-dot" aria-hidden="true"></span>
-          <span class="lang-pt">01 · Energia · Operações Críticas Offshore</span>
-          <span class="lang-en">01 · Energy · Critical Offshore Operations</span>
-        </div>
-
-        <h1 id="case-title" class="motion-reveal-up motion-hero">SALA CAR</h1>
-        <p class="case-hero-client motion-reveal-up motion-hero">Petrobras</p>
-
-        <p class="case-hero-desc motion-reveal-up motion-blur-in motion-hero">
-          <span class="lang-pt">Sistema de gestão de ocorrências ambientais offshore. Coordenação em tempo real entre equipes operacionais, dados geoespaciais e obrigações regulatórias em operações de petróleo e gás.</span>
-          <span class="lang-en">Offshore environmental occurrence management system. Real-time coordination across operational teams, geospatial data, and regulatory obligations in oil and gas operations.</span>
-        </p>
-
-        <div class="case-meta-row motion-reveal-up motion-hero">
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Cliente</span><span class="lang-en">Client</span></span>
-            <span class="case-meta-value">Petrobras</span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Setor</span><span class="lang-en">Sector</span></span>
-            <span class="case-meta-value"><span class="lang-pt">Energia · Offshore</span><span class="lang-en">Energy · Offshore</span></span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Tipo</span><span class="lang-en">Type</span></span>
-            <span class="case-meta-value"><span class="lang-pt">Plataforma interna</span><span class="lang-en">Internal platform</span></span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Papel</span><span class="lang-en">Role</span></span>
-            <span class="case-meta-value">Product Designer</span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Escopo</span><span class="lang-en">Scope</span></span>
-            <span class="case-meta-value"><span class="lang-pt">Discovery · IA · UX · Prototipação</span><span class="lang-en">Discovery · IA · UX · Prototyping</span></span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label"><span class="lang-pt">Plataforma</span><span class="lang-en">Platform</span></span>
-            <span class="case-meta-value">Web · Desktop-first</span>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- ── PROJECT SNAPSHOT ── -->
-    <section class="section-pad px-6 bg-page nbg motion-case-block" id="snapshot" data-motion>
-      <div class="max-w-[1440px] mx-auto w-full">
-        <div class="section-header">
-          <span class="section-kicker motion-reveal-up motion-section">
-            <span class="lang-pt">PROJETO · CONTEXTO · ESCOPO</span>
-            <span class="lang-en">PROJECT · CONTEXT · SCOPE</span>
-          </span>
-          <div class="section-header-grid">
-            <div class="section-header-title-col">
-              <h2 class="section-header-title">
-                <span class="lang-pt">Gestão de ocorrências<br>ambientais offshore.</span>
-                <span class="lang-en">Offshore environmental<br>occurrence management.</span>
-              </h2>
-            </div>
-            <div class="section-header-subtitle">
-              <p>
-                <span class="lang-pt">O SALA CAR organiza o ciclo completo de uma ocorrência ambiental: da detecção à resposta, da classificação ao encerramento regulatório.</span>
-                <span class="lang-en">SALA CAR organizes the complete lifecycle of an environmental occurrence: from detection to response, from classification to regulatory closure.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="snapshot-grid motion-stagger">
-          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
-            <span class="snapshot-cell-label"><span class="lang-pt">Sistema</span><span class="lang-en">System</span></span>
-            <span class="snapshot-cell-value">SALA CAR</span>
-          </div>
-          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
-            <span class="snapshot-cell-label"><span class="lang-pt">Domínio</span><span class="lang-en">Domain</span></span>
-            <span class="snapshot-cell-value">
-              <span class="lang-pt">Gestão ambiental · Energia</span>
-              <span class="lang-en">Environmental mgt · Energy</span>
-            </span>
-          </div>
-          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
-            <span class="snapshot-cell-label"><span class="lang-pt">Usuários</span><span class="lang-en">Users</span></span>
-            <span class="snapshot-cell-value">
-              <span class="lang-pt">Técnicos e Coordenadores</span>
-              <span class="lang-en">Techs and Coordinators</span>
-            </span>
-          </div>
-          <div class="snapshot-cell motion-stagger-item motion-reveal-up motion-card">
-            <span class="snapshot-cell-label"><span class="lang-pt">Resultado</span><span class="lang-en">Outcome</span></span>
-            <span class="snapshot-cell-value">
-              <span class="lang-pt">Estado unificado e rastreável</span>
-              <span class="lang-en">Unified traceable state</span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CONTENT SECTIONS ── -->
-    <div class="bg-page">
-      <div class="max-w-[1440px] mx-auto w-full">
-
-        <!-- 01 / Operational Context -->
-        <section class="section-pad px-6 case-sec--dark motion-case-block" id="context" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header section-header--dark">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">01 / Contexto Operacional</span>
-                <span class="lang-en">01 / Operational Context</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">O que é operar ambientalmente offshore.</span>
-                    <span class="lang-en">What offshore environmental operation requires.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Operações de petróleo offshore estão sujeitas a regulações ambientais federais que exigem monitoramento contínuo, registro de ocorrências e capacidade de resposta documentada.</span>
-                    <span class="lang-en">Offshore oil operations are subject to federal environmental regulations requiring continuous monitoring, occurrence recording, and documented response capacity.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="case-grid">
-              <div>
-                <p class="case-body lang-pt">Qualquer evento — de uma variação em parâmetros de efluentes a um derramamento — precisa ser registrado, classificado, tratado e encerrado com rastreabilidade completa. O ciclo envolve equipes em locais diferentes: técnicos ambientais nas plataformas, analistas de monitoramento remoto em terra, coordenadores nos centros de controle e gestores de conformidade responsáveis pela resposta formal ao órgão regulador.</p>
-                <p class="case-body lang-en">Any event — from a wastewater parameter deviation to a spill — must be registered, classified, addressed, and closed with full traceability. The cycle involves teams in different locations: environmental technicians on platforms, remote monitoring analysts onshore, coordination managers in control centers, and compliance managers responsible for formal regulatory response.</p>
-              </div>
-              <div>
-                <div class="case-aside motion-reveal-up motion-card">
-                  <span class="case-aside-label"><span class="lang-pt">Canais de Origem</span><span class="lang-en">Source Channels</span></span>
-                  <ul class="case-aside-list">
-                    <li><span class="lang-pt">Monitoramento orbital</span><span class="lang-en">Orbital monitoring</span></li>
-                    <li><span class="lang-pt">Sobrevoo aéreo (LES)</span><span class="lang-en">Aerial overflight (LES)</span></li>
-                    <li><span class="lang-pt">Embarcações de apoio</span><span class="lang-en">Support vessels</span></li>
-                    <li><span class="lang-pt">Centro de controle (CAE)</span><span class="lang-en">Control center (CAE)</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Flow Diagram -->
-            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram" data-parallax="0.02">
-              <div class="d-flow">
-                <div class="d-flow-nodes">
-                  <div class="d-node"><span class="lang-pt">Monitoramento orbital</span><span class="lang-en">Orbital monitoring</span></div>
-                  <div class="d-node">OSD</div>
-                  <div class="d-node">Poseidon II</div>
-                  <div class="d-node"><span class="lang-pt">Sobrevoo</span><span class="lang-en">Overflight</span></div>
-                  <div class="d-node"><span class="lang-pt">Unidade marítima</span><span class="lang-en">Maritime unit</span></div>
-                  <div class="d-node"><span class="lang-pt">Embarcação</span><span class="lang-en">Vessel</span></div>
-                  <div class="d-node">CAE</div>
-                </div>
-                <div class="d-line-down"></div>
-                <div class="d-node highlight"><span class="lang-pt">Nova ocorrência</span><span class="lang-en">New occurrence</span></div>
-              </div>
-              <span class="diagram-caption">
-                <span class="lang-pt">Sete canais independentes podiam originar uma ocorrência ambiental.</span>
-                <span class="lang-en">Seven independent channels could originate an environmental occurrence.</span>
-              </span>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- 02 / Legacy Architecture -->
-        <section class="section-pad px-6 case-sec--dark motion-case-block" id="legacy" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header section-header--dark">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">02 / Arquitetura Legada</span>
-                <span class="lang-en">02 / Legacy Architecture</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Antes do sistema, cada etapa era registrada isoladamente.</span>
-                    <span class="lang-en">Before the system, each stage was recorded separately.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Informações sobre um único incidente podiam estar distribuídas em planilhas locais, cadeias de e-mail, sistemas legados de diferentes áreas e PDFs gerados manualmente.</span>
-                    <span class="lang-en">Information about a single incident could be distributed across local spreadsheets, email chains, legacy systems from different departments, and manually generated PDFs.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="case-grid">
-              <div>
-                <p class="case-body lang-pt">O ICS 214 registrava a cronologia. Planilhas controlavam a mobilização de recursos. Relatórios técnicos consolidavam as análises geoespaciais e de dispersão de manchas. Nenhum desses registros compartilhava uma estrutura operacional comum, exigindo dos analistas uma exaustiva reconstituição manual do contexto.</p>
-                <p class="case-body lang-en">The ICS 214 logged the chronology. Spreadsheets controlled resource mobilization. Technical reports consolidated geospatial and drift analysis. None of these records shared a common operational structure, requiring analysts to manually reconstruct the context.</p>
-              </div>
-              <div>
-                <div class="case-aside motion-reveal-up motion-card">
-                  <span class="case-aside-label"><span class="lang-pt">Registros Fragmentados</span><span class="lang-en">Fragmented Records</span></span>
-                  <ul class="case-aside-list">
-                    <li><span class="lang-pt">Planilhas locais de recursos</span><span class="lang-en">Local resource spreadsheets</span></li>
-                    <li><span class="lang-pt">Relatórios técnicos em PDF</span><span class="lang-en">Technical PDF reports</span></li>
-                    <li><span class="lang-pt">Controle cronológico manual</span><span class="lang-en">Manual chronological control</span></li>
-                    <li><span class="lang-pt">Sistemas de geoprocessamento</span><span class="lang-en">Geoprocessing systems</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Convergence Diagram -->
-            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram" data-parallax="0.02">
-              <div class="d-conv">
-                <div class="d-conv-inputs">
-                  <div class="d-node"><span class="lang-pt">Planilhas</span><span class="lang-en">Spreadsheets</span></div>
-                  <div class="d-node"><span class="lang-pt">Relatórios técnicos</span><span class="lang-en">Technical reports</span></div>
-                  <div class="d-node"><span class="lang-pt">Registros paralelos</span><span class="lang-en">Parallel records</span></div>
-                </div>
-                <div class="d-conv-output">
-                  <div class="d-node highlight"><span class="lang-pt">Nova ocorrência</span><span class="lang-en">New occurrence</span></div>
-                </div>
-              </div>
-              <span class="diagram-caption">
-                <span class="lang-pt">A estrutura isolada limitava o compartilhamento de contexto.</span>
-                <span class="lang-en">The isolated structure limited operational context sharing.</span>
-              </span>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- 03 / Problem Definition -->
-        <section class="section-pad px-6 motion-case-block" id="problem" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">03 / Definição do Problema</span>
-                <span class="lang-en">03 / Problem Definition</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">O custo estava em montar o contexto operacional.</span>
-                    <span class="lang-en">The cost was in assembling operational context.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">A fragmentação tinha consequências diretas: atrasos na classificação de incidentes, esforço duplicado no registro, risco de resposta descoordenada entre equipes e exposição regulatória por ausência de rastreabilidade.</span>
-                    <span class="lang-en">This fragmentation had direct consequences: delays in incident classification, duplicated recording effort, risk of uncoordinated response across teams, and regulatory exposure from the absence of traceability.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <p class="case-body lang-pt">O problema não era falta de dados — a operação já produzia informação suficiente. O gargalo estava na energia gasta para cruzar dados dispersos sob pressão de tempo. Para responder de forma precisa, o time dependia da reconstituição manual de logs e posições de embarcações.</p>
-            <p class="case-body lang-en">The problem was not a lack of data — the operation already produced enough. The bottleneck was the energy spent connecting distributed records under time pressure. To respond accurately, the team depended on manual reconstruction of logs and vessel positions.</p>
-          </div>
-        </section>
-
-        <!-- 04 / Designer Role -->
-        <section class="section-pad px-6 motion-case-block" id="role" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">04 / Atuação do Designer</span>
-                <span class="lang-en">04 / Designer Role</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Definição estrutural e design de interface.</span>
-                    <span class="lang-en">Structural definition and interface design.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Atuei no mapeamento dos fluxos e no desenho das interfaces unificadas. Trabalhei lado a lado com especialistas ambientais e desenvolvedores para traduzir o ciclo de resposta em uma arquitetura de produto robusta.</span>
-                    <span class="lang-en">I worked mapping workflows and designing unified interfaces. I worked side-by-side with environmental specialists and developers to translate the response cycle into a robust product architecture.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="insight-grid motion-stagger">
-              <div class="insight-item">
-                <span class="insight-num">01</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Definição da arquitetura centrada na ocorrência.</span><span class="lang-en">Definition of occurrence-centric architecture.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Propus organizar todo o sistema em torno do evento de ocorrência, ligando todas as análises e recursos a ele.</span><span class="lang-en">Proposed organizing the system around the occurrence event, linking all analysis and assets to it.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">02</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Modelagem de módulos operacionais.</span><span class="lang-en">Modeling of operational modules.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Definição das entidades e fluxos necessários para cada etapa do ciclo: monitoramento, mobilização e encerramento.</span><span class="lang-en">Definition of the entities and flows required for each step: monitoring, mobilization, and closure.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">03</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Estruturação da linha do tempo.</span><span class="lang-en">Structuring the operational timeline.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Substituição de abas isoladas por uma linha do tempo unificada (ICS 214) que atua como o eixo de navegação e auditoria.</span><span class="lang-en">Replaced isolated tabs with a unified timeline (ICS 214) acting as the main navigation and audit axis.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">04</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Integração do geoprocessamento.</span><span class="lang-en">Integration of geoprocessing.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Posicionei as ferramentas de mapa diretamente no fluxo operacional das equipes em vez de uma tela isolada.</span><span class="lang-en">Positioned map tools directly inside the operational flow instead of an isolated screen.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">05</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Desenho das telas de controle e resposta.</span><span class="lang-en">Design of control and response screens.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Prototipação de interfaces críticas para técnicos ambientais e gestores de conformidade regulatória.</span><span class="lang-en">Prototyping of critical interfaces for environmental techs and compliance managers.</span></p>
-                </div>
-              </div>
-              <div class="insight-item">
-                <span class="insight-num">06</span>
-                <div>
-                  <h3 class="insight-title"><span class="lang-pt">Colaboração com UX Research.</span><span class="lang-en">Collaboration with UX Research.</span></h3>
-                  <p class="insight-desc"><span class="lang-pt">Leitura direta dos artefatos legados em campo junto com a equipe de pesquisa para fundamentar as decisões.</span><span class="lang-en">Direct analysis of legacy field artifacts alongside the research team to ground decisions.</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 05 / Project Constraints -->
-        <section class="section-pad px-6 motion-case-block" id="constraints" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">05 / Restrições do Projeto</span>
-                <span class="lang-en">05 / Project Constraints</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Limites e condicionantes operacionais.</span>
-                    <span class="lang-en">Operational limits and constraints.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                </div>
-              </div>
-            </div>
-            <div class="info-box motion-reveal-up motion-card">
-              <span class="info-box-label"><span class="lang-pt">Condições de Contorno</span><span class="lang-en">Boundary Conditions</span></span>
-              <ul class="info-box-list">
-                <li>
-                  <span class="lang-pt"><strong>Aderência ao fluxo real:</strong> O sistema precisava refletir a operação real e as exigências do órgão regulador federal (IBAMA).</span>
-                  <span class="lang-en"><strong>Alignment with real flow:</strong> The system had to reflect real operations and federal regulatory (IBAMA) requirements.</span>
-                </li>
-                <li>
-                  <span class="lang-pt"><strong>Garantia de Rastreabilidade:</strong> Toda ação, parecer técnico e mudança de estado precisava gerar registros permanentes e auditáveis.</span>
-                  <span class="lang-en"><strong>Traceability Guarantee:</strong> Every action, technical opinion, and state change had to generate permanent, auditable logs.</span>
-                </li>
-                <li>
-                  <span class="lang-pt"><strong>Colaboração entre atores:</strong> Técnicos offshore e equipes de monitoramento remoto em terra precisavam cooperar sobre o mesmo evento.</span>
-                  <span class="lang-en"><strong>Collaboration across actors:</strong> Offshore techs and onshore remote monitoring teams had to cooperate on the same event.</span>
-                </li>
-                <li>
-                  <span class="lang-pt"><strong>Facilidade de uso sob pressão:</strong> Registrar dados precisava ser mais simples e rápido do que preencher planilhas manuais.</span>
-                  <span class="lang-en"><strong>Ease of use under pressure:</strong> Logging data had to be simpler and faster than filling manual spreadsheets.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- 06 / Structural Decision -->
-        <section class="section-pad px-6 case-sec--dark motion-case-block" id="decisions" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header section-header--dark">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">06 / Decisão Estrutural</span>
-                <span class="lang-en">06 / Structural Decision</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">A ocorrência como elemento estruturador do fluxo.</span>
-                    <span class="lang-en">The occurrence as the flow organizer.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Propus reorganizar o sistema usando a ocorrência como a unidade central do fluxo de trabalho. Em vez de telas isoladas por ferramenta, o analista visualiza todas as dimensões de um incidente no mesmo contexto.</span>
-                    <span class="lang-en">Proposed reorganizing the system using the occurrence as the central unit of the workflow. Instead of screens isolated by tool, the analyst views all dimensions of an incident in the same context.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Hub Diagram -->
-            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram" data-parallax="0.02">
-              <div class="d-hub">
-                <div class="d-hub-orbit"></div>
-                <div class="d-node highlight d-hub-center"><span class="lang-pt">Ocorrência</span><span class="lang-en">Occurrence</span></div>
-                <div class="d-node d-hub-sat" style="top:0%; left:50%;"><span class="lang-pt">Monitoramento</span><span class="lang-en">Monitoring</span></div>
-                <div class="d-node d-hub-sat" style="top:25%; left:93.3%;"><span class="lang-pt">Geoprocessamento</span><span class="lang-en">Geoprocessing</span></div>
-                <div class="d-node d-hub-sat" style="top:75%; left:93.3%;"><span class="lang-pt">Mobilização</span><span class="lang-en">Mobilization</span></div>
-                <div class="d-node d-hub-sat" style="top:100%; left:50%;"><span class="lang-pt">Resposta</span><span class="lang-en">Response</span></div>
-                <div class="d-node d-hub-sat" style="top:75%; left:6.7%;"><span class="lang-pt">Cronologia</span><span class="lang-en">Chronology</span></div>
-                <div class="d-node d-hub-sat" style="top:25%; left:6.7%;"><span class="lang-pt">Encerramento</span><span class="lang-en">Closure</span></div>
-              </div>
-              <span class="diagram-caption">
-                <span class="lang-pt">Todas as decisões e registros passaram a pertencer a um evento único.</span>
-                <span class="lang-en">All decisions and records came to belong to a single event.</span>
-              </span>
-            </div>
-
-            <!-- Pipeline Diagram -->
-            <div class="diagram-wrap motion-reveal-up motion-blur-in motion-diagram" data-parallax="0.02">
-              <div class="d-pipeline">
-                <div class="d-node"><span class="lang-pt">Registro</span><span class="lang-en">Registry</span></div>
-                <div class="d-node"><span class="lang-pt">Interpretação</span><span class="lang-en">Interpretation</span></div>
-                <div class="d-node"><span class="lang-pt">Classificação</span><span class="lang-en">Classification</span></div>
-                <div class="d-node"><span class="lang-pt">Mobilização</span><span class="lang-en">Mobilization</span></div>
-                <div class="d-node"><span class="lang-pt">Resposta</span><span class="lang-en">Response</span></div>
-                <div class="d-node"><span class="lang-pt">Cronologia</span><span class="lang-en">Chronology</span></div>
-                <div class="d-node"><span class="lang-pt">Consolidação</span><span class="lang-en">Consolidation</span></div>
-                <div class="d-node highlight"><span class="lang-pt">Encerramento</span><span class="lang-en">Closure</span></div>
-              </div>
-              <span class="diagram-caption">
-                <span class="lang-pt">O ciclo completo de vida de uma ocorrência operacional.</span>
-                <span class="lang-en">The complete lifecycle of an operational occurrence.</span>
-              </span>
-            </div>
-
-            <!-- Full Flow Image -->
-            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-              <img src="Cases/Petrobras/salacar-fluxo-completo.webp" alt="Full Operational Flow" loading="lazy">
-            </div>
-
-          </div>
-        </section>
-
-        <!-- 07 / Operational Scale -->
-        <section class="section-pad px-6 motion-case-block" id="scale" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">07 / Escala Operacional</span>
-                <span class="lang-en">07 / Operational Scale</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Telas, fluxos e interações integradas.</span>
-                    <span class="lang-en">Integrated screens, flows, and interactions.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Abaixo, a sequência de telas que estruturam o monitoramento operacional, a mobilização de embarcações de apoio e a análise contextual por mapas.</span>
-                    <span class="lang-en">Below, the sequence of screens structuring operational monitoring, support vessel mobilization, and map-based contextual analysis.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Walkthrough Screens -->
-            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-              <img src="Cases/Petrobras/ocorrencias-01-listagem.png" alt="Ocorrências - Listagem" loading="lazy">
-            </div>
-            <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
-              <span class="lang-pt">Visão Geral e Controle de Ocorrências</span>
-              <span class="lang-en">Occurrence General View and Control</span>
-            </h3>
-            <p class="case-body lang-pt">A listagem de ocorrências deixou de ser apenas uma tabela. Tornou-se um painel de priorização e controle, consolidando a classificação de risco, o tamanho estimado da mancha e os recursos alocados.</p>
-            <p class="case-body lang-en">The occurrence list stopped being just a table. It became a prioritization and control board, consolidating risk classification, estimated slick size, and allocated resources.</p>
-
-            <div class="case-grid-2">
-              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-                <img src="Cases/Petrobras/ocorrencias-02-tipo-emergencia-classificada.jpg" alt="Ocorrência Classificada" loading="lazy">
-              </div>
-              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-                <img src="Cases/Petrobras/ocorrencias-04-origem-geoprocessamento.jpg" alt="Geoprocessamento Integrado" loading="lazy">
-              </div>
-            </div>
-            <p class="case-body lang-pt">Telas com os detalhes e a classificação estruturada de emergência ambiental (à esquerda) e a integração com dados da origem do geoprocessamento em tempo real (à direita).</p>
-            <p class="case-body lang-en">Screens showing details and structured classification of environmental emergency (left) and real-time integration with geoprocessing origin data (right).</p>
-
-            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-              <img src="Cases/Petrobras/ocorrencias-05-tratamento-da-ocorrencia-aba-ics-214.jpg" alt="ICS 214 Cronologia" loading="lazy">
-            </div>
-            <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
-              <span class="lang-pt">Aba ICS 214 — Cronologia da Ocorrência</span>
-              <span class="lang-en">ICS 214 Tab — Occurrence Chronology</span>
-            </h3>
-            <p class="case-body lang-pt">O log de eventos do ICS 214 foi inserido na navegação central do incidente. O analista pode registrar ações operacionais de forma contínua, gerando rastreabilidade nativa sem precisar preencher arquivos paralelos.</p>
-            <p class="case-body lang-en">The ICS 214 event log was integrated into the central incident navigation. The analyst can log operational actions continuously, creating native traceability without external files.</p>
-
-            <div class="case-grid-2">
-              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-                <img src="Cases/Petrobras/embarcacao-01-mobilizar.jpg" alt="Mobilização de Recurso" loading="lazy">
-              </div>
-              <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-                <img src="Cases/Petrobras/embarcacao-02-mobilizada.png" alt="Recurso Mobilizado" loading="lazy">
-              </div>
-            </div>
-            <p class="case-body lang-pt">O fluxo de mobilização de recursos: seleção e simulação de ativação de embarcações (à esquerda) e confirmação visual da embarcação em resposta (à direita).</p>
-            <p class="case-body lang-en">The resource mobilization flow: selection and simulation of vessel activation (left) and visual confirmation of vessel in response (right).</p>
-
-            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-              <img src="Cases/Petrobras/embarcacao-05-listagem-de-embarcacoes.jpg" alt="Listagem de Embarcações" loading="lazy">
-            </div>
-            <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
-              <span class="lang-pt">Gestão e Painel de Embarcações</span>
-              <span class="lang-en">Vessel Management and Dashboard</span>
-            </h3>
-            <p class="case-body lang-pt">Painel consolidado mostrando todas as embarcações disponíveis na bacia offshore, sua capacidade operacional de recolhimento de óleo e posição de monitoramento.</p>
-            <p class="case-body lang-en">Consolidated dashboard showing all available vessels in the offshore basin, their operational recovery capacity, and monitored position.</p>
-
-            <div class="screen-img motion-reveal-up motion-blur-in motion-image motion-parallax-soft" data-parallax="0.03">
-              <img src="Cases/Petrobras/geoprocessamento-02-edicao.jpg" alt="Edição de Geoprocessamento" loading="lazy">
-            </div>
-            <h3 class="font-display font-bold text-2xl text-text-primary mb-4">
-              <span class="lang-pt">Módulo de Geoprocessamento e Mapas</span>
-              <span class="lang-en">Geoprocessing and Maps Module</span>
-            </h3>
-            <p class="case-body lang-pt">Ferramenta contextual de mapa diretamente embarcada no tratamento do incidente. O analista edita e delimita o polígono da mancha suspeita sem sair do fluxo operacional da ocorrência.</p>
-            <p class="case-body lang-en">Contextual map tool directly embedded in incident handling. The analyst edits and delimits the polygon of the suspected slick without leaving the occurrence workflow.</p>
-          </div>
-        </section>
-
-        <!-- 08 / Structural Limitations -->
-        <section class="section-pad px-6 motion-case-block" id="tradeoffs" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">08 / Limitações Estruturais</span>
-                <span class="lang-en">08 / Structural Limitations</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Nem tudo pôde ser integrado de imediato.</span>
-                    <span class="lang-en">Not everything could be integrated immediately.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">Limitações técnicas e a natureza complexa das regulações exigiram manter alguns fluxos temporariamente externos ou dependentes de processos manuais.</span>
-                    <span class="lang-en">Technical limits and the complex nature of regulations required keeping some workflows temporarily external or dependent on manual processes.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <p class="case-body lang-pt">Algumas integrações de sensores satelitais herdados permaneceram em canais de consulta paralelos por restrições de API de fornecedores internacionais. O fechamento formal do relatório regulatório com o órgão externo continuou exigindo o preenchimento de formulários específicos no ambiente governamental, forçando o sistema a conviver com integrações parciais.</p>
-            <p class="case-body lang-en">Some integrations with legacy satellite sensors remained in parallel query channels due to API restrictions from international vendors. Formal regulatory report closure with the external body still required specific forms filled in the government environment, forcing the system to coexist with partial integrations.</p>
-          </div>
-        </section>
-
-        <!-- 09 / Impact -->
-        <section class="section-pad px-6 case-sec--dark motion-impact" id="impact" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header section-header--dark">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">09 / Impacto do Projeto</span>
-                <span class="lang-en">09 / Project Impact</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title">
-                    <span class="lang-pt">Resultados reais na operação offshore.</span>
-                    <span class="lang-en">Real results in offshore operation.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle">
-                  <p>
-                    <span class="lang-pt">A unificação das informações reduziu o custo de reconstrução do contexto, permitindo às equipes operacionais agir com mais agilidade e segurança jurídica.</span>
-                    <span class="lang-en">The information unification reduced the cost of context reconstruction, enabling operational teams to act with more agility and legal security.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="impact-boxes motion-stagger">
-              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
-                <div class="case-metric">
-                  <span class="case-metric-num">95</span>
-                  <span class="case-metric-unit">%</span>
-                </div>
-                <p>
-                  <span class="lang-pt">Automação de relatórios operacionais e redução de planilhas fragmentadas.</span>
-                  <span class="lang-en">Automation of operational reports and reduction of fragmented spreadsheets.</span>
-                </p>
-              </div>
-              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
-                <div class="case-metric">
-                  <span class="case-metric-num">12</span>
-                  <span class="case-metric-unit"><span class="lang-pt">meses</span><span class="lang-en">months</span></span>
-                </div>
-                <p>
-                  <span class="lang-pt">Duração do projeto — ciclo completo de discovery e arquitetura.</span>
-                  <span class="lang-en">Project duration — complete discovery and architecture lifecycle.</span>
-                </p>
-              </div>
-              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
-                <div class="case-metric">
-                  <span class="case-metric-num">7</span>
-                  <span class="case-metric-unit"><span class="lang-pt">canais</span><span class="lang-en">channels</span></span>
-                </div>
-                <p>
-                  <span class="lang-pt">Fontes de monitoramento orbital e aéreo integradas em um hub.</span>
-                  <span class="lang-en">Orbital and aerial monitoring sources integrated into a single hub.</span>
-                </p>
-              </div>
-              <div class="impact-box motion-stagger-item motion-reveal-up motion-card">
-                <div class="case-metric">
-                  <span class="case-metric-num">100</span>
-                  <span class="case-metric-unit">%</span>
-                </div>
-                <p>
-                  <span class="lang-pt">Rastreabilidade e trilha de auditoria do sinal ao encerramento.</span>
-                  <span class="lang-en">Traceability and audit trail from initial signal to formal closure.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 10 / Reflections -->
-        <section class="section-pad px-6 motion-case-block" id="reflection" data-motion>
-          <div class="max-w-[1440px] w-full mx-auto relative z-10">
-            <div class="section-header">
-              <span class="section-kicker motion-reveal-up motion-section">
-                <span class="lang-pt">10 / Reflexões do Designer</span>
-                <span class="lang-en">10 / Designer Reflections</span>
-              </span>
-              <div class="section-header-grid">
-                <div class="section-header-title-col">
-                  <h2 class="section-header-title motion-reveal-up motion-section">
-                    <span class="lang-pt">Modelagem conceitual deve preceder as telas.</span>
-                    <span class="lang-en">Conceptual modeling must precede screens.</span>
-                  </h2>
-                </div>
-                <div class="section-header-subtitle motion-reveal-up motion-section">
-                  <p>
-                    <span class="lang-pt">O maior aprendizado foi sobre modelagem antes de design. Tentar desenhar telas sem um modelo claro de entidades, estados e transições é montar um mapa sem conhecer o território.</span>
-                    <span class="lang-en">The biggest learning was about modeling before design. Trying to draw screens without a clear model of entities, states, and transitions is building a map without knowing the terrain.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <p class="case-body lang-pt motion-reveal-up motion-section">O tempo investido em entender o domínio operacional — antes de qualquer wireframe — foi o que tornou as decisões de interface defensáveis. Não "achei que ficaria mais claro assim", mas "o fluxo de classificação exige esse campo porque o regulamento prevê essa obrigação".</p>
-            <p class="case-body lang-en motion-reveal-up motion-section">The time invested in understanding the operational domain — before any wireframe — was what made interface decisions defensible. Not "I thought this would be clearer", but "the classification flow requires this field because the regulation stipulates this obligation".</p>
-          </div>
-        </section>
-
-      </div>
-    </div>
-
-    <!-- NEXT CASE NAVIGATION -->
-    <nav class="case-nav-bar motion-reveal-up motion-section" aria-label="Navegação do caso">
-      <div class="case-nav-bar-inner">
-        <div class="magnetic-wrap inline-block">
-          <a href="bmg.html" class="case-nav-link"><span aria-hidden="true">←</span><span>BMG</span></a>
-        </div>
-        <div class="magnetic-wrap inline-block">
-          <a href="bayer.html" class="case-nav-link case-nav-link--primary">
-            <span class="lang-pt">Próximo: Bayer</span>
-            <span class="lang-en">Next: Bayer</span>
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-    </nav>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer" id="footer">
-    <div class="container site-footer__inner">
-      <div class="site-footer__top">
-        <div class="site-footer__identity">
-          <div class="site-footer__mark" aria-hidden="true">HA</div>
-          <div>
-            <p class="site-footer__name">Henrico Amaral</p>
-            <p class="site-footer__role" data-t="ft.role">Senior Product Designer · Decision Infrastructure</p>
-          </div>
-        </div>
-        <p class="site-footer__signature" data-t="ft.signature">
-          Pense simples. Faça melhor.<br>
-          Torne-se inevitável.
-        </p>
-      </div>
-      <div class="site-footer__bottom">
-        <p>Henrico Amaral · Product Designer · 2026</p>
-        <a href="#" class="site-footer__toplink">↑ Topo</a>
-      </div>
-    </div>
-  </footer>
-
-  <script defer src="../assets/js/site.js?v=20260610-motion-cache-zero-03"></script>
-  <script defer src="../assets/js/motion.js?v=20260610-motion-cache-zero-03"></script>
+<body>
+<a class="skip" href="#overview">Ir para o conteúdo</a>
+<nav class="nav dark" aria-label="Principal">
+<a class="nav__brand" href="../index.html#hero">
+<span class="dot" aria-hidden="true">
+</span>Henrico Amaral</a>
+<div class="nav__links">
+<a href="../index.html#process">Método</a>
+<a href="../index.html#cases">Casos</a>
+<a href="../index.html#impact">Impacto</a>
+<a href="../index.html#about">Sobre</a>
+<a href="../index.html#contact">Contato</a>
+</div>
+<span class="nav__lang" aria-label="Idioma">PT/EN</span>
+<a class="nav__cta" href="../index.html#cases">← Voltar ao portfólio</a>
+</nav>
+<header class="case-hero" data-navdark data-screen-label="Case Hero">
+<div class="case-hero__img" style="background-image:url('../assets/img/cases/petrobras.webp')">
+</div>
+<div class="case-hero__in">
+<div class="case-hero__eyebrow mono">
+<span class="ln">
+</span>01 · Energia · Operações Críticas Offshore</div>
+<h1>SALA CAR</h1>
+<span class="case-hero__client">Petrobras</span>
+<p class="case-hero__lead">Sistema de gestão de ocorrências ambientais offshore. Coordenação em tempo real entre equipes operacionais, dados geoespaciais e obrigações regulatórias em operações de petróleo e gás.</p>
+</div>
+</header>
+<section class="case-spec project-info" aria-label="Informações do Projeto">
+<div class="project-info__inner">
+<div class="project-info__intro">
+<p class="project-info__eyebrow mono">Informações do Projeto</p>
+<h2>SALA CAR — Central de Monitoramento Ambiental Offshore</h2>
+<p>Projeto desenvolvido para apoiar equipes responsáveis pelo monitoramento e resposta a incidentes ambientais.</p>
+</div>
+<dl class="project-info__grid">
+<div class="project-info__cell"><dt>Product Designer</dt><dd>Henrico Amaral</dd></div>
+<div class="project-info__cell"><dt>UX Researcher</dt><dd>Karolinne Santos</dd></div>
+<div class="project-info__cell"><dt>Empresa</dt><dd>Mirante Tecnologia</dd></div>
+<div class="project-info__cell"><dt>Cliente</dt><dd>Petrobras</dd></div>
+<div class="project-info__cell"><dt>Período</dt><dd>Abril 2023 — Março 2024</dd></div>
+<div class="project-info__cell"><dt>Duração</dt><dd>12 meses</dd></div>
+<div class="project-info__cell"><dt>Tipo</dt><dd>Plataforma interna de monitoramento ambiental</dd></div>
+<div class="project-info__cell"><dt>Plataforma</dt><dd>Web · Desktop operacional</dd></div>
+<div class="project-info__cell project-info__cell--wide"><dt>Escopo</dt><dd>Discovery · Arquitetura da informação · UX/UI · Prototipação</dd></div>
+</dl>
+<p class="project-info__closing">Mais do que um projeto de interface, este trabalho envolveu compreender como uma operação crítica funciona no dia a dia.</p>
+</div>
+</section>
+<section class="overview" id="overview" data-screen-label="Overview">
+<div class="wrap overview__grid">
+<div class="reveal">
+<div class="overview__kicker mono">
+<span class="ln">
+</span>Projeto · Contexto · Escopo</div>
+<h2>Gestão de ocorrências ambientais offshore.</h2>
+<p>O SALA CAR organiza o ciclo completo de uma ocorrência ambiental: da detecção à resposta, da classificação ao encerramento regulatório.</p>
+</div>
+<dl class="subfacts reveal" data-d="1">
+<div class="subfacts__row">
+<dt>Sistema</dt>
+<dd>SALA CAR</dd>
+</div>
+<div class="subfacts__row">
+<dt>Domínio</dt>
+<dd>Gestão ambiental · Energia</dd>
+</div>
+<div class="subfacts__row">
+<dt>Usuários</dt>
+<dd>Técnicos e coordenadores</dd>
+</div>
+<div class="subfacts__row">
+<dt>Resultado</dt>
+<dd>Estado unificado e rastreável</dd>
+</div>
+</dl>
+</div>
+</section>
+<section class="ed ed--cream" data-screen-label="01 Contexto">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">01 / 10</span>
+<span class="lbl">Contexto<br>Operacional</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">O que é operar ambientalmente offshore.</h2>
+<p>Operações de petróleo offshore estão sujeitas a regulações ambientais federais que exigem monitoramento contínuo, registro de ocorrências e capacidade de resposta documentada.</p>
+<p>Qualquer evento precisa ser registrado, classificado, tratado e encerrado com rastreabilidade completa, envolvendo técnicos nas plataformas, analistas em terra, coordenadores e gestores de conformidade.</p>
+<div class="diagram">
+<div class="diagram__flow">
+<div class="chips">
+<span class="chip">Monitoramento orbital</span>
+<span class="chip">OSD</span>
+<span class="chip">Poseidon II</span>
+<span class="chip">Sobrevoo aéreo (LES)</span>
+<span class="chip">Unidade marítima</span>
+<span class="chip">Embarcação de apoio</span>
+<span class="chip">Centro de controle (CAE)</span>
+</div>
+<span class="diagram__arrow">→</span>
+<span class="node node--alert">Nova ocorrência</span>
+</div>
+<p class="diagram__cap">Sete canais independentes podiam originar uma ocorrência ambiental.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--sand" data-screen-label="02 Legado">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">02 / 10</span>
+<span class="lbl">Arquitetura<br>Legada</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Antes do sistema, cada etapa era registrada isoladamente.</h2>
+<p>Informações sobre um único incidente podiam estar distribuídas em planilhas locais, e-mails, sistemas legados de diferentes áreas e PDFs gerados manualmente.</p>
+<p>O ICS 214 registrava a cronologia. Planilhas controlavam recursos. Relatórios técnicos consolidavam análises geoespaciais. Nenhum desses registros compartilhava uma estrutura operacional comum.</p>
+<div class="diagram diagram--legacy">
+<div class="diagram__flow">
+<div class="chips">
+<span class="chip chip--dim">Planilhas locais de recursos</span>
+<span class="chip chip--dim">Relatórios técnicos em PDF</span>
+<span class="chip chip--dim">Controle cronológico manual</span>
+<span class="chip chip--dim">Sistemas de geoprocessamento</span>
+</div>
+<span class="diagram__arrow">⇢</span>
+<span class="node">Registros paralelos</span>
+</div>
+<p class="diagram__cap">A estrutura isolada limitava o compartilhamento de contexto operacional.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--cream" data-screen-label="03 Problema">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">03 / 10</span>
+<span class="lbl">Definição<br>do Problema</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">O custo estava em montar o contexto operacional.</h2>
+<p class="lead">O problema não era falta de dados — a operação já produzia informação suficiente.</p>
+<p>A fragmentação gerava atrasos na classificação de incidentes, esforço duplicado no registro, risco de resposta descoordenada e exposição regulatória.</p>
+<p>O gargalo estava na energia gasta para cruzar dados dispersos sob pressão de tempo.</p>
+</div>
+</div>
+</section>
+<section class="ed ed--sand" data-screen-label="04 Atuação">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">04 / 10</span>
+<span class="lbl">Atuação<br>do Designer</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Definição estrutural e design de interface.</h2>
+<p>Atuei no mapeamento dos fluxos e no desenho das interfaces unificadas, traduzindo o ciclo de resposta em uma arquitetura de produto robusta.</p>
+<div class="role-grid">
+<article class="role">
+<span class="no">01</span>
+<h3>Arquitetura centrada na ocorrência</h3>
+<p>Organizar todo o sistema em torno do evento de ocorrência.</p>
+</article>
+<article class="role">
+<span class="no">02</span>
+<h3>Módulos operacionais</h3>
+<p>Definir entidades para monitoramento, mobilização, cronologia e encerramento.</p>
+</article>
+<article class="role">
+<span class="no">03</span>
+<h3>Linha do tempo ICS 214</h3>
+<p>Transformar o registro cronológico em eixo de navegação e auditoria.</p>
+</article>
+<article class="role">
+<span class="no">04</span>
+<h3>Geoprocessamento integrado</h3>
+<p>Embarcar ferramentas de mapa diretamente no fluxo operacional.</p>
+</article>
+<article class="role">
+<span class="no">05</span>
+<h3>Telas de controle e resposta</h3>
+<p>Prototipar interfaces críticas para técnicos e gestores.</p>
+</article>
+<article class="role">
+<span class="no">06</span>
+<h3>Pesquisa em campo</h3>
+<p>Ler artefatos legados para fundamentar decisões.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--cream" data-screen-label="05 Restrições">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">05 / 10</span>
+<span class="lbl">Restrições<br>do Projeto</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Restrições do projeto.</h2>
+<p>Condições que limitaram a solução e orientaram as decisões de arquitetura.</p>
+<div class="panel">
+<div class="panel__head">
+<span>Condições de Contorno</span>
+<span>04</span>
+</div>
+<ul>
+<li>
+<span>
+<strong>Aderência ao fluxo real</strong>
+<span class="ds">Refletir a operação real e exigências regulatórias.</span>
+</span>
+</li>
+<li>
+<span>
+<strong>Rastreabilidade</strong>
+<span class="ds">Toda ação e mudança de estado precisava gerar registro auditável.</span>
+</span>
+</li>
+<li>
+<span>
+<strong>Colaboração</strong>
+<span class="ds">Equipes offshore e analistas em terra precisavam cooperar sobre o mesmo evento.</span>
+</span>
+</li>
+<li>
+<span>
+<strong>Uso sob pressão</strong>
+<span class="ds">Registrar dados precisava ser mais simples que preencher planilhas.</span>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--dark" data-navdark data-screen-label="06 Decisão">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">06 / 10</span>
+<span class="lbl">Decisão<br>Estrutural</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">A ocorrência como elemento estruturador do fluxo.</h2>
+<p>Propus reorganizar o sistema usando a ocorrência como unidade central do fluxo de trabalho. Todas as dimensões de um incidente passam a viver no mesmo contexto.</p>
+<div class="hub">
+<div class="hub__center">
+<span class="core">Ocorrência</span>
+</div>
+<div class="hub__ring">
+<span class="chip">Monitoramento</span>
+<span class="chip">Geoprocessamento</span>
+<span class="chip">Mobilização</span>
+<span class="chip">Resposta</span>
+<span class="chip">Cronologia</span>
+<span class="chip">Encerramento</span>
+</div>
+</div>
+<p class="decision-note">Ciclo operacional estruturado:</p>
+<div class="lifecycle">
+<span class="st">Registro</span>
+<span class="sep">→</span>
+<span class="st">Interpretação</span>
+<span class="sep">→</span>
+<span class="st">Classificação</span>
+<span class="sep">→</span>
+<span class="st">Mobilização</span>
+<span class="sep">→</span>
+<span class="st">Resposta</span>
+<span class="sep">→</span>
+<span class="st">Cronologia</span>
+<span class="sep">→</span>
+<span class="st">Consolidação</span>
+<span class="sep">→</span>
+<span class="st">Encerramento</span>
+</div>
+</div>
+</div>
+</section>
+<section class="ed ed--cream" data-screen-label="07 Escala">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">07 / 10</span>
+<span class="lbl">Escala<br>Operacional</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Telas, fluxos e interações integradas.</h2>
+<p>A sequência de telas estrutura o monitoramento operacional, a mobilização de embarcações e a análise contextual por mapas.</p>
+</div>
+</div>
+<div class="figs">
+<figure class="figure reveal">
+<div class="figure__frame screen-img">
+<img src="Cases/Petrobras/ocorrencias-01-listagem.png" alt="Listagem e controle de ocorrências no SALA CAR" loading="lazy">
+</div>
+<figcaption class="figure__cap">
+<h3>Visão geral e controle de ocorrências</h3>
+<p>A listagem deixou de ser apenas uma tabela e passou a consolidar classificação de risco, tamanho estimado da mancha e recursos alocados.</p>
+</figcaption>
+</figure>
+<div class="figpair reveal">
+<div class="figslot screen-img">
+<img src="Cases/Petrobras/ocorrencias-02-tipo-emergencia-classificada.jpg" alt="Ocorrência classificada" loading="lazy">
+</div>
+<div class="figslot screen-img">
+<img src="Cases/Petrobras/ocorrencias-04-origem-geoprocessamento.jpg" alt="Origem de geoprocessamento integrada" loading="lazy">
+</div>
+</div>
+<figcaption class="figure__cap reveal">
+<h3>Classificação e origem</h3>
+<p>Detalhes e classificação estruturada da emergência ambiental com integração de dados de origem do geoprocessamento.</p>
+</figcaption>
+<figure class="figure reveal">
+<div class="figure__frame screen-img">
+<img src="Cases/Petrobras/ocorrencias-05-tratamento-da-ocorrencia-aba-ics-214.jpg" alt="Aba ICS 214 com cronologia da ocorrência" loading="lazy">
+</div>
+<figcaption class="figure__cap">
+<h3>Aba ICS 214 — cronologia da ocorrência</h3>
+<p>O log de eventos foi inserido na navegação central do incidente para gerar rastreabilidade nativa.</p>
+</figcaption>
+</figure>
+<div class="figpair reveal">
+<div class="figslot screen-img">
+<img src="Cases/Petrobras/embarcacao-01-mobilizar.jpg" alt="Mobilização de embarcação" loading="lazy">
+</div>
+<div class="figslot screen-img">
+<img src="Cases/Petrobras/embarcacao-02-mobilizada.png" alt="Embarcação mobilizada" loading="lazy">
+</div>
+</div>
+<figcaption class="figure__cap reveal">
+<h3>Fluxo de mobilização</h3>
+<p>Seleção, simulação e confirmação visual de embarcações envolvidas na resposta operacional.</p>
+</figcaption>
+<figure class="figure reveal">
+<div class="figure__frame screen-img">
+<img src="Cases/Petrobras/embarcacao-05-listagem-de-embarcacoes.jpg" alt="Painel de embarcações disponíveis" loading="lazy">
+</div>
+<figcaption class="figure__cap">
+<h3>Gestão e painel de embarcações</h3>
+<p>Painel consolidado com embarcações disponíveis, capacidade operacional e posição de monitoramento.</p>
+</figcaption>
+</figure>
+<figure class="figure reveal">
+<div class="figure__frame screen-img">
+<img src="Cases/Petrobras/geoprocessamento-02-edicao.jpg" alt="Módulo de geoprocessamento e edição de mapas" loading="lazy">
+</div>
+<figcaption class="figure__cap">
+<h3>Módulo de geoprocessamento e mapas</h3>
+<p>Ferramenta de mapa embarcada no tratamento do incidente.</p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="ed ed--sand" data-screen-label="08 Limitações">
+<div class="ed__grid">
+<div class="ed__index reveal">
+<div class="tick">
+</div>
+<span class="no">08 / 10</span>
+<span class="lbl">Limitações<br>Estruturais</span>
+</div>
+<div class="ed__body reveal" data-d="1">
+<h2 class="ed__h">Nem tudo pôde ser integrado de imediato.</h2>
+<p>Limitações técnicas e regulações exigiram manter alguns fluxos temporariamente externos ou dependentes de processos manuais.</p>
+<p>Integrações com sensores satelitais herdados permaneceram em canais paralelos e o fechamento formal do relatório regulatório ainda exigia formulários no ambiente governamental.</p>
+</div>
+</div>
+</section>
+<section class="case-impact" data-navdark data-screen-label="09 Impacto">
+<div class="case-impact__head reveal">
+<div class="k">
+<span class="ln">
+</span>09 / 10 · Impacto do Projeto</div>
+<h2>Resultados reais na operação offshore.</h2>
+<p>A unificação das informações reduziu o custo de reconstrução do contexto e permitiu às equipes agir com mais agilidade e segurança jurídica.</p>
+</div>
+<div class="stat-grid reveal" data-d="1">
+<div class="stat">
+<div class="stat__n">95<small>%</small>
+</div>
+<p class="stat__d">Automação de relatórios operacionais e redução de planilhas fragmentadas.</p>
+</div>
+<div class="stat">
+<div class="stat__n">12<small>meses</small>
+</div>
+<p class="stat__d">Ciclo completo de discovery e arquitetura.</p>
+</div>
+<div class="stat">
+<div class="stat__n">7<small>canais</small>
+</div>
+<p class="stat__d">Fontes de monitoramento integradas em um único hub.</p>
+</div>
+<div class="stat">
+<div class="stat__n">1<small>trilha</small>
+</div>
+<p class="stat__d">Trilha de auditoria do sinal inicial ao encerramento formal da ocorrência.</p>
+</div>
+</div>
+</section>
+<section class="reflection" data-screen-label="10 Reflexões">
+<div class="reflection__in reveal">
+<div class="k">
+<span class="ln">
+</span>10 / 10 · Reflexões do Designer</div>
+<h2>Modelagem conceitual deve preceder as telas.</h2>
+<p>O maior aprendizado foi sobre modelagem antes de design. Telas sem um modelo claro de entidades e estados viram um mapa sem território.</p>
+<p>Entender o domínio operacional antes de qualquer wireframe tornou as decisões de interface defensáveis.</p>
+</div>
+</section>
+<nav class="case-nav" aria-label="Outros casos">
+<div class="case-nav__grid">
+<a href="bmg.html">
+<span class="dir">← Anterior</span>
+<span class="nm">BMG</span>
+</a>
+<a href="bayer.html">
+<span class="dir">Próximo →</span>
+<span class="nm">Bayer</span>
+</a>
+</div>
+</nav>
+<footer class="footer" data-navdark>
+<div class="wrap">
+<div class="footer__top">
+<div class="footer__id">
+<div class="mono-mark">HA</div>
+<div>
+<div class="nm">Henrico Amaral</div>
+<div class="rl">Senior Product Designer · Decision Infrastructure</div>
+</div>
+</div>
+<p class="manifesto">Pense simples.<br>Faça melhor.<br>
+<em>Torne-se inevitável.</em>
+</p>
+</div>
+<div class="footer__bar">
+<span>Henrico Amaral · Product Designer · <span id="year">2026</span>
+</span>
+<a href="#">↑ Voltar ao topo</a>
+</div>
+</div>
+</footer>
+<script defer src="../assets/js/site.js?v=20260615-case-blueprint">
+</script>
 </body>
-
 </html>

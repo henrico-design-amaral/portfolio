@@ -1,0 +1,208 @@
+---
+interface Props {
+  isCase?: boolean;
+  locale?: 'pt' | 'en';
+}
+
+const { isCase = false, locale = 'pt' } = Astro.props;
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+const path = (value: string) => `${basePath}${value.startsWith('/') ? value : `/${value}`}`;
+const homePath = locale === 'en' ? path('/en/') : path('/');
+const oppositePath = locale === 'en' ? path('/') : path('/en/');
+const labels = {
+  pt: {
+    aria: 'Principal',
+    method: 'Método',
+    cases: 'Cases',
+    impact: 'Impacto',
+    about: 'Sobre',
+    contact: 'Contato',
+    talk: 'Vamos conversar',
+    allCases: 'Todos os cases',
+    context: 'Contexto',
+    story: 'Narrativa',
+    evidence: 'Evidência',
+    lang: 'EN',
+  },
+  en: {
+    aria: 'Main',
+    method: 'Method',
+    cases: 'Cases',
+    impact: 'Impact',
+    about: 'About',
+    contact: 'Contact',
+    talk: 'Start a conversation',
+    allCases: 'All cases',
+    context: 'Context',
+    story: 'Story',
+    evidence: 'Evidence',
+    lang: 'PT',
+  },
+}[locale];
+---
+
+<nav class="nav" aria-label={labels.aria} id="nav">
+  <a class="nav__brand" href={isCase ? homePath : '#hero'}>
+    <span class="dot"></span>Henrico Amaral
+  </a>
+  <div class="nav__links">
+    {isCase ? (
+      <>
+        <a href="#overview">{labels.context}</a>
+        <a href="#case-story">{labels.story}</a>
+        <a href="#evidence">{labels.evidence}</a>
+        <a href="#impact">{labels.impact}</a>
+      </>
+    ) : (
+      <>
+        <a href="#process">{labels.method}</a>
+        <a href="#cases">{labels.cases}</a>
+        <a href="#impact">{labels.impact}</a>
+        <a href="#about">{labels.about}</a>
+        <a href="#contact">{labels.contact}</a>
+      </>
+    )}
+  </div>
+  <div class="nav__actions">
+    {isCase ? (
+      <a class="nav__cta" href={`${homePath}#cases`}>← {labels.allCases}</a>
+    ) : (
+      <a class="nav__cta" href="#contact">{labels.talk}</a>
+    )}
+    <a class="nav__lang" href={oppositePath} hreflang={locale === 'en' ? 'pt-BR' : 'en'}>{labels.lang}</a>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 80;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px var(--gutter);
+    background: color-mix(in srgb, var(--cream) 78%, transparent);
+    backdrop-filter: blur(14px) saturate(1.1);
+    -webkit-backdrop-filter: blur(14px) saturate(1.1);
+    border-bottom: 1px solid transparent;
+    transition: background 0.4s var(--ease), border-color 0.4s var(--ease), color 0.4s var(--ease);
+  }
+  .nav.scrolled { border-bottom-color: var(--line); }
+  .nav.dark {
+    background: color-mix(in srgb, var(--cocoa) 72%, transparent);
+    border-bottom-color: var(--line-dark);
+    color: var(--on-dark);
+  }
+  .nav__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--f-display);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: var(--head);
+  }
+  .nav.dark .nav__brand { color: var(--on-dark); }
+  .nav__brand .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 0 var(--gold);
+    animation: pulse 2.6s var(--ease) infinite;
+  }
+  .nav__links {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+  .nav__links a {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    color: var(--ink-soft);
+    transition: color var(--motion-fast) var(--ease);
+    position: relative;
+  }
+  .nav.dark .nav__links a { color: var(--on-dark-soft); }
+  .nav__links a:hover,
+  .nav__links a.active { color: var(--head); }
+  .nav.dark .nav__links a:hover,
+  .nav.dark .nav__links a.active { color: var(--on-dark); }
+
+  .nav__links a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 12px;
+    right: 12px;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform var(--motion-fast) var(--ease);
+  }
+  .nav__links a:hover::after,
+  .nav__links a.active::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  .nav__cta {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 9px 16px;
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    color: var(--head);
+    transition: 0.25s;
+  }
+  .nav.dark .nav__cta { border-color: var(--line-dark); color: var(--on-dark); }
+  .nav__cta:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
+  .nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav__lang {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding: 9px 10px;
+  }
+  .nav.dark .nav__lang { color: var(--on-dark-soft); }
+
+  @media (max-width: 880px) {
+    .nav__links { display: none; }
+    .nav__cta { display: none; }
+  }
+</style>
+
+<script>
+  const nav = document.querySelector('#nav');
+  if (nav) {
+    const navEl = nav as HTMLElement;
+    const darkSections = Array.from(document.querySelectorAll('[data-navdark]'));
+
+    function onScroll() {
+      navEl.classList.toggle('scrolled', window.scrollY > 20);
+      const probe = navEl.offsetHeight + 4;
+      const overDark = darkSections.some((s) => {
+        const r = s.getBoundingClientRect();
+        return r.top <= probe && r.bottom >= probe;
+      });
+      navEl.classList.toggle('dark', overDark);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+</script>
