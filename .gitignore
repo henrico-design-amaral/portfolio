@@ -66,5 +66,10 @@ desktop.ini
 # temporary
 tmp/
 temp/
+.temp/
 *.tmp
-.vercel
+*.bak
+*.old
+*.orig
+*.swp
+*.swo
