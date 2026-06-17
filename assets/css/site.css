@@ -1398,6 +1398,13 @@ h2.section-header-title,
   font-weight: 600;
 }
 
+#nav a.font-display,
+.liquid-glass .magnetic-wrap a {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 44px !important;
+}
+
 #nav .nav-links a {
   color: #5F4638;
   font-weight: 500;
@@ -1579,7 +1586,7 @@ h2.section-header-title,
 
 .mobile-menu a {
   display: block;
-  padding: 0.9rem 0;
+  padding: 1.05rem 0;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.72rem;
   font-weight: 700;
@@ -1967,6 +1974,13 @@ footer {
   transition:
     color 240ms var(--ease-organic),
     transform 240ms var(--ease-organic);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 10px;
+  margin: -10px;
 }
 
 .site-footer__toplink:hover {
@@ -2040,7 +2054,8 @@ footer:not(.site-footer) {
 
   #hero {
     align-items: flex-start;
-    padding-top: 8.25rem !important;
+    padding-top: 7rem !important;
+    padding-bottom: 4rem !important;
   }
 
   #hero .grid,
@@ -2435,6 +2450,17 @@ footer:not(.site-footer) a.font-mono {
     margin-right: 0;
   }
 
+  #nav .lang-toggle,
+  #mobile-menu .mobile-lang-toggle {
+    --toggle-width: 120px;
+    --toggle-height: 44px;
+    --toggle-pad: 4px;
+  }
+
+  .lang-toggle__option {
+    font-size: 10px;
+  }
+
   #mobile-menu-toggle.mobile-menu-toggle {
     position: relative;
     z-index: 30;
@@ -2584,6 +2610,55 @@ footer:not(.site-footer) a.font-mono {
 
 .hero-cta:hover .hero-cta__arrow {
   transform: translateX(4px);
+}
+
+/* ─── AJUSTES MOBILE DE TIPOGRAFIA E CABEÇALHO/RODAPÉ ─── */
+@media (max-width: 767px) {
+  /* Ocultar seletor de idioma do cabeçalho móvel */
+  #nav > div > .lang-toggle,
+  #nav .lang-toggle:not(.mobile-lang-toggle) {
+    display: none !important;
+  }
+
+  /* Garantir que o botão do menu se alinhe na extremidade direita do cabeçalho */
+  #mobile-menu-toggle.mobile-menu-toggle {
+    margin-left: auto;
+  }
+
+  /* Hero H1 e Subtítulo */
+  #hero h1 {
+    font-size: clamp(1.7rem, 10.6vw, 2.5rem) !important;
+    margin-bottom: 2rem !important;
+  }
+
+  #hero .sub {
+    font-size: 0.9rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Títulos de Seção e Espaçamento */
+  h2.section-header-title,
+  .sh-title,
+  .section-header--dark,
+  .contact-section .section-header-title {
+    font-size: clamp(1.7rem, 4vw, 1.7rem) !important;
+  }
+
+  .section-header {
+    margin-bottom: 2rem !important;
+  }
+
+  .about-narrative {
+    margin: 0 !important;
+  }
+
+  /* Assinatura do Rodapé com Fallbacks de Acessibilidade/Layout */
+  .site-footer__signature {
+    font-size: clamp(1rem, 4vw, 3rem) !important;
+    justify-self: center !important;
+    justify-self: anchor-center !important;
+    text-align: left !important;
+  }
 }
 
 /* End of file */
