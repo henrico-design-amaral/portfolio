@@ -46,7 +46,7 @@ server.listen(port, '127.0.0.1', () => {
   console.log(`Static server running at http://127.0.0.1:${port}/`);
 
   console.log('Starting verification script...');
-  const verifyProcess = spawn('node', [path.join(__dirname, 'portfolio-verify.js')], {
+  const verifyProcess = spawn('node', [path.join(__dirname, 'portfolio-verify.cjs')], {
     stdio: 'inherit',
     env: { ...process.env, PORTFOLIO_BASE_URL: `http://127.0.0.1:${port}` }
   });

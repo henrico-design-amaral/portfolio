@@ -8,6 +8,7 @@ const ROOT = path.resolve(__dirname, '..');
 const pages = [
   { path: '/', label: 'home', file: 'index.html' },
   { path: '/about.html', label: 'about', file: 'about.html' },
+  { path: '/cv.html', label: 'cv', file: 'cv.html' },
   { path: '/cases/petrobras.html', label: 'petrobras', file: 'cases/petrobras.html' },
   { path: '/cases/bayer.html', label: 'bayer', file: 'cases/bayer.html' },
   { path: '/cases/ambev.html', label: 'ambev', file: 'cases/ambev.html' },
@@ -178,7 +179,8 @@ async function inspectEnglishToggle(browser) {
   const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
   const page = await context.newPage();
   await page.goto(`${BASE_URL}/about.html`, { waitUntil: 'networkidle' });
-  await page.locator('[data-lang="en"]').first().click();
+  await page.locator('#mobile-menu-toggle').click();
+  await page.locator('#mobile-menu [data-lang="en"]').click();
   await page.waitForTimeout(100);
 
   const state = await page.evaluate(visibleCountSource => {
@@ -269,10 +271,11 @@ function collectFailures(results, englishToggle, caseLinks, referenceFailures) {
 
   for (const result of results) {
     const prefix = `${result.viewport} ${result.path}`;
+    const expectsFooter = result.path !== '/cv.html';
     if (result.status !== 200) failures.push(`${prefix}: status ${result.status}`);
     if (result.h1 !== 1) failures.push(`${prefix}: h1 count ${result.h1}`);
     if (result.main !== 1) failures.push(`${prefix}: main count ${result.main}`);
-    if (result.footer !== 1) failures.push(`${prefix}: footer count ${result.footer}`);
+    if (expectsFooter && result.footer !== 1) failures.push(`${prefix}: footer count ${result.footer}`);
     if (result.overflow > 1) failures.push(`${prefix}: horizontal overflow ${result.overflow}px`);
     if (result.visibleEN > 0) failures.push(`${prefix}: EN content visible while PT is active (${result.visibleEN})`);
     if (result.messages.length > 0) failures.push(`${prefix}: console ${result.messages.join(' | ')}`);
@@ -281,7 +284,7 @@ function collectFailures(results, englishToggle, caseLinks, referenceFailures) {
   if (englishToggle.lang !== 'en' || englishToggle.dataLang !== 'en') {
     failures.push(`EN toggle: lang state ${englishToggle.lang}/${englishToggle.dataLang}`);
   }
-  if (!englishToggle.h1.includes('Structure before')) {
+  if (!englishToggle.h1.includes('Behind')) {
     failures.push(`EN toggle: unexpected h1 "${englishToggle.h1}"`);
   }
   if (englishToggle.visiblePT > 0) {

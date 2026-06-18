@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo — Henrico Amaral</title>
+  <meta name="description" content="Currículo profissional de Henrico Amaral, Senior Product Designer especializado em sistemas complexos, plataformas enterprise, acessibilidade e infraestrutura de decisão.">
+  <meta name="author" content="Henrico Amaral">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos Globais do Portfólio -->
+  <link rel="stylesheet" href="assets/css/tailwind.generated.css?v=20260618-cv-01">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260618-cv-01">
+  <link rel="stylesheet" href="assets/css/motion.css?v=20260618-cv-01">
+
+  <noscript>
+    <style>
+      .editorial-reveal { opacity: 1 !important; }
+      .lang-en { display: none !important; }
+    </style>
+  </noscript>
+
+  <!-- Script de Bootstrapping do Idioma -->
+  <script>(function(){try{var l=localStorage.getItem('henrico_lang');if(l==='en'){document.documentElement.lang='en';document.documentElement.dataset.lang='en';}}catch(e){}})()</script>
+
+  <!-- Schema.org Person JSON-LD (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Henrico Amaral",
+    "jobTitle": "Senior Product Designer",
+    "description": "Senior Product Designer especializado em sistemas complexos, plataformas enterprise e infraestrutura de decisão.",
+    "url": "https://henrico-design-amaral.github.io/portfolio/",
+    "email": "mailto:henricoamaral.design@gmail.com",
+    "telephone": "+55-11-95397-0704",
+    "sameAs": [
+      "https://www.linkedin.com/in/henrico-amaral",
+      "https://www.behance.net/henricoamaral"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "knowsAbout": [
+      "Product Design",
+      "User Experience Design",
+      "User Interface Design",
+      "Information Architecture",
+      "Design Systems",
+      "Decision Infrastructure",
+      "Web Accessibility",
+      "Applied AI"
+    ]
+  }
+  </script>
+
+  <!-- Estilos Customizados e de Impressão (cv.html) -->
+  <style>
+    /* =============================================================
+       Henrico Amaral · CV Custom Styling
+       Integrated design tokens tailored to Henrico's brand identity.
+       ============================================================= */
+
+    :root {
+      /* Palette (Henrico's sophisticated brand palette) */
+      --ink-primary:   #472211; /* Dark chocolate primary */
+      --ink-secondary: #533E2B; /* Medium chocolate secondary */
+      --ink-tertiary:  #7a6a5e; /* Soft/muted tertiary */
+      --accent:        #BE9C6E; /* Gold accent */
+      --bg:            #FFFFFF; /* Card white */
+      --bg-page:       #f2efe9; /* Body warm paper */
+      --border:        rgba(71, 34, 17, 0.12); /* Decorative borders */
+      --border-strong: rgba(71, 34, 17, 0.2);  /* Active borders */
+
+      /* Typography */
+      --font-display: 'Syne', sans-serif;
+      --font-body:    'Inter', sans-serif;
+      --font-mono:    'JetBrains Mono', monospace;
+
+      /* Sizes */
+      --text-xs:   0.75rem;
+      --text-sm:   0.875rem;
+      --text-base: 1rem;
+      --text-lg:   1.125rem;
+      --text-xl:   1.25rem;
+      --text-2xl:  1.75rem;
+
+      /* Spacing — baseline 8pt */
+      --space-1:  0.5rem;
+      --space-2:  1rem;
+      --space-3:  1.5rem;
+      --space-4:  2rem;
+      --space-5:  2.5rem;
+      --space-6:  3rem;
+      --space-8:  4rem;
+
+      /* Borders */
+      --radius-sm: 4px;
+      --radius-md: 8px;
+
+      /* Layout */
+      --container-max: 1024px;
+      --sidebar-ratio: 32%;
+      --main-ratio:    64%;
+      --gap:           var(--space-4);
+    }
+
+    /* --- Core Page Styles --- */
+    body {
+      background-color: var(--bg-page) !important;
+      color: var(--ink-primary) !important;
+      font-family: var(--font-body) !important;
+      line-height: 1.6;
+    }
+
+    /* Centered sheet container matching exact layout ratios */
+    .page {
+      max-width: var(--container-max);
+      margin: 1.5rem auto !important;
+      padding: 2.5rem 1.75rem !important;
+      background: var(--bg) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: var(--radius-md);
+      box-shadow: 0 2px 4px rgba(71, 34, 17, 0.04), 0 12px 32px rgba(71, 34, 17, 0.08) !important;
+    }
+
+    @media (min-width: 768px) {
+      .page {
+        margin: 3.5rem auto !important;
+        padding: 4.5rem 3.5rem !important;
+      }
+    }
+
+    /* Numerais tabulares */
+    .job__meta,
+    .badge__meta,
+    .muted,
+    .tagline__highlights {
+      font-feature-settings: "tnum" 1, "kern" 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Links */
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    /* Foco visível padronizado */
+    :focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Utilidades */
+    .visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      margin: -1px; padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .muted {
+      color: var(--ink-tertiary);
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: var(--space-2);
+      background: var(--accent);
+      color: #FFFFFF;
+      padding: var(--space-1) var(--space-2);
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      text-decoration: none;
+      z-index: 1000;
+      transition: top 0.15s ease-in;
+    }
+    .skip-link:focus {
+      top: var(--space-1);
+      outline: 3px solid var(--ink-primary);
+      outline-offset: 2px;
+    }
+
+    /* Floating Page Actions (PDF + Compartilhar + Language Toggle) */
+    .page-actions {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 640px) {
+      .page-actions {
+        top: auto;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        left: 1.5rem;
+        justify-content: center;
+        background: rgba(242, 239, 233, 0.95);
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        box-shadow: 0 4px 20px rgba(71, 34, 17, 0.15);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      background: #E6DED1;
+      color: var(--ink-primary);
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(71, 34, 17, 0.15);
+      transition: all 0.2s ease;
+    }
+
+    .action-btn:hover {
+      background: var(--accent);
+      color: var(--bg-page);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(71, 34, 17, 0.25);
+    }
+
+    .action-btn:active {
+      transform: translateY(0);
+    }
+
+    .action-btn:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .action-btn .icon {
+      color: var(--ink-primary);
+      flex-shrink: 0;
+      transition: color 0.2s ease;
+    }
+
+    .action-btn:hover .icon {
+      color: var(--bg-page);
+    }
+
+    .action-feedback {
+      position: absolute;
+      top: calc(100% + var(--space-1));
+      right: 0;
+      white-space: nowrap;
+      background: var(--ink-primary);
+      color: #FFFFFF;
+      font-size: var(--text-xs);
+      font-weight: 500;
+      padding: 0.35rem 0.6rem;
+      border-radius: var(--radius-sm);
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      pointer-events: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .action-feedback.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Header */
+    .header {
+      position: relative;
+      margin-bottom: var(--space-5);
+      padding-bottom: var(--space-3);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 48px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .header__name {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-1);
+      color: var(--ink-primary);
+    }
+
+    .header__headline {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 600;
+      color: var(--accent);
+      margin: 0 0 var(--space-1);
+    }
+
+    .header__location {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      font-size: var(--text-sm);
+      color: var(--ink-secondary);
+      margin: 0;
+    }
+
+    .header__location .icon {
+      color: var(--accent);
+    }
+
+    /* Layout 2 colunas */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      align-items: start;
+    }
+
+    @media (min-width: 1024px) {
+      .layout {
+        grid-template-columns: var(--sidebar-ratio) 1fr;
+        gap: var(--gap);
+      }
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    /* Profile Photo */
+    .profile {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      background: var(--accent);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 var(--space-1);
+      flex-shrink: 0;
+    }
+
+    .profile__initials {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .profile__photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .block {
+      margin: 0;
+    }
+
+    .block__title {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin: 0 0 var(--space-2);
+      padding-bottom: var(--space-1);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Contact list */
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+
+    .contact-link {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--ink-primary);
+      text-decoration: none;
+      padding: 2px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .contact-link:hover span {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* Technical Chips */
+    .section-chip {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      margin: 0.2rem;
+      background: rgba(71, 34, 17, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--ink-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .section-chip:hover {
+      background: rgba(190, 156, 110, 0.1);
+      border-color: var(--accent);
+      color: var(--ink-primary);
+    }
+
+    /* Plain list */
+    .plain-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+
+    .plain-list li {
+      font-size: var(--text-sm);
+      line-height: 1.45;
+      color: var(--ink-primary);
+    }
+
+    .plain-list .muted {
+      display: block;
+      font-size: var(--text-xs);
+      margin-top: 2px;
+    }
+
+    /* Main Area */
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .tagline {
+      font-size: var(--text-base);
+      line-height: 1.6;
+      color: var(--ink-secondary);
+      padding: 0 0 var(--space-2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tagline p {
+      margin: 0;
+    }
+
+    .tagline p + p {
+      margin-top: var(--space-1);
+    }
+
+    .tagline__highlights {
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--ink-secondary);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6em;
+      line-height: 1.5;
+      margin-top: var(--space-2);
+    }
+
+    .tagline__highlights > span:not(.tagline__sep) {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25em 0.7em;
+      background: rgba(190, 156, 110, 0.06);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--ink-primary);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .tagline__sep {
+      display: none;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin: 0 0 var(--space-2);
+      padding-bottom: var(--space-1);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Experience */
+    .experience {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .job {
+      margin-bottom: var(--space-2);
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job__header {
+      margin-bottom: var(--space-1);
+    }
+
+    .job__title {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--ink-primary);
+      margin: 0 0 2px;
+      line-height: 1.3;
+    }
+
+    .job__meta {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--accent);
+      margin-right: 0.5rem;
+    }
+
+    .job__stack-label {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-secondary);
+      margin-right: 4px;
+    }
+
+    /* KPI block */
+    .cv-kpi-block {
+      background: rgba(190, 156, 110, 0.06) !important;
+      border-left: 3px solid var(--accent) !important;
+      padding: 0.75rem 1rem !important;
+      margin: 0.75rem 0 1rem 0 !important;
+      border-radius: 0 4px 4px 0;
+      font-size: 0.85rem !important;
+      line-height: 1.5 !important;
+    }
+
+    .cv-kpi-val {
+      font-family: var(--font-mono) !important;
+      font-size: 1.1rem !important;
+      font-weight: 700 !important;
+      color: var(--accent) !important;
+      margin-right: 0.15rem;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: var(--space-6);
+      padding-top: var(--space-3);
+      border-top: 1px solid var(--border);
+      font-size: var(--text-xs);
+      color: var(--ink-secondary);
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    /* --- HTML Layout & Alignment Helpers --- */
+    .flex { display: flex !important; }
+    .flex-col { flex-direction: column !important; }
+    .flex-wrap { flex-wrap: wrap !important; }
+    .justify-between { justify-content: space-between !important; }
+    .items-baseline { align-items: baseline !important; }
+    .gap-2 { gap: 0.5rem !important; }
+    .gap-6 { gap: 1.5rem !important; }
+
+    /* --- Print Media Formatting Optimization (Exact A4 Page Fitting) --- */
+    @media print {
+      @page {
+        size: A4;
+        margin: 15mm 15mm 15mm 15mm;
+      }
+
+      body {
+        background-color: var(--bg-page) !important;
+        color: var(--ink-primary) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      nav, 
+      .page-actions, 
+      .site-footer,
+      .skip-link,
+      #sr-announcer,
+      .mobile-menu-toggle {
+        display: none !important;
+      }
+
+      .page {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: var(--bg) !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .contact-link {
+        font-size: 7.2pt !important;
+        white-space: nowrap !important;
+      }
+
+      .layout {
+        display: grid !important;
+        grid-template-columns: var(--sidebar-ratio) 1fr !important;
+        gap: var(--gap) !important;
+        align-items: start !important;
+      }
+
+      .sidebar {
+        gap: var(--space-4) !important;
+      }
+
+      .block__title {
+        color: var(--accent) !important;
+        border-bottom: 1px solid var(--border) !important;
+      }
+
+      .section-chip {
+        background: rgba(71, 34, 17, 0.03) !important;
+        border: 1px solid var(--border) !important;
+        color: var(--ink-secondary) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .cv-kpi-block {
+        background: rgba(190, 156, 110, 0.06) !important;
+        border-left: 3px solid var(--accent) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .cv-kpi-val {
+        color: var(--accent) !important;
+      }
+
+      .footer {
+        border-top: 1px solid var(--border) !important;
+        color: var(--ink-secondary) !important;
+      }
+
+      a {
+        color: var(--accent) !important;
+        text-decoration: underline !important;
+      }
+
+      .job, .project, .badge, .block {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .icon {
+        color: var(--accent) !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-body overflow-x-hidden pt-4">
+  <a href="#main-content" class="skip-link">
+    <span class="lang-pt">Pular para o conteúdo principal</span>
+    <span class="lang-en">Skip to main content</span>
+  </a>
+
+  <!-- Ações do Currículo -->
+  <div class="page-actions" role="toolbar" aria-label="Ações do currículo">
+    <!-- Alternador de Idiomas -->
+    <div class="lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
+      <span class="lang-toggle__thumb" aria-hidden="true"></span>
+      <button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT Português" aria-pressed="true">PT</button>
+      <button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
+    </div>
+
+    <button type="button" id="download-pdf-btn" class="action-btn action-print" onclick="window.print()" aria-label="Baixar currículo em PDF ou imprimir">
+      <svg class="icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/>
+      </svg>
+      <span class="lang-pt">Baixar PDF</span>
+      <span class="lang-en">Download PDF</span>
+    </button>
+  </div>
+
+  <div class="page">
+    <div id="sr-announcer" role="status" aria-live="polite" class="sr-only"></div>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+      <h1 class="header__name">Henrico Amaral</h1>
+      <p class="header__headline">
+        <span class="lang-pt">Senior Product Designer · Infraestrutura de Decisão</span>
+        <span class="lang-en">Senior Product Designer · Decision Infrastructure</span>
+      </p>
+      <p class="header__location">
+        <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="14" height="14">
+          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.5-7-12a7 7 0 1 1 14 0c0 5.5-7 12-7 12z"/>
+          <circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="lang-pt">São Paulo, SP, Brasil</span>
+        <span class="lang-en">São Paulo, SP, Brazil</span>
+      </p>
+    </header>
+
+    <div class="layout">
+      <!-- Sidebar Esquerda -->
+      <aside class="sidebar" aria-label="Informações de contato, credenciais e formação">
+        <div class="profile">
+          <span class="profile__initials" aria-hidden="true">HA</span>
+          <img class="profile__photo" src="assets/img/foto.png" alt="Foto de Henrico Amaral" width="120" height="120" loading="eager" decoding="async" onerror="this.remove()">
+        </div>
+
+        <section class="block" aria-labelledby="contato-title">
+          <h2 id="contato-title" class="block__title">
+            <span class="lang-pt">Contato</span>
+            <span class="lang-en">Contact</span>
+          </h2>
+          <ul class="contact-list">
+            <li>
+              <a href="tel:+5511953970704" class="contact-link">
+                <span>+55 11 95397-0704</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:henricoamaral.design@gmail.com" class="contact-link">
+                <span>henricoamaral.design@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/henrico-amaral" class="contact-link" target="_blank" rel="noopener" aria-label="LinkedIn (abre em nova aba)">
+                <span>linkedin.com/in/henrico-amaral</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.behance.net/henricoamaral" class="contact-link" target="_blank" rel="noopener" aria-label="Behance (abre em nova aba)">
+                <span>behance.net/henricoamaral</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Habilidades e Áreas -->
+        <section class="block" aria-labelledby="skills-title">
+          <h2 id="skills-title" class="block__title">
+            <span class="lang-pt">Foco de Atuação</span>
+            <span class="lang-en">Areas of Expertise</span>
+          </h2>
+          <div class="flex flex-wrap gap-2">
+            <span class="section-chip lang-pt">Arquitetura da Informação</span>
+            <span class="section-chip lang-en">Information Architecture</span>
+
+            <span class="section-chip lang-pt">Plataformas B2B</span>
+            <span class="section-chip lang-en">B2B Platforms</span>
+
+            <span class="section-chip lang-pt">Sistemas Complexos</span>
+            <span class="section-chip lang-en">Complex Systems</span>
+
+            <span class="section-chip lang-pt">Ambientes Regulados</span>
+            <span class="section-chip lang-en">Regulated Environments</span>
+
+            <span class="section-chip lang-pt">Visualização de Dados</span>
+            <span class="section-chip lang-en">Data Visualization</span>
+
+            <span class="section-chip">Design Systems</span>
+
+            <span class="section-chip lang-pt">Acessibilidade (WCAG)</span>
+            <span class="section-chip lang-en">Accessibility (WCAG)</span>
+
+            <span class="section-chip lang-pt">IA Aplicada</span>
+            <span class="section-chip lang-en">Applied AI</span>
+          </div>
+        </section>
+
+        <!-- Idiomas e Formação -->
+        <section class="block" aria-labelledby="education-title">
+          <h2 id="education-title" class="block__title">
+            <span class="lang-pt">Formação e Idiomas</span>
+            <span class="lang-en">Education &amp; Languages</span>
+          </h2>
+          <ul class="plain-list">
+            <li>
+              <strong>
+                <span class="lang-pt">MBA em Gestão de Operações</span>
+                <span class="lang-en">MBA in Operations Management</span>
+              </strong>
+              <span class="muted">Estácio · 2024</span>
+            </li>
+            <li>
+              <strong>
+                <span class="lang-pt">Bacharelado em Digital Design</span>
+                <span class="lang-en">Bachelor in Digital Design</span>
+              </strong>
+              <span class="muted">Anhembi Morumbi · 2009</span>
+            </li>
+            <li>
+              <strong>
+                <span class="lang-pt">Inglês</span>
+                <span class="lang-en">English</span>
+              </strong>
+              <span class="muted">
+                <span class="lang-pt">Intermediário</span>
+                <span class="lang-en">Intermediate</span>
+              </span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Certificações -->
+        <section class="block" aria-labelledby="certs-title">
+          <h2 id="certs-title" class="block__title">
+            <span class="lang-pt">Certificações</span>
+            <span class="lang-en">Certifications</span>
+          </h2>
+          <ul class="plain-list">
+            <li>UX &amp; Data Design <span class="muted">UX4</span></li>
+            <li>Enterprise Design Thinking <span class="muted">IBM</span></li>
+            <li>
+              <span class="lang-pt">Gestão do Tempo &amp; Produtividade</span>
+              <span class="lang-en">Time Management &amp; Productivity</span>
+              <span class="muted">Conquer</span>
+            </li>
+            <li>
+              <span class="lang-pt">Comunicação e Oratória</span>
+              <span class="lang-en">Communication &amp; Public Speaking</span>
+              <span class="muted">Conquer</span>
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- Conteúdo Principal à Direita -->
+      <main id="main-content" class="main" tabindex="-1">
+        <!-- Resumo -->
+        <section class="tagline" aria-label="Resumo profissional">
+          <p>
+            <span class="lang-pt">Há 20 anos atuo estruturando produtos digitais complexos. Enxergo a interface como a camada de problemas de negócios e fluxos operacionais. Especializado em converter restrições técnicas e reguladas em simplicidade prática e visualização operacional.</span>
+            <span class="lang-en">For 20 years, I have designed complex digital products. I view the interface as the visible layer of business workflows and operational problems. Specialized in turning technical and regulated constraints into practical simplicity and operational visualization.</span>
+          </p>
+          <p class="tagline__highlights">
+            <span>
+              <span class="lang-pt">20 anos de experiência</span>
+              <span class="lang-en">20 years of experience</span>
+            </span>
+            <span aria-hidden="true" class="tagline__sep">·</span>
+            <span>
+              <span class="lang-pt">Sistemas Complexos</span>
+              <span class="lang-en">Complex Systems</span>
+            </span>
+            <span aria-hidden="true" class="tagline__sep">·</span>
+            <span>
+              <span class="lang-pt">Acessibilidade (WCAG)</span>
+              <span class="lang-en">Accessibility (WCAG)</span>
+            </span>
+          </p>
+        </section>
+
+        <!-- Principais Realizações -->
+        <section class="experience" aria-labelledby="results-title">
+          <h2 id="results-title" class="section-title">
+            <span class="lang-pt">Principais Realizações</span>
+            <span class="lang-en">Key Accomplishments</span>
+          </h2>
+          
+          <div class="flex flex-col gap-6">
+            <article class="job">
+              <h3 class="job__title">Petrobras · SALA CAR</h3>
+              <div class="cv-kpi-block">
+                <span class="cv-kpi-val">95%</span>
+                <span class="lang-pt">de automação em relatórios operacionais;</span>
+                <span class="lang-en">automation in operational reporting;</span>
+                <span class="cv-kpi-val">80%</span>
+                <span class="lang-pt">de ganho na troca de turno e</span>
+                <span class="lang-en">improvement in shift handovers and</span>
+                <span class="cv-kpi-val">30%</span>
+                <span class="lang-pt">de redução na resposta a incidentes.</span>
+                <span class="lang-en">reduction in incident response times.</span>
+              </div>
+              <p class="text-sm text-text-muted leading-relaxed">
+                <span class="lang-pt">Mapeamento e redesign de fluxos críticos de incidentes ambientais offshore, integrando mapas e dados regulados.</span>
+                <span class="lang-en">Mapping and redesign of critical offshore environmental incident workflows, integrating maps and regulatory data.</span>
+              </p>
+            </article>
+
+            <article class="job">
+              <h3 class="job__title">AMBEV · Control Tower</h3>
+              <p class="text-sm text-text-muted leading-relaxed" style="margin-top: var(--space-1);">
+                <span class="lang-pt">Design de dashboards logísticos integrados para monitorar rupturas e corte de pedidos, transformando relatórios dispersos em visibilidade operacional unificada.</span>
+                <span class="lang-en">Design of integrated logistics dashboards to monitor supply chain disruptions and order cuts, transforming fragmented reports into unified operational visibility.</span>
+              </p>
+            </article>
+
+            <article class="job">
+              <h3 class="job__title">Bayer · Rastreabilidade Agrícola</h3>
+              <p class="text-sm text-text-muted leading-relaxed" style="margin-top: var(--space-1);">
+                <span class="lang-pt">Estruturação de dados agrícolas e licenciamento de tecnologia territorial, focada em triagem técnica e conformidade de patentes.</span>
+                <span class="lang-en">Structuring of agricultural data and territorial technology licensing, focused on technical screening and patent compliance.</span>
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Experiência Profissional -->
+        <section class="experience" aria-labelledby="experience-title">
+          <h2 id="experience-title" class="section-title">
+            <span class="lang-pt">Experiência Profissional</span>
+            <span class="lang-en">Professional Experience</span>
+          </h2>
+
+          <div class="flex flex-col gap-6">
+            <!-- Freelancer -->
+            <article class="job">
+              <header class="job__header">
+                <div class="flex justify-between items-baseline flex-wrap gap-2">
+                  <h3 class="job__title">
+                    <span class="lang-pt">Consultor UX/Product Designer</span>
+                    <span class="lang-en">UX/Product Design Consultant</span>
+                  </h3>
+                  <span class="job__meta">2014 — <span class="lang-pt">Atual</span><span class="lang-en">Present</span></span>
+                </div>
+                <p class="text-xs text-text-soft font-mono uppercase" style="margin-top: 2px;">
+                  <span class="lang-pt">Freelance / Consultoria</span>
+                  <span class="lang-en">Freelance / Consulting</span>
+                </p>
+              </header>
+              <p class="text-sm text-text-muted leading-relaxed" style="margin-top: var(--space-1);">
+                <span class="lang-pt">Consultoria independente de UX e arquitetura para empresas corporativas (iFood, Bradesco, Vivo, Bayer). Desenho de fluxos, análise heurística e interfaces robustas para sistemas enterprise.</span>
+                <span class="lang-en">Independent UX and architecture consulting for major corporate clients (iFood, Bradesco, Vivo, Bayer). Designing workflows, heuristic analysis and robust UI systems for enterprise solutions.</span>
+              </p>
+            </article>
+
+            <!-- Foursys -->
+            <article class="job">
+              <header class="job__header">
+                <div class="flex justify-between items-baseline flex-wrap gap-2">
+                  <h3 class="job__title">
+                    <span class="lang-pt">Product Designer Sênior</span>
+                    <span class="lang-en">Senior Product Designer</span>
+                  </h3>
+                  <span class="job__meta">03/2025 — 06/2025</span>
+                </div>
+                <p class="text-xs text-text-soft font-mono uppercase" style="margin-top: 2px;">
+                  <span class="lang-pt">Foursys (Alocado Youse Seguros)</span>
+                  <span class="lang-en">Foursys (Allocated at Youse Seguros)</span>
+                </p>
+              </header>
+              <p class="text-sm text-text-muted leading-relaxed" style="margin-top: var(--space-1);">
+                <span class="lang-pt">Definição conceitual e prototipagem de fluxos de aquisição e gestão de apólices no segmento de seguros, utilizando benchmarks e inteligência aplicada.</span>
+                <span class="lang-en">Conceptual definition and prototyping of policy acquisition and management workflows in the insurance industry, using benchmarks and applied intelligence.</span>
+              </p>
+            </article>
+
+            <!-- Mirante -->
+            <article class="job">
+              <header class="job__header">
+                <div class="flex justify-between items-baseline flex-wrap gap-2">
+                  <h3 class="job__title">
+                    <span class="lang-pt">Product Designer Especialista</span>
+                    <span class="lang-en">Specialist Product Designer</span>
+                  </h3>
+                  <span class="job__meta">04/2023 — 03/2024</span>
+                </div>
+                <p class="text-xs text-text-soft font-mono uppercase" style="margin-top: 2px;">
+                  <span class="lang-pt">Mirante Tecnologia (Alocado Petrobras)</span>
+                  <span class="lang-en">Mirante Tecnologia (Allocated at Petrobras)</span>
+                </p>
+              </header>
+              <p class="text-sm text-text-muted leading-relaxed" style="margin-top: var(--space-1);">
+                <span class="lang-pt">Liderança do design no sistema SALA CAR, focado na coordenação operacional de incidentes offshore. Desenho de dashboards geográficos densos e fluxos auditáveis de regulação.</span>
+                <span class="lang-en">Design leadership for the SALA CAR system, focused on offshore incident operational coordination. Design of dense geographical dashboards and auditable regulatory workflows.</span>
+              </p>
+            </article>
+
+            <!-- GFT -->
+            <article class="job">
+              <header class="job__header">
+                <div class="flex justify-between items-baseline flex-wrap gap-2">
+                  <h3 class="job__title">
+                    <span class="lang-pt">Product Designer Sênior</span>
+                    <span class="lang-en">Senior Product Designer</span>
+                  </h3>
+                  <span class="job__meta">04/2022 — 12/2022</span>
+                </div>
+                <p class="text-xs text-text-soft font-mono uppercase" style="margin-top: 2px;">
+                  <span class="lang-pt">Grupo GFT (Alocado BTG Pactual)</span>
+                  <span class="lang-en">GFT Group (Allocated at BTG Pactual)</span>
+                </p>
+              </header>
+              <p class="text-sm text-text-muted leading-relaxed" style="margin-top: var(--space-1);">
+                <span class="lang-pt">Desenho de soluções e fluxos complexos para plataformas corporativas de Pessoa Jurídica no segmento de investment banking do BTG Pactual.</span>
+                <span class="lang-en">Designing solutions and complex workflows for corporate banking (PJ) platforms within BTG Pactual's investment banking sector.</span>
+              </p>
+            </article>
+
+            <!-- Claro -->
+            <article class="job">
+              <header class="job__header">
+                <div class="flex justify-between items-baseline flex-wrap gap-2">
+                  <h3 class="job__title">
+                    <span class="lang-pt">UX Designer Especialista</span>
+                    <span class="lang-en">Specialist UX Designer</span>
+                  </h3>
+                  <span class="job__meta">03/2020 — 10/2021</span>
+                </div>
+                <p class="text-xs text-text-soft font-mono uppercase" style="margin-top: 2px;">Claro Brasil</p>
+              </header>
+              <p class="text-sm text-text-muted leading-relaxed" style="margin-top: var(--space-1);">
+                <span class="lang-pt">Mapeamento de comportamento do usuário via Hotjar e Google Analytics, otimizando caminhos de conversão e jornadas em canais digitais de alta escala.</span>
+                <span class="lang-en">User behavior mapping via Hotjar and Google Analytics, optimizing conversion funnels and digital journeys across large-scale consumer channels.</span>
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+  </div>
+
+  <!-- Global site footer removed for clean CV presentation -->
+
+  <!-- Scripts Globais de Lógica e Motion -->
+  <script defer src="assets/js/site.js?v=20260618-cv-01"></script>
+  <script defer src="assets/js/motion.js?v=20260618-cv-01"></script>
+
+  <!-- Lógica de Ação e Compartilhamento -->
+  <script>
+    document.querySelectorAll('.year-val').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
+
+  </script>
+</body>
+
+</html>

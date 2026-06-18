@@ -1908,20 +1908,6 @@ footer {
   gap: 1rem;
 }
 
-.site-footer__mark {
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(244, 236, 226, 0.14);
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  color: rgba(244, 236, 226, 0.72);
-  flex: 0 0 auto;
-}
-
 .site-footer__name {
   font-family: 'Syne', sans-serif;
   font-size: clamp(1.2rem, 1.6vw, 1.55rem);
@@ -1943,7 +1929,7 @@ footer {
   justify-self: end;
   text-align: right;
   font-family: 'Syne', sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 2rem);
   font-weight: 700;
   line-height: 0.98;
   letter-spacing: 0;
@@ -2615,8 +2601,8 @@ footer:not(.site-footer) a.font-mono {
 /* ─── AJUSTES MOBILE DE TIPOGRAFIA E CABEÇALHO/RODAPÉ ─── */
 @media (max-width: 767px) {
   /* Ocultar seletor de idioma do cabeçalho móvel */
-  #nav > div > .lang-toggle,
-  #nav .lang-toggle:not(.mobile-lang-toggle) {
+  #nav > div:not(#mobile-menu) > .lang-toggle,
+  #nav > .nav__inner .lang-toggle:not(.mobile-lang-toggle) {
     display: none !important;
   }
 
@@ -2654,7 +2640,7 @@ footer:not(.site-footer) a.font-mono {
 
   /* Assinatura do Rodapé com Fallbacks de Acessibilidade/Layout */
   .site-footer__signature {
-    font-size: clamp(1rem, 4vw, 3rem) !important;
+    font-size: clamp(1rem, 4vw, 2rem) !important;
     justify-self: center !important;
     justify-self: anchor-center !important;
     text-align: left !important;

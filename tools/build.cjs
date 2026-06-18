@@ -16,6 +16,7 @@ function copyFolderRecursiveSync(source, target) {
   if (fs.lstatSync(source).isDirectory()) {
     files = fs.readdirSync(source);
     files.forEach(function (file) {
+      if (file === 'Cases' || file === '.DS_Store') return;
       var curSource = path.join(source, file);
       var curTarget = path.join(targetFolder, file);
       if (fs.lstatSync(curSource).isDirectory()) {
@@ -34,7 +35,7 @@ if (fs.existsSync(DIST)) {
 fs.mkdirSync(DIST, { recursive: true });
 
 // 2. Copy root static files
-const filesToCopy = ['index.html', 'about.html', 'favicon.svg'];
+const filesToCopy = ['index.html', 'about.html', 'cv.html', 'favicon.svg'];
 filesToCopy.forEach(file => {
   const src = path.join(ROOT, file);
   if (fs.existsSync(src)) {
