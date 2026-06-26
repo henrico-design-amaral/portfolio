@@ -1626,12 +1626,10 @@ button:focus-visible {
   display: none !important;
 }
 
-#hero h1 {
-  max-width: 1120px;
-  font-size: clamp(4rem, 6.4vw, 5.5rem) !important;
-  line-height: 0.92 !important;
-  letter-spacing: 0 !important;
-}
+/* A tipografia do H1 da hero é governada exclusivamente por hero.css
+   (#hero h1.hero2__title). O override !important legado (versão portrait,
+   5.5rem) foi removido por forçar a 2ª linha a quebrar numa 3ª no desktop.
+   As regras responsivas de #hero h1 em media queries abaixo seguem ativas. */
 
 #hero .sub {
   max-width: 64ch;
@@ -2079,11 +2077,6 @@ footer:not(.site-footer) {
     width: min(100%, 21rem);
     max-width: calc(100vw - 3rem);
     overflow-wrap: break-word;
-  }
-
-  #nav > div {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
   }
 
   #nav {
