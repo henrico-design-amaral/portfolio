@@ -94,7 +94,6 @@ function inspectLocalReferences() {
   const idsByFile = collectIdsByFile();
   const cssFiles = [
     'assets/css/site.css',
-    'assets/css/about.css',
     'assets/css/cases.css',
   ];
 
