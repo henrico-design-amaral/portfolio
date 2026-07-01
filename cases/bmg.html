@@ -6,9 +6,9 @@
 <title>BMG · Conta Digital PJ — Henrico Amaral</title>
 <meta name="description" content="BMG Conta PJ — arquitetura financeira modular para conta digital empresarial, onboarding, serviços bancários e fluxos regulados.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/css/cases.css?v=20260615-case-blueprint">
+<link rel="stylesheet" href="../assets/css/cases.css?v=20260701-release">
 </head>
-<body>
+<body class="case-page">
 <a class="skip" href="#overview" data-t="skip">Ir para o conteúdo</a>
 <nav class="nav" id="nav" aria-label="Principal" data-t-aria-label="case.nav.aria">
 <div class="nav__inner">
@@ -24,16 +24,38 @@
 <header class="case-hero" data-navdark data-screen-label="Case Hero">
 <div class="case-hero__img" style="background-image:url('../assets/img/cases/bmg.webp')">
 </div>
+<!-- BMG Behavioral SVG: workflow state transitions, modular activation, supervision pulses -->
+<svg class="case-hero__behavioral-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+  <!-- Workflow state nodes — represent the PJ onboarding journey stages -->
+  <circle cx="12" cy="52" r="2.8" fill="none" stroke="#BE9C6E" stroke-width="0.28" opacity="0.24" style="animation:bmg-state 4.5s ease-in-out infinite"/>
+  <path d="M14.8,52 L38,52" fill="none" stroke="#BE9C6E" stroke-width="0.28" stroke-dasharray="2 3" opacity="0.16" style="animation:bmg-arrow 3.5s linear infinite"/>
+  <rect x="38" y="47.5" width="10" height="9" rx="1" fill="none" stroke="#BE9C6E" stroke-width="0.28" opacity="0.20" style="animation:bmg-state 4.5s ease-in-out infinite 1.1s"/>
+  <path d="M48,52 L66,52" fill="none" stroke="#BE9C6E" stroke-width="0.28" stroke-dasharray="2 3" opacity="0.16" style="animation:bmg-arrow 3.5s linear infinite 1.75s"/>
+  <circle cx="70" cy="52" r="2.8" fill="#BE9C6E" opacity="0.14" style="animation:bmg-state 4.5s ease-in-out infinite 2.2s"/>
+  <!-- Supervision ring expanding around final approval node -->
+  <circle cx="70" cy="52" r="7" fill="none" stroke="#BE9C6E" stroke-width="0.12" opacity="0.10" style="transform-origin:70% 52%;animation:bmg-supervision 6s ease-in-out infinite 2.2s"/>
+  <circle cx="70" cy="52" r="12" fill="none" stroke="#BE9C6E" stroke-width="0.08" opacity="0.06" style="transform-origin:70% 52%;animation:bmg-supervision 6s ease-in-out infinite 3.5s"/>
+  <!-- Modular service grid — top section represents the financial services modules -->
+  <rect x="8" y="14" width="11" height="11" rx="1" fill="none" stroke="#BE9C6E" stroke-width="0.18" opacity="0.12" style="animation:bmg-module 5.5s ease-in-out infinite"/>
+  <rect x="22" y="14" width="11" height="11" rx="1" fill="none" stroke="#BE9C6E" stroke-width="0.18" opacity="0.12" style="animation:bmg-module 5.5s ease-in-out infinite 1.4s"/>
+  <rect x="36" y="14" width="11" height="11" rx="1" fill="none" stroke="#BE9C6E" stroke-width="0.18" opacity="0.12" style="animation:bmg-module 5.5s ease-in-out infinite 2.8s"/>
+  <rect x="50" y="14" width="11" height="11" rx="1" fill="none" stroke="#BE9C6E" stroke-width="0.18" opacity="0.12" style="animation:bmg-module 5.5s ease-in-out infinite 4.1s"/>
+</svg>
 <div class="case-hero__in">
-<div class="case-hero__eyebrow mono">
-<span class="ln">
-</span><span data-t="case.bmg.hero.eyebrow">04 · Finanças · Banking e Conta PJ</span></div>
-<h1>Conta Digital PJ</h1>
-<span class="case-hero__client">BMG</span>
-<p class="case-hero__lead" data-t="case.bmg.hero.lead">Arquitetura financeira modular para operações PJ em ambiente regulado, com jornada de abertura, serviços bancários e validações progressivas.</p>
+<div class="case-hero__eyebrow">
+  <span class="case-hero__pill mono" data-t="case.bmg.hero.eyebrow">04 · Finanças · Banking e Conta PJ</span>
+</div>
+<div class="case-hero__stack">
+  <span class="case-hero__client">BMG</span>
+  <h1>Conta Digital PJ</h1>
+  <p class="case-hero__lead" data-t="case.bmg.hero.lead">Arquitetura financeira modular para operações PJ em ambiente regulado, com jornada de abertura, serviços bancários e validações progressivas.</p>
+</div>
+<div class="case-hero__scroll" aria-hidden="true">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6.5L9 11.5L14 6.5" stroke="rgba(255,248,238,0.52)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
 </div>
 </header>
-<section class="case-spec project-info" aria-label="Informações do Projeto">
+<section class="case-section case-section--light case-spec project-info" id="case-info" aria-label="Informações do Projeto">
 <div class="project-info__inner">
 <div class="project-info__intro">
 <p class="project-info__eyebrow mono" data-t="case.info.eyebrow">Informações do Projeto</p>
@@ -54,16 +76,16 @@
 <p class="project-info__closing" data-t="case.bmg.info.closing">Mais do que um projeto de interface, este trabalho envolveu compreender como pequenas empresas lidam com serviços bancários no dia a dia.</p>
 </div>
 </section>
-<section class="overview" id="overview" data-screen-label="Overview">
-<div class="wrap overview__grid">
-<div class="reveal">
+<section class="case-section case-section--light case-overview" id="overview" data-screen-label="Overview">
+<div class="case-container case-overview__grid">
+<div class="case-overview__header">
 <div class="overview__kicker mono">
 <span class="ln">
 </span><span data-t="case.kicker.overview">Projeto · Contexto · Escopo</span></div>
 <h2 data-t="case.bmg.overview.title">Uma conta PJ modular para diferentes maturidades de negócio.</h2>
 <p data-t="case.bmg.overview.desc">O projeto estruturou uma conta digital para perfis de Pessoa Jurídica, de empreendedores individuais a pequenas empresas com operação mais complexa.</p>
 </div>
-<dl class="subfacts reveal" data-d="1">
+<dl class="subfacts" data-d="1">
 <div class="subfacts__row">
 <dt data-t="case.dt.system">Sistema</dt>
 <dd>Conta Digital BMG</dd>
@@ -83,18 +105,18 @@
 </dl>
 </div>
 </section>
-<section class="ed ed--cream" data-screen-label="01 Contexto">
-<div class="ed__grid">
-<div class="ed__index reveal">
-<div class="tick">
-</div>
-<span class="no">01 / 10</span>
-<span class="lbl" data-t="case.lbl.01">Contexto<br>Operacional</span>
-</div>
-<div class="ed__body reveal" data-d="1">
-<h2 class="ed__h" data-t="case.bmg.s01.title">Pequenos negócios têm necessidades bancárias muito diferentes entre si.</h2>
+<section class="case-section case-section--light" data-screen-label="01 Contexto">
+<div class="case-container">
+<header class="case-section__header">
+<span class="case-section__rule"></span>
+<p class="case-section__eyebrow"><span class="case-section__no">01 / 10</span><span class="case-section__label" data-t="case.lbl.01">Contexto Operacional</span></p>
+<h2 class="case-section__title" data-t="case.bmg.s01.title">Pequenos negócios têm necessidades bancárias muito diferentes entre si.</h2>
+<div class="case-section__lead">
 <p data-t="case.bmg.s01.p1">Cada segmento opera sob condições financeiras e fiscais específicas. PF Empreendedor, MEI, Simples Nacional e LTDA exigem níveis diferentes de documentação, relatórios e permissões.</p>
 <p data-t="case.bmg.s01.p2">O desafio era permitir entrada simples sem ignorar exigências bancárias de segurança, compliance e prevenção à fraude.</p>
+</div>
+</header>
+<div class="case-section__body">
 <div class="diagram">
 <div class="diagram__flow">
 <div class="chips">
@@ -114,18 +136,18 @@
 </div>
 </div>
 </section>
-<section class="ed ed--sand" data-screen-label="02 Legado">
-<div class="ed__grid">
-<div class="ed__index reveal">
-<div class="tick">
-</div>
-<span class="no">02 / 10</span>
-<span class="lbl" data-t="case.lbl.02">Arquitetura<br>Legada</span>
-</div>
-<div class="ed__body reveal" data-d="1">
-<h2 class="ed__h" data-t="case.bmg.s02.title">O modelo bancário tradicional tratava negócios pequenos como empresas grandes.</h2>
+<section class="case-section case-section--warm" data-screen-label="02 Legado">
+<div class="case-container">
+<header class="case-section__header">
+<span class="case-section__rule"></span>
+<p class="case-section__eyebrow"><span class="case-section__no">02 / 10</span><span class="case-section__label" data-t="case.lbl.02">Arquitetura Legada</span></p>
+<h2 class="case-section__title" data-t="case.bmg.s02.title">O modelo bancário tradicional tratava negócios pequenos como empresas grandes.</h2>
+<div class="case-section__lead">
 <p data-t="case.bmg.s02.p1">A falta de canais digitais adaptados fazia com que o pequeno empreendedor travasse na triagem inicial de conformidade.</p>
 <p data-t="case.bmg.s02.p2">Sem flexibilidade documental, pequenos negócios passavam pelas mesmas checagens pesadas de uma grande sociedade limitada.</p>
+</div>
+</header>
+<div class="case-section__body">
 <div class="diagram diagram--legacy">
 <div class="diagram__flow">
 <div class="chips">
@@ -142,33 +164,32 @@
 </div>
 </div>
 </section>
-<section class="ed ed--cream" data-screen-label="03 Problema">
-<div class="ed__grid">
-<div class="ed__index reveal">
-<div class="tick">
-</div>
-<span class="no">03 / 10</span>
-<span class="lbl" data-t="case.lbl.03">Definição<br>do Problema</span>
-</div>
-<div class="ed__body reveal" data-d="1">
-<h2 class="ed__h" data-t="case.bmg.s03.title">Era preciso conciliar conversão e controle regulatório.</h2>
+<section class="case-section case-section--light" data-screen-label="03 Problema">
+<div class="case-container">
+<header class="case-section__header">
+<span class="case-section__rule"></span>
+<p class="case-section__eyebrow"><span class="case-section__no">03 / 10</span><span class="case-section__label" data-t="case.lbl.03">Definição do Problema</span></p>
+<h2 class="case-section__title" data-t="case.bmg.s03.title">Era preciso conciliar conversão e controle regulatório.</h2>
+<div class="case-section__lead">
 <p class="lead" data-t="case.bmg.s03.lead">Simplificar demais comprometeria segurança; exigir demais destruiria conversão.</p>
 <p data-t="case.bmg.s03.p1">Um fluxo simples demais comprometeria checagens antifraude e KYC. Manter exigências rígidas inviabilizaria clientes menores.</p>
 <p data-t="case.bmg.s03.p2">A solução precisava combinar velocidade para o cliente com controle exigido pelo banco.</p>
 </div>
+</header>
+
 </div>
 </section>
-<section class="ed ed--sand" data-screen-label="04 Atuação">
-<div class="ed__grid">
-<div class="ed__index reveal">
-<div class="tick">
-</div>
-<span class="no">04 / 10</span>
-<span class="lbl" data-t="case.lbl.04">Atuação<br>do Designer</span>
-</div>
-<div class="ed__body reveal" data-d="1">
-<h2 class="ed__h" data-t="case.bmg.s04.title">Jornada modular, workshop e prototipação do produto.</h2>
+<section class="case-section case-section--warm" data-screen-label="04 Atuação">
+<div class="case-container">
+<header class="case-section__header">
+<span class="case-section__rule"></span>
+<p class="case-section__eyebrow"><span class="case-section__no">04 / 10</span><span class="case-section__label" data-t="case.lbl.04">Atuação do Designer</span></p>
+<h2 class="case-section__title" data-t="case.bmg.s04.title">Jornada modular, workshop e prototipação do produto.</h2>
+<div class="case-section__lead">
 <p data-t="case.bmg.s04.p1">Atuei na definição conceitual da jornada, facilitação com stakeholders e desenho dos fluxos principais da conta digital PJ.</p>
+</div>
+</header>
+<div class="case-section__body">
 <div class="role-grid">
 <article class="role">
 <span class="no">01</span>
@@ -204,17 +225,17 @@
 </div>
 </div>
 </section>
-<section class="ed ed--cream" data-screen-label="05 Restrições">
-<div class="ed__grid">
-<div class="ed__index reveal">
-<div class="tick">
-</div>
-<span class="no">05 / 10</span>
-<span class="lbl" data-t="case.lbl.05">Restrições<br>do Projeto</span>
-</div>
-<div class="ed__body reveal" data-d="1">
-<h2 class="ed__h" data-t="case.restr.title">Restrições do projeto.</h2>
+<section class="case-section case-section--light" data-screen-label="05 Restrições">
+<div class="case-container">
+<header class="case-section__header">
+<span class="case-section__rule"></span>
+<p class="case-section__eyebrow"><span class="case-section__no">05 / 10</span><span class="case-section__label" data-t="case.lbl.05">Restrições do Projeto</span></p>
+<h2 class="case-section__title" data-t="case.restr.title">Restrições do projeto.</h2>
+<div class="case-section__lead">
 <p data-t="case.restr.intro">Condições que limitaram a solução e orientaram as decisões de arquitetura.</p>
+</div>
+</header>
+<div class="case-section__body">
 <div class="panel">
 <div class="panel__head">
 <span data-t="case.restr.panelHead">Condições de Contorno</span>
@@ -250,17 +271,17 @@
 </div>
 </div>
 </section>
-<section class="ed ed--dark" data-navdark data-screen-label="06 Decisão">
-<div class="ed__grid">
-<div class="ed__index reveal">
-<div class="tick">
-</div>
-<span class="no">06 / 10</span>
-<span class="lbl" data-t="case.lbl.06">Decisão<br>Estrutural</span>
-</div>
-<div class="ed__body reveal" data-d="1">
-<h2 class="ed__h" data-t="case.bmg.s06.title">A conta PJ organizada em camadas modulares.</h2>
+<section class="case-section case-section--dark" data-navdark data-screen-label="06 Decisão">
+<div class="case-container">
+<header class="case-section__header">
+<span class="case-section__rule"></span>
+<p class="case-section__eyebrow"><span class="case-section__no">06 / 10</span><span class="case-section__label" data-t="case.lbl.06">Decisão Estrutural</span></p>
+<h2 class="case-section__title" data-t="case.bmg.s06.title">A conta PJ organizada em camadas modulares.</h2>
+<div class="case-section__lead">
 <p data-t="case.bmg.s06.p1">A decisão estrutural foi desenhar a conta em camadas. Todos começam por uma conta base e ativam serviços conforme maturidade e perfil.</p>
+</div>
+</header>
+<div class="case-section__body">
 <div class="hub">
 <div class="hub__center">
 <span class="core" data-t="case.bmg.s06.hubCenter">Conta base PJ</span>
@@ -293,85 +314,89 @@
 </div>
 </div>
 </section>
-<section class="ed ed--cream" data-screen-label="07 Escala">
-<div class="ed__grid">
-<div class="ed__index reveal">
-<div class="tick">
-</div>
-<span class="no">07 / 10</span>
-<span class="lbl" data-t="case.lbl.07">Escala<br>Operacional</span>
-</div>
-<div class="ed__body reveal" data-d="1">
-<h2 class="ed__h" data-t="case.bmg.s07.title">Jornada financeira e serviços conectados.</h2>
+<section class="case-section case-section--light" data-screen-label="07 Escala">
+<div class="case-container">
+<header class="case-section__header">
+<span class="case-section__rule"></span>
+<p class="case-section__eyebrow"><span class="case-section__no">07 / 10</span><span class="case-section__label" data-t="case.lbl.07">Escala Operacional</span></p>
+<h2 class="case-section__title" data-t="case.bmg.s07.title">Jornada financeira e serviços conectados.</h2>
+<div class="case-section__lead">
 <p data-t="case.bmg.s07.p1">A sequência de telas estrutura onboarding, autenticação, conta, extrato, pagamentos, transferências e faturamento integrado.</p>
 </div>
+</header>
+
 </div>
-<div class="figs figs--compact">
-<div class="figtrio reveal">
-<div class="figslot screen-img">
+<div class="case-container case-media-section figs figs--compact">
+<div class="case-media-block">
+<header class="case-media-header figure__cap">
+<h3 data-t="case.bmg.s07.cap1.h3">Conta, entrada e autenticação</h3>
+<p data-t="case.bmg.s07.cap1.p">Visão inicial da conta PJ, boas-vindas e validação facial como etapas conectadas de acesso e segurança.</p>
+</header>
+<div class="case-media-grid figtrio">
+<div class="case-media-frame figslot screen-img">
 <img src="../assets/img/case-screens/bmg/bmg-01-home-conta.webp" alt="Tela final da home da conta digital PJ" data-t-alt="case.bmg.s07.alt1" loading="lazy">
 </div>
-<div class="figslot screen-img">
+<div class="case-media-frame figslot screen-img">
 <img src="../assets/img/case-screens/bmg/bmg-02-boas-vindas.webp" alt="Tela final de boas-vindas da conta digital PJ" data-t-alt="case.bmg.s07.alt2" loading="lazy">
 </div>
-<div class="figslot screen-img">
+<div class="case-media-frame figslot screen-img">
 <img src="../assets/img/case-screens/bmg/bmg-03-biometria-facial.webp" alt="Tela final de validação por biometria facial" data-t-alt="case.bmg.s07.alt3" loading="lazy">
 </div>
 </div>
-<figcaption class="figure__cap reveal">
-<h3 data-t="case.bmg.s07.cap1.h3">Conta, entrada e autenticação</h3>
-<p data-t="case.bmg.s07.cap1.p">Visão inicial da conta PJ, boas-vindas e validação facial como etapas conectadas de acesso e segurança.</p>
-</figcaption>
-<div class="figpair figpair--compact reveal">
-<div class="figslot screen-img">
+</div>
+<div class="case-media-block">
+<header class="case-media-header figure__cap">
+<h3 data-t="case.bmg.s07.cap2.h3">Extrato e pagamentos</h3>
+<p data-t="case.bmg.s07.cap2.p">Serviços bancários organizados em módulos de consulta, filtro e operation recorrente para empresas.</p>
+</header>
+<div class="case-media-grid figpair figpair--compact">
+<div class="case-media-frame figslot screen-img">
 <img src="../assets/img/case-screens/bmg/bmg-04-extrato-conta.webp" alt="Tela final de extrato detalhado da conta PJ" data-t-alt="case.bmg.s07.alt4" loading="lazy">
 </div>
-<div class="figslot screen-img">
+<div class="case-media-frame figslot screen-img">
 <img src="../assets/img/case-screens/bmg/bmg-05-fluxo-pagamentos.webp" alt="Tela final do fluxo de pagamentos" data-t-alt="case.bmg.s07.alt5" loading="lazy">
 </div>
 </div>
-<figcaption class="figure__cap reveal">
-<h3 data-t="case.bmg.s07.cap2.h3">Extrato e pagamentos</h3>
-<p data-t="case.bmg.s07.cap2.p">Serviços bancários organizados em módulos de consulta, filtro e operation recorrente para empresas.</p>
-</figcaption>
-<div class="figpair figpair--compact reveal">
-<div class="figslot screen-img">
+</div>
+<div class="case-media-block">
+<header class="case-media-header figure__cap">
+<h3 data-t="case.bmg.s07.cap3.h3">Transferências e faturamento</h3>
+<p data-t="case.bmg.s07.cap3.p">Fluxos transacionais e painel de recebíveis da Granito tratados como parte do mesmo ecossistema financeiro.</p>
+</header>
+<div class="case-media-grid figpair figpair--compact">
+<div class="case-media-frame figslot screen-img">
 <img src="../assets/img/case-screens/bmg/bmg-06-fluxo-transferencias.webp" alt="Tela final do fluxo de transferências" data-t-alt="case.bmg.s07.alt6" loading="lazy">
 </div>
-<div class="figslot screen-img">
+<div class="case-media-frame figslot screen-img">
 <img src="../assets/img/case-screens/bmg/bmg-07-home-granito.webp" alt="Tela final do painel BMG Granito para faturamento" data-t-alt="case.bmg.s07.alt7" loading="lazy">
 </div>
 </div>
-<figcaption class="figure__cap reveal">
-<h3 data-t="case.bmg.s07.cap3.h3">Transferências e faturamento</h3>
-<p data-t="case.bmg.s07.cap3.p">Fluxos transacionais e painel de recebíveis da Granito tratados como parte do mesmo ecossistema financeiro.</p>
-</figcaption>
+</div>
 </div>
 </section>
-<section class="ed ed--sand" data-screen-label="08 Limitações">
-<div class="ed__grid">
-<div class="ed__index reveal">
-<div class="tick">
-</div>
-<span class="no">08 / 10</span>
-<span class="lbl" data-t="case.lbl.08">Limitações<br>Estruturais</span>
-</div>
-<div class="ed__body reveal" data-d="1">
-<h2 class="ed__h" data-t="case.bmg.s08.title">Integrações contábeis e revisão humana continuaram necessárias.</h2>
+<section class="case-section case-section--warm" data-screen-label="08 Limitações">
+<div class="case-container">
+<header class="case-section__header">
+<span class="case-section__rule"></span>
+<p class="case-section__eyebrow"><span class="case-section__no">08 / 10</span><span class="case-section__label" data-t="case.lbl.08">Limitações Estruturais</span></p>
+<h2 class="case-section__title" data-t="case.bmg.s08.title">Integrações contábeis e revisão humana continuaram necessárias.</h2>
+<div class="case-section__lead">
 <p data-t="case.bmg.s08.p1">A integração direta por API com sistemas contábeis variados exigia parcerias específicas com grandes ERPs.</p>
 <p data-t="case.bmg.s08.p2">A análise cadastral automática continuou dependendo de revisão humana em contratos sociais complexos.</p>
 </div>
+</header>
+
 </div>
 </section>
-<section class="case-impact" data-navdark data-screen-label="09 Impacto">
-<div class="case-impact__head reveal">
+<section class="case-section case-section--dark case-impact" data-navdark data-screen-label="09 Impacto">
+<div class="case-container case-section__header case-impact__head">
 <div class="k">
 <span class="ln">
 </span><span data-t="case.impact.kicker">09 / 10 · Impacto do Projeto</span></div>
 <h2 data-t="case.bmg.s09.title">Resultados na inclusão financeira de pequenos negócios.</h2>
 <p data-t="case.bmg.s09.p1">A simplificação regulada da conta PJ removeu fricção de abertura sem eliminar segurança bancária.</p>
 </div>
-<div class="stat-grid reveal" data-d="1">
+<div class="case-container stat-grid" data-d="1">
 <div class="stat">
 <div class="stat__n">20<small data-t="case.bmg.s09.stat1unit">stakeholders</small>
 </div>
@@ -394,8 +419,8 @@
 </div>
 </div>
 </section>
-<section class="reflection" data-screen-label="10 Reflexões">
-<div class="reflection__in reveal">
+<section class="case-section case-section--light reflection" data-screen-label="10 Reflexões">
+<div class="case-container reflection__in">
 <div class="k">
 <span class="ln">
 </span><span data-t="case.reflection.kicker">10 / 10 · Reflexões do Designer</span></div>
@@ -437,7 +462,7 @@ Torne-se inevitável.
 </div>
 </div>
 </footer>
-<script defer src="../assets/js/site.js?v=20260615-case-blueprint">
+<script defer src="../assets/js/site.js?v=20260701-release">
 </script>
 </body>
 </html>
