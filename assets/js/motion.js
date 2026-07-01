@@ -123,38 +123,62 @@
   function initParallax() {
     if (reduceMotion) return;
 
-    var softItems = document.querySelectorAll('.motion-parallax-soft, [data-parallax]');
-    var bgItem = document.querySelector('.motion-parallax-bg');
+    var softElements = document.querySelectorAll('.motion-parallax-soft, [data-parallax]');
+    var bgElement = document.querySelector('.motion-parallax-bg');
 
-    if (!softItems.length && !bgItem) return;
+    if (!softElements.length && !bgElement) return;
+
+    var softItems = [];
+    var bgItem = null;
 
     var ticking = false;
     var viewportH = window.innerHeight || document.documentElement.clientHeight;
 
-    function update() {
+    function cacheLayout() {
       viewportH = window.innerHeight || document.documentElement.clientHeight;
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+      softItems = [];
+      for (var i = 0; i < softElements.length; i++) {
+        var el = softElements[i];
+        var rect = el.getBoundingClientRect();
+        softItems.push({
+          el: el,
+          offsetTop: rect.top + scrollY,
+          height: rect.height,
+          speed: parseFloat(el.getAttribute('data-parallax') || '0.025')
+        });
+      }
+
+      if (bgElement && bgElement.parentElement) {
+        var pRect = bgElement.parentElement.getBoundingClientRect();
+        bgItem = {
+          el: bgElement,
+          parentOffsetTop: pRect.top + scrollY,
+          parentHeight: pRect.height
+        };
+      }
+    }
+
+    function update() {
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
       for (var i = 0; i < softItems.length; i++) {
-        var el = softItems[i];
-        var rect = el.getBoundingClientRect();
-        if (rect.bottom < 0 || rect.top > viewportH) continue;
-
-        var speed = parseFloat(el.getAttribute('data-parallax') || '0.025');
-        var center = rect.top + rect.height / 2;
-        var diff = center - viewportH / 2;
-        var y = diff * speed;
-        var cap = 16;
-        y = Math.max(-cap, Math.min(cap, y));
-
-        el.style.transform = 'translate3d(0,' + y.toFixed(2) + 'px,0)';
+        var item = softItems[i];
+        if (scrollY + viewportH > item.offsetTop && scrollY < item.offsetTop + item.height) {
+          var itemCenter = item.offsetTop + item.height / 2;
+          var diff = itemCenter - (scrollY + viewportH / 2);
+          var y = diff * item.speed;
+          var cap = 16;
+          y = Math.max(-cap, Math.min(cap, y));
+          item.el.style.transform = 'translate3d(0,' + y.toFixed(2) + 'px,0)';
+        }
       }
 
       if (bgItem) {
-        var parentRect = bgItem.parentElement ? bgItem.parentElement.getBoundingClientRect() : null;
-        if (parentRect && parentRect.top < viewportH && parentRect.bottom > 0) {
-          var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollY + viewportH > bgItem.parentOffsetTop && scrollY < bgItem.parentOffsetTop + bgItem.parentHeight) {
           var offset = scrollY * 0.08;
-          bgItem.style.transform = 'scale(1.04) translateY(' + offset.toFixed(2) + 'px)';
+          bgItem.el.style.transform = 'scale(1.04) translateY(' + offset.toFixed(2) + 'px)';
         }
       }
 
@@ -167,8 +191,14 @@
       window.requestAnimationFrame(update);
     }
 
+    function onResize() {
+      cacheLayout();
+      onScroll();
+    }
+
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
+    window.addEventListener('resize', onResize);
+    cacheLayout();
     update();
   }
 

@@ -207,14 +207,14 @@ const COPY = {
       'case.dt.domain':       'Domínio',
       'case.dt.users':        'Usuários',
       'case.dt.result':       'Resultado',
-      'case.lbl.01':          'Contexto<br>Operacional',
-      'case.lbl.02':          'Arquitetura<br>Legada',
-      'case.lbl.03':          'Definição<br>do Problema',
-      'case.lbl.04':          'Atuação<br>do Designer',
-      'case.lbl.05':          'Restrições<br>do Projeto',
-      'case.lbl.06':          'Decisão<br>Estrutural',
-      'case.lbl.07':          'Escala<br>Operacional',
-      'case.lbl.08':          'Limitações<br>Estruturais',
+      'case.lbl.01':          'Contexto Operacional',
+      'case.lbl.02':          'Arquitetura Legada',
+      'case.lbl.03':          'Definição do Problema',
+      'case.lbl.04':          'Atuação do Designer',
+      'case.lbl.05':          'Restrições do Projeto',
+      'case.lbl.06':          'Decisão Estrutural',
+      'case.lbl.07':          'Escala Operacional',
+      'case.lbl.08':          'Limitações Estruturais',
       'case.restr.title':     'Restrições do projeto.',
       'case.restr.intro':     'Condições que limitaram a solução e orientaram as decisões de arquitetura.',
       'case.restr.panelHead': 'Condições de Contorno',
@@ -881,14 +881,14 @@ const COPY = {
       'case.dt.domain':       'Domain',
       'case.dt.users':        'Users',
       'case.dt.result':       'Result',
-      'case.lbl.01':          'Operational<br>Context',
-      'case.lbl.02':          'Legacy<br>Architecture',
-      'case.lbl.03':          'Problem<br>Definition',
-      'case.lbl.04':          'Designer\'s<br>Role',
-      'case.lbl.05':          'Project<br>Constraints',
-      'case.lbl.06':          'Structural<br>Decision',
-      'case.lbl.07':          'Operational<br>Scale',
-      'case.lbl.08':          'Structural<br>Limitations',
+      'case.lbl.01':          'Operational Context',
+      'case.lbl.02':          'Legacy Architecture',
+      'case.lbl.03':          'Problem Definition',
+      'case.lbl.04':          'Designer\'s Role',
+      'case.lbl.05':          'Project Constraints',
+      'case.lbl.06':          'Structural Decision',
+      'case.lbl.07':          'Operational Scale',
+      'case.lbl.08':          'Structural Limitations',
       'case.restr.title':     'Project constraints.',
       'case.restr.intro':     'Conditions that limited the solution and guided architecture decisions.',
       'case.restr.panelHead': 'Boundary Conditions',
@@ -1452,16 +1452,27 @@ if (mobileMenuToggle && mobileMenu) {
 }
 /* ── Nav Scroll behavior ── */
 let lastScroll = 0;
+let navTicking = false;
 window.addEventListener('scroll', () => {
-  const nav = document.getElementById('nav');
-  if (!nav) return;
-  const currentScroll = window.pageYOffset;
-  if (currentScroll > 60) {
-    nav.classList.add('shadow-sm', 'nav-scrolled');
-  } else {
-    nav.classList.remove('shadow-sm', 'nav-scrolled');
-  }
-  lastScroll = currentScroll;
+  if (navTicking) return;
+  navTicking = true;
+  window.requestAnimationFrame(() => {
+    const nav = document.getElementById('nav');
+    if (nav) {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > 60) {
+        if (!nav.classList.contains('nav-scrolled')) {
+          nav.classList.add('shadow-sm', 'nav-scrolled');
+        }
+      } else {
+        if (nav.classList.contains('nav-scrolled')) {
+          nav.classList.remove('shadow-sm', 'nav-scrolled');
+        }
+      }
+      lastScroll = currentScroll;
+    }
+    navTicking = false;
+  });
 }, { passive: true });
 
 function initCaseLightbox() {
