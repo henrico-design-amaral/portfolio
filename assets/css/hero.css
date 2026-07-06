@@ -372,3 +372,127 @@
     transition: none;
   }
 }
+
+/* ── HERO ENTRANCE SEQUENCE ──────────────────────────────────────────────────── */
+/*
+  Sistema de animação próprio da Hero — puro CSS, sem dependência do
+  motion.js. Cada elemento tem uma intenção de movimento distinta.
+  O H1 usa fade puro (sem translação) por ser texto grande.
+*/
+
+@keyframes hero-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-rise-sm {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-appear {
+  from { opacity: 0; transform: translateY(4px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)  scale(1); }
+}
+
+/* Ease compartilhado */
+#hero .hero2__status,
+#hero .hero2__eyebrow,
+#hero h1.hero2__title .hero2__line-in,
+#hero .hero2__lede,
+#hero .hero-proof-tags,
+#hero .hero-signature,
+#hero .hero2__actions,
+#hero .clients-strip {
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-fill-mode: both;
+}
+
+/* 1. Status badge — aparece primeiro, sutil e leve */
+#hero .hero2__status {
+  animation-name: hero-appear;
+  animation-duration: 420ms;
+  animation-delay: 60ms;
+}
+
+/* 2. Eyebrow — sobe suavemente */
+#hero .hero2__eyebrow {
+  animation-name: hero-rise-sm;
+  animation-duration: 560ms;
+  animation-delay: 140ms;
+}
+
+/* 3. H1 linha 1 — fade puro: texto grande não deve transladar */
+#hero h1.hero2__title .hero2__line:nth-child(1) .hero2__line-in {
+  animation-name: hero-fade;
+  animation-duration: 720ms;
+  animation-delay: 240ms;
+  animation-timing-function: ease;
+}
+
+/* 4. H1 linha 2 */
+#hero h1.hero2__title .hero2__line:nth-child(2) .hero2__line-in {
+  animation-name: hero-fade;
+  animation-duration: 720ms;
+  animation-delay: 340ms;
+  animation-timing-function: ease;
+}
+
+/* 5. Lede — sobe um pouco mais (mais conteúdo, mais peso) */
+#hero .hero2__lede {
+  animation-name: hero-rise;
+  animation-duration: 660ms;
+  animation-delay: 460ms;
+}
+
+/* 6. Proof tags */
+#hero .hero-proof-tags {
+  animation-name: hero-rise-sm;
+  animation-duration: 560ms;
+  animation-delay: 560ms;
+}
+
+/* 7. Assinatura — fade puro, sutil como uma marca */
+#hero .hero-signature {
+  animation-name: hero-fade;
+  animation-duration: 520ms;
+  animation-delay: 640ms;
+  animation-timing-function: ease;
+}
+
+/* 8. CTAs */
+#hero .hero2__actions {
+  animation-name: hero-rise-sm;
+  animation-duration: 500ms;
+  animation-delay: 720ms;
+}
+
+/* 9. Clients strip — entra por último, fade limpo */
+#hero .clients-strip {
+  animation-name: hero-fade;
+  animation-duration: 700ms;
+  animation-delay: 880ms;
+  animation-timing-function: ease;
+}
+
+/* Acessibilidade: respeita prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  #hero .hero2__status,
+  #hero .hero2__eyebrow,
+  #hero h1.hero2__title .hero2__line-in,
+  #hero .hero2__lede,
+  #hero .hero-proof-tags,
+  #hero .hero-signature,
+  #hero .hero2__actions,
+  #hero .clients-strip {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
