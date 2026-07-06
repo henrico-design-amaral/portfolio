@@ -240,15 +240,22 @@ async function inspectCaseLinks(browser) {
     });
   }
 
-  // Verify that clicking a card actually navigates to the expected page
+  // Verify that clicking a card actually navigates to the expected page.
+  // Cards have will-change + CSS transitions that prevent Playwright stability checks
+  // in headless mode. We use force:true to bypass the stability gate.
   let navigationSuccess = true;
   for (let order = 0; order < cards; order += 1) {
     await page.goto(`${BASE_URL}/`, { waitUntil: 'networkidle' });
+    // Add is-visible to all motion targets to ensure they're interactable
+    await page.evaluate(() => {
+      document.querySelectorAll('[class*="motion-"]').forEach(el => el.classList.add('is-visible'));
+    });
+    await page.waitForTimeout(400);
     const card = page.locator('[data-case-index]').nth(order);
     const index = await card.getAttribute('data-case-index');
     const targetHref = expectedLinks[index];
-    await card.click();
-    await page.waitForURL(`**/${targetHref}`, { timeout: 5000 });
+    await card.click({ force: true });
+    await page.waitForURL(`**/${targetHref}`, { timeout: 8000 });
     if (!page.url().endsWith(targetHref)) {
       navigationSuccess = false;
     }

@@ -78,7 +78,7 @@
       if (isInsideHeroChild(el)) continue;
 
       if (!el.style.getPropertyValue('--motion-delay') && !el.classList.contains('motion-hero')) {
-        el.style.setProperty('--motion-delay', Math.min(k * 28, 220) + 'ms');
+        el.style.setProperty('--motion-delay', Math.min(k * 20, 160) + 'ms');
       }
 
       observer.observe(el);
@@ -114,7 +114,7 @@
 
     for (var j = 0; j < sequence.length; j++) {
       var el = sequence[j];
-      el.style.setProperty('--motion-delay', Math.min(j * 95, 620) + 'ms');
+      el.style.setProperty('--motion-delay', Math.min(j * 60, 360) + 'ms');
       addVisible(el);
     }
   }

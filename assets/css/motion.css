@@ -7,15 +7,15 @@
 /* ── TOKENS ──────────────────────────────────────────────────────────────────── */
 :root {
   --motion-duration-fast: 420ms;
-  --motion-duration-medium: 780ms;
-  --motion-duration-base: 780ms;
-  --motion-duration-slow: 1080ms;
-  --motion-ease-organic: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-duration-medium: 820ms;
+  --motion-duration-base: 820ms;
+  --motion-duration-slow: 1200ms;
+  --motion-ease-organic: cubic-bezier(0.215, 0.61, 0.355, 1);
   --motion-ease-soft: cubic-bezier(0.25, 1, 0.5, 1);
   --motion-delay: 0ms;
-  --motion-blur-amount: 10px;
-  --motion-distance-y: 22px;
-  --motion-distance-x: 18px;
+  --motion-blur-amount: 6px;
+  --motion-distance-y: 12px;
+  --motion-distance-x: 10px;
 }
 
 /*
@@ -129,26 +129,26 @@ html.motion-ready .motion-impact.is-visible {
 .motion-hero,
 .motion-case-hero {
   --motion-duration-base: var(--motion-duration-slow);
-  --motion-distance-y: 28px;
+  --motion-distance-y: 14px;
 }
 
 .motion-section {
   --motion-duration-base: var(--motion-duration-slow);
-  --motion-distance-y: 24px;
+  --motion-distance-y: 12px;
 }
 
 .motion-card,
 .motion-case-block {
   --motion-duration-base: var(--motion-duration-medium);
-  --motion-distance-y: 20px;
+  --motion-distance-y: 10px;
 }
 
 .motion-image,
 .motion-diagram,
 .motion-panel {
   --motion-duration-base: var(--motion-duration-slow);
-  --motion-distance-y: 18px;
-  --motion-blur-amount: 8px;
+  --motion-distance-y: 10px;
+  --motion-blur-amount: 6px;
 }
 
 /* ── STAGGER DELAYS ──────────────────────────────────────────────────────────── */
@@ -238,9 +238,9 @@ html.motion-ready .motion-impact.is-visible {
 /* ── MOBILE VISIBILITY CALIBRATION ───────────────────────────────────────────── */
 @media (max-width: 767px) {
   :root {
-    --motion-duration-slow: 920ms;
-    --motion-distance-y: 34px;
-    --motion-blur-amount: 12px;
+    --motion-duration-slow: 1000ms;
+    --motion-distance-y: 10px;
+    --motion-blur-amount: 8px;
   }
 
   #hero {
@@ -250,8 +250,8 @@ html.motion-ready .motion-impact.is-visible {
 
   .motion-hero,
   .motion-case-hero {
-    --motion-distance-y: 34px;
-    --motion-blur-amount: 12px;
+    --motion-distance-y: 10px;
+    --motion-blur-amount: 8px;
   }
 
   .clients-strip {
@@ -363,4 +363,9 @@ html.motion-ready .motion-impact.is-visible {
   .about-card:hover {
     transform: none !important;
   }
+}
+
+/* ── VIEW TRANSITIONS (Page cross-fade) ──────────────────────────────────────── */
+@view-transition {
+  navigation: auto;
 }
