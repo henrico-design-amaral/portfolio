@@ -42,7 +42,7 @@
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   align-content: center;
-  width: min(100% - clamp(1.5rem, 3vw, 3rem), 1400px);
+  width: min(100%, 1440px);
   margin-inline: auto;
   column-gap: clamp(1rem, 2vw, 2rem);
 }
@@ -121,7 +121,7 @@
   max-width: 1368px;
   margin: 0 0 clamp(1.65rem, 3.4vh, 2.5rem);
   font-family: 'Syne', sans-serif;
-  font-size: 6rem !important;
+  font-size: clamp(3rem, 6.67vw, 6rem) !important;
   font-weight: 700;
   line-height: 0.94 !important;
   letter-spacing: 0 !important;
@@ -134,6 +134,19 @@
   font-style: italic;
   font-weight: 400;
   color: var(--color-accent, #7f4b2f);
+}
+
+.section-title-emphasis {
+  font-family: var(--font-display-serif, Georgia, "Times New Roman", serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-accent, #7f4b2f);
+}
+
+.section-header--dark .section-title-emphasis,
+.editorial-dark-section .section-title-emphasis,
+.contact-section .section-title-emphasis {
+  color: #f0ca85;
 }
 
 #hero h1.hero2__title .hero2__line,
@@ -195,12 +208,14 @@
   margin-top: clamp(1.5rem, 2.15vw, 2.15rem);
   margin-bottom: clamp(1.5rem, 2.15vw, 2.15rem);
   font-family: "Caveat", "Nothing You Could Do", "Homemade Apple", cursive;
-  font-size: clamp(1.58rem, 1.9vw, 2.18rem);
+  font-size: clamp(0.95rem, 2.25vw, 2rem);
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: 0.01em;
   color: var(--color-text-muted, #6f4931);
   opacity: 0.88;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 #hero .hero2__actions {
@@ -286,7 +301,7 @@
   #hero h1.hero2__title {
     grid-column-end: span 12;
     max-width: 100%;
-    font-size: clamp(3.35rem, 6.3vw, 3.75rem) !important;
+    font-size: clamp(3rem, 6.67vw, 4.75rem) !important;
   }
 
   #hero .hero2__body {
@@ -322,7 +337,7 @@
 
   #hero .hero2__content {
     display: block;
-    width: min(100% - 2rem, 100%);
+    width: min(100%, 1440px);
   }
 
   #hero .hero2__meta {
@@ -332,7 +347,7 @@
   #hero h1.hero2__title {
     max-width: 100%;
     margin-bottom: 1.75rem;
-    font-size: clamp(2.05rem, 8.5vw, 2.5rem) !important;
+    font-size: clamp(2.15rem, 9.5vw, 2.75rem) !important;
     line-height: 1 !important;
     letter-spacing: 0 !important;
     text-wrap: wrap;
@@ -373,6 +388,52 @@
   }
 }
 
+/* ── Editorial rhythm refinement ────────────────────────────────────────────
+   Keep the desktop hero spacious; on small screens, make the first action
+   discoverable without flattening the hierarchy or removing proof. */
+@media (max-width: 767px) {
+  #hero .hero2 {
+    padding-block: 5.25rem 5rem;
+  }
+
+  #hero .hero2__meta {
+    margin-bottom: 1.25rem;
+  }
+
+  #hero h1.hero2__title {
+    margin-bottom: 1.4rem;
+  }
+
+  #hero .hero2__lede {
+    line-height: 1.55;
+  }
+
+  #hero .hero-proof-tags {
+    gap: .5rem;
+    margin-top: 1rem;
+  }
+
+  #hero .hero-proof-tag {
+    min-height: 2rem;
+    padding-inline: .75rem;
+    font-size: .64rem;
+  }
+
+  #hero .hero-signature {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #hero .hero2__actions {
+    margin-top: 1.5rem;
+  }
+
+  #hero .clients-strip {
+    height: 3.25rem;
+    min-height: 3.25rem;
+  }
+}
+
 /* ── HERO ENTRANCE SEQUENCE ──────────────────────────────────────────────────── */
 /*
   Sistema de animação próprio da Hero — puro CSS, sem dependência do
@@ -381,22 +442,22 @@
 */
 
 @keyframes hero-fade {
-  from { opacity: 0; }
+  from { opacity: 0.78; }
   to   { opacity: 1; }
 }
 
 @keyframes hero-rise {
-  from { opacity: 0; transform: translateY(8px); }
+  from { opacity: 0.78; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes hero-rise-sm {
-  from { opacity: 0; transform: translateY(6px); }
+  from { opacity: 0.78; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes hero-appear {
-  from { opacity: 0; transform: translateY(4px) scale(0.97); }
+  from { opacity: 0.78; transform: translateY(4px) scale(0.985); }
   to   { opacity: 1; transform: translateY(0)  scale(1); }
 }
 
@@ -417,21 +478,21 @@
 #hero .hero2__status {
   animation-name: hero-appear;
   animation-duration: 420ms;
-  animation-delay: 60ms;
+  animation-delay: 20ms;
 }
 
 /* 2. Eyebrow — sobe suavemente */
 #hero .hero2__eyebrow {
   animation-name: hero-rise-sm;
   animation-duration: 560ms;
-  animation-delay: 140ms;
+  animation-delay: 60ms;
 }
 
 /* 3. H1 linha 1 — fade puro: texto grande não deve transladar */
 #hero h1.hero2__title .hero2__line:nth-child(1) .hero2__line-in {
   animation-name: hero-fade;
   animation-duration: 720ms;
-  animation-delay: 240ms;
+  animation-delay: 100ms;
   animation-timing-function: ease;
 }
 
@@ -439,7 +500,7 @@
 #hero h1.hero2__title .hero2__line:nth-child(2) .hero2__line-in {
   animation-name: hero-fade;
   animation-duration: 720ms;
-  animation-delay: 340ms;
+  animation-delay: 150ms;
   animation-timing-function: ease;
 }
 
@@ -447,21 +508,21 @@
 #hero .hero2__lede {
   animation-name: hero-rise;
   animation-duration: 660ms;
-  animation-delay: 460ms;
+  animation-delay: 200ms;
 }
 
 /* 6. Proof tags */
 #hero .hero-proof-tags {
   animation-name: hero-rise-sm;
   animation-duration: 560ms;
-  animation-delay: 560ms;
+  animation-delay: 260ms;
 }
 
 /* 7. Assinatura — fade puro, sutil como uma marca */
 #hero .hero-signature {
   animation-name: hero-fade;
   animation-duration: 520ms;
-  animation-delay: 640ms;
+  animation-delay: 320ms;
   animation-timing-function: ease;
 }
 
@@ -469,14 +530,14 @@
 #hero .hero2__actions {
   animation-name: hero-rise-sm;
   animation-duration: 500ms;
-  animation-delay: 720ms;
+  animation-delay: 380ms;
 }
 
 /* 9. Clients strip — entra por último, fade limpo */
 #hero .clients-strip {
   animation-name: hero-fade;
   animation-duration: 700ms;
-  animation-delay: 880ms;
+  animation-delay: 440ms;
   animation-timing-function: ease;
 }
 
@@ -496,3 +557,143 @@
   }
 }
 
+
+/* Exact 1440px hero content container: no lateral gutter */
+#hero .hero2__content {
+  width: min(100%, 1440px) !important;
+  max-width: 1440px !important;
+  margin-inline: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Mobile hero correction — final stylesheet wins over site.css */
+@media (max-width: 767px) {
+  #hero .hero2 {
+    padding: 4.75rem max(16px, env(safe-area-inset-right)) 3.25rem max(16px, env(safe-area-inset-left)) !important;
+  }
+
+  #hero .hero2__content {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #hero .hero2__meta {
+    margin-bottom: 0.9rem !important;
+    gap: 0.55rem !important;
+  }
+
+  #hero h1.hero2__title {
+    max-width: 11.8em !important;
+    margin-bottom: 1rem !important;
+    font-size: clamp(1.8rem, 8.1vw, 2.12rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.025em !important;
+    color: #472211 !important;
+  }
+
+  #hero h1.hero2__title .hero2__line,
+  #hero h1.hero2__title .hero2__line-in {
+    display: inline !important;
+  }
+
+  #hero h1.hero2__title .hero2__line:first-child::after {
+    content: " ";
+  }
+
+  #hero .hero2__lede {
+    font-size: 0.98rem !important;
+    line-height: 1.58 !important;
+    color: #533e2b !important;
+  }
+
+  #hero .hero-proof-tags {
+    gap: 0.45rem !important;
+    margin-top: 0.85rem !important;
+  }
+
+  #hero .hero-proof-tag {
+    min-height: 1.9rem !important;
+    padding: 0.35rem 0.62rem !important;
+    font-size: 0.7rem !important;
+    line-height: 1.2 !important;
+    color: #533e2b !important;
+    background: rgba(255, 248, 238, 0.54) !important;
+    border-color: rgba(71, 34, 17, 0.18) !important;
+  }
+
+  #hero .hero-signature {
+    margin-top: 0.9rem !important;
+    margin-bottom: 0.9rem !important;
+  }
+
+  #hero .hero2__actions {
+    margin-top: 1.15rem !important;
+  }
+}
+
+/* Final index nav alignment — hero.css loads after site.css */
+#nav > div:not(#mobile-menu),
+#nav .max-w-\[1440px\],
+#nav > .nav__inner {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 767px) {
+  #nav > div:not(#mobile-menu),
+  #nav .max-w-\[1440px\],
+  #nav > .nav__inner {
+    padding-left: max(16px, env(safe-area-inset-left)) !important;
+    padding-right: max(16px, env(safe-area-inset-right)) !important;
+  }
+}
+
+/* Final mobile nav/hero guard — keep fixed nav from covering hero content */
+@media (max-width: 767px) {
+  #hero.hero2-section {
+    padding-top: calc(92px + env(safe-area-inset-top)) !important;
+  }
+
+  #hero .hero2 {
+    min-height: auto !important;
+    padding-top: 1.35rem !important;
+    padding-bottom: 3.1rem !important;
+  }
+
+  #hero .hero2__meta {
+    color: #6b3f1c !important;
+  }
+
+  #hero .hero2__actions {
+    display: flex !important;
+    width: auto !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0.85rem 1.1rem !important;
+    margin-top: 1.15rem !important;
+  }
+
+  #hero .hero2__cta,
+  #hero .hero2__link {
+    width: auto !important;
+    min-height: 44px !important;
+    justify-content: center !important;
+    font-size: 0.92rem !important;
+    line-height: 1.2 !important;
+  }
+
+  #hero .hero2__cta {
+    padding: 0.82rem 1.25rem !important;
+  }
+
+  #hero .hero2__link {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 0.35rem 0 !important;
+    border-bottom: 1px solid currentColor !important;
+  }
+}

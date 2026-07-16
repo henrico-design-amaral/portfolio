@@ -41,6 +41,14 @@ coverage/
 .lighthouseci/
 playwright-report/
 test-results/
+output/
+.playwright-cli/
+.impeccable/
+
+# internal audit drafts pending public curation
+audit/
+docs/audits/cleanup/
+docs/audits/content/
 
 # logs
 *.log

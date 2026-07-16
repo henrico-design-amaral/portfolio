@@ -1,21 +1,28 @@
 /**
- * Organic & Semantic Motion System
+ * Organic & Semantic Motion System — v2
  * Henrico Amaral Portfolio
- * v20260610-motion-cache-zero-03
+ * v20260716-motion-v2-01
+ *
+ * Materiais: fade (texto/encerramentos), rise (blocos/headers),
+ * blur-in (mídia apenas), cross-fade de navegação (View Transitions).
+ * Coreografia das páginas de case por seletor semântico BEM
+ * (case-page--espresso), sem classes extras no HTML.
+ * Spec: docs/design/MOTION.md
  */
 
 /* ── TOKENS ──────────────────────────────────────────────────────────────────── */
 :root {
-  --motion-duration-fast: 420ms;
-  --motion-duration-medium: 820ms;
-  --motion-duration-base: 820ms;
-  --motion-duration-slow: 1200ms;
+  --motion-duration-fast: 240ms;
+  --motion-duration-medium: 480ms;
+  --motion-duration-base: 560ms;
+  --motion-duration-slow: 720ms;
   --motion-ease-organic: cubic-bezier(0.215, 0.61, 0.355, 1);
-  --motion-ease-soft: cubic-bezier(0.25, 1, 0.5, 1);
+  --motion-ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
   --motion-delay: 0ms;
-  --motion-blur-amount: 6px;
-  --motion-distance-y: 12px;
-  --motion-distance-x: 10px;
+  --motion-blur-amount: 0px;
+  --motion-blur-media: 8px;
+  --motion-distance-y: 16px;
+  --motion-distance-x: 12px;
 }
 
 /*
@@ -38,7 +45,8 @@ html:not(.motion-ready) .motion-diagram,
 html:not(.motion-ready) .motion-panel,
 html:not(.motion-ready) .motion-case-hero,
 html:not(.motion-ready) .motion-case-block,
-html:not(.motion-ready) .motion-impact {
+html:not(.motion-ready) .motion-impact,
+html:not(.motion-ready) .editorial-reveal {
   opacity: 1;
   transform: none;
   filter: none;
@@ -60,15 +68,21 @@ html.motion-ready .motion-diagram,
 html.motion-ready .motion-panel,
 html.motion-ready .motion-case-hero,
 html.motion-ready .motion-case-block,
-html.motion-ready .motion-impact {
+html.motion-ready .motion-impact,
+html.motion-ready .editorial-reveal {
   opacity: 0;
   transform: translate3d(0, var(--motion-distance-y), 0);
   filter: blur(var(--motion-blur-amount));
-  will-change: transform, opacity, filter;
   transition:
     opacity var(--motion-duration-base) var(--motion-ease-organic) var(--motion-delay),
     transform var(--motion-duration-base) var(--motion-ease-organic) var(--motion-delay),
     filter var(--motion-duration-base) var(--motion-ease-organic) var(--motion-delay);
+}
+
+/* Avoid compounding blur when a section and its children reveal together. */
+html.motion-ready [data-motion],
+html.motion-ready .motion-section {
+  filter: none;
 }
 
 /* ── REVEAL VARIATIONS ───────────────────────────────────────────────────────── */
@@ -89,8 +103,10 @@ html.motion-ready .motion-fade-in {
   filter: none;
 }
 
+/* Blur é material de mídia: imagem, painel, foto. Nunca texto corrido. */
 html.motion-ready .motion-blur-in {
-  filter: blur(var(--motion-blur-amount));
+  transform: scale(1.015);
+  filter: blur(var(--motion-blur-media));
 }
 
 html.motion-ready .motion-scale-in {
@@ -98,9 +114,8 @@ html.motion-ready .motion-scale-in {
 }
 
 html.motion-ready .motion-impact {
-  --motion-duration-base: var(--motion-duration-fast);
+  --motion-duration-base: var(--motion-duration-medium);
   --motion-distance-y: 12px;
-  --motion-blur-amount: 5px;
 }
 
 /* ── VISIBLE STATE ───────────────────────────────────────────────────────────── */
@@ -119,10 +134,12 @@ html.motion-ready .motion-diagram.is-visible,
 html.motion-ready .motion-panel.is-visible,
 html.motion-ready .motion-case-hero.is-visible,
 html.motion-ready .motion-case-block.is-visible,
-html.motion-ready .motion-impact.is-visible {
+html.motion-ready .motion-impact.is-visible,
+html.motion-ready .editorial-reveal.is-visible {
   opacity: 1;
   transform: translate3d(0, 0, 0) scale(1);
   filter: blur(0);
+  will-change: auto;
 }
 
 /* ── SEMANTIC DURATION TOKENS ────────────────────────────────────────────────── */
@@ -134,32 +151,38 @@ html.motion-ready .motion-impact.is-visible {
 
 .motion-section {
   --motion-duration-base: var(--motion-duration-slow);
-  --motion-distance-y: 12px;
+  --motion-distance-y: 14px;
 }
 
 .motion-card,
-.motion-case-block {
+.motion-case-block,
+.editorial-reveal {
   --motion-duration-base: var(--motion-duration-medium);
-  --motion-distance-y: 10px;
+  --motion-distance-y: 12px;
 }
 
+/* Mídia usa blur-in por padrão (fotos, painéis, telas). */
 .motion-image,
-.motion-diagram,
 .motion-panel {
   --motion-duration-base: var(--motion-duration-slow);
   --motion-distance-y: 10px;
-  --motion-blur-amount: 6px;
+  --motion-blur-amount: var(--motion-blur-media);
 }
 
-/* ── STAGGER DELAYS ──────────────────────────────────────────────────────────── */
+.motion-diagram {
+  --motion-duration-base: var(--motion-duration-slow);
+  --motion-distance-y: 0px;
+}
+
+/* ── STAGGER DELAYS (fallback estático p/ grids da home) ─────────────────────── */
 .motion-stagger > .motion-stagger-item:nth-child(1) { --motion-delay: 40ms; }
-.motion-stagger > .motion-stagger-item:nth-child(2) { --motion-delay: 110ms; }
-.motion-stagger > .motion-stagger-item:nth-child(3) { --motion-delay: 180ms; }
-.motion-stagger > .motion-stagger-item:nth-child(4) { --motion-delay: 250ms; }
-.motion-stagger > .motion-stagger-item:nth-child(5) { --motion-delay: 320ms; }
-.motion-stagger > .motion-stagger-item:nth-child(6) { --motion-delay: 390ms; }
-.motion-stagger > .motion-stagger-item:nth-child(7) { --motion-delay: 460ms; }
-.motion-stagger > .motion-stagger-item:nth-child(8) { --motion-delay: 530ms; }
+.motion-stagger > .motion-stagger-item:nth-child(2) { --motion-delay: 105ms; }
+.motion-stagger > .motion-stagger-item:nth-child(3) { --motion-delay: 170ms; }
+.motion-stagger > .motion-stagger-item:nth-child(4) { --motion-delay: 235ms; }
+.motion-stagger > .motion-stagger-item:nth-child(5) { --motion-delay: 300ms; }
+.motion-stagger > .motion-stagger-item:nth-child(6) { --motion-delay: 365ms; }
+.motion-stagger > .motion-stagger-item:nth-child(7) { --motion-delay: 430ms; }
+.motion-stagger > .motion-stagger-item:nth-child(8) { --motion-delay: 480ms; }
 
 /* ── PARALLAX SETUP ──────────────────────────────────────────────────────────── */
 .motion-parallax,
@@ -235,12 +258,128 @@ html.motion-ready .motion-impact.is-visible {
   animation-play-state: running;
 }
 
+/* ── CASE PAGES — HERO (entrada no load, CSS puro como hero.css) ─────────────── */
+@keyframes case-hero-fade {
+  from { opacity: 0.55; }
+  to   { opacity: 1; }
+}
+
+@keyframes case-hero-rise {
+  from { opacity: 0.4; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes case-hero-media {
+  from { opacity: 0.6; filter: blur(10px); transform: scale(1.025); }
+  to   { opacity: 1; filter: blur(0); transform: scale(1); }
+}
+
+.case-page--espresso .case-reframe__hero-media img {
+  animation: case-hero-media 950ms var(--motion-ease-soft) 40ms both;
+}
+
+.case-page--espresso .case-reframe__hero-kicker {
+  animation: case-hero-rise 520ms var(--motion-ease-organic) 140ms both;
+}
+
+.case-page--espresso .case-reframe__hero-copy h1 {
+  animation: case-hero-fade 720ms ease 200ms both;
+}
+
+.case-page--espresso .case-reframe__hero-subtitle {
+  animation: case-hero-rise 640ms var(--motion-ease-organic) 300ms both;
+}
+
+/* ── CASE PAGES — COREOGRAFIA DE SCROLL (semântica, sem classes extras) ──────── */
+/*
+  Cada reveal combina com o que revela:
+  rise      → headers, cards, chips, papéis, restrições, stats, lanes
+  blur-in   → plates (telas do produto) — mídia apenas
+  fade      → asides, diagramas (hub/cycle), reflexão — encerramentos quietos
+*/
+
+/* rise */
+html.motion-ready .case-page--espresso :is(
+  .case-reframe__section-header,
+  .case-reframe__lead,
+  .case-reframe__project-card,
+  .case-reframe__callout,
+  .case-reframe__chip,
+  .case-reframe__node,
+  .case-reframe__role,
+  .case-reframe__constraint,
+  .case-reframe__impact-stat,
+  .case-reframe__architecture-lane,
+  .case-reframe__section-body > p
+) {
+  opacity: 0;
+  transform: translate3d(0, 12px, 0);
+  transition:
+    opacity var(--motion-duration-medium) var(--motion-ease-organic) var(--motion-delay),
+    transform var(--motion-duration-medium) var(--motion-ease-organic) var(--motion-delay);
+}
+
+/* headers e leads mais lentos: marcam a cadência da narrativa */
+html.motion-ready .case-page--espresso :is(
+  .case-reframe__section-header,
+  .case-reframe__lead,
+  .case-reframe__project-card
+) {
+  transform: translate3d(0, var(--motion-distance-y), 0);
+  transition-duration: var(--motion-duration-slow);
+}
+
+/* blur-in — telas do produto */
+html.motion-ready .case-page--espresso .case-reframe__plate {
+  opacity: 0;
+  transform: scale(0.988);
+  filter: blur(var(--motion-blur-media));
+  transition:
+    opacity var(--motion-duration-slow) var(--motion-ease-soft) var(--motion-delay),
+    transform var(--motion-duration-slow) var(--motion-ease-soft) var(--motion-delay),
+    filter var(--motion-duration-slow) var(--motion-ease-soft) var(--motion-delay);
+}
+
+/* fade — apoio e encerramentos */
+html.motion-ready .case-page--espresso :is(
+  .case-reframe__hub-stage,
+  .case-reframe__cycle,
+  .case-reframe__reflection-copy
+) {
+  opacity: 0;
+  transition: opacity var(--motion-duration-slow) var(--motion-ease-organic) var(--motion-delay);
+}
+
+/* estado visível compartilhado */
+html.motion-ready .case-page--espresso :is(
+  .case-reframe__section-header,
+  .case-reframe__lead,
+  .case-reframe__project-card,
+  .case-reframe__callout,
+  .case-reframe__chip,
+  .case-reframe__node,
+  .case-reframe__role,
+  .case-reframe__constraint,
+  .case-reframe__impact-stat,
+  .case-reframe__architecture-lane,
+  .case-reframe__section-body > p,
+  .case-reframe__plate,
+  .case-reframe__hub-stage,
+  .case-reframe__cycle,
+  .case-reframe__reflection-copy
+).is-visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  will-change: auto;
+}
+
 /* ── MOBILE VISIBILITY CALIBRATION ───────────────────────────────────────────── */
 @media (max-width: 767px) {
   :root {
-    --motion-duration-slow: 1000ms;
-    --motion-distance-y: 10px;
-    --motion-blur-amount: 8px;
+    --motion-duration-slow: 560ms;
+    --motion-distance-y: 8px;
+    --motion-blur-media: 0px;
   }
 
   #hero {
@@ -250,8 +389,12 @@ html.motion-ready .motion-impact.is-visible {
 
   .motion-hero,
   .motion-case-hero {
-    --motion-distance-y: 10px;
-    --motion-blur-amount: 8px;
+    --motion-distance-y: 8px;
+  }
+
+  /* Hero do case sem blur em telas pequenas (custo de filter em GPU fraca) */
+  .case-page--espresso .case-reframe__hero-media img {
+    animation-name: case-hero-fade;
   }
 
   .clients-strip {
@@ -338,6 +481,26 @@ html.motion-ready .motion-impact.is-visible {
   html.motion-ready .motion-case-hero,
   html.motion-ready .motion-case-block,
   html.motion-ready .motion-impact,
+  html.motion-ready .editorial-reveal,
+  html.motion-ready .case-page--espresso .case-reframe__section-header,
+  html.motion-ready .case-page--espresso .case-reframe__lead,
+  html.motion-ready .case-page--espresso .case-reframe__project-card,
+  html.motion-ready .case-page--espresso .case-reframe__callout,
+  html.motion-ready .case-page--espresso .case-reframe__chip,
+  html.motion-ready .case-page--espresso .case-reframe__node,
+  html.motion-ready .case-page--espresso .case-reframe__role,
+  html.motion-ready .case-page--espresso .case-reframe__constraint,
+  html.motion-ready .case-page--espresso .case-reframe__impact-stat,
+  html.motion-ready .case-page--espresso .case-reframe__architecture-lane,
+  html.motion-ready .case-page--espresso .case-reframe__section-body > p,
+  html.motion-ready .case-page--espresso .case-reframe__plate,
+  html.motion-ready .case-page--espresso .case-reframe__hub-stage,
+  html.motion-ready .case-page--espresso .case-reframe__cycle,
+  html.motion-ready .case-page--espresso .case-reframe__reflection-copy,
+  .case-page--espresso .case-reframe__hero-media img,
+  .case-page--espresso .case-reframe__hero-kicker,
+  .case-page--espresso .case-reframe__hero-copy h1,
+  .case-page--espresso .case-reframe__hero-subtitle,
   .motion-parallax,
   .motion-parallax-soft,
   .motion-parallax-bg,
@@ -348,6 +511,7 @@ html.motion-ready .motion-impact.is-visible {
     transform: none !important;
     filter: none !important;
     transition: none !important;
+    animation: none !important;
   }
 
   .ev-track,
@@ -365,7 +529,24 @@ html.motion-ready .motion-impact.is-visible {
   }
 }
 
-/* ── VIEW TRANSITIONS (Page cross-fade) ──────────────────────────────────────── */
+/* ── VIEW TRANSITIONS (cross-fade entre páginas) ─────────────────────────────── */
 @view-transition {
   navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation-duration: 200ms;
+  animation-timing-function: var(--motion-ease-soft);
+}
+
+::view-transition-new(root) {
+  animation-duration: 300ms;
+  animation-timing-function: var(--motion-ease-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
 }

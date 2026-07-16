@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
 
-const port = 4173;
+const port = Number(process.env.PORTFOLIO_VERIFY_PORT) || 4173;
 const ROOT = path.resolve(__dirname, '..');
 
 const mimeTypes = {
@@ -23,6 +23,10 @@ const mimeTypes = {
 const server = http.createServer((req, res) => {
   const decodedUrl = decodeURIComponent(req.url.split('?')[0]);
   let filePath = path.join(ROOT, decodedUrl === '/' ? 'index.html' : decodedUrl);
+  const publicPath = path.join(ROOT, 'public', decodedUrl === '/' ? 'index.html' : decodedUrl);
+  if (!fs.existsSync(filePath) && fs.existsSync(publicPath)) {
+    filePath = publicPath;
+  }
   const ext = path.extname(filePath);
   let contentType = mimeTypes[ext] || 'application/octet-stream';
 

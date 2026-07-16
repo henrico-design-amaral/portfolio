@@ -1,621 +1,1244 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR" data-lang="pt">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Petrobras · SALA CAR — Henrico Amaral</title>
-<meta name="description" content="SALA CAR — Sistema de gestão de ocorrências ambientais offshore para a Petrobras. Case de Product Design de Henrico Amaral.">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/css/cases.css?v=20260701-release">
-</head>
-<body class="case-page">
-<a class="skip" href="#overview" data-t="skip">Ir para o conteúdo</a>
-<nav class="nav" id="nav" aria-label="Principal" data-t-aria-label="case.nav.aria">
-<div class="nav__inner">
-<a class="nav__cta" href="../index.html#cases" data-t="case.nav.back">← Voltar ao portfólio</a>
-<div class="lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
-<span class="lang-toggle__thumb" aria-hidden="true"></span>
-<button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT Português" aria-pressed="true">PT</button>
-<button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
-</div>
-</div>
-</nav>
-<main>
-<header class="case-hero" data-navdark data-screen-label="Case Hero">
-<div class="case-hero__img" style="background-image:url('../assets/img/cases/hero-salacar.png')">
-</div>
-<!-- Petrobras Behavioral SVG: radar sweep, environmental pulse rings, maritime routing drift -->
-<svg class="case-hero__behavioral-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-  <!-- Radar sweep centered mid-right of viewport -->
-  <g style="transform-origin:68% 38%;animation:petro-radar 22s linear infinite">
-    <line x1="68" y1="38" x2="68" y2="10" stroke="#BE9C6E" stroke-width="0.35" opacity="0.3"/>
-  </g>
-  <!-- Concentric pulse rings -->
-  <circle cx="68" cy="38" r="10" fill="none" stroke="#BE9C6E" stroke-width="0.18" opacity="0.18" style="transform-origin:68% 38%;animation:petro-pulse-ring 12s ease-in-out infinite"/>
-  <circle cx="68" cy="38" r="18" fill="none" stroke="#BE9C6E" stroke-width="0.14" opacity="0.14" style="transform-origin:68% 38%;animation:petro-pulse-ring 12s ease-in-out infinite 4s"/>
-  <circle cx="68" cy="38" r="27" fill="none" stroke="#BE9C6E" stroke-width="0.10" opacity="0.10" style="transform-origin:68% 38%;animation:petro-pulse-ring 12s ease-in-out infinite 8s"/>
-  <!-- Maritime routing path — dashed, drifts across the lower band -->
-  <path d="M-10,72 Q22,66 35,72 T68,68 T95,72 T120,68" fill="none" stroke="#BE9C6E" stroke-width="0.28" stroke-dasharray="3 7" opacity="0.18" style="animation:petro-maritime 32s linear infinite"/>
-  <!-- Node breathe anchors along the route -->
-  <circle cx="35" cy="72" r="1.2" fill="#BE9C6E" opacity="0.2" style="transform-origin:35% 72%;animation:petro-node-breathe 9s ease-in-out infinite"/>
-  <circle cx="68" cy="68" r="1.2" fill="#BE9C6E" opacity="0.2" style="transform-origin:68% 68%;animation:petro-node-breathe 9s ease-in-out infinite 4.5s"/>
-</svg>
-<div class="case-hero__in">
-<div class="case-hero__eyebrow">
-  <span class="case-hero__pill mono" data-t="case.petrobras.hero.eyebrow">01 · Energia · Operações Críticas Offshore</span>
-</div>
-<div class="case-hero__stack">
-  <span class="case-hero__client">Petrobras</span>
-  <h1>SALA CAR</h1>
-  <p class="case-hero__lead" data-t="case.petrobras.hero.lead">Sistema de gestão de ocorrências ambientais offshore. Coordenação em tempo real entre equipes operacionais, dados geoespaciais e obrigações regulatórias em operações de petróleo e gás.</p>
-</div>
-<div class="case-hero__scroll" aria-hidden="true">
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6.5L9 11.5L14 6.5" stroke="rgba(255,248,238,0.52)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</div>
-</div>
-</header>
-<section class="case-section case-section--light case-spec project-info" id="case-info" aria-label="Informações do Projeto">
-<div class="project-info__inner">
-<div class="project-info__intro">
-<p class="project-info__eyebrow mono" data-t="case.info.eyebrow">Informações do Projeto</p>
-<h2 data-t="case.petrobras.info.title">SALA CAR — Central de Monitoramento Ambiental Offshore</h2>
-<p data-t="case.petrobras.info.intro">Projeto desenvolvido para apoiar equipes responsáveis pelo monitoramento e resposta a incidentes ambientais.</p>
-</div>
-<dl class="project-info__grid">
-<div class="project-info__cell"><dt>Product Designer</dt><dd>Henrico Amaral</dd></div>
-<div class="project-info__cell"><dt>UX Researcher</dt><dd>Karolinne Santos</dd></div>
-<div class="project-info__cell"><dt data-t="case.dt.company">Empresa</dt><dd>Mirante Tecnologia</dd></div>
-<div class="project-info__cell"><dt data-t="case.dt.client">Cliente</dt><dd>Petrobras</dd></div>
-<div class="project-info__cell"><dt data-t="case.dt.period">Período</dt><dd data-t="case.petrobras.info.dd.period">Abril 2023 — Março 2024</dd></div>
-<div class="project-info__cell"><dt data-t="case.dt.duration">Duração</dt><dd data-t="case.petrobras.info.dd.duration">12 meses</dd></div>
-<div class="project-info__cell"><dt data-t="case.dt.type">Tipo</dt><dd data-t="case.petrobras.info.dd.type">Plataforma interna de monitoramento ambiental</dd></div>
-<div class="project-info__cell"><dt data-t="case.dt.platform">Plataforma</dt><dd data-t="case.petrobras.info.dd.platform">Web · Desktop operacional</dd></div>
-<div class="project-info__cell project-info__cell--wide"><dt data-t="case.dt.scope">Escopo</dt><dd data-t="case.petrobras.info.dd.scope">Discovery · Arquitetura da informação · UX/UI · Prototipação</dd></div>
-</dl>
-<p class="project-info__closing" data-t="case.petrobras.info.closing">Mais do que um projeto de interface, este trabalho envolveu compreender como uma operação crítica funciona no dia a dia.</p>
-</div>
-</section>
-<section class="case-section case-section--light case-overview" id="overview" data-screen-label="Overview">
-<div class="case-container case-overview__grid">
-<div class="case-overview__header">
-<div class="overview__kicker mono">
-<span class="ln">
-</span><span data-t="case.kicker.overview">Projeto · Contexto · Escopo</span></div>
-<h2 data-t="case.petrobras.overview.title">Gestão de ocorrências ambientais offshore.</h2>
-<p data-t="case.petrobras.overview.desc">O SALA CAR organiza o ciclo completo de uma ocorrência ambiental: da detecção à resposta, da classificação ao encerramento regulatório.</p>
-</div>
-<dl class="subfacts" data-d="1">
-<div class="subfacts__row">
-<dt data-t="case.dt.system">Sistema</dt>
-<dd>SALA CAR</dd>
-</div>
-<div class="subfacts__row">
-<dt data-t="case.dt.domain">Domínio</dt>
-<dd data-t="case.petrobras.overview.dd.domain">Gestão ambiental · Energia</dd>
-</div>
-<div class="subfacts__row">
-<dt data-t="case.dt.users">Usuários</dt>
-<dd data-t="case.petrobras.overview.dd.users">Técnicos e coordenadores</dd>
-</div>
-<div class="subfacts__row">
-<dt data-t="case.dt.result">Resultado</dt>
-<dd data-t="case.petrobras.overview.dd.result">Estado unificado e rastreável</dd>
-</div>
-</dl>
-</div>
-</section>
-<section class="case-section case-section--light" data-screen-label="01 Contexto">
-<div class="case-container">
-<header class="case-section__header">
-<div class="section-header">
-<span class="section-kicker"><span data-t="case.lbl.01">Contexto Operacional</span></span>
-<div class="section-header-grid">
-<div class="section-header-title-col">
-<h2 class="section-header-title" data-t="case.petrobras.s01.title">O que é operar ambientalmente offshore.</h2>
-</div>
-<div class="section-header-subtitle">
-<div class="section-microstats section-microcopy"><span data-t="case.lbl.01.right">BASE REAL DA OPERAÇÃO</span></div>
-<p data-t="case.petrobras.s01.p1">Operações de petróleo offshore estão sujeitas a regulações ambientais federais que exigem monitoramento contínuo, registro de ocorrências e capacidade de resposta documentada.</p>
-</div>
-</div>
-</div>
-<div class="case-section__lead">
-<p data-t="case.petrobras.s01.p2">Qualquer evento precisa ser registrado, classificado, tratado e encerrado com rastreabilidade completa, envolvendo técnicos nas plataformas, analistas em terra, coordenadores e gestores de conformidade.</p>
-</div>
-</header>
-<div class="case-section__body">
-<div class="diagram">
-<div class="diagram__flow">
-<div class="chips">
-<span class="chip" data-t="case.petrobras.s01.chip1">Monitoramento orbital</span>
-<span class="chip">OSD</span>
-<span class="chip">Poseidon II</span>
-<span class="chip" data-t="case.petrobras.s01.chip4">Sobrevoo aéreo (LES)</span>
-<span class="chip" data-t="case.petrobras.s01.chip5">Unidade marítima</span>
-<span class="chip" data-t="case.petrobras.s01.chip6">Embarcação de apoio</span>
-<span class="chip" data-t="case.petrobras.s01.chip7">Centro de controle (CAE)</span>
-</div>
-<span class="diagram__arrow">→</span>
-<span class="node node--alert" data-t="case.petrobras.s01.node">Nova ocorrência</span>
-</div>
-<p class="diagram__cap" data-t="case.petrobras.s01.cap">Sete canais independentes podiam originar uma ocorrência ambiental.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="case-section case-section--warm" data-screen-label="02 Legado">
-<div class="case-container">
-<header class="case-section__header">
-<div class="section-header">
-<span class="section-kicker"><span data-t="case.lbl.02">Arquitetura Legada</span></span>
-<div class="section-header-grid">
-<div class="section-header-title-col">
-<h2 class="section-header-title" data-t="case.petrobras.s02.title">Antes do sistema, cada etapa era registrada isoladamente.</h2>
-</div>
-<div class="section-header-subtitle">
-<div class="section-microstats section-microcopy"><span data-t="case.lbl.02.right">ONDE O FLUXO QUEBRAVA</span></div>
-<p data-t="case.petrobras.s02.p1">Informações sobre um único incidente podiam estar distribuídas em planilhas locais, e-mails, sistemas legados de diferentes áreas e PDFs gerados manualmente.</p>
-</div>
-</div>
-</div>
-<div class="case-section__lead">
-<p data-t="case.petrobras.s02.p2">O ICS 214 registrava a cronologia. Planilhas controlavam recursos. Relatórios técnicos consolidavam análises geoespaciais. Nenhum desses registros compartilhava uma estrutura operacional comum.</p>
-</div>
-</header>
-<div class="case-section__body">
-<div class="diagram diagram--legacy">
-<div class="diagram__flow">
-<div class="chips">
-<span class="chip chip--dim" data-t="case.petrobras.s02.chip1">Planilhas locais de recursos</span>
-<span class="chip chip--dim" data-t="case.petrobras.s02.chip2">Relatórios técnicos em PDF</span>
-<span class="chip chip--dim" data-t="case.petrobras.s02.chip3">Controle cronológico manual</span>
-<span class="chip chip--dim" data-t="case.petrobras.s02.chip4">Sistemas de geoprocessamento</span>
-</div>
-<span class="diagram__arrow">⇢</span>
-<span class="node" data-t="case.petrobras.s02.node">Registros paralelos</span>
-</div>
-<p class="diagram__cap" data-t="case.petrobras.s02.cap">A estrutura isolada limitava o compartilhamento de contexto operacional.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="case-section case-section--light" data-screen-label="03 Problema">
-<div class="case-container">
-<header class="case-section__header">
-<div class="section-header">
-<span class="section-kicker"><span data-t="case.lbl.03">Definição do Problema</span></span>
-<div class="section-header-grid">
-<div class="section-header-title-col">
-<h2 class="section-header-title" data-t="case.petrobras.s03.title">O custo estava em montar o contexto operacional.</h2>
-</div>
-<div class="section-header-subtitle">
-<div class="section-microstats section-microcopy"><span data-t="case.lbl.03.right">O CUSTO ESCONDIDO</span></div>
-<p class="lead" data-t="case.petrobras.s03.lead">O problema não era falta de dados — a operação já produzia informação suficiente.</p>
-</div>
-</div>
-</div>
-<div class="case-section__lead">
-<p data-t="case.petrobras.s03.p1">A fragmentação gerava atrasos na classificação de incidentes, esforço duplicado no registro, risco de resposta descoordenada e exposição regulatória.</p>
-<p data-t="case.petrobras.s03.p2">O gargalo estava na energia gasta para cruzar dados dispersos sob pressão de tempo.</p>
-</div>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Case Petrobrás — Henrico Amaral</title>
+    <meta
+      name="description"
+      content="SALA CAR — plataforma interna de monitoramento e resposta a ocorrências ambientais offshore."
+    />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      as="image"
+      href="../assets/img/cases/hero-petrobras.png"
+      fetchpriority="high"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/cases.css?v=20260716-motion-v2"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/motion.css?v=20260716-motion-v2"
+    />
+  </head>
+  <body class="case-page--espresso">
+    <a class="skip" href="#informacoes" data-t="skip">Ir para o conteúdo</a>
+    <div class="case-reframe__first-fold">
+      <nav
+        class="case-rail"
+        id="nav"
+        aria-label="Principal"
+        data-t-aria-label="case.nav.aria"
+      >
+        <div class="case-rail__inner">
+          <a
+            class="case-rail__back"
+            href="../index.html#cases"
+            data-t="case.nav.back"
+            >← Voltar ao portfólio</a
+          >
+          <div
+            class="lang-toggle"
+            data-lang-toggle=""
+            data-current-lang="pt"
+            role="group"
+            aria-label="Selecionar idioma"
+          >
+            <span class="lang-toggle__thumb" aria-hidden="true"></span>
+            <button
+              type="button"
+              class="lang-toggle__option"
+              data-lang="pt"
+              aria-label="PT Português"
+              aria-pressed="true"
+            >
+              PT
+            </button>
+            <button
+              type="button"
+              class="lang-toggle__option"
+              data-lang="en"
+              aria-label="EN English"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+        </div>
+      </nav>
 
-</div>
-</section>
-<section class="case-section case-section--warm" data-screen-label="04 Atuação">
-<div class="case-container">
-<header class="case-section__header">
-<div class="section-header">
-<span class="section-kicker"><span data-t="case.lbl.04">Atuação do Designer</span></span>
-<div class="section-header-grid">
-<div class="section-header-title-col">
-<h2 class="section-header-title" data-t="case.petrobras.s04.title">Definição estrutural e design de interface.</h2>
-</div>
-<div class="section-header-subtitle">
-<div class="section-microstats section-microcopy"><span data-t="case.lbl.04.right">O QUE EU RESOLVI NO PRODUTO</span></div>
-<p data-t="case.petrobras.s04.p1">Atuei no mapeamento dos fluxos e no desenho das interfaces unificadas, traduzindo o ciclo de resposta em uma arquitetura de produto robusta.</p>
-</div>
-</div>
-</div>
-</header>
-<div class="case-section__body">
-<div class="role-grid">
-<article class="role">
-<span class="no">01</span>
-<h3 data-t="case.petrobras.s04.role1.title">Arquitetura centrada na ocorrência</h3>
-<p data-t="case.petrobras.s04.role1.desc">Organizar todo o sistema em torno do evento de ocorrência.</p>
-</article>
-<article class="role">
-<span class="no">02</span>
-<h3 data-t="case.petrobras.s04.role2.title">Módulos operacionais</h3>
-<p data-t="case.petrobras.s04.role2.desc">Definir entidades para monitoramento, mobilização, cronologia e encerramento.</p>
-</article>
-<article class="role">
-<span class="no">03</span>
-<h3 data-t="case.petrobras.s04.role3.title">Linha do tempo ICS 214</h3>
-<p data-t="case.petrobras.s04.role3.desc">Transformar o registro cronológico em eixo de navegação e auditoria.</p>
-</article>
-<article class="role">
-<span class="no">04</span>
-<h3 data-t="case.petrobras.s04.role4.title">Geoprocessamento integrado</h3>
-<p data-t="case.petrobras.s04.role4.desc">Embarcar ferramentas de mapa diretamente no fluxo operacional.</p>
-</article>
-<article class="role">
-<span class="no">05</span>
-<h3 data-t="case.petrobras.s04.role5.title">Telas de controle e resposta</h3>
-<p data-t="case.petrobras.s04.role5.desc">Prototipar interfaces críticas para técnicos e gestores.</p>
-</article>
-<article class="role">
-<span class="no">06</span>
-<h3 data-t="case.petrobras.s04.role6.title">Pesquisa em campo</h3>
-<p data-t="case.petrobras.s04.role6.desc">Ler artefatos legados para fundamentar decisões.</p>
-</article>
-</div>
-</div>
-</div>
-</section>
-<section class="case-section case-section--light" data-screen-label="05 Restrições">
-<div class="case-container">
-<header class="case-section__header">
-<div class="section-header">
-<span class="section-kicker"><span data-t="case.lbl.05">Restrições do Projeto</span></span>
-<div class="section-header-grid">
-<div class="section-header-title-col">
-<h2 class="section-header-title" data-t="case.restr.title">Restrições do projeto.</h2>
-</div>
-<div class="section-header-subtitle">
-<div class="section-microstats section-microcopy"><span data-t="case.lbl.05.right">LIMITES QUE GUIARAM A SOLUÇÃO</span></div>
-<p data-t="case.restr.intro">Condições que limitaram a solução e orientaram as decisões de arquitetura.</p>
-</div>
-</div>
-</div>
-</header>
-<div class="case-section__body">
-<div class="panel">
-<div class="panel__head">
-<span data-t="case.restr.panelHead">Condições de Contorno</span>
-<span>04</span>
-</div>
-<ul>
-<li>
-<span>
-<strong data-t="case.petrobras.s05.item1.title">Aderência ao fluxo real</strong>
-<span class="ds" data-t="case.petrobras.s05.item1.desc">Refletir a operação real e exigências regulatórias.</span>
-</span>
-</li>
-<li>
-<span>
-<strong data-t="case.petrobras.s05.item2.title">Rastreabilidade</strong>
-<span class="ds" data-t="case.petrobras.s05.item2.desc">Toda ação e mudança de estado precisava gerar registro auditável.</span>
-</span>
-</li>
-<li>
-<span>
-<strong data-t="case.petrobras.s05.item3.title">Colaboração</strong>
-<span class="ds" data-t="case.petrobras.s05.item3.desc">Equipes offshore e analistas em terra precisavam cooperar sobre o mesmo evento.</span>
-</span>
-</li>
-<li>
-<span>
-<strong data-t="case.petrobras.s05.item4.title">Uso sob pressão</strong>
-<span class="ds" data-t="case.petrobras.s05.item4.desc">Registrar dados precisava ser mais simples que preencher planilhas.</span>
-</span>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section class="case-section case-section--dark" data-navdark data-screen-label="06 Decisão">
-<div class="case-container">
-<header class="case-section__header">
-<div class="section-header">
-<span class="section-kicker"><span data-t="case.lbl.06">Decisão Estrutural</span></span>
-<div class="section-header-grid">
-<div class="section-header-title-col">
-<h2 class="section-header-title" data-t="case.petrobras.s06.title">A ocorrência como elemento estruturador do fluxo.</h2>
-</div>
-<div class="section-header-subtitle">
-<div class="section-microstats section-microcopy"><span data-t="case.lbl.06.right">A ESCOLHA QUE ORGANIZOU O SISTEMA</span></div>
-<p data-t="case.petrobras.s06.p1">Propus reorganizar o sistema usando a ocorrência como unidade central do fluxo de trabalho. Todas as dimensões de um incidente passam a viver no mesmo contexto.</p>
-</div>
-</div>
-</div>
-</header>
-<div class="case-section__body">
-<div class="hub">
-<div class="hub__center">
-<span class="core" data-t="case.petrobras.s06.hubCenter">Ocorrência</span>
-</div>
-<div class="hub__ring">
-<span class="chip" data-t="case.petrobras.s06.chip1">Monitoramento</span>
-<span class="chip" data-t="case.petrobras.s06.chip2">Geoprocessamento</span>
-<span class="chip" data-t="case.petrobras.s06.chip3">Mobilização</span>
-<span class="chip" data-t="case.petrobras.s06.chip4">Resposta</span>
-<span class="chip" data-t="case.petrobras.s06.chip5">Cronologia</span>
-<span class="chip" data-t="case.petrobras.s06.chip6">Encerramento</span>
-</div>
-</div>
-<p class="decision-note" data-t="case.decision.cycleLabel">Ciclo operacional estruturado:</p>
-<div class="lifecycle">
-<span class="st" data-t="case.petrobras.s06.st1">Registro</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.petrobras.s06.st2">Interpretação</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.petrobras.s06.st3">Classificação</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.petrobras.s06.st4">Mobilização</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.petrobras.s06.st5">Resposta</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.petrobras.s06.st6">Cronologia</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.petrobras.s06.st7">Consolidação</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.petrobras.s06.st8">Encerramento</span>
-</div>
-</div>
-</div>
-</section>
-<section class="case-section case-section--light" data-screen-label="07 Escala">
-<div class="case-container">
-<header class="case-section__header">
-<div class="section-header">
-<span class="section-kicker"><span data-t="case.lbl.07">Escala Operacional</span></span>
-<div class="section-header-grid">
-<div class="section-header-title-col">
-<h2 class="section-header-title" data-t="case.petrobras.s07.title">Telas, fluxos e interações integradas.</h2>
-</div>
-<div class="section-header-subtitle">
-<div class="section-microstats section-microcopy"><span data-t="case.lbl.07.right">COMO ISSO APARECEU NAS TELAS</span></div>
-<p data-t="case.petrobras.s07.p1">A sequência de telas estrutura o monitoramento operacional, a mobilização de embarcações e a análise contextual por mapas.</p>
-</div>
-</div>
-</div>
-</header>
+      <header class="case-reframe__hero" id="topo">
+        <div class="case-reframe__hero-media">
+          <img
+            src="../assets/img/cases/hero-petrobras.png"
+            alt="SALA CAR — central de monitoramento ambiental offshore"
+          />
+        </div>
+        <div class="case-reframe__hero-texture" aria-hidden="true"></div>
+        <div class="case-reframe__hero-copy">
+          <div>
+            <p
+              class="case-reframe__hero-kicker"
+              data-t="case.petrobras.hero.kicker"
+            >
+              01 · Energia · Operações críticas offshore
+            </p>
+            <h1 data-t="case.petrobras.hero.project">Petrobrás</h1>
+            <h2
+              class="case-reframe__hero-subtitle"
+              data-t="case.petrobras.hero.lead"
+            >
+              Sistema de gestão de ocorrências ambientais offshore, com dados
+              geoespaciais, equipes operacionais e obrigações regulatórias no
+              mesmo fluxo de trabalho.
+            </h2>
+          </div>
+        </div>
+      </header>
+    </div>
 
-</div>
-<div class="case-container case-media-section figs">
-<figure class="case-media-block figure">
-<figcaption class="case-media-header figure__cap">
-<h3 data-t="case.petrobras.s07.cap1.h3">Visão geral e controle de ocorrências</h3>
-<p data-t="case.petrobras.s07.cap1.p">A listagem deixou de ser apenas uma tabela e passou a consolidar classificação de risco, tamanho estimado da mancha e recursos alocados.</p>
-</figcaption>
-<div class="case-media-frame figure__frame screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-01-listagem-ocorrencias.webp" alt="Listagem e controle de ocorrências no SALA CAR" data-t-alt="case.petrobras.s07.alt1" loading="lazy">
-</div>
-</figure>
-<div class="case-media-block">
-<header class="case-media-header figure__cap">
-<h3 data-t="case.petrobras.s07.cap2.h3">Classificação e origem</h3>
-<p data-t="case.petrobras.s07.cap2.p">Detalhes e classificação estruturada da emergência ambiental com integração de dados de origem do geoprocessamento.</p>
-</header>
-<div class="case-media-grid figpair">
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-02-ocorrencia-classificada.webp" alt="Ocorrência classificada" data-t-alt="case.petrobras.s07.alt2" loading="lazy">
-</div>
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-03-origem-geoprocessamento.webp" alt="Origem de geoprocessamento integrada" data-t-alt="case.petrobras.s07.alt3" loading="lazy">
-</div>
-</div>
-</div>
-<figure class="case-media-block figure">
-<figcaption class="case-media-header figure__cap">
-<h3 data-t="case.petrobras.s07.cap3.h3">Aba ICS 214 — cronologia da ocorrência</h3>
-<p data-t="case.petrobras.s07.cap3.p">O log de eventos foi inserido na navegação central do incidente para gerar rastreabilidade nativa.</p>
-</figcaption>
-<div class="case-media-frame figure__frame screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-04-cronologia-ics214.webp" alt="Aba ICS 214 com cronologia da ocorrência" data-t-alt="case.petrobras.s07.alt4" loading="lazy">
-</div>
-</figure>
-<div class="case-media-block">
-<header class="case-media-header figure__cap">
-<h3 data-t="case.petrobras.s07.cap4.h3">Fluxo de mobilização</h3>
-<p data-t="case.petrobras.s07.cap4.p">Seleção, simulação e confirmação visual de embarcações envolvidas na resposta operacional.</p>
-</header>
-<div class="case-media-grid figpair">
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-05-mobilizar-embarcacao.webp" alt="Mobilização de embarcação" data-t-alt="case.petrobras.s07.alt5" loading="lazy">
-</div>
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-06-embarcacao-mobilizada.webp" alt="Embarcação mobilizada" data-t-alt="case.petrobras.s07.alt6" loading="lazy">
-</div>
-</div>
-</div>
-<figure class="case-media-block figure">
-<figcaption class="case-media-header figure__cap">
-<h3 data-t="case.petrobras.s07.cap5.h3">Gestão e painel de embarcações</h3>
-<p data-t="case.petrobras.s07.cap5.p">Painel consolidado com embarcações disponíveis, capacidade operacional e posição de monitoramento.</p>
-</figcaption>
-<div class="case-media-frame figure__frame screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-07-painel-embarcacoes.webp" alt="Painel de embarcações disponíveis" data-t-alt="case.petrobras.s07.alt7" loading="lazy">
-</div>
-</figure>
-<figure class="case-media-block figure">
-<figcaption class="case-media-header figure__cap">
-<h3 data-t="case.petrobras.s07.cap6.h3">Módulo de geoprocessamento e mapas</h3>
-<p data-t="case.petrobras.s07.cap6.p">Ferramenta de mapa tempo real no tratamento do incidente.</p>
-</figcaption>
-<div class="case-media-frame figure__frame screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-08-edicao-mapas.webp" alt="Módulo de geoprocessamento e edição de mapas" data-t-alt="case.petrobras.s07.alt8" loading="lazy">
-</div>
-</figure>
-<div class="case-media-block">
-<header class="case-media-header figure__cap">
-<h3 data-t="case.petrobras.s07.cap7.h3">Monitoramento por Sobrevoo LES</h3>
-<p data-t="case.petrobras.s07.cap7.p">Integração do aplicativo mobile de campo e consolidação de imagens de satélite e rotas de sobrevoo.</p>
-</header>
-<div class="case-media-grid figpair">
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-sobrevoo-01.webp" alt="LES overflight mobile" data-t-alt="case.petrobras.s07.alt9" loading="lazy">
-</div>
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-sobrevoo-02.webp" alt="LES overflight mobilized" data-t-alt="case.petrobras.s07.alt10" loading="lazy">
-</div>
-</div>
-<div class="case-media-grid figpair" style="margin-top:20px;">
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-sobrevoo-03.webp" alt="LES overflight details" data-t-alt="case.petrobras.s07.alt9" loading="lazy">
-</div>
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-sobrevoo-04.webp" alt="LES overflight listing" data-t-alt="case.petrobras.s07.alt9" loading="lazy">
-</div>
-</div>
-</div>
-<div class="case-media-block">
-<header class="case-media-header figure__cap">
-<h3 data-t="case.petrobras.s07.cap8.h3">Módulo Poseidon II</h3>
-<p data-t="case.petrobras.s07.cap8.p">Acompanhamento de dados de aeronaves de asa fixa para dispersão e mapeamento tático.</p>
-</header>
-<div class="case-media-grid figpair">
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-poseidon-01.webp" alt="Poseidon listing" data-t-alt="case.petrobras.s07.alt11" loading="lazy">
-</div>
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-poseidon-02.webp" alt="Poseidon edit" data-t-alt="case.petrobras.s07.alt11" loading="lazy">
-</div>
-</div>
-</div>
-<figure class="case-media-block figure">
-<figcaption class="case-media-header figure__cap">
-<h3 data-t="case.petrobras.s07.cap9.h3">Finalização de Ocorrência</h3>
-<p data-t="case.petrobras.s07.cap9.p">Camada de consolidação e encerramento, gerando justificativas e relatórios regulatórios formais para o IBAMA.</p>
-</figcaption>
-<div class="case-media-frame figure__frame screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-finalizacao.webp" alt="Finalizacao ocorrencia" data-t-alt="case.petrobras.s07.alt12" loading="lazy">
-</div>
-</figure>
-<div class="case-media-block">
-<header class="case-media-header figure__cap">
-<h3 data-t="case.petrobras.s07.cap10.h3">Detalhes e Recursos</h3>
-<p data-t="case.petrobras.s07.cap10.p">Detalhes e histórico de trajetórias de embarcações de apoio offshore e status de acionamento.</p>
-</header>
-<div class="case-media-grid figpair">
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-embarcacao-details.webp" alt="Embarcacao detalhes" data-t-alt="case.petrobras.s07.alt13" loading="lazy">
-</div>
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-embarcacao-actioned.webp" alt="Embarcacao acionada" data-t-alt="case.petrobras.s07.alt13" loading="lazy">
-</div>
-</div>
-</div>
-<figure class="case-media-block figure">
-<figcaption class="case-media-header figure__cap">
-<h3 data-t="case.petrobras.s07.cap7.h3">Módulo de Ocorrências</h3>
-<p data-t="case.petrobras.s07.cap10.p">Visualização de ocorrência com tipo de emergência não classificada sob triagem.</p>
-</figcaption>
-<div class="case-media-frame figure__frame screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-ocorrencia-unclassified.webp" alt="Ocorrencia nao classificada" data-t-alt="case.petrobras.s07.alt13" loading="lazy">
-</div>
-</figure>
-<figure class="case-media-block figure">
-<figcaption class="case-media-header figure__cap">
-<h3 data-t="case.petrobras.flow.title">Antes e Depois: O Fluxo Operacional SALA CAR</h3>
-<p data-t="case.petrobras.flow.p1">O fluxo abaixo ilustra o mapeamento do ecossistema de resposta a incidentes. A unificação digital em uma linha do tempo única e painéis contínuos eliminou a fragmentação do processo legado.</p>
-</figcaption>
-<div class="case-media-frame figure__frame screen-img">
-<img src="../assets/img/case-screens/petrobras/petrobras-fluxo-completo.webp" alt="Fluxo operacional completo SALA CAR" data-t-alt="case.petrobras.flow.cap1" loading="lazy">
-</div>
-</figure>
-</div>
-</section>
-<section class="case-section case-section--warm" data-screen-label="08 Limitações">
-<div class="case-container">
-<header class="case-section__header">
-<div class="section-header">
-<span class="section-kicker"><span data-t="case.lbl.08">Limitações Estruturais</span></span>
-<div class="section-header-grid">
-<div class="section-header-title-col">
-<h2 class="section-header-title" data-t="case.petrobras.s08.title">Nem tudo pôde ser integrado de imediato.</h2>
-</div>
-<div class="section-header-subtitle">
-<div class="section-microstats section-microcopy"><span data-t="case.lbl.08.right">O QUE FICOU FORA DO NÚCLEO</span></div>
-<p data-t="case.petrobras.s08.p1">Limitações técnicas e regulações exigiram manter alguns fluxos temporariamente externos ou dependentes de processos manuais.</p>
-</div>
-</div>
-</div>
-<div class="case-section__lead">
-<p data-t="case.petrobras.s08.p2">Integrações com sensores satelitais herdados permaneceram em canais paralelos e o fechamento formal do relatório regulatório ainda exigia formulários no ambiente governamental.</p>
-</div>
-</header>
+    <main>
+      <section
+        class="case-reframe__project-info"
+        id="informacoes"
+      >
+        <div class="case-reframe__project-card">
+          <div class="case-reframe__project-head">
+            <div class="case-reframe__section-label">
+              <span>01</span><i aria-hidden="true"></i
+              ><strong data-t="case.info.eyebrow"
+                >Informações do Projeto</strong
+              >
+            </div>
+          </div>
+          <dl class="case-reframe__project-grid">
+            <div>
+              <dt data-t="case.dt.productDesigner">Product Designer</dt>
+              <dd>Henrico Amaral</dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.uxResearcher">UX Researcher</dt>
+              <dd>Karolinne Santos</dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.company">Empresa</dt>
+              <dd>Mirante Tecnologia</dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.client">Cliente</dt>
+              <dd>Petrobras</dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.period">Período</dt>
+              <dd data-t="case.petrobras.info.dd.period">
+                Abril 2023 — Março 2024
+              </dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.duration">Duração</dt>
+              <dd data-t="case.petrobras.info.dd.duration">12 meses</dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.type">Tipo</dt>
+              <dd data-t="case.petrobras.info.dd.type">
+                Plataforma interna de monitoramento ambiental
+              </dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.platform">Plataforma</dt>
+              <dd data-t="case.petrobras.info.dd.platform">
+                Web · Desktop operacional
+              </dd>
+            </div>
+            <div class="case-reframe__project-scope">
+              <dt data-t="case.dt.scope">Escopo</dt>
+              <dd data-t="case.petrobras.info.dd.scope">
+                Discovery · Arquitetura da informação · UX/UI · Prototipação
+              </dd>
+            </div>
+          </dl>
+          <p
+            class="case-reframe__project-closing"
+            data-t="case.petrobras.info.closing"
+          >
+            Neste projeto, o design tratou a ocorrência como unidade de trabalho
+            entre monitoramento, classificação, mobilização, resposta e
+            encerramento.
+          </p>
+        </div>
+      </section>
 
-</div>
-</section>
-<section class="case-section case-section--dark case-impact" data-navdark data-screen-label="09 Impacto">
-<div class="case-container case-section__header case-impact__head">
-<div class="k">
-<span class="ln">
-</span><span data-t="case.impact.kicker">09 / 10 · Impacto do Projeto</span></div>
-<h2 data-t="case.petrobras.s09.title">Resultados reais na operação offshore.</h2>
-<p data-t="case.petrobras.s09.p1">A unificação das informações reduziu o custo de reconstrução do contexto e permitiu às equipes agir com mais agilidade e segurança jurídica.</p>
-</div>
-<div class="case-container stat-grid" data-d="1">
-<div class="stat">
-<div class="stat__n">95<small>%</small>
-</div>
-<p class="stat__d" data-t="case.petrobras.s09.stat1d">Automação de relatórios operacionais e redução de planilhas fragmentadas.</p>
-</div>
-<div class="stat">
-<div class="stat__n">12<small data-t="case.petrobras.s09.stat2unit">meses</small>
-</div>
-<p class="stat__d" data-t="case.petrobras.s09.stat2d">Ciclo completo de discovery e arquitetura.</p>
-</div>
-<div class="stat">
-<div class="stat__n">7<small data-t="case.petrobras.s09.stat3unit">canais</small>
-</div>
-<p class="stat__d" data-t="case.petrobras.s09.stat3d">Fontes de monitoramento integradas em um único hub.</p>
-</div>
-<div class="stat">
-<div class="stat__n">1<small data-t="case.petrobras.s09.stat4unit">trilha</small>
-</div>
-<p class="stat__d" data-t="case.petrobras.s09.stat4d">Trilha de auditoria do sinal inicial ao encerramento formal da ocorrência.</p>
-</div>
-</div>
-</section>
-<section class="case-section case-section--light reflection" data-screen-label="10 Reflexões">
-<div class="case-container reflection__in">
-<div class="k">
-<span class="ln">
-</span><span data-t="case.reflection.kicker">10 / 10 · Reflexões do Designer</span></div>
-<h2 data-t="case.petrobras.s10.title">Modelagem conceitual deve preceder as telas.</h2>
-<p data-t="case.petrobras.s10.p1">O maior aprendizado foi sobre modelagem antes de design. Telas sem um modelo claro de entidades e estados viram um mapa sem território.</p>
-<p data-t="case.petrobras.s10.p2">Entender o domínio operacional antes de qualquer wireframe tornou as decisões de interface defensáveis.</p>
-</div>
-</section>
-</main>
-<nav class="case-nav" aria-label="Outros casos" data-t-aria-label="case.nav.others">
-<div class="case-nav__grid">
-<a href="bmg.html">
-<span class="dir" data-t="case.nav.prev">← Anterior</span>
-<span class="nm">BMG</span>
-</a>
-<a href="bayer.html">
-<span class="dir" data-t="case.nav.next">Próximo →</span>
-<span class="nm">Bayer</span>
-</a>
-</div>
-</nav>
-<footer class="site-footer" id="footer">
-<div class="container site-footer__inner">
-<div class="site-footer__top">
-<div class="site-footer__identity">
-<div>
-<p class="site-footer__name">Henrico Amaral</p>
-<p class="site-footer__role" data-t="ft.role">Senior Product Designer · Decision Infrastructure</p>
-</div>
-</div>
-<p class="site-footer__signature" data-t="ft.signature">
-Pense simples. Faça melhor.<br>
-Torne-se inevitável.
-</p>
-</div>
-<div class="site-footer__bottom">
-<p>Henrico Amaral · Product Designer · 2026</p>
-<a href="#" class="site-footer__toplink">↑ Topo</a>
-</div>
-</div>
-</footer>
-<script defer src="../assets/js/site.js?v=20260701-release">
-</script>
-</body>
+      <section
+        class="case-reframe__section"
+        id="contexto"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">02</span>
+              <span class="case-reframe__section-kicker" data-t="case.lbl.01"
+                >Contexto Operacional</span
+              >
+              <h2 data-t="case.petrobras.s01.title">
+                O que é operar ambientalmente offshore.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.petrobras.s01.p1"
+            >
+              Operações de petróleo offshore estão sujeitas a regulações
+              ambientais federais que exigem monitoramento contínuo, registro de
+              ocorrências e capacidade de resposta documentada.
+            </p>
+          </div>
+          <div class="case-reframe__decision-card">
+            <div class="case-reframe__section-body">
+              <p data-t="case.petrobras.s01.p2">
+                O registro atravessava Geoprocessamento/OSD, CAR, Apoio
+                Operacional, LES e Gestão, com responsabilidades diferentes ao
+                longo da resposta.
+              </p>
+              <p class="case-reframe__caption" data-t="case.petrobras.s01.cap">
+                Sete canais independentes podiam originar uma ocorrência
+                ambiental.
+              </p>
+              <div class="case-reframe__chips">
+                <article class="case-reframe__chip">
+                  <b>01</b>
+                  <strong data-t="case.petrobras.s01.chip1">Monitoramento orbital</strong>
+                  <small data-t="case.petrobras.s01.chip1l">imagem de satélite</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <b>02</b>
+                  <strong data-t="case.petrobras.s01.chip2">OSD</strong>
+                  <small data-t="case.petrobras.s01.chip2l">detecção de manchas</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <b>03</b>
+                  <strong data-t="case.petrobras.s01.chip3">Poseidon II</strong>
+                  <small data-t="case.petrobras.s01.chip3l">aeronave de asa fixa</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <b>04</b>
+                  <strong data-t="case.petrobras.s01.chip4">Sobrevoo aéreo (LES)</strong>
+                  <small data-t="case.petrobras.s01.chip4l">rota de sobrevoo</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <b>05</b>
+                  <strong data-t="case.petrobras.s01.chip5">Unidade marítima</strong>
+                  <small data-t="case.petrobras.s01.chip5l">plataforma offshore</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <b>06</b>
+                  <strong data-t="case.petrobras.s01.chip6">Embarcação de apoio</strong>
+                  <small data-t="case.petrobras.s01.chip6l">observação no mar</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <b>07</b>
+                  <strong data-t="case.petrobras.s01.chip7">Centro de controle (CAE)</strong>
+                  <small data-t="case.petrobras.s01.chip7l">acionamento central</small>
+                </article>
+                <article class="case-reframe__node">
+                  <b data-t="case.converge.label">→ Convergência</b>
+                  <strong data-t="case.petrobras.s01.node">Nova ocorrência</strong>
+                  <small data-t="case.petrobras.s01.nodel">um registro único e rastreável</small>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+class="case-reframe__section"
+        id="problema"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">03</span>
+              <span
+                class="case-reframe__section-kicker"
+                data-t="case.macro.problem"
+                >Definição do Problema</span
+              >
+              <h2 data-t="case.petrobras.s02.title">
+                Antes do sistema, cada etapa era registrada isoladamente.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.petrobras.s02.p1"
+            >
+              Quando o oceano joga uma mancha no seu radar, não dá tempo de
+              cruzar planilha com PDF. O fluxo legado dependia exatamente disso.
+            </p>
+          </div>
+          <div class="case-reframe__decision-card">
+            <div class="case-reframe__section-body">
+              <p data-t="case.petrobras.s02.p2">
+                Esses registros não compartilhavam a mesma estrutura
+                operacional. A reconstrução do contexto ficava distribuída entre
+                arquivos, sistemas e pessoas.
+              </p>
+              <div class="case-reframe__chips">
+                <p
+                  class="case-reframe__before-label"
+                  data-t="case.before.label"
+                >
+                  Antes · Fragmentação
+                </p>
+                <span
+                  class="case-reframe__chip"
+                  data-t="case.petrobras.s02.chip1"
+                  >Planilhas locais de recursos</span
+                ><span
+                  class="case-reframe__chip"
+                  data-t="case.petrobras.s02.chip2"
+                  >Relatórios técnicos em PDF</span
+                ><span
+                  class="case-reframe__chip"
+                  data-t="case.petrobras.s02.chip3"
+                  >Controle cronológico manual</span
+                ><span
+                  class="case-reframe__chip"
+                  data-t="case.petrobras.s02.chip4"
+                  >Sistemas de geoprocessamento</span
+                ><span class="case-reframe__arrow" aria-hidden="true">→</span
+                ><strong
+                  class="case-reframe__node"
+                  data-t="case.petrobras.s02.node"
+                  >Registros paralelos</strong
+                >
+              </div>
+              <div class="case-reframe__callout">
+                <p class="case-reframe__after-label" data-t="case.after.label">
+                  Depois · Visão única
+                </p>
+                <h3 data-t="case.petrobras.s03.title">
+                  O custo estava em montar o contexto operacional.
+                </h3>
+                <p class="case-reframe__lead" data-t="case.petrobras.s03.lead">
+                  A operação já produzia informação suficiente; o problema era
+                  reuni-la no momento da decisão.
+                </p>
+                <p data-t="case.petrobras.s03.p1">
+                  O desenho precisava reduzir a dependência de registros
+                  repetidos e tornar visíveis classificação, responsabilidade,
+                  mobilização e encerramento.
+                </p>
+                <p data-t="case.petrobras.s03.p2">
+                  O gargalo estava na energia gasta para cruzar dados dispersos
+                  sob pressão de tempo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="case-reframe__section"
+        id="atuacao"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">04</span>
+              <span
+                class="case-reframe__section-kicker"
+                data-t="case.role.kicker"
+                >Atuação do Designer</span
+              >
+              <h2 data-t="case.petrobras.s04.title">
+                O campo revelou que a ocorrência precisava ser tratada como um
+                caso contínuo.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.petrobras.s04.p1"
+            >
+              A investigação em campo e o mapeamento dos fluxos mostraram que a
+              resposta dependia de contexto compartilhado, permissões claras e
+              uma sequência comum de evidências. Parte dos perfis e integrações
+              ainda dependia de definição e aprovação.
+            </p>
+          </div>
+          <div class="case-reframe__decision-card">
+            <div class="case-reframe__section-body">
+              <div class="case-reframe__roles">
+                <article class="case-reframe__role">
+                  <span class="case-reframe__role-no">01</span>
+                  <h3 data-t="case.petrobras.s04.role1.title">
+                    Discovery no CENPES
+                  </h3>
+                  <p data-t="case.petrobras.s04.role1.desc">
+                    Observar a operação em campo e mapear o contexto real de
+                    resposta.
+                  </p>
+                </article>
+                <article class="case-reframe__role">
+                  <span class="case-reframe__role-no">02</span>
+                  <h3 data-t="case.petrobras.s04.role2.title">
+                    Entrevistas e cocriação
+                  </h3>
+                  <p data-t="case.petrobras.s04.role2.desc">
+                    Cruzar entrevistas, observação, cocriação e validação com as
+                    equipes envolvidas.
+                  </p>
+                </article>
+                <article class="case-reframe__role">
+                  <span class="case-reframe__role-no">03</span>
+                  <h3 data-t="case.petrobras.s04.role3.title">
+                    Papéis e permissões
+                  </h3>
+                  <p data-t="case.petrobras.s04.role3.desc">
+                    Organizar Gestão/Admin, Geoprocessamento/OSD, CAR, Apoio
+                    Operacional e LES.
+                  </p>
+                </article>
+                <article class="case-reframe__role">
+                  <span class="case-reframe__role-no">04</span>
+                  <h3 data-t="case.petrobras.s04.role4.title">
+                    Estados e exceções
+                  </h3>
+                  <p data-t="case.petrobras.s04.role4.desc">
+                    Mapear registro, classificação, mobilização, resposta,
+                    pendência e encerramento.
+                  </p>
+                </article>
+                <article class="case-reframe__role">
+                  <span class="case-reframe__role-no">05</span>
+                  <h3 data-t="case.petrobras.s04.role5.title">
+                    SLAs regionais
+                  </h3>
+                  <p data-t="case.petrobras.s04.role5.desc">
+                    Tratar prazos de resposta e diferenças regionais como
+                    restrições de produto.
+                  </p>
+                </article>
+                <article class="case-reframe__role">
+                  <span class="case-reframe__role-no">06</span>
+                  <h3 data-t="case.petrobras.s04.role6.title">
+                    Linhagem da informação
+                  </h3>
+                  <p data-t="case.petrobras.s04.role6.desc">
+                    Conectar sinal, geoprocessamento, classificação, ocorrência,
+                    mobilização, evidências, ICS 214, consolidação e
+                    gestão/regulador.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+class="case-reframe__section"
+        id="decisao"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">05</span
+              ><span
+                class="case-reframe__section-kicker"
+                data-t="case.petrobras.s06.kicker"
+                >Decisão Estrutural</span
+              >
+              <h2 data-t="case.petrobras.s06.title">
+                A ocorrência como elemento estruturador do fluxo.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.petrobras.s06.p1"
+            >
+              Propusemos reorganizar o sistema usando a ocorrência como unidade
+              central do fluxo de trabalho. O modelo conecta monitoramento,
+              geoprocessamento, mobilização, resposta, cronologia e
+              encerramento, mantendo explícitos os fluxos que continuavam
+              externos.
+            </p>
+          </div>
+          <div class="case-reframe__decision-card">
+            <div class="case-reframe__hub-stage">
+              <div class="case-reframe__hub-core-wrap">
+                <span class="case-reframe__hub-ring" aria-hidden="true"></span>
+                <div class="case-reframe__hub-core">
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                    ></path>
+                    <path d="M10 21h4"></path>
+                  </svg>
+                  <strong data-t="case.petrobras.s06.hubCenter"
+                    >Ocorrência</strong
+                  >
+                  <small data-t="case.decision.unit">Unidade central</small>
+                </div>
+              </div>
+              <div class="case-reframe__hub-dimensions">
+                <article class="case-reframe__chip">
+                  <strong data-t="case.petrobras.s06.chip1">Monitoramento</strong>
+                  <small data-t="case.petrobras.s06.chip1l">sinal e detecção</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <strong data-t="case.petrobras.s06.chip2">Geoprocessamento</strong>
+                  <small data-t="case.petrobras.s06.chip2l">dados geoespaciais</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <strong data-t="case.petrobras.s06.chip3">Mobilização</strong>
+                  <small data-t="case.petrobras.s06.chip3l">recursos e embarcações</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <strong data-t="case.petrobras.s06.chip4">Resposta</strong>
+                  <small data-t="case.petrobras.s06.chip4l">ação em campo</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <strong data-t="case.petrobras.s06.chip5">Cronologia</strong>
+                  <small data-t="case.petrobras.s06.chip5l">registro ICS 214</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <strong data-t="case.petrobras.s06.chip6">Encerramento</strong>
+                  <small data-t="case.petrobras.s06.chip6l">consolidação e relatório</small>
+                </article>
+              </div>
+            </div>
+            <div class="case-reframe__cycle">
+              <div
+                class="case-reframe__cycle-label"
+                data-t="case.petrobras.s06.cycleLabel"
+              >
+                Ciclo operacional estruturado
+              </div>
+              <div class="case-reframe__cycle-steps">
+                <span data-t="case.petrobras.s06.st1">Registro</span
+                ><span class="sep">→</span
+                ><span data-t="case.petrobras.s06.st2">Interpretação</span
+                ><span class="sep">→</span
+                ><span data-t="case.petrobras.s06.st3">Classificação</span
+                ><span class="sep">→</span
+                ><span data-t="case.petrobras.s06.st4">Mobilização</span
+                ><span class="sep">→</span
+                ><span data-t="case.petrobras.s06.st5">Resposta</span
+                ><span class="sep">→</span
+                ><span data-t="case.petrobras.s06.st6">Cronologia</span
+                ><span class="sep">→</span
+                ><span data-t="case.petrobras.s06.st7">Consolidação</span
+                ><span class="sep">→</span
+                ><span data-t="case.petrobras.s06.st8">Encerramento</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+class="case-reframe__section"
+        id="limites"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-aside">
+            <span class="case-reframe__section-number">06</span
+            ><span
+              class="case-reframe__section-kicker"
+              data-t="case.restr.kicker"
+              >Restrições do Projeto</span
+            >
+            <h2 data-t="case.petrobras.s08.title">
+              Nem tudo pôde ser integrado de imediato.
+            </h2>
+          </div>
+          <div class="case-reframe__section-body">
+            <p>
+              <span data-t="case.petrobras.s08.p1"
+                >Limitações técnicas e regulações exigiram manter alguns fluxos
+                temporariamente externos ou dependentes de processos
+                manuais.</span
+              >
+              <span data-t="case.petrobras.s08.p2"
+                >Integrações com sensores satelitais herdados permaneceram em
+                canais paralelos e o fechamento formal do relatório regulatório
+                ainda exigia formulários no ambiente governamental.</span
+              >
+            </p>
+          </div>
+          <div class="case-reframe__constraints">
+            <div class="case-reframe__constraint">
+              <b data-t="case.petrobras.s05.item1.tag">01 · Realidade</b>
+              <h3 data-t="case.petrobras.s05.item1.title">
+                Aderência ao fluxo real
+              </h3>
+              <p data-t="case.petrobras.s05.item1.desc">
+                Refletir a operação real e exigências regulatórias.
+              </p>
+            </div>
+            <div class="case-reframe__constraint">
+              <b data-t="case.petrobras.s05.item2.tag">02 · Rastreio</b>
+              <h3 data-t="case.petrobras.s05.item2.title">Rastreabilidade</h3>
+              <p data-t="case.petrobras.s05.item2.desc">
+                Toda ação e mudança de estado precisava gerar registro
+                auditável.
+              </p>
+            </div>
+            <div class="case-reframe__constraint">
+              <b data-t="case.petrobras.s05.item3.tag">03 · Offshore ↔ Terra</b>
+              <h3 data-t="case.petrobras.s05.item3.title">Colaboração</h3>
+              <p data-t="case.petrobras.s05.item3.desc">
+                Equipes offshore e analistas em terra precisavam cooperar sobre
+                o mesmo evento.
+              </p>
+            </div>
+            <div class="case-reframe__constraint">
+              <b data-t="case.petrobras.s05.item4.tag">04 · Campo</b>
+              <h3 data-t="case.petrobras.s05.item4.title">Uso sob pressão</h3>
+              <p data-t="case.petrobras.s05.item4.desc">
+                Registrar dados precisava ser mais simples que preencher
+                planilhas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+class="case-reframe__section"
+        id="telas"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">07</span
+              ><span
+                class="case-reframe__section-kicker"
+                data-t="case.solution.kicker"
+                >Experiência · Solução</span
+              >
+              <h2 data-t="case.petrobras.s07.title">
+                Telas, fluxos e interações integradas.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.petrobras.s07.p1"
+            >
+              Transformamos o fluxo de trabalho em interfaces modulares,
+              integrando cronologia de resposta, geoprocessamento e painéis de
+              coordenação. Cada prancha abaixo documenta um módulo do sistema.
+            </p>
+          </div>
+          <div class="case-reframe__plates">
+            <figure class="case-reframe__plate case-reframe__plate--lead">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 01</span
+                ><strong data-t="case.petrobras.s07.cap1.h3"
+                  >Visão geral e controle de ocorrências</strong
+                ><small>SALA CAR / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-01-listagem-ocorrencias.webp"
+                    alt="Listagem e controle de ocorrências no SALA CAR"
+                    data-t-alt="case.petrobras.s07.alt1"
+                    width="1800"
+                    height="1125"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.petrobras.s07.cap1.p">
+                A listagem deixou de ser apenas uma tabela e passou a consolidar
+                classificação de risco, tamanho estimado da mancha e recursos
+                alocados.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--side case-reframe__plate--stack">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 02</span
+                ><strong data-t="case.petrobras.s07.cap2.h3"
+                  >Classificação e origem</strong
+                ><small>SALA CAR / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-02-ocorrencia-classificada.webp"
+                    alt="Ocorrência classificada"
+                    data-t-alt="case.petrobras.s07.alt2"
+                    width="1800"
+                    height="961"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-03-origem-geoprocessamento.webp"
+                    alt="Origem de geoprocessamento integrada"
+                    data-t-alt="case.petrobras.s07.alt3"
+                    width="1800"
+                    height="889"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.petrobras.s07.cap2.p">
+                Detalhes e classificação estruturada da emergência ambiental com
+                integração de dados de origem do geoprocessamento.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--third">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 03</span
+                ><strong data-t="case.petrobras.s07.cap3.h3"
+                  >Aba ICS 214 — cronologia da ocorrência</strong
+                ><small>SALA CAR / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-04-cronologia-ics214.webp"
+                    alt="Aba ICS 214 com cronologia da ocorrência"
+                    data-t-alt="case.petrobras.s07.alt4"
+                    width="1800"
+                    height="1513"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.petrobras.s07.cap3.p">
+                O log de eventos foi inserido na navegação central do incidente
+                para gerar rastreabilidade nativa.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--wide">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 04</span
+                ><strong data-t="case.petrobras.s07.cap4.h3"
+                  >Fluxo de mobilização</strong
+                ><small>SALA CAR / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-05-mobilizar-embarcacao.webp"
+                    alt="Mobilização de embarcação"
+                    data-t-alt="case.petrobras.s07.alt5"
+                    width="1800"
+                    height="1125"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-06-embarcacao-mobilizada.webp"
+                    alt="Embarcação mobilizada"
+                    data-t-alt="case.petrobras.s07.alt6"
+                    width="1800"
+                    height="1125"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.petrobras.s07.cap4.p">
+                Seleção, simulação e confirmação visual de embarcações
+                envolvidas na resposta operacional.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--full case-reframe__plate--single">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 05</span
+                ><strong data-t="case.petrobras.s07.cap5.h3"
+                  >Gestão e painel de embarcações</strong
+                ><small>SALA CAR / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-07-painel-embarcacoes.webp"
+                    alt="Painel de embarcações disponíveis"
+                    data-t-alt="case.petrobras.s07.alt7"
+                    width="1800"
+                    height="1125"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.petrobras.s07.cap5.p">
+                Painel consolidado com embarcações disponíveis, capacidade
+                operacional e posição de monitoramento.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--full case-reframe__plate--mixed">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 06</span
+                ><strong data-t="case.petrobras.s07.cap6.h3"
+                  >Módulo de geoprocessamento e mapas</strong
+                ><small>SALA CAR / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-08-edicao-mapas.webp"
+                    alt="Módulo de geoprocessamento e edição de mapas"
+                    data-t-alt="case.petrobras.s07.alt8"
+                    width="1800"
+                    height="1688"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-fluxo-operacional-sala-car.webp"
+                    alt="Fluxo operacional completo do SALA CAR"
+                    data-t-alt="case.petrobras.s07.alt14"
+                    width="1024"
+                    height="1536"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.petrobras.s07.cap6.p">
+                Ferramenta para localizar, editar e acompanhar dados
+                geoespaciais da ocorrência.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--full case-reframe__plate--sequence">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 07</span
+                ><strong data-t="case.petrobras.s07.cap7.h3"
+                  >Monitoramento por Sobrevoo LES</strong
+                ><small>SALA CAR / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-sobrevoo-01.webp"
+                    alt="Tela mobile do sobrevoo LES"
+                    data-t-alt="case.petrobras.s07.alt9"
+                    width="2000"
+                    height="744"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-sobrevoo-02.webp"
+                    alt="Sobrevoo LES mobilizado"
+                    data-t-alt="case.petrobras.s07.alt10"
+                    width="1920"
+                    height="1200"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-sobrevoo-03.webp"
+                    alt="Detalhe de sobrevoo LES em operação"
+                    data-t-alt="case.petrobras.s07.alt15"
+                    width="1920"
+                    height="1200"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-sobrevoo-04.webp"
+                    alt="Rota de sobrevoo LES registrada"
+                    data-t-alt="case.petrobras.s07.alt16"
+                    width="1920"
+                    height="1200"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.petrobras.s07.cap7.p">
+                Integração do aplicativo mobile de campo e consolidação de
+                imagens de satélite e rotas de sobrevoo.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--full case-reframe__plate--mixed">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 08</span
+                ><strong data-t="case.petrobras.s07.cap8.h3"
+                  >Módulo Poseidon II</strong
+                ><small>SALA CAR / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-poseidon-01.webp"
+                    alt="Módulo Poseidon II"
+                    data-t-alt="case.petrobras.s07.alt11"
+                    width="1920"
+                    height="1200"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-poseidon-02.webp"
+                    alt="Detalhamento do módulo Poseidon II"
+                    data-t-alt="case.petrobras.s07.alt17"
+                    width="1920"
+                    height="1931"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.petrobras.s07.cap8.p">
+                Acompanhamento de dados de aeronaves de asa fixa para dispersão
+                e mapeamento tático.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--third">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 09</span
+                ><strong data-t="case.petrobras.s07.cap9.h3"
+                  >Finalização de Ocorrência</strong
+                ><small>SALA CAR / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-finalizacao.webp"
+                    alt="Finalização da ocorrência"
+                    data-t-alt="case.petrobras.s07.alt12"
+                    width="1920"
+                    height="1382"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.petrobras.s07.cap9.p">
+                Camada de consolidação e encerramento, gerando justificativas e
+                relatórios regulatórios formais para o IBAMA.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--wide">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 10</span
+                ><strong data-t="case.petrobras.s07.cap10.h3"
+                  >Detalhes e Recursos</strong
+                ><small>SALA CAR / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-embarcacao-details.webp"
+                    alt="Detalhes e recursos da ocorrência"
+                    data-t-alt="case.petrobras.s07.alt13"
+                    width="1920"
+                    height="1200"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/petrobras/petrobras-embarcacao-actioned.webp"
+                    alt="Embarcação de apoio acionada"
+                    data-t-alt="case.petrobras.s07.alt18"
+                    width="1920"
+                    height="1200"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.petrobras.s07.cap10.p">
+                Detalhes e histórico de trajetórias de embarcações de apoio
+                offshore e status de acionamento.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section
+class="case-reframe__section case-reframe__section--architecture"
+        id="arquitetura"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">08</span
+              ><span
+                class="case-reframe__section-kicker"
+                data-t="case.petrobras.arch.kicker"
+                >Arquitetura do sistema</span
+              >
+              <h2 data-t="case.petrobras.arch.title">
+                Plataforma de gestão de ocorrências.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.petrobras.arch.p1"
+            >
+              O ecossistema foi reorganizado em quatro faixas operacionais:
+              ingestão, validação, ciclo de vida e mobilização/resposta.
+            </p>
+          </div>
+          <div class="case-reframe__architecture">
+            <article class="case-reframe__architecture-lane">
+              <span>01</span>
+              <h3 data-t="case.petrobras.arch.lane1.title">Ingestão</h3>
+              <p data-t="case.petrobras.arch.lane1.p">
+                Sinais de satélite, OSD, Poseidon II, sobrevoo LES e unidades
+                marítimas entram como possíveis origens de ocorrência.
+              </p>
+            </article>
+            <article class="case-reframe__architecture-lane">
+              <span>02</span>
+              <h3 data-t="case.petrobras.arch.lane2.title">Validação</h3>
+              <p data-t="case.petrobras.arch.lane2.p">
+                Geoprocessamento, classificação e origem do registro confirmam
+                se o sinal vira ocorrência operacional.
+              </p>
+            </article>
+            <article class="case-reframe__architecture-lane">
+              <span>03</span>
+              <h3 data-t="case.petrobras.arch.lane3.title">Ciclo de vida</h3>
+              <p data-t="case.petrobras.arch.lane3.p">
+                A ocorrência concentra estados, cronologia ICS 214, responsáveis,
+                evidências e documentação formal.
+              </p>
+            </article>
+            <article class="case-reframe__architecture-lane">
+              <span>04</span>
+              <h3 data-t="case.petrobras.arch.lane4.title">Mobilização e resposta</h3>
+              <p data-t="case.petrobras.arch.lane4.p">
+                Recursos, embarcações, comunicação e encerramento passam a operar
+                como partes da mesma trilha rastreável.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+class="case-reframe__section"
+        id="impacto"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">09</span
+              ><span
+                class="case-reframe__section-kicker"
+                data-t="case.petrobras.s09.kicker"
+                >Impacto do Projeto</span
+              >
+              <h2 data-t="case.petrobras.s09.title">
+                Impacto documentado: menos reconstrução, mais continuidade operacional.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.petrobras.s09.p1"
+            >
+              O impacto mais forte não é cosmético. A plataforma transforma uma
+              ocorrência ambiental em uma trilha operacional verificável:
+              detecção, análise geoespacial, mobilização, ICS 214,
+              consolidação e encerramento.
+            </p>
+          </div>
+          <div class="case-reframe__impact-list">
+            <article
+class="case-reframe__impact-stat"
+            >
+              <div
+                class="case-reframe__impact-kind"
+                data-t="case.petrobras.s09.stat1kind"
+              >
+                Automação documental
+              </div>
+              <div class="case-reframe__impact-value">
+                <span>95</span><span>%</span>
+              </div>
+              <p data-t="case.petrobras.s09.stat1d">
+                A documentação consolidada registra aproximadamente 95% de
+                automação na consolidação documental associada às ocorrências.
+              </p>
+            </article>
+            <article class="case-reframe__impact-stat">
+              <div
+                class="case-reframe__impact-kind"
+                data-t="case.petrobras.s09.stat2kind"
+              >
+                Escala monitorada
+              </div>
+              <div class="case-reframe__impact-value">
+                <span>7</span
+                ><span data-t="case.petrobras.s09.stat2u">plataformas</span>
+              </div>
+              <p data-t="case.petrobras.s09.stat2d">
+                O material de OSD documenta radar em sete plataformas, dando
+                escala concreta ao canal de monitoramento offshore.
+              </p>
+            </article>
+            <article class="case-reframe__impact-stat">
+              <div
+                class="case-reframe__impact-kind"
+                data-t="case.petrobras.s09.stat3kind"
+              >
+                Registro formal
+              </div>
+              <div class="case-reframe__impact-value">
+                <span>ICS 214</span
+                ><span data-t="case.petrobras.s09.stat3u">registro</span>
+              </div>
+              <p data-t="case.petrobras.s09.stat3d">
+                A cronologia da ocorrência, mobilização e tempos de resposta
+                passam a ser registrados como evidência operacional.
+              </p>
+            </article>
+            <article class="case-reframe__impact-stat">
+              <div
+                class="case-reframe__impact-kind"
+                data-t="case.petrobras.s09.stat4kind"
+              >
+                Continuidade operacional
+              </div>
+              <div class="case-reframe__impact-value">
+                <span>Fluxo</span
+                ><span data-t="case.petrobras.s09.stat4u">contínuo</span>
+              </div>
+              <p data-t="case.petrobras.s09.stat4d">
+                Sinais, análises, recursos e documentação deixam de aparecer
+                como registros paralelos e passam a compor a mesma ocorrência.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+class="case-reframe__section"
+        id="reflexao"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__reflection">
+            <div class="case-reframe__reflection-aside">
+              <span class="case-reframe__section-number">10</span
+              ><span
+                class="case-reframe__section-kicker"
+                data-t="case.reflection.kicker"
+                >Reflexões</span
+              >
+            </div>
+            <div class="case-reframe__reflection-copy">
+              <h2 data-t="case.petrobras.s10.title">
+                Antes de desenhar a tela, é preciso modelar a operação.
+              </h2>
+              <p>
+                <span data-t="case.petrobras.s10.p1"
+                  >O maior aprendizado foi modelar entidades, estados e
+                  responsabilidades antes de decidir como cada tela deveria
+                  funcionar.</span
+                >
+                <span data-t="case.petrobras.s10.p2"
+                  >No SALA CAR, o design conectou sinais, estados e
+                  responsabilidades ao redor da ocorrência, sem apagar os
+                  sistemas externos do fluxo.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <nav class="case-nav" aria-label="Navegação entre cases">
+      <div class="case-nav__grid">
+        <a href="ambev.html">
+          <span class="dir" data-t="case.nav.prev">← Anterior</span>
+          <span class="nm">Ambev</span>
+        </a>
+        <a href="bayer.html">
+          <span class="dir" data-t="case.nav.next">Próximo →</span>
+          <span class="nm">Bayer</span>
+        </a>
+      </div>
+    </nav>
+    <footer class="site-footer" id="footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__top">
+          <div class="site-footer__identity">
+            <div>
+              <p class="site-footer__name">Henrico Amaral</p>
+              <p class="site-footer__role">Senior Product Designer · Decision Infrastructure</p>
+            </div>
+          </div>
+          <p class="site-footer__signature">
+            Pense simples. Organize a complexidade.<br />Torne-se inevitável.
+          </p>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© 2026 HENRICO AMARAL · PRODUCT DESIGNER</p>
+          <a href="https://www.henrico.works/" target="_blank" rel="noopener" class="site-footer__powered">
+            <span data-t="ft.powered">Powered by</span>
+            <strong>HENRICO.WORKS</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script
+      defer=""
+      src="../assets/js/site.js?v=20260715-case-nav"
+    ></script>
+    <script
+      defer=""
+      src="../assets/js/motion.js?v=20260716-motion-v2"
+    ></script>
+  </body>
 </html>

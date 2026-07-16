@@ -1,7 +1,13 @@
 /**
- * Organic & Semantic Motion Engine — ES5
+ * Organic & Semantic Motion Engine — ES5, v2
  * Henrico Amaral Portfolio
- * v20260610-motion-cache-zero-02
+ * v20260716-motion-v2-01
+ *
+ * Reveals por IntersectionObserver com stagger por lote:
+ * elementos que entram juntos no viewport são sequenciados entre si
+ * (60ms por item, teto 420ms); um elemento sozinho revela sem delay.
+ * Coreografia dos cases via seletores BEM (sem classes extras no HTML).
+ * Spec: docs/design/MOTION.md
  */
 (function () {
   'use strict';
@@ -29,8 +35,31 @@
     '.motion-panel',
     '.motion-case-hero',
     '.motion-case-block',
-    '.motion-impact'
+    '.motion-impact',
+    '.editorial-reveal'
   ].join(', ');
+
+  /* Páginas de case: coreografia semântica (mesmos seletores do motion.css). */
+  var caseSelector = [
+    '.case-reframe__section-header',
+    '.case-reframe__lead',
+    '.case-reframe__project-card',
+    '.case-reframe__callout',
+    '.case-reframe__chip',
+    '.case-reframe__node',
+    '.case-reframe__role',
+    '.case-reframe__constraint',
+    '.case-reframe__impact-stat',
+    '.case-reframe__architecture-lane',
+    '.case-reframe__section-body > p',
+    '.case-reframe__plate',
+    '.case-reframe__hub-stage',
+    '.case-reframe__cycle',
+    '.case-reframe__reflection-copy'
+  ].map(function (s) { return '.case-page--espresso ' + s; }).join(', ');
+
+  var STAGGER_STEP = 60;
+  var STAGGER_CAP = 420;
 
   function addVisible(el) {
     if (!el) return;
@@ -51,7 +80,7 @@
 
   // ── 1. REVEAL ENGINE ─────────────────────────────────────────────────────────
   function initReveal() {
-    var targets = document.querySelectorAll(revealSelector);
+    var targets = document.querySelectorAll(revealSelector + ', ' + caseSelector);
     if (!targets.length) return;
 
     if (reduceMotion || !('IntersectionObserver' in window)) {
@@ -60,26 +89,39 @@
     }
 
     var observer = new IntersectionObserver(function (entries, obs) {
+      var batch = [];
       for (var j = 0; j < entries.length; j++) {
         var entry = entries[j];
         if (!entry.isIntersecting) continue;
-        addVisible(entry.target);
+        batch.push(entry.target);
         obs.unobserve(entry.target);
+      }
+      if (!batch.length) return;
+
+      // Stagger por lote: quem aparece junto, entra em sequência (ordem visual).
+      batch.sort(function (a, b) {
+        var ra = a.getBoundingClientRect();
+        var rb = b.getBoundingClientRect();
+        return (ra.top - rb.top) || (ra.left - rb.left);
+      });
+
+      for (var k = 0; k < batch.length; k++) {
+        var delay = Math.min(k * STAGGER_STEP, STAGGER_CAP);
+        if (delay > 0) {
+          batch[k].style.setProperty('--motion-delay', delay + 'ms');
+        }
+        addVisible(batch[k]);
       }
     }, {
       threshold: 0.12,
       rootMargin: '0px 0px -8% 0px'
     });
 
-    for (var k = 0; k < targets.length; k++) {
-      var el = targets[k];
+    for (var k2 = 0; k2 < targets.length; k2++) {
+      var el = targets[k2];
 
       // Hero children are sequenced by initHero(). The hero container itself still needs visibility.
       if (isInsideHeroChild(el)) continue;
-
-      if (!el.style.getPropertyValue('--motion-delay') && !el.classList.contains('motion-hero')) {
-        el.style.setProperty('--motion-delay', Math.min(k * 20, 160) + 'ms');
-      }
 
       observer.observe(el);
     }

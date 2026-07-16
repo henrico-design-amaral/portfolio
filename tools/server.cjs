@@ -31,6 +31,11 @@ const server = http.createServer((req, res) => {
     filePath = path.join(filePath, 'index.html');
   }
 
+  const publicPath = path.join(ROOT, 'public', decodedUrl === '/' ? 'index.html' : decodedUrl);
+  if (!fs.existsSync(filePath) && fs.existsSync(publicPath)) {
+    filePath = publicPath;
+  }
+
   const ext = path.extname(filePath);
   let contentType = mimeTypes[ext] || 'application/octet-stream';
 

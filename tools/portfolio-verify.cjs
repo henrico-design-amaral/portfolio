@@ -12,7 +12,6 @@ const pages = [
   { path: '/cases/petrobras.html', label: 'petrobras', file: 'cases/petrobras.html' },
   { path: '/cases/bayer.html', label: 'bayer', file: 'cases/bayer.html' },
   { path: '/cases/ambev.html', label: 'ambev', file: 'cases/ambev.html' },
-  { path: '/cases/bmg.html', label: 'bmg', file: 'cases/bmg.html' },
 ];
 
 const viewports = [
@@ -69,7 +68,9 @@ function inspectLocalReference({ fromFile, attr, rawRef, idsByFile, failures }) 
     ? resolveLocalRef(fromFile, targetPathRaw)
     : normalizeLocalPath(fromFile);
 
-  if (targetPathRaw && !fs.existsSync(path.join(ROOT, targetPath))) {
+  const existsInSource = fs.existsSync(path.join(ROOT, targetPath));
+  const existsInPublic = fs.existsSync(path.join(ROOT, 'public', targetPath));
+  if (targetPathRaw && !existsInSource && !existsInPublic) {
     failures.push(`${fromFile}: missing ${attr} target "${ref}"`);
     return;
   }
@@ -205,7 +206,6 @@ async function inspectCaseLinks(browser) {
     '0': 'cases/petrobras.html',
     '1': 'cases/bayer.html',
     '2': 'cases/ambev.html',
-    '3': 'cases/bmg.html',
   };
   const context = await browser.newContext({
     viewport: { width: 1366, height: 900 }
@@ -304,8 +304,8 @@ function collectFailures(results, englishToggle, caseLinks, referenceFailures) {
     failures.push(`local reference: ${failure}`);
   }
 
-  if (caseLinks.cards !== 4) {
-    failures.push(`case links: expected 4 cards, found ${caseLinks.cards}`);
+  if (caseLinks.cards !== 3) {
+    failures.push(`case links: expected 3 cards, found ${caseLinks.cards}`);
   }
   if (!caseLinks.navigationSuccess) {
     failures.push('case links: navigation failed when clicking card');

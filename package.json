@@ -7,16 +7,9 @@
   "scripts": {
     "dev": "node tools/server.cjs",
     "build": "node tools/build.cjs",
-    "preview": "astro preview",
-    "check": "echo 'Static check bypassed'"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "^4.3.0",
-    "astro": "^5.9.4"
+    "check": "npm run build && node tools/check.cjs"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
-    "playwright": "^1.61.0",
-    "typescript": "^5.9.3"
+    "playwright": "^1.61.1"
   }
 }
