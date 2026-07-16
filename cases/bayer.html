@@ -1,477 +1,997 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR" data-lang="pt">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bayer · Inteligência Agronômica — Henrico Amaral</title>
-<meta name="description" content="Bayer — plataforma de inteligência agronômica para validação técnica, licenciamento e rastreabilidade de decisões agrícolas.">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/css/cases.css?v=20260701-release">
-</head>
-<body class="case-page">
-<a class="skip" href="#overview" data-t="skip">Ir para o conteúdo</a>
-<nav class="nav" id="nav" aria-label="Principal" data-t-aria-label="case.nav.aria">
-<div class="nav__inner">
-<a class="nav__cta" href="../index.html#cases" data-t="case.nav.back">← Voltar ao portfólio</a>
-<div class="lang-toggle" data-lang-toggle data-current-lang="pt" role="group" aria-label="Selecionar idioma">
-<span class="lang-toggle__thumb" aria-hidden="true"></span>
-<button type="button" class="lang-toggle__option" data-lang="pt" aria-label="PT Português" aria-pressed="true">PT</button>
-<button type="button" class="lang-toggle__option" data-lang="en" aria-label="EN English" aria-pressed="false">EN</button>
-</div>
-</div>
-</nav>
-<main>
-<header class="case-hero" data-navdark data-screen-label="Case Hero">
-<div class="case-hero__img" style="background-image:url('../assets/img/cases/bayer.webp')">
-</div>
-<!-- Bayer Behavioral SVG: territorial scan, atmospheric drift, predictive geospatial grid -->
-<svg class="case-hero__behavioral-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-  <!-- Territorial scan bar — sweeps top to bottom across the landscape -->
-  <rect x="0" y="0" width="100" height="1.5" fill="#BE9C6E" opacity="0.16" style="animation:bayer-scan 11s ease-in-out infinite"/>
-  <!-- Atmospheric data particles — drift and fade, representing climate data points -->
-  <circle cx="18" cy="38" r="0.9" fill="#BE9C6E" opacity="0" style="animation:bayer-atmo 16s ease-in-out infinite"/>
-  <circle cx="52" cy="28" r="0.7" fill="#BE9C6E" opacity="0" style="animation:bayer-atmo 16s ease-in-out infinite 5.3s"/>
-  <circle cx="75" cy="48" r="0.8" fill="#BE9C6E" opacity="0" style="animation:bayer-atmo 16s ease-in-out infinite 10.6s"/>
-  <circle cx="36" cy="55" r="0.6" fill="#BE9C6E" opacity="0" style="animation:bayer-atmo 16s ease-in-out infinite 2.8s"/>
-  <!-- Geospatial validation grid zones — three crop-region rectangles that breathe in and out -->
-  <rect x="8" y="22" width="24" height="24" fill="none" stroke="#BE9C6E" stroke-width="0.18" opacity="0.10" style="animation:bayer-grid-reveal 8s ease-in-out infinite"/>
-  <rect x="60" y="22" width="24" height="24" fill="none" stroke="#BE9C6E" stroke-width="0.18" opacity="0.10" style="animation:bayer-grid-reveal 8s ease-in-out infinite 2.6s"/>
-  <rect x="34" y="56" width="24" height="24" fill="none" stroke="#BE9C6E" stroke-width="0.18" opacity="0.10" style="animation:bayer-grid-reveal 8s ease-in-out infinite 5.3s"/>
-  <!-- Large territory pulse ring -->
-  <circle cx="50" cy="50" r="30" fill="none" stroke="#BE9C6E" stroke-width="0.10" opacity="0.08" style="transform-origin:50% 50%;animation:bayer-pulse 10s ease-in-out infinite"/>
-</svg>
-<div class="case-hero__in">
-<div class="case-hero__eyebrow">
-  <span class="case-hero__pill mono" data-t="case.bayer.hero.eyebrow">02 · Agronegócio · Dados Agrícolas e Licenciamento</span>
-</div>
-<div class="case-hero__stack">
-  <span class="case-hero__client">Bayer</span>
-  <h1>Inteligência Agronômica</h1>
-  <p class="case-hero__lead" data-t="case.bayer.hero.lead">Sistema territorial de inteligência agronômica para análise ambiental, validação técnica e suporte à decisão agrícola em ciclos de licenciamento.</p>
-</div>
-<div class="case-hero__scroll" aria-hidden="true">
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6.5L9 11.5L14 6.5" stroke="rgba(255,248,238,0.52)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</div>
-</div>
-</header>
-<section class="case-section case-section--light case-spec project-info" id="case-info" aria-label="Informações do Projeto">
-<div class="project-info__inner">
-<div class="project-info__intro">
-<p class="project-info__eyebrow mono" data-t="case.info.eyebrow">Informações do Projeto</p>
-<h2 data-t="case.bayer.info.title">Plataforma de dados agrícolas para validação técnica.</h2>
-<p data-t="case.bayer.info.intro">Projeto desenvolvido para organizar dados agrícolas, análise técnica e validação de tecnologias em um sistema interno.</p>
-</div>
-<dl class="project-info__grid">
-<div class="project-info__cell"><dt>Product Designer</dt><dd>Henrico Amaral</dd></div>
-<div class="project-info__cell"><dt>UX Researcher</dt><dd>Maria Antonieta Santos</dd></div>
-<div class="project-info__cell"><dt data-t="case.dt.company">Empresa</dt><dd>MaxxiData</dd></div>
-<div class="project-info__cell"><dt data-t="case.dt.client">Cliente</dt><dd>Bayer</dd></div>
-<div class="project-info__cell"><dt data-t="case.dt.period">Período</dt><dd data-t="case.bayer.info.dd.period">Dezembro 2021 — Março 2022</dd></div>
-<div class="project-info__cell"><dt data-t="case.dt.duration">Duração</dt><dd data-t="case.bayer.info.dd.duration">4 meses</dd></div>
-<div class="project-info__cell"><dt data-t="case.dt.type">Tipo</dt><dd data-t="case.bayer.info.dd.type">Plataforma interna de dados agrícolas</dd></div>
-<div class="project-info__cell"><dt data-t="case.dt.platform">Plataforma</dt><dd data-t="case.bayer.info.dd.platform">Web · Sistema interno</dd></div>
-<div class="project-info__cell project-info__cell--wide"><dt data-t="case.dt.scope">Escopo</dt><dd data-t="case.bayer.info.dd.scope">Discovery · Arquitetura da informação · UX · Prototipação</dd></div>
-</dl>
-<p class="project-info__closing" data-t="case.bayer.info.closing">Mais do que um projeto de interface, este trabalho envolveu compreender como a validação técnica agrícola funciona no dia a dia.</p>
-</div>
-</section>
-<section class="case-section case-section--light case-overview" id="overview" data-screen-label="Overview">
-<div class="case-container case-overview__grid">
-<div class="case-overview__header">
-<div class="overview__kicker mono">
-<span class="ln">
-</span><span data-t="case.kicker.overview">Projeto · Contexto · Escopo</span></div>
-<h2 data-t="case.bayer.overview.title">Dados agrícolas como estrutura de decisão.</h2>
-<p data-t="case.bayer.overview.desc">A plataforma organiza culturas, microrregiões, pareceres técnicos e evidências regulatórias em um fluxo único de validação.</p>
-</div>
-<dl class="subfacts" data-d="1">
-<div class="subfacts__row">
-<dt data-t="case.dt.system">Sistema</dt>
-<dd>Bayer Platform</dd>
-</div>
-<div class="subfacts__row">
-<dt data-t="case.dt.domain">Domínio</dt>
-<dd data-t="case.bayer.overview.dd.domain">Dados agrícolas · Licenciamento</dd>
-</div>
-<div class="subfacts__row">
-<dt data-t="case.dt.users">Usuários</dt>
-<dd data-t="case.bayer.overview.dd.users">Especialistas agronômicos e gestão técnica</dd>
-</div>
-<div class="subfacts__row">
-<dt data-t="case.dt.result">Resultado</dt>
-<dd data-t="case.bayer.overview.dd.result">Rastreabilidade de pareceres e decisões</dd>
-</div>
-</dl>
-</div>
-</section>
-<section class="case-section case-section--light" data-screen-label="01 Contexto">
-<div class="case-container">
-<header class="case-section__header">
-<span class="case-section__rule"></span>
-<p class="case-section__eyebrow"><span class="case-section__no">01 / 10</span><span class="case-section__label" data-t="case.lbl.01">Contexto Operacional</span></p>
-<h2 class="case-section__title" data-t="case.bayer.s01.title">Decidir no agro exige cruzar dados técnicos, legais e territoriais.</h2>
-<div class="case-section__lead">
-<p data-t="case.bayer.s01.p1">O processo de validação agrícola envolve especialistas agronômicos, equipes comerciais, gestão técnica e áreas institucionais, cada uma com registros e critérios próprios.</p>
-<p data-t="case.bayer.s01.p2">Antes da plataforma, análises aconteciam de forma fragmentada: dados em sistemas distintos, comparações em planilhas e decisões em relatórios ou e-mails.</p>
-</div>
-</header>
-<div class="case-section__body">
-<div class="diagram">
-<div class="diagram__flow">
-<div class="chips">
-<span class="chip" data-t="case.bayer.s01.chip1">Cultura agrícola</span>
-<span class="chip" data-t="case.bayer.s01.chip2">Microrregião</span>
-<span class="chip" data-t="case.bayer.s01.chip3">Safra</span>
-<span class="chip" data-t="case.bayer.s01.chip4">Parecer técnico</span>
-<span class="chip">CADE</span>
-<span class="chip" data-t="case.bayer.s01.chip6">Licenciamento</span>
-<span class="chip" data-t="case.bayer.s01.chip7">Gestão</span>
-</div>
-<span class="diagram__arrow">→</span>
-<span class="node node--alert" data-t="case.bayer.s01.node">Decisão agrícola</span>
-</div>
-<p class="diagram__cap" data-t="case.bayer.s01.cap">A decisão dependia de uma leitura comum entre áreas técnicas e institucionais.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="case-section case-section--warm" data-screen-label="02 Legado">
-<div class="case-container">
-<header class="case-section__header">
-<span class="case-section__rule"></span>
-<p class="case-section__eyebrow"><span class="case-section__no">02 / 10</span><span class="case-section__label" data-t="case.lbl.02">Arquitetura Legada</span></p>
-<h2 class="case-section__title" data-t="case.bayer.s02.title">A arquitetura anterior espalhava evidências em registros paralelos.</h2>
-<div class="case-section__lead">
-<p data-t="case.bayer.s02.p1">Planilhas locais controlavam microrregiões. Relatórios técnicos em PDF consolidavam pareceres. E-mails registravam aprovações e pendências.</p>
-<p data-t="case.bayer.s02.p2">Nenhum desses registros compartilhava uma estrutura de dados comum, quebrando continuidade e dificultando rastreabilidade posterior.</p>
-</div>
-</header>
-<div class="case-section__body">
-<div class="diagram diagram--legacy">
-<div class="diagram__flow">
-<div class="chips">
-<span class="chip chip--dim" data-t="case.bayer.s02.chip1">Planilhas de microrregião</span>
-<span class="chip chip--dim" data-t="case.bayer.s02.chip2">PDFs técnicos</span>
-<span class="chip chip--dim" data-t="case.bayer.s02.chip3">E-mails de aprovação</span>
-<span class="chip chip--dim" data-t="case.bayer.s02.chip4">Consultas externas</span>
-</div>
-<span class="diagram__arrow">⇢</span>
-<span class="node" data-t="case.bayer.s02.node">Pareceres dispersos</span>
-</div>
-<p class="diagram__cap" data-t="case.bayer.s02.cap">A falta de estrutura comum tornava a decisão difícil de auditar.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="case-section case-section--light" data-screen-label="03 Problema">
-<div class="case-container">
-<header class="case-section__header">
-<span class="case-section__rule"></span>
-<p class="case-section__eyebrow"><span class="case-section__no">03 / 10</span><span class="case-section__label" data-t="case.lbl.03">Definição do Problema</span></p>
-<h2 class="case-section__title" data-t="case.bayer.s03.title">O gargalo era transformar evidência técnica em decisão rastreável.</h2>
-<div class="case-section__lead">
-<p class="lead" data-t="case.bayer.s03.lead">O problema não era falta de dados — o time gerava dados de alta qualidade.</p>
-<p data-t="case.bayer.s03.p1">A dificuldade estava em cruzar safras anteriores, condições de microrregiões e exigências de propriedade intelectual.</p>
-<p data-t="case.bayer.s03.p2">A validação dependia de esforço manual recorrente, atrasando licenciamento e fragilizando justificativas posteriores.</p>
-</div>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Case Bayer — Henrico Amaral</title>
+    <meta
+      name="description"
+      content="Bayer — plataforma interna para processos de licenciamento de tecnologias agrícolas."
+    />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      as="image"
+      href="../assets/img/cases/hero-bayer.png"
+      fetchpriority="high"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/cases.css?v=20260716-motion-v2"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/motion.css?v=20260716-motion-v2"
+    />
+  </head>
+  <body class="case-page--espresso">
+    <a class="skip" href="#informacoes" data-t="skip">Ir para o conteúdo</a>
+    <div class="case-reframe__first-fold">
+      <nav
+        class="case-rail"
+        id="nav"
+        aria-label="Principal"
+        data-t-aria-label="case.nav.aria"
+      >
+        <div class="case-rail__inner">
+          <a
+            class="case-rail__back"
+            href="../index.html#cases"
+            data-t="case.nav.back"
+            >← Voltar ao portfólio</a
+          >
+          <div
+            class="lang-toggle"
+            data-lang-toggle=""
+            data-current-lang="pt"
+            role="group"
+            aria-label="Selecionar idioma"
+          >
+            <span class="lang-toggle__thumb" aria-hidden="true"></span
+            ><button
+              type="button"
+              class="lang-toggle__option"
+              data-lang="pt"
+              aria-label="PT Português"
+              aria-pressed="true"
+            >
+              PT</button
+            ><button
+              type="button"
+              class="lang-toggle__option"
+              data-lang="en"
+              aria-label="EN English"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+        </div>
+      </nav>
+      <header class="case-reframe__hero" id="topo">
+        <div class="case-reframe__hero-media">
+          <img
+            src="../assets/img/cases/hero-bayer.png"
+            alt="Bayer — plataforma de análise e licenciamento de tecnologias agrícolas"
+          />
+        </div>
+        <div class="case-reframe__hero-texture" aria-hidden="true"></div>
+        <div class="case-reframe__hero-copy">
+          <div>
+            <p
+              class="case-reframe__hero-kicker"
+              data-t="case.bayer.hero.kicker"
+            >
+              01 · Agricultura · Processos regulados
+            </p>
+            <h1 data-t="case.bayer.hero.project">Bayer</h1>
+            <h2
+              class="case-reframe__hero-subtitle"
+              data-t="case.bayer.hero.lead"
+            >
+              Sistema interno para organizar processos de licenciamento de
+              tecnologias agrícolas.
+            </h2>
+          </div>
+        </div>
+      </header>
+    </div>
 
-</div>
-</section>
-<section class="case-section case-section--warm" data-screen-label="04 Atuação">
-<div class="case-container">
-<header class="case-section__header">
-<span class="case-section__rule"></span>
-<p class="case-section__eyebrow"><span class="case-section__no">04 / 10</span><span class="case-section__label" data-t="case.lbl.04">Atuação do Designer</span></p>
-<h2 class="case-section__title" data-t="case.bayer.s04.title">Arquitetura de informação para decisão técnica.</h2>
-<div class="case-section__lead">
-<p data-t="case.bayer.s04.p1">Atuei na organização das visões de dados, estados e registros de parecer em torno da cultura agrícola como unidade central de análise.</p>
-</div>
-</header>
-<div class="case-section__body">
-<div class="role-grid">
-<article class="role">
-<span class="no">01</span>
-<h3 data-t="case.bayer.s04.role1.title">Modelo centrado na cultura</h3>
-<p data-t="case.bayer.s04.role1.desc">Organizar indicadores, pareceres e status por cultura agrícola.</p>
-</article>
-<article class="role">
-<span class="no">02</span>
-<h3 data-t="case.bayer.s04.role2.title">Fluxos de validação</h3>
-<p data-t="case.bayer.s04.role2.desc">Conectar triagem, análise técnica, aprovação condicionada e parecer final.</p>
-</article>
-<article class="role">
-<span class="no">03</span>
-<h3 data-t="case.bayer.s04.role3.title">Dados para auditoria</h3>
-<p data-t="case.bayer.s04.role3.desc">Associar cada parecer ao conjunto de evidências usado na decisão.</p>
-</article>
-<article class="role">
-<span class="no">04</span>
-<h3 data-t="case.bayer.s04.role4.title">Hierarquia de indicadores</h3>
-<p data-t="case.bayer.s04.role4.desc">Priorizar dados agronômicos, legais e comerciais em telas densas.</p>
-</article>
-<article class="role">
-<span class="no">05</span>
-<h3 data-t="case.bayer.s04.role5.title">Prototipação crítica</h3>
-<p data-t="case.bayer.s04.role5.desc">Desenhar telas de triagem, análise, formulário, parecer e auditoria.</p>
-</article>
-<article class="role">
-<span class="no">06</span>
-<h3 data-t="case.bayer.s04.role6.title">Alinhamento especialista</h3>
-<p data-t="case.bayer.s04.role6.desc">Traduzir critérios técnicos para equipes heterogêneas.</p>
-</article>
-</div>
-</div>
-</div>
-</section>
-<section class="case-section case-section--light" data-screen-label="05 Restrições">
-<div class="case-container">
-<header class="case-section__header">
-<span class="case-section__rule"></span>
-<p class="case-section__eyebrow"><span class="case-section__no">05 / 10</span><span class="case-section__label" data-t="case.lbl.05">Restrições do Projeto</span></p>
-<h2 class="case-section__title" data-t="case.restr.title">Restrições do projeto.</h2>
-<div class="case-section__lead">
-<p data-t="case.restr.intro">Condições que limitaram a solução e orientaram as decisões de arquitetura.</p>
-</div>
-</header>
-<div class="case-section__body">
-<div class="panel">
-<div class="panel__head">
-<span data-t="case.restr.panelHead">Condições de Contorno</span>
-<span>04</span>
-</div>
-<ul>
-<li>
-<span>
-<strong data-t="case.bayer.s05.item1.title">Densidade informacional</strong>
-<span class="ds" data-t="case.bayer.s05.item1.desc">Especialistas precisavam ver dados suficientes para decidir.</span>
-</span>
-</li>
-<li>
-<span>
-<strong data-t="case.bayer.s05.item2.title">Rastreabilidade</strong>
-<span class="ds" data-t="case.bayer.s05.item2.desc">Cada decisão precisava manter vínculo com evidências.</span>
-</span>
-</li>
-<li>
-<span>
-<strong data-t="case.bayer.s05.item3.title">Órgãos externos</strong>
-<span class="ds" data-t="case.bayer.s05.item3.desc">Partes do processo legal continuavam fora da plataforma.</span>
-</span>
-</li>
-<li>
-<span>
-<strong data-t="case.bayer.s05.item4.title">Vocabulário técnico</strong>
-<span class="ds" data-t="case.bayer.s05.item4.desc">A interface precisava respeitar termos do domínio.</span>
-</span>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section class="case-section case-section--dark" data-navdark data-screen-label="06 Decisão">
-<div class="case-container">
-<header class="case-section__header">
-<span class="case-section__rule"></span>
-<p class="case-section__eyebrow"><span class="case-section__no">06 / 10</span><span class="case-section__label" data-t="case.lbl.06">Decisão Estrutural</span></p>
-<h2 class="case-section__title" data-t="case.bayer.s06.title">A cultura agrícola como eixo da decisão.</h2>
-<div class="case-section__lead">
-<p data-t="case.bayer.s06.p1">A decisão estrutural foi organizar o sistema em torno da cultura agrícola. A partir dela, o usuário acessa microrregiões, tecnologias, pareceres, pendências e histórico.</p>
-</div>
-</header>
-<div class="case-section__body">
-<div class="hub">
-<div class="hub__center">
-<span class="core" data-t="case.bayer.s06.hubCenter">Cultura agrícola</span>
-</div>
-<div class="hub__ring">
-<span class="chip" data-t="case.bayer.s06.chip1">Microrregião</span>
-<span class="chip" data-t="case.bayer.s06.chip2">Tecnologia</span>
-<span class="chip" data-t="case.bayer.s06.chip3">Safra</span>
-<span class="chip" data-t="case.bayer.s06.chip4">Parecer</span>
-<span class="chip">CADE</span>
-<span class="chip" data-t="case.bayer.s06.chip6">Auditoria</span>
-</div>
-</div>
-<p class="decision-note" data-t="case.decision.cycleLabel">Ciclo operacional estruturado:</p>
-<div class="lifecycle">
-<span class="st" data-t="case.bayer.s06.st1">Seleção</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.bayer.s06.st2">Triagem</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.bayer.s06.st3">Análise</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.bayer.s06.st4">Parecer</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.bayer.s06.st5">Condição</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.bayer.s06.st6">Aprovação</span>
-<span class="sep">→</span>
-<span class="st" data-t="case.bayer.s06.st7">Auditoria</span>
-</div>
-</div>
-</div>
-</section>
-<section class="case-section case-section--light" data-screen-label="07 Escala">
-<div class="case-container">
-<header class="case-section__header">
-<span class="case-section__rule"></span>
-<p class="case-section__eyebrow"><span class="case-section__no">07 / 10</span><span class="case-section__label" data-t="case.lbl.07">Escala Operacional</span></p>
-<h2 class="case-section__title" data-t="case.bayer.s07.title">Fluxos de validação técnica em telas integradas.</h2>
-<div class="case-section__lead">
-<p data-t="case.bayer.s07.p1">A sequência estrutura leitura de processos, triagem, análise técnica, emissão de parecer e auditoria documental.</p>
-</div>
-</header>
+    <main>
+      <section
+        class="case-reframe__project-info"
+        id="informacoes"
+      >
+        <div class="case-reframe__project-card">
+          <div class="case-reframe__project-head">
+            <div class="case-reframe__section-label">
+              <span>01</span><i aria-hidden="true"></i
+              ><strong data-t="case.info.eyebrow"
+                >Informações do Projeto</strong
+              >
+            </div>
+          </div>
+          <dl class="case-reframe__project-grid">
+            <div>
+              <dt data-t="case.dt.productDesigner">Product Designer</dt>
+              <dd>Henrico Amaral</dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.uxResearcher">UX Researcher</dt>
+              <dd>Maria Antonieta Santos</dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.company">Empresa</dt>
+              <dd>MaxxiData</dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.client">Cliente</dt>
+              <dd>Bayer</dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.period">Período</dt>
+              <dd data-t="case.bayer.info.dd.period">
+                Dezembro 2021 — Março 2022
+              </dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.duration">Duração</dt>
+              <dd data-t="case.bayer.info.dd.duration">4 meses</dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.type">Tipo</dt>
+              <dd data-t="case.bayer.info.dd.type">
+                Plataforma interna de licenciamento
+              </dd>
+            </div>
+            <div>
+              <dt data-t="case.dt.platform">Plataforma</dt>
+              <dd data-t="case.bayer.info.dd.platform">
+                Web · Sistema interno
+              </dd>
+            </div>
+            <div class="case-reframe__project-scope">
+              <dt data-t="case.dt.scope">Escopo</dt>
+              <dd data-t="case.bayer.info.dd.scope">
+                Discovery · Arquitetura da informação · UX/UI · Prototipação
+              </dd>
+            </div>
+          </dl>
+          <p
+            class="case-reframe__project-closing"
+            data-t="case.bayer.info.closing"
+          >
+            Quando o domínio é técnico e o risco é regulatório, clareza da
+            informação é uma exigência operacional.
+          </p>
+        </div>
+      </section>
 
-</div>
-<div class="case-container case-media-section figs">
-<figure class="case-media-block figure">
-<figcaption class="case-media-header figure__cap">
-<h3 data-t="case.bayer.s07.cap1.h3">Painel de controle e visão geral</h3>
-<p data-t="case.bayer.s07.cap1.p">A tela inicial apresenta processos de validação por cultura, pendências regulatórias e urgência legal.</p>
-</figcaption>
-<div class="case-media-frame figure__frame screen-img">
-<img src="../assets/img/case-screens/bayer/bayer-01-dashboard.webp" alt="Dashboard de processos Bayer" data-t-alt="case.bayer.s07.alt1" loading="lazy">
-</div>
-</figure>
-<div class="case-media-block">
-<header class="case-media-header figure__cap">
-<h3 data-t="case.bayer.s07.cap2.h3">Triagem e análise técnica</h3>
-<p data-t="case.bayer.s07.cap2.p">Triagem de tecnologia agrícola e análise detalhada de indicadores de safra e microrregiões.</p>
-</header>
-<div class="case-media-grid figpair">
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/bayer/bayer-02-triagem-inicial.webp" alt="Triagem inicial de tecnologia agrícola" data-t-alt="case.bayer.s07.alt2" loading="lazy">
-</div>
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/bayer/bayer-03-analise-tecnica.webp" alt="Análise técnica detalhada" data-t-alt="case.bayer.s07.alt3" loading="lazy">
-</div>
-</div>
-</div>
-<figure class="case-media-block figure">
-<figcaption class="case-media-header figure__cap">
-<h3 data-t="case.bayer.s07.cap3.h3">Formulário de parecer técnico</h3>
-<p data-t="case.bayer.s07.cap3.p">Estrutura para inserir pareceres e checar pendências de patentes e restrições regulatórias.</p>
-</figcaption>
-<div class="case-media-frame figure__frame screen-img">
-<img src="../assets/img/case-screens/bayer/bayer-04-formulario-parecer.webp" alt="Formulário de parecer técnico" data-t-alt="case.bayer.s07.alt4" loading="lazy">
-</div>
-</figure>
-<div class="case-media-block">
-<header class="case-media-header figure__cap">
-<h3 data-t="case.bayer.s07.cap4.h3">Aprovação condicionada e parecer final</h3>
-<p data-t="case.bayer.s07.cap4.p">Fluxo para decisões sob restrições técnicas e consolidação do parecer final.</p>
-</header>
-<div class="case-media-grid figpair">
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/bayer/bayer-05-aprovacao-condicionada.webp" alt="Aprovação condicionada" data-t-alt="case.bayer.s07.alt5" loading="lazy">
-</div>
-<div class="case-media-frame figslot screen-img">
-<img src="../assets/img/case-screens/bayer/bayer-06-parecer-final.webp" alt="Parecer final consolidado" data-t-alt="case.bayer.s07.alt6" loading="lazy">
-</div>
-</div>
-</div>
-<figure class="case-media-block figure">
-<figcaption class="case-media-header figure__cap">
-<h3 data-t="case.bayer.s07.cap5.h3">Auditoria documental</h3>
-<p data-t="case.bayer.s07.cap5.p">Histórico de pareceres, status e justificativas para conformidade.</p>
-</figcaption>
-<div class="case-media-frame figure__frame screen-img">
-<img src="../assets/img/case-screens/bayer/bayer-07-auditoria-documental.webp" alt="Auditoria documental" data-t-alt="case.bayer.s07.alt7" loading="lazy">
-</div>
-</figure>
-</div>
-</section>
-<section class="case-section case-section--warm" data-screen-label="08 Limitações">
-<div class="case-container">
-<header class="case-section__header">
-<span class="case-section__rule"></span>
-<p class="case-section__eyebrow"><span class="case-section__no">08 / 10</span><span class="case-section__label" data-t="case.lbl.08">Limitações Estruturais</span></p>
-<h2 class="case-section__title" data-t="case.bayer.s08.title">Parte da validação continuou fora da plataforma.</h2>
-<div class="case-section__lead">
-<p data-t="case.bayer.s08.p1">Consultas a órgãos de propriedade industrial e patentes governamentais permaneceram dependentes de portais públicos externos.</p>
-<p data-t="case.bayer.s08.p2">O sistema centralizou evidências técnicas, mas a assinatura legal do contrato ainda transitava por ecossistema corporativo externo.</p>
-</div>
-</header>
+      <section
+        class="case-reframe__section"
+        id="contexto"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">02</span
+              ><span class="case-reframe__section-kicker" data-t="case.lbl.01"
+                >Contexto Operacional</span
+              >
+              <h2 data-t="case.bayer.s01.title">
+                A validação de tecnologias agrícolas depende de leitura
+                cuidadosa de dados técnicos.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.bayer.s01.p1"
+            >
+              Especialistas analisam desempenho por cultura, comportamento
+              regional, resultados de testes e histórico de safras antes de
+              recomendar o uso de uma tecnologia.
+            </p>
+          </div>
+          <div class="case-reframe__decision-card">
+            <div class="case-reframe__section-body">
+              <p data-t="case.bayer.s01.p2">
+                Esse processo envolve especialistas agronômicos, equipes
+                comerciais, gestão técnica e áreas institucionais, cada uma com
+                sua perspectiva e seus próprios registros.
+              </p>
+              <p class="case-reframe__caption" data-t="case.bayer.s01.cap">
+                A interpretação dependia da capacidade individual de reunir
+                informação suficiente.
+              </p>
+              <div class="case-reframe__chips">
+                <article class="case-reframe__chip">
+                  <b>01</b>
+                  <strong data-t="case.bayer.s01.chip1">Cultura</strong>
+                  <small data-t="case.bayer.s01.chip1l">desempenho por cultivo</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <b>02</b>
+                  <strong data-t="case.bayer.s01.chip2">Região</strong>
+                  <small data-t="case.bayer.s01.chip2l">comportamento regional</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <b>03</b>
+                  <strong data-t="case.bayer.s01.chip3">Safra</strong>
+                  <small data-t="case.bayer.s01.chip3l">histórico de resultados</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <b>04</b>
+                  <strong data-t="case.bayer.s01.chip4">Tecnologia</strong>
+                  <small data-t="case.bayer.s01.chip4l">objeto da validação</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <b>05</b>
+                  <strong data-t="case.bayer.s01.chip5">Parecer técnico</strong>
+                  <small data-t="case.bayer.s01.chip5l">registro da decisão</small>
+                </article>
+                <article class="case-reframe__node">
+                  <b data-t="case.converge.label">→ Convergência</b>
+                  <strong data-t="case.bayer.s01.node">Decisão auditável</strong>
+                  <small data-t="case.bayer.s01.nodel">contexto e justificativa juntos</small>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-</div>
-</section>
-<section class="case-section case-section--dark case-impact" data-navdark data-screen-label="09 Impacto">
-<div class="case-container case-section__header case-impact__head">
-<div class="k">
-<span class="ln">
-</span><span data-t="case.impact.kicker">09 / 10 · Impacto do Projeto</span></div>
-<h2 data-t="case.bayer.s09.title">Resultados na validação e licenciamento de culturas.</h2>
-<p data-t="case.bayer.s09.p1">A centralização dos dados agrícolas reduziu retrabalho de consolidação e estruturou um fluxo seguro para decisões críticas.</p>
-</div>
-<div class="case-container stat-grid" data-d="1">
-<div class="stat">
-<div class="stat__n">1<small data-t="case.bayer.s09.stat1unit">fluxo</small>
-</div>
-<p class="stat__d" data-t="case.bayer.s09.stat1d">Fluxo rastreável para pareceres e decisões de validação.</p>
-</div>
-<div class="stat">
-<div class="stat__n">5<small data-t="case.bayer.s09.stat2unit">áreas</small>
-</div>
-<p class="stat__d" data-t="case.bayer.s09.stat2d">Agronômico, comercial, CADE, gestão e fiscal conectados.</p>
-</div>
-<div class="stat">
-<div class="stat__n">4<small data-t="case.bayer.s09.stat3unit">meses</small>
-</div>
-<p class="stat__d" data-t="case.bayer.s09.stat3d">Da fase de requisitos à entrega de protótipos funcionais.</p>
-</div>
-<div class="stat">
-<div class="stat__n">1<small data-t="case.bayer.s09.stat4unit">base</small>
-</div>
-<p class="stat__d" data-t="case.bayer.s09.stat4d">Base estruturada para reduzir consolidação manual.</p>
-</div>
-</div>
-</section>
-<section class="case-section case-section--light reflection" data-screen-label="10 Reflexões">
-<div class="case-container reflection__in">
-<div class="k">
-<span class="ln">
-</span><span data-t="case.reflection.kicker">10 / 10 · Reflexões do Designer</span></div>
-<h2 data-t="case.bayer.s10.title">Projetar para especialistas exige abraçar a complexidade real.</h2>
-<p data-t="case.bayer.s10.p1">Simplificar escondendo dados cruciais é erro quando se projeta para especialistas.</p>
-<p data-t="case.bayer.s10.p2">O papel do designer é criar legibilidade e estrutura, não remover a complexidade necessária.</p>
-</div>
-</section>
-</main>
-<nav class="case-nav" aria-label="Outros casos" data-t-aria-label="case.nav.others">
-<div class="case-nav__grid">
-<a href="petrobras.html">
-<span class="dir" data-t="case.nav.prev">← Anterior</span>
-<span class="nm">Petrobras</span>
-</a>
-<a href="ambev.html">
-<span class="dir" data-t="case.nav.next">Próximo →</span>
-<span class="nm">Ambev</span>
-</a>
-</div>
-</nav>
-<footer class="site-footer" id="footer">
-<div class="container site-footer__inner">
-<div class="site-footer__top">
-<div class="site-footer__identity">
-<div>
-<p class="site-footer__name">Henrico Amaral</p>
-<p class="site-footer__role" data-t="ft.role">Senior Product Designer · Decision Infrastructure</p>
-</div>
-</div>
-<p class="site-footer__signature" data-t="ft.signature">
-Pense simples. Faça melhor.<br>
-Torne-se inevitável.
-</p>
-</div>
-<div class="site-footer__bottom">
-<p>Henrico Amaral · Product Designer · 2026</p>
-<a href="#" class="site-footer__toplink">↑ Topo</a>
-</div>
-</div>
-</footer>
-<script defer src="../assets/js/site.js?v=20260701-release">
-</script>
-</body>
+      <section
+class="case-reframe__section"
+        id="problema"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">03</span
+              ><span
+                class="case-reframe__section-kicker"
+                data-t="case.macro.problem"
+                >Definição do Problema</span
+              >
+              <h2 data-t="case.bayer.s02.title">
+                O sistema anterior não falhava por falta de dados. Falhava por
+                falta de estrutura.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.bayer.s02.p1"
+            >
+              Especialistas tinham acesso à informação necessária, mas não
+              conseguiam acompanhar o contexto completo da análise dentro de um
+              único fluxo.
+            </p>
+          </div>
+          <div class="case-reframe__decision-card">
+            <div class="case-reframe__section-body">
+              <p data-t="case.bayer.s02.p2">
+                A decisão dependia de comparar dados técnicos, consultar
+                documentos e registrar pareceres em ambientes diferentes.
+              </p>
+              <div class="case-reframe__chips">
+                <p
+                  class="case-reframe__before-label"
+                  data-t="case.before.label"
+                >
+                  Antes · Fragmentação
+                </p>
+                <span class="case-reframe__chip" data-t="case.bayer.s02.chip1"
+                  >Planilhas de comparação</span
+                ><span class="case-reframe__chip" data-t="case.bayer.s02.chip2"
+                  >Relatórios técnicos</span
+                ><span class="case-reframe__chip" data-t="case.bayer.s02.chip3"
+                  >Formulários de validação</span
+                ><span class="case-reframe__chip" data-t="case.bayer.s02.chip4"
+                  >Documentos institucionais</span
+                ><span class="case-reframe__arrow" aria-hidden="true">→</span
+                ><strong class="case-reframe__node" data-t="case.bayer.s02.node"
+                  >Contexto fragmentado</strong
+                >
+              </div>
+              <div class="case-reframe__callout">
+                <p class="case-reframe__after-label" data-t="case.after.label">
+                  Depois · Visão única
+                </p>
+                <h3 data-t="case.bayer.s03.title">
+                  A análise precisava carregar sua própria justificativa.
+                </h3>
+                <p class="case-reframe__lead" data-t="case.bayer.s03.lead">
+                  O gargalo era montar o contexto antes de interpretar o
+                  cenário.
+                </p>
+                <p data-t="case.bayer.s03.p1">
+                  Dados técnicos relevantes estavam distribuídos entre
+                  ferramentas sem conexão entre si.
+                </p>
+                <p data-t="case.bayer.s03.p2">
+                  O registro das decisões acontecia fora do ambiente de análise,
+                  quebrando a continuidade do processo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="case-reframe__section"
+        id="atuacao"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">04</span
+              ><span
+                class="case-reframe__section-kicker"
+                data-t="case.role.kicker"
+                >Atuação do Designer</span
+              >
+              <h2 data-t="case.bayer.s04.title">
+                A decisão técnica precisava permanecer ligada ao seu contexto.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.bayer.s04.p1"
+            >
+              A investigação dos artefatos mostrou que o maior esforço não
+              estava na interpretação dos dados, mas na montagem do contexto
+              necessário para interpretar o cenário.
+            </p>
+          </div>
+          <div class="case-reframe__decision-card">
+            <div class="case-reframe__section-body">
+              <div class="case-reframe__roles">
+                <article class="case-reframe__role">
+                  <span class="case-reframe__role-no">01</span>
+                  <h3 data-t="case.bayer.s04.role1.title">
+                    Continuidade do dossiê
+                  </h3>
+                  <p data-t="case.bayer.s04.role1.desc">
+                    Manter empresa, documentos, análises e pareceres no mesmo
+                    processo.
+                  </p>
+                </article>
+                <article class="case-reframe__role">
+                  <span class="case-reframe__role-no">02</span>
+                  <h3 data-t="case.bayer.s04.role2.title">
+                    Comparação técnica
+                  </h3>
+                  <p data-t="case.bayer.s04.role2.desc">
+                    Permitir contraste entre culturas, regiões, períodos e
+                    tecnologias.
+                  </p>
+                </article>
+                <article class="case-reframe__role">
+                  <span class="case-reframe__role-no">03</span>
+                  <h3 data-t="case.bayer.s04.role3.title">Gates de decisão</h3>
+                  <p data-t="case.bayer.s04.role3.desc">
+                    Organizar avanço, complementação ou reprovação documentada.
+                  </p>
+                </article>
+                <article class="case-reframe__role">
+                  <span class="case-reframe__role-no">04</span>
+                  <h3 data-t="case.bayer.s04.role4.title">
+                    Responsabilidade por etapa
+                  </h3>
+                  <p data-t="case.bayer.s04.role4.desc">
+                    Deixar claro quem analisa, quem valida e quem registra a
+                    decisão.
+                  </p>
+                </article>
+                <article class="case-reframe__role">
+                  <span class="case-reframe__role-no">05</span>
+                  <h3 data-t="case.bayer.s04.role5.title">Auditabilidade</h3>
+                  <p data-t="case.bayer.s04.role5.desc">
+                    Preservar justificativas, documentos e histórico técnico.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+class="case-reframe__section"
+        id="decisao"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">05</span
+              ><span
+                class="case-reframe__section-kicker"
+                data-t="case.bayer.s06.kicker"
+                >Decisão Estrutural</span
+              >
+              <h2 data-t="case.bayer.s06.title">
+                O processo de licenciamento como eixo da decisão.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.bayer.s06.p1"
+            >
+              A decisão estrutural foi organizar o sistema em torno do processo
+              de licenciamento. A partir dele, o usuário acompanha documentos,
+              análises, pareceres, pendências, contrato e histórico.
+            </p>
+          </div>
+          <div class="case-reframe__decision-card">
+            <div class="case-reframe__hub-stage">
+              <div class="case-reframe__hub-core-wrap">
+                <span class="case-reframe__hub-ring" aria-hidden="true"></span>
+                <div class="case-reframe__hub-core">
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                    ></path>
+                    <path d="M10 21h4"></path>
+                  </svg>
+                  <strong data-t="case.bayer.s06.hubCenter"
+                    >Processo de licenciamento</strong
+                  >
+                  <small data-t="case.decision.unit">Unidade central</small>
+                </div>
+              </div>
+              <div class="case-reframe__hub-dimensions">
+                <article class="case-reframe__chip">
+                  <strong data-t="case.bayer.s06.chip1">Empresa proponente</strong>
+                  <small data-t="case.bayer.s06.chip1l">origem do processo</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <strong data-t="case.bayer.s06.chip2">Documentação</strong>
+                  <small data-t="case.bayer.s06.chip2l">dossiê completo</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <strong data-t="case.bayer.s06.chip3">Análise financeira</strong>
+                  <small data-t="case.bayer.s06.chip3l">avaliação da proponente</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <strong data-t="case.bayer.s06.chip4">Análise técnica</strong>
+                  <small data-t="case.bayer.s06.chip4l">culturas e regiões</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <strong data-t="case.bayer.s06.chip5">Pareceres</strong>
+                  <small data-t="case.bayer.s06.chip5l">justificativa registrada</small>
+                </article>
+                <article class="case-reframe__chip">
+                  <strong data-t="case.bayer.s06.chip6">Auditoria</strong>
+                  <small data-t="case.bayer.s06.chip6l">histórico auditável</small>
+                </article>
+              </div>
+            </div>
+            <div class="case-reframe__cycle">
+              <div
+                class="case-reframe__cycle-label"
+                data-t="case.bayer.s06.cycleLabel"
+              >
+                Ciclo operacional estruturado
+              </div>
+              <div class="case-reframe__cycle-steps">
+                <span data-t="case.bayer.s06.st1">Recebimento</span
+                ><span class="sep">→</span
+                ><span data-t="case.bayer.s06.st2">Triagem</span
+                ><span class="sep">→</span
+                ><span data-t="case.bayer.s06.st3">Análise financeira</span
+                ><span class="sep">→</span
+                ><span data-t="case.bayer.s06.st4">Análise técnica</span
+                ><span class="sep">→</span
+                ><span data-t="case.bayer.s06.st5">Visita</span
+                ><span class="sep">→</span
+                ><span data-t="case.bayer.s06.st6">Parecer</span
+                ><span class="sep">→</span
+                ><span data-t="case.bayer.s06.st7">Contrato e auditoria</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+class="case-reframe__section"
+        id="limites"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-aside">
+            <span class="case-reframe__section-number">06</span
+            ><span
+              class="case-reframe__section-kicker"
+              data-t="case.restr.kicker"
+              >Restrições do Projeto</span
+            >
+            <h2 data-t="case.bayer.s08.title">
+              Parte da validação continuou fora da plataforma.
+            </h2>
+          </div>
+          <div class="case-reframe__section-body">
+            <p>
+              <span data-t="case.bayer.s08.p1"
+                >Consultas externas, validações institucionais e assinatura
+                legal permaneceram dependentes de processos fora do
+                núcleo.</span
+              >
+              <span data-t="case.bayer.s08.p2"
+                >A plataforma organizava o dossiê e a justificativa; não
+                substituía todas as decisões ou responsabilidades do processo de
+                licenciamento.</span
+              >
+            </p>
+          </div>
+          <div class="case-reframe__constraints">
+            <div class="case-reframe__constraint">
+              <b data-t="case.bayer.s05.item1.tag">01 · Dados</b>
+              <h3 data-t="case.bayer.s05.item1.title">
+                Heterogeneidade dos dados
+              </h3>
+              <p data-t="case.bayer.s05.item1.desc">
+                Integrar múltiplos sistemas sem perder granularidade.
+              </p>
+            </div>
+            <div class="case-reframe__constraint">
+              <b data-t="case.bayer.s05.item2.tag">02 · Variabilidade</b>
+              <h3 data-t="case.bayer.s05.item2.title">Variabilidade técnica</h3>
+              <p data-t="case.bayer.s05.item2.desc">
+                Acomodar diferenças entre culturas e regiões.
+              </p>
+            </div>
+            <div class="case-reframe__constraint">
+              <b data-t="case.bayer.s05.item3.tag">03 · Profundidade</b>
+              <h3 data-t="case.bayer.s05.item3.title">
+                Profundidade sem simplificação
+              </h3>
+              <p data-t="case.bayer.s05.item3.desc">
+                Manter dados completos sem sacrificar legibilidade.
+              </p>
+            </div>
+            <div class="case-reframe__constraint">
+              <b data-t="case.bayer.s05.item4.tag">04 · Auditoria</b>
+              <h3 data-t="case.bayer.s05.item4.title">
+                Auditabilidade institucional
+              </h3>
+              <p data-t="case.bayer.s05.item4.desc">
+                Registrar decisões no mesmo ambiente da análise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+class="case-reframe__section"
+        id="telas"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">07</span
+              ><span
+                class="case-reframe__section-kicker"
+                data-t="case.solution.kicker"
+                >Experiência · Solução</span
+              >
+              <h2 data-t="case.bayer.s07.title">
+                Telas para analisar, validar e registrar.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.bayer.s07.p1"
+            >
+              A solução conectou a leitura dos dados ao fluxo de pareceres,
+              decisões condicionadas e auditoria documental.
+            </p>
+          </div>
+          <div class="case-reframe__plates">
+            <figure class="case-reframe__plate case-reframe__plate--half">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 01</span
+                ><strong data-t="case.bayer.s07.cap1.h3"
+                  >Painel de processos e visão geral</strong
+                ><small>BAYER / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/bayer/bayer-01-dashboard.webp"
+                    alt="Visão geral de processos de licenciamento"
+                    data-t-alt="case.bayer.s07.alt1"
+                    width="1440"
+                    height="1000"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.bayer.s07.cap1.p">
+                Processos de licenciamento, pendências documentais e urgência
+                operacional.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--half">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 02</span
+                ><strong data-t="case.bayer.s07.cap2.h3"
+                  >Triagem e análises</strong
+                ><small>BAYER / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/bayer/bayer-02-triagem-inicial.webp"
+                    alt="Triagem inicial de tecnologia agrícola"
+                    data-t-alt="case.bayer.s07.alt2"
+                    width="1440"
+                    height="1000"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.bayer.s07.cap2.p">
+                Triagem da empresa proponente e leitura das análises financeira
+                e técnica.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--third">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 03</span
+                ><strong data-t="case.bayer.s07.cap3.h3"
+                  >Análise comparativa</strong
+                ><small>BAYER / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/bayer/bayer-03-analise-tecnica.webp"
+                    alt="Análise técnica detalhada"
+                    data-t-alt="case.bayer.s07.alt3"
+                    width="1440"
+                    height="1470"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.bayer.s07.cap3.p">
+                Estrutura para comparar cenários e preservar o raciocínio
+                técnico.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--third">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 04</span
+                ><strong data-t="case.bayer.s07.cap4.h3"
+                  >Formulário de parecer técnico</strong
+                ><small>BAYER / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/bayer/bayer-04-formulario-parecer.webp"
+                    alt="Formulário de parecer técnico"
+                    data-t-alt="case.bayer.s07.alt4"
+                    width="1440"
+                    height="1520"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.bayer.s07.cap4.p">
+                Registro de critérios, pendências e justificativas da decisão.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--third">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 05</span
+                ><strong data-t="case.bayer.s07.cap5.h3"
+                  >Auditoria documental</strong
+                ><small>BAYER / MÓDULO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/bayer/bayer-07-auditoria-documental.webp"
+                    alt="Auditoria documental"
+                    data-t-alt="case.bayer.s07.alt7"
+                    width="1440"
+                    height="1470"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.bayer.s07.cap5.p">
+                Histórico de pareceres, status, justificativas e documentos
+                associados.
+              </figcaption>
+            </figure>
+          </div>
+          <p
+            class="case-reframe__section-note"
+            data-t="case.bayer.process.p1"
+          >
+            A sequência visual acompanha o processo de licenciamento desde o
+            material legado até a aprovação condicionada e o parecer final.
+          </p>
+          <div class="case-reframe__plates case-reframe__plates--process">
+            <figure class="case-reframe__plate case-reframe__plate--lead">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 06</span
+                ><strong data-t="case.bayer.process.legacy.h3"
+                  >Fluxo anterior</strong
+                ><small>BAYER / PROCESSO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/bayer/bayer-legacy-workflow.webp"
+                    alt="Fluxo anterior de consolidação e análise"
+                    width="1600"
+                    height="1000"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.bayer.process.legacy.p">
+                Planilhas e procedimentos separados formavam o ponto de partida
+                do trabalho.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--side">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 07</span
+                ><strong data-t="case.bayer.process.conditional.h3"
+                  >Aprovação condicionada</strong
+                ><small>BAYER / PROCESSO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/bayer/bayer-05-aprovacao-condicionada.webp"
+                    alt="Tela de aprovação condicionada"
+                    width="1440"
+                    height="1470"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.bayer.process.conditional.p">
+                A decisão pode avançar com restrições técnicas registradas no
+                próprio fluxo.
+              </figcaption>
+            </figure>
+            <figure class="case-reframe__plate case-reframe__plate--full case-reframe__plate--single">
+              <div class="case-reframe__plate-heading">
+                <span>FIG. 08</span
+                ><strong data-t="case.bayer.process.final.h3"
+                  >Parecer final</strong
+                ><small>BAYER / PROCESSO</small>
+              </div>
+              <div class="case-reframe__plate-images">
+                <div
+class="case-reframe__plate-image"
+                >
+                  <img
+                    src="../assets/img/case-screens/bayer/bayer-06-parecer-final.webp"
+                    alt="Tela de parecer final"
+                    width="1440"
+                    height="1470"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <figcaption data-t="case.bayer.process.final.p">
+                A consolidação reúne critérios, justificativas, pendências e
+                documentos associados.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section
+class="case-reframe__section"
+        id="impacto"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__section-header">
+            <div class="case-reframe__section-aside">
+              <span class="case-reframe__section-number">08</span
+              ><span
+                class="case-reframe__section-kicker"
+                data-t="case.bayer.s09.kicker"
+                >Impacto do Projeto</span
+              >
+              <h2 data-t="case.bayer.s09.title">
+                Impacto: o licenciamento ganhou continuidade entre análise, parecer e auditoria.
+              </h2>
+            </div>
+            <p
+              class="case-reframe__section-header-copy"
+              data-t="case.bayer.s09.p1"
+            >
+              O impacto comprovável está na estrutura do processo: a plataforma
+              conecta proponente, documentação, triagem, análises, pareceres,
+              contrato e auditoria dentro de um dossiê contínuo de decisão.
+            </p>
+          </div>
+          <div class="case-reframe__impact-list">
+            <article
+class="case-reframe__impact-stat"
+            >
+              <div
+                class="case-reframe__impact-kind"
+                data-t="case.bayer.s09.stat1kind"
+              >
+                Fluxo institucional
+              </div>
+              <div class="case-reframe__impact-value">
+                <span>8</span
+                ><span data-t="case.bayer.s09.stat1u">etapas</span>
+              </div>
+              <p data-t="case.bayer.s09.stat1d">
+                Proponente, documentação, triagem, análises, parecer, gates,
+                contrato e auditoria passaram a compor a mesma trilha de
+                licenciamento.
+              </p>
+            </article>
+            <article
+class="case-reframe__impact-stat"
+            >
+              <div
+                class="case-reframe__impact-kind"
+                data-t="case.bayer.s09.stat2kind"
+              >
+                Arquitetura modular
+              </div>
+              <div class="case-reframe__impact-value">
+                <span>4</span><span data-t="case.bayer.s09.stat2u">módulos</span>
+              </div>
+              <p data-t="case.bayer.s09.stat2d">
+                Dados da cultura, análise comparativa, fluxo de validação e
+                documentação institucional estruturam a análise como processo
+                contínuo.
+              </p>
+            </article>
+            <article
+class="case-reframe__impact-stat"
+            >
+              <div
+                class="case-reframe__impact-kind"
+                data-t="case.bayer.s09.stat3kind"
+              >
+                Leitura entre áreas
+              </div>
+              <div class="case-reframe__impact-value">
+                <span>5</span><span data-t="case.bayer.s09.stat3u">áreas</span>
+              </div>
+              <p data-t="case.bayer.s09.stat3d">
+                Engenharia, especialistas agronômicos, comercial, gestão
+                técnica e pesquisa passaram a orbitar a mesma estrutura de
+                decisão.
+              </p>
+            </article>
+            <article
+class="case-reframe__impact-stat"
+            >
+              <div
+                class="case-reframe__impact-kind"
+                data-t="case.bayer.s09.stat4kind"
+              >
+                Rastreabilidade
+              </div>
+              <div class="case-reframe__impact-value">
+                <span>Parecer</span><span data-t="case.bayer.s09.stat4u">auditável</span>
+              </div>
+              <p data-t="case.bayer.s09.stat4d">
+                O registro da decisão passa a acontecer no mesmo ambiente da
+                análise, reduzindo ruptura entre interpretação técnica e
+                validação institucional.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section
+class="case-reframe__section"
+        id="reflexao"
+      >
+        <div class="case-reframe__section-inner">
+          <div class="case-reframe__reflection">
+            <div class="case-reframe__reflection-aside">
+              <span class="case-reframe__section-number">09</span
+              ><span
+                class="case-reframe__section-kicker"
+                data-t="case.reflection.kicker"
+                >Reflexões</span
+              >
+            </div>
+            <div class="case-reframe__reflection-copy">
+              <h2 data-t="case.bayer.s10.title">
+                Especialistas precisam de profundidade com continuidade.
+              </h2>
+              <p>
+                <span data-t="case.bayer.s10.p1"
+                  >A principal decisão foi respeitar a profundidade do domínio
+                  sem transformar a interface em um depósito de dados.</span
+                >
+                <span data-t="case.bayer.s10.p2"
+                  >O valor está em fazer histórico, comparações e decisões
+                  encadeadas aparecerem como partes do mesmo processo
+                  institucional.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <nav class="case-nav" aria-label="Navegação entre cases">
+      <div class="case-nav__grid">
+        <a href="petrobras.html">
+          <span class="dir" data-t="case.nav.prev">← Anterior</span>
+          <span class="nm">Petrobras</span>
+        </a>
+        <a href="ambev.html">
+          <span class="dir" data-t="case.nav.next">Próximo →</span>
+          <span class="nm">Ambev</span>
+        </a>
+      </div>
+    </nav>
+    <footer class="site-footer" id="footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__top">
+          <div class="site-footer__identity">
+            <div>
+              <p class="site-footer__name">Henrico Amaral</p>
+              <p class="site-footer__role">Senior Product Designer · Decision Infrastructure</p>
+            </div>
+          </div>
+          <p class="site-footer__signature">
+            Pense simples. Organize a complexidade.<br />Torne-se inevitável.
+          </p>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© 2026 HENRICO AMARAL · PRODUCT DESIGNER</p>
+          <a href="https://www.henrico.works/" target="_blank" rel="noopener" class="site-footer__powered">
+            <span data-t="ft.powered">Powered by</span>
+            <strong>HENRICO.WORKS</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script
+      defer=""
+      src="../assets/js/site.js?v=20260715-case-nav"
+    ></script>
+    <script
+      defer=""
+      src="../assets/js/motion.js?v=20260716-motion-v2"
+    ></script>
+  </body>
 </html>

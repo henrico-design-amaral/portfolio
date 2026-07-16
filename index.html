@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Henrico Amaral — Senior Product Designer</title>
   <meta name="description" content="Senior Product Designer especializado em plataformas B2B, sistemas internos, workflows complexos e produtos digitais para operações críticas.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/tailwind.generated.css?v=20260701-release">
-  <link rel="stylesheet" href="assets/css/site.css?v=20260701-release">
-  <link rel="stylesheet" href="assets/css/motion.css?v=20260701-release">
-  <link rel="stylesheet" href="assets/css/hero.css?v=20260701-release">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260710-visual">
+  <link rel="stylesheet" href="assets/css/motion.css?v=20260716-motion-v2">
+  <link rel="stylesheet" href="assets/css/hero.css?v=20260710-visual">
       <noscript>
     <style>
       .availability-badge-v2,
@@ -24,6 +24,16 @@
         opacity: 1 !important;
       }
 
+      @media (max-width: 767px) {
+        #mobile-menu[hidden] {
+          display: block !important;
+        }
+
+        #mobile-menu-toggle {
+          display: none !important;
+        }
+      }
+
       .reveal-text {
         opacity: 1 !important;
         transform: none !important;
@@ -35,7 +45,7 @@
 <body class="font-body overflow-x-hidden">
 
   <a href="#main-content"
-    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent-500 text-white px-4 py-2 z-50 rounded"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#0B0F14] text-white px-4 py-2 z-50 rounded"
     data-t="skip">Ir para o conteúdo</a>
 
   <!-- NAV -->
@@ -89,22 +99,22 @@
       <div class="hero2 hero2--editorial">
         <div class="hero2__content">
           <div class="hero2__meta">
-            <div class="hero2__status motion-reveal-up motion-hero">
+            <div class="hero2__status">
               <span class="hero2__status-dot" aria-hidden="true"></span>
               <span class="hero2__status-text" data-t="hero.availability">Disponível agora · CLT · PJ · Freelance</span>
             </div>
-            <p class="hero2__eyebrow motion-reveal-up motion-hero" data-t="eyebrow">Sênior Product Designer · B2B/Enterprise · Sistemas complexos</p>
+            <p class="hero2__eyebrow" data-t="eyebrow">Sênior Product Designer · B2B/Enterprise · Sistemas complexos</p>
           </div>
 
           <h1 class="hero2__title">
-            <span class="hero2__line"><span class="hero2__line-in motion-blur-in motion-hero" data-t="h1.l1">Eu desenho produtos digitais complexos</span></span>
-            <span class="hero2__line"><span class="hero2__line-in motion-blur-in motion-hero"><span data-t="h1.l2prefix">para </span><span class="hero-title-emphasis" data-t="h1.l2">decisões mais claras.</span></span></span>
+            <span class="hero2__line"><span class="hero2__line-in" data-t="h1.l1">Eu desenho produtos digitais complexos</span></span>
+            <span class="hero2__line"><span class="hero2__line-in"><span data-t="h1.l2prefix">para </span><span class="hero-title-emphasis" data-t="h1.l2">decisões mais claras.</span></span></span>
           </h1>
 
           <div class="hero2__body">
-            <p class="hero2__lede motion-blur-in motion-hero" data-t="sub">Sênior Product Designer com mais de 15 anos de experiência em produtos B2B, enterprise, plataformas internas e sistemas críticos. Transformo regras, dados, fluxos e restrições de negócio em interfaces mais claras para quem opera, decide e entrega valor.</p>
+            <p class="hero2__lede" data-t="sub">Sênior Product Designer com mais de 15 anos de experiência em produtos B2B, enterprise, plataformas internas e sistemas críticos. Transformo regras, dados, fluxos e restrições de negócio em interfaces mais claras para quem opera, decide e entrega valor.</p>
 
-            <div class="hero-proof-tags motion-reveal-up motion-hero" aria-label="Evidências rápidas">
+            <div class="hero-proof-tags" aria-label="Evidências rápidas">
               <span class="hero-proof-tag" data-t="hero.proof1">Discovery & estratégia</span>
               <span class="hero-proof-tag" data-t="hero.proof2">Sistemas críticos</span>
               <span class="hero-proof-tag" data-t="hero.proof3">B2B & Enterprise</span>
@@ -112,9 +122,9 @@
               <span class="hero-proof-tag" data-t="hero.proof5">Fluxos operacionais</span>
             </div>
 
-            <p class="hero-signature motion-blur-in motion-hero" data-t="hero.script">Pense simples. Faça melhor. Torne-se inevitável.</p>
+            <p class="hero-signature" data-t="hero.script">Pense simples. Organize a complexidade. Torne-se inevitável.</p>
 
-            <div class="hero2__actions motion-reveal-up motion-hero">
+            <div class="hero2__actions">
               <span class="magnetic-wrap inline-block">
                 <a href="#cases" class="hero2__cta">
                   <span class="hero2__cta-label" data-t="hero.cta1">Ver cases</span>
@@ -129,7 +139,7 @@
       </div>
 
       <!-- Clients Marquee -->
-      <div class="clients-strip motion-reveal-up motion-hero">
+      <div class="clients-strip">
         <div class="clients-strip-inner">
           <span class="clients-label" data-t="worked-with">Clientes</span>
           <div class="ev-marquee overflow-hidden w-full" aria-label="Clientes">
@@ -159,7 +169,7 @@
     </section>
 
     <!-- ── PROCESS & TERRITORY ── -->
-    <section id="process" class="section-pad px-6 bg-base-200 relative nbg" data-motion>
+    <section id="process" class="section-pad bg-base-200 relative nbg" data-motion>
       <style>
         @keyframes dash-flow { to { stroke-dashoffset: -200; } }
         @keyframes dash-flow-reverse { to { stroke-dashoffset: 200; } }
@@ -184,7 +194,7 @@
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
-              <h2 class="section-header-title motion-reveal-up motion-section" data-t="s4.title">Antes de desenhar telas,<br>organizo o problema.</h2>
+              <h2 class="section-header-title motion-reveal-up motion-section" data-t="s4.title">Antes de desenhar telas, <span class="section-title-emphasis">organizo o problema.</span></h2>
             </div>
             <div class="section-header-subtitle motion-reveal-up motion-section">
               <div class="section-microstats section-microcopy">
@@ -277,7 +287,7 @@
     </section>
 
     <!-- CASES -->
-    <section id="cases" class="section-pad px-6 relative nbg bg-page" data-motion>
+    <section id="cases" class="section-pad relative nbg bg-page" data-motion>
       <div class="max-w-[1440px] w-full mx-auto relative z-10">
         <!-- Header Section — standardized system -->
         <div class="section-header">
@@ -286,19 +296,19 @@
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
-              <h2 class="section-header-title motion-reveal-up motion-section" data-t="s3.header.title">Trabalhos onde clareza<br>virou operação.</h2>
+              <h2 class="section-header-title motion-reveal-up motion-section" data-t="s3.header.title">Trabalhos onde clareza <span class="section-title-emphasis">virou operação.</span></h2>
             </div>
             <div class="section-header-subtitle">
               <div class="section-microstats section-microcopy">
                 <span data-t="s3.header.meta">PLATAFORMAS INTERNAS · B2B · DECISÃO</span>
               </div>
-              <p data-t="s3.header.desc">Cases em plataformas internas, produtos B2B e sistemas de decisão. Os setores mudam. O problema é o mesmo: organizar complexidade para melhorar a operação.</p>
+              <p data-t="s3.header.desc">Cases em plataformas internas, produtos B2B e sistemas de decisão. Os setores mudam; o trabalho é organizar contexto, regras e decisões para a operação.</p>
             </div>
           </div>
         </div>
 
-        <!-- 4-Column Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-12 relative motion-stagger" id="cases-grid">
+        <!-- Case list -->
+        <div class="flex flex-col gap-8 xl:gap-12 relative motion-stagger" id="cases-grid">
 
           <!-- CASE 1: PETROBRAS — Critical Offshore Operations -->
           <a href="cases/petrobras.html" class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card block motion-stagger-item motion-reveal-up motion-card" data-behavior="critical" data-case-index="0">
@@ -316,7 +326,7 @@
                 <circle cx="70" cy="60" r="1.5" fill="#BE9C6E" opacity="0.2" style="transform-origin: 70px 60px; animation: petro-node-breathe 8s ease-in-out infinite 4s;" />
               </svg>
               <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
-              <img src="assets/img/cases/petrobras.webp" srcset="assets/img/cases/petrobras-640.webp 640w, assets/img/cases/petrobras-960.webp 960w, assets/img/cases/petrobras.webp 1200w" sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) calc(50vw - 64px), 360px" alt="Petrobras" class="w-full h-full object-cover scale-[1.02] opacity-80" width="1200" height="1200" loading="lazy" decoding="async" />
+              <img src="assets/img/cases/hero-petrobras.png" alt="Sala de controle offshore da Petrobras com mapas marítimos e painéis operacionais" class="w-full h-full object-cover scale-[1.02] opacity-80" width="1672" height="941" loading="lazy" decoding="async" />
 
               <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
                 01 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
@@ -330,7 +340,8 @@
               <h3 class="font-display font-bold text-[2.2rem] md:text-[2.8rem] leading-[0.9] tracking-[0] mb-8 text-white">PETROBRAS</h3>
               <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Coordenação offshore crítica para monitoramento ambiental e resposta operacional em tempo real.</p>
 
-              <div class="absolute right-8 top-20 scale-150 text-white/30 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 transform transition-transform">
+              <div class="case-card__cta absolute right-8 top-20 text-white/30 group-hover:text-white transition-colors duration-500">
+                <span class="case-card__cta-label" data-t="case.open">Ver case</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </div>
 
@@ -371,7 +382,7 @@
                 <line x1="70" y1="50" x2="70" y2="75" stroke="#BE9C6E" stroke-width="0.12" opacity="0.12" />
               </svg>
               <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
-              <img src="assets/img/cases/ambev.webp" srcset="assets/img/cases/ambev-640.webp 640w, assets/img/cases/ambev-960.webp 960w, assets/img/cases/ambev.webp 1200w" sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) calc(50vw - 64px), 360px" alt="Ambev" class="w-full h-full object-cover scale-[1.02] opacity-80" width="1200" height="1200" loading="lazy" decoding="async" />
+              <img src="assets/img/cases/hero-ambev.png" alt="Centro de controle logístico da Ambev com painéis de indicadores operacionais" class="w-full h-full object-cover scale-[1.02] opacity-80" width="1672" height="941" loading="lazy" decoding="async" />
 
               <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
                 02 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
@@ -385,7 +396,8 @@
               <h3 class="font-display font-bold text-[2.2rem] md:text-[2.8rem] leading-[0.9] tracking-[0] mb-8 text-white">AMBEV</h3>
               <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Infraestrutura logística nacional para monitoramento distribuído e gestão de rupturas operacionais.</p>
 
-              <div class="absolute right-8 top-20 scale-150 text-white/30 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 transform transition-transform">
+              <div class="case-card__cta absolute right-8 top-20 text-white/30 group-hover:text-white transition-colors duration-500">
+                <span class="case-card__cta-label" data-t="case.open">Ver case</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </div>
 
@@ -425,7 +437,7 @@
                 <circle cx="50" cy="50" r="20" fill="none" stroke="#BE9C6E" stroke-width="0.1" opacity="0.08" style="transform-origin: 50% 50%; animation: bayer-pulse 8s ease-in-out infinite;" />
               </svg>
               <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
-              <img src="assets/img/cases/bayer.webp" srcset="assets/img/cases/bayer-640.webp 640w, assets/img/cases/bayer-960.webp 960w, assets/img/cases/bayer.webp 1200w" sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) calc(50vw - 64px), 360px" alt="Bayer" class="w-full h-full object-cover scale-[1.02] opacity-80" width="1200" height="1200" loading="lazy" decoding="async" />
+              <img src="assets/img/cases/hero-bayer.png" alt="Centro de inteligência agronômica da Bayer com mapas de cultivo e indicadores agrícolas" class="w-full h-full object-cover scale-[1.02] opacity-80" width="1672" height="941" loading="lazy" decoding="async" />
 
               <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
                 03 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
@@ -437,9 +449,10 @@
 
             <div class="px-10 pb-10 pt-6 flex flex-col relative z-20 bg-[#0B0F14]">
               <h3 class="font-display font-bold text-[2.2rem] md:text-[2.8rem] leading-[0.9] tracking-[0] mb-8 text-white">BAYER</h3>
-              <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Sistema territorial de inteligência agronômica para análise ambiental e suporte à decisão agrícola.</p>
+              <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Sistema interno para organizar processos de licenciamento de tecnologias agrícolas, da documentação à auditoria da decisão.</p>
 
-              <div class="absolute right-8 top-20 scale-150 text-white/30 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 transform transition-transform">
+              <div class="case-card__cta absolute right-8 top-20 text-white/30 group-hover:text-white transition-colors duration-500">
+                <span class="case-card__cta-label" data-t="case.open">Ver case</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </div>
 
@@ -464,65 +477,47 @@
             </div>
           </a>
 
-          <!-- CASE 4: BMG — Enterprise Financial Operations -->
-          <a href="cases/bmg.html" class="bg-[#0B0F14] rounded-[4px] overflow-hidden flex flex-col relative text-white group aspect-[4/5] md:aspect-square shadow-2xl shadow-black/20 case-card block motion-stagger-item motion-reveal-up motion-card" data-behavior="regulated" data-case-index="3">
-            <div class="flex-grow relative overflow-hidden">
-              <!-- BMG Behavioral Overlay: workflow state transitions, modular activation, supervision pulses -->
-              <svg class="behavioral-svg absolute inset-0 w-full h-full z-[3] pointer-events-none opacity-0 transition-opacity duration-1000" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <circle cx="15" cy="50" r="3" fill="none" stroke="#BE9C6E" stroke-width="0.3" opacity="0.25" style="animation: bmg-state 4s ease-in-out infinite;" />
-                <path d="M 18,50 L 42,50" fill="none" stroke="#BE9C6E" stroke-width="0.3" stroke-dasharray="2 3" opacity="0.15" style="animation: bmg-arrow 3s linear infinite;" />
-                <rect x="42" y="46" width="10" height="8" fill="none" stroke="#BE9C6E" stroke-width="0.3" opacity="0.2" style="animation: bmg-state 4s ease-in-out infinite 1s;" />
-                <path d="M 52,50 L 72,50" fill="none" stroke="#BE9C6E" stroke-width="0.3" stroke-dasharray="2 3" opacity="0.15" style="animation: bmg-arrow 3s linear infinite 1.5s;" />
-                <circle cx="76" cy="50" r="3" fill="#BE9C6E" opacity="0.15" style="animation: bmg-state 4s ease-in-out infinite 2s;" />
-                <circle cx="76" cy="50" r="7" fill="none" stroke="#BE9C6E" stroke-width="0.12" opacity="0.1" style="transform-origin: 76px 50px; animation: bmg-supervision 5s ease-in-out infinite 2s;" />
-                <rect x="10" y="16" width="12" height="12" fill="none" stroke="#BE9C6E" stroke-width="0.2" opacity="0.12" style="animation: bmg-module 5s ease-in-out infinite;" />
-                <rect x="26" y="16" width="12" height="12" fill="none" stroke="#BE9C6E" stroke-width="0.2" opacity="0.12" style="animation: bmg-module 5s ease-in-out infinite 1.25s;" />
-                <rect x="42" y="16" width="12" height="12" fill="none" stroke="#BE9C6E" stroke-width="0.2" opacity="0.12" style="animation: bmg-module 5s ease-in-out infinite 2.5s;" />
-              </svg>
-              <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F14] z-10"></div>
-              <img src="assets/img/cases/bmg.webp" srcset="assets/img/cases/bmg-640.webp 640w, assets/img/cases/bmg-960.webp 960w, assets/img/cases/bmg.webp 1200w" sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) calc(50vw - 64px), 360px" alt="BMG" class="w-full h-full object-cover object-top scale-[1.02] opacity-80" width="1200" height="1200" loading="lazy" decoding="async" />
-
-              <div class="absolute top-5 left-5 z-20 flex items-center text-white/80 font-mono text-[10px]">
-                04 <span class="w-6 h-[1px] bg-white/30 mx-3"></span>
-              </div>
-              <div class="absolute top-5 right-5 z-20 text-white/50 font-mono text-[8px] tracking-[0.2em] uppercase">
-                FINANÇAS
-              </div>
-            </div>
-
-            <div class="px-10 pb-10 pt-6 flex flex-col relative z-20 bg-[#0B0F14]">
-              <h3 class="font-display font-bold text-[2.2rem] md:text-[2.8rem] leading-[0.9] tracking-[0] mb-8 text-white">BMG</h3>
-              <p class="text-white/50 text-[13px] md:text-base leading-relaxed mb-10 pr-16 font-light">Arquitetura financeira modular para operações PJ em ambientes regulados.</p>
-
-              <div class="absolute right-8 top-20 scale-150 text-white/30 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 transform transition-transform">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-              </div>
-
-              <div class="grid grid-cols-4 gap-4 pt-8 border-t border-white/10">
-                <div class="col-span-1">
-                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.system">Sistema</span>
-                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.bmg.system">Plataforma financeira<br>empresarial</span>
-                </div>
-                <div class="col-span-1">
-                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.context">Contexto</span>
-                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.bmg.context">Ambiente<br>regulado</span>
-                </div>
-                <div class="col-span-1">
-                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.scope">Escopo</span>
-                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.bmg.scope">Conta<br>PJ</span>
-                </div>
-                <div class="col-span-1">
-                  <span class="block font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mb-2" data-t="case.label.impact">Impacto</span>
-                  <span class="block text-[10px] md:text-[11px] text-white/90 leading-tight font-mono uppercase tracking-[0]" data-t="card.bmg.impact">Fluxos regulados<br>simplificados</span>
-                </div>
-              </div>
-            </div>
-          </a>
-
         </div>
 
         <style>
           .case-card { will-change: transform, opacity; }
+
+          /* One case per row, with a horizontal composition on larger screens. */
+          #cases-grid .case-card {
+            flex-direction: row;
+            aspect-ratio: auto;
+            min-height: clamp(20rem, 32vw, 30rem);
+          }
+
+          #cases-grid .case-card > div:first-child {
+            flex: 0 1 46%;
+            min-height: 20rem;
+          }
+
+          #cases-grid .case-card > div:last-child {
+            flex: 1 1 54%;
+            justify-content: center;
+          }
+
+          #cases-grid .case-card__cta {
+            top: 2rem;
+          }
+
+          @media (max-width: 767px) {
+            #cases-grid .case-card {
+              flex-direction: column;
+              min-height: 0;
+            }
+
+            #cases-grid .case-card > div:first-child {
+              flex: none;
+              min-height: 15rem;
+            }
+
+            #cases-grid .case-card > div:last-child {
+              flex: none;
+            }
+          }
 
           /* ─── PETROBRAS — Critical Offshore Operations ─── */
           @keyframes petro-radar {
@@ -583,32 +578,13 @@
           .case-card[data-behavior="territorial"] .behavioral-svg { opacity: 0.12; }
           .case-card[data-behavior="territorial"]:hover .behavioral-svg { opacity: 0.22 !important; }
 
-          /* ─── BMG — Enterprise Financial Operations ─── */
-          @keyframes bmg-state {
-            0%, 100% { opacity: 0.08; }
-            50% { opacity: 0.45; }
-          }
-          @keyframes bmg-arrow {
-            0% { stroke-dashoffset: 0; }
-            100% { stroke-dashoffset: -50; }
-          }
-          @keyframes bmg-module {
-            0%, 100% { opacity: 0.05; }
-            50% { opacity: 0.2; }
-          }
-          @keyframes bmg-supervision {
-            0%, 100% { opacity: 0.06; transform: scale(1); }
-            50% { opacity: 0.25; transform: scale(1.3); }
-          }
-          .case-card[data-behavior="regulated"] .behavioral-svg { opacity: 0.14; }
-          .case-card[data-behavior="regulated"]:hover .behavioral-svg { opacity: 0.24 !important; }
         </style>
 </div>
     </section>
 
     <!-- IMPACT -->
-    <section id="impact" class="section-pad px-6 bg-base-100 relative nbg overflow-visible" data-motion>
-      <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12 relative z-10">
+    <section id="impact" class="section-pad bg-base-100 relative nbg overflow-visible" data-motion>
+      <div class="max-w-[1440px] w-full mx-auto relative z-10">
         <!-- Section Header — standardized system (canonical reference) -->
         <div class="section-header">
           <span class="section-kicker">
@@ -616,11 +592,11 @@
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
-              <h2 class="section-header-title" data-t="s5.title">Impacto observável.<br>Operação rastreável.</h2>
+              <h2 class="section-header-title" data-t="s5.title">Impacto observável. <span class="section-title-emphasis">Operação rastreável.</span></h2>
             </div>
             <div class="section-header-subtitle">
               <div class="section-microstats section-microcopy">
-                <span data-t="s5.stat1">RESULTADOS OBSERVÁVEIS EM SISTEMAS COMPLEXOS</span>
+                <span data-t="s5.stat1">EVIDÊNCIAS OBSERVÁVEIS EM SISTEMAS COMPLEXOS</span>
               </div>
               <p data-t="s5.desc">Quando há número validado, ele aparece. Quando o impacto é estrutural, a evidência é descrita com precisão.</p>
             </div>
@@ -648,7 +624,7 @@
                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v2m0 14v2M3 12h2m14 0h2m-4.5-6.5l1.5-1.5M5.5 18.5l1.5-1.5m11.5 0l1.5 1.5M5.5 5.5l1.5 1.5"></path></svg>
                </div>
                <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
-               <div class="impact-evidence" data-t="imp1.val">95% de redução no esforço manual</div>
+               <div class="impact-evidence" data-t="imp1.val">A documentação consolidada registra aproximadamente 95% de automação na consolidação documental.</div>
                <p class="impact-desc" data-t="imp1.desc">Consolidação de relatórios operacionais reorganizada para leitura contínua em contexto offshore. O sistema integra informações previamente distribuídas entre monitoramento orbital, análises geoespaciais e mobilização de recursos em um único fluxo operacional contínuo.</p>
              </div>
            </div>
@@ -659,11 +635,11 @@
                <h3 data-t="imp2.client">Bayer</h3>
                <div class="mb-auto">
                  <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
-                 <span class="impact-dimension" data-t="imp2.dim">Dados agrícolas</span>
+                 <span class="impact-dimension" data-t="imp2.dim">Licenciamento</span>
                </div>
                <div class="impact-tag">
                  <span class="dot"></span>
-                 <span data-t="imp2.type">Dados agrícolas</span>
+                 <span data-t="imp2.type">Licenciamento</span>
                </div>
              </div>
              <div class="impact-card-side">
@@ -671,8 +647,8 @@
                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path></svg>
                </div>
                <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
-               <div class="impact-evidence" data-t="imp2.val">Rastreabilidade de dados agrícolas</div>
-               <p class="impact-desc" data-t="imp2.desc">Informações agrícolas reorganizadas em torno da cultura como unidade central de análise, conectando dados técnicos, comparação de indicadores e registro de decisões dentro de um fluxo estruturado.</p>
+               <div class="impact-evidence" data-t="imp2.val">Rastreabilidade de pareceres e decisões</div>
+               <p class="impact-desc" data-t="imp2.desc">Processos de licenciamento reorganizados em torno de documentação, análises, pareceres, contratos e auditoria dentro de um fluxo estruturado.</p>
              </div>
            </div>
 
@@ -695,30 +671,7 @@
                </div>
                <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
                <div class="impact-evidence" data-t="imp3.val">Visibilidade de rupturas operacionais</div>
-               <p class="impact-desc" data-t="imp3.desc">Estrutura de supply chain organizada para leitura de disponibilidade, ruptura e coordenação logística. A plataforma passou a refletir o estado real da operação, transformando dados dispersos em uma visão operacional compartilhada.</p>
-             </div>
-           </div>
-
-<!-- Card 4: BMG -->
-           <div class="impact-cell motion-stagger-item motion-reveal-up motion-card">
-             <div class="impact-card-side">
-               <h3 data-t="imp4.client">BMG</h3>
-               <div class="mb-auto">
-                 <span class="impact-label" data-t="imp.label_dim">DIMENSÃO</span>
-                 <span class="impact-dimension" data-t="imp4.dim">Ambiente regulado</span>
-               </div>
-               <div class="impact-tag">
-                 <span class="dot"></span>
-                 <span data-t="imp4.type">Banking / compliance</span>
-               </div>
-             </div>
-             <div class="impact-card-side">
-               <div class="impact-icon-wrapper">
-                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
-               </div>
-               <span class="impact-label" data-t="imp.label_ev">EVIDÊNCIA</span>
-               <div class="impact-evidence" data-t="imp4.val">Fluxos regulados simplificados</div>
-               <p class="impact-desc" data-t="imp4.desc">Jornada PJ estruturada com validações, estados e fluxos aderentes a exigências operacionais e regulatórias. A conta digital foi pensada para pequenas empresas sem remover a segurança e a conformidade bancária do processo.</p>
+               <p class="impact-desc" data-t="imp3.desc">Estrutura de supply chain organizada para leitura de disponibilidade, ruptura e coordenação logística, com camadas de monitoramento, análise e decisão.</p>
              </div>
            </div>
 
@@ -737,7 +690,7 @@
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
-              <h2 class="section-header-title" data-t="ab.title">Por trás<br>da estrutura.</h2>
+              <h2 class="section-header-title" data-t="ab.title">Por trás da <span class="section-title-emphasis">estrutura.</span></h2>
             </div>
             <div class="section-header-subtitle">
               <div class="section-microstats section-microcopy">
@@ -758,7 +711,7 @@
           </div>
 
 <!-- Photo frame -->
-           <div class="about-photo-frame editorial-reveal">
+           <div class="about-photo-frame editorial-reveal motion-blur-in">
              <img
                 src="assets/img/foto.png"
                 alt="Henrico Amaral, Senior Product Designer especializado em sistemas enterprise."
@@ -786,6 +739,7 @@
               <li>Sistemas internos</li>
               <li>Workflows complexos</li>
               <li>Ambientes regulados</li>
+              <li>MBA em Gestão de Operações · Estácio, 2024</li>
             </ul>
           </article>
 
@@ -849,7 +803,7 @@
           </span>
           <div class="section-header-grid">
             <div class="section-header-title-col">
-              <h2 class="section-header-title" data-t="ct.title">Sistemas mais claros.<br>Conversas mais objetivas.</h2>
+              <h2 class="section-header-title" data-t="ct.title">Sistemas mais claros. <span class="section-title-emphasis">Conversas mais objetivas.</span></h2>
             </div>
             <div class="section-header-subtitle">
               <p data-t="ct.sub">Para vagas sêniores, projetos enterprise e conversas técnicas sobre produto, operação e decisão.</p>
@@ -908,20 +862,24 @@
         </div>
 
         <p class="site-footer__signature" data-t="ft.signature">
-          Pense simples. Faça melhor.<br>
+          Pense simples. Organize a complexidade.<br>
           Torne-se inevitável.
         </p>
       </div>
 
       <div class="site-footer__bottom">
-        <p>Henrico Amaral · Product Designer · 2026</p>
-        <a href="#hero" class="site-footer__toplink">↑ Topo</a>
+        <p>© 2026 HENRICO AMARAL · PRODUCT DESIGNER</p>
+        <a href="https://www.henrico.works/" target="_blank" rel="noopener" class="site-footer__powered">
+          <span data-t="ft.powered">Powered by</span>
+          <strong>HENRICO.WORKS</strong>
+          <span aria-hidden="true">↗</span>
+        </a>
       </div>
     </div>
   </footer>
 
-  <script defer src="assets/js/site.js?v=20260701-release"></script>
-  <script defer src="assets/js/motion.js?v=20260701-release"></script>
+  <script defer src="assets/js/site.js?v=20260710-visual"></script>
+  <script defer src="assets/js/motion.js?v=20260716-motion-v2"></script>
 </body>
 
 </html>

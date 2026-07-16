@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Currículo — Henrico Amaral</title>
   <meta name="description" content="Currículo profissional de Henrico Amaral, Senior Product Designer especializado em sistemas complexos, plataformas enterprise, acessibilidade e infraestrutura de decisão.">
   <meta name="author" content="Henrico Amaral">
@@ -12,6 +12,7 @@
   <!-- Estilos Globais do Portfólio -->
   <link rel="stylesheet" href="assets/css/tailwind.generated.css?v=20260701-release">
   <link rel="stylesheet" href="assets/css/site.css?v=20260701-release">
+  <link rel="stylesheet" href="assets/css/motion.css?v=20260716-motion-v2">
 
   <noscript>
     <style>
@@ -69,7 +70,7 @@
       --ink-primary:   #472211; /* Dark chocolate primary */
       --ink-secondary: #533E2B; /* Medium chocolate secondary */
       --ink-tertiary:  #7a6a5e; /* Soft/muted tertiary */
-      --accent:        #BE9C6E; /* Gold accent */
+      --accent:        #7A4C24; /* Accessible accent */
       --bg:            #FFFFFF; /* Card white */
       --bg-page:       #f2efe9; /* Body warm paper */
       --border:        rgba(71, 34, 17, 0.12); /* Decorative borders */
@@ -427,11 +428,13 @@
     }
 
     .contact-link {
-      display: block;
+      display: flex;
+      align-items: center;
       font-size: 0.72rem;
       color: var(--ink-primary);
       text-decoration: none;
-      padding: 2px 0;
+      min-height: 44px;
+      padding: 0.35rem 0;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -607,7 +610,7 @@
       font-family: var(--font-mono) !important;
       font-size: 1.1rem !important;
       font-weight: 700 !important;
-      color: var(--accent) !important;
+      color: #6f3a12 !important;
       margin-right: 0.15rem;
     }
 
@@ -632,6 +635,152 @@
     .items-baseline { align-items: baseline !important; }
     .gap-2 { gap: 0.5rem !important; }
     .gap-6 { gap: 1.5rem !important; }
+
+    /* --- Mobile reading layout (screen only) --- */
+    @media screen and (max-width: 767px) {
+      body {
+        font-size: 16px !important;
+        line-height: 1.62 !important;
+        padding: 0 !important;
+      }
+
+      .page {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 5rem max(16px, env(safe-area-inset-left)) 2rem max(16px, env(safe-area-inset-right)) !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+      }
+
+      .page-actions {
+        left: max(12px, env(safe-area-inset-left)) !important;
+        right: max(12px, env(safe-area-inset-right)) !important;
+        bottom: calc(12px + env(safe-area-inset-bottom)) !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+        padding: 0.5rem !important;
+      }
+
+      .action-btn,
+      .lang-toggle,
+      .lang-toggle__option {
+        min-height: 44px !important;
+      }
+
+      .action-btn {
+        padding: 0.7rem 0.85rem !important;
+        font-size: 0.68rem !important;
+      }
+
+      .header {
+        margin-bottom: 2rem !important;
+        padding-bottom: 1.25rem !important;
+      }
+
+      .header__name {
+        font-size: clamp(2.25rem, 12vw, 3.1rem) !important;
+        line-height: 0.98 !important;
+        letter-spacing: -0.04em !important;
+      }
+
+      .header__headline {
+        font-size: clamp(1.15rem, 5.5vw, 1.45rem) !important;
+        line-height: 1.22 !important;
+      }
+
+      .header__location,
+      .summary,
+      .job__desc,
+      .project__desc,
+      .achievement {
+        font-size: 1rem !important;
+        line-height: 1.62 !important;
+      }
+
+      .page :is(p, li, dd):not(.muted),
+      .tagline__highlights {
+        font-size: 1rem !important;
+        line-height: 1.62 !important;
+      }
+
+      .layout {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+
+      .sidebar {
+        gap: 1.25rem !important;
+      }
+
+      .profile {
+        width: 112px !important;
+        height: 112px !important;
+      }
+
+      .contact-link {
+        min-height: 44px !important;
+        font-size: 1rem !important;
+        line-height: 1.35 !important;
+        padding: 0.45rem 0 !important;
+      }
+
+      .block {
+        margin-bottom: 1.75rem !important;
+      }
+
+      .block__title {
+        font-size: 0.78rem !important;
+        letter-spacing: 0.13em !important;
+        margin-bottom: 0.9rem !important;
+      }
+
+      .section-title,
+      .job__title {
+        font-size: clamp(1.2rem, 5.5vw, 1.55rem) !important;
+        line-height: 1.18 !important;
+      }
+
+      .badge-list,
+      .skills-list {
+        gap: 0.55rem !important;
+      }
+
+      .badge,
+      .section-chip {
+        min-height: 36px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        font-size: 1rem !important;
+        line-height: 1.35 !important;
+        padding: 0.45rem 0.65rem !important;
+      }
+
+      .job,
+      .project {
+        margin-bottom: 1.5rem !important;
+      }
+
+      .cv-kpi-block {
+        padding: 1rem !important;
+        font-size: 1rem !important;
+        line-height: 1.58 !important;
+        border-left-width: 0 !important;
+        border-top: 3px solid var(--accent) !important;
+        border-radius: 8px !important;
+      }
+
+      .cv-kpi-val {
+        display: inline-block;
+        font-size: 1.35rem !important;
+        line-height: 1 !important;
+        margin-right: 0.25rem !important;
+      }
+
+      .footer {
+        padding-bottom: 5.5rem !important;
+      }
+    }
 
     /* --- Print Media Formatting Optimization (Exact A4 Page Fitting) --- */
     @media print {
