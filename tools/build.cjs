@@ -6,9 +6,9 @@ const DIST = path.join(ROOT, 'dist');
 
 function copyFolderRecursiveSync(source, target) {
   if (!fs.existsSync(source)) return;
-  
-  var files = [];
-  var targetFolder = target;
+
+  let files = [];
+  const targetFolder = target;
   if (!fs.existsSync(targetFolder)) {
     fs.mkdirSync(targetFolder, { recursive: true });
   }
@@ -17,8 +17,8 @@ function copyFolderRecursiveSync(source, target) {
     files = fs.readdirSync(source);
     files.forEach(function (file) {
       if (file === 'Cases' || file === '.DS_Store') return;
-      var curSource = path.join(source, file);
-      var curTarget = path.join(targetFolder, file);
+      const curSource = path.join(source, file);
+      const curTarget = path.join(targetFolder, file);
       if (fs.lstatSync(curSource).isDirectory()) {
         copyFolderRecursiveSync(curSource, curTarget);
       } else {
@@ -43,13 +43,14 @@ filesToCopy.forEach(file => {
   }
 });
 
-// 3. Copy assets and cases folders
+// 3. Copy static folders
 copyFolderRecursiveSync(path.join(ROOT, 'assets'), path.join(DIST, 'assets'));
 copyFolderRecursiveSync(path.join(ROOT, 'cases'), path.join(DIST, 'cases'));
+copyFolderRecursiveSync(path.join(ROOT, 'v2'), path.join(DIST, 'v2'));
 
 // 4. Copy public folder files (CNAME, favicon.svg, .nojekyll, assets/docs/..., assets/img/...)
 if (fs.existsSync(path.join(ROOT, 'public'))) {
   copyFolderRecursiveSync(path.join(ROOT, 'public'), DIST);
 }
 
-console.log('Static build completed successfully in ./dist/');
+console.log('Static build completed successfully in ./dist/.');
