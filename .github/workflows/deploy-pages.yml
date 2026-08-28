@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main, codex/fix-legacy-pages-publication ]
+    branches: [ main ]
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
